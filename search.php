@@ -19,11 +19,11 @@ get_header(); ?>
 			<h1 class="page-title">
 			<?php
 			/* translators: Search query. */
-			printf( __( 'Search Results for: %s', 'twentyseventeen', 'inspiro' ), '<span>' . get_search_query() . '</span>' );
+			printf( __( 'Search Results for: %s', 'inspiro' ), '<span>' . get_search_query() . '</span>' );
 			?>
 			</h1>
 		<?php else : ?>
-			<h1 class="page-title"><?php _e( 'Nothing Found', 'twentyseventeen', 'inspiro' ); ?></h1>
+			<h1 class="page-title"><?php _e( 'Nothing Found', 'inspiro' ); ?></h1>
 		<?php endif; ?>
 	</header><!-- .page-header -->
 
@@ -47,16 +47,16 @@ get_header(); ?>
 
 			the_posts_pagination(
 				array(
-					'prev_text'          => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'twentyseventeen', 'inspiro' ) . '</span>',
-					'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'twentyseventeen', 'inspiro' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
-					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyseventeen', 'inspiro' ) . ' </span>',
+					'prev_text'          => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'inspiro' ) . '</span>',
+					'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'inspiro' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
+					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'inspiro' ) . ' </span>',
 				)
 			);
 
 		else :
 			?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'twentyseventeen', 'inspiro' ); ?></p>
+			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'inspiro' ); ?></p>
 			<?php
 				get_search_form();
 

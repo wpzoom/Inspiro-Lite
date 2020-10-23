@@ -23,7 +23,7 @@
 
 				if ( has_nav_menu( 'social' ) ) :
 					?>
-					<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'twentyseventeen', 'inspiro' ); ?>">
+					<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'inspiro' ); ?>">
 						<?php
 							wp_nav_menu(
 								array(

@@ -1,16 +1,15 @@
 <?php
 /**
- * Twenty Seventeen functions and definitions
+ * Inspiro functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
+ * @package Inspiro
+ * @since Inspiro 1.0.0
  */
 
 /**
- * Twenty Seventeen only works in WordPress 4.7 or later.
+ * Inspiro only works in WordPress 4.7 or later.
  */
 if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
@@ -61,8 +60,8 @@ function twentyseventeen_setup() {
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus(
 		array(
-			'top'    => __( 'Top Menu', 'twentyseventeen', 'inspiro' ),
-			'social' => __( 'Social Links Menu', 'twentyseventeen', 'inspiro' ),
+			'top'    => __( 'Top Menu', 'inspiro' ),
+			'social' => __( 'Social Links Menu', 'inspiro' ),
 		)
 	);
 
@@ -170,15 +169,15 @@ function twentyseventeen_setup() {
 		// Create the custom image attachments used as post thumbnails for pages.
 		'attachments' => array(
 			'image-espresso' => array(
-				'post_title' => _x( 'Espresso', 'Theme starter content', 'twentyseventeen', 'inspiro' ),
+				'post_title' => _x( 'Espresso', 'Theme starter content', 'inspiro' ),
 				'file'       => 'assets/images/espresso.jpg', // URL relative to the template directory.
 			),
 			'image-sandwich' => array(
-				'post_title' => _x( 'Sandwich', 'Theme starter content', 'twentyseventeen', 'inspiro' ),
+				'post_title' => _x( 'Sandwich', 'Theme starter content', 'inspiro' ),
 				'file'       => 'assets/images/sandwich.jpg',
 			),
 			'image-coffee'   => array(
-				'post_title' => _x( 'Coffee', 'Theme starter content', 'twentyseventeen', 'inspiro' ),
+				'post_title' => _x( 'Coffee', 'Theme starter content', 'inspiro' ),
 				'file'       => 'assets/images/coffee.jpg',
 			),
 		),
@@ -202,7 +201,7 @@ function twentyseventeen_setup() {
 		'nav_menus'   => array(
 			// Assign a menu to the "top" location.
 			'top'    => array(
-				'name'  => __( 'Top Menu', 'twentyseventeen', 'inspiro' ),
+				'name'  => __( 'Top Menu', 'inspiro' ),
 				'items' => array(
 					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
 					'page_about',
@@ -213,7 +212,7 @@ function twentyseventeen_setup() {
 
 			// Assign a menu to the "social" location.
 			'social' => array(
-				'name'  => __( 'Social Links Menu', 'twentyseventeen', 'inspiro' ),
+				'name'  => __( 'Social Links Menu', 'inspiro' ),
 				'items' => array(
 					'link_yelp',
 					'link_facebook',
@@ -287,7 +286,7 @@ function twentyseventeen_fonts_url() {
 	 * translators: If there are characters in your language that are not supported
 	 * by Libre Franklin, translate this to 'off'. Do not translate into your own language.
 	 */
-	$libre_franklin = _x( 'on', 'Libre Franklin font: on or off', 'twentyseventeen', 'inspiro' );
+	$libre_franklin = _x( 'on', 'Libre Franklin font: on or off', 'inspiro' );
 
 	if ( 'off' !== $libre_franklin ) {
 		$font_families = array();
@@ -335,9 +334,9 @@ add_filter( 'wp_resource_hints', 'twentyseventeen_resource_hints', 10, 2 );
 function twentyseventeen_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => __( 'Blog Sidebar', 'twentyseventeen', 'inspiro' ),
+			'name'          => __( 'Blog Sidebar', 'inspiro' ),
 			'id'            => 'sidebar-1',
-			'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'twentyseventeen', 'inspiro' ),
+			'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'inspiro' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -347,9 +346,9 @@ function twentyseventeen_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Footer 1', 'twentyseventeen', 'inspiro' ),
+			'name'          => __( 'Footer 1', 'inspiro' ),
 			'id'            => 'sidebar-2',
-			'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen', 'inspiro' ),
+			'description'   => __( 'Add widgets here to appear in your footer.', 'inspiro' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -359,9 +358,9 @@ function twentyseventeen_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Footer 2', 'twentyseventeen', 'inspiro' ),
+			'name'          => __( 'Footer 2', 'inspiro' ),
 			'id'            => 'sidebar-3',
-			'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen', 'inspiro' ),
+			'description'   => __( 'Add widgets here to appear in your footer.', 'inspiro' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -389,7 +388,7 @@ function twentyseventeen_excerpt_more( $link ) {
 		'<p class="link-more"><a href="%1$s" class="more-link">%2$s</a></p>',
 		esc_url( get_permalink( get_the_ID() ) ),
 		/* translators: %s: Post title. */
-		sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen', 'inspiro' ), get_the_title( get_the_ID() ) )
+		sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'inspiro' ), get_the_title( get_the_ID() ) )
 	);
 	return ' &hellip; ' . $link;
 }
@@ -480,8 +479,8 @@ function twentyseventeen_scripts() {
 
 	if ( has_nav_menu( 'top' ) ) {
 		wp_enqueue_script( 'twentyseventeen-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '20161203', true );
-		$twentyseventeen_l10n['expand']   = __( 'Expand child menu', 'twentyseventeen', 'inspiro' );
-		$twentyseventeen_l10n['collapse'] = __( 'Collapse child menu', 'twentyseventeen', 'inspiro' );
+		$twentyseventeen_l10n['expand']   = __( 'Expand child menu', 'inspiro' );
+		$twentyseventeen_l10n['collapse'] = __( 'Collapse child menu', 'inspiro' );
 		$twentyseventeen_l10n['icon']     = twentyseventeen_get_svg(
 			array(
 				'icon'     => 'angle-down',

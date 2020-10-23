@@ -57,11 +57,11 @@ function twentyseventeen_customize_register( $wp_customize ) {
 		'colorscheme',
 		array(
 			'type'     => 'radio',
-			'label'    => __( 'Color Scheme', 'twentyseventeen', 'inspiro' ),
+			'label'    => __( 'Color Scheme', 'inspiro' ),
 			'choices'  => array(
-				'light'  => __( 'Light', 'twentyseventeen', 'inspiro' ),
-				'dark'   => __( 'Dark', 'twentyseventeen', 'inspiro' ),
-				'custom' => __( 'Custom', 'twentyseventeen', 'inspiro' ),
+				'light'  => __( 'Light', 'inspiro' ),
+				'dark'   => __( 'Dark', 'inspiro' ),
+				'custom' => __( 'Custom', 'inspiro' ),
 			),
 			'section'  => 'colors',
 			'priority' => 5,
@@ -86,7 +86,7 @@ function twentyseventeen_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'theme_options',
 		array(
-			'title'    => __( 'Theme Options', 'twentyseventeen', 'inspiro' ),
+			'title'    => __( 'Theme Options', 'inspiro' ),
 			'priority' => 130, // Before Additional CSS.
 		)
 	);
@@ -103,13 +103,13 @@ function twentyseventeen_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'page_layout',
 		array(
-			'label'           => __( 'Page Layout', 'twentyseventeen', 'inspiro' ),
+			'label'           => __( 'Page Layout', 'inspiro' ),
 			'section'         => 'theme_options',
 			'type'            => 'radio',
-			'description'     => __( 'When the two-column layout is assigned, the page title is in one column and content is in the other.', 'twentyseventeen', 'inspiro' ),
+			'description'     => __( 'When the two-column layout is assigned, the page title is in one column and content is in the other.', 'inspiro' ),
 			'choices'         => array(
-				'one-column' => __( 'One Column', 'twentyseventeen', 'inspiro' ),
-				'two-column' => __( 'Two Column', 'twentyseventeen', 'inspiro' ),
+				'one-column' => __( 'One Column', 'inspiro' ),
+				'two-column' => __( 'Two Column', 'inspiro' ),
 			),
 			'active_callback' => 'twentyseventeen_is_view_with_layout_option',
 		)
@@ -139,8 +139,8 @@ function twentyseventeen_customize_register( $wp_customize ) {
 			'panel_' . $i,
 			array(
 				/* translators: %d: The front page section number. */
-				'label'           => sprintf( __( 'Front Page Section %d Content', 'twentyseventeen', 'inspiro' ), $i ),
-				'description'     => ( 1 !== $i ? '' : __( 'Select pages to feature in each area from the dropdowns. Add an image to a section by setting a featured image in the page editor. Empty sections will not be displayed.', 'twentyseventeen', 'inspiro' ) ),
+				'label'           => sprintf( __( 'Front Page Section %d Content', 'inspiro' ), $i ),
+				'description'     => ( 1 !== $i ? '' : __( 'Select pages to feature in each area from the dropdowns. Add an image to a section by setting a featured image in the page editor. Empty sections will not be displayed.', 'inspiro' ) ),
 				'section'         => 'theme_options',
 				'type'            => 'dropdown-pages',
 				'allow_addition'  => true,
@@ -167,8 +167,8 @@ add_action( 'customize_register', 'twentyseventeen_customize_register' );
  */
 function twentyseventeen_sanitize_page_layout( $input ) {
 	$valid = array(
-		'one-column' => __( 'One Column', 'twentyseventeen', 'inspiro' ),
-		'two-column' => __( 'Two Column', 'twentyseventeen', 'inspiro' ),
+		'one-column' => __( 'One Column', 'inspiro' ),
+		'two-column' => __( 'Two Column', 'inspiro' ),
 	);
 
 	if ( array_key_exists( $input, $valid ) ) {

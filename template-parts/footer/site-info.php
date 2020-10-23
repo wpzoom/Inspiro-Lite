@@ -15,10 +15,10 @@
 		the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
 	}
 	?>
-	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentyseventeen', 'inspiro' ) ); ?>" class="imprint">
+	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'inspiro' ) ); ?>" class="imprint">
 		<?php
 			/* translators: %s: WordPress */
-		printf( __( 'Proudly powered by %s', 'twentyseventeen', 'inspiro' ), 'WordPress' );
+		printf( __( 'Proudly powered by %s', 'inspiro' ), 'WordPress' );
 		?>
 	</a>
 </div><!-- .site-info -->

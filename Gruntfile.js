@@ -200,6 +200,7 @@ module.exports = function(grunt) {
     addtextdomain: {
       options: {
         textdomain: 'inspiro',
+        updateDomains: ['twentyseventeen', 'inspiro-lite']
       },
       target: {
         files: {

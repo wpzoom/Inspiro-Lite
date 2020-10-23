@@ -80,14 +80,14 @@
 			the_content(
 				sprintf(
 					/* translators: %s: Post title. */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen', 'inspiro' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'inspiro' ),
 					get_the_title()
 				)
 			);
 
 			wp_link_pages(
 				array(
-					'before'      => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen', 'inspiro' ),
+					'before'      => '<div class="page-links">' . __( 'Pages:', 'inspiro' ),
 					'after'       => '</div>',
 					'link_before' => '<span class="page-number">',
 					'link_after'  => '</span>',

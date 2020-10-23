@@ -42,7 +42,7 @@ global $twentyseventeencounter;
 					the_content(
 						sprintf(
 							/* translators: %s: Post title. */
-							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen', 'inspiro' ),
+							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'inspiro' ),
 							get_the_title()
 						)
 					);

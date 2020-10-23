@@ -14,7 +14,7 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php _e( 'Nothing Found', 'twentyseventeen', 'inspiro' ); ?></h1>
+		<h1 class="page-title"><?php _e( 'Nothing Found', 'inspiro' ); ?></h1>
 	</header>
 	<div class="page-content">
 		<?php
@@ -24,13 +24,13 @@
 			<p>
 			<?php
 			/* translators: %s: Post editor URL. */
-			printf( __( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'twentyseventeen', 'inspiro' ), esc_url( admin_url( 'post-new.php' ) ) );
+			printf( __( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'inspiro' ), esc_url( admin_url( 'post-new.php' ) ) );
 			?>
 			</p>
 
 		<?php else : ?>
 
-			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'twentyseventeen', 'inspiro' ); ?></p>
+			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'inspiro' ); ?></p>
 			<?php
 				get_search_form();
 

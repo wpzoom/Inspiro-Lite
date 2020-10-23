@@ -18,7 +18,7 @@ if ( ! function_exists( 'twentyseventeen_posted_on' ) ) :
 		// Get the author name; wrap it in a link.
 		$byline = sprintf(
 			/* translators: %s: Post author. */
-			__( 'by %s', 'twentyseventeen', 'inspiro' ),
+			__( 'by %s', 'inspiro' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . get_the_author() . '</a></span>'
 		);
 
@@ -49,7 +49,7 @@ if ( ! function_exists( 'twentyseventeen_time_link' ) ) :
 		// Wrap the time string in a link, and preface it with 'Posted on'.
 		return sprintf(
 			/* translators: %s: Post date. */
-			__( '<span class="screen-reader-text">Posted on</span> %s', 'twentyseventeen', 'inspiro' ),
+			__( '<span class="screen-reader-text">Posted on</span> %s', 'inspiro' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 	}
@@ -63,7 +63,7 @@ if ( ! function_exists( 'twentyseventeen_entry_footer' ) ) :
 	function twentyseventeen_entry_footer() {
 
 		/* translators: Used between list items, there is a space after the comma. */
-		$separate_meta = __( ', ', 'twentyseventeen', 'inspiro' );
+		$separate_meta = __( ', ', 'inspiro' );
 
 		// Get Categories for posts.
 		$categories_list = get_the_category_list( $separate_meta );
@@ -82,11 +82,11 @@ if ( ! function_exists( 'twentyseventeen_entry_footer' ) ) :
 
 					// Make sure there's more than one category before displaying.
 					if ( $categories_list && twentyseventeen_categorized_blog() ) {
-						echo '<span class="cat-links">' . twentyseventeen_get_svg( array( 'icon' => 'folder-open' ) ) . '<span class="screen-reader-text">' . __( 'Categories', 'twentyseventeen', 'inspiro' ) . '</span>' . $categories_list . '</span>';
+						echo '<span class="cat-links">' . twentyseventeen_get_svg( array( 'icon' => 'folder-open' ) ) . '<span class="screen-reader-text">' . __( 'Categories', 'inspiro' ) . '</span>' . $categories_list . '</span>';
 					}
 
 					if ( $tags_list && ! is_wp_error( $tags_list ) ) {
-						echo '<span class="tags-links">' . twentyseventeen_get_svg( array( 'icon' => 'hashtag' ) ) . '<span class="screen-reader-text">' . __( 'Tags', 'twentyseventeen', 'inspiro' ) . '</span>' . $tags_list . '</span>';
+						echo '<span class="tags-links">' . twentyseventeen_get_svg( array( 'icon' => 'hashtag' ) ) . '<span class="screen-reader-text">' . __( 'Tags', 'inspiro' ) . '</span>' . $tags_list . '</span>';
 					}
 
 					echo '</span>';
@@ -114,7 +114,7 @@ if ( ! function_exists( 'twentyseventeen_edit_link' ) ) :
 		edit_post_link(
 			sprintf(
 				/* translators: %s: Post title. */
-				__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen', 'inspiro' ),
+				__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'inspiro' ),
 				get_the_title()
 			),
 			'<span class="edit-link">',
@@ -155,7 +155,7 @@ function twentyseventeen_front_page_section( $partial = null, $id = 0 ) {
 			'<span class="twentyseventeen-panel-title">%2$s</span></article>',
 			$id,
 			/* translators: %s: The section ID. */
-			sprintf( __( 'Front Page Section %s Placeholder', 'twentyseventeen', 'inspiro' ), $id )
+			sprintf( __( 'Front Page Section %s Placeholder', 'inspiro' ), $id )
 		);
 	}
 }
