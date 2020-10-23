@@ -47,8 +47,5 @@
 </div><!-- #page -->
 <?php wp_footer(); ?>
 
-<!-- Warning: Use only for Livereload -->
-<script src="//localhost:35729/livereload.js"></script>
-
 </body>
 </html>
