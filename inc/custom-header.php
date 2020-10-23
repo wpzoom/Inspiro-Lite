@@ -4,24 +4,24 @@
  *
  * @link https://codex.wordpress.org/Custom_Headers
  *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
+ * @package Inspiro
+ * @subpackage Inspiro_Lite
+ * @since Inspiro Lite 1.0.0
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses twentyseventeen_header_style()
+ * @uses inspiro_header_style()
  */
-function twentyseventeen_custom_header_setup() {
+function inspiro_custom_header_setup() {
 
 	add_theme_support(
 		'custom-header',
 		/**
 		 * Filters Twenty Seventeen custom-header support arguments.
 		 *
-		 * @since Twenty Seventeen 1.0
+		 * @since Inspiro Lite 1.0.0
 		 *
 		 * @param array $args {
 		 *     An array of custom-header support arguments.
@@ -36,14 +36,14 @@ function twentyseventeen_custom_header_setup() {
 		 * }
 		 */
 		apply_filters(
-			'twentyseventeen_custom_header_args',
+			'inspiro_custom_header_args',
 			array(
 				'default-image'    => get_parent_theme_file_uri( '/assets/images/header.jpg' ),
 				'width'            => 2000,
 				'height'           => 1200,
 				'flex-height'      => true,
 				'video'            => true,
-				'wp-head-callback' => 'twentyseventeen_header_style',
+				'wp-head-callback' => 'inspiro_header_style',
 			)
 		)
 	);
@@ -58,15 +58,15 @@ function twentyseventeen_custom_header_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'twentyseventeen_custom_header_setup' );
+add_action( 'after_setup_theme', 'inspiro_custom_header_setup' );
 
-if ( ! function_exists( 'twentyseventeen_header_style' ) ) :
+if ( ! function_exists( 'inspiro_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see twentyseventeen_custom_header_setup().
+	 * @see inspiro_custom_header_setup().
 	 */
-	function twentyseventeen_header_style() {
+	function inspiro_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		// If no custom options for text are set, let's bail.
@@ -77,7 +77,7 @@ if ( ! function_exists( 'twentyseventeen_header_style' ) ) :
 
 		// If we get this far, we have custom styles. Let's do this.
 		?>
-		<style id="twentyseventeen-custom-header-styles" type="text/css">
+		<style id="inspiro-custom-header-styles" type="text/css">
 		<?php
 		// Has the text been hidden?
 		if ( 'blank' === $header_text_color ) :
@@ -115,7 +115,7 @@ if ( ! function_exists( 'twentyseventeen_header_style' ) ) :
 	</style>
 		<?php
 	}
-endif; // End of twentyseventeen_header_style().
+endif; // End of inspiro_header_style().
 
 /**
  * Customize video play/pause button in the custom header.
@@ -123,9 +123,9 @@ endif; // End of twentyseventeen_header_style().
  * @param array $settings Video settings.
  * @return array The filtered video settings.
  */
-function twentyseventeen_video_controls( $settings ) {
-	$settings['l10n']['play']  = '<span class="screen-reader-text">' . __( 'Play background video', 'inspiro' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'play' ) );
-	$settings['l10n']['pause'] = '<span class="screen-reader-text">' . __( 'Pause background video', 'inspiro' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'pause' ) );
+function inspiro_video_controls( $settings ) {
+	$settings['l10n']['play']  = '<span class="screen-reader-text">' . __( 'Play background video', 'inspiro' ) . '</span>' . inspiro_get_svg( array( 'icon' => 'play' ) );
+	$settings['l10n']['pause'] = '<span class="screen-reader-text">' . __( 'Pause background video', 'inspiro' ) . '</span>' . inspiro_get_svg( array( 'icon' => 'pause' ) );
 	return $settings;
 }
-add_filter( 'header_video_settings', 'twentyseventeen_video_controls' );
+add_filter( 'header_video_settings', 'inspiro_video_controls' );

@@ -151,7 +151,7 @@ body.colors-dark,
 .colors-dark h6,
 .colors-dark label,
 .colors-dark .entry-title a,
-.colors-dark.twentyseventeen-front-page .panel-content .recent-posts article,
+.colors-dark.inspiro-front-page .panel-content .recent-posts article,
 .colors-dark .entry-footer .cat-links a,
 .colors-dark .entry-footer .tags-links a,
 .colors-dark .format-quote blockquote,
@@ -226,7 +226,7 @@ body.colors-dark,
 .colors-dark .menu-toggle,
 .colors-dark .page .panel-content .entry-title,
 .colors-dark .page-title,
-.colors-dark.page:not(.twentyseventeen-front-page) .entry-title,
+.colors-dark.page:not(.inspiro-front-page) .entry-title,
 .colors-dark .page-links a .page-number,
 .colors-dark .comment-metadata a.comment-edit-link,
 .colors-dark .comment-reply-link .icon,
@@ -237,7 +237,7 @@ body.colors-dark,
 .colors-dark.blog .entry-meta a.post-edit-link,
 .colors-dark.archive .entry-meta a.post-edit-link,
 .colors-dark.search .entry-meta a.post-edit-link,
-.colors-custom .twentyseventeen-panel .recent-posts .entry-header .edit-link {
+.colors-custom .inspiro-panel .recent-posts .entry-header .edit-link {
 	color: #ddd;
 }
 
@@ -373,7 +373,7 @@ body.colors-dark,
 	border-color: #444;
 }
 
-.colors-dark.twentyseventeen-front-page article:not(.has-post-thumbnail):not(:first-child),
+.colors-dark.inspiro-front-page article:not(.has-post-thumbnail):not(:first-child),
 .colors-dark .widget ul li {
 	border-top-color: #444;
 }

@@ -100,7 +100,7 @@ input[type="checkbox"] {
 	right: auto;
 }
 
-.twentyseventeen-panel .recent-posts .entry-header .edit-link {
+.inspiro-panel .recent-posts .entry-header .edit-link {
 	margin-left: 0;
 	margin-right: 1em;
 }
@@ -261,7 +261,7 @@ input[type="checkbox"] {
 
 /* Customizer styles */
 
-.twentyseventeen-customizer.twentyseventeen-front-page .twentyseventeen-panel .twentyseventeen-panel-title {
+.inspiro-customizer.inspiro-front-page .inspiro-panel .inspiro-panel-title {
 	left: 3.2em;
 	right: auto;
 }
@@ -446,7 +446,7 @@ input[type="checkbox"] {
 	/* blog index and archive */
 
 	.blog:not(.has-sidebar) .entry-content blockquote.alignleft,
-	.twentyseventeen-front-page.page-two-column .entry-content blockquote.alignleft,
+	.inspiro-front-page.page-two-column .entry-content blockquote.alignleft,
 	.archive:not(.has-sidebar) .entry-content blockquote.alignleft,
 	.page-two-column .entry-content blockquote.alignleft {
 		margin-left: 0;
@@ -454,7 +454,7 @@ input[type="checkbox"] {
 	}
 
 	.blog:not(.has-sidebar) .entry-content blockquote.alignright,
-	.twentyseventeen-front-page.page-two-column #primary .entry-content blockquote.alignright,
+	.inspiro-front-page.page-two-column #primary .entry-content blockquote.alignright,
 	.archive:not(.has-sidebar) .entry-content blockquote.alignright,
 	.page-two-column #primary .entry-content blockquote.alignright {
 		margin-right: -72.5%;
@@ -550,7 +550,7 @@ input[type="checkbox"] {
 	.blog:not(.has-sidebar) .entry-content blockquote.alignleft,
 	.archive:not(.has-sidebar) .entry-content blockquote.alignleft,
 	.page-two-column .entry-content blockquote.alignleft,
-	.twentyseventeen-front-page .entry-content blockquote.alignleft {
+	.inspiro-front-page .entry-content blockquote.alignleft {
 		margin-left: -20%;
 	}
 }

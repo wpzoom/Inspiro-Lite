@@ -6,10 +6,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
- * @version 1.2
+ * @package Inspiro
+ * @subpackage Inspiro_Lite
+ * @since Inspiro Lite 1.0.0
+ * @version x.x.x
  */
 
 ?>
@@ -31,7 +31,7 @@
 									'menu_class'     => 'social-links-menu',
 									'depth'          => 1,
 									'link_before'    => '<span class="screen-reader-text">',
-									'link_after'     => '</span>' . twentyseventeen_get_svg( array( 'icon' => 'chain' ) ),
+									'link_after'     => '</span>' . inspiro_get_svg( array( 'icon' => 'chain' ) ),
 								)
 							);
 						?>

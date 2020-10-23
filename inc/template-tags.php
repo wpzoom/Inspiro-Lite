@@ -4,16 +4,16 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
+ * @package Inspiro
+ * @subpackage Inspiro_Lite
+ * @since Inspiro Lite 1.0.0
  */
 
-if ( ! function_exists( 'twentyseventeen_posted_on' ) ) :
+if ( ! function_exists( 'inspiro_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
-	function twentyseventeen_posted_on() {
+	function inspiro_posted_on() {
 
 		// Get the author name; wrap it in a link.
 		$byline = sprintf(
@@ -23,16 +23,16 @@ if ( ! function_exists( 'twentyseventeen_posted_on' ) ) :
 		);
 
 		// Finally, let's write all of this to the page.
-		echo '<span class="posted-on">' . twentyseventeen_time_link() . '</span><span class="byline"> ' . $byline . '</span>';
+		echo '<span class="posted-on">' . inspiro_time_link() . '</span><span class="byline"> ' . $byline . '</span>';
 	}
 endif;
 
 
-if ( ! function_exists( 'twentyseventeen_time_link' ) ) :
+if ( ! function_exists( 'inspiro_time_link' ) ) :
 	/**
 	 * Gets a nicely formatted string for the published date.
 	 */
-	function twentyseventeen_time_link() {
+	function inspiro_time_link() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -56,11 +56,11 @@ if ( ! function_exists( 'twentyseventeen_time_link' ) ) :
 endif;
 
 
-if ( ! function_exists( 'twentyseventeen_entry_footer' ) ) :
+if ( ! function_exists( 'inspiro_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function twentyseventeen_entry_footer() {
+	function inspiro_entry_footer() {
 
 		/* translators: Used between list items, there is a space after the comma. */
 		$separate_meta = __( ', ', 'inspiro' );
@@ -72,28 +72,28 @@ if ( ! function_exists( 'twentyseventeen_entry_footer' ) ) :
 		$tags_list = get_the_tag_list( '', $separate_meta );
 
 		// We don't want to output .entry-footer if it will be empty, so make sure its not.
-		if ( ( ( twentyseventeen_categorized_blog() && $categories_list ) || $tags_list ) || get_edit_post_link() ) {
+		if ( ( ( inspiro_categorized_blog() && $categories_list ) || $tags_list ) || get_edit_post_link() ) {
 
 			echo '<footer class="entry-footer">';
 
 			if ( 'post' === get_post_type() ) {
-				if ( ( $categories_list && twentyseventeen_categorized_blog() ) || $tags_list ) {
+				if ( ( $categories_list && inspiro_categorized_blog() ) || $tags_list ) {
 					echo '<span class="cat-tags-links">';
 
 					// Make sure there's more than one category before displaying.
-					if ( $categories_list && twentyseventeen_categorized_blog() ) {
-						echo '<span class="cat-links">' . twentyseventeen_get_svg( array( 'icon' => 'folder-open' ) ) . '<span class="screen-reader-text">' . __( 'Categories', 'inspiro' ) . '</span>' . $categories_list . '</span>';
+					if ( $categories_list && inspiro_categorized_blog() ) {
+						echo '<span class="cat-links">' . inspiro_get_svg( array( 'icon' => 'folder-open' ) ) . '<span class="screen-reader-text">' . __( 'Categories', 'inspiro' ) . '</span>' . $categories_list . '</span>';
 					}
 
 					if ( $tags_list && ! is_wp_error( $tags_list ) ) {
-						echo '<span class="tags-links">' . twentyseventeen_get_svg( array( 'icon' => 'hashtag' ) ) . '<span class="screen-reader-text">' . __( 'Tags', 'inspiro' ) . '</span>' . $tags_list . '</span>';
+						echo '<span class="tags-links">' . inspiro_get_svg( array( 'icon' => 'hashtag' ) ) . '<span class="screen-reader-text">' . __( 'Tags', 'inspiro' ) . '</span>' . $tags_list . '</span>';
 					}
 
 					echo '</span>';
 				}
 			}
 
-			twentyseventeen_edit_link();
+			inspiro_edit_link();
 
 			echo '</footer> <!-- .entry-footer -->';
 		}
@@ -101,7 +101,7 @@ if ( ! function_exists( 'twentyseventeen_entry_footer' ) ) :
 endif;
 
 
-if ( ! function_exists( 'twentyseventeen_edit_link' ) ) :
+if ( ! function_exists( 'inspiro_edit_link' ) ) :
 	/**
 	 * Returns an accessibility-friendly link to edit a post or page.
 	 *
@@ -110,7 +110,7 @@ if ( ! function_exists( 'twentyseventeen_edit_link' ) ) :
 	 * of the template hierarchy and their content. Helpful when/if the single-page
 	 * layout with multiple posts/pages shown gets confusing.
 	 */
-	function twentyseventeen_edit_link() {
+	function inspiro_edit_link() {
 		edit_post_link(
 			sprintf(
 				/* translators: %s: Post title. */
@@ -129,14 +129,14 @@ endif;
  * @param WP_Customize_Partial $partial Partial associated with a selective refresh request.
  * @param integer              $id Front page section to display.
  */
-function twentyseventeen_front_page_section( $partial = null, $id = 0 ) {
+function inspiro_front_page_section( $partial = null, $id = 0 ) {
 	if ( is_a( $partial, 'WP_Customize_Partial' ) ) {
 		// Find out the ID and set it up during a selective refresh.
-		global $twentyseventeencounter;
+		global $inspirocounter;
 
 		$id = str_replace( 'panel_', '', $partial->id );
 
-		$twentyseventeencounter = $id;
+		$inspirocounter = $id;
 	}
 
 	global $post; // Modify the global post object before setting up post data.
@@ -151,8 +151,8 @@ function twentyseventeen_front_page_section( $partial = null, $id = 0 ) {
 	} elseif ( is_customize_preview() ) {
 		// The output placeholder anchor.
 		printf(
-			'<article class="panel-placeholder panel twentyseventeen-panel twentyseventeen-panel%1$s" id="panel%1$s">' .
-			'<span class="twentyseventeen-panel-title">%2$s</span></article>',
+			'<article class="panel-placeholder panel inspiro-panel inspiro-panel%1$s" id="panel%1$s">' .
+			'<span class="inspiro-panel-title">%2$s</span></article>',
 			$id,
 			/* translators: %s: The section ID. */
 			sprintf( __( 'Front Page Section %s Placeholder', 'inspiro' ), $id )
@@ -165,8 +165,8 @@ function twentyseventeen_front_page_section( $partial = null, $id = 0 ) {
  *
  * @return bool
  */
-function twentyseventeen_categorized_blog() {
-	$category_count = get_transient( 'twentyseventeen_categories' );
+function inspiro_categorized_blog() {
+	$category_count = get_transient( 'inspiro_categories' );
 
 	if ( false === $category_count ) {
 		// Create an array of all the categories that are attached to posts.
@@ -182,7 +182,7 @@ function twentyseventeen_categorized_blog() {
 		// Count the number of categories that are attached to the posts.
 		$category_count = count( $categories );
 
-		set_transient( 'twentyseventeen_categories', $category_count );
+		set_transient( 'inspiro_categories', $category_count );
 	}
 
 	// Allow viewing case of 0 or 1 categories in post preview.
@@ -195,17 +195,17 @@ function twentyseventeen_categorized_blog() {
 
 
 /**
- * Flush out the transients used in twentyseventeen_categorized_blog.
+ * Flush out the transients used in inspiro_categorized_blog.
  */
-function twentyseventeen_category_transient_flusher() {
+function inspiro_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
 	}
 	// Like, beat it. Dig?
-	delete_transient( 'twentyseventeen_categories' );
+	delete_transient( 'inspiro_categories' );
 }
-add_action( 'edit_category', 'twentyseventeen_category_transient_flusher' );
-add_action( 'save_post', 'twentyseventeen_category_transient_flusher' );
+add_action( 'edit_category', 'inspiro_category_transient_flusher' );
+add_action( 'save_post', 'inspiro_category_transient_flusher' );
 
 if ( ! function_exists( 'wp_body_open' ) ) :
 	/**
@@ -213,13 +213,13 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 	 *
 	 * Added for backward compatibility to support pre-5.2.0 WordPress versions.
 	 *
-	 * @since Twenty Seventeen 2.2
+	 * @since Inspiro Lite 1.0.0
 	 */
 	function wp_body_open() {
 		/**
 		 * Triggered after the opening <body> tag.
 		 *
-		 * @since Twenty Seventeen 2.2
+		 * @since Inspiro Lite 1.0.0
 		 */
 		do_action( 'wp_body_open' );
 	}

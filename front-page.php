@@ -6,10 +6,10 @@
  * appear.
  * Learn more: https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
- * @version 1.0
+ * @package Inspiro
+ * @subpackage Inspiro_Lite
+ * @since Inspiro Lite 1.0.0
+ * @version x.x.x
  */
 
 get_header(); ?>
@@ -31,25 +31,25 @@ get_header(); ?>
 
 		<?php
 		// Get each of our panels and show the post data.
-		if ( 0 !== twentyseventeen_panel_count() || is_customize_preview() ) : // If we have pages to show.
+		if ( 0 !== inspiro_panel_count() || is_customize_preview() ) : // If we have pages to show.
 
 			/**
 			 * Filters the number of front page sections in Twenty Seventeen.
 			 *
-			 * @since Twenty Seventeen 1.0
+			 * @since Inspiro Lite 1.0.0
 			 *
 			 * @param int $num_sections Number of front page sections.
 			 */
-			$num_sections = apply_filters( 'twentyseventeen_front_page_sections', 4 );
-			global $twentyseventeencounter;
+			$num_sections = apply_filters( 'inspiro_front_page_sections', 4 );
+			global $inspirocounter;
 
 			// Create a setting and control for each of the sections available in the theme.
 			for ( $i = 1; $i < ( 1 + $num_sections ); $i++ ) {
-				$twentyseventeencounter = $i;
-				twentyseventeen_front_page_section( null, $i );
+				$inspirocounter = $i;
+				inspiro_front_page_section( null, $i );
 			}
 
-	endif; // The if ( 0 !== twentyseventeen_panel_count() ) ends here.
+	endif; // The if ( 0 !== inspiro_panel_count() ) ends here.
 		?>
 
 	</main><!-- #main -->

@@ -1,4 +1,4 @@
-/* global twentyseventeenScreenReaderText */
+/* global inspiroScreenReaderText */
 (function( $ ) {
 
 	// Variables and DOM Caching.
@@ -13,7 +13,7 @@
 		$sidebar = $body.find( '#secondary' ),
 		$entryContent = $body.find( '.entry-content' ),
 		$formatQuote = $body.find( '.format-quote blockquote' ),
-		isFrontPage = $body.hasClass( 'twentyseventeen-front-page' ) || $body.hasClass( 'home blog' ),
+		isFrontPage = $body.hasClass( 'inspiro-front-page' ) || $body.hasClass( 'home blog' ),
 		navigationFixedClass = 'site-navigation-fixed',
 		navigationHeight,
 		navigationOuterHeight,
@@ -104,7 +104,7 @@
 
 	// Set icon for quotes.
 	function setQuotesIcon() {
-		$( twentyseventeenScreenReaderText.quote ).prependTo( $formatQuote );
+		$( inspiroScreenReaderText.quote ).prependTo( $formatQuote );
 	}
 
 	// Add 'below-entry-meta' class to elements.
@@ -115,7 +115,7 @@
 			$body.hasClass( 'search' ) ||
 			$body.hasClass( 'single-attachment' ) ||
 			$body.hasClass( 'error404' ) ||
-			$body.hasClass( 'twentyseventeen-front-page' )
+			$body.hasClass( 'inspiro-front-page' )
 		) ) {
 			return;
 		}

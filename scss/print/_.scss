@@ -68,7 +68,7 @@
 
     .page .panel-content .entry-title,
     .page-title,
-    body.page:not(.twentyseventeen-front-page) .entry-title {
+    body.page:not(.inspiro-front-page) .entry-title {
         font-size: 10pt;
     }
 
@@ -91,8 +91,8 @@
         padding: 0;
     }
 
-    .twentyseventeen-front-page.has-header-image .site-branding,
-    .twentyseventeen-front-page.has-header-video .site-branding,
+    .inspiro-front-page.has-header-image .site-branding,
+    .inspiro-front-page.has-header-video .site-branding,
     .home.blog.has-header-image .site-branding,
     .home.blog.has-header-video .site-branding {
         position: relative;
@@ -132,10 +132,10 @@
     body,
     a,
     .site-title a,
-    .twentyseventeen-front-page.has-header-image .site-title,
-    .twentyseventeen-front-page.has-header-video .site-title,
-    .twentyseventeen-front-page.has-header-image .site-title a,
-    .twentyseventeen-front-page.has-header-video .site-title a {
+    .inspiro-front-page.has-header-image .site-title,
+    .inspiro-front-page.has-header-video .site-title,
+    .inspiro-front-page.has-header-image .site-title a,
+    .inspiro-front-page.has-header-video .site-title a {
         color: #222 !important; /* Make sure color schemes don't affect to print */
     }
 
@@ -143,8 +143,8 @@
     h5,
     blockquote,
     .site-description,
-    .twentyseventeen-front-page.has-header-image .site-description,
-    .twentyseventeen-front-page.has-header-video .site-description,
+    .inspiro-front-page.has-header-image .site-description,
+    .inspiro-front-page.has-header-video .site-description,
     .entry-meta,
     .entry-meta a {
         color: #777 !important; /* Make sure color schemes don't affect to print */

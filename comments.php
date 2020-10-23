@@ -7,10 +7,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
- * @version 1.0
+ * @package Inspiro
+ * @subpackage Inspiro_Lite
+ * @since Inspiro Lite 1.0.0
+ * @version x.x.x
  */
 
 /*
@@ -58,7 +58,7 @@ if ( post_password_required() ) {
 						'avatar_size' => 100,
 						'style'       => 'ol',
 						'short_ping'  => true,
-						'reply_text'  => twentyseventeen_get_svg( array( 'icon' => 'mail-reply' ) ) . __( 'Reply', 'inspiro' ),
+						'reply_text'  => inspiro_get_svg( array( 'icon' => 'mail-reply' ) ) . __( 'Reply', 'inspiro' ),
 					)
 				);
 			?>
@@ -67,8 +67,8 @@ if ( post_password_required() ) {
 		<?php
 		the_comments_pagination(
 			array(
-				'prev_text' => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous', 'inspiro' ) . '</span>',
-				'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'inspiro' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
+				'prev_text' => inspiro_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous', 'inspiro' ) . '</span>',
+				'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'inspiro' ) . '</span>' . inspiro_get_svg( array( 'icon' => 'arrow-right' ) ),
 			)
 		);
 

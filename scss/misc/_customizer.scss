@@ -1,4 +1,4 @@
-.highlight-front-sections.twentyseventeen-customizer.twentyseventeen-front-page .twentyseventeen-panel:after {
+.highlight-front-sections.inspiro-customizer.inspiro-front-page .inspiro-panel:after {
     border: 2px dashed #0085ba; /* Matches visible edit shortcuts. */
     bottom: 1em;
     content: "";
@@ -10,12 +10,12 @@
     z-index: 1;
 }
 
-.highlight-front-sections.twentyseventeen-customizer.twentyseventeen-front-page .twentyseventeen-panel .panel-content {
+.highlight-front-sections.inspiro-customizer.inspiro-front-page .inspiro-panel .panel-content {
     z-index: 2; /* Prevent :after from preventing interactions within the section */
 }
 
 /* Used for placeholder text */
-.twentyseventeen-customizer.twentyseventeen-front-page .twentyseventeen-panel .twentyseventeen-panel-title {
+.inspiro-customizer.inspiro-front-page .inspiro-panel .inspiro-panel-title {
     display: block;
     font-size: 14px;
     font-size: 0.875rem;
@@ -27,21 +27,21 @@
 }
 
 /* Show borders on the custom page panels only when the front page sections are being edited */
-.highlight-front-sections.twentyseventeen-customizer.twentyseventeen-front-page .twentyseventeen-panel:nth-of-type(1):after {
+.highlight-front-sections.inspiro-customizer.inspiro-front-page .inspiro-panel:nth-of-type(1):after {
     border: none;
 }
 
-.twentyseventeen-front-page.twentyseventeen-customizer #primary article.panel-placeholder {
+.inspiro-front-page.inspiro-customizer #primary article.panel-placeholder {
     border: 0;
 }
 
 /* Add some space around the visual edit shortcut buttons. */
-.twentyseventeen-panel > .customize-partial-edit-shortcut > button {
+.inspiro-panel > .customize-partial-edit-shortcut > button {
     top: 30px;
     left: 30px;
 }
 
 /* Ensure that placeholder icons are visible. */
-.twentyseventeen-panel .customize-partial-edit-shortcut-hidden:before {
+.inspiro-panel .customize-partial-edit-shortcut-hidden:before {
     visibility: visible;
 }

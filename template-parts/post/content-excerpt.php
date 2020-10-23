@@ -6,10 +6,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
- * @version 1.2
+ * @package Inspiro
+ * @subpackage Inspiro_Lite
+ * @since Inspiro Lite 1.0.0
+ * @version x.x.x
  */
 
 ?>
@@ -20,13 +20,13 @@
 		<?php if ( 'post' === get_post_type() ) : ?>
 			<div class="entry-meta">
 				<?php
-				echo twentyseventeen_time_link();
-				twentyseventeen_edit_link();
+				echo inspiro_time_link();
+				inspiro_edit_link();
 				?>
 			</div><!-- .entry-meta -->
 		<?php elseif ( 'page' === get_post_type() && get_edit_post_link() ) : ?>
 			<div class="entry-meta">
-				<?php twentyseventeen_edit_link(); ?>
+				<?php inspiro_edit_link(); ?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 

@@ -5,7 +5,7 @@
  * http://flesler.blogspot.com/2007/10/jqueryscrollto.html
  * @projectDescription Lightweight, cross-browser and highly customizable animated scrolling with jQuery
  * @author Ariel Flesler
- * @version 2.1.2
+ * @version x.x.x.2
  */
 ;(function(factory) {
 	'use strict';

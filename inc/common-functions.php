@@ -61,7 +61,7 @@ function inspiro_get_assets_uri( $filename, $filetype ) {
 /**
  * Add preconnect for Google Fonts.
  *
- * @since Twenty Seventeen 1.0
+ * @since Inspiro Lite 1.0.0
  *
  * @param array  $urls          URLs to print for resource hints.
  * @param string $relation_type The relation type the URLs are printed.
@@ -127,7 +127,7 @@ add_action( 'widgets_init', 'inspiro_widgets_init' );
  * Replaces "[...]" (appended to automatically generated excerpts) with ... and
  * a 'Continue reading' link.
  *
- * @since Twenty Seventeen 1.0
+ * @since Inspiro Lite 1.0.0
  *
  * @param string $link Link to single post/page.
  * @return string 'Continue reading' link prepended with an ellipsis.
@@ -151,7 +151,7 @@ add_filter( 'excerpt_more', 'inspiro_excerpt_more' );
  * Add custom image sizes attribute to enhance responsive image functionality
  * for content images.
  *
- * @since Twenty Seventeen 1.0
+ * @since Inspiro Lite 1.0.0
  *
  * @param string $sizes A source size value for use in a 'sizes' attribute.
  * @param array  $size  Image size. Accepts an array of width and height
@@ -178,7 +178,7 @@ add_filter( 'wp_calculate_image_sizes', 'inspiro_content_image_sizes_attr', 10, 
 /**
  * Filters the `sizes` value in the header image markup.
  *
- * @since Twenty Seventeen 1.0
+ * @since Inspiro Lite 1.0.0
  *
  * @param string $html   The HTML image tag markup being filtered.
  * @param object $header The custom header object returned by 'get_custom_header()'.
@@ -197,7 +197,7 @@ add_filter( 'get_header_image_tag', 'inspiro_header_image_tag', 10, 3 );
  * Add custom image sizes attribute to enhance responsive image functionality
  * for post thumbnails.
  *
- * @since Twenty Seventeen 1.0
+ * @since Inspiro Lite 1.0.0
  *
  * @param array $attr       Attributes for the image markup.
  * @param int   $attachment Image attachment ID.
@@ -218,7 +218,7 @@ add_filter( 'wp_get_attachment_image_attributes', 'inspiro_post_thumbnail_sizes_
 /**
  * Use front-page.php when Front page displays is set to a static page.
  *
- * @since Twenty Seventeen 1.0
+ * @since Inspiro Lite 1.0.0
  *
  * @param string $template front-page.php.
  * @return string The template to be used: blank if is_home() is true (defaults to index.php),
@@ -233,7 +233,7 @@ add_filter( 'frontpage_template', 'inspiro_front_page_template' );
  * Modifies tag cloud widget arguments to display all tags in the same font size
  * and use list format for better accessibility.
  *
- * @since Twenty Seventeen 1.4
+ * @since Inspiro Lite 1.0.0
  *
  * @param array $args Arguments for tag cloud widget.
  * @return array The filtered arguments for tag cloud widget.
@@ -256,7 +256,7 @@ add_filter( 'widget_tag_cloud_args', 'inspiro_widget_tag_cloud_args' );
  * with the optional prefix. As such the returned value is not universally unique,
  * but it is unique across the life of the PHP process.
  *
- * @since Twenty Seventeen 2.0
+ * @since Inspiro Lite 1.0.0
  *
  * @see wp_unique_id() Themes requiring WordPress 5.0.3 and greater should use this instead.
  *

@@ -2,9 +2,9 @@
 /**
  * Twenty Seventeen: Customizer
  *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
+ * @package Inspiro
+ * @subpackage Inspiro_Lite
+ * @since Inspiro Lite 1.0.0
  */
 
 /**
@@ -12,7 +12,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function twentyseventeen_customize_register( $wp_customize ) {
+function inspiro_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -21,14 +21,14 @@ function twentyseventeen_customize_register( $wp_customize ) {
 		'blogname',
 		array(
 			'selector'        => '.site-title a',
-			'render_callback' => 'twentyseventeen_customize_partial_blogname',
+			'render_callback' => 'inspiro_customize_partial_blogname',
 		)
 	);
 	$wp_customize->selective_refresh->add_partial(
 		'blogdescription',
 		array(
 			'selector'        => '.site-description',
-			'render_callback' => 'twentyseventeen_customize_partial_blogdescription',
+			'render_callback' => 'inspiro_customize_partial_blogdescription',
 		)
 	);
 
@@ -40,7 +40,7 @@ function twentyseventeen_customize_register( $wp_customize ) {
 		array(
 			'default'           => 'light',
 			'transport'         => 'postMessage',
-			'sanitize_callback' => 'twentyseventeen_sanitize_colorscheme',
+			'sanitize_callback' => 'inspiro_sanitize_colorscheme',
 		)
 	);
 
@@ -95,7 +95,7 @@ function twentyseventeen_customize_register( $wp_customize ) {
 		'page_layout',
 		array(
 			'default'           => 'two-column',
-			'sanitize_callback' => 'twentyseventeen_sanitize_page_layout',
+			'sanitize_callback' => 'inspiro_sanitize_page_layout',
 			'transport'         => 'postMessage',
 		)
 	);
@@ -111,18 +111,18 @@ function twentyseventeen_customize_register( $wp_customize ) {
 				'one-column' => __( 'One Column', 'inspiro' ),
 				'two-column' => __( 'Two Column', 'inspiro' ),
 			),
-			'active_callback' => 'twentyseventeen_is_view_with_layout_option',
+			'active_callback' => 'inspiro_is_view_with_layout_option',
 		)
 	);
 
 	/**
 	 * Filters the number of front page sections in Twenty Seventeen.
 	 *
-	 * @since Twenty Seventeen 1.0
+	 * @since Inspiro Lite 1.0.0
 	 *
 	 * @param int $num_sections Number of front page sections.
 	 */
-	$num_sections = apply_filters( 'twentyseventeen_front_page_sections', 4 );
+	$num_sections = apply_filters( 'inspiro_front_page_sections', 4 );
 
 	// Create a setting and control for each of the sections available in the theme.
 	for ( $i = 1; $i < ( 1 + $num_sections ); $i++ ) {
@@ -144,7 +144,7 @@ function twentyseventeen_customize_register( $wp_customize ) {
 				'section'         => 'theme_options',
 				'type'            => 'dropdown-pages',
 				'allow_addition'  => true,
-				'active_callback' => 'twentyseventeen_is_static_front_page',
+				'active_callback' => 'inspiro_is_static_front_page',
 			)
 		);
 
@@ -152,20 +152,20 @@ function twentyseventeen_customize_register( $wp_customize ) {
 			'panel_' . $i,
 			array(
 				'selector'            => '#panel' . $i,
-				'render_callback'     => 'twentyseventeen_front_page_section',
+				'render_callback'     => 'inspiro_front_page_section',
 				'container_inclusive' => true,
 			)
 		);
 	}
 }
-add_action( 'customize_register', 'twentyseventeen_customize_register' );
+add_action( 'customize_register', 'inspiro_customize_register' );
 
 /**
  * Sanitize the page layout options.
  *
  * @param string $input Page layout.
  */
-function twentyseventeen_sanitize_page_layout( $input ) {
+function inspiro_sanitize_page_layout( $input ) {
 	$valid = array(
 		'one-column' => __( 'One Column', 'inspiro' ),
 		'two-column' => __( 'Two Column', 'inspiro' ),
@@ -183,7 +183,7 @@ function twentyseventeen_sanitize_page_layout( $input ) {
  *
  * @param string $input Color scheme.
  */
-function twentyseventeen_sanitize_colorscheme( $input ) {
+function inspiro_sanitize_colorscheme( $input ) {
 	$valid = array( 'light', 'dark', 'custom' );
 
 	if ( in_array( $input, $valid, true ) ) {
@@ -196,40 +196,40 @@ function twentyseventeen_sanitize_colorscheme( $input ) {
 /**
  * Render the site title for the selective refresh partial.
  *
- * @since Twenty Seventeen 1.0
+ * @since Inspiro Lite 1.0.0
  *
- * @see twentyseventeen_customize_register()
+ * @see inspiro_customize_register()
  *
  * @return void
  */
-function twentyseventeen_customize_partial_blogname() {
+function inspiro_customize_partial_blogname() {
 	bloginfo( 'name' );
 }
 
 /**
  * Render the site tagline for the selective refresh partial.
  *
- * @since Twenty Seventeen 1.0
+ * @since Inspiro Lite 1.0.0
  *
- * @see twentyseventeen_customize_register()
+ * @see inspiro_customize_register()
  *
  * @return void
  */
-function twentyseventeen_customize_partial_blogdescription() {
+function inspiro_customize_partial_blogdescription() {
 	bloginfo( 'description' );
 }
 
 /**
  * Return whether we're previewing the front page and it's a static page.
  */
-function twentyseventeen_is_static_front_page() {
+function inspiro_is_static_front_page() {
 	return ( is_front_page() && ! is_home() );
 }
 
 /**
  * Return whether we're on a view that supports a one or two column layout.
  */
-function twentyseventeen_is_view_with_layout_option() {
+function inspiro_is_view_with_layout_option() {
 	// This option is available on all pages. It's also available on archives when there isn't a sidebar.
 	return ( is_page() || ( is_archive() && ! is_active_sidebar( 'sidebar-1' ) ) );
 }
@@ -237,15 +237,15 @@ function twentyseventeen_is_view_with_layout_option() {
 /**
  * Bind JS handlers to instantly live-preview changes.
  */
-function twentyseventeen_customize_preview_js() {
-	wp_enqueue_script( 'twentyseventeen-customize-preview', inspiro_get_assets_uri( 'customize-preview', 'js' ), array( 'customize-preview' ), INSPIRO_THEME_VERSION, true );
+function inspiro_customize_preview_js() {
+	wp_enqueue_script( 'inspiro-customize-preview', inspiro_get_assets_uri( 'customize-preview', 'js' ), array( 'customize-preview' ), INSPIRO_THEME_VERSION, true );
 }
-add_action( 'customize_preview_init', 'twentyseventeen_customize_preview_js' );
+add_action( 'customize_preview_init', 'inspiro_customize_preview_js' );
 
 /**
  * Load dynamic logic for the customizer controls area.
  */
-function twentyseventeen_panels_js() {
-	wp_enqueue_script( 'twentyseventeen-customize-controls', inspiro_get_assets_uri( 'customize-controls', 'js' ), array(), INSPIRO_THEME_VERSION, true );
+function inspiro_panels_js() {
+	wp_enqueue_script( 'inspiro-customize-controls', inspiro_get_assets_uri( 'customize-controls', 'js' ), array(), INSPIRO_THEME_VERSION, true );
 }
-add_action( 'customize_controls_enqueue_scripts', 'twentyseventeen_panels_js' );
+add_action( 'customize_controls_enqueue_scripts', 'inspiro_panels_js' );

@@ -1719,8 +1719,8 @@ body:not(.title-tagline-hidden) .site-branding-text {
   position: relative;
 }
 
-.has-header-image.twentyseventeen-front-page .custom-header,
-.has-header-video.twentyseventeen-front-page .custom-header,
+.has-header-image.inspiro-front-page .custom-header,
+.has-header-video.inspiro-front-page .custom-header,
 .has-header-image.home.blog .custom-header,
 .has-header-video.home.blog .custom-header {
   display: table;
@@ -1808,7 +1808,7 @@ body:not(.title-tagline-hidden) .site-branding-text {
   top: 62px;
 }
 
-.has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-media img {
+.has-header-image:not(.inspiro-front-page):not(.home) .custom-header-media img {
   bottom: 0;
   position: absolute;
   top: auto;
@@ -1822,7 +1822,7 @@ body:not(.title-tagline-hidden) .site-branding-text {
 @supports (object-fit: cover) {
   .has-header-image .custom-header-media img,
   .has-header-video .custom-header-media video,
-  .has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-media img {
+  .has-header-image:not(.inspiro-front-page):not(.home) .custom-header-media img {
     height: 100%;
     left: 0;
     -o-object-fit: cover;
@@ -1841,8 +1841,8 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
   display: none;
 }
 
-.has-header-image.twentyseventeen-front-page .site-branding,
-.has-header-video.twentyseventeen-front-page .site-branding,
+.has-header-image.inspiro-front-page .site-branding,
+.has-header-video.inspiro-front-page .site-branding,
 .has-header-image.home.blog .site-branding,
 .has-header-video.home.blog .site-branding {
   display: table-cell;
@@ -1853,11 +1853,11 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 /*--------------------------------------------------------------
 13.2 Front Page
 --------------------------------------------------------------*/
-.twentyseventeen-front-page .site-content {
+.inspiro-front-page .site-content {
   padding: 0;
 }
 
-.twentyseventeen-panel {
+.inspiro-panel {
   overflow: hidden;
   position: relative;
 }
@@ -1889,7 +1889,7 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
   top: 100px;
 }
 
-.twentyseventeen-front-page article:not(.has-post-thumbnail):not(:first-child) {
+.inspiro-front-page article:not(.has-post-thumbnail):not(:first-child) {
   border-top: 1px solid #ddd;
 }
 
@@ -1903,18 +1903,18 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 }
 
 /* Panel edit link */
-.twentyseventeen-panel .edit-link {
+.inspiro-panel .edit-link {
   display: block;
   margin: 0.3em 0 0;
 }
 
-.twentyseventeen-panel .entry-header .edit-link {
+.inspiro-panel .entry-header .edit-link {
   font-size: 14px;
   font-size: 0.875rem;
 }
 
 /* Front Page - Recent Posts */
-.twentyseventeen-front-page .panel-content .recent-posts article {
+.inspiro-front-page .panel-content .recent-posts article {
   border: 0;
   color: #333;
   margin-bottom: 3em;
@@ -1932,7 +1932,7 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
   text-transform: none;
 }
 
-.twentyseventeen-panel .recent-posts .entry-header .edit-link {
+.inspiro-panel .recent-posts .entry-header .edit-link {
   color: #222;
   display: inline-block;
   font-size: 11px;
@@ -1975,7 +1975,7 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 
 .page .panel-content .entry-title,
 .page-title,
-body.page:not(.twentyseventeen-front-page) .entry-title {
+body.page:not(.inspiro-front-page) .entry-title {
   color: #222;
   font-size: 14px;
   font-size: 0.875rem;
@@ -2110,18 +2110,18 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
   padding-bottom: 2em;
 }
 
-body:not(.twentyseventeen-front-page) .entry-header {
+body:not(.inspiro-front-page) .entry-header {
   padding: 1em 0;
 }
 
-body:not(.twentyseventeen-front-page) .entry-header,
-body:not(.twentyseventeen-front-page) .entry-content,
-body:not(.twentyseventeen-front-page) #comments {
+body:not(.inspiro-front-page) .entry-header,
+body:not(.inspiro-front-page) .entry-content,
+body:not(.inspiro-front-page) #comments {
   margin-left: auto;
   margin-right: auto;
 }
 
-body:not(.twentyseventeen-front-page) .entry-header {
+body:not(.inspiro-front-page) .entry-header {
   padding-top: 0;
 }
 
@@ -2154,7 +2154,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 
 /* Single Post */
 .single-post:not(.has-sidebar) #primary,
-.page.page-one-column:not(.twentyseventeen-front-page) #primary,
+.page.page-one-column:not(.inspiro-front-page) #primary,
 .archive.page-one-column:not(.has-sidebar) .page-header,
 .archive.page-one-column:not(.has-sidebar) #primary {
   margin-left: auto;
@@ -3073,7 +3073,7 @@ p > object:only-child {
 /*--------------------------------------------------------------
 17.0 Customizer
 --------------------------------------------------------------*/
-.highlight-front-sections.twentyseventeen-customizer.twentyseventeen-front-page .twentyseventeen-panel:after {
+.highlight-front-sections.inspiro-customizer.inspiro-front-page .inspiro-panel:after {
   border: 2px dashed #0085ba;
   /* Matches visible edit shortcuts. */
   bottom: 1em;
@@ -3086,13 +3086,13 @@ p > object:only-child {
   z-index: 1;
 }
 
-.highlight-front-sections.twentyseventeen-customizer.twentyseventeen-front-page .twentyseventeen-panel .panel-content {
+.highlight-front-sections.inspiro-customizer.inspiro-front-page .inspiro-panel .panel-content {
   z-index: 2;
   /* Prevent :after from preventing interactions within the section */
 }
 
 /* Used for placeholder text */
-.twentyseventeen-customizer.twentyseventeen-front-page .twentyseventeen-panel .twentyseventeen-panel-title {
+.inspiro-customizer.inspiro-front-page .inspiro-panel .inspiro-panel-title {
   display: block;
   font-size: 14px;
   font-size: 0.875rem;
@@ -3104,22 +3104,22 @@ p > object:only-child {
 }
 
 /* Show borders on the custom page panels only when the front page sections are being edited */
-.highlight-front-sections.twentyseventeen-customizer.twentyseventeen-front-page .twentyseventeen-panel:nth-of-type(1):after {
+.highlight-front-sections.inspiro-customizer.inspiro-front-page .inspiro-panel:nth-of-type(1):after {
   border: none;
 }
 
-.twentyseventeen-front-page.twentyseventeen-customizer #primary article.panel-placeholder {
+.inspiro-front-page.inspiro-customizer #primary article.panel-placeholder {
   border: 0;
 }
 
 /* Add some space around the visual edit shortcut buttons. */
-.twentyseventeen-panel > .customize-partial-edit-shortcut > button {
+.inspiro-panel > .customize-partial-edit-shortcut > button {
   top: 30px;
   left: 30px;
 }
 
 /* Ensure that placeholder icons are visible. */
-.twentyseventeen-panel .customize-partial-edit-shortcut-hidden:before {
+.inspiro-panel .customize-partial-edit-shortcut-hidden:before {
   visibility: visible;
 }
 
@@ -3336,8 +3336,8 @@ p > object:only-child {
   .site-branding {
     margin-bottom: 0;
   }
-  .has-header-image.twentyseventeen-front-page .site-branding,
-  .has-header-video.twentyseventeen-front-page .site-branding,
+  .has-header-image.inspiro-front-page .site-branding,
+  .has-header-video.inspiro-front-page .site-branding,
   .has-header-image.home.blog .site-branding,
   .has-header-video.home.blog .site-branding {
     bottom: 0;
@@ -3348,8 +3348,8 @@ p > object:only-child {
     position: absolute;
     width: 100%;
   }
-  .has-header-image.twentyseventeen-front-page .custom-header,
-  .has-header-video.twentyseventeen-front-page .custom-header,
+  .has-header-image.inspiro-front-page .custom-header,
+  .has-header-video.inspiro-front-page .custom-header,
   .has-header-image.home.blog .custom-header,
   .has-header-video.home.blog .custom-header {
     display: block;
@@ -3359,15 +3359,15 @@ p > object:only-child {
     height: 165px;
     position: relative;
   }
-  .twentyseventeen-front-page.has-header-image .custom-header-media,
-  .twentyseventeen-front-page.has-header-video .custom-header-media,
+  .inspiro-front-page.has-header-image .custom-header-media,
+  .inspiro-front-page.has-header-video .custom-header-media,
   .home.blog.has-header-image .custom-header-media,
   .home.blog.has-header-video .custom-header-media {
     height: 0;
     position: relative;
   }
-  .has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-media,
-  .has-header-video:not(.twentyseventeen-front-page):not(.home) .custom-header-media {
+  .has-header-image:not(.inspiro-front-page):not(.home) .custom-header-media,
+  .has-header-video:not(.inspiro-front-page):not(.home) .custom-header-media {
     bottom: 0;
     height: auto;
     left: 0;
@@ -3606,14 +3606,14 @@ p > object:only-child {
     width: 18px;
   }
   /* Front Page */
-  .twentyseventeen-front-page.has-header-image .site-branding,
-  .twentyseventeen-front-page.has-header-video .site-branding,
+  .inspiro-front-page.has-header-image .site-branding,
+  .inspiro-front-page.has-header-video .site-branding,
   .home.blog.has-header-image .site-branding,
   .home.blog.has-header-video .site-branding {
     margin-bottom: 70px;
   }
-  .twentyseventeen-front-page.has-header-image .custom-header-media,
-  .twentyseventeen-front-page.has-header-video .custom-header-media,
+  .inspiro-front-page.has-header-image .custom-header-media,
+  .inspiro-front-page.has-header-video .custom-header-media,
   .home.blog.has-header-image .custom-header-media,
   .home.blog.has-header-video .custom-header-media {
     height: 1200px;
@@ -3621,14 +3621,14 @@ p > object:only-child {
     max-height: 100%;
     overflow: hidden;
   }
-  .twentyseventeen-front-page.has-header-image .custom-header-media:before,
-  .twentyseventeen-front-page.has-header-video .custom-header-media:before,
+  .inspiro-front-page.has-header-image .custom-header-media:before,
+  .inspiro-front-page.has-header-video .custom-header-media:before,
   .home.blog.has-header-image .custom-header-media:before,
   .home.blog.has-header-video .custom-header-media:before {
     height: 33%;
   }
-  .admin-bar.twentyseventeen-front-page.has-header-image .custom-header-media,
-  .admin-bar.twentyseventeen-front-page.has-header-video .custom-header-media,
+  .admin-bar.inspiro-front-page.has-header-image .custom-header-media,
+  .admin-bar.inspiro-front-page.has-header-video .custom-header-media,
   .admin-bar.home.blog.has-header-image .custom-header-media,
   .admin-bar.home.blog.has-header-video .custom-header-media {
     height: calc(100vh - 32px);
@@ -3784,14 +3784,14 @@ p > object:only-child {
   }
   /* blog and archive */
   .blog:not(.has-sidebar) .entry-content blockquote.alignleft,
-  .twentyseventeen-front-page.page-two-column .entry-content blockquote.alignleft,
+  .inspiro-front-page.page-two-column .entry-content blockquote.alignleft,
   .archive:not(.has-sidebar) .entry-content blockquote.alignleft,
   .page-two-column .entry-content blockquote.alignleft {
     margin-left: -72.5%;
     width: 62%;
   }
   .blog:not(.has-sidebar) .entry-content blockquote.alignright,
-  .twentyseventeen-front-page.page-two-column .entry-content blockquote.alignright,
+  .inspiro-front-page.page-two-column .entry-content blockquote.alignright,
   .archive:not(.has-sidebar) .entry-content blockquote.alignright,
   .page-two-column .entry-content blockquote.alignright {
     margin-right: 0;
@@ -3803,7 +3803,7 @@ p > object:only-child {
   }
   /* Pages */
   .page.page-one-column .entry-header,
-  .twentyseventeen-front-page.page-one-column .entry-header,
+  .inspiro-front-page.page-one-column .entry-header,
   .archive.page-one-column:not(.has-sidebar) .page-header {
     margin-bottom: 4em;
   }
@@ -3951,7 +3951,7 @@ p > object:only-child {
   .blog:not(.has-sidebar) .entry-content blockquote.alignright,
   .archive:not(.has-sidebar) .entry-content blockquote.alignright,
   .page-two-column .entry-content blockquote.alignright,
-  .twentyseventeen-front-page .entry-content blockquote.alignright {
+  .inspiro-front-page .entry-content blockquote.alignright {
     margin-right: -20%;
   }
 }
@@ -4024,7 +4024,7 @@ p > object:only-child {
   }
   .page .panel-content .entry-title,
   .page-title,
-  body.page:not(.twentyseventeen-front-page) .entry-title {
+  body.page:not(.inspiro-front-page) .entry-title {
     font-size: 10pt;
   }
   /* Layout */
@@ -4041,8 +4041,8 @@ p > object:only-child {
   .custom-header-media {
     padding: 0;
   }
-  .twentyseventeen-front-page.has-header-image .site-branding,
-  .twentyseventeen-front-page.has-header-video .site-branding,
+  .inspiro-front-page.has-header-image .site-branding,
+  .inspiro-front-page.has-header-video .site-branding,
   .home.blog.has-header-image .site-branding,
   .home.blog.has-header-video .site-branding {
     position: relative;
@@ -4075,10 +4075,10 @@ p > object:only-child {
   body,
   a,
   .site-title a,
-  .twentyseventeen-front-page.has-header-image .site-title,
-  .twentyseventeen-front-page.has-header-video .site-title,
-  .twentyseventeen-front-page.has-header-image .site-title a,
-  .twentyseventeen-front-page.has-header-video .site-title a {
+  .inspiro-front-page.has-header-image .site-title,
+  .inspiro-front-page.has-header-video .site-title,
+  .inspiro-front-page.has-header-image .site-title a,
+  .inspiro-front-page.has-header-video .site-title a {
     color: #222 !important;
     /* Make sure color schemes don't affect to print */
   }
@@ -4086,8 +4086,8 @@ p > object:only-child {
   h5,
   blockquote,
   .site-description,
-  .twentyseventeen-front-page.has-header-image .site-description,
-  .twentyseventeen-front-page.has-header-video .site-description,
+  .inspiro-front-page.has-header-image .site-description,
+  .inspiro-front-page.has-header-video .site-description,
   .entry-meta,
   .entry-meta a {
     color: #777 !important;

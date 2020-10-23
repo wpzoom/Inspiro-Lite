@@ -2,21 +2,21 @@
 /**
  * Template part for displaying pages on front page
  *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
- * @version 1.0
+ * @package Inspiro
+ * @subpackage Inspiro_Lite
+ * @since Inspiro Lite 1.0.0
+ * @version x.x.x
  */
 
-global $twentyseventeencounter;
+global $inspirocounter;
 
 ?>
 
-<article id="panel<?php echo $twentyseventeencounter; ?>" <?php post_class( 'twentyseventeen-panel ' ); ?> >
+<article id="panel<?php echo $inspirocounter; ?>" <?php post_class( 'inspiro-panel ' ); ?> >
 
 	<?php
 	if ( has_post_thumbnail() ) :
-		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'twentyseventeen-featured-image' );
+		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'inspiro-featured-image' );
 
 		// Calculate aspect ratio: h / w * 100%.
 		$ratio = $thumbnail[2] / $thumbnail[1] * 100;
@@ -33,7 +33,7 @@ global $twentyseventeencounter;
 			<header class="entry-header">
 				<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 
-				<?php twentyseventeen_edit_link( get_the_ID() ); ?>
+				<?php inspiro_edit_link( get_the_ID() ); ?>
 
 			</header><!-- .entry-header -->
 

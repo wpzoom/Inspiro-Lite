@@ -60,7 +60,7 @@ img {
 	overflow: hidden;
 }
 
-.has-header-image.twentyseventeen-front-page .custom-header,
+.has-header-image.inspiro-front-page .custom-header,
 .has-header-image.home.blog .custom-header {
 	display: block;
 }
@@ -73,7 +73,7 @@ img {
 	padding: 45px 0;
 }
 
-.has-header-image.twentyseventeen-front-page .site-branding,
+.has-header-image.inspiro-front-page .site-branding,
 .has-header-image.home.blog .site-branding {
 	bottom: 0;
 	display: block;
@@ -133,7 +133,7 @@ img {
 
 /* Front Page */
 
-.twentyseventeen-front-page.has-header-image .custom-header,
+.inspiro-front-page.has-header-image .custom-header,
 .blog.home.has-header-image .custom-header,
 .panel-image {
 	height: 800px;
@@ -141,12 +141,12 @@ img {
 	padding-top: 0;
 }
 
-.twentyseventeen-front-page .custom-header-media,
+.inspiro-front-page .custom-header-media,
 .blog.home .custom-header-media {
 	background-position: center center;
 }
 
-.twentyseventeen-front-page.has-header-image .site-branding,
+.inspiro-front-page.has-header-image .site-branding,
 .home.blog.has-header-image .site-branding {
 	bottom: 20px;
 	position: absolute;
@@ -208,7 +208,7 @@ ol.children .children {
 
 /* RTL Styles */
 
-.rtl .has-header-image.twentyseventeen-front-page .site-branding,
+.rtl .has-header-image.inspiro-front-page .site-branding,
 .rtl .has-header-image.home.blog .site-branding {
 	left: auto;
 	right: 0;

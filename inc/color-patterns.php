@@ -2,25 +2,25 @@
 /**
  * Twenty Seventeen: Color Patterns
  *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
+ * @package Inspiro
+ * @subpackage Inspiro_Lite
+ * @since Inspiro Lite 1.0.0
  */
 
 /**
  * Generate the CSS for the current custom color scheme.
  */
-function twentyseventeen_custom_colors_css() {
+function inspiro_custom_colors_css() {
 	$hue = absint( get_theme_mod( 'colorscheme_hue', 250 ) );
 
 	/**
 	 * Filters Twenty Seventeen default saturation level.
 	 *
-	 * @since Twenty Seventeen 1.0
+	 * @since Inspiro Lite 1.0.0
 	 *
 	 * @param int $saturation Color saturation level.
 	 */
-	$saturation         = absint( apply_filters( 'twentyseventeen_custom_colors_saturation', 50 ) );
+	$saturation         = absint( apply_filters( 'inspiro_custom_colors_saturation', 50 ) );
 	$reduced_saturation = ( .8 * $saturation ) . '%';
 	$saturation         = $saturation . '%';
 	$css                = '
@@ -138,7 +138,7 @@ function twentyseventeen_custom_colors_css() {
 .colors-custom .menu-toggle,
 .colors-custom .page .panel-content .entry-title,
 .colors-custom .page-title,
-.colors-custom.page:not(.twentyseventeen-front-page) .entry-title,
+.colors-custom.page:not(.inspiro-front-page) .entry-title,
 .colors-custom .page-links a .page-number,
 .colors-custom .comment-metadata a.comment-edit-link,
 .colors-custom .comment-reply-link .icon,
@@ -147,7 +147,7 @@ function twentyseventeen_custom_colors_css() {
 .colors-custom .post-navigation a:focus .icon,
 .colors-custom .post-navigation a:hover .icon,
 .colors-custom .site-content .site-content-light,
-.colors-custom .twentyseventeen-panel .recent-posts .entry-header .edit-link {
+.colors-custom .inspiro-panel .recent-posts .entry-header .edit-link {
 	color: hsl( ' . $hue . ', ' . $saturation . ', 13% ); /* base: #222; */
 }
 
@@ -219,7 +219,7 @@ body.colors-custom,
 .colors-custom h6,
 .colors-custom label,
 .colors-custom .entry-title a,
-.colors-custom.twentyseventeen-front-page .panel-content .recent-posts article,
+.colors-custom.inspiro-front-page .panel-content .recent-posts article,
 .colors-custom .entry-footer .cat-links a,
 .colors-custom .entry-footer .tags-links a,
 .colors-custom .format-quote blockquote,
@@ -391,7 +391,7 @@ body.colors-custom,
 	border-color: hsl( ' . $hue . ', ' . $saturation . ', 87% ); /* base: #ddd; */
 }
 
-.colors-custom.twentyseventeen-front-page article:not(.has-post-thumbnail):not(:first-child),
+.colors-custom.inspiro-front-page article:not(.has-post-thumbnail):not(:first-child),
 .colors-custom .widget ul li {
 	border-top-color: hsl( ' . $hue . ', ' . $saturation . ', 87% ); /* base: #ddd; */
 }
@@ -570,11 +570,11 @@ body.colors-custom,
 	/**
 	 * Filters Twenty Seventeen custom colors CSS.
 	 *
-	 * @since Twenty Seventeen 1.0
+	 * @since Inspiro Lite 1.0.0
 	 *
 	 * @param string $css        Base theme colors CSS.
 	 * @param int    $hue        The user's selected color hue.
 	 * @param string $saturation Filtered theme color saturation level.
 	 */
-	return apply_filters( 'twentyseventeen_custom_colors_css', $css, $hue, $saturation );
+	return apply_filters( 'inspiro_custom_colors_css', $css, $hue, $saturation );
 }

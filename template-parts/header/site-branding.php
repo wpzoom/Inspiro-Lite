@@ -2,10 +2,10 @@
 /**
  * Displays header site branding
  *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
- * @version 1.0
+ * @package Inspiro
+ * @subpackage Inspiro_Lite
+ * @since Inspiro Lite 1.0.0
+ * @version x.x.x
  */
 
 ?>
@@ -30,8 +30,8 @@
 			<?php endif; ?>
 		</div><!-- .site-branding-text -->
 
-		<?php if ( ( twentyseventeen_is_frontpage() || ( is_home() && is_front_page() ) ) && ! has_nav_menu( 'top' ) ) : ?>
-		<a href="#content" class="menu-scroll-down"><?php echo twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ); ?><span class="screen-reader-text"><?php _e( 'Scroll down to content', 'inspiro' ); ?></span></a>
+		<?php if ( ( inspiro_is_frontpage() || ( is_home() && is_front_page() ) ) && ! has_nav_menu( 'top' ) ) : ?>
+		<a href="#content" class="menu-scroll-down"><?php echo inspiro_get_svg( array( 'icon' => 'arrow-right' ) ); ?><span class="screen-reader-text"><?php _e( 'Scroll down to content', 'inspiro' ); ?></span></a>
 	<?php endif; ?>
 
 	</div><!-- .wrap -->

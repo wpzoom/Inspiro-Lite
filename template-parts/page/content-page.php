@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
- * @version 1.0
+ * @package Inspiro
+ * @subpackage Inspiro_Lite
+ * @since Inspiro Lite 1.0.0
+ * @version x.x.x
  */
 
 ?>
@@ -15,7 +15,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php twentyseventeen_edit_link( get_the_ID() ); ?>
+		<?php inspiro_edit_link( get_the_ID() ); ?>
 	</header><!-- .entry-header -->
 	<div class="entry-content">
 		<?php

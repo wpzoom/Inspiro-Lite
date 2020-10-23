@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since Twenty Seventeen 1.0
- * @version 1.0
+ * @package Inspiro
+ * @subpackage Inspiro_Lite
+ * @since Inspiro Lite 1.0.0
+ * @version x.x.x
  */
 
 get_header(); ?>
@@ -46,8 +46,8 @@ get_header(); ?>
 
 			the_posts_pagination(
 				array(
-					'prev_text'          => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'inspiro' ) . '</span>',
-					'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'inspiro' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
+					'prev_text'          => inspiro_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'inspiro' ) . '</span>',
+					'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'inspiro' ) . '</span>' . inspiro_get_svg( array( 'icon' => 'arrow-right' ) ),
 					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'inspiro' ) . ' </span>',
 				)
 			);
