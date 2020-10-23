@@ -200,7 +200,7 @@ module.exports = function(grunt) {
     addtextdomain: {
       options: {
         textdomain: 'inspiro',
-        updateDomains: ['twentyseventeen', 'inspiro-lite']
+        updateDomains: ['twentyseventeen', 'inspiro-lite', 'wpzoom']
       },
       target: {
         files: {
@@ -291,16 +291,16 @@ module.exports = function(grunt) {
         ]
       },
 
-      // theme_const: {
-      //   src: ['functions.php'],
-      //   overwrite: true,
-      //   replacements: [
-      //     {
-      //       from: /INSPIRO_THEME_VERSION', '.*?'/g,
-      //       to: 'INSPIRO_THEME_VERSION\', \'<%= pkg.version %>\''
-      //     }
-      //   ]
-      // },
+      theme_const: {
+        src: ['functions.php'],
+        overwrite: true,
+        replacements: [
+          {
+            from: /INSPIRO_THEME_VERSION', '.*?'/g,
+            to: 'INSPIRO_THEME_VERSION\', \'<%= pkg.version %>\''
+          }
+        ]
+      },
 
       theme_function_comment: {
         src: [
