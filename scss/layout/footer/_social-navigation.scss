@@ -1,0 +1,41 @@
+/* Social navigation */
+
+.social-navigation {
+    font-size: 16px;
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+
+.social-navigation ul {
+    list-style: none;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.social-navigation li {
+    display: inline;
+}
+
+.social-navigation a {
+    background-color: #767676;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    color: #fff;
+    display: inline-block;
+    height: 40px;
+    margin: 0 1em 0.5em 0;
+    text-align: center;
+    width: 40px;
+}
+
+.social-navigation a:hover,
+.social-navigation a:focus {
+    background-color: #333;
+}
+
+.social-navigation .icon {
+    height: 16px;
+    top: 12px;
+    width: 16px;
+    vertical-align: top;
+}

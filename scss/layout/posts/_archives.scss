@@ -1,0 +1,42 @@
+/* Blog landing, search, archives */
+
+.blog .site-main > article,
+.archive .site-main > article,
+.search .site-main > article {
+    padding-bottom: 2em;
+}
+
+body:not(.twentyseventeen-front-page) .entry-header {
+    padding: 1em 0;
+}
+
+body:not(.twentyseventeen-front-page) .entry-header,
+body:not(.twentyseventeen-front-page) .entry-content,
+body:not(.twentyseventeen-front-page) #comments {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body:not(.twentyseventeen-front-page) .entry-header {
+    padding-top: 0;
+}
+
+.blog .entry-meta a.post-edit-link,
+.archive .entry-meta a.post-edit-link,
+.search .entry-meta a.post-edit-link {
+    color: #222;
+    display: inline-block;
+    margin-left: 1em;
+    white-space: nowrap;
+}
+
+.search .page .entry-meta a.post-edit-link {
+    margin-left: 0;
+    white-space: nowrap;
+}
+
+.taxonomy-description {
+    color: #666;
+    font-size: 13px;
+    font-size: 0.8125rem;
+}

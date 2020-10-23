@@ -1,0 +1,29 @@
+/* Post Formats */
+
+.blog .format-status .entry-title,
+.archive .format-status .entry-title,
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+    display: none;
+}
+
+.format-quote blockquote {
+    color: #333;
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-weight: 300;
+    overflow: visible;
+    position: relative;
+}
+
+.format-quote blockquote .icon {
+    display: block;
+    height: 20px;
+    left: -1.25em;
+    position: absolute;
+    top: 0.4em;
+    -webkit-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+    width: 20px;
+}

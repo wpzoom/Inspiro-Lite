@@ -1,0 +1,371 @@
+# <!=Copyright (C) 2020 WPZOOM
+# This file is distributed under the GNU General Public License v3 or later.=!>
+msgid ""
+msgstr ""
+"Project-Id-Version: Inspiro 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/inspiro-lite\n"
+"POT-Creation-Date: 2020-10-22 16:31:52+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: 404.php:21
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:24
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: archive.php:49 index.php:53 search.php:50
+msgid "Previous page"
+msgstr ""
+
+#: archive.php:50 index.php:54 search.php:51
+msgid "Next page"
+msgstr ""
+
+#: archive.php:51 index.php:55 search.php:52
+msgid "Page"
+msgstr ""
+
+#: comments.php:61
+msgid "Reply"
+msgstr ""
+
+#: comments.php:70 single.php:33
+msgid "Previous"
+msgstr ""
+
+#: comments.php:71 single.php:34
+msgid "Next"
+msgstr ""
+
+#: comments.php:81
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:26
+msgid "Footer Social Links Menu"
+msgstr ""
+
+#: functions.php:64 functions.php:205
+#: template-parts/navigation/navigation-top.php:12
+msgid "Top Menu"
+msgstr ""
+
+#: functions.php:65 functions.php:216
+msgid "Social Links Menu"
+msgstr ""
+
+#: functions.php:338 sidebar.php:18
+msgid "Blog Sidebar"
+msgstr ""
+
+#: functions.php:340
+msgid "Add widgets here to appear in your sidebar on blog posts and archive pages."
+msgstr ""
+
+#: functions.php:350
+msgid "Footer 1"
+msgstr ""
+
+#: functions.php:352 functions.php:364
+msgid "Add widgets here to appear in your footer."
+msgstr ""
+
+#: functions.php:362
+msgid "Footer 2"
+msgstr ""
+
+#: functions.php:392 template-parts/page/content-front-page-panels.php:45
+#: template-parts/page/content-front-page.php:42
+#: template-parts/post/content-audio.php:84
+#: template-parts/post/content-gallery.php:71
+#: template-parts/post/content-image.php:61
+#: template-parts/post/content-video.php:83 template-parts/post/content.php:57
+#. translators: %s: Post title.
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: functions.php:483
+msgid "Expand child menu"
+msgstr ""
+
+#: functions.php:484
+msgid "Collapse child menu"
+msgstr ""
+
+#: header.php:28
+msgid "Skip to content"
+msgstr ""
+
+#: inc/back-compat.php:40 inc/back-compat.php:54 inc/back-compat.php:73
+#. translators: %s: The current WordPress version.
+msgid ""
+"Twenty Seventeen requires at least WordPress version 4.7. You are running "
+"version %s. Please upgrade and try again."
+msgstr ""
+
+#: inc/custom-header.php:56
+msgid "Default Header Image"
+msgstr ""
+
+#: inc/custom-header.php:127
+msgid "Play background video"
+msgstr ""
+
+#: inc/custom-header.php:128
+msgid "Pause background video"
+msgstr ""
+
+#: inc/customizer.php:60
+msgid "Color Scheme"
+msgstr ""
+
+#: inc/customizer.php:62
+msgid "Light"
+msgstr ""
+
+#: inc/customizer.php:63
+msgid "Dark"
+msgstr ""
+
+#: inc/customizer.php:64
+msgid "Custom"
+msgstr ""
+
+#: inc/customizer.php:89
+msgid "Theme Options"
+msgstr ""
+
+#: inc/customizer.php:106
+msgid "Page Layout"
+msgstr ""
+
+#: inc/customizer.php:109
+msgid ""
+"When the two-column layout is assigned, the page title is in one column and "
+"content is in the other."
+msgstr ""
+
+#: inc/customizer.php:111 inc/customizer.php:170
+msgid "One Column"
+msgstr ""
+
+#: inc/customizer.php:112 inc/customizer.php:171
+msgid "Two Column"
+msgstr ""
+
+#: inc/customizer.php:142
+#. translators: %d: The front page section number.
+msgid "Front Page Section %d Content"
+msgstr ""
+
+#: inc/customizer.php:143
+msgid ""
+"Select pages to feature in each area from the dropdowns. Add an image to a "
+"section by setting a featured image in the page editor. Empty sections will "
+"not be displayed."
+msgstr ""
+
+#: inc/icon-functions.php:39
+msgid "Please define default parameters in the form of an array."
+msgstr ""
+
+#: inc/icon-functions.php:44
+msgid "Please define an SVG icon filename."
+msgstr ""
+
+#: inc/template-tags.php:21
+#. translators: %s: Post author.
+msgid "by %s"
+msgstr ""
+
+#: inc/template-tags.php:52
+#. translators: %s: Post date.
+msgid "<span class=\"screen-reader-text\">Posted on</span> %s"
+msgstr ""
+
+#: inc/template-tags.php:66
+#. translators: Used between list items, there is a space after the comma.
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:85
+msgid "Categories"
+msgstr ""
+
+#: inc/template-tags.php:89
+msgid "Tags"
+msgstr ""
+
+#: inc/template-tags.php:117
+#. translators: %s: Post title.
+msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: inc/template-tags.php:158
+#. translators: %s: The section ID.
+msgid "Front Page Section %s Placeholder"
+msgstr ""
+
+#: index.php:27
+msgid "Posts"
+msgstr ""
+
+#: search.php:22
+#. translators: Search query.
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:26 template-parts/post/content-none.php:17
+msgid "Nothing Found"
+msgstr ""
+
+#: search.php:59
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: single.php:33
+msgid "Previous Post"
+msgstr ""
+
+#: single.php:34
+msgid "Next Post"
+msgstr ""
+
+#: template-parts/footer/footer-widgets.php:18
+msgid "Footer"
+msgstr ""
+
+#: template-parts/footer/site-info.php:18
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: template-parts/footer/site-info.php:21
+#. translators: %s: WordPress
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: template-parts/header/site-branding.php:34
+#: template-parts/navigation/navigation-top.php:31
+msgid "Scroll down to content"
+msgstr ""
+
+#: template-parts/navigation/navigation-top.php:17
+msgid "Menu"
+msgstr ""
+
+#: template-parts/page/content-front-page.php:48
+#: template-parts/page/content-page.php:26
+#: template-parts/post/content-audio.php:91
+#: template-parts/post/content-gallery.php:78
+#: template-parts/post/content-image.php:68
+#: template-parts/post/content-video.php:90 template-parts/post/content.php:64
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/post/content-none.php:27
+#. translators: %s: Post editor URL.
+msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/post/content-none.php:33
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Inspiro"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://www.wpzoom.com/free-wordpress-themes/inspiro-lite/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Inspiro is a theme that suits best for portfolio and photography sites. "
+"Widgetized homepage allows you to use the theme for a business site as "
+"well. Our theme works great in many languages, for any abilities, and on "
+"any device."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WPZOOM"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.wpzoom.com/"
+msgstr ""
+
+#: comments.php:37
+#. translators: %s: Post title.
+msgctxt "comments title"
+msgid "One Reply to &ldquo;%s&rdquo;"
+msgstr ""
+
+#: comments.php:41
+#. translators: 1: Number of comments, 2: Post title.
+msgctxt "comments title"
+msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:173
+msgctxt "Theme starter content"
+msgid "Espresso"
+msgstr ""
+
+#: functions.php:177
+msgctxt "Theme starter content"
+msgid "Sandwich"
+msgstr ""
+
+#: functions.php:181
+msgctxt "Theme starter content"
+msgid "Coffee"
+msgstr ""
+
+#: functions.php:290
+#. translators: If there are characters in your language that are not supported
+#. by Libre Franklin, translate this to 'off'. Do not translate into your own
+#. language.
+msgctxt "Libre Franklin font: on or off"
+msgid "on"
+msgstr ""
+
+#: searchform.php:17
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:19
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:20
+msgctxt "submit button"
+msgid "Search"
+msgstr ""

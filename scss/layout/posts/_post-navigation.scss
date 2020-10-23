@@ -1,0 +1,39 @@
+/* Post Navigation */
+
+.post-navigation {
+    font-weight: 800;
+    margin: 3em 0;
+}
+
+.post-navigation .nav-links {
+    padding: 1em 0;
+}
+
+.nav-subtitle {
+    background: transparent;
+    color: #767676;
+    display: block;
+    font-size: 11px;
+    font-size: 0.6875rem;
+    letter-spacing: 0.1818em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
+.nav-title {
+    color: #333;
+    font-size: 15px;
+    font-size: 0.9375rem;
+}
+
+.post-navigation .nav-next {
+    margin-top: 1.5em;
+}
+
+.nav-links .nav-previous .nav-title .nav-title-icon-wrapper {
+    margin-right: 0.5em;
+}
+
+.nav-links .nav-next .nav-title .nav-title-icon-wrapper {
+    margin-left: 0.5em;
+}

@@ -1,12 +1,12 @@
-# Inspiro #
-**Contributors:** [WPZOOM](https://profiles.wordpress.org/WPZOOM)  
-**Tested up to:** 5.5  
-**Version:** 1.0.0  
-**License:** GPLv2 or later  
-**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
-**Tags:** one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready  
+=== Inspiro ===
+Contributors: WPZOOM
+Tested up to: 5.5
+Version: 1.0.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
-## Description ##
+== Description ==
 
 A professional Photo and Video focused theme with a modern design. Packed with features including a fullscreen slideshow that supports YouTube, Vimeo & self-hosted videos in background, Page Builder integration and a gallery module, Inspiro is perfect for showing off your portfolio, images and videos.
 
@@ -15,7 +15,7 @@ For more information about Inspiro please go to https://wordpress.org/TODO:add u
 Please note:
 More customization options & features are available in the paid version.
 
-## Installation ##
+== Installation ==
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
 2. Type in Twenty Seventeen in the search form and press the 'Enter' key on your keyboard.
@@ -23,7 +23,7 @@ More customization options & features are available in the paid version.
 4. Go to https://wordpress.org/support/article/twenty-seventeen/ for a guide on how to customize this theme.
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
-## Copyright ##
+== Copyright ==
 
 Twenty Seventeen WordPress Theme, Copyright 2016-2020 WordPress.org
 Twenty Seventeen is distributed under the terms of the GNU GPL
@@ -60,9 +60,9 @@ Bundled header image, Copyright Alvin Engler
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://unsplash.com/@englr?photo=bIhpiQA009k
 
-## Changelog ##
+== Changelog ==
 
-### 1.0.0 ###
+= 1.0.0 =
 * Released: December 6, 2016
 
 Initial release

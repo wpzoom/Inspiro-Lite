@@ -1,0 +1,27 @@
+/* Site info */
+
+.site-info {
+    font-size: 14px;
+    font-size: 0.875rem;
+    margin-bottom: 1em;
+}
+
+.site-info a {
+    color: #666;
+}
+
+.site-info .sep {
+    margin: 0;
+    display: block;
+    visibility: hidden;
+    height: 0;
+    width: 100%;
+}
+
+.site-info span[role=separator] {
+    padding: 0 0.2em 0 0.4em;
+}
+
+.site-info span[role=separator]::before {
+    content: '\002f';
+}
