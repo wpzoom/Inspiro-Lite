@@ -8,6 +8,13 @@
     "url": "https://github.com/wpzoom/inspiro-lite.git"
   },
   "author": "WPZOOM",
+  "_project": {
+    "name": "Inspiro Lite",
+    "textdomain": "inspiro",
+    "slug": "inspiro",
+    "package": "Inspiro",
+    "subpackage": "Inspiro_Lite"
+  },
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.0.1",

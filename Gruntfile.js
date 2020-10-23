@@ -199,7 +199,7 @@ module.exports = function(grunt) {
 
     addtextdomain: {
       options: {
-        textdomain: 'inspiro',
+        textdomain: '<%= pkg._project.textdomain %>',
         updateDomains: ['twentyseventeen', 'inspiro-lite', 'wpzoom']
       },
       target: {
@@ -317,6 +317,58 @@ module.exports = function(grunt) {
             to: '<%= pkg.version %>'
           }
         ]
+      },
+
+      theme_based_replace: {
+        src: [
+          '**',
+          '!node_modules/**',
+          '!build/**',
+          '!css/sourcemap/**',
+          '!.git/**',
+          '!.github/**',
+          '!bin/**',
+          '!.gitlab-ci.yml',
+          '!cghooks.lock',
+          '!tests/**',
+          '!phpunit.xml.dist',
+          '!*.sh',
+          '!*.map',
+          '!Gruntfile.js',
+          '!package.json',
+          '!package-lock.json',
+          '!.gitignore',
+          '!phpunit.xml',
+          '!README.md',
+          '!sass/**',
+          '!vendor/**',
+          '!composer.json',
+          '!composer.lock',
+          '!phpcs.xml.dist',
+        ],
+        overwrite: true,
+        replacements: [
+          {
+            from: 'twentyseventeen',
+            to: '<%= pkg._project.slug %>'
+          },
+          {
+            from: '@package WordPress',
+            to: '@package <%= pkg._project.package %>'
+          },
+          {
+            from: '@subpackage Twenty_Seventeen',
+            to: '@subpackage <%= pkg._project.subpackage %>'
+          },
+          {
+            from: /@since Twenty Seventeen \bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z-A-Z-]+(?:\.[\da-z-A-Z-]+)*)?(?:\+[\da-z-A-Z-]+(?:\.[\da-z-A-Z-]+)*)?\b/g,
+            to: '@since <%= pkg._project.name %> x.x.x'
+          },
+          {
+            from: /@version \bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z-A-Z-]+(?:\.[\da-z-A-Z-]+)*)?(?:\+[\da-z-A-Z-]+(?:\.[\da-z-A-Z-]+)*)?\b/g,
+            to: '@version x.x.x'
+          }
+        ]
       }
     },
 
@@ -353,7 +405,7 @@ module.exports = function(grunt) {
       newVersion = newVersion ? newVersion : 'patch';
 
       grunt.task.run('bumpup:' + newVersion);
-      grunt.task.run('replace');
+      grunt.task.run('replace:theme_main', 'replace:theme_const', 'replace:theme_function_comment');
     }
   });
 
@@ -380,6 +432,9 @@ module.exports = function(grunt) {
 
   // i18n
   grunt.registerTask('i18n', ['addtextdomain', 'makepot']);
+
+  // Find and replace 'twentyseventeen' to the name of our theme in all the template files
+  grunt.registerTask('theme-based-replace', ['replace:theme_based_replace']);
 
   grunt.util.linefeed = '\n';
 };
