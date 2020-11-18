@@ -115,32 +115,6 @@ function inspiro_get_svg( $args = array() ) {
 }
 
 /**
- * Display SVG icons in social links menu.
- *
- * @param string   $item_output The menu item's starting HTML output.
- * @param WP_Post  $item        Menu item data object.
- * @param int      $depth       Depth of the menu. Used for padding.
- * @param stdClass $args        An object of wp_nav_menu() arguments.
- * @return string The menu item output with social icon.
- */
-function inspiro_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
-	// Get supported social icons.
-	$social_icons = inspiro_social_links_icons();
-
-	// Change SVG icon inside social links menu if there is supported URL.
-	if ( 'social' === $args->theme_location ) {
-		foreach ( $social_icons as $attr => $value ) {
-			if ( false !== strpos( $item_output, $attr ) ) {
-				$item_output = str_replace( $args->link_after, '</span>' . inspiro_get_svg( array( 'icon' => esc_attr( $value ) ) ), $item_output );
-			}
-		}
-	}
-
-	return $item_output;
-}
-add_filter( 'walker_nav_menu_start_el', 'inspiro_nav_menu_social_icons', 10, 4 );
-
-/**
  * Add dropdown icon if menu item has children.
  *
  * @param string   $title The menu item's title.
@@ -150,7 +124,7 @@ add_filter( 'walker_nav_menu_start_el', 'inspiro_nav_menu_social_icons', 10, 4 )
  * @return string The menu item's title with dropdown icon.
  */
 function inspiro_dropdown_icon_to_menu_link( $title, $item, $args, $depth ) {
-	if ( 'top' === $args->theme_location ) {
+	if ( 'primary' === $args->theme_location ) {
 		foreach ( $item->classes as $value ) {
 			if ( 'menu-item-has-children' === $value || 'page_item_has_children' === $value ) {
 				$title = $title . inspiro_get_svg( array( 'icon' => 'angle-down' ) );
@@ -161,63 +135,3 @@ function inspiro_dropdown_icon_to_menu_link( $title, $item, $args, $depth ) {
 	return $title;
 }
 add_filter( 'nav_menu_item_title', 'inspiro_dropdown_icon_to_menu_link', 10, 4 );
-
-/**
- * Returns an array of supported social links (URL and icon name).
- *
- * @return array Array of social links icons.
- */
-function inspiro_social_links_icons() {
-	// Supported social links icons.
-	$social_links_icons = array(
-		'behance.net'     => 'behance',
-		'codepen.io'      => 'codepen',
-		'deviantart.com'  => 'deviantart',
-		'digg.com'        => 'digg',
-		'docker.com'      => 'dockerhub',
-		'dribbble.com'    => 'dribbble',
-		'dropbox.com'     => 'dropbox',
-		'facebook.com'    => 'facebook',
-		'flickr.com'      => 'flickr',
-		'foursquare.com'  => 'foursquare',
-		'plus.google.com' => 'google-plus',
-		'github.com'      => 'github',
-		'instagram.com'   => 'instagram',
-		'linkedin.com'    => 'linkedin',
-		'mailto:'         => 'envelope-o',
-		'medium.com'      => 'medium',
-		'pinterest.com'   => 'pinterest-p',
-		'pscp.tv'         => 'periscope',
-		'getpocket.com'   => 'get-pocket',
-		'reddit.com'      => 'reddit-alien',
-		'skype.com'       => 'skype',
-		'skype:'          => 'skype',
-		'slideshare.net'  => 'slideshare',
-		'snapchat.com'    => 'snapchat-ghost',
-		'soundcloud.com'  => 'soundcloud',
-		'spotify.com'     => 'spotify',
-		'stumbleupon.com' => 'stumbleupon',
-		't.me'            => 'telegram',
-		'telegram.me'     => 'telegram',
-		'tumblr.com'      => 'tumblr',
-		'twitch.tv'       => 'twitch',
-		'twitter.com'     => 'twitter',
-		'vimeo.com'       => 'vimeo',
-		'vine.co'         => 'vine',
-		'vk.com'          => 'vk',
-		'whatsapp.com'    => 'whatsapp',
-		'wordpress.org'   => 'wordpress',
-		'wordpress.com'   => 'wordpress',
-		'yelp.com'        => 'yelp',
-		'youtube.com'     => 'youtube',
-	);
-
-	/**
-	 * Filters Twenty Seventeen social links icons.
-	 *
-	 * @since Inspiro Lite 1.0.0
-	 *
-	 * @param array $social_links_icons Array of social links icons.
-	 */
-	return apply_filters( 'inspiro_social_links_icons', $social_links_icons );
-}

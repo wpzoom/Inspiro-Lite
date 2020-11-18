@@ -15,10 +15,14 @@
 		the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
 	}
 	?>
-	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'inspiro' ) ); ?>" class="imprint">
-		<?php
-			/* translators: %s: WordPress */
-		printf( __( 'Proudly powered by %s', 'inspiro' ), 'WordPress' );
-		?>
-	</a>
+	<span class="copyright">
+		<span>
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'inspiro' ) ); ?>" target="_blank">
+				<?php printf( __( 'Powered by %s', 'inspiro' ), 'WordPress' ); ?>
+			</a>
+		<span/>
+		<span>
+			<?php echo esc_html__( 'Inspiro WordPress Theme by', 'inspiro' ); ?><a href="<?php echo esc_url( 'https://www.wpzoom.com/' ) ?>" target="_blank" rel="nofollow">WPZOOM</a>
+		</span>
+	</span>
 </div><!-- .site-info -->
