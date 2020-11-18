@@ -87,12 +87,24 @@ add_filter( 'wp_resource_hints', 'inspiro_resource_hints', 10, 2 );
 function inspiro_widgets_init() {
     register_sidebar(
         array(
+            'name'          => __( 'Sidebar', 'inspiro' ),
+            'id'            => 'sidebar',
+            'description'   => __( 'Main sidebar that is displayed on the right and can be toggled by clicking on the menu icon.', 'inspiro' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '<div class="clear"></div></div>',
+            'before_title'  => '<h3 class="title">',
+            'after_title'   => '</h3>',
+        )
+    );
+
+    register_sidebar(
+        array(
             'name'          => __( 'Blog Sidebar', 'inspiro' ),
-            'id'            => 'sidebar-1',
+            'id'            => 'blog-sidebar',
             'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'inspiro' ),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget'  => '</section>',
-            'before_title'  => '<h2 class="widget-title">',
+            'before_title'  => '<h2 class="title">',
             'after_title'   => '</h2>',
         )
     );
@@ -100,11 +112,11 @@ function inspiro_widgets_init() {
     register_sidebar(
         array(
             'name'          => __( 'Footer 1', 'inspiro' ),
-            'id'            => 'sidebar-2',
+            'id'            => 'footer_1',
             'description'   => __( 'Add widgets here to appear in your footer.', 'inspiro' ),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget'  => '</section>',
-            'before_title'  => '<h2 class="widget-title">',
+            'before_title'  => '<h2 class="title">',
             'after_title'   => '</h2>',
         )
     );
@@ -112,12 +124,61 @@ function inspiro_widgets_init() {
     register_sidebar(
         array(
             'name'          => __( 'Footer 2', 'inspiro' ),
-            'id'            => 'sidebar-3',
+            'id'            => 'footer_2',
             'description'   => __( 'Add widgets here to appear in your footer.', 'inspiro' ),
             'before_widget' => '<section id="%1$s" class="widget %2$s">',
             'after_widget'  => '</section>',
-            'before_title'  => '<h2 class="widget-title">',
+            'before_title'  => '<h2 class="title">',
             'after_title'   => '</h2>',
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name'          => __( 'Footer 3', 'inspiro' ),
+            'id'            => 'footer_3',
+            'description'   => __( 'Add widgets here to appear in your footer.', 'inspiro' ),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h2 class="title">',
+            'after_title'   => '</h2>',
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name'          => __( 'Footer 4', 'inspiro' ),
+            'id'            => 'footer_4',
+            'description'   => __( 'Add widgets here to appear in your footer.', 'inspiro' ),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h2 class="title">',
+            'after_title'   => '</h2>',
+        )
+    );
+
+    register_sidebar(
+        array(
+            'name'          => __( 'Header Social Icons', 'inspiro' ),
+            'id'            => 'header_social',
+            'description'   => __( 'Widget area in the header. Install the "Social Icons Widget by WPZOOM" plugin and add the widget here.', 'inspiro' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="title"><span>',
+            'after_title'   => '</span></h3>',
+        )
+    );
+
+
+    register_sidebar(
+        array(
+            'name'          => __( 'Footer Instagram Bar', 'inspiro' ),
+            'id'            => 'footer_instagram_section',
+            'description'   => __( 'Widget area for "Instagram widget by WPZOOM".', 'inspiro' ),
+            'before_widget' => '<section class="widget %2$s" id="%1$s">',
+            'after_widget'  => '<div class="clear"></div></section>',
+            'before_title'  => '<h3 class="title">',
+            'after_title'   => '</h3>',
         )
     );
 }
@@ -270,3 +331,18 @@ function inspiro_unique_id( $prefix = '' ) {
     }
     return $prefix . (string) ++$id_counter;
 }
+
+/**
+ * Show custom logo or blog title and description (backward compatibility)
+ */
+function inspiro_custom_logo() {
+    has_custom_logo() ? the_zoom_custom_logo() : printf( '<h1><a href="%s" title="%s">%s</a></h1>', home_url(), get_bloginfo( 'description' ), get_bloginfo( 'name' ) );
+}
+
+/**
+ * Displays the sidebar after the openning <body> tag.
+ */
+function display_sidebar_body_open() {
+    get_sidebar();
+}
+add_action( 'wp_body_open', 'display_sidebar_body_open' );
