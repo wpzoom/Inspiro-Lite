@@ -176,19 +176,19 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
             $starter_content = array(
                 'widgets'     => array(
                     // Place three core-defined widgets in the sidebar area.
-                    'sidebar-1' => array(
-                        'text_business_info',
+                    'sidebar' => array(
                         'search',
                         'text_about',
+                        'text_business_info',
                     ),
 
                     // Add the core-defined business info widget to the footer 1 area.
-                    'sidebar-2' => array(
+                    'footer_1' => array(
                         'text_business_info',
                     ),
 
                     // Put two core-defined widgets in the footer 2 area.
-                    'sidebar-3' => array(
+                    'footer_2' => array(
                         'text_about',
                         'search',
                     ),
@@ -244,26 +244,14 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 
                 // Set up nav menus for each of the two areas registered in the theme.
                 'nav_menus'   => array(
-                    // Assign a menu to the "top" location.
-                    'top'    => array(
-                        'name'  => __( 'Top Menu', 'inspiro' ),
+                    // Assign a menu to the "primary" location.
+                    'primary'   => array(
+                        'name'  => __( 'Main Menu', 'inspiro' ),
                         'items' => array(
                             'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
                             'page_about',
                             'page_blog',
                             'page_contact',
-                        ),
-                    ),
-
-                    // Assign a menu to the "social" location.
-                    'social' => array(
-                        'name'  => __( 'Social Links Menu', 'inspiro' ),
-                        'items' => array(
-                            'link_yelp',
-                            'link_facebook',
-                            'link_twitter',
-                            'link_instagram',
-                            'link_email',
                         ),
                     ),
                 ),
