@@ -45,6 +45,8 @@ Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-rea
 20.0 Print
 --------------------------------------------------------------*/
 
+@import "variables-site/";
+
 /*--------------------------------------------------------------
 1.0 Normalize
 --------------------------------------------------------------*/
@@ -103,7 +105,7 @@ Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-rea
 /*--------------------------------------------------------------
 12.0 Navigation
 --------------------------------------------------------------*/
-@import "misc/navigation";
+@import "misc/navigation/";
 
 /*--------------------------------------------------------------
 13.0 Layout

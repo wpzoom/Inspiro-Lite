@@ -285,14 +285,10 @@ td:last-child {
 }
 
 a {
-	-webkit-box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
 	box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
 	color: #222;
 	text-decoration: none;
-	-webkit-transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
-	transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
 	transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
-	transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
 }
 
 a:focus {
@@ -302,7 +298,6 @@ a:focus {
 a:hover,
 a:focus {
 	color: #000;
-	-webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
 	box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
 }
 
@@ -310,7 +305,6 @@ a:focus {
 
 a img {
 	background: #fff;
-	-webkit-box-shadow: 0 0 0 6px #fff;
 	box-shadow: 0 0 0 6px #fff;
 }
 
@@ -371,7 +365,6 @@ object {
 .gallery-item a,
 .gallery-item a:hover,
 .gallery-item a:focus {
-	-webkit-box-shadow: none;
 	box-shadow: none;
 	background: none;
 	display: inline-block;
@@ -447,7 +440,6 @@ object {
 
 .wp-playlist-light .wp-playlist-item {
 	border-bottom: 1px dotted #eee;
-	-webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
 	transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -493,7 +485,6 @@ object {
 
 .wp-playlist-dark .wp-playlist-item {
 	border-bottom: 1px dotted #555;
-	-webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
 	transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -549,7 +540,6 @@ object {
 .wp-playlist-item a,
 .wp-playlist-item a:focus,
 .wp-playlist-item a:hover {
-	-webkit-box-shadow: none;
 	box-shadow: none;
 	background: transparent;
 }

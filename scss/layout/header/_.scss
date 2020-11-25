@@ -1,10 +1,9 @@
-#masthead .wrap {
+#masthead .inner-wrap {
     position: relative;
 }
 
 .site-header {
-    background-color: #fafafa;
-    position: relative;
+    width: 100%;
 }
 
 @import "site-branding";

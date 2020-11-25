@@ -1,0 +1,178 @@
+.navbar {
+    position: relative;
+    z-index: 200;
+    color: #fff;
+    background: $dark-color;
+    padding: 18px 0;
+    transition: all 0.5s ease-in-out;
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both
+    }
+    a {
+        color: inherit;
+    }
+    &.page-with-cover {
+        position: absolute;
+        width: 100%;
+        background: none;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 1%, rgba(0, 0, 0, 0) 100%);
+        background-repeat: repeat-x;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33000000', endColorstr='#00000000', GradientType=0);
+    }
+    .inner-wrap {
+        width: 100%;
+        .navbar-secondary {
+            display: none;
+        }
+    }
+    .navbar-brand-wpz {
+        line-height: 54px;
+        float: left;
+        padding: 0 15px 0 0;
+        max-width: 350px;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        h1 {
+            margin: 0;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-family: $font-headings;
+        }
+        a {
+            font-size: 26px;
+            text-transform: uppercase;
+            &:hover {
+                text-decoration: none;
+                opacity: 0.8;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.navbar-toggle {
+    display: none;
+    position: relative;
+    float: right;
+    margin: 0 0 0 15px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 40px;
+    border-color: transparent;
+    background: transparent;
+}
+
+.inspiro--with-page-nav .navbar-toggle {
+    display: block;
+}
+
+.navbar-toggle:hover {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.navbar-toggle .icon-bar {
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-toggle  .icon-bar:nth-child(3) {
+    width: 17px;
+}
+
+
+.navbar-toggle:hover .icon-bar {
+    width: 17px;
+}
+
+.navbar-toggle:hover .icon-bar:nth-child(3) {
+    width: 22px;
+}
+
+.navbar-toggle .icon-bar+.icon-bar {
+    margin-top: 5px;
+}
+
+
+/* hamburger animation */
+
+.navbar-toggle .icon-bar {
+    -webkit-transition: width .13s ease-out, -webkit-transform .13s ease-out, opacity .13s ease-out;
+    transition: width .13s ease-out, transform .13s ease-out, opacity .13s ease-out;
+}
+
+/* hamburger when side-nav is opened */
+
+.side-nav-open .navbar-toggle .icon-bar:nth-child(2) {
+    -webkit-transform: rotateZ(-45deg) translate3d(-5px, 5px, 0);
+    transform: rotateZ(-45deg) translate3d(-5px, 5px, 0);
+    width: 28px;
+}
+
+.side-nav-open .navbar-toggle .icon-bar:nth-child(3) {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 0;
+}
+
+.side-nav-open .navbar-toggle .icon-bar:nth-child(4) {
+    -webkit-transform: rotateZ(45deg) translate3d(-5px, -5px, 0);
+    transform: rotateZ(45deg) translate3d(-5px, -5px, 0);
+    width: 28px;
+}
+
+.navbar-nav {
+    font-weight: 400;
+    float: right;
+    padding: 5px 0 0;
+}
+
+.navbar-nav>li {
+    margin: 0 15px
+}
+
+.inspiro--with-page-nav .navbar-nav>li:last-child {
+    margin-right: 0
+}
+
+.navbar-nav>li>ul:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -8px;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid $primary-color;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+}
+
+.navbar-nav a {
+    padding: 5px 0 3px;
+    font-family: $font-headings;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: 0.2s ease all;
+    -o-transition: 0.2s ease all;
+    transition: 0.2s ease border-color, 0.2s ease color;
+}
+
+.navbar-nav>li>a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    color: inherit;
+    opacity: .8;
+}

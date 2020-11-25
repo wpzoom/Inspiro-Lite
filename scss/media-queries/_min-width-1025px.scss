@@ -1,0 +1,39 @@
+@media (min-width: 1025px) {
+    .navbar-nav {
+        ul {
+            left: 50%;
+            width: 220px;
+            margin-top: 15px;
+            border-top: 2px solid $primary-color;
+            background: $dark-color;
+            transform: translate(-50%, 0);
+            li {
+                border-top: 1px solid rgba(255,255,255, 0.07);
+                &.current-menu-item a,
+                &.current_page_item a,
+                &.current-menu-parent a,
+                &.current_page_parent a {
+                    border-bottom: none;
+                    color: #fff;
+                }
+            }
+            a {
+                color: #b0b0b0;
+                padding: 8px 15px;
+                border-bottom: none;
+                &:hover {
+                    border-bottom: none;
+                    color: #fff;
+                }
+            }
+            ul {
+                right: 100%;
+                margin-top: -3px;
+                transform: translate(0, 0);
+            }
+        }
+        > li > a.sf-with-ul:hover {
+            border-bottom: 1px solid rgba(255, 255, 255, 0)
+        }
+    }
+}

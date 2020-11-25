@@ -1,0 +1,149 @@
+/* Sidebar */
+body.side-nav-open {
+    height: 100%;
+}
+
+.site {
+    position: relative;
+    -webkit-transition: -webkit-transform .18s ease;
+    transition: transform .18s ease;
+}
+
+.side-nav-open .site {
+    z-index: 300;
+    -webkit-transform: translateX(-380px);
+    -ms-transform: translateX(-380px);
+    transform: translateX(-380px);
+}
+
+.side-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: -70px;
+    overflow: hidden;
+    width: 380px;
+    z-index: -1;
+    visibility: hidden;
+    outline: 0;
+
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-overflow-scrolling: touch;
+}
+
+.side-nav-transitioning .side-nav {
+    visibility: visible;
+}
+
+.side-nav-open .side-nav {
+    visibility: visible;
+    z-index: 600;
+}
+
+.side-nav-overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 600;
+}
+
+.side-nav-transitioning,
+.side-nav-open .side-nav-overlay {
+    display: block;
+    right: 380px;
+    z-index: 900;
+    cursor: e-resize;
+}
+
+.side-nav__scrollable-container {
+    position: relative;
+
+    padding-bottom: 70px;
+    /* .side-nav's bottom value */
+    height: 100%;
+    overflow: auto;
+
+    background-color: $dark-color;
+    color: #78787f;
+
+    -webkit-overflow-scrolling: touch;
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    -webkit-transform: translateX(380px);
+    -ms-transform: translateX(380px);
+    transform: translateX(380px);
+
+    -webkit-transition: -webkit-transform .18s ease;
+    transition: transform .18s ease;
+}
+
+.side-nav-open .side-nav__scrollable-container {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.side-nav__scrollable-container::-webkit-scrollbar {
+    display: none;
+}
+
+.side-nav__wrap {
+    position: relative;
+    padding: 60px 30px;
+}
+
+.admin-bar .side-nav__wrap {
+    padding-top: 92px;
+    /* 60 + 32 */
+}
+
+@media screen and (max-width: 782px) {
+    .admin-bar .side-nav__wrap {
+        padding-top: 106px/* 60 + 46 */
+    }
+}
+
+.side-nav__wrap .navbar-toggle {
+    margin: 5px 0 0;
+    padding-right: 0;
+}
+
+.side-nav__close-button {
+    display: none;
+}
+
+.side-nav__close-button:before,
+.side-nav__close-button:after {
+    content: " ";
+    display: table;
+}
+
+.side-nav__close-button:after {
+    clear: both
+}
+
+.side-nav .navbar-nav {
+    display: none;
+    margin-bottom: 60px;
+    padding: 0;
+}
+
+.side-nav .widget {
+    margin-bottom: 60px;
+    max-width: 100%;
+}
+
+.side-nav .widget:last-child {
+    margin-bottom: 0;
+}
+
+.side-nav .widget .title {
+    font-size: 18px;
+}

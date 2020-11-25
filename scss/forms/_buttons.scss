@@ -1,0 +1,84 @@
+.wpzabb-post-grid-more,
+.button,
+.btn,
+.more-link,
+.more_link,
+.side-nav .search-form .search-submit{
+    font-family: $font-headings;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 25px;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    color: #444;
+    border: 2px solid rgba(68, 68, 68, 0.19);
+    background-image: none;
+    user-select: none;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.button:hover,
+.btn:hover,
+.more-link:hover,
+.more_link:hover,
+.side-nav .search-form .search-submit:hover,
+.site-footer .search-form .search-submit:hover,
+.infinite-scroll #infinite-handle span:hover  {
+    text-decoration: none;
+    color: $primary-color;
+    border-color: $primary-color;
+}
+
+.btn-primary,
+.side-nav .search-form .search-submit,
+.site-footer .search-form .search-submit {
+    color: $primary-color;
+    border-color: $primary-color;
+}
+
+
+
+div.wpforms-container-full .wpforms-form input[type=submit],
+div.wpforms-container-full .wpforms-form button[type=submit],
+div.wpforms-container-full .wpforms-form .wpforms-page-button,
+button, input[type=button], input[type=reset], input[type=submit] {
+    font-family: $font-headings;
+    display: inline;
+    width: auto;
+    padding: 12px 25px;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+    color: #444;
+    border: 2px solid rgba(68, 68, 68, 0.19);
+    background-image: none;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+div.wpforms-container-full .wpforms-form input[type=submit],
+div.wpforms-container-full .wpforms-form button[type=submit],
+div.wpforms-container-full .wpforms-form .wpforms-page-button {
+    background: none;
+}
+
+div.wpforms-container-full .wpforms-form input[type=submit]:hover,
+div.wpforms-container-full .wpforms-form button[type=submit]:hover,
+div.wpforms-container-full .wpforms-form .wpforms-page-button:hover {
+    background: none;
+}
+
+div.wpforms-container-full .wpforms-form input[type=submit]:hover,
+div.wpforms-container-full .wpforms-form button[type=submit]:hover,
+div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,
+button:hover, input[type=button]:hover, input[type=reset]:hover, input[type=submit]:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: $primary-color;
+    border-color: $primary-color;
+}

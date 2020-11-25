@@ -44,3 +44,16 @@
 .comment-meta:after {
     clear: both;
 }
+
+/* Fix compatibility with Visual Composer */
+.nav:after,
+.nav:before,
+.navbar-collapse:after,
+.navbar-collapse:before,
+.navbar-header:after,
+.navbar-header:before,
+.navbar:after,
+.navbar:before {
+    content: "";
+    display: inline !important;
+}

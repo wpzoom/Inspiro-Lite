@@ -1,0 +1,29 @@
+input,
+textarea {
+    font-family: $font-main;
+    color: #444;
+}
+
+label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+input, textarea {
+    padding: 11px 10px;
+    font-size: 16px;
+    background: white;
+    border: 2px solid rgba(68, 68, 68, 0.19);
+    width: auto;
+    border-radius: 0;
+}
+
+input[type=text], textarea {
+    -webkit-appearance: none;
+}
+
+input:focus, textarea:focus {
+    border-color: $primary-color;
+    outline: 0;
+}
+
