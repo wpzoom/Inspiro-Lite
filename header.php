@@ -31,16 +31,12 @@
 	<header id="masthead" class="site-header" role="banner">
 
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
-			<div class="navigation-primary">
-				<div class="wrap">
-					<?php get_template_part( 'template-parts/navigation/navigation', 'primary' ); ?>
-				</div><!-- .wrap -->
-			</div><!-- .navigation-primary -->
+			<?php get_template_part( 'template-parts/navigation/navigation', 'primary' ); ?>
 		<?php endif; ?>
 
-		<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
-
 	</header><!-- #masthead -->
+
+	<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
 
 	<?php
 

@@ -29,7 +29,7 @@ global $inspirocounter;
 	<?php endif; ?>
 
 	<div class="panel-content">
-		<div class="wrap">
+		<div class="inner-wrap">
 			<header class="entry-header">
 				<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 
@@ -81,7 +81,7 @@ global $inspirocounter;
 				<?php endif; ?>
 			<?php endif; ?>
 
-		</div><!-- .wrap -->
+		</div><!-- .inner-wrap -->
 	</div><!-- .panel-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

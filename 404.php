@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-<div class="wrap">
+<div class="inner-wrap">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -29,7 +29,7 @@ get_header(); ?>
 			</section><!-- .error-404 -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
-</div><!-- .wrap -->
+</div><!-- .inner-wrap -->
 
 <?php
 get_footer();

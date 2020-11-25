@@ -19,13 +19,13 @@
 		<?php get_template_part( 'template-parts/footer/footer', 'instagram-widget' ); ?>
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
-			<div class="wrap">
+			<div class="inner-wrap">
 				<?php
 				get_template_part( 'template-parts/footer/footer', 'widgets' );
 
 				get_template_part( 'template-parts/footer/site', 'info' );
 				?>
-			</div><!-- .wrap -->
+			</div><!-- .inner-wrap -->
 		</footer><!-- #colophon -->
 	</div><!-- .site-content-contain -->
 </div><!-- #page -->

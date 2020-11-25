@@ -20,7 +20,7 @@ if ( ! is_active_sidebar( 'sidebar' ) ) {
         <div class="side-nav__wrap">
             <div class="side-nav__close-button">
                 <button type="button" class="navbar-toggle">
-                    <span class="sr-only"><?php _e( 'Toggle navigation', 'wpzoom' ); ?></span>
+                    <span class="screen-reader-text"><?php _e( 'Toggle navigation', 'wpzoom' ); ?></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
