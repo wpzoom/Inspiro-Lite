@@ -1669,12 +1669,6 @@ body.side-nav-open {
     /* 60 + 32 */
 }
 
-@media screen and (max-width: 782px) {
-    .admin-bar .side-nav__wrap {
-        padding-top: 106px;
-    }
-}
-
 .side-nav__wrap .navbar-toggle {
     margin: 5px 0 0;
     padding-right: 0;
@@ -1764,47 +1758,26 @@ body.side-nav-open {
     -webkit-appearance: none;
 }
 
-.sb-search .sb-icon-search,
-.sb-search .sb-search-submit {
-    width: 40px;
-    height: 40px;
-    display: block;
-    padding: 0;
-    margin: 0;
-    line-height: 43px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.sb-search .sb-search-submit {
-    background: #fff;
-    display: none;
-    color: #363940;
-    border: none;
-    outline: none;
-    z-index: -1;
-}
-
 .sb-search .sb-icon-search {
-    color: #fff;
     z-index: 90;
-    font-size: 100%;
-    font-family: 'inspiro';
-    speak: none;
-    font-style: normal;
-    font-weight: bold;
-    font-variant: normal;
-    text-transform: none;
-    -webkit-font-smoothing: antialiased;
     transition: opacity 0.3s ease;
-}
-
-.sb-search .sb-icon-search:before {
-    content: "\e901";
 }
 
 .sb-search .sb-icon-search:hover {
     opacity: .7;
+}
+
+.sb-search .sb-icon-search svg {
+    width: 18px;
+    height: 45px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    fill: #fff;
+}
+
+.sb-search .sb-icon-search .icon-close {
+    display: none;
 }
 
 .sb-search.sb-search-open .sb-search-input {
@@ -1822,7 +1795,6 @@ body.side-nav-open {
 
 .sb-search.sb-search-open .sb-icon-search {
     background: none;
-    z-index: 11;
     right: 2%;
     top: 25px;
     position: fixed;
@@ -1831,16 +1803,16 @@ body.side-nav-open {
     animation: fade-in-almost 0.3s ease-out;
 }
 
-.sb-search.sb-search-open .sb-icon-search:before {
-    content: "\f335";
-    font-family: 'dashicons';
-    font-weight: normal;
-    font-size: 34px;
-    color: #fff;
-}
-
 .sb-search.sb-search-open .sb-icon-search:hover {
     opacity: 1;
+}
+
+.sb-search.sb-search-open .sb-icon-search .icon-search {
+    display: none;
+}
+
+.sb-search.sb-search-open .sb-icon-search .icon-close {
+    display: block;
 }
 
 .sb-search.sb-search-open .sb-search-submit {
@@ -3501,7 +3473,7 @@ p > object:only-child {
         border: none;
     }
     /* Compatibility with WP admin bar */
-    .admin-bar .headroom {
+    .admin-bar:not(.side-nav-open) .headroom {
         top: 32px;
     }
 }
@@ -3509,6 +3481,9 @@ p > object:only-child {
 @media screen and (max-width: 782px) {
     .admin-bar #header {
         margin-top: 46px;
+    }
+    .admin-bar .side-nav__wrap {
+        padding-top: 106px;
     }
 }
 

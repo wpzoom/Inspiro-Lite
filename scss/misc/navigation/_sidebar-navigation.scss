@@ -104,12 +104,6 @@ body.side-nav-open {
     /* 60 + 32 */
 }
 
-@media screen and (max-width: 782px) {
-    .admin-bar .side-nav__wrap {
-        padding-top: 106px/* 60 + 46 */
-    }
-}
-
 .side-nav__wrap .navbar-toggle {
     margin: 5px 0 0;
     padding-right: 0;

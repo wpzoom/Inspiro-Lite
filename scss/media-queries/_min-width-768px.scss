@@ -28,7 +28,7 @@
         }
     }
     /* Compatibility with WP admin bar */
-    .admin-bar .headroom {
+    .admin-bar:not(.side-nav-open) .headroom {
         top: 32px;
     }
 }

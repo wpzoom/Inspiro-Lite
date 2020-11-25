@@ -10,7 +10,7 @@
 
 $navbar_classes = ['navbar'];
 
-if ( has_custom_header() ) {
+if ( has_custom_header() && ( is_front_page() || is_home() ) ) {
     $navbar_classes[] = 'page-with-cover';
 }
 
