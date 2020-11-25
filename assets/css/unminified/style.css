@@ -1581,18 +1581,9 @@ a:hover .nav-title,
 }
 
 /* Sidebar */
-body.side-nav-open {
-    height: 100%;
-}
-
 .site {
     position: relative;
     transition: transform .18s ease;
-}
-
-.side-nav-open .site {
-    z-index: 300;
-    transform: translateX(-380px);
 }
 
 .side-nav {
@@ -1609,13 +1600,28 @@ body.side-nav-open {
     -webkit-overflow-scrolling: touch;
 }
 
-.side-nav-transitioning .side-nav {
-    visibility: visible;
+.side-nav .navbar-nav {
+    display: none;
+    margin-bottom: 60px;
+    padding: 0;
 }
 
-.side-nav-open .side-nav {
+.side-nav .widget {
+    margin-bottom: 60px;
+    max-width: 100%;
+}
+
+.side-nav .widget:last-child {
+    margin-bottom: 0;
+}
+
+.side-nav .widget .title {
+    font-size: 18px;
+    color: #fff;
+}
+
+.side-nav-transitioning .side-nav {
     visibility: visible;
-    z-index: 600;
 }
 
 .side-nav-overlay {
@@ -1651,10 +1657,6 @@ body.side-nav-open {
     transition: transform .18s ease;
 }
 
-.side-nav-open .side-nav__scrollable-container {
-    transform: translateX(0);
-}
-
 .side-nav__scrollable-container::-webkit-scrollbar {
     display: none;
 }
@@ -1662,11 +1664,6 @@ body.side-nav-open {
 .side-nav__wrap {
     position: relative;
     padding: 60px 30px;
-}
-
-.admin-bar .side-nav__wrap {
-    padding-top: 92px;
-    /* 60 + 32 */
 }
 
 .side-nav__wrap .navbar-toggle {
@@ -1678,8 +1675,7 @@ body.side-nav-open {
     display: none;
 }
 
-.side-nav__close-button:before,
-.side-nav__close-button:after {
+.side-nav__close-button:before, .side-nav__close-button:after {
     content: " ";
     display: table;
 }
@@ -1688,23 +1684,27 @@ body.side-nav-open {
     clear: both;
 }
 
-.side-nav .navbar-nav {
-    display: none;
-    margin-bottom: 60px;
-    padding: 0;
+.admin-bar .side-nav__wrap {
+    padding-top: 92px;
+    /* 60 + 32 */
 }
 
-.side-nav .widget {
-    margin-bottom: 60px;
-    max-width: 100%;
+body.side-nav-open {
+    height: 100%;
 }
 
-.side-nav .widget:last-child {
-    margin-bottom: 0;
+body.side-nav-open .site {
+    z-index: 300;
+    transform: translateX(-380px);
 }
 
-.side-nav .widget .title {
-    font-size: 18px;
+body.side-nav-open .side-nav {
+    visibility: visible;
+    z-index: 600;
+}
+
+body.side-nav-open .side-nav__scrollable-container {
+    transform: translateX(0);
 }
 
 .sb-search {
@@ -2729,27 +2729,40 @@ body:not(.inspiro-front-page) .entry-header {
 }
 
 .widget {
-    padding-bottom: 3em;
+    margin-bottom: 40px;
 }
 
-h2.widget-title {
-    color: #222;
-    font-size: 13px;
-    font-size: 0.8125rem;
-    font-weight: 800;
-    letter-spacing: 0.1818em;
-    margin-bottom: 1.5em;
+.widget .title {
+    margin: 0 0 20px;
+    font-size: 20px;
     text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
 }
 
-.widget-title a {
-    color: inherit;
+.widget ul {
+    clear: both;
+    margin: 0;
+    padding: 0;
 }
 
-/* Widget markup */
-.widget .post-date,
-.widget .rss-date {
-    font-size: 0.81em;
+.widget ul li {
+    list-style-type: none;
+}
+
+.widget ul ul {
+    margin: 0;
+    padding: 0;
+    border-top: none;
+}
+
+.widget ul ul li {
+    border: none;
+}
+
+.textwidget img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* widget forms */
@@ -2832,18 +2845,44 @@ h2.widget-title {
     position: relative;
 }
 
+.search-form input,
+.search-form button {
+    height: 40px;
+    background: transparent;
+    border: 2px solid #565555;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    border-radius: 0;
+    transition: 0.2s ease all;
+}
+
+.search-form input:focus,
+.search-form button:focus {
+    border-color: #0bb4aa;
+    outline: none;
+}
+
+.search-form .search-field {
+    width: 100%;
+    padding: 0px 100px 0 10px;
+}
+
 .search-form .search-submit {
-    bottom: 3px;
-    padding: 0.5em 1em;
+    padding: 0 12px;
     position: absolute;
-    right: 3px;
-    top: 3px;
+    bottom: 0;
+    right: 0;
 }
 
 .search-form .search-submit .icon {
     height: 24px;
     top: -2px;
     width: 24px;
+}
+
+.site-footer .search-form .search-field,
+.side-nav .search-form .search-field {
+    color: #eee;
 }
 
 /* Tag cloud widget */

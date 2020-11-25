@@ -3,28 +3,34 @@
 }
 
 .widget {
-    padding-bottom: 3em;
+    margin-bottom: 40px;
+    .title {
+        margin: 0 0 20px;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-family: $font-headings;
+        font-weight: bold;
+    }
+    ul {
+        clear: both;
+        margin: 0;
+        padding: 0;
+        li {
+            list-style-type: none;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            border-top: none;
+            li {
+                border: none;
+            }
+        }
+    }
 }
-
-h2.widget-title {
-    color: #222;
-    font-size: 13px;
-    font-size: 0.8125rem;
-    font-weight: 800;
-    letter-spacing: 0.1818em;
-    margin-bottom: 1.5em;
-    text-transform: uppercase;
-}
-
-.widget-title a {
-    color: inherit;
-}
-
-/* Widget markup */
-
-.widget .post-date,
-.widget .rss-date {
-    font-size: 0.81em;
+.textwidget img {
+    max-width: 100%;
+    height: auto;
 }
 
 @import "forms", "lists", "gravatar", "gallery", "search", "tagcloud", "widget-text", "widget-rss", "widget-contact-info", "widget-recent-comments", "widget-recent-posts", "widget-calendar"; 
