@@ -1,3 +1,4 @@
+/* global UISearch */
 /**
  * Theme functions file.
  *
@@ -18,7 +19,7 @@
 			var windowWidth = $(window).width();
 
 			var $header = $('.site-header');
-			var $main_content = $('#main, .PP_Wrapper');
+			var $main_content = $('#main');
 
 			$main_content.css('paddingTop', $header.outerHeight());
 
@@ -36,11 +37,11 @@
 	    var wasPlaying = false;
 
 	    function toggleNav() {
-	        $('body').toggleClass('side-nav-open').addClass('side-nav-transitioning');
+	        $(document.body).toggleClass('side-nav-open').addClass('side-nav-transitioning');
 
 	        var flex = $('#slider').data('flexslider');
 	        if (flex) {
-	            if ($('body').hasClass('side-nav-open')) {
+				if ($(document.body).hasClass('side-nav-open')) {
 	                wasPlaying = flex.playing;
 	                if (flex.playing)  {
 	                    flex.pause();
@@ -54,13 +55,13 @@
 
 	        var called = false;
 	        $('.site').one('transitionend', function () {
-	            $('body').removeClass('side-nav-transitioning');
+	            $(document.body).removeClass('side-nav-transitioning');
 	            called = true;
 	        });
 
 	        setTimeout(function() {
 	            if (!called) {
-	                $('body').removeClass('side-nav-transitioning');
+	                $(document.body).removeClass('side-nav-transitioning');
 	            }
 
 	            $window.trigger('resize');
@@ -69,7 +70,7 @@
 
 	    /* touchstart: do not allow scrolling main section then overlay is enabled (this is done via css) */
 	    $('.navbar-toggle, .side-nav-overlay').on('click touchend', function (event) {
-	        if ($(document.body).hasClass('side-nav-transitioning')) {
+			if ($(document.body).hasClass('side-nav-transitioning')) {
 	            return;
 	        }
 
@@ -78,7 +79,7 @@
 
 	    /* allow closing sidenav with escape key */
 	    $document.keyup(function (event) {
-	        if (event.keyCode === 27 && $('body').hasClass('side-nav-open')) {
+			if (event.keyCode === 27 && $(document.body).hasClass('side-nav-open')) {
 	            toggleNav();
 	        }
 	    });
@@ -101,8 +102,31 @@
 	    });
 	};
 
+	$.fn.sbSearch = function() {
+		/* allow closing sidenav with escape key */
+		$document.keydown(function (event) {
+		    if (event.keyCode === 27 && $('#sb-search').hasClass('sb-search-open')) {
+				$("#sb-search").removeClass("sb-search-open");
+		    }
+		});
+
+	   	return this.each(function() {
+			new UISearch( this );
+	   	});
+	};
+
 	$(function() {
 		$.fn.sideNav();
+
+		/**
+		 * Search form in header.
+		 */
+		$("#sb-search").sbSearch();
+
+		/**
+		 * FitVids - Responsive Videos in posts
+		 */
+		$(".wpzlb-layout, .builder-wrap, .entry-content, .video_cover, .featured_page_content").fitVids();
 
 		/**
 		 * Activate superfish menu.
@@ -117,6 +141,7 @@
 			}
 		});
 
+		// TODO: check if option is enanled
 		if (true) {
 			$.fn.TopMenuMargin();
 
