@@ -1,5 +1,5 @@
 @media screen and (min-width: 768px) {
-    .headroom--not-top  {
+    .headroom--not-top {
         box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
         .navbar {
             background: rgba(0,0,0,.9);
@@ -30,5 +30,90 @@
     /* Compatibility with WP admin bar */
     .admin-bar:not(.side-nav-open) .headroom {
         top: 32px;
+    }
+
+    /* Site Branding */
+
+    .has-header-image,
+    .has-header-video {
+        &.inspiro-front-page,
+        &.home.blog {
+            .site-branding {
+                bottom: 0;
+                display: block;
+                left: 0;
+                height: auto;
+                padding-top: 0;
+                position: absolute;
+                width: 100%;
+            }
+            .custom-header {
+                display: block;
+                height: auto;
+            }
+            .headroom--not-top {
+                .navbar {
+                    background: rgba(0,0,0,.9);
+                    padding: 12px 0;
+                }
+            }
+        }
+    }
+    .custom-header-media {
+        height: 165px;
+        position: relative;
+    }
+    .has-header-image,
+    .has-header-video {
+        &.inspiro-front-page,
+        &.home.blog {
+            .custom-header-media {
+                height: 0;
+                position: relative;
+            }
+        }
+        &:not(.inspiro-front-page):not(.home) {
+            .custom-header-media {
+                bottom: 0;
+                height: auto;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+
+    /* Front Page */
+
+    .has-header-image,
+    .has-header-video {
+        &.inspiro-front-page,
+        &.home.blog {
+            .site-branding {
+                margin-bottom: 70px;
+            }
+        }
+    }
+    .has-header-image,
+    .has-header-video {
+        &.inspiro-front-page,
+        &.home.blog {
+            .custom-header-media {
+                height: 1200px;
+                height: 100vh;
+                max-height: 100%;
+                overflow: hidden;
+
+                &:before {
+                    height: 33%;
+                }
+            }
+        }
+        &.admin-bar {
+            .custom-header-media {
+                height: calc(100vh - 32px);
+            }
+        }
     }
 }

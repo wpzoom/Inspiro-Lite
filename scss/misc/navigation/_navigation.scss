@@ -16,14 +16,6 @@
     a {
         color: inherit;
     }
-    &.page-with-cover {
-        position: absolute;
-        width: 100%;
-        background: none;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 1%, rgba(0, 0, 0, 0) 100%);
-        background-repeat: repeat-x;
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33000000', endColorstr='#00000000', GradientType=0);
-    }
     .inner-wrap {
         width: 100%;
         .navbar-secondary {
@@ -53,6 +45,20 @@
                 opacity: 0.8;
                 color: #fff;
             }
+        }
+    }
+}
+.has-header-image,
+.has-header-video {
+    &.inspiro-front-page,
+    &.home.blog {
+        .navbar {
+            position: absolute;
+            width: 100%;
+            background: none;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 1%, rgba(0, 0, 0, 0) 100%);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33000000', endColorstr='#00000000', GradientType=0);
         }
     }
 }
