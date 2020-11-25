@@ -30,7 +30,7 @@ function inspiro_fonts_url() {
 }
 
 /**
- * Get assets url depending on constant WP_LOCAL_DEV.
+ * Get assets url depending on constant SCRIPT_DEBUG.
  * If value of this constant is `true` then theme will load unminified assets
  * 
  * @since x.x.x
@@ -43,8 +43,8 @@ function inspiro_get_assets_uri( $filename, $filetype ) {
     $assets_uri = '';
 
     // Directory and Extension
-    $file_prefix = ( WP_LOCAL_DEV ) ? '' : '.min';
-    $dir_name    = ( WP_LOCAL_DEV ) ? 'unminified' : 'minified';
+    $file_prefix = ( SCRIPT_DEBUG ) ? '' : '.min';
+    $dir_name    = ( SCRIPT_DEBUG ) ? 'unminified' : 'minified';
 
     $css_uri = INSPIRO_THEME_URI . 'assets/css/' . $dir_name . '/';
     $js_uri = INSPIRO_THEME_URI . 'assets/js/' . $dir_name . '/';

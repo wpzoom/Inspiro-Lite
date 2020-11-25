@@ -58,6 +58,9 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
          * @since 1.0.0
          */
         public function theme_setup() {
+
+            do_action( 'inspiro_lite_theme_setup' );
+
             /*
              * Make theme available for translation.
              * Translations can be filed at WordPress.org. See: https://translate.wordpress.org/projects/wp-themes/inspiro-lite
@@ -153,8 +156,8 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
              * This theme styles the visual editor to resemble the theme style,
              * specifically font, colors, and column width.
              */
-            $dir_name    = ( WP_LOCAL_DEV ) ? 'unminified' : 'minified';
-            $file_prefix = ( WP_LOCAL_DEV ) ? '' : '.min';
+            $dir_name    = ( SCRIPT_DEBUG ) ? 'unminified' : 'minified';
+            $file_prefix = ( SCRIPT_DEBUG ) ? '' : '.min';
 
             add_editor_style(
                 array(
