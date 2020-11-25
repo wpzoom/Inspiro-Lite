@@ -231,7 +231,7 @@ function inspiro_is_static_front_page() {
  */
 function inspiro_is_view_with_layout_option() {
 	// This option is available on all pages. It's also available on archives when there isn't a sidebar.
-	return ( is_page() || ( is_archive() && ! is_active_sidebar( 'sidebar-1' ) ) );
+	return ( is_page() || ( is_archive() && ! is_active_sidebar( 'blog-sidebar' ) ) );
 }
 
 /**

@@ -226,7 +226,7 @@ function inspiro_content_image_sizes_attr( $sizes, $size ) {
         $sizes = '(max-width: 706px) 89vw, (max-width: 767px) 82vw, 740px';
     }
 
-    if ( is_active_sidebar( 'sidebar-1' ) || is_archive() || is_search() || is_home() || is_page() ) {
+    if ( is_active_sidebar( 'blog-sidebar' ) || is_archive() || is_search() || is_home() || is_page() ) {
         if ( ! ( is_page() && 'one-column' === get_theme_mod( 'page_options' ) ) && 767 <= $width ) {
             $sizes = '(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px';
         }

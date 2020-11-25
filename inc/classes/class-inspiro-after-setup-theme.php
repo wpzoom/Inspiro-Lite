@@ -298,7 +298,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
             }
 
             // Check if is single post and there is no sidebar.
-            if ( is_single() && ! is_active_sidebar( 'sidebar-1' ) ) {
+            if ( is_single() && ! is_active_sidebar( 'blog-sidebar' ) ) {
                 $content_width = 740;
             }
 
