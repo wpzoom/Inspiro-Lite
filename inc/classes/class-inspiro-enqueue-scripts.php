@@ -41,53 +41,11 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
             wp_enqueue_style( 'inspiro-fonts', inspiro_fonts_url(), array(), null );
 
             // Theme stylesheet.
-            wp_enqueue_style( 'inspiro-style', get_stylesheet_uri(), array(), INSPIRO_THEME_VERSION );
+            wp_enqueue_style( 'inspiro-style', inspiro_get_assets_uri( 'style', 'css' ), array(), INSPIRO_THEME_VERSION );
 
-            // Theme block stylesheet.
-            wp_enqueue_style( 'inspiro-block-style', inspiro_get_assets_uri( 'blocks', 'css' ), array( 'inspiro-style' ), INSPIRO_THEME_VERSION );
+            wp_enqueue_script( 'inspiro-lite-script', inspiro_get_assets_uri( 'scripts', 'js' ), array( 'jquery' ), INSPIRO_THEME_VERSION, true );
 
-            // Load the dark colorscheme.
-            if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {
-                wp_enqueue_style( 'inspiro-colors-dark', inspiro_get_assets_uri( 'colors-dark', 'css' ), array( 'inspiro-style' ), INSPIRO_THEME_VERSION );
-            }
-
-            // Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
-            if ( is_customize_preview() ) {
-                wp_enqueue_style( 'inspiro-ie9', inspiro_get_assets_uri( 'ie9', 'css' ), array( 'inspiro-style' ), INSPIRO_THEME_VERSION );
-                wp_style_add_data( 'inspiro-ie9', 'conditional', 'IE 9' );
-            }
-
-            // Load the Internet Explorer 8 specific stylesheet.
-            wp_enqueue_style( 'inspiro-ie8', inspiro_get_assets_uri( 'ie8', 'css' ), array( 'inspiro-style' ), INSPIRO_THEME_VERSION );
-            wp_style_add_data( 'inspiro-ie8', 'conditional', 'lt IE 9' );
-
-            // Load the html5 shiv.
-            wp_enqueue_script( 'html5', inspiro_get_assets_uri( 'html5', 'js' ), array(), INSPIRO_THEME_VERSION );
-            wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
-
-            wp_enqueue_script( 'inspiro-skip-link-focus-fix', inspiro_get_assets_uri( 'skip-link-focus-fix', 'js' ), array(), INSPIRO_THEME_VERSION, true );
-
-            $inspiro_l10n = array(
-                'quote' => inspiro_get_svg( array( 'icon' => 'quote-right' ) ),
-            );
-
-            if ( has_nav_menu( 'top' ) ) {
-                wp_enqueue_script( 'inspiro-navigation', inspiro_get_assets_uri( 'navigation', 'js' ), array( 'jquery' ), INSPIRO_THEME_VERSION, true );
-                $inspiro_l10n['expand']   = __( 'Expand child menu', 'inspiro' );
-                $inspiro_l10n['collapse'] = __( 'Collapse child menu', 'inspiro' );
-                $inspiro_l10n['icon']     = inspiro_get_svg(
-                    array(
-                        'icon'     => 'angle-down',
-                        'fallback' => true,
-                    )
-                );
-            }
-
-            wp_enqueue_script( 'inspiro-global', inspiro_get_assets_uri( 'global', 'js' ), INSPIRO_THEME_VERSION, true );
-
-            wp_enqueue_script( 'jquery-scrollto', inspiro_get_assets_uri( 'jquery.scrollTo', 'js' ), array( 'jquery' ), '2.1.2', true );
-
-            wp_localize_script( 'inspiro-skip-link-focus-fix', 'inspiroScreenReaderText', $inspiro_l10n );
+            wp_enqueue_script( 'jquery-scrollto', inspiro_get_assets_uri( 'jquery-scrollTo', 'js' ), array( 'jquery' ), '2.1.2', true );
 
             if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
                 wp_enqueue_script( 'comment-reply' );
