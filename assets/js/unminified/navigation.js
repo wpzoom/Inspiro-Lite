@@ -1,4 +1,3 @@
-/* global inspiroScreenReaderText */
 /**
  * Theme functions file.
  *
@@ -6,104 +5,148 @@
  */
 
 (function( $ ) {
-	var masthead, menuToggle, siteNavContain, siteNavigation;
+	'use strict';
 
-	function initMainNavigation( container ) {
+	var $document = $(document);
+	var $window = $(window);
 
-		// Add dropdown toggle that displays child menu items.
-		var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false })
-			.append( inspiroScreenReaderText.icon )
-			.append( $( '<span />', { 'class': 'screen-reader-text', text: inspiroScreenReaderText.expand }) );
+	$.fn.TopMenuMargin = function() {
+		$(window).on('resize orientationchange', update);
 
-		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
+		function update() {
 
-		// Set the active submenu dropdown toggle button initial state.
-		container.find( '.current-menu-ancestor > button' )
-			.addClass( 'toggled-on' )
-			.attr( 'aria-expanded', 'true' )
-			.find( '.screen-reader-text' )
-			.text( inspiroScreenReaderText.collapse );
-		// Set the active submenu initial state.
-		container.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
+			var windowWidth = $(window).width();
 
-		container.find( '.dropdown-toggle' ).click( function( e ) {
-			var _this = $( this ),
-				screenReaderSpan = _this.find( '.screen-reader-text' );
+			var $header = $('.site-header');
+			var $main_content = $('#main, .PP_Wrapper');
 
-			e.preventDefault();
-			_this.toggleClass( 'toggled-on' );
-			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
+			$main_content.css('paddingTop', $header.outerHeight());
 
-			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+			var $adminbar = $('#wpadminbar');
 
-			screenReaderSpan.text( screenReaderSpan.text() === inspiroScreenReaderText.expand ? inspiroScreenReaderText.collapse : inspiroScreenReaderText.expand );
-		});
-	}
+			var isHidden = true;
+			var size = [$(window).width(), $(window).height()];
 
-	initMainNavigation( $( '.main-navigation' ) );
-
-	masthead       = $( '#masthead' );
-	menuToggle     = masthead.find( '.menu-toggle' );
-	siteNavContain = masthead.find( '.main-navigation' );
-	siteNavigation = masthead.find( '.main-navigation > div > ul' );
-
-	// Enable menuToggle.
-	(function() {
-
-		// Return early if menuToggle is missing.
-		if ( ! menuToggle.length ) {
-			return;
 		}
 
-		// Add an initial value for the attribute.
-		menuToggle.attr( 'aria-expanded', 'false' );
+		update();
+	};
 
-		menuToggle.on( 'click.inspiro', function() {
-			siteNavContain.toggleClass( 'toggled-on' );
+	$.fn.sideNav = function() {
+	    var wasPlaying = false;
 
-			$( this ).attr( 'aria-expanded', siteNavContain.hasClass( 'toggled-on' ) );
-		});
-	})();
+	    function toggleNav() {
+	        $('body').toggleClass('side-nav-open').addClass('side-nav-transitioning');
 
-	// Fix sub-menus for touch devices and better focus for hidden submenu items for accessibility.
-	(function() {
-		if ( ! siteNavigation.length || ! siteNavigation.children().length ) {
-			return;
-		}
+	        var flex = $('#slider').data('flexslider');
+	        if (flex) {
+	            if ($('body').hasClass('side-nav-open')) {
+	                wasPlaying = flex.playing;
+	                if (flex.playing)  {
+	                    flex.pause();
+	                }
+	            } else {
+	                if (wasPlaying) {
+	                    flex.play();
+	                }
+	            }
+	        }
 
-		// Toggle `focus` class to allow submenu access on tablets.
-		function toggleFocusClassTouchScreen() {
-			if ( 'none' === $( '.menu-toggle' ).css( 'display' ) ) {
+	        var called = false;
+	        $('.site').one('transitionend', function () {
+	            $('body').removeClass('side-nav-transitioning');
+	            called = true;
+	        });
 
-				$( document.body ).on( 'touchstart.inspiro', function( e ) {
-					if ( ! $( e.target ).closest( '.main-navigation li' ).length ) {
-						$( '.main-navigation li' ).removeClass( 'focus' );
-					}
-				});
+	        setTimeout(function() {
+	            if (!called) {
+	                $('body').removeClass('side-nav-transitioning');
+	            }
 
-				siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' )
-					.on( 'touchstart.inspiro', function( e ) {
-						var el = $( this ).parent( 'li' );
+	            $window.trigger('resize');
+	        }, 230);
+	    }
 
-						if ( ! el.hasClass( 'focus' ) ) {
-							e.preventDefault();
-							el.toggleClass( 'focus' );
-							el.siblings( '.focus' ).removeClass( 'focus' );
-						}
-					});
+	    /* touchstart: do not allow scrolling main section then overlay is enabled (this is done via css) */
+	    $('.navbar-toggle, .side-nav-overlay').on('click touchend', function (event) {
+	        if ($(document.body).hasClass('side-nav-transitioning')) {
+	            return;
+	        }
 
-			} else {
-				siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' ).unbind( 'touchstart.inspiro' );
+	        toggleNav();
+	    });
+
+	    /* allow closing sidenav with escape key */
+	    $document.keyup(function (event) {
+	        if (event.keyCode === 27 && $('body').hasClass('side-nav-open')) {
+	            toggleNav();
+	        }
+	    });
+
+	    /**
+	     * ScrollFix
+	     *
+	     * https://github.com/joelambert/ScrollFix
+	     */
+	    $('.side-nav__scrollable-container').on('touchstart', function (event) {
+	        var startTopScroll = this.scrollTop;
+
+	        if (startTopScroll <= 0) {
+	            this.scrollTop = 1;
+	        }
+
+	        if (startTopScroll + this.offsetHeight >= this.scrollHeight) {
+	            this.scrollTop = this.scrollHeight - this.offsetHeight - 1;
+	        }
+	    });
+	};
+
+	$(function() {
+		$.fn.sideNav();
+
+		/**
+		 * Activate superfish menu.
+		 */
+		$('.sf-menu').superfish({
+			'speed': 'fast',
+			'animation': {
+				'height': 'show'
+			},
+			'animationOut': {
+				'height': 'hide'
 			}
-		}
-
-		if ( 'ontouchstart' in window ) {
-			$( window ).on( 'resize.inspiro', toggleFocusClassTouchScreen );
-			toggleFocusClassTouchScreen();
-		}
-
-		siteNavigation.find( 'a' ).on( 'focus.inspiro blur.inspiro', function() {
-			$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
 		});
-	})();
+
+		if (true) {
+			$.fn.TopMenuMargin();
+
+			/**
+			 * Activate Headroom.
+			 */
+			$('.site-header').headroom({
+				tolerance: {
+					up: 0,
+					down: 0
+				},
+				offset: 70
+			});
+		}
+
+		$('<span class="child-arrow">&#62279;</span>')
+			.click(function(e) {
+				e.preventDefault();
+
+				var $li = $(this).closest('li'),
+					$sub = $li.find('> ul');
+
+				if ($sub.is(':visible')) {
+					$sub.slideUp();
+					$li.removeClass('open');
+				} else {
+					$sub.slideDown();
+					$li.addClass('open');
+				}
+			})
+			.appendTo('.side-nav .navbar-nav li.menu-item-has-children > a');
+	});
 })( jQuery );
