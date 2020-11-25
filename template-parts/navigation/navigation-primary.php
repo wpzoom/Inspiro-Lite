@@ -7,10 +7,16 @@
  * @since Inspiro Lite 1.0.0
  * @version x.x.x
  */
+
+$navbar_classes = ['navbar'];
+
+if ( has_custom_header() ) {
+    $navbar_classes[] = 'page-with-cover';
+}
+
 ?>
-<nav id="site-navigation" class="navbar" role="navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'inspiro' ); ?>">
+<nav id="site-navigation" class="<?php echo implode( ' ', $navbar_classes ); ?>" role="navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'inspiro' ); ?>">
     <div class="inner-wrap">
-    	
         <div class="navbar-header">
             <div class="navbar-brand-wpz">
             	<?php inspiro_custom_logo() ?>
@@ -19,7 +25,7 @@
 
         <?php if ( has_nav_menu( 'primary' ) || is_active_sidebar( 'sidebar' ) ) : ?>
             <button type="button" class="navbar-toggle">
-                <span class="sr-only"><?php _e( 'Toggle sidebar &amp; navigation', 'wpzoom' ); ?></span>
+                <span class="screen-reader-text"><?php _e( 'Toggle sidebar &amp; navigation', 'wpzoom' ); ?></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -43,5 +49,5 @@
                 ?>
             </div><!-- .navbar-collapse -->
         <?php endif ?>
-    </div>
+    </div><!-- .inner-wrap -->
 </nav><!-- #site-navigation -->
