@@ -401,6 +401,7 @@ module.exports = function(grunt) {
           '!assets/js/unminified/customize-preview.js',
           '!assets/js/unminified/navigation.js',
           '!assets/js/unminified/scripts.js',
+          '!assets/js/unminified/plugins.js',
         ],
         dest: 'assets/js/unminified/plugins.js',
       },
