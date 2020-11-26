@@ -1,0 +1,8 @@
+@media screen and (max-width: em(480)) {
+    /* Footer */
+
+    .site-footer {
+        @include font-size(14);
+        line-height: 1.6;
+    }
+}

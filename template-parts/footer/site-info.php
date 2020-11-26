@@ -20,9 +20,9 @@
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'inspiro' ) ); ?>" target="_blank">
 				<?php printf( __( 'Powered by %s', 'inspiro' ), 'WordPress' ); ?>
 			</a>
-		<span/>
+		</span>
 		<span>
-			<?php echo esc_html__( 'Inspiro WordPress Theme by', 'inspiro' ); ?><a href="<?php echo esc_url( 'https://www.wpzoom.com/' ) ?>" target="_blank" rel="nofollow">WPZOOM</a>
+			<?php echo esc_html__( 'Inspiro WordPress Theme by', 'inspiro' ); ?> <a href="<?php echo esc_url( 'https://www.wpzoom.com/' ) ?>" target="_blank" rel="nofollow">WPZOOM</a>
 		</span>
 	</span>
 </div><!-- .site-info -->

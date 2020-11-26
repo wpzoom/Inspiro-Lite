@@ -1,8 +1,23 @@
 .site-footer {
-    border-top: 1px solid #eee;
+    background: $color-background-footer;
+    color: $color-text-footer;
+
+    .inner-wrap {
+        padding-bottom: 0;
+        padding-top: em(48);
+    }
 }
 
-.site-footer .inner-wrap {
-    padding-bottom: 1.5em;
-    padding-top: 2em;
+.home .site-footer {
+    border-top: 1px solid rgba(255,255,255,.1);
 }
+
+.site-footer-separator {
+    background: #232323;
+    height: 1px;
+    width: 100%;
+    border: none;
+    margin-bottom: 0;
+}
+
+@import "site-info", "social-navigation", "widgets";

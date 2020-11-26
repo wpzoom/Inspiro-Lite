@@ -1,3 +1,5 @@
+$browser-context: 16 !default;
+
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1 ) {
     @if (unitless($sizeValue)) {
@@ -10,6 +12,10 @@
 
     font-size: $sizeValue;
     font-size: ($sizeValue / $font-size-root) * 1rem;
+}
+
+@function em($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}em;
 }
 
 // Center block

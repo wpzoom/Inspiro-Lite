@@ -37,10 +37,8 @@ if ( is_active_sidebar( 'footer_1' ) || is_active_sidebar( 'footer_2' ) || is_ac
 				<?php dynamic_sidebar( 'footer_4' ); ?>
 			</div>
 		<?php endif ?>
-
-		<div class="clear"></div>
-        <div class="site-footer-separator"></div>
-
 	</aside><!-- .widget-area -->
+
+	<div class="site-footer-separator"></div>
 
 <?php endif; ?>
