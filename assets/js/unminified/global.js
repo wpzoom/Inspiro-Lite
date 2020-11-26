@@ -4,71 +4,13 @@
     var $body = $( 'body' ),
         $customHeader = $body.find( '.custom-header' ),
         $branding = $customHeader.find( '.site-branding' ),
-        $navigation = $body.find( '#site-navigation' ),
-        $navWrap = $navigation.find( '.inner-wrap' ),
-        $navMenuItem = $navigation.find( '.menu-item' ),
-        $menuToggle = $navigation.find( '.menu-toggle' ),
         $menuScrollDown = $body.find( '.menu-scroll-down' ),
         $sidebar = $body.find( '#secondary' ),
         $entryContent = $body.find( '.entry-content' ),
         $formatQuote = $body.find( '.format-quote blockquote' ),
         isFrontPage = $body.hasClass( 'inspiro-front-page' ) || $body.hasClass( 'home blog' ),
-        navigationFixedClass = 'site-navigation-fixed',
-        navigationHeight,
-        navigationOuterHeight,
-        navPadding,
-        navMenuItemHeight,
-        idealNavHeight,
-        navIsNotTooTall,
-        headerOffset,
         menuTop = 0,
         resizeTimer;
-
-    // Ensure the sticky navigation doesn't cover current focused links.
-    $( 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex], [contenteditable]', '.site-content-contain' ).filter( ':visible' ).trigger( 'focus', function() {
-        if ( $navigation.hasClass( 'site-navigation-fixed' ) ) {
-            var windowScrollTop = $( window ).scrollTop(),
-                fixedNavHeight = $navigation.height(),
-                itemScrollTop = $( this ).offset().top,
-                offsetDiff = itemScrollTop - windowScrollTop;
-
-            // Account for Admin bar.
-            if ( $( '#wpadminbar' ).length ) {
-                offsetDiff -= $( '#wpadminbar' ).height();
-            }
-
-            if ( offsetDiff < fixedNavHeight ) {
-                $( window ).scrollTo( itemScrollTop - ( fixedNavHeight + 50 ), 0 );
-            }
-        }
-    });
-
-    // Set properties of navigation.
-    function setNavProps() {
-        navigationHeight      = $navigation.height();
-        navigationOuterHeight = $navigation.outerHeight();
-        navPadding            = parseFloat( $navWrap.css( 'padding-top' ) ) * 2;
-        navMenuItemHeight     = $navMenuItem.outerHeight() * 2;
-        idealNavHeight        = navPadding + navMenuItemHeight;
-        navIsNotTooTall       = navigationHeight <= idealNavHeight;
-    }
-
-    // Set margins of branding in header.
-    function adjustHeaderHeight() {
-        if ( 'none' === $menuToggle.css( 'display' ) ) {
-
-            // The margin should be applied to different elements on front-page or home vs interior pages.
-            if ( isFrontPage ) {
-                $branding.css( 'margin-bottom', navigationOuterHeight );
-            } else {
-                $customHeader.css( 'margin-bottom', navigationOuterHeight );
-            }
-
-        } else {
-            $customHeader.css( 'margin-bottom', '0' );
-            $branding.css( 'margin-bottom', '0' );
-        }
-    }
 
     // Add 'below-entry-meta' class to elements.
     function belowEntryMetaClass( param ) {
@@ -145,11 +87,6 @@
     // Fire on document ready.
     $( document ).ready( function() {
 
-        // If navigation menu is present on page, setNavProps and adjustScrollClass.
-        if ( $navigation.length ) {
-            setNavProps();
-        }
-
         // If 'Scroll Down' arrow in present on page, calculate scroll offset and bind an event handler to the click event.
         if ( $menuScrollDown.length ) {
 
@@ -159,20 +96,16 @@
             if ( $( 'body' ).hasClass( 'blog' ) ) {
                 menuTop -= 30; // The div for latest posts has no space above content, add some to account for this.
             }
-            if ( ! $navigation.length ) {
-                navigationOuterHeight = 0;
-            }
 
-            $menuScrollDown.on( 'click', function( e ) {
+            $menuScrollDown.on('click', function(e) {
                 e.preventDefault();
                 $( window ).scrollTo( '#primary', {
                     duration: 600,
-                    offset: { top: menuTop - navigationOuterHeight }
+                    offset: { top: menuTop }
                 });
             });
         }
 
-        adjustHeaderHeight();
         belowEntryMetaClass( 'blockquote.alignleft, blockquote.alignright' );
         if ( true === supportsInlineSVG() ) {
             document.documentElement.className = document.documentElement.className.replace( /(\s*)no-svg(\s*)/, '$1svg$2' );
@@ -183,26 +116,11 @@
         }
     });
 
-    // If navigation menu is present on page, adjust it on scroll and screen resize.
-    if ( $navigation.length ) {
-
-        // On scroll, we want to stick/unstick the navigation.
-        $( window ).on( 'scroll', function() {
-            adjustHeaderHeight();
-        });
-
-        // Also want to make sure the navigation is where it should be on resize.
-        $( window ).on( 'resize', function() {
-            setNavProps();
-        });
-    }
-
     $( window ).on( 'resize', function() {
         clearTimeout( resizeTimer );
         resizeTimer = setTimeout( function() {
             belowEntryMetaClass( 'blockquote.alignleft, blockquote.alignright' );
         }, 300 );
-        setTimeout( adjustHeaderHeight, 1000 );
     });
 
     // Add header video class after the video is loaded.
