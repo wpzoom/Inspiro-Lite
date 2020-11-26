@@ -94,11 +94,10 @@
     display: none;
     &:before,
     &:after {
-        content: " ";
-        display: table;
+        @include clearfix();
     }
     &:after {
-        clear: both
+        @include clearfix-after();
     }
 }
 .admin-bar .side-nav__wrap {

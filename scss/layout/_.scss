@@ -32,7 +32,6 @@ body {
 }
 
 .inner-wrap:after {
-    clear: both;
-    content: "";
-    display: block;
+    @include clearfix();
+    @include clearfix-after();
 }

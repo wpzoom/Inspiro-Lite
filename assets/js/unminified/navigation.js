@@ -78,7 +78,7 @@
 	    });
 
 	    /* allow closing sidenav with escape key */
-	    $document.keyup(function (event) {
+		$document.on('keyup', function(event) {
 			if (event.keyCode === 27 && $(document.body).hasClass('side-nav-open')) {
 	            toggleNav();
 	        }
@@ -104,7 +104,7 @@
 
 	$.fn.sbSearch = function() {
 		/* allow closing sidenav with escape key */
-		$document.keydown(function (event) {
+		$document.on('keyup', function(event) {
 		    if (event.keyCode === 27 && $('#sb-search').hasClass('sb-search-open')) {
 				$("#sb-search").removeClass("sb-search-open");
 		    }
@@ -158,7 +158,7 @@
 		}
 
 		$('<span class="child-arrow">&#62279;</span>')
-			.click(function(e) {
+			.on( 'click', function(e) {
 				e.preventDefault();
 
 				var $li = $(this).closest('li'),

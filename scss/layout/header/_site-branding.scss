@@ -6,6 +6,7 @@
     -webkit-transition: margin-bottom 0.2s;
     transition: margin-bottom 0.2s;
     z-index: 3;
+    text-align: center;
 
     a {
         text-decoration: none;
@@ -21,14 +22,12 @@
 
 .site-title {
     clear: none;
-    font-size: 24px;
-    font-size: 1.5rem;
-    font-weight: 800;
+    @include font-size(72);
+    font-weight: 200;
     line-height: 1.25;
     letter-spacing: 0.08em;
     margin: 0;
     padding: 0;
-    text-transform: uppercase;
 
     &,
     a {
@@ -51,8 +50,7 @@ body {
 
 .site-description {
     color: #666;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    @include font-size(20);
     margin-bottom: 0;
 }
 
@@ -68,46 +66,89 @@ body {
 
 .custom-logo-link {
     display: inline-block;
+    padding: 0;
     padding-right: 1em;
     vertical-align: middle;
-    width: auto;
+    max-width: 350px;
+    float: left;
+
+    h1 {
+        margin: 0;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-family: $font-headings;
+    }
+    img {
+        display: inline-block;
+        max-height: 80px;
+        width: auto;
+    }
+    a:hover,
+    a:focus {
+        text-decoration: none;
+        opacity: 0.9;
+        color: #fff;
+    }
 }
 
-.custom-logo-link img {
-    display: inline-block;
-    max-height: 80px;
-    width: auto;
+body.wp-custom-logo {
+    .custom-logo-link {
+        a {
+            font-size: 0; // Prevent extra space around the logo image
+        }
+    }
 }
 
-body.home.title-tagline-hidden.has-header-image .custom-logo-link img,
-body.home.title-tagline-hidden.has-header-video .custom-logo-link img {
-    max-height: 200px;
-    max-width: 100%;
+body:not(.wp-custom-logo) {
+    a.custom-logo-link {
+        margin: 0;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-family: $font-headings;
+        @include font-size(26);
+        text-transform: uppercase;
+    }
 }
 
-.custom-logo-link a:hover,
-.custom-logo-link a:focus {
-    opacity: 0.9;
-}
-
-body:not(.title-tagline-hidden) .site-branding-text {
-    display: inline-block;
-    max-width: 100%;
-    vertical-align: middle;
+body {
+    &.home.title-tagline-hidden.has-header-image,
+    &.home.title-tagline-hidden.has-header-video {
+        .custom-logo-link {
+            img {
+                max-height: 200px;
+                max-width: 100%;
+            }
+        }
+    }
+    &:not(.title-tagline-hidden) .site-branding-text {
+        display: inline-block;
+        max-width: 100%;
+        vertical-align: middle;
+    }
 }
 
 .custom-header {
     position: relative;
 }
 
-.has-header-image.inspiro-front-page .custom-header,
-.has-header-video.inspiro-front-page .custom-header,
-.has-header-image.home.blog .custom-header,
-.has-header-video.home.blog .custom-header {
-    display: table;
-    height: 300px;
-    height: 100vh;
-    width: 100%;
+.has-header-image,
+.has-header-video {
+    &.inspiro-front-page,
+    &.home.blog {
+        .site-branding {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+        }
+        .custom-header {
+            display: table;
+            height: 300px;
+            height: 100vh;
+            width: 100%;
+        }
+    }
 }
 
 .custom-header-media {
@@ -118,79 +159,124 @@ body:not(.title-tagline-hidden) .site-branding-text {
     right: 0;
     top: 0;
     width: 100%;
+
+    &:after {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.3+75 */
+        background: -moz-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 75%, rgba(0, 0, 0, 0.3) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 75%, rgba(0, 0, 0, 0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 75%, rgba(0, 0, 0, 0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#4d000000", GradientType=0); /* IE6-9 */
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        z-index: 2;
+    }
 }
 
-.custom-header-media:before {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.3+75 */
-    background: -moz-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 75%, rgba(0, 0, 0, 0.3) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 75%, rgba(0, 0, 0, 0.3) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 75%, rgba(0, 0, 0, 0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#4d000000", GradientType=0); /* IE6-9 */
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    z-index: 2;
+.has-header-image {
+    .custom-header-media {
+        &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .3) 0%, rgba(0, 0, 0, .5) 100%);
+            background-image: -o-linear-gradient(top, rgba(0, 0, 0, .3) 0%, rgba(0, 0, 0, .5) 100%);
+            background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .3)), to(rgba(0, 0, 0, .5)));
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, .3) 0%, rgba(0, 0, 0, .5) 100%);
+            background-repeat: repeat-x;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1A000000', endColorstr='#80000000', GradientType=0);
+            opacity: 1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+        }
+        img {
+            position: fixed;
+            height: auto;
+            left: 50%;
+            max-width: 1000%;
+            min-height: 100%;
+            min-width: 100%;
+            min-width: 100vw; /* vw prevents 1px gap on left that 100% has */
+            width: auto;
+            top: 50%;
+            padding-bottom: 1px; /* Prevent header from extending beyond the footer */
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+        }
+    }
 }
 
-.has-header-image .custom-header-media img,
-.has-header-video .custom-header-media video,
-.has-header-video .custom-header-media iframe {
-    position: fixed;
-    height: auto;
-    left: 50%;
-    max-width: 1000%;
-    min-height: 100%;
-    min-width: 100%;
-    min-width: 100vw; /* vw prevents 1px gap on left that 100% has */
-    width: auto;
-    top: 50%;
-    padding-bottom: 1px; /* Prevent header from extending beyond the footer */
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+.has-header-video {
+    .custom-header-media {
+        video,
+        iframe {
+            position: fixed;
+            height: auto;
+            left: 50%;
+            max-width: 1000%;
+            min-height: 100%;
+            min-width: 100%;
+            min-width: 100vw; /* vw prevents 1px gap on left that 100% has */
+            width: auto;
+            top: 50%;
+            padding-bottom: 1px; /* Prevent header from extending beyond the footer */
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+        }
+    }
 }
 
-.wp-custom-header .wp-custom-header-video-button { /* Specificity prevents .color-dark button overrides */
-    background-color: rgba(34, 34, 34, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    color: rgba(255, 255, 255, 0.6);
-    height: 45px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    right: 30px;
-    top: 30px;
-    -webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
-    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
-    width: 45px;
+.wp-custom-header {
+    .wp-custom-header-video-button {  /* Specificity prevents .color-dark button overrides */
+        background-color: rgba(34, 34, 34, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        color: rgba(255, 255, 255, 0.6);
+        width: 45px;
+        height: 45px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        right: 30px;
+        bottom: 65px;
+        -webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
+        transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
+        z-index: 3;
+
+        &:hover,
+        &:focus {
+            border-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(34, 34, 34, 0.8);
+            color: #fff;
+        }
+    }
 }
 
-.wp-custom-header .wp-custom-header-video-button:hover,
-.wp-custom-header .wp-custom-header-video-button:focus { /* Specificity prevents .color-dark button overrides */
-    border-color: rgba(255, 255, 255, 0.8);
-    background-color: rgba(34, 34, 34, 0.8);
-    color: #fff;
-}
-
-.admin-bar .wp-custom-header-video-button {
-    bottom: 62px;
-    top: auto;
-    z-index: 3;
-}
-
-.has-header-image:not(.inspiro-front-page):not(.home) .custom-header-media img {
-    bottom: 0;
-    position: absolute;
-    top: auto;
-    -ms-transform: translateX(-50%) translateY(0);
-    -moz-transform: translateX(-50%) translateY(0);
-    -webkit-transform: translateX(-50%) translateY(0);
-    transform: translateX(-50%) translateY(0);
+.has-header-image {
+    &:not(.inspiro-front-page):not(.home) {
+        .custom-header-media {
+            img {
+                bottom: 0;
+                position: absolute;
+                top: auto;
+                -ms-transform: translateX(-50%) translateY(0);
+                -moz-transform: translateX(-50%) translateY(0);
+                -webkit-transform: translateX(-50%) translateY(0);
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+    }
 }
 
 /* For browsers that support 'object-fit' */
@@ -217,11 +303,30 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
     display: none;
 }
 
-.has-header-image.inspiro-front-page .site-branding,
-.has-header-video.inspiro-front-page .site-branding,
-.has-header-image.home.blog .site-branding,
-.has-header-video.home.blog .site-branding {
-    display: table-cell;
-    height: 100%;
-    vertical-align: bottom;
+/* Scroll to content */
+
+#scroll-to-content {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 5;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    -webkit-animation: pulsate 1.5s ease-out infinite;
+    -o-animation: pulsate 1.5s ease-out infinite;
+    animation: pulsate 1.5s ease-out infinite;
+
+    .menu-scroll-down {
+        display: block;
+        padding: 1em;
+        color: #fff;
+        opacity: 0.5;
+        transition: opacity ease-in-out 0.2s;
+
+        &:hover {
+            color: #fff;
+            opacity: 1;
+        }
+    }
 }

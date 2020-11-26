@@ -357,6 +357,8 @@ module.exports = function(grunt) {
           '!composer.json',
           '!composer.lock',
           '!phpcs.xml.dist',
+          '!assets/images/**',
+          '!style.css'
         ],
         overwrite: true,
         replacements: [

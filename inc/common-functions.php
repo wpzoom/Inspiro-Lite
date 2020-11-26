@@ -336,7 +336,7 @@ function inspiro_unique_id( $prefix = '' ) {
  * Show custom logo or blog title and description (backward compatibility)
  */
 function inspiro_custom_logo() {
-    has_custom_logo() ? the_zoom_custom_logo() : printf( '<h1><a href="%s" title="%s">%s</a></h1>', home_url(), get_bloginfo( 'description' ), get_bloginfo( 'name' ) );
+    has_custom_logo() ? the_custom_logo() : printf( '<a href="%s" title="%s" class="custom-logo-link">%s</a>', home_url(), get_bloginfo( 'description' ), get_bloginfo( 'name' ) );
 }
 
 /**

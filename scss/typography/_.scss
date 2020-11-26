@@ -4,9 +4,8 @@ input,
 select,
 textarea {
     color: #333;
-    font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
-    font-size: 15px;
-    font-size: 0.9375rem;
+    font-family: $font-main;
+    @include font-size($font-size-root);
     font-weight: 400;
     line-height: 1.66;
 }
@@ -33,6 +32,7 @@ h6:first-child {
 }
 
 h1 {
+    @include font-size(36);
     font-size: 24px;
     font-size: 1.5rem;
     font-weight: 300;
@@ -41,29 +41,25 @@ h1 {
 h2,
 .home.blog .entry-title {
     color: #666;
-    font-size: 20px;
-    font-size: 1.25rem;
+    @include font-size(30);
     font-weight: 300;
 }
 
 h3 {
     color: #333;
-    font-size: 18px;
-    font-size: 1.125rem;
+    @include font-size(24);
     font-weight: 300;
 }
 
 h4 {
     color: #333;
-    font-size: 16px;
-    font-size: 1rem;
+    @include font-size($font-size-root);
     font-weight: 800;
 }
 
 h5 {
     color: #767676;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    @include font-size(14);
     font-weight: 800;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -71,8 +67,7 @@ h5 {
 
 h6 {
     color: #333;
-    font-size: 15px;
-    font-size: 0.9375rem;
+    @include font-size(13);
     font-weight: 800;
 }
 
@@ -90,8 +85,7 @@ i {
 
 blockquote {
     color: #666;
-    font-size: 18px;
-    font-size: 1.125rem;
+    @include font-size(18);
     font-style: italic;
     line-height: 1.7;
     margin: 0;
@@ -113,8 +107,7 @@ address {
 pre {
     background: #eee;
     font-family: "Courier 10 Pitch", Courier, monospace;
-    font-size: 15px;
-    font-size: 0.9375rem;
+    @include font-size(15);
     line-height: 1.6;
     margin-bottom: 1.6em;
     max-width: 100%;
@@ -127,8 +120,7 @@ kbd,
 tt,
 var {
     font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-    font-size: 15px;
-    font-size: 0.9375rem;
+    @include font-size(15);
 }
 
 abbr,

@@ -499,8 +499,6 @@ template {
 .nav:before,
 .navbar-collapse:after,
 .navbar-collapse:before,
-.navbar-header:after,
-.navbar-header:before,
 .navbar:after,
 .navbar:before {
     content: "";
@@ -516,9 +514,9 @@ input,
 select,
 textarea {
     color: #333;
-    font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
-    font-size: 15px;
-    font-size: 0.9375rem;
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.66;
 }
@@ -545,6 +543,8 @@ h6:first-child {
 }
 
 h1 {
+    font-size: 36px;
+    font-size: 2.25rem;
     font-size: 24px;
     font-size: 1.5rem;
     font-weight: 300;
@@ -553,15 +553,15 @@ h1 {
 h2,
 .home.blog .entry-title {
     color: #666;
-    font-size: 20px;
-    font-size: 1.25rem;
+    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 300;
 }
 
 h3 {
     color: #333;
-    font-size: 18px;
-    font-size: 1.125rem;
+    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 300;
 }
 
@@ -574,8 +574,8 @@ h4 {
 
 h5 {
     color: #767676;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 800;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -583,8 +583,8 @@ h5 {
 
 h6 {
     color: #333;
-    font-size: 15px;
-    font-size: 0.9375rem;
+    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 800;
 }
 
@@ -1412,7 +1412,7 @@ a:hover .nav-title,
 }
 
 .navbar:before, .navbar:after {
-    content: " ";
+    content: "";
     display: table;
 }
 
@@ -1432,39 +1432,8 @@ a:hover .nav-title,
     display: none;
 }
 
-.navbar .navbar-brand-wpz {
-    line-height: 54px;
-    float: left;
-    padding: 0 15px 0 0;
-    max-width: 350px;
-}
-
-.navbar .navbar-brand-wpz img {
-    max-width: 100%;
-    height: auto;
-}
-
-.navbar .navbar-brand-wpz h1 {
-    margin: 0;
-    font-weight: bold;
-    letter-spacing: 1px;
-    font-family: "Montserrat", sans-serif;
-}
-
-.navbar .navbar-brand-wpz a {
-    font-size: 26px;
-    text-transform: uppercase;
-}
-
-.navbar .navbar-brand-wpz a:hover {
-    text-decoration: none;
-    opacity: 0.8;
-    color: #fff;
-}
-
-.has-header-image.inspiro-front-page .navbar, .has-header-image.home.blog .navbar,
-.has-header-video.inspiro-front-page .navbar,
-.has-header-video.home.blog .navbar {
+.has-header-image .navbar,
+.has-header-video .navbar {
     position: absolute;
     width: 100%;
     background: none;
@@ -1678,7 +1647,7 @@ a:hover .nav-title,
 }
 
 .side-nav__close-button:before, .side-nav__close-button:after {
-    content: " ";
+    content: "";
     display: table;
 }
 
@@ -1869,9 +1838,9 @@ body {
 }
 
 .inner-wrap:after {
-    clear: both;
     content: "";
-    display: block;
+    display: table;
+    clear: both;
 }
 
 /*--------------------------------------------------------------
@@ -1891,6 +1860,7 @@ body {
     position: relative;
     transition: margin-bottom 0.2s;
     z-index: 3;
+    text-align: center;
 }
 
 .site-branding a {
@@ -1904,14 +1874,13 @@ body {
 
 .site-title {
     clear: none;
-    font-size: 24px;
-    font-size: 1.5rem;
-    font-weight: 800;
+    font-size: 72px;
+    font-size: 4.5rem;
+    font-weight: 200;
     line-height: 1.25;
     letter-spacing: 0.08em;
     margin: 0;
     padding: 0;
-    text-transform: uppercase;
 }
 
 .site-title,
@@ -1929,8 +1898,8 @@ body.has-header-video .site-title a {
 
 .site-description {
     color: #666;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 20px;
+    font-size: 1.25rem;
     margin-bottom: 0;
 }
 
@@ -1941,9 +1910,18 @@ body.has-header-image .site-description, body.has-header-video .site-description
 
 .custom-logo-link {
     display: inline-block;
+    padding: 0;
     padding-right: 1em;
     vertical-align: middle;
-    width: auto;
+    max-width: 350px;
+    float: left;
+}
+
+.custom-logo-link h1 {
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: "Montserrat", sans-serif;
 }
 
 .custom-logo-link img {
@@ -1952,15 +1930,30 @@ body.has-header-image .site-description, body.has-header-video .site-description
     width: auto;
 }
 
-body.home.title-tagline-hidden.has-header-image .custom-logo-link img,
-body.home.title-tagline-hidden.has-header-video .custom-logo-link img {
-    max-height: 200px;
-    max-width: 100%;
-}
-
 .custom-logo-link a:hover,
 .custom-logo-link a:focus {
+    text-decoration: none;
     opacity: 0.9;
+    color: #fff;
+}
+
+body.wp-custom-logo .custom-logo-link a {
+    font-size: 0;
+}
+
+body:not(.wp-custom-logo) a.custom-logo-link {
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 26px;
+    font-size: 1.625rem;
+    text-transform: uppercase;
+}
+
+body.home.title-tagline-hidden.has-header-image .custom-logo-link img, body.home.title-tagline-hidden.has-header-video .custom-logo-link img {
+    max-height: 200px;
+    max-width: 100%;
 }
 
 body:not(.title-tagline-hidden) .site-branding-text {
@@ -1973,9 +1966,18 @@ body:not(.title-tagline-hidden) .site-branding-text {
     position: relative;
 }
 
-.has-header-image.inspiro-front-page .custom-header,
+.has-header-image.inspiro-front-page .site-branding, .has-header-image.home.blog .site-branding,
+.has-header-video.inspiro-front-page .site-branding,
+.has-header-video.home.blog .site-branding {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.has-header-image.inspiro-front-page .custom-header, .has-header-image.home.blog .custom-header,
 .has-header-video.inspiro-front-page .custom-header,
-.has-header-image.home.blog .custom-header,
 .has-header-video.home.blog .custom-header {
     display: table;
     height: 300px;
@@ -1993,7 +1995,7 @@ body:not(.title-tagline-hidden) .site-branding-text {
     width: 100%;
 }
 
-.custom-header-media:before {
+.custom-header-media:after {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.3+75 */
     /* FF3.6-15 */
     /* Chrome10-25,Safari5.1-6 */
@@ -2011,7 +2013,38 @@ body:not(.title-tagline-hidden) .site-branding-text {
     z-index: 2;
 }
 
-.has-header-image .custom-header-media img,
+.has-header-image .custom-header-media:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1A000000', endColorstr='#80000000', GradientType=0);
+    opacity: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.has-header-image .custom-header-media img {
+    position: fixed;
+    height: auto;
+    left: 50%;
+    max-width: 1000%;
+    min-height: 100%;
+    min-width: 100%;
+    min-width: 100vw;
+    /* vw prevents 1px gap on left that 100% has */
+    width: auto;
+    top: 50%;
+    padding-bottom: 1px;
+    /* Prevent header from extending beyond the footer */
+    transform: translateX(-50%) translateY(-50%);
+}
+
 .has-header-video .custom-header-media video,
 .has-header-video .custom-header-media iframe {
     position: fixed;
@@ -2034,28 +2067,21 @@ body:not(.title-tagline-hidden) .site-branding-text {
     background-color: rgba(34, 34, 34, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.6);
     color: rgba(255, 255, 255, 0.6);
+    width: 45px;
     height: 45px;
     overflow: hidden;
     padding: 0;
     position: absolute;
     right: 30px;
-    top: 30px;
+    bottom: 65px;
     transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
-    width: 45px;
+    z-index: 3;
 }
 
-.wp-custom-header .wp-custom-header-video-button:hover,
-.wp-custom-header .wp-custom-header-video-button:focus {
-    /* Specificity prevents .color-dark button overrides */
+.wp-custom-header .wp-custom-header-video-button:hover, .wp-custom-header .wp-custom-header-video-button:focus {
     border-color: rgba(255, 255, 255, 0.8);
     background-color: rgba(34, 34, 34, 0.8);
     color: #fff;
-}
-
-.admin-bar .wp-custom-header-video-button {
-    bottom: 62px;
-    top: auto;
-    z-index: 3;
 }
 
 .has-header-image:not(.inspiro-front-page):not(.home) .custom-header-media img {
@@ -2084,13 +2110,29 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
     display: none;
 }
 
-.has-header-image.inspiro-front-page .site-branding,
-.has-header-video.inspiro-front-page .site-branding,
-.has-header-image.home.blog .site-branding,
-.has-header-video.home.blog .site-branding {
-    display: table-cell;
-    height: 100%;
-    vertical-align: bottom;
+/* Scroll to content */
+#scroll-to-content {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 5;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    animation: pulsate 1.5s ease-out infinite;
+}
+
+#scroll-to-content .menu-scroll-down {
+    display: block;
+    padding: 1em;
+    color: #fff;
+    opacity: 0.5;
+    transition: opacity ease-in-out 0.2s;
+}
+
+#scroll-to-content .menu-scroll-down:hover {
+    color: #fff;
+    opacity: 1;
 }
 
 /*--------------------------------------------------------------
@@ -3493,7 +3535,7 @@ p > object:only-child {
         background: rgba(0, 0, 0, 0.9);
         padding: 12px 0;
     }
-    .headroom--not-top .navbar-brand-wpz img {
+    .headroom--not-top.wp-custom-logo .custom-logo-link img {
         transition: all .2s ease-in-out;
         max-height: 70px;
         width: auto;
@@ -3512,21 +3554,20 @@ p > object:only-child {
         top: 0;
         border: none;
     }
+    .has-header-image.inspiro-front-page .headroom--not-top .navbar, .has-header-image.home.blog .headroom--not-top .navbar,
+    .has-header-video.inspiro-front-page .headroom--not-top .navbar,
+    .has-header-video.home.blog .headroom--not-top .navbar {
+        background: rgba(0, 0, 0, 0.9);
+        padding: 12px 0;
+    }
     /* Compatibility with WP admin bar */
     .admin-bar:not(.side-nav-open) .headroom {
         top: 32px;
     }
     /* Site Branding */
-    .has-header-image.inspiro-front-page .site-branding, .has-header-image.home.blog .site-branding,
-    .has-header-video.inspiro-front-page .site-branding,
-    .has-header-video.home.blog .site-branding {
-        bottom: 0;
-        display: block;
-        left: 0;
-        height: auto;
-        padding-top: 0;
-        position: absolute;
-        width: 100%;
+    .custom-header-media {
+        height: 165px;
+        position: relative;
     }
     .has-header-image.inspiro-front-page .custom-header, .has-header-image.home.blog .custom-header,
     .has-header-video.inspiro-front-page .custom-header,
@@ -3534,21 +3575,23 @@ p > object:only-child {
         display: block;
         height: auto;
     }
-    .has-header-image.inspiro-front-page .headroom--not-top .navbar, .has-header-image.home.blog .headroom--not-top .navbar,
-    .has-header-video.inspiro-front-page .headroom--not-top .navbar,
-    .has-header-video.home.blog .headroom--not-top .navbar {
-        background: rgba(0, 0, 0, 0.9);
-        padding: 12px 0;
-    }
-    .custom-header-media {
-        height: 165px;
-        position: relative;
-    }
     .has-header-image.inspiro-front-page .custom-header-media, .has-header-image.home.blog .custom-header-media,
     .has-header-video.inspiro-front-page .custom-header-media,
     .has-header-video.home.blog .custom-header-media {
         height: 0;
         position: relative;
+    }
+    .has-header-image:not(.inspiro-front-page):not(.home) .custom-header,
+    .has-header-video:not(.inspiro-front-page):not(.home) .custom-header {
+        height: 450px;
+    }
+    .has-header-image:not(.inspiro-front-page):not(.home) .site-branding,
+    .has-header-video:not(.inspiro-front-page):not(.home) .site-branding {
+        position: absolute;
+        text-align: left;
+        bottom: 30px;
+        left: 0;
+        width: 100%;
     }
     .has-header-image:not(.inspiro-front-page):not(.home) .custom-header-media,
     .has-header-video:not(.inspiro-front-page):not(.home) .custom-header-media {
@@ -3573,9 +3616,9 @@ p > object:only-child {
         max-height: 100%;
         overflow: hidden;
     }
-    .has-header-image.inspiro-front-page .custom-header-media:before, .has-header-image.home.blog .custom-header-media:before,
-    .has-header-video.inspiro-front-page .custom-header-media:before,
-    .has-header-video.home.blog .custom-header-media:before {
+    .has-header-image.inspiro-front-page .custom-header-media:after, .has-header-image.home.blog .custom-header-media:after,
+    .has-header-video.inspiro-front-page .custom-header-media:after,
+    .has-header-video.home.blog .custom-header-media:after {
         height: 33%;
     }
     .has-header-image.admin-bar .custom-header-media,

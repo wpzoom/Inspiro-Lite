@@ -5,7 +5,7 @@
             background: rgba(0,0,0,.9);
             padding: 12px 0;
         }
-        .navbar-brand-wpz img {
+        &.wp-custom-logo .custom-logo-link img {
             transition: all .2s ease-in-out;
             max-height: 70px;
             width: auto;
@@ -27,30 +27,10 @@
             border: none;
         }
     }
-    /* Compatibility with WP admin bar */
-    .admin-bar:not(.side-nav-open) .headroom {
-        top: 32px;
-    }
-
-    /* Site Branding */
-
     .has-header-image,
     .has-header-video {
         &.inspiro-front-page,
         &.home.blog {
-            .site-branding {
-                bottom: 0;
-                display: block;
-                left: 0;
-                height: auto;
-                padding-top: 0;
-                position: absolute;
-                width: 100%;
-            }
-            .custom-header {
-                display: block;
-                height: auto;
-            }
             .headroom--not-top {
                 .navbar {
                     background: rgba(0,0,0,.9);
@@ -59,6 +39,15 @@
             }
         }
     }
+
+    /* Compatibility with WP admin bar */
+
+    .admin-bar:not(.side-nav-open) .headroom {
+        top: 32px;
+    }
+
+    /* Site Branding */
+
     .custom-header-media {
         height: 165px;
         position: relative;
@@ -67,12 +56,26 @@
     .has-header-video {
         &.inspiro-front-page,
         &.home.blog {
+            .custom-header {
+                display: block;
+                height: auto;
+            }
             .custom-header-media {
                 height: 0;
                 position: relative;
             }
         }
         &:not(.inspiro-front-page):not(.home) {
+            .custom-header {
+                height: 450px;
+            }
+            .site-branding {
+                position: absolute;
+                text-align: left;
+                bottom: 30px;
+                left: 0;
+                width: 100%;
+            }
             .custom-header-media {
                 bottom: 0;
                 height: auto;
@@ -105,7 +108,7 @@
                 max-height: 100%;
                 overflow: hidden;
 
-                &:before {
+                &:after {
                     height: 33%;
                 }
             }

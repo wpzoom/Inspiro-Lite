@@ -10,11 +10,8 @@
 ?>
 <nav id="site-navigation" class="navbar" role="navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'inspiro' ); ?>">
     <div class="inner-wrap">
-        <div class="navbar-header">
-            <div class="navbar-brand-wpz">
-            	<?php inspiro_custom_logo() ?>
-            </div>
-        </div>
+
+    	<?php inspiro_custom_logo(); ?>
 
         <?php if ( has_nav_menu( 'primary' ) || is_active_sidebar( 'sidebar' ) ) : ?>
             <button type="button" class="navbar-toggle">

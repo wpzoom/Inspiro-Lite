@@ -4,8 +4,8 @@
     var $body = $( 'body' ),
         $customHeader = $body.find( '.custom-header' ),
         $branding = $customHeader.find( '.site-branding' ),
-        $navigation = $body.find( '.navigation-top' ),
-        $navWrap = $navigation.find( '.wrap' ),
+        $navigation = $body.find( '#site-navigation' ),
+        $navWrap = $navigation.find( '.inner-wrap' ),
         $navMenuItem = $navigation.find( '.menu-item' ),
         $menuToggle = $navigation.find( '.menu-toggle' ),
         $menuScrollDown = $body.find( '.menu-scroll-down' ),
@@ -25,7 +25,7 @@
         resizeTimer;
 
     // Ensure the sticky navigation doesn't cover current focused links.
-    $( 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex], [contenteditable]', '.site-content-contain' ).filter( ':visible' ).focus( function() {
+    $( 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex], [contenteditable]', '.site-content-contain' ).filter( ':visible' ).trigger( 'focus', function() {
         if ( $navigation.hasClass( 'site-navigation-fixed' ) ) {
             var windowScrollTop = $( window ).scrollTop(),
                 fixedNavHeight = $navigation.height(),
@@ -51,37 +51,6 @@
         navMenuItemHeight     = $navMenuItem.outerHeight() * 2;
         idealNavHeight        = navPadding + navMenuItemHeight;
         navIsNotTooTall       = navigationHeight <= idealNavHeight;
-    }
-
-    // Make navigation 'stick'.
-    function adjustScrollClass() {
-
-        // Make sure we're not on a mobile screen.
-        if ( 'none' === $menuToggle.css( 'display' ) ) {
-
-            // Make sure the nav isn't taller than two rows.
-            if ( navIsNotTooTall ) {
-
-                // When there's a custom header image or video, the header offset includes the height of the navigation.
-                if ( isFrontPage && ( $body.hasClass( 'has-header-image' ) || $body.hasClass( 'has-header-video' ) ) ) {
-                    headerOffset = $customHeader.innerHeight() - navigationOuterHeight;
-                } else {
-                    headerOffset = $customHeader.innerHeight();
-                }
-
-                // If the scroll is more than the custom header, set the fixed class.
-                if ( $( window ).scrollTop() >= headerOffset ) {
-                    $navigation.addClass( navigationFixedClass );
-                } else {
-                    $navigation.removeClass( navigationFixedClass );
-                }
-
-            } else {
-
-                // Remove 'fixed' class if nav is taller than two rows.
-                $navigation.removeClass( navigationFixedClass );
-            }
-        }
     }
 
     // Set margins of branding in header.
@@ -179,7 +148,6 @@
         // If navigation menu is present on page, setNavProps and adjustScrollClass.
         if ( $navigation.length ) {
             setNavProps();
-            adjustScrollClass();
         }
 
         // If 'Scroll Down' arrow in present on page, calculate scroll offset and bind an event handler to the click event.
@@ -195,7 +163,7 @@
                 navigationOuterHeight = 0;
             }
 
-            $menuScrollDown.click( function( e ) {
+            $menuScrollDown.on( 'click', function( e ) {
                 e.preventDefault();
                 $( window ).scrollTo( '#primary', {
                     duration: 600,
@@ -220,18 +188,16 @@
 
         // On scroll, we want to stick/unstick the navigation.
         $( window ).on( 'scroll', function() {
-            adjustScrollClass();
             adjustHeaderHeight();
         });
 
         // Also want to make sure the navigation is where it should be on resize.
-        $( window ).resize( function() {
+        $( window ).on( 'resize', function() {
             setNavProps();
-            setTimeout( adjustScrollClass, 500 );
         });
     }
 
-    $( window ).resize( function() {
+    $( window ).on( 'resize', function() {
         clearTimeout( resizeTimer );
         resizeTimer = setTimeout( function() {
             belowEntryMetaClass( 'blockquote.alignleft, blockquote.alignright' );

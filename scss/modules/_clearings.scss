@@ -24,8 +24,7 @@
 .widget:after,
 .comment-meta:before,
 .comment-meta:after {
-    content: "";
-    display: table;
+    @include clearfix();
     table-layout: fixed;
 }
 
@@ -42,7 +41,7 @@
 .widget-area:after,
 .widget:after,
 .comment-meta:after {
-    clear: both;
+    @include clearfix-after();
 }
 
 /* Fix compatibility with Visual Composer */
@@ -50,8 +49,6 @@
 .nav:before,
 .navbar-collapse:after,
 .navbar-collapse:before,
-.navbar-header:after,
-.navbar-header:before,
 .navbar:after,
 .navbar:before {
     content: "";

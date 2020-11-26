@@ -5,13 +5,13 @@
     background: $dark-color;
     padding: 18px 0;
     transition: all 0.5s ease-in-out;
+
     &:before,
     &:after {
-        content: " ";
-        display: table;
+        @include clearfix();
     }
     &:after {
-        clear: both
+        @include clearfix-after();
     }
     a {
         color: inherit;
@@ -22,44 +22,16 @@
             display: none;
         }
     }
-    .navbar-brand-wpz {
-        line-height: 54px;
-        float: left;
-        padding: 0 15px 0 0;
-        max-width: 350px;
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        h1 {
-            margin: 0;
-            font-weight: bold;
-            letter-spacing: 1px;
-            font-family: $font-headings;
-        }
-        a {
-            font-size: 26px;
-            text-transform: uppercase;
-            &:hover {
-                text-decoration: none;
-                opacity: 0.8;
-                color: #fff;
-            }
-        }
-    }
 }
 .has-header-image,
 .has-header-video {
-    &.inspiro-front-page,
-    &.home.blog {
-        .navbar {
-            position: absolute;
-            width: 100%;
-            background: none;
-            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 1%, rgba(0, 0, 0, 0) 100%);
-            background-repeat: repeat-x;
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33000000', endColorstr='#00000000', GradientType=0);
-        }
+    .navbar {
+        position: absolute;
+        width: 100%;
+        background: none;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 1%, rgba(0, 0, 0, 0) 100%);
+        background-repeat: repeat-x;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33000000', endColorstr='#00000000', GradientType=0);
     }
 }
 
