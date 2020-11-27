@@ -4,5 +4,11 @@
     .site-footer {
         @include font-size(14);
         line-height: 1.6;
+
+        @for $i from 1 through 4 {
+            .widget-columns-#{ $i } .widget-column {
+                flex: 0 0 50%;
+            }
+        }
     }
 }

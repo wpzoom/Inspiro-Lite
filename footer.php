@@ -18,7 +18,7 @@
 
 		<?php get_template_part( 'template-parts/footer/footer', 'instagram-widget' ); ?>
 
-		<footer id="colophon" class="site-footer" role="contentinfo">
+		<footer id="colophon" <?php inspiro_footer_class(); ?> role="contentinfo">
 			<div class="inner-wrap">
 				<?php
 				get_template_part( 'template-parts/footer/footer', 'widgets' );

@@ -81,13 +81,49 @@ function inspiro_customize_register( $wp_customize ) {
 	);
 
 	/**
+	 * Footer.
+	 */
+	$wp_customize->add_section(
+		'footer-area',
+		array(
+			'title'    => __( 'Footer', 'inspiro' ),
+			'priority' => 130, // Before Additional CSS.
+		)
+	);
+
+	$wp_customize->add_setting(
+		'footer-widget-areas',
+		array(
+			'default'           => 3,
+			'sanitize_callback' => 'absint',
+			'transport'         => 'refresh',
+		)
+	);
+
+	$wp_customize->add_control(
+		'footer-widget-areas',
+		array(
+			'label'           => __( 'Number of Widget Areas', 'inspiro' ),
+			'section'         => 'footer-area',
+			'type'            => 'radio',
+			'choices'         => array(
+				__( 'Don\'t display Widgets', 'inspiro' ),
+				__( 'One Column', 'inspiro' ),
+				__( 'Two Columns', 'inspiro' ),
+				__( 'Three Columns', 'inspiro' ),
+				__( 'Four Columns', 'inspiro' ),
+			),
+		)
+	);
+
+	/**
 	 * Theme options.
 	 */
 	$wp_customize->add_section(
 		'theme_options',
 		array(
 			'title'    => __( 'Theme Options', 'inspiro' ),
-			'priority' => 130, // Before Additional CSS.
+			'priority' => 120, // Before Footer section.
 		)
 	);
 

@@ -168,9 +168,9 @@
             flex-wrap: wrap;
             flex-direction: row;
         }
-        .widget-columns-4 {
-            .widget-column {
-                flex: 0 0 25%;
+        @for $i from 1 through 4 {
+            .widget-columns-#{ $i } .widget-column {
+                flex: 0 0 calc(100% / #{ $i });
             }
         }
         .widget-column {

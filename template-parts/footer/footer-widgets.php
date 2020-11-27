@@ -8,35 +8,30 @@
  * @version x.x.x
  */
 
+$widgets_columns = get_theme_mod( 'footer-widget-areas', 3 );
+
+if ( $widgets_columns <= 0 ) {
+	return;
+}
 ?>
 
 <?php
 if ( is_active_sidebar( 'footer_1' ) || is_active_sidebar( 'footer_2' ) || is_active_sidebar( 'footer_3' ) || is_active_sidebar( 'footer_4' ) ) : ?>
 
-	<aside class="footer-widgets widgets widget-columns-4" role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'inspiro' ); ?>">
-		<?php if ( is_active_sidebar( 'footer_1' ) ): ?>
-			<div class="widget-column footer-widget-1">
-				<?php dynamic_sidebar( 'footer_1' ); ?>
-			</div>
-		<?php endif ?>
+	<aside class="footer-widgets widgets widget-columns-<?php echo intval( $widgets_columns ); ?>" role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'inspiro' ); ?>">
 
-		<?php if ( is_active_sidebar( 'footer_2' ) ): ?>
-			<div class="widget-column footer-widget-2">
-				<?php dynamic_sidebar( 'footer_2' ); ?>
-			</div>
-		<?php endif ?>
+		<?php
+			for ($i=0; $i <= intval( $widgets_columns ); $i++) { 
+				if ( is_active_sidebar( "footer_$i" ) ) {
+				?>
+					<div class="widget-column footer-widget-<?php echo $i ?>">
+						<?php dynamic_sidebar( "footer_$i" ); ?>
+					</div>
+				<?php
+				}
+			}
+		?>
 
-		<?php if ( is_active_sidebar( 'footer_3' ) ): ?>
-			<div class="widget-column footer-widget-3">
-				<?php dynamic_sidebar( 'footer_3' ); ?>
-			</div>
-		<?php endif ?>
-
-		<?php if ( is_active_sidebar( 'footer_4' ) ): ?>
-			<div class="widget-column footer-widget-4">
-				<?php dynamic_sidebar( 'footer_4' ); ?>
-			</div>
-		<?php endif ?>
 	</aside><!-- .widget-area -->
 
 	<div class="site-footer-separator"></div>

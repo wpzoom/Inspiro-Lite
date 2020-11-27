@@ -2,9 +2,11 @@
     background: $color-background-footer;
     color: $color-text-footer;
 
-    .inner-wrap {
-        padding-bottom: 0;
-        padding-top: em(48);
+    &.has-footer-widgets {
+        .inner-wrap {
+            padding-bottom: 0;
+            padding-top: em(48);
+        }
     }
 }
 

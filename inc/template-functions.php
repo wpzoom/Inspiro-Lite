@@ -70,6 +70,61 @@ function inspiro_body_classes( $classes ) {
 add_filter( 'body_class', 'inspiro_body_classes' );
 
 /**
+ * Displays the class names for the footer element.
+ *
+ * @since x.x.x
+ * @see https://core.trac.wordpress.org/browser/tags/5.5.1/src/wp-includes/post-template.php#L586
+ *
+ * @param string|string[] $class Space-separated string or array of class names to add to the class list.
+ */
+function inspiro_footer_class( $class = '' ) {
+	// Separates class names with a single space, collates class names for footer element.
+	echo 'class="' . esc_attr( join( ' ', inspiro_get_footer_class( $class ) ) ) . '"';
+}
+
+/**
+ * Retrieves an array of the class names for the footer element.
+ *
+ * @since x.x.x
+ * @see https://core.trac.wordpress.org/browser/tags/5.5.1/src/wp-includes/post-template.php#L608
+ *
+ * @param string|string[] $class Space-separated string or array of class names to add to the class list.
+ * @return string[] Array of class names.
+ */
+function inspiro_get_footer_class( $class = '' ) {
+	$classes = array('site-footer');
+	$widgets_columns = get_theme_mod( 'footer-widget-areas', 3 );
+
+	if ( $widgets_columns > 0 ) {
+		$classes[] = 'has-footer-widgets';
+	}
+
+	if ( ! empty( $class ) ) {
+		if ( ! is_array( $class ) ) {
+			$class = preg_split( '#\s+#', $class );
+		}
+		$classes = array_merge( $classes, $class );
+	} else {
+		// Ensure that we always coerce class to being an array.
+		$class = array();
+	}
+	
+	$classes = array_map( 'esc_attr', $classes );
+	
+	/**
+	 * Filters the list of CSS footer class names.
+	 *
+	 * @since x.x.x
+	 *
+	 * @param string[] $classes An array of footer class names.
+	 * @param string[] $class   An array of additional class names added to the footer.
+	 */
+	$classes = apply_filters( 'inspiro_footer_class', $classes, $class );
+	
+	return array_unique( $classes );
+}
+
+/**
  * Count our number of active panels.
  *
  * Primarily used to see if we have any panels active, duh.

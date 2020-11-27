@@ -2630,7 +2630,7 @@ body:not(.inspiro-front-page) .entry-header {
     color: #78787f;
 }
 
-.site-footer .inner-wrap {
+.site-footer.has-footer-widgets .inner-wrap {
     padding-bottom: 0;
     padding-top: 3em;
 }
@@ -3752,8 +3752,17 @@ p > object:only-child {
         flex-wrap: wrap;
         flex-direction: row;
     }
+    .site-footer .widget-columns-1 .widget-column {
+        flex: 0 0 calc(100% / 1);
+    }
+    .site-footer .widget-columns-2 .widget-column {
+        flex: 0 0 calc(100% / 2);
+    }
+    .site-footer .widget-columns-3 .widget-column {
+        flex: 0 0 calc(100% / 3);
+    }
     .site-footer .widget-columns-4 .widget-column {
-        flex: 0 0 25%;
+        flex: 0 0 calc(100% / 4);
     }
     .site-footer .widget-column {
         padding-right: 2.5em;
@@ -3769,6 +3778,18 @@ p > object:only-child {
         font-size: 14px;
         font-size: 0.875rem;
         line-height: 1.6;
+    }
+    .site-footer .widget-columns-1 .widget-column {
+        flex: 0 0 50%;
+    }
+    .site-footer .widget-columns-2 .widget-column {
+        flex: 0 0 50%;
+    }
+    .site-footer .widget-columns-3 .widget-column {
+        flex: 0 0 50%;
+    }
+    .site-footer .widget-columns-4 .widget-column {
+        flex: 0 0 50%;
     }
 }
 
