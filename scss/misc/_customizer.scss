@@ -1,3 +1,12 @@
+.inspiro-customizer {
+    &.has-header-image,
+    &.has-header-video {
+        .custom-header {
+            margin-top: 0 !important;
+        }
+    }
+}
+
 .highlight-front-sections.inspiro-customizer.inspiro-front-page .inspiro-panel:after {
     border: 2px dashed #0085ba; /* Matches visible edit shortcuts. */
     bottom: 1em;
