@@ -17,9 +17,6 @@
             z-index: 1000;
             position: fixed;
             top: 0;
-            .tagline {
-                transition-duration: .2s;
-            }
         }
         &.headroom--not-top {
             position: fixed;

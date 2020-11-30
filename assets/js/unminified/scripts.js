@@ -33,13 +33,13 @@
     }
 
     // Set margins of custom header.
-    function adjustHeaderMargins() {
+    function adjustHeaderSpacing() {
         if ( $(window).outerWidth() >= 768 ) {
             if ( ! hasCustomHeaderMedia ) {
-                $customHeader.css('margin-top', navigationOuterHeight);
+                $customHeader.css('padding-top', navigationOuterHeight);
             }
         } else {
-            $customHeader.css('margin-top', '0');
+            $customHeader.css('padding-top', '0');
         }
     }
 
@@ -134,7 +134,7 @@
             });
         }
 
-        adjustHeaderMargins();
+        adjustHeaderSpacing();
         belowEntryMetaClass( 'blockquote.alignleft, blockquote.alignright' );
 
         if ( true === supportsFixedBackground() ) {
@@ -147,7 +147,7 @@
         // We want to make sure the navigation is where it should be on resize.
         $( window ).on( 'resize', function() {
             setNavProps();
-            adjustHeaderMargins();
+            adjustHeaderSpacing();
         });
     }
 

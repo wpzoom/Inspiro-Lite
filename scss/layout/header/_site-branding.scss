@@ -301,12 +301,6 @@ body {
     }
 }
 
-/* Hides div in Customizer preview when header images or videos change. */
-
-body:not(.has-header-image):not(.has-header-video) .custom-header-media {
-    display: none;
-}
-
 /* Scroll to content */
 
 /* Effect used for #scroll-to-content */
@@ -355,5 +349,14 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 
     &:hover {
         opacity: 1;
+    }
+}
+
+/* Hides div in Customizer preview when header images or videos change. */
+
+body:not(.has-header-image):not(.has-header-video) {
+    .custom-header-media,
+    #scroll-to-content {
+        display: none;
     }
 }

@@ -2100,11 +2100,6 @@ body:not(.title-tagline-hidden) .site-branding-text {
     }
 }
 
-/* Hides div in Customizer preview when header images or videos change. */
-body:not(.has-header-image):not(.has-header-video) .custom-header-media {
-    display: none;
-}
-
 /* Scroll to content */
 /* Effect used for #scroll-to-content */
 
@@ -2149,6 +2144,12 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 
 #scroll-to-content:hover {
     opacity: 1;
+}
+
+/* Hides div in Customizer preview when header images or videos change. */
+body:not(.has-header-image):not(.has-header-video) .custom-header-media,
+body:not(.has-header-image):not(.has-header-video) #scroll-to-content {
+    display: none;
 }
 
 /*--------------------------------------------------------------
@@ -2742,7 +2743,7 @@ body:not(.inspiro-front-page) .entry-header {
 
 /* Footer widgets */
 .site-footer .footer-widgets .title {
-    color: #78787f;
+    color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -3483,7 +3484,7 @@ p > object:only-child {
 17.0 Customizer
 --------------------------------------------------------------*/
 .inspiro-customizer.has-header-image .custom-header, .inspiro-customizer.has-header-video .custom-header {
-    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 
 .highlight-front-sections.inspiro-customizer.inspiro-front-page .inspiro-panel:after {
@@ -3595,9 +3596,6 @@ p > object:only-child {
         z-index: 1000;
         position: fixed;
         top: 0;
-    }
-    .site-header.headroom .tagline {
-        transition-duration: .2s;
     }
     .site-header.headroom--not-top {
         position: fixed;

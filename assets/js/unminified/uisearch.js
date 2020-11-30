@@ -115,7 +115,7 @@
             var self = this;
             classie.add( this.el, 'sb-search-open' );
             // focus the input
-            this.inputEl.trigger('focus');
+            this.inputEl.focus();
             // close the search input if body is clicked
             var bodyFn = function( ev ) {
                 self.close();
