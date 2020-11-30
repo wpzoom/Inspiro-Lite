@@ -16,9 +16,9 @@
 		<?php the_custom_header_markup(); ?>
 	</div>
 
-    <?php if ( ( inspiro_is_frontpage() || ( is_home() && is_front_page() ) ) && ! has_nav_menu( 'top' ) ) : ?>
-    <div id="scroll-to-content">
-        <a href="#content" class="menu-scroll-down"><?php echo inspiro_get_svg( array( 'icon' => 'arrow-right' ) ); ?><span class="screen-reader-text"><?php _e( 'Scroll down to content', 'inspiro' ); ?></span></a>
+    <?php if ( inspiro_is_frontpage() || ( is_home() && is_front_page() ) ) : ?>
+    <div id="scroll-to-content" title="<?php _e( 'Scroll down to content', 'inspiro' ); ?>">
+        <span class="screen-reader-text"><?php _e( 'Scroll down to content', 'inspiro' ); ?></span>
     </div>
     <?php endif; ?>
 </div><!-- .custom-header -->

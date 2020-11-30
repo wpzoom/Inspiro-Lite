@@ -47,7 +47,7 @@
         &:hover {
             opacity: .7;
         }
-        svg {
+        .svg-icon {
             width: 18px;
             height: 45px;
             margin: 0;
@@ -55,7 +55,7 @@
             cursor: pointer;
             fill: #fff;
         }
-        .icon-close {
+        .svg-icon-cross {
             display: none;
         }
     }
@@ -87,10 +87,10 @@
             &:hover {
                 opacity: 1;
             }
-            .icon-search {
+            .svg-icon-search {
                 display: none;
             }
-            .icon-close {
+            .svg-icon-cross {
                 display: block;
             }
         }

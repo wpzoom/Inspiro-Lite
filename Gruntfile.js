@@ -363,19 +363,27 @@ module.exports = function(grunt) {
         overwrite: true,
         replacements: [
           {
-            from: 'twentyseventeen',
+            from: '<%= pkg._forkProject.subpackage =>',
+            to: '<%= pkg._project.subpackage %>'
+          },
+          {
+            from: '<%= pkg._forkProject.name %=>',
+            to: '<%= pkg._project.name %>'
+          },
+          {
+            from: '<%= pkg._forkProject.slug %=>',
             to: '<%= pkg._project.slug %>'
           },
           {
-            from: '@package WordPress',
+            from: '@package <%= pkg._forkProject.package %=>',
             to: '@package <%= pkg._project.package %>'
           },
           {
-            from: '@subpackage Twenty_Seventeen',
+            from: '@subpackage <%= pkg._forkProject.subpackage %=>',
             to: '@subpackage <%= pkg._project.subpackage %>'
           },
           {
-            from: /@since Twenty Seventeen \bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z-A-Z-]+(?:\.[\da-z-A-Z-]+)*)?(?:\+[\da-z-A-Z-]+(?:\.[\da-z-A-Z-]+)*)?\b/g,
+            from: /@since <%= pkg._forkProject.name %=> \bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z-A-Z-]+(?:\.[\da-z-A-Z-]+)*)?(?:\+[\da-z-A-Z-]+(?:\.[\da-z-A-Z-]+)*)?\b/g,
             to: '@since <%= pkg._project.name %> x.x.x'
           },
           {

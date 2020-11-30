@@ -15,7 +15,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 	if ( is_sticky() && is_home() ) :
-		echo inspiro_get_svg( array( 'icon' => 'thumb-tack' ) );
+		echo inspiro_get_theme_svg( 'thumb-tack' );
 	endif;
 	?>
 	<header class="entry-header">

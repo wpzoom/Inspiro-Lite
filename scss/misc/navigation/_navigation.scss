@@ -115,42 +115,61 @@
     font-weight: 400;
     float: right;
     padding: 5px 0 0;
-}
 
-.navbar-nav>li {
-    margin: 0 15px
+    > li {
+        margin: 0 em(15);
+
+        > ul:before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -em(8);
+            width: 0;
+            height: 0;
+            border-bottom: 8px solid $primary-color;
+            border-right: 8px solid transparent;
+            border-left: 8px solid transparent;
+        }
+    }
+
+    a {
+        padding: em(5) 0 em(3);
+        font-family: $font-headings;
+        font-weight: 500;
+        border-bottom: 1px solid transparent;
+        -webkit-transition: 0.2s ease all;
+        -o-transition: 0.2s ease all;
+        transition: 0.2s ease border-color, 0.2s ease color;
+    }
+
+    > li > a:hover {
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+        color: inherit;
+        opacity: .8;
+    }
+
+    .menu-item-has-children .svg-icon {
+        margin-left: em(4);
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        vertical-align: text-top;
+        fill: #fff;
+    }
+
+    ul .menu-item-has-children .svg-icon {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        right: em(10);
+        top: 50%;
+        fill: #fff;
+        transform: rotate(-90deg) translateX(50%);
+    }
 }
 
 .inspiro--with-page-nav .navbar-nav>li:last-child {
     margin-right: 0
-}
-
-.navbar-nav>li>ul:before {
-    content: '';
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -8px;
-    width: 0;
-    height: 0;
-    border-bottom: 8px solid $primary-color;
-    border-right: 8px solid transparent;
-    border-left: 8px solid transparent;
-}
-
-.navbar-nav a {
-    padding: 5px 0 3px;
-    font-family: $font-headings;
-    font-weight: 500;
-    border-bottom: 1px solid transparent;
-    -webkit-transition: 0.2s ease all;
-    -o-transition: 0.2s ease all;
-    transition: 0.2s ease border-color, 0.2s ease color;
-}
-
-.navbar-nav>li>a:hover {
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
-    color: inherit;
-    opacity: .8;
 }

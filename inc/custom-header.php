@@ -124,8 +124,8 @@ endif; // End of inspiro_header_style().
  * @return array The filtered video settings.
  */
 function inspiro_video_controls( $settings ) {
-	$settings['l10n']['play']  = '<span class="screen-reader-text">' . __( 'Play background video', 'inspiro' ) . '</span>' . inspiro_get_svg( array( 'icon' => 'play' ) );
-	$settings['l10n']['pause'] = '<span class="screen-reader-text">' . __( 'Pause background video', 'inspiro' ) . '</span>' . inspiro_get_svg( array( 'icon' => 'pause' ) );
+	$settings['l10n']['play']  = '<span class="screen-reader-text">' . __( 'Play background video', 'inspiro' ) . '</span>' . inspiro_get_theme_svg( 'play' );
+	$settings['l10n']['pause'] = '<span class="screen-reader-text">' . __( 'Pause background video', 'inspiro' ) . '</span>' . inspiro_get_theme_svg( 'pause' );
 	return $settings;
 }
 add_filter( 'header_video_settings', 'inspiro_video_controls' );

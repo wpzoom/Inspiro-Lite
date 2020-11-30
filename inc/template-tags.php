@@ -82,11 +82,11 @@ if ( ! function_exists( 'inspiro_entry_footer' ) ) :
 
 					// Make sure there's more than one category before displaying.
 					if ( $categories_list && inspiro_categorized_blog() ) {
-						echo '<span class="cat-links">' . inspiro_get_svg( array( 'icon' => 'folder-open' ) ) . '<span class="screen-reader-text">' . __( 'Categories', 'inspiro' ) . '</span>' . $categories_list . '</span>';
+						echo '<span class="cat-links">' . inspiro_get_theme_svg( 'folder-open' ) . '<span class="screen-reader-text">' . __( 'Categories', 'inspiro' ) . '</span>' . $categories_list . '</span>';
 					}
 
 					if ( $tags_list && ! is_wp_error( $tags_list ) ) {
-						echo '<span class="tags-links">' . inspiro_get_svg( array( 'icon' => 'hashtag' ) ) . '<span class="screen-reader-text">' . __( 'Tags', 'inspiro' ) . '</span>' . $tags_list . '</span>';
+						echo '<span class="tags-links">' . inspiro_get_theme_svg( 'hashtag' ) . '<span class="screen-reader-text">' . __( 'Tags', 'inspiro' ) . '</span>' . $tags_list . '</span>';
 					}
 
 					echo '</span>';

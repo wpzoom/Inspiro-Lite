@@ -246,8 +246,8 @@ body {
         overflow: hidden;
         padding: 0;
         position: absolute;
-        right: 30px;
-        bottom: 65px;
+        right: em(30);
+        bottom: em(60);
         -webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
         transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
         z-index: 3;
@@ -257,6 +257,12 @@ body {
             border-color: rgba(255, 255, 255, 0.8);
             background-color: rgba(34, 34, 34, 0.8);
             color: #fff;
+        }
+
+        .svg-icon {
+            margin-top: 6px;
+            max-height: em(22);
+            fill: #fff;
         }
     }
 }
@@ -303,28 +309,51 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 
 /* Scroll to content */
 
+/* Effect used for #scroll-to-content */
+@-webkit-keyframes pulsate {
+    0% { opacity: 0.5 }
+    50% { opacity: 1 }
+    100% { opacity: 0.3 }
+}
+@keyframes pulsate {
+    0% { opacity: 0.5 }
+    50% { opacity: 1 }
+    100% { opacity: 0.3 }
+}
+
 #scroll-to-content {
     display: block;
     position: absolute;
     left: 50%;
-    bottom: 0;
+    bottom: 20px;
     z-index: 5;
     cursor: pointer;
-    transform: translate(-50%, -50%);
+    height: em(24);
+    width: em(56);
+    overflow: hidden;
+    opacity: 0.5;
+    transform: translateX(-50%);
+
     -webkit-animation: pulsate 1.5s ease-out infinite;
     -o-animation: pulsate 1.5s ease-out infinite;
     animation: pulsate 1.5s ease-out infinite;
 
-    .menu-scroll-down {
+    &:before {
+        content: '';
         display: block;
-        padding: 1em;
-        color: #fff;
-        opacity: 0.5;
-        transition: opacity ease-in-out 0.2s;
+        position: absolute;
+        left: 15px;
+        bottom: 10px;
+        height: 30px;
+        width: 30px;
+        border: 2px solid #fff;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
 
-        &:hover {
-            color: #fff;
-            opacity: 1;
-        }
+    &:hover {
+        opacity: 1;
     }
 }

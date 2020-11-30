@@ -15,6 +15,13 @@
     "package": "Inspiro",
     "subpackage": "Inspiro_Lite"
   },
+  "_forkProject": {
+    "name": "Twenty Seventeen",
+    "textdomain": "twentyseventeen",
+    "slug": "twentyseventeen",
+    "package": "WordPress",
+    "subpackage": "Twenty_Seventeen"
+  },
   "license": "ISC",
   "devDependencies": {
     "@lodder/grunt-postcss": "^3.0.0",

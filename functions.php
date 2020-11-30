@@ -43,6 +43,11 @@ require INSPIRO_THEME_DIR . '/inc/classes/class-inspiro-enqueue-scripts.php';
 require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-after-setup-theme.php';
 
 /**
+ * Handle SVG icons.
+ */
+require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-svg-icons.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_parent_theme_file_path( '/inc/custom-header.php' );

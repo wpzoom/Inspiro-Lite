@@ -30,8 +30,8 @@ get_header(); ?>
 
 				the_post_navigation(
 					array(
-						'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'inspiro' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'inspiro' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . inspiro_get_svg( array( 'icon' => 'arrow-left' ) ) . '</span>%title</span>',
-						'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'inspiro' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'inspiro' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . inspiro_get_svg( array( 'icon' => 'arrow-right' ) ) . '</span></span>',
+						'prev_text' => '<span class="screen-reader-text">' . __( 'Previous Post', 'inspiro' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'inspiro' ) . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . inspiro_get_theme_svg( 'arrow-left' ) . '</span>%title</span>',
+						'next_text' => '<span class="screen-reader-text">' . __( 'Next Post', 'inspiro' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Next', 'inspiro' ) . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . inspiro_get_theme_svg( 'arrow-right' ) . '</span></span>',
 					)
 				);
 

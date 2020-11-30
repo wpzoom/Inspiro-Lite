@@ -40,9 +40,8 @@ Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-rea
 16.0 Media
    16.1 Galleries
 17.0 Customizer
-18.0 SVGs Fallbacks
-19.0 Media Queries
-20.0 Print
+18.0 Media Queries
+19.0 Print
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 1.0 Normalize
@@ -1353,10 +1352,10 @@ a:hover .nav-title,
 }
 
 .sf-menu li {
-    position: relative .sf-menu li;
+    position: relative;
 }
 
-.sf-menu li :hover ul, .sf-menu li.sfHover ul {
+.sf-menu li:hover ul, .sf-menu li.sfHover ul {
     display: block;
 }
 
@@ -1372,31 +1371,6 @@ a:hover .nav-title,
 .sf-menu ul ul {
     top: 0;
     left: 100%;
-}
-
-.sf-arrows .sf-with-ul:after {
-    content: "\f347";
-    display: inline-block;
-    -webkit-font-smoothing: antialiased;
-    font: normal 12px/16px 'dashicons';
-    vertical-align: middle;
-    margin-left: 4px;
-}
-
-.sf-arrows ul .sf-with-ul:after {
-    content: "\f345";
-    display: inline-block;
-    -webkit-font-smoothing: antialiased;
-    font: normal 12px/22px 'dashicons';
-    float: right;
-    vertical-align: top;
-    margin: 2px 0 0 4px;
-}
-
-.sf-arrows ul li > .sf-with-ul:focus:after,
-.sf-arrows ul li:hover > .sf-with-ul:after,
-.sf-arrows ul .sfHover > .sf-with-ul:after {
-    border-left-color: white;
 }
 
 .navbar {
@@ -1513,11 +1487,7 @@ a:hover .nav-title,
 }
 
 .navbar-nav > li {
-    margin: 0 15px;
-}
-
-.inspiro--with-page-nav .navbar-nav > li:last-child {
-    margin-right: 0;
+    margin: 0 0.9375em;
 }
 
 .navbar-nav > li > ul:before {
@@ -1525,7 +1495,7 @@ a:hover .nav-title,
     position: absolute;
     bottom: 100%;
     left: 50%;
-    margin-left: -8px;
+    margin-left: -em(8);
     width: 0;
     height: 0;
     border-bottom: 8px solid #0bb4aa;
@@ -1534,7 +1504,7 @@ a:hover .nav-title,
 }
 
 .navbar-nav a {
-    padding: 5px 0 3px;
+    padding: 0.3125em 0 0.1875em;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     border-bottom: 1px solid transparent;
@@ -1546,6 +1516,29 @@ a:hover .nav-title,
     border-bottom: 1px solid rgba(255, 255, 255, 0.8);
     color: inherit;
     opacity: .8;
+}
+
+.navbar-nav .menu-item-has-children .svg-icon {
+    margin-left: 0.25em;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: text-top;
+    fill: #fff;
+}
+
+.navbar-nav ul .menu-item-has-children .svg-icon {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    right: 0.625em;
+    top: 50%;
+    fill: #fff;
+    transform: rotate(-90deg) translateX(50%);
+}
+
+.inspiro--with-page-nav .navbar-nav > li:last-child {
+    margin-right: 0;
 }
 
 /* Sidebar */
@@ -1735,7 +1728,7 @@ body.side-nav-open .side-nav__scrollable-container {
     opacity: .7;
 }
 
-.sb-search .sb-icon-search svg {
+.sb-search .sb-icon-search .svg-icon {
     width: 18px;
     height: 45px;
     margin: 0;
@@ -1744,7 +1737,7 @@ body.side-nav-open .side-nav__scrollable-container {
     fill: #fff;
 }
 
-.sb-search .sb-icon-search .icon-close {
+.sb-search .sb-icon-search .svg-icon-cross {
     display: none;
 }
 
@@ -1775,11 +1768,11 @@ body.side-nav-open .side-nav__scrollable-container {
     opacity: 1;
 }
 
-.sb-search.sb-search-open .sb-icon-search .icon-search {
+.sb-search.sb-search-open .sb-icon-search .svg-icon-search {
     display: none;
 }
 
-.sb-search.sb-search-open .sb-icon-search .icon-close {
+.sb-search.sb-search-open .sb-icon-search .svg-icon-cross {
     display: block;
 }
 
@@ -2068,8 +2061,8 @@ body:not(.title-tagline-hidden) .site-branding-text {
     overflow: hidden;
     padding: 0;
     position: absolute;
-    right: 30px;
-    bottom: 65px;
+    right: 1.875em;
+    bottom: 3.75em;
     transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
     z-index: 3;
 }
@@ -2078,6 +2071,12 @@ body:not(.title-tagline-hidden) .site-branding-text {
     border-color: rgba(255, 255, 255, 0.8);
     background-color: rgba(34, 34, 34, 0.8);
     color: #fff;
+}
+
+.wp-custom-header .wp-custom-header-video-button .svg-icon {
+    margin-top: 6px;
+    max-height: 1.375em;
+    fill: #fff;
 }
 
 .has-header-image:not(.inspiro-front-page):not(.home) .custom-header-media img {
@@ -2107,27 +2106,48 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 }
 
 /* Scroll to content */
+/* Effect used for #scroll-to-content */
+
+@keyframes pulsate {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+
 #scroll-to-content {
     display: block;
     position: absolute;
     left: 50%;
-    bottom: 0;
+    bottom: 20px;
     z-index: 5;
     cursor: pointer;
-    transform: translate(-50%, -50%);
+    height: 1.5em;
+    width: 3.5em;
+    overflow: hidden;
+    opacity: 0.5;
+    transform: translateX(-50%);
     animation: pulsate 1.5s ease-out infinite;
 }
 
-#scroll-to-content .menu-scroll-down {
+#scroll-to-content:before {
+    content: '';
     display: block;
-    padding: 1em;
-    color: #fff;
-    opacity: 0.5;
-    transition: opacity ease-in-out 0.2s;
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    height: 30px;
+    width: 30px;
+    border: 2px solid #fff;
+    transform: rotate(45deg);
 }
 
-#scroll-to-content .menu-scroll-down:hover {
-    color: #fff;
+#scroll-to-content:hover {
     opacity: 1;
 }
 
@@ -3004,7 +3024,7 @@ body:not(.inspiro-front-page) .entry-header {
     right: 0;
 }
 
-.search-form .search-submit .icon {
+.search-form .search-submit .svg-icon {
     height: 24px;
     top: -2px;
     width: 24px;
@@ -3517,68 +3537,7 @@ p > object:only-child {
 }
 
 /*--------------------------------------------------------------
-18.0 SVGs Fallbacks
---------------------------------------------------------------*/
-.svg-fallback {
-    display: none;
-}
-
-.no-svg .svg-fallback {
-    display: inline-block;
-}
-
-.no-svg .dropdown-toggle {
-    padding: 0.5em 0 0;
-    right: 0;
-    text-align: center;
-    width: 2em;
-}
-
-.no-svg .dropdown-toggle .svg-fallback.icon-angle-down {
-    font-size: 20px;
-    font-size: 1.25rem;
-    font-weight: 400;
-    line-height: 1;
-    /* Chrome, Safari, Opera */
-    /* IE 9 */
-    transform: rotate(180deg);
-}
-
-.no-svg .dropdown-toggle.toggled-on .svg-fallback.icon-angle-down {
-    /* Chrome, Safari, Opera */
-    /* IE 9 */
-    transform: rotate(0);
-}
-
-.no-svg .dropdown-toggle .svg-fallback.icon-angle-down:before {
-    content: "\005E";
-}
-
-/* Social Menu fallbacks */
-.no-svg .social-navigation a {
-    background: transparent;
-    color: #222;
-    height: auto;
-    width: auto;
-}
-
-/* Show screen reader text in some cases */
-.no-svg .next.page-numbers .screen-reader-text,
-.no-svg .prev.page-numbers .screen-reader-text,
-.no-svg .social-navigation li a .screen-reader-text,
-.no-svg .search-submit .screen-reader-text {
-    clip: auto;
-    font-size: 16px;
-    font-size: 1rem;
-    font-weight: 400;
-    height: auto;
-    position: relative !important;
-    /* overrides previous !important styles */
-    width: auto;
-}
-
-/*--------------------------------------------------------------
-19.0 Media Queries
+18.0 Media Queries
 --------------------------------------------------------------*/
 @media (min-width: 64.0625em) {
     .navbar-nav ul {
@@ -3809,7 +3768,7 @@ p > object:only-child {
 }
 
 /*--------------------------------------------------------------
-20.0 Print
+19.0 Print
 --------------------------------------------------------------*/
 @media print {
     /* Hide elements */

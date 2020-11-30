@@ -5,7 +5,7 @@
         $customHeader = $body.find('.custom-header'),
         $branding = $customHeader.find('.site-branding'),
         $navigation = $body.find('#site-navigation'),
-        $menuScrollDown = $body.find('.menu-scroll-down'),
+        $menuScrollDown = $body.find('#scroll-to-content'),
         $sidebar = $body.find('#secondary'),
         $entryContent = $body.find('.entry-content'),
         $formatQuote = $body.find('.format-quote blockquote'),
@@ -72,16 +72,6 @@
         });
     }
 
-    /*
-     * Test if inline SVGs are supported.
-     * @link https://github.com/Modernizr/Modernizr/
-     */
-    function supportsInlineSVG() {
-        var div = document.createElement( 'div' );
-        div.innerHTML = '<svg/>';
-        return 'http://www.w3.org/2000/svg' === ( 'undefined' !== typeof SVGRect && div.firstChild && div.firstChild.namespaceURI );
-    }
-
     /**
      * Test if an iOS device.
     */
@@ -141,9 +131,6 @@
 
         adjustHeaderMargins();
         belowEntryMetaClass( 'blockquote.alignleft, blockquote.alignright' );
-        if ( true === supportsInlineSVG() ) {
-            document.documentElement.className = document.documentElement.className.replace( /(\s*)no-svg(\s*)/, '$1svg$2' );
-        }
 
         if ( true === supportsFixedBackground() ) {
             document.documentElement.className += ' background-fixed';
