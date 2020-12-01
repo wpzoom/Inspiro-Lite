@@ -1301,7 +1301,7 @@ a:hover .nav-title,
 .widget .widget-title a:hover,
 .widget ul li a:focus,
 .widget ul li a:hover {
-    color: #000;
+    color: #076c65;
 }
 
 /* Fixes linked images */
@@ -1313,7 +1313,7 @@ a:hover .nav-title,
 
 .post-navigation a:focus .icon,
 .post-navigation a:hover .icon {
-    color: #222;
+    color: #076c65;
 }
 
 /*--------------------------------------------------------------
@@ -3026,14 +3026,38 @@ body:not(.inspiro-front-page) .entry-header {
 }
 
 .search-form .search-submit .svg-icon {
-    height: 24px;
-    top: -2px;
-    width: 24px;
+    display: none;
 }
 
 .site-footer .search-form .search-field,
 .side-nav .search-form .search-field {
     color: #eee;
+}
+
+.side-nav .search-form .search-submit {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.625em 1.5625em;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-size: 0.75rem;
+    color: #0bb4aa;
+    border: 2px solid #0bb4aa;
+    background-image: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.side-nav .search-form .search-submit:hover {
+    text-decoration: none;
+    color: #0bb4aa;
+    border-color: #0bb4aa;
 }
 
 /* Tag cloud widget */
