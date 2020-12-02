@@ -100,7 +100,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
             // Register nav menus.
             register_nav_menus(
                 array(
-                    'primary' => __( 'Main Menu', 'wpzoom' )
+                    'primary' => __( 'Main Menu', 'inspiro' )
                 )
             );
 

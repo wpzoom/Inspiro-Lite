@@ -19,11 +19,22 @@ if ( ! function_exists( 'inspiro_posted_on' ) ) :
 		$byline = sprintf(
 			/* translators: %s: Post author. */
 			__( 'by %s', 'inspiro' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . get_the_author() . '</a></span>'
+			'<span class="entry-author"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . get_the_author() . '</a></span>'
+		);
+
+		$catlinks = sprintf(
+			'<span class="cat-links">%s %s</span>',
+			__( 'in', 'inspiro' ),
+			get_the_category_list( ', ' )
+		);
+
+		$datetime = sprintf(
+			'<span class="entry-date">%s</span>',
+			inspiro_time_link()
 		);
 
 		// Finally, let's write all of this to the page.
-		echo '<span class="posted-on">' . inspiro_time_link() . '</span><span class="byline"> ' . $byline . '</span>';
+		echo $byline . $datetime . $catlinks;
 	}
 endif;
 

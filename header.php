@@ -36,9 +36,14 @@
 
 	</header><!-- #masthead -->
 
-	<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
-
 	<?php
+
+	/*
+	 * If not a regular post or page, and is the front page, show the custom header image.
+	 */
+	if ( ! is_single() || is_page() && inspiro_is_frontpage() ) {
+		get_template_part( 'template-parts/header/header', 'image' );
+	}
 
 	/*
 	 * If a regular post or page, and not the front page, show the featured image.

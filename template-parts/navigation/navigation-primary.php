@@ -15,7 +15,7 @@
 
         <?php if ( has_nav_menu( 'primary' ) || is_active_sidebar( 'sidebar' ) ) : ?>
             <button type="button" class="navbar-toggle">
-                <span class="screen-reader-text"><?php _e( 'Toggle sidebar &amp; navigation', 'wpzoom' ); ?></span>
+                <span class="screen-reader-text"><?php _e( 'Toggle sidebar &amp; navigation', 'inspiro' ); ?></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>

@@ -1,41 +1,14 @@
 /* Single Post */
 
-.single-post:not(.has-sidebar) #primary,
-.page.page-one-column:not(.inspiro-front-page) #primary,
+.single .entry-content,
+.page:not(.inspiro-front-page) .entry-content,
 .archive.page-one-column:not(.has-sidebar) .page-header,
 .archive.page-one-column:not(.has-sidebar) #primary {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 740px;
-}
-
-.single-featured-image-header {
-    background-color: #fafafa;
-    border-bottom: 1px solid #eee;
+    margin: em(45) auto;
+    max-width: 950px;
 }
 
 .single-featured-image-header img {
     display: block;
     margin: auto;
-}
-
-.page-links {
-    font-size: 14px;
-    font-size: 0.875rem;
-    font-weight: 800;
-    padding: 2em 0 3em;
-}
-
-.page-links .page-number {
-    color: #767676;
-    display: inline-block;
-    padding: 0.5em 1em;
-}
-
-.page-links a {
-    display: inline-block;
-}
-
-.page-links a .page-number {
-    color: #222;
 }
