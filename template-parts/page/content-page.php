@@ -13,10 +13,45 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<?php
+	/*
+	 * If a regular page, and not the front page, show the featured image as header cover image.
+	 */
+	if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) && has_post_thumbnail( get_the_ID() ) ) {
+		echo '<div class="entry-cover-image">';
+		echo '<div class="single-featured-image-header">';
+		echo get_the_post_thumbnail( get_the_ID(), 'inspiro-featured-image' );
+		echo '</div><!-- .single-featured-image-header -->';
+	}
+	?>
+
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php inspiro_edit_link( get_the_ID() ); ?>
+
+		<?php
+
+		if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) && has_post_thumbnail( get_the_ID() ) ) {
+			echo '<div class="inner-wrap">';
+			the_title( '<h1 class="entry-title">', '</h1>' );
+			echo '<div class="entry-meta">';
+			inspiro_edit_link( get_the_ID() );
+			echo '</div><!-- .entry-meta -->';
+			echo '</div><!-- .inner-wrap -->';
+		} else {
+			the_title( '<h1 class="entry-title">', '</h1>' );
+			inspiro_edit_link( get_the_ID() );
+		}
+
+		?>
+
 	</header><!-- .entry-header -->
+
+	<?php
+	if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) && has_post_thumbnail( get_the_ID() ) ) {
+		echo '</div><!-- .entry-cover-image -->';
+	}
+	?>
+
 	<div class="entry-content">
 		<?php
 			the_content();

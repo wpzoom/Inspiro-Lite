@@ -89,6 +89,15 @@ body {
     }
 }
 
+.custom-logo-text {
+    display: inline-block;
+    padding: 0;
+    padding-right: 1em;
+    vertical-align: middle;
+    max-width: 350px;
+    float: left;
+}
+
 body.wp-custom-logo {
     .custom-logo-link {
         a {
@@ -98,7 +107,7 @@ body.wp-custom-logo {
 }
 
 body:not(.wp-custom-logo) {
-    a.custom-logo-link {
+    a.custom-logo-text {
         margin: 0;
         font-weight: bold;
         letter-spacing: 1px;

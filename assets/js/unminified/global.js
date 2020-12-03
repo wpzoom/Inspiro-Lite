@@ -6,6 +6,7 @@
         $branding = $customHeader.find('.site-branding'),
         $navigation = $body.find('#site-navigation'),
         $menuScrollDown = $body.find('#scroll-to-content'),
+        $siteContent = $body.find('#content'),
         $sidebar = $body.find('#secondary'),
         $entryContent = $body.find('.entry-content'),
         $formatQuote = $body.find('.format-quote blockquote'),
@@ -32,9 +33,11 @@
         if ( $(window).outerWidth() >= 768 ) {
             if ( ! hasCustomHeaderMedia ) {
                 $customHeader.css('padding-top', navigationOuterHeight);
+                $siteContent.css('padding-top', navigationOuterHeight);
             }
         } else {
             $customHeader.css('padding-top', '0');
+            $siteContent.css('padding-top', '2.5em');
         }
     }
 

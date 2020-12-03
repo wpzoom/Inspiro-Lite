@@ -47,7 +47,7 @@ function inspiro_customize_register( $wp_customize ) {
 	$wp_customize->selective_refresh->add_partial(
 		'custom_logo_text',
 		array(
-			'selector'        => '.site-header .custom-logo-link',
+			'selector'        => '.site-header .custom-logo-text',
 			'render_callback' => 'inspiro_customize_partial_custom_logo_text',
 		)
 	);
@@ -153,7 +153,8 @@ function inspiro_customize_register( $wp_customize ) {
 		'theme_options',
 		array(
 			'title'    => __( 'Theme Options', 'inspiro' ),
-			'priority' => 120, // Before Footer section.
+			'priority' => 50,
+	        'capability' => 'edit_theme_options',
 		)
 	);
 

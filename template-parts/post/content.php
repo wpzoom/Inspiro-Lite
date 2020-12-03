@@ -22,7 +22,25 @@
 		</div><!-- .post-thumbnail -->
 	<?php endif; ?>
 
+	<?php
+	/*
+	 * If a regular post or page, and not the front page, show the featured image as header cover image.
+	 */
+	if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) && has_post_thumbnail( get_the_ID() ) ) {
+		echo '<div class="entry-cover-image">';
+		echo '<div class="single-featured-image-header">';
+		echo get_the_post_thumbnail( get_the_ID(), 'inspiro-featured-image' );
+		echo '</div><!-- .single-featured-image-header -->';
+	}
+	?>
+
 	<header class="entry-header">
+
+		<?php
+		if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) && has_post_thumbnail( get_the_ID() ) ) {
+			echo '<div class="inner-wrap">';
+		}
+		?>
 
 		<?php
 		if ( is_single() ) {
@@ -43,8 +61,18 @@
 			};
 			echo '</div><!-- .entry-meta -->';
 		}
+
+		if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) && has_post_thumbnail( get_the_ID() ) ) {
+			echo '</div><!-- .inner-wrap -->';
+		}
 		?>
 	</header><!-- .entry-header -->
+
+	<?php
+	if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) && has_post_thumbnail( get_the_ID() ) ) {
+		echo '</div><!-- .entry-cover-image -->';
+	}
+	?>
 
 	<div class="entry-content">
 		<?php

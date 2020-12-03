@@ -35,7 +35,7 @@ function inspiro_body_classes( $classes ) {
 	}
 
 	// Add a class if there is a custom header.
-	if ( has_header_image() ) {
+	if ( has_header_image() && ( is_home() || is_page() && inspiro_is_frontpage() ) ) {
 		$classes[] = 'has-header-image';
 	}
 
