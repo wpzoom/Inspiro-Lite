@@ -94,9 +94,16 @@ function inspiro_footer_class( $class = '' ) {
 function inspiro_get_footer_class( $class = '' ) {
 	$classes = array('site-footer');
 	$widgets_columns = get_theme_mod( 'footer-widget-areas', 3 );
+	$has_footer_widgets = false;
 
 	if ( $widgets_columns > 0 ) {
-		$classes[] = 'has-footer-widgets';
+		if ( $has_footer_widgets ) {
+			$classes[] = 'has-footer-widgets';
+		} else {
+			for ( $i=0; $i <= intval( $widgets_columns ); $i++ ) { 
+				$has_footer_widgets = is_active_sidebar( "footer_$i" );
+			}
+		}
 	}
 
 	if ( ! empty( $class ) ) {
