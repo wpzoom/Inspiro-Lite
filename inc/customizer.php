@@ -150,49 +150,6 @@ function inspiro_customize_register( $wp_customize ) {
 			'active_callback' => 'inspiro_is_view_with_layout_option',
 		)
 	);
-
-	/**
-	 * Filters the number of front page sections in Twenty Seventeen.
-	 *
-	 * @since Inspiro Lite 1.0.0
-	 *
-	 * @param int $num_sections Number of front page sections.
-	 */
-	$num_sections = apply_filters( 'inspiro_front_page_sections', 4 );
-
-	// Create a setting and control for each of the sections available in the theme.
-	for ( $i = 1; $i < ( 1 + $num_sections ); $i++ ) {
-		$wp_customize->add_setting(
-			'panel_' . $i,
-			array(
-				'default'           => false,
-				'sanitize_callback' => 'absint',
-				'transport'         => 'postMessage',
-			)
-		);
-
-		$wp_customize->add_control(
-			'panel_' . $i,
-			array(
-				/* translators: %d: The front page section number. */
-				'label'           => sprintf( __( 'Front Page Section %d Content', 'inspiro' ), $i ),
-				'description'     => ( 1 !== $i ? '' : __( 'Select pages to feature in each area from the dropdowns. Add an image to a section by setting a featured image in the page editor. Empty sections will not be displayed.', 'inspiro' ) ),
-				'section'         => 'theme_options',
-				'type'            => 'dropdown-pages',
-				'allow_addition'  => true,
-				'active_callback' => 'inspiro_is_static_front_page',
-			)
-		);
-
-		$wp_customize->selective_refresh->add_partial(
-			'panel_' . $i,
-			array(
-				'selector'            => '#panel' . $i,
-				'render_callback'     => 'inspiro_front_page_section',
-				'container_inclusive' => true,
-			)
-		);
-	}
 }
 add_action( 'customize_register', 'inspiro_customize_register' );
 

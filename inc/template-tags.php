@@ -17,9 +17,10 @@ if ( ! function_exists( 'inspiro_posted_on' ) ) :
 
 		// Get the author name; wrap it in a link.
 		$byline = sprintf(
-			/* translators: %s: Post author. */
-			__( 'by %s', 'inspiro' ),
-			'<span class="entry-author"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . get_the_author() . '</a></span>'
+			'<span class="entry-author">%s <a class="url fn n" href="%s">%s</a></span>',
+			__( 'by', 'inspiro' ),
+			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+			get_the_author()
 		);
 
 		$catlinks = sprintf(
@@ -29,12 +30,13 @@ if ( ! function_exists( 'inspiro_posted_on' ) ) :
 		);
 
 		$datetime = sprintf(
-			'<span class="entry-date">%s</span>',
+			'<span class="entry-date">%s %s</span>',
+			__( 'on', 'inspiro' ),
 			inspiro_time_link()
 		);
 
 		// Finally, let's write all of this to the page.
-		echo $byline . $datetime . $catlinks;
+		echo $byline . $catlinks . $datetime;
 	}
 endif;
 

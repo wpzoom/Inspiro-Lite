@@ -33,14 +33,11 @@ h6:first-child {
 
 h1 {
     @include font-size(36);
-    font-size: 24px;
-    font-size: 1.5rem;
     font-weight: 300;
 }
 
-h2,
-.home.blog .entry-title {
-    color: #666;
+h2 {
+    color: #000;
     @include font-size(30);
     font-weight: 300;
 }

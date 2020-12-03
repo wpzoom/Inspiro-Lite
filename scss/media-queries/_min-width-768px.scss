@@ -43,6 +43,30 @@
         top: 32px;
     }
 
+    /* Layout */
+
+    .inner-wrap {
+        max-width: 1200px;
+    }
+
+    .has-sidebar:not(.error404) #primary {
+        float: left;
+        width: 75%;
+        padding-right: 4%;
+    }
+
+    .has-sidebar #secondary {
+        float: right;
+        padding: 0 0 em(20) 4%;
+        width: 25%;
+        margin-bottom: em(32);
+        border-left: 1px solid $color-border;
+    }
+
+    .error404 #primary {
+        float: none;
+    }
+
     /* Site Branding */
 
     .site-branding {
@@ -152,6 +176,13 @@
                 height: calc(100vh - 32px);
             }
         }
+    }
+
+    /* Secondary */
+
+    #secondary {
+        @include font-size(16);
+        line-height: 1.6;
     }
 
     /* Footer */

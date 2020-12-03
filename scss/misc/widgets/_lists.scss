@@ -7,9 +7,7 @@
 
 .widget ul li,
 .widget ol li {
-    border-bottom: 1px solid #ddd;
-    border-top: 1px solid #ddd;
-    padding: 0.5em 0;
+    padding: em(6) 0;
 }
 
 .widget:not(.widget_tag_cloud) ul li + li {

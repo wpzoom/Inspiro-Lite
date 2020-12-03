@@ -101,10 +101,23 @@
         margin-bottom: 27px;
     }
 
+    .fn,
+    .fn a {
+        color: #222;
+        @include font-size(20);
+        font-style: normal;
+        font-weight: bold;
+    }
+
+    .fn a:hover {
+        text-decoration: none;
+        color: $primary-color;
+    }
+
     .comment-meta,
     .comment-meta a {
         color: #bbbbbb;
-        font-size: 16px;
+        @include font-size(16);
     }
 }
 

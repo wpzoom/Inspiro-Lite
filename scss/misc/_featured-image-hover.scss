@@ -1,14 +1,19 @@
 .post-thumbnail {
-    margin-bottom: 1em;
-}
+    margin-bottom: em(30);
 
-.post-thumbnail a img {
-    -webkit-backface-visibility: hidden;
-    -webkit-transition: opacity 0.2s;
-    transition: opacity 0.2s;
-}
+    a {
+        display: block;
+        font-size: 0;
 
-.post-thumbnail a:hover img,
-.post-thumbnail a:focus img {
-    opacity: 0.7;
+        img {
+            -webkit-backface-visibility: hidden;
+            -webkit-transition: opacity 0.2s;
+            transition: opacity 0.2s;
+        }
+
+        &:hover img,
+        &:focus img {
+            opacity: 0.7;
+        }
+    }
 }

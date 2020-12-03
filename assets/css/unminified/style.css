@@ -544,14 +544,11 @@ h6:first-child {
 h1 {
     font-size: 36px;
     font-size: 2.25rem;
-    font-size: 24px;
-    font-size: 1.5rem;
     font-weight: 300;
 }
 
-h2,
-.home.blog .entry-title {
-    color: #666;
+h2 {
+    color: #000;
     font-size: 30px;
     font-size: 1.875rem;
     font-weight: 300;
@@ -1109,6 +1106,7 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button:hover {
 div.wpforms-container-full .wpforms-form input[type=submit]:hover,
 div.wpforms-container-full .wpforms-form button[type=submit]:hover,
 div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,
+.search-form button.search-submit:hover,
 button:hover, input[type=button]:hover, input[type=reset]:hover, input[type=submit]:hover {
     cursor: pointer;
     text-decoration: none;
@@ -1320,7 +1318,12 @@ a:hover .nav-title,
 11.0 Featured Image Hover
 --------------------------------------------------------------*/
 .post-thumbnail {
-    margin-bottom: 1em;
+    margin-bottom: 1.875em;
+}
+
+.post-thumbnail a {
+    display: block;
+    font-size: 0;
 }
 
 .post-thumbnail a img {
@@ -1822,7 +1825,7 @@ body {
 .inner-wrap {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1200px;
+    max-width: 1000px;
     padding-left: 2em;
     padding-right: 2em;
 }
@@ -2212,32 +2215,6 @@ body:not(.has-header-image):not(.has-header-video) #scroll-to-content {
 }
 
 /* Front Page - Recent Posts */
-.inspiro-front-page .panel-content .recent-posts article {
-    border: 0;
-    color: #333;
-    margin-bottom: 3em;
-}
-
-.recent-posts .entry-header {
-    margin-bottom: 1.2em;
-}
-
-.page .panel-content .recent-posts .entry-title {
-    font-size: 20px;
-    font-size: 1.25rem;
-    font-weight: 300;
-    letter-spacing: 0;
-    text-transform: none;
-}
-
-.inspiro-panel .recent-posts .entry-header .edit-link {
-    color: #222;
-    display: inline-block;
-    font-size: 11px;
-    font-size: 0.6875rem;
-    margin-left: 1em;
-}
-
 /*--------------------------------------------------------------
 13.3 Regular Content
 --------------------------------------------------------------*/
@@ -2271,8 +2248,26 @@ body:not(.has-header-image):not(.has-header-video) #scroll-to-content {
     width: 20px;
 }
 
-.page .panel-content .entry-title,
-.page-title,
+.page-title {
+    margin-top: 2em;
+    color: #222;
+    font-size: 26px;
+    font-size: 1.625rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+}
+
+.page-title:after {
+    display: block;
+    content: " ";
+    width: 130px;
+    height: 1px;
+    background: #E6E6E6;
+    margin: 40px auto 48px;
+}
+
 body.page:not(.inspiro-front-page) .entry-title {
     color: #222;
     font-size: 14px;
@@ -2282,14 +2277,42 @@ body.page:not(.inspiro-front-page) .entry-title {
     text-transform: uppercase;
 }
 
+.home.blog .entry-title {
+    margin-top: 0;
+    color: #222;
+    font-size: 26px;
+    font-size: 1.625rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    text-align: left;
+}
+
+.home.blog .entry-meta {
+    font-size: 16px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.home.blog .entry-meta a {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2px;
+}
+
 .entry-header .entry-title {
-    margin-bottom: 0.25em;
+    margin-bottom: 20px;
 }
 
 .entry-title a {
-    color: #333;
+    color: #000;
     text-decoration: none;
     margin-left: -2px;
+}
+
+.entry-title a:hover {
+    color: #0bb4aa;
+    text-decoration: none;
 }
 
 .entry-title:not(:first-child) {
@@ -2297,17 +2320,25 @@ body.page:not(.inspiro-front-page) .entry-title {
 }
 
 .entry-meta {
-    color: #767676;
-    font-size: 11px;
-    font-size: 0.6875rem;
-    font-weight: 800;
-    letter-spacing: 0.1818em;
-    padding-bottom: 0.25em;
-    text-transform: uppercase;
+    color: #999;
+    font-size: 14px;
+    font-size: 0.875rem;
+}
+
+.entry-meta span {
+    display: inline;
+}
+
+.entry-meta span + span:before {
+    content: " /  ";
+    color: #b6babb;
+    margin: 0 5px;
+    font-style: normal;
+    opacity: .5;
 }
 
 .entry-meta a {
-    color: #767676;
+    color: #000;
 }
 
 .byline,
@@ -2406,10 +2437,6 @@ body.page:not(.inspiro-front-page) .entry-title {
     padding-bottom: 2em;
 }
 
-body:not(.inspiro-front-page) .entry-header {
-    padding: 1em 0;
-}
-
 body:not(.inspiro-front-page) .entry-header,
 body:not(.inspiro-front-page) .entry-content,
 body:not(.inspiro-front-page) #comments {
@@ -2451,8 +2478,8 @@ body:not(.inspiro-front-page) .entry-header {
 /* Single Post */
 .single .entry-content,
 .page:not(.inspiro-front-page) .entry-content,
-.archive.page-one-column:not(.has-sidebar) .page-header,
-.archive.page-one-column:not(.has-sidebar) #primary {
+.single .entry-footer,
+.page:not(.inspiro-front-page) .entry-footer {
     margin: 2.8125em auto;
     max-width: 950px;
 }
@@ -2825,10 +2852,25 @@ body:not(.inspiro-front-page) .entry-header {
     margin-bottom: 27px;
 }
 
+.comment-author .fn,
+.comment-author .fn a {
+    color: #222;
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.comment-author .fn a:hover {
+    text-decoration: none;
+    color: #0bb4aa;
+}
+
 .comment-author .comment-meta,
 .comment-author .comment-meta a {
     color: #bbbbbb;
     font-size: 16px;
+    font-size: 1rem;
 }
 
 .comment-body {
@@ -2904,9 +2946,7 @@ body:not(.inspiro-front-page) .entry-header {
 
 .widget ul li,
 .widget ol li {
-    border-bottom: 1px solid #ddd;
-    border-top: 1px solid #ddd;
-    padding: 0.5em 0;
+    padding: 0.375em 0;
 }
 
 .widget:not(.widget_tag_cloud) ul li + li {
@@ -3611,6 +3651,25 @@ p > object:only-child {
     .admin-bar:not(.side-nav-open) .headroom {
         top: 32px;
     }
+    /* Layout */
+    .inner-wrap {
+        max-width: 1200px;
+    }
+    .has-sidebar:not(.error404) #primary {
+        float: left;
+        width: 75%;
+        padding-right: 4%;
+    }
+    .has-sidebar #secondary {
+        float: right;
+        padding: 0 0 1.25em 4%;
+        width: 25%;
+        margin-bottom: 2em;
+        border-left: 1px solid #f1f2f2;
+    }
+    .error404 #primary {
+        float: none;
+    }
     /* Site Branding */
     .site-branding {
         margin-bottom: 0;
@@ -3695,6 +3754,12 @@ p > object:only-child {
     .admin-bar.home.blog.has-header-image .custom-header-media,
     .admin-bar.home.blog.has-header-video .custom-header-media {
         height: calc(100vh - 32px);
+    }
+    /* Secondary */
+    #secondary {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.6;
     }
     /* Footer */
     .site-footer {

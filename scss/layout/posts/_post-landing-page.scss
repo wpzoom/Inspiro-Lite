@@ -17,8 +17,25 @@
     width: 20px;
 }
 
-.page .panel-content .entry-title,
-.page-title,
+.page-title {
+    margin-top: em(32);
+    color: #222;
+    @include font-size(26);
+    font-weight: bold;
+    text-align: center;
+    font-family: $font-headings;
+    text-transform: uppercase;
+
+    &:after {
+        display: block;
+        content: " ";
+        width: 130px;
+        height: 1px;
+        background: #E6E6E6;
+        margin: 40px auto 48px;
+    }
+}
+
 body.page:not(.inspiro-front-page) .entry-title {
     color: #222;
     font-size: 14px;
@@ -28,14 +45,42 @@ body.page:not(.inspiro-front-page) .entry-title {
     text-transform: uppercase;
 }
 
+.home.blog {
+    .entry-title {
+        margin-top: 0;
+        color: #222;
+        @include font-size(26);
+        font-weight: bold;
+        text-align: center;
+        font-family: $font-headings;
+        text-align: left;
+    }
+
+    .entry-meta {
+        @include font-size(16);
+        margin-bottom: 20px;
+        padding: 0;
+
+        a {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 2px;
+        }
+    }
+}
+
 .entry-header .entry-title {
-    margin-bottom: 0.25em;
+    margin-bottom: 20px;
 }
 
 .entry-title a {
-    color: #333;
+    color: $color-link-title;
     text-decoration: none;
     margin-left: -2px;
+
+    &:hover {
+        color: $color-link-title-hover;
+        text-decoration: none;
+    }    
 }
 
 .entry-title:not(:first-child) {
@@ -43,17 +88,24 @@ body.page:not(.inspiro-front-page) .entry-title {
 }
 
 .entry-meta {
-    color: #767676;
-    font-size: 11px;
-    font-size: 0.6875rem;
-    font-weight: 800;
-    letter-spacing: 0.1818em;
-    padding-bottom: 0.25em;
-    text-transform: uppercase;
-}
+    color: #999;
+    @include font-size(14);
 
-.entry-meta a {
-    color: #767676;
+    span {
+        display: inline;
+
+        & + span:before {
+            content: " /  ";
+            color: #b6babb;
+            margin: 0 5px;
+            font-style: normal;
+            opacity: .5;
+        }
+    }
+
+    a {
+        color: #000;
+    }
 }
 
 .byline,

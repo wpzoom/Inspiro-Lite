@@ -2,8 +2,8 @@
 
 .single .entry-content,
 .page:not(.inspiro-front-page) .entry-content,
-.archive.page-one-column:not(.has-sidebar) .page-header,
-.archive.page-one-column:not(.has-sidebar) #primary {
+.single .entry-footer,
+.page:not(.inspiro-front-page) .entry-footer {
     margin: em(45) auto;
     max-width: 950px;
 }
