@@ -33,6 +33,36 @@ function inspiro_customize_register( $wp_customize ) {
 	);
 
 	/**
+	 * Custom field for Logo text.
+	 */
+	$wp_customize->add_setting(
+		'custom_logo_text',
+		array(
+			'default'           => get_bloginfo( 'name' ),
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+
+	$wp_customize->selective_refresh->add_partial(
+		'custom_logo_text',
+		array(
+			'selector'        => '.site-header .custom-logo-link',
+			'render_callback' => 'inspiro_customize_partial_custom_logo_text',
+		)
+	);
+
+	$wp_customize->add_control(
+		'custom_logo_text',
+		array(
+			'type' 		=> 'text',
+			'label'		=> __( 'Custom Logo Text', 'inspiro' ),
+			'section' 	=> 'title_tagline',
+			'priority'	=> 5
+		)
+	);
+
+	/**
 	 * Custom colors.
 	 */
 	$wp_customize->add_setting(
@@ -184,6 +214,19 @@ function inspiro_sanitize_colorscheme( $input ) {
 	}
 
 	return 'light';
+}
+
+/**
+ * Render the custom logo text for the selective refresh partial.
+ *
+ * @since Inspiro Lite 1.0.0
+ *
+ * @see inspiro_customize_register()
+ *
+ * @return void
+ */
+function inspiro_customize_partial_custom_logo_text() {
+	echo get_theme_mod( 'custom_logo_text', get_bloginfo( 'name' ) );
 }
 
 /**
