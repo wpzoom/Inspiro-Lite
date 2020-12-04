@@ -2661,42 +2661,77 @@ body:not(.inspiro-front-page) .entry-header {
 }
 
 /* Post Navigation */
-.post-navigation {
-    font-weight: 800;
-    margin: 3em 0;
+.previous-post-cover {
+    margin: 60px auto 0;
+    background: #0f1010;
+    color: #fff;
+    text-align: center;
 }
 
-.post-navigation .nav-links {
-    padding: 1em 0;
-}
-
-.nav-subtitle {
-    background: transparent;
-    color: #767676;
+.previous-post-cover a {
     display: block;
-    font-size: 11px;
-    font-size: 0.6875rem;
-    letter-spacing: 0.1818em;
-    margin-bottom: 1em;
-    text-transform: uppercase;
 }
 
-.nav-title {
-    color: #333;
-    font-size: 15px;
-    font-size: 0.9375rem;
+.previous-post-cover a:hover {
+    text-decoration: none;
 }
 
-.post-navigation .nav-next {
-    margin-top: 1.5em;
+.previous-post-cover .previous-info {
+    margin: 0;
+    z-index: 1;
+    padding: 10% 5%;
+    min-height: 250px;
+    position: relative;
 }
 
-.nav-links .nav-previous .nav-title .nav-title-icon-wrapper {
-    margin-right: 0.5em;
+.previous-post-cover .previous-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: .6;
+    background-size: cover;
+    background-position: center center;
+    background-color: #000;
+    transition: .2s ease all;
 }
 
-.nav-links .nav-next .nav-title .nav-title-icon-wrapper {
-    margin-left: 0.5em;
+.previous-post-cover:hover .previous-cover {
+    opacity: .4;
+}
+
+.previous-post-cover .previous-content {
+    position: relative;
+    z-index: 50;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.previous-post-cover .previous-content .nav-subtitle {
+    font-weight: 700;
+    margin: 0 0 15px;
+    color: #fff;
+    opacity: .7;
+    display: block;
+    font-size: 16px;
+    font-size: 1rem;
+}
+
+.previous-post-cover .previous-content .nav-title {
+    color: #fff;
+    font-size: 48px;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.4;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom .2s ease;
+}
+
+.previous-post-cover .previous-content .nav-title:hover {
+    border-bottom: 1px solid #fff;
 }
 
 /*--------------------------------------------------------------
