@@ -14,6 +14,13 @@ if ( ! function_exists( 'inspiro_posted_on' ) ) :
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
 	function inspiro_posted_on() {
+		$catlinks = '';
+
+		/* translators: Used between list items, there is a space after the comma. */
+		$separate_meta = __( ', ', 'inspiro' );
+
+		// Get Categories for posts.
+		$categories_list = get_the_category_list( $separate_meta );
 
 		// Get the author name; wrap it in a link.
 		$byline = sprintf(
@@ -23,11 +30,13 @@ if ( ! function_exists( 'inspiro_posted_on' ) ) :
 			get_the_author()
 		);
 
-		$catlinks = sprintf(
-			'<span class="cat-links">%s %s</span>',
-			__( 'in', 'inspiro' ),
-			get_the_category_list( ', ' )
-		);
+		if ( inspiro_categorized_blog() && $categories_list ) {
+			$catlinks = sprintf(
+				'<span class="cat-links">%s %s</span>',
+				__( 'in', 'inspiro' ),
+				$categories_list
+			);
+		}
 
 		$datetime = sprintf(
 			'<span class="entry-date">%s %s</span>',
@@ -75,41 +84,55 @@ if ( ! function_exists( 'inspiro_entry_footer' ) ) :
 	 */
 	function inspiro_entry_footer() {
 
-		/* translators: Used between list items, there is a space after the comma. */
-		$separate_meta = __( ', ', 'inspiro' );
+		echo '<footer class="entry-footer">';
 
-		// Get Categories for posts.
-		$categories_list = get_the_category_list( $separate_meta );
+		if ( 'post' === get_post_type() ) {
 
-		// Get Tags for posts.
-		$tags_list = get_the_tag_list( '', $separate_meta );
+			the_tags(
+			    '<div class="tags-links"><h4 class="section-title">' . __( 'Tags', 'inspiro' ). '</h4>',
+			    '<span class="separator">,</span>',
+			    '</div>'
+			);
 
-		// We don't want to output .entry-footer if it will be empty, so make sure its not.
-		if ( ( ( inspiro_categorized_blog() && $categories_list ) || $tags_list ) || get_edit_post_link() ) {
+			$share_links = sprintf(
+				'<a href="https://twitter.com/intent/tweet?url=%s&text=%s" target="_blank" title="%s" class="inspiro-share-on-twitter">%s</a>',
+				urlencode( get_permalink() ),
+				urlencode( get_the_title() ),
+				esc_attr__( 'Tweet this on Twitter', 'inspiro' ),
+				esc_attr__( 'Share on Twitter', 'inspiro' )
+			);
 
-			echo '<footer class="entry-footer">';
+			$share_links .= sprintf(
+				'<a href="https://facebook.com/sharer.php?u=%s&t=%s" target="_blank" title="%s" class="inspiro-share-on-facebook">%s</a>',
+				urlencode( get_permalink() ),
+				urlencode( get_the_title() ),
+				esc_attr__( 'Share this on Facebook', 'wpzoom' ),
+				esc_attr__( 'Share on Facebook', 'wpzoom' )
+			);
 
-			if ( 'post' === get_post_type() ) {
-				if ( ( $categories_list && inspiro_categorized_blog() ) || $tags_list ) {
-					echo '<span class="cat-tags-links">';
+            $share_links .= sprintf(
+            	'<a href="https://www.linkedin.com/cws/share?url=%s" target="_blank" title="%s" class="inspiro-share-on-linkedin">%s</a>',
+            	urlencode( get_permalink() ),
+            	esc_attr__( 'Share this on LinkedIn', 'wpzoom' ),
+            	esc_attr__( 'Share on LinkedIn', 'wpzoom' ),
+            );
 
-					// Make sure there's more than one category before displaying.
-					if ( $categories_list && inspiro_categorized_blog() ) {
-						echo '<span class="cat-links">' . inspiro_get_theme_svg( 'folder-open' ) . '<span class="screen-reader-text">' . __( 'Categories', 'inspiro' ) . '</span>' . $categories_list . '</span>';
-					}
+			echo '<div class="share-links"><h4 class="section-title">' . __( 'Share', 'wpzoom' ) . '</h4>' . $share_links . '</div>';
 
-					if ( $tags_list && ! is_wp_error( $tags_list ) ) {
-						echo '<span class="tags-links">' . inspiro_get_theme_svg( 'hashtag' ) . '<span class="screen-reader-text">' . __( 'Tags', 'inspiro' ) . '</span>' . $tags_list . '</span>';
-					}
-
-					echo '</span>';
-				}
-			}
-
-			inspiro_edit_link();
-
-			echo '</footer> <!-- .entry-footer -->';
+			echo sprintf(
+				'<div class="post-author"><h4 class="section-title">%s</h4>%s<span>%s</span>%s</div>',
+				esc_html__( 'Post author', 'inspiro' ),
+				get_avatar( get_the_author_meta( 'ID' ) , 65 ),
+				esc_html__( 'Written by', 'inspiro' ),
+				get_the_author_posts_link()
+			);
+			
 		}
+
+		inspiro_edit_link();
+
+		echo '</footer> <!-- .entry-footer -->';
+
 	}
 endif;
 

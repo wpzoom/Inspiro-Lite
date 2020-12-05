@@ -1228,7 +1228,6 @@ a:hover, a:active {
 .page-links a,
 .page-links a .page-number,
 .entry-footer a,
-.entry-footer .cat-links a,
 .entry-footer .tags-links a,
 .edit-link a,
 .post-navigation a,
@@ -1277,8 +1276,6 @@ a .nav-title,
 .page-links a:hover .page-number,
 .entry-footer a:focus,
 .entry-footer a:hover,
-.entry-footer .cat-links a:focus,
-.entry-footer .cat-links a:hover,
 .entry-footer .tags-links a:focus,
 .entry-footer .tags-links a:hover,
 .post-navigation a:focus,
@@ -2573,64 +2570,102 @@ body:not(.inspiro-front-page) .entry-header {
 
 /* Entry footer */
 .entry-footer {
-    border-bottom: 1px solid #eee;
-    border-top: 1px solid #eee;
-    margin-top: 2em;
-    padding: 2em 0;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    color: #666;
 }
 
-.entry-footer .cat-links,
 .entry-footer .tags-links {
+    font-size: 14px;
+    font-size: 0.875rem;
+}
+
+.entry-footer .tags-links .separator {
+    margin: 0 5px 0 0;
+    color: #aaa;
+}
+
+.entry-footer .share-links a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-size: 0.875rem;
+    color: #fff;
+    padding: 5px 18px;
+    border-radius: 3px;
+    margin: 0 10px 0 0;
+    transition: all .2s ease;
+    font-weight: 500;
+}
+
+.entry-footer .share-links a.inspiro-share-on-twitter {
+    background-color: #3a93d8;
+}
+
+.entry-footer .share-links a.inspiro-share-on-facebook {
+    background-color: #2e6cc8;
+}
+
+.entry-footer .share-links a.inspiro-share-on-linkedin {
+    background-color: #0077b5;
+}
+
+.entry-footer .post-author .section-title {
+    text-indent: -9999;
+}
+
+.entry-footer .post-author img {
+    margin: 0 0 20px;
+    border-radius: 50%;
+}
+
+.entry-footer .post-author img + span {
+    margin: 0 0 5px;
     display: block;
-    font-size: 11px;
-    font-size: 0.6875rem;
-    font-weight: 800;
-    letter-spacing: 0.1818em;
-    padding-left: 2.5em;
-    position: relative;
     text-transform: uppercase;
 }
 
-.entry-footer .cat-links + .tags-links {
-    margin-top: 1em;
+.entry-footer .post-author a {
+    font-size: 18px;
+    font-size: 1.125rem;
+    color: #222;
+    line-height: 1.8;
 }
 
-.entry-footer .cat-links a,
-.entry-footer .tags-links a {
-    color: #333;
+.entry-footer .post-author a:hover {
+    text-decoration: none;
+    color: #0bb4aa;
 }
 
-.entry-footer .cat-links .icon,
-.entry-footer .tags-links .icon {
-    color: #767676;
-    left: 0;
-    margin-right: 0.5em;
-    position: absolute;
-    top: 2px;
+.entry-footer .tags-links,
+.entry-footer .share-links,
+.entry-footer .post-author {
+    margin: 0 0 1.875em 0;
 }
 
-.entry-footer .edit-link {
-    display: inline-block;
+.entry-footer .section-title {
+    margin-top: 3.125em;
+    margin-bottom: 1.25em;
+    color: #666;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-.entry-footer .edit-link a.post-edit-link {
-    background-color: #222;
-    border-radius: 2px;
-    box-shadow: none;
-    color: #fff;
-    display: inline-block;
-    font-size: 14px;
-    font-size: 0.875rem;
-    font-weight: 800;
-    margin-top: 2em;
-    padding: 0.7em 2em;
-    transition: background-color 0.2s ease-in-out;
-    white-space: nowrap;
+.entry-footer .section-title:before {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 1px;
+    background: #e6e6e6;
+    margin: 0 auto 3em;
 }
 
-.entry-footer .edit-link a.post-edit-link:hover,
-.entry-footer .edit-link a.post-edit-link:focus {
-    background-color: #767676;
+.entry-footer > *:first-child .section-title {
+    margin-top: 0;
 }
 
 /* Post Formats */
