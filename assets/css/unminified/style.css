@@ -1278,12 +1278,6 @@ a .nav-title,
 .entry-footer a:hover,
 .entry-footer .tags-links a:focus,
 .entry-footer .tags-links a:hover,
-.post-navigation a:focus,
-.post-navigation a:hover,
-.pagination a:not(.prev):not(.next):focus,
-.pagination a:not(.prev):not(.next):hover,
-.comments-pagination a:not(.prev):not(.next):focus,
-.comments-pagination a:not(.prev):not(.next):hover,
 .logged-in-as a:focus,
 .logged-in-as a:hover,
 a:focus .nav-title,
@@ -2164,62 +2158,6 @@ body:not(.has-header-image):not(.has-header-video) #scroll-to-content {
 /*--------------------------------------------------------------
 13.2 Front Page
 --------------------------------------------------------------*/
-.inspiro-front-page .site-content {
-    padding: 0;
-}
-
-.inspiro-panel {
-    overflow: hidden;
-    position: relative;
-}
-
-.panel-image {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-.panel-image:before {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.3+100 */
-    /* FF3.6-15 */
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#4d000000", GradientType=0);
-    /* IE6-9 */
-    bottom: 0;
-    content: "";
-    left: 0;
-    right: 0;
-    position: absolute;
-    top: 100px;
-}
-
-.inspiro-front-page article:not(.has-post-thumbnail):not(:first-child) {
-    border-top: 1px solid #ddd;
-}
-
-.panel-content {
-    position: relative;
-}
-
-.panel-content .inner-wrap {
-    padding-bottom: 0.5em;
-    padding-top: 1.75em;
-}
-
-/* Panel edit link */
-.inspiro-panel .edit-link {
-    display: block;
-    margin: 0.3em 0 0;
-}
-
-.inspiro-panel .entry-header .edit-link {
-    font-size: 14px;
-    font-size: 0.875rem;
-}
-
 /* Front Page - Recent Posts */
 /*--------------------------------------------------------------
 13.3 Regular Content
@@ -2358,72 +2296,31 @@ body.page:not(.inspiro-front-page) .entry-title {
 
 .pagination,
 .comments-pagination {
-    border-top: 1px solid #eee;
-    font-size: 14px;
-    font-size: 0.875rem;
-    font-weight: 800;
-    padding: 2em 0 3em;
+    padding: 3.125em 0;
     text-align: center;
 }
 
-.pagination .icon,
-.comments-pagination .icon {
-    width: 0.666666666em;
-    height: 0.666666666em;
-}
-
-.comments-pagination {
-    border: 0;
-}
-
-.page-numbers {
+.pagination:empty,
+.comments-pagination:empty {
     display: none;
-    padding: 0.5em 0.75em;
 }
 
-.page-numbers.current {
-    color: #767676;
-    display: inline-block;
+.pagination .page-numbers,
+.comments-pagination .page-numbers {
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-family: "Montserrat", sans-serif;
+    line-height: 40px;
+    padding: 0.625em 0.9375em;
+    color: #444;
+    transition: 0.2s ease all;
 }
 
-.page-numbers.current .screen-reader-text {
-    clip: auto;
-    height: auto;
-    overflow: auto;
-    position: relative !important;
-    width: auto;
-}
-
-.prev.page-numbers,
-.next.page-numbers {
-    background-color: #ddd;
-    border-radius: 2px;
-    display: inline-block;
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1;
-    padding: 0.25em 0.5em 0.4em;
-}
-
-.prev.page-numbers,
-.next.page-numbers {
-    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
-}
-
-.prev.page-numbers:focus,
-.prev.page-numbers:hover,
-.next.page-numbers:focus,
-.next.page-numbers:hover {
-    background-color: #767676;
-    color: #fff;
-}
-
-.prev.page-numbers {
-    float: left;
-}
-
-.next.page-numbers {
-    float: right;
+.pagination .page-numbers:hover, .pagination .page-numbers.current,
+.comments-pagination .page-numbers:hover,
+.comments-pagination .page-numbers.current {
+    text-decoration: none;
+    color: #0bb4aa;
 }
 
 /* Aligned blockquotes */
@@ -4040,7 +3937,6 @@ p > object:only-child {
     h6 {
         font-size: 12pt;
     }
-    .page .panel-content .entry-title,
     .page-title,
     body.page:not(.inspiro-front-page) .entry-title {
         font-size: 10pt;

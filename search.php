@@ -46,11 +46,9 @@ get_header(); ?>
 			endwhile; // End the loop.
 
 			the_posts_pagination(
-				array(
-					'prev_text'          => inspiro_get_theme_svg( 'arrow-left' ) . '<span class="screen-reader-text">' . __( 'Previous page', 'inspiro' ) . '</span>',
-					'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'inspiro' ) . '</span>' . inspiro_get_theme_svg( 'arrow-right' ),
-					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'inspiro' ) . ' </span>',
-				)
+			    array(
+			        'prev_next' => false
+			    )
 			);
 
 		else :

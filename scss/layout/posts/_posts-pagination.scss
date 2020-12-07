@@ -1,0 +1,24 @@
+.pagination,
+.comments-pagination {
+    padding: em(50) 0;
+    text-align: center;
+
+    &:empty {
+        display: none;
+    }
+
+    .page-numbers {
+        @include font-size(20);
+        font-family: $font-headings;
+        line-height: 40px;
+        padding: em(10) em(15);
+        color: #444;
+        transition: 0.2s ease all;
+
+        &:hover,
+        &.current {
+            text-decoration: none;
+            color: $primary-color;
+        }
+    }
+}
