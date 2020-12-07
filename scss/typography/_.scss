@@ -16,6 +16,7 @@ h3,
 h4,
 h5,
 h6 {
+    color: #000;
     clear: both;
     line-height: 1.4;
     margin: 0 0 0.75em;
@@ -37,25 +38,21 @@ h1 {
 }
 
 h2 {
-    color: #000;
     @include font-size(30);
     font-weight: 300;
 }
 
 h3 {
-    color: #333;
     @include font-size(24);
     font-weight: 300;
 }
 
 h4 {
-    color: #333;
     @include font-size($font-size-root);
     font-weight: 800;
 }
 
 h5 {
-    color: #767676;
     @include font-size(14);
     font-weight: 800;
     letter-spacing: 0.15em;
@@ -63,7 +60,6 @@ h5 {
 }
 
 h6 {
-    color: #333;
     @include font-size(13);
     font-weight: 800;
 }

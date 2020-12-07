@@ -22,14 +22,6 @@ if ( ! function_exists( 'inspiro_posted_on' ) ) :
 		// Get Categories for posts.
 		$categories_list = get_the_category_list( $separate_meta );
 
-		// Get the author name; wrap it in a link.
-		$byline = sprintf(
-			'<span class="entry-author">%s <a class="url fn n" href="%s">%s</a></span>',
-			__( 'by', 'inspiro' ),
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			get_the_author()
-		);
-
 		if ( inspiro_categorized_blog() && $categories_list ) {
 			$catlinks = sprintf(
 				'<span class="cat-links">%s %s</span>',
@@ -37,6 +29,14 @@ if ( ! function_exists( 'inspiro_posted_on' ) ) :
 				$categories_list
 			);
 		}
+
+		// Get the author name; wrap it in a link.
+		$byline = sprintf(
+			'<span class="entry-author">%s <a class="url fn n" href="%s">%s</a></span>',
+			__( 'by', 'inspiro' ),
+			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+			get_the_author()
+		);
 
 		$datetime = sprintf(
 			'<span class="entry-date">%s %s</span>',
@@ -49,12 +49,42 @@ if ( ! function_exists( 'inspiro_posted_on' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'inspiro_entry_meta' ) ) :
+	/**
+	 * Prints HTML with meta information for the current post-date/time and author.
+	 */
+	function inspiro_entry_meta() {
+		$catlinks = '';
+
+		/* translators: Used between list items, there is a space after the comma. */
+		$separate_meta = __( ', ', 'inspiro' );
+
+		// Get Categories for posts.
+		$categories_list = get_the_category_list( $separate_meta );
+
+		if ( inspiro_categorized_blog() && $categories_list ) {
+			$catlinks = sprintf(
+				'<span class="cat-links">%s</span>',
+				$categories_list
+			);
+		}
+
+		$datetime = sprintf(
+			'<span class="entry-date">%s</span>',
+			inspiro_time_link(false)
+		);
+
+		// Finally, let's write all of this to the page.
+		echo $datetime . $catlinks;
+		inspiro_edit_link();
+	}
+endif;
 
 if ( ! function_exists( 'inspiro_time_link' ) ) :
 	/**
 	 * Gets a nicely formatted string for the published date.
 	 */
-	function inspiro_time_link() {
+	function inspiro_time_link( $link = true ) {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -67,6 +97,14 @@ if ( ! function_exists( 'inspiro_time_link' ) ) :
 			get_the_modified_date( DATE_W3C ),
 			get_the_modified_date()
 		);
+
+		if ( ! $link ) {
+			return sprintf(
+				/* translators: %s: Post date. */
+				__( '<span class="screen-reader-text">Posted on</span> %s', 'inspiro' ),
+				$time_string
+			);
+		}
 
 		// Wrap the time string in a link, and preface it with 'Posted on'.
 		return sprintf(

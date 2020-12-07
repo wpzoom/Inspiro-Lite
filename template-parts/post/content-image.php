@@ -25,10 +25,9 @@
 			if ( is_single() ) {
 				inspiro_posted_on();
 			} else {
-				echo inspiro_time_link();
-				inspiro_edit_link();
+				echo inspiro_entry_meta();
 			};
-				echo '</div><!-- .entry-meta -->';
+			echo '</div><!-- .entry-meta -->';
 		};
 
 		if ( is_single() ) {

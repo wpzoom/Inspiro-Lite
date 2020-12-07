@@ -526,6 +526,7 @@ h3,
 h4,
 h5,
 h6 {
+    color: #000;
     clear: both;
     line-height: 1.4;
     margin: 0 0 0.75em;
@@ -548,28 +549,24 @@ h1 {
 }
 
 h2 {
-    color: #000;
     font-size: 30px;
     font-size: 1.875rem;
     font-weight: 300;
 }
 
 h3 {
-    color: #333;
     font-size: 24px;
     font-size: 1.5rem;
     font-weight: 300;
 }
 
 h4 {
-    color: #333;
     font-size: 16px;
     font-size: 1rem;
     font-weight: 800;
 }
 
 h5 {
-    color: #767676;
     font-size: 14px;
     font-size: 0.875rem;
     font-weight: 800;
@@ -578,7 +575,6 @@ h5 {
 }
 
 h6 {
-    color: #333;
     font-size: 13px;
     font-size: 0.8125rem;
     font-weight: 800;
@@ -2247,6 +2243,18 @@ body.page:not(.inspiro-front-page) .entry-title {
     margin-bottom: 20px;
 }
 
+.entry-title {
+    color: #222;
+    font-size: 26px;
+    font-size: 1.625rem;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+}
+
+.entry-title:not(:first-child) {
+    padding-top: 0;
+}
+
 .entry-title a {
     color: #000;
     text-decoration: none;
@@ -2258,14 +2266,11 @@ body.page:not(.inspiro-front-page) .entry-title {
     text-decoration: none;
 }
 
-.entry-title:not(:first-child) {
-    padding-top: 0;
-}
-
 .entry-meta {
     color: #999;
-    font-size: 14px;
-    font-size: 0.875rem;
+    font-size: 16px;
+    font-size: 1rem;
+    margin: 0 0 20px;
 }
 
 .entry-meta span {
@@ -2281,7 +2286,7 @@ body.page:not(.inspiro-front-page) .entry-title {
 }
 
 .entry-meta a {
-    color: #000;
+    color: #222;
 }
 
 .byline,
@@ -2350,18 +2355,17 @@ body:not(.inspiro-front-page) .entry-header {
     padding-top: 0;
 }
 
-.blog .entry-meta a.post-edit-link,
-.archive .entry-meta a.post-edit-link,
-.search .entry-meta a.post-edit-link {
-    color: #222;
-    display: inline-block;
-    margin-left: 1em;
-    white-space: nowrap;
+.blog .entry-meta a,
+.archive .entry-meta a,
+.search .entry-meta a {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2px;
 }
 
-.search .page .entry-meta a.post-edit-link {
-    margin-left: 0;
-    white-space: nowrap;
+.blog .entry-meta a:hover,
+.archive .entry-meta a:hover,
+.search .entry-meta a:hover {
+    color: #0bb4aa;
 }
 
 .taxonomy-description {

@@ -71,24 +71,32 @@ body.page:not(.inspiro-front-page) .entry-title {
     margin-bottom: 20px;
 }
 
-.entry-title a {
-    color: $color-link-title;
-    text-decoration: none;
-    margin-left: -2px;
+.entry-title {
+    color: #222;
+    @include font-size(26);
+    font-weight: 700;
+    font-family: $font-headings;
 
-    &:hover {
-        color: $color-link-title-hover;
+    &:not(:first-child) {
+        padding-top: 0;
+    }
+
+    a {
+        color: $color-link-title;
         text-decoration: none;
-    }    
-}
+        margin-left: -2px;
 
-.entry-title:not(:first-child) {
-    padding-top: 0;
+        &:hover {
+            color: $color-link-title-hover;
+            text-decoration: none;
+        }    
+    }
 }
 
 .entry-meta {
     color: #999;
-    @include font-size(14);
+    @include font-size(16);
+    margin: 0 0 20px;
 
     span {
         display: inline;
@@ -103,7 +111,7 @@ body.page:not(.inspiro-front-page) .entry-title {
     }
 
     a {
-        color: #000;
+        color: #222;
     }
 }
 
