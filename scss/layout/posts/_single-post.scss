@@ -72,7 +72,10 @@
 
         .single-featured-image-header {
             position: relative;
-            transform: translateY( -225px );
+
+            img {
+                width: 100%;
+            }
         }
     }
 }

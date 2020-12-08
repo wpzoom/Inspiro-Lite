@@ -2001,7 +2001,8 @@ body:not(.title-tagline-hidden) .site-branding-text {
     z-index: 2;
 }
 
-.has-header-image .custom-header-media:before {
+.has-header-image .custom-header-media:before,
+.has-header-video .custom-header-media:before {
     content: '';
     width: 100%;
     height: 100%;
@@ -2341,7 +2342,18 @@ body.page:not(.inspiro-front-page) .entry-title {
 .blog .site-main > article,
 .archive .site-main > article,
 .search .site-main > article {
-    padding-bottom: 2em;
+    padding-bottom: 3.75em;
+}
+
+.blog .site-main > article:after,
+.archive .site-main > article:after,
+.search .site-main > article:after {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 1px;
+    background: #e6e6e6;
+    margin: 50px auto 0;
 }
 
 body:not(.inspiro-front-page) .entry-header,
@@ -2461,7 +2473,11 @@ body:not(.inspiro-front-page) .entry-header {
 .page .entry-cover-image .single-featured-image-header,
 .single .entry-cover-image .single-featured-image-header {
     position: relative;
-    transform: translateY(-225px);
+}
+
+.page .entry-cover-image .single-featured-image-header img,
+.single .entry-cover-image .single-featured-image-header img {
+    width: 100%;
 }
 
 .single-featured-image-header img {
@@ -3708,19 +3724,23 @@ p > object:only-child {
     .inner-wrap {
         max-width: 1200px;
     }
-    .has-sidebar:not(.error404) #primary {
+    .page-layout-sidebar-right.has-sidebar:not(.error404) #primary,
+    .page-layout-sidebar-right.has-sidebar:not(.search) #primary,
+    .page-layout-sidebar-right.has-sidebar:not(.archive) #primary {
         float: left;
         width: 75%;
         padding-right: 4%;
     }
-    .has-sidebar #secondary {
+    .page-layout-sidebar-right.has-sidebar #secondary {
         float: right;
         padding: 0 0 1.25em 4%;
         width: 25%;
         margin-bottom: 2em;
         border-left: 1px solid #f1f2f2;
     }
-    .error404 #primary {
+    .error404 #primary,
+    .search #primary,
+    .archive #primary {
         float: none;
     }
     /* Site Branding */

@@ -60,12 +60,6 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	
-	<?php if ( is_active_sidebar( 'blog-sidebar' ) ): ?>
-	    <aside id="secondary" class="widget-area" role="complementary">
-	        <?php dynamic_sidebar( 'blog-sidebar' ); ?>
-	    </aside>
-	<?php endif ?>
-	
 </div><!-- .inner-wrap -->
 
 <?php

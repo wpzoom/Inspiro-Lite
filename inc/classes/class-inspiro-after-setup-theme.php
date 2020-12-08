@@ -95,7 +95,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
             add_image_size( 'inspiro-entry-cover', 1800 );
 
             // Set the default content width.
-            $GLOBALS['content_width'] = 750;
+            $GLOBALS['content_width'] = 950;
 
             // Register nav menus.
             register_nav_menus(
@@ -287,20 +287,20 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
             $content_width = $GLOBALS['content_width'];
 
             // Get layout.
-            $page_layout = get_theme_mod( 'page_layout' );
+            $blog_layout = get_theme_mod( 'layout_blog_page' );
 
-            // Check if layout is one column.
-            if ( 'one-column' === $page_layout ) {
+            // Check if layout is full width.
+            if ( 'full' === $blog_layout ) {
                 if ( inspiro_is_frontpage() ) {
-                    $content_width = 644;
+                    $content_width = 1200;
                 } elseif ( is_page() ) {
-                    $content_width = 740;
+                    $content_width = 950;
                 }
             }
 
             // Check if is single post and there is no sidebar.
             if ( is_single() && ! is_active_sidebar( 'blog-sidebar' ) ) {
-                $content_width = 740;
+                $content_width = 950;
             }
 
             /**

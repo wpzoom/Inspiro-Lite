@@ -3,7 +3,16 @@
 .blog .site-main > article,
 .archive .site-main > article,
 .search .site-main > article {
-    padding-bottom: 2em;
+    padding-bottom: em(60);
+
+    &:after {
+        content: "";
+        display: block;
+        width: 130px;
+        height: 1px;
+        background: #e6e6e6;
+        margin: 50px auto 0;
+    }
 }
 
 body:not(.inspiro-front-page) .entry-header,

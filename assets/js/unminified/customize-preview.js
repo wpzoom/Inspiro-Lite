@@ -78,17 +78,6 @@
 		});
 	});
 
-	// Page layouts.
-	wp.customize( 'page_layout', function( value ) {
-		value.bind( function( to ) {
-			if ( 'one-column' === to ) {
-				$( 'body' ).addClass( 'page-one-column' ).removeClass( 'page-two-column' );
-			} else {
-				$( 'body' ).removeClass( 'page-one-column' ).addClass( 'page-two-column' );
-			}
-		} );
-	} );
-
 	// Whether a header image is available.
 	function hasHeaderImage() {
 		var image = wp.customize( 'header_image' )();

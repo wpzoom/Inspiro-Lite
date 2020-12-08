@@ -16,20 +16,15 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header">
-		<?php if ( 'post' === get_post_type() ) : ?>
-			<div class="entry-meta">
-				<?php
-				echo inspiro_time_link();
-				inspiro_edit_link();
-				?>
-			</div><!-- .entry-meta -->
-		<?php elseif ( 'page' === get_post_type() && get_edit_post_link() ) : ?>
-			<div class="entry-meta">
-				<?php inspiro_edit_link(); ?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
+	<?php if ( '' !== get_the_post_thumbnail() && ! is_single() ) : ?>
+		<div class="post-thumbnail">
+			<a href="<?php the_permalink(); ?>">
+				<?php the_post_thumbnail( 'inspiro-featured-image' ); ?>
+			</a>
+		</div><!-- .post-thumbnail -->
+	<?php endif; ?>
 
+	<header class="entry-header">
 		<?php
 		if ( is_front_page() && ! is_home() ) {
 
@@ -39,6 +34,16 @@
 			the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		}
 		?>
+
+		<?php if ( 'post' === get_post_type() ) : ?>
+			<div class="entry-meta">
+				<?php inspiro_entry_meta(); ?>
+			</div><!-- .entry-meta -->
+		<?php elseif ( 'page' === get_post_type() && get_edit_post_link() ) : ?>
+			<div class="entry-meta">
+				<?php inspiro_edit_link(); ?>
+			</div><!-- .entry-meta -->
+		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">

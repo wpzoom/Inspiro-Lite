@@ -186,12 +186,12 @@ add_action( 'widgets_init', 'inspiro_widgets_init' );
 
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with ... and
- * a 'Continue reading' link.
+ * a 'Read more' link.
  *
  * @since Inspiro Lite 1.0.0
  *
  * @param string $link Link to single post/page.
- * @return string 'Continue reading' link prepended with an ellipsis.
+ * @return string 'Read more' link prepended with an ellipsis.
  */
 function inspiro_excerpt_more( $link ) {
     if ( is_admin() ) {
@@ -202,7 +202,7 @@ function inspiro_excerpt_more( $link ) {
         '<p class="link-more"><a href="%1$s" class="more-link">%2$s</a></p>',
         esc_url( get_permalink( get_the_ID() ) ),
         /* translators: %s: Post title. */
-        sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'inspiro' ), get_the_title( get_the_ID() ) )
+        sprintf( __( 'Read more<span class="screen-reader-text"> "%s"</span>', 'inspiro' ), get_the_title( get_the_ID() ) )
     );
     return ' &hellip; ' . $link;
 }

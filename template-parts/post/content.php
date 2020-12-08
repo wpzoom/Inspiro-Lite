@@ -54,7 +54,7 @@
 		if ( 'post' === get_post_type() ) {
 			echo '<div class="entry-meta">';
 			if ( is_single() ) {
-				inspiro_posted_on();
+				inspiro_single_entry_meta();
 			} else {
 				echo inspiro_entry_meta();
 			};
@@ -93,6 +93,14 @@
 		);
 		?>
 	</div><!-- .entry-content -->
+
+	<?php if ( is_single() && 'side-right' === get_theme_mod( 'layout_single_post' ) && is_active_sidebar( 'blog-sidebar' ) ): ?>
+		
+		<aside id="secondary" class="widget-area" role="complementary">
+		    <?php dynamic_sidebar( 'blog-sidebar' ); ?>
+		</aside>
+		
+	<?php endif ?>
 
 	<?php
 	if ( is_single() ) {

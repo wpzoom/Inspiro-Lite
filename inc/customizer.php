@@ -150,33 +150,55 @@ function inspiro_customize_register( $wp_customize ) {
 	 * Theme options.
 	 */
 	$wp_customize->add_section(
-		'theme_options',
+		'theme_layout',
 		array(
-			'title'    => __( 'Theme Options', 'inspiro' ),
+			'title'    => __( 'Theme Layout', 'inspiro' ),
 			'priority' => 50,
 	        'capability' => 'edit_theme_options',
 		)
 	);
 
 	$wp_customize->add_setting(
-		'page_layout',
+		'layout_blog_page',
 		array(
-			'default'           => 'two-column',
+			'default'           => 'full',
 			'sanitize_callback' => 'inspiro_sanitize_page_layout',
-			'transport'         => 'postMessage',
+			'transport'         => 'refresh',
+		)
+	);
+
+	$wp_customize->add_setting(
+		'layout_single_post',
+		array(
+			'default'           => 'full',
+			'sanitize_callback' => 'inspiro_sanitize_page_layout',
+			'transport'         => 'refresh',
 		)
 	);
 
 	$wp_customize->add_control(
-		'page_layout',
+		'layout_blog_page',
 		array(
-			'label'           => __( 'Page Layout', 'inspiro' ),
-			'section'         => 'theme_options',
+			'label'           => __( 'Blog Layout', 'inspiro' ),
+			'section'         => 'theme_layout',
 			'type'            => 'radio',
-			'description'     => __( 'When the two-column layout is assigned, the page title is in one column and content is in the other.', 'inspiro' ),
 			'choices'         => array(
-				'one-column' => __( 'One Column', 'inspiro' ),
-				'two-column' => __( 'Two Column', 'inspiro' ),
+				'full' 		  => __( 'Full width', 'inspiro' ),
+				'side-right'  => __( 'Sidebar on the right', 'inspiro' ),
+			),
+			'active_callback' => 'inspiro_is_view_with_layout_option',
+		)
+	);
+
+	$wp_customize->add_control(
+		'layout_single_post',
+		array(
+			'label'           => __( 'Single Post Layout', 'inspiro' ),
+			'section'         => 'theme_layout',
+			'type'            => 'radio',
+			'choices'         => array(
+				'full' 		  => __( 'Full width', 'inspiro' ),
+				'side-right'  => __( 'Sidebar on the right', 'inspiro' ),
 			),
 			'active_callback' => 'inspiro_is_view_with_layout_option',
 		)
@@ -191,8 +213,8 @@ add_action( 'customize_register', 'inspiro_customize_register' );
  */
 function inspiro_sanitize_page_layout( $input ) {
 	$valid = array(
-		'one-column' => __( 'One Column', 'inspiro' ),
-		'two-column' => __( 'Two Column', 'inspiro' ),
+		'full' 			=> __( 'Full width', 'inspiro' ),
+		'side-right' 	=> __( 'Sidebar on the right', 'inspiro' ),
 	);
 
 	if ( array_key_exists( $input, $valid ) ) {
@@ -264,11 +286,11 @@ function inspiro_is_static_front_page() {
 }
 
 /**
- * Return whether we're on a view that supports a one or two column layout.
+ * Return whether we're on a view that supports a full width or sidebar right layout.
  */
 function inspiro_is_view_with_layout_option() {
 	// This option is available on all pages. It's also available on archives when there isn't a sidebar.
-	return ( is_page() || ( is_archive() && ! is_active_sidebar( 'blog-sidebar' ) ) );
+	return ( is_front_page() || is_home() || is_single() );
 }
 
 /**

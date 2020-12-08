@@ -47,12 +47,20 @@ function inspiro_body_classes( $classes ) {
 		$classes[] = 'inspiro--with-page-nav';
 	}
 
-	// Add class for one or two column page layouts.
-	if ( is_page() || is_archive() ) {
-		if ( 'one-column' === get_theme_mod( 'page_layout' ) ) {
-			$classes[] = 'page-one-column';
-		} else {
-			$classes[] = 'page-two-column';
+	// Add class for full width or sidebar right page layouts.
+	if ( is_front_page() || is_home() ) {
+		if ( 'full' === get_theme_mod( 'layout_blog_page' ) ) {
+			$classes[] = 'page-layout-full-width';
+		} elseif ( 'side-right' === get_theme_mod( 'layout_blog_page' ) && is_active_sidebar( 'blog-sidebar' ) ) {
+			$classes[] = 'page-layout-sidebar-right';
+		}
+	}
+
+	if ( is_single() ) {
+		if ( 'full' === get_theme_mod( 'layout_single_page' ) ) {
+			$classes[] = 'page-layout-full-width';
+		} elseif ( 'side-right' === get_theme_mod( 'layout_single_page' ) && is_active_sidebar( 'blog-sidebar' ) ) {
+			$classes[] = 'page-layout-sidebar-right';
 		}
 	}
 

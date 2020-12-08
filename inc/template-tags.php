@@ -9,11 +9,11 @@
  * @since Inspiro Lite 1.0.0
  */
 
-if ( ! function_exists( 'inspiro_posted_on' ) ) :
+if ( ! function_exists( 'inspiro_single_entry_meta' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
-	function inspiro_posted_on() {
+	function inspiro_single_entry_meta() {
 		$catlinks = '';
 
 		/* translators: Used between list items, there is a space after the comma. */
@@ -24,7 +24,7 @@ if ( ! function_exists( 'inspiro_posted_on' ) ) :
 
 		if ( inspiro_categorized_blog() && $categories_list ) {
 			$catlinks = sprintf(
-				'<span class="cat-links">%s %s</span>',
+				'<span class="entry-categories cat-links">%s %s</span>',
 				__( 'in', 'inspiro' ),
 				$categories_list
 			);
@@ -64,7 +64,7 @@ if ( ! function_exists( 'inspiro_entry_meta' ) ) :
 
 		if ( inspiro_categorized_blog() && $categories_list ) {
 			$catlinks = sprintf(
-				'<span class="cat-links">%s</span>',
+				'<span class="entry-categories cat-links">%s</span>',
 				$categories_list
 			);
 		}
@@ -76,9 +76,27 @@ if ( ! function_exists( 'inspiro_entry_meta' ) ) :
 
 		// Finally, let's write all of this to the page.
 		echo $datetime . $catlinks;
+		inspiro_comments_link();
 		inspiro_edit_link();
 	}
 endif;
+
+if ( ! function_exists( 'inspiro_comments_link' ) ) {
+	/**
+	 * Displays the link to the comments for the current post.
+	 */
+	function inspiro_comments_link() {
+		echo '<span class="entry-comments">';
+		comments_popup_link(
+			__('0 comments', 'wpzoom'),
+			__('1 comment', 'wpzoom'),
+			__('% comments', 'wpzoom'),
+			'',
+			__('Comments are Disabled', 'wpzoom')
+		);
+		echo '</span>';
+	}
+}
 
 if ( ! function_exists( 'inspiro_time_link' ) ) :
 	/**
@@ -118,7 +136,7 @@ endif;
 
 if ( ! function_exists( 'inspiro_entry_footer' ) ) :
 	/**
-	 * Prints HTML with meta information for the categories, tags and comments.
+	 * Prints HTML with meta information for the tags, share buttons and author.
 	 */
 	function inspiro_entry_footer() {
 

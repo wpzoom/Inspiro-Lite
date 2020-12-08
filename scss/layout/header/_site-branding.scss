@@ -184,7 +184,8 @@ body {
     }
 }
 
-.has-header-image {
+.has-header-image,
+.has-header-video {
     .custom-header-media {
         &:before {
             content: '';
@@ -204,6 +205,11 @@ body {
             left: 0;
             z-index: 2;
         }
+    }
+}
+
+.has-header-image {
+    .custom-header-media {
         img {
             position: fixed;
             height: auto;
