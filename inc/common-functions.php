@@ -15,7 +15,7 @@ function inspiro_fonts_url() {
     if ( 'off' !== $libre_franklin ) {
         $font_families = array();
 
-        $font_families[] = 'Libre Franklin:300,300i,400,400i,600,600i,800,800i';
+        $font_families[] = 'Libre Franklin:200,200i,300,300i,400,400i,600,600i,700,700i|Montserrat:500,700';
 
         $query_args = array(
             'family'  => urlencode( implode( '|', $font_families ) ),
