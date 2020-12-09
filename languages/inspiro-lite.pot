@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Inspiro 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/inspiro-lite\n"
-"POT-Creation-Date: 2020-10-23 10:35:30+00:00\n"
+"POT-Creation-Date: 2020-12-09 16:59:43+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,86 +32,69 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
-#: archive.php:49 index.php:53 search.php:50
-msgid "Previous page"
+#: comments.php:30
+msgid "No Comments"
 msgstr ""
 
-#: archive.php:50 index.php:54 search.php:51
-msgid "Next page"
+#: comments.php:30
+msgid "One Comment"
 msgstr ""
 
-#: archive.php:51 index.php:55 search.php:52
-msgid "Page"
+#: comments.php:30
+msgid "% Comments"
 msgstr ""
 
-#: comments.php:61
-msgid "Reply"
+#: comments.php:46
+msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
 msgstr ""
 
-#: comments.php:70 single.php:33
-msgid "Previous"
+#: comments.php:46
+msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: comments.php:71 single.php:34
-msgid "Next"
-msgstr ""
-
-#: comments.php:81
+#: comments.php:58
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:26
-msgid "Footer Social Links Menu"
+#: comments.php:72
+msgid "Name:"
 msgstr ""
 
-#: functions.php:63 functions.php:204
-#: template-parts/navigation/navigation-top.php:12
-msgid "Top Menu"
+#: comments.php:78
+msgid "Email Address:"
 msgstr ""
 
-#: functions.php:64 functions.php:215
-msgid "Social Links Menu"
+#: comments.php:83
+msgid "Website:"
 msgstr ""
 
-#: functions.php:337 sidebar.php:18
-msgid "Blog Sidebar"
+#: comments.php:87
+msgid ""
+"Save my name, email, and website in this browser for the next time I "
+"comment."
 msgstr ""
 
-#: functions.php:339
-msgid "Add widgets here to appear in your sidebar on blog posts and archive pages."
+#: comments.php:90
+msgid "Message:"
 msgstr ""
 
-#: functions.php:349
-msgid "Footer 1"
+#: comments.php:93
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\">Log out?</a>"
 msgstr ""
 
-#: functions.php:351 functions.php:363
-msgid "Add widgets here to appear in your footer."
+#: comments.php:94
+msgid "Leave a Comment"
 msgstr ""
 
-#: functions.php:361
-msgid "Footer 2"
+#: comments.php:95
+msgid "Cancel"
 msgstr ""
 
-#: functions.php:391 template-parts/page/content-front-page-panels.php:45
-#: template-parts/page/content-front-page.php:42
-#: template-parts/post/content-audio.php:84
-#: template-parts/post/content-gallery.php:71
-#: template-parts/post/content-image.php:61
-#: template-parts/post/content-video.php:83 template-parts/post/content.php:57
-#. translators: %s: Post title.
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+#: comments.php:96
+msgid "Post Comment"
 msgstr ""
 
-#: functions.php:482
-msgid "Expand child menu"
-msgstr ""
-
-#: functions.php:483
-msgid "Collapse child menu"
-msgstr ""
-
-#: header.php:28
+#: header.php:29
 msgid "Skip to content"
 msgstr ""
 
@@ -120,6 +103,97 @@ msgstr ""
 msgid ""
 "Inspiro requires at least WordPress version 4.7. You are running version "
 "%s. Please upgrade and try again."
+msgstr ""
+
+#: inc/classes/class-inspiro-after-setup-theme.php:103
+#: inc/starter-content.php:130
+msgid "Main Menu"
+msgstr ""
+
+#: inc/common-functions.php:90
+msgid "Sidebar"
+msgstr ""
+
+#: inc/common-functions.php:92
+msgid ""
+"Main sidebar that is displayed on the right and can be toggled by clicking "
+"on the menu icon."
+msgstr ""
+
+#: inc/common-functions.php:102
+msgid "Blog Sidebar"
+msgstr ""
+
+#: inc/common-functions.php:104
+msgid "Add widgets here to appear in your sidebar on blog posts and archive pages."
+msgstr ""
+
+#: inc/common-functions.php:114
+msgid "Footer 1"
+msgstr ""
+
+#: inc/common-functions.php:116 inc/common-functions.php:128
+#: inc/common-functions.php:140 inc/common-functions.php:152
+msgid "Add widgets here to appear in your footer."
+msgstr ""
+
+#: inc/common-functions.php:126
+msgid "Footer 2"
+msgstr ""
+
+#: inc/common-functions.php:138
+msgid "Footer 3"
+msgstr ""
+
+#: inc/common-functions.php:150
+msgid "Footer 4"
+msgstr ""
+
+#: inc/common-functions.php:162
+msgid "Header Social Icons"
+msgstr ""
+
+#: inc/common-functions.php:164
+msgid ""
+"Widget area in the header. Install the \"Social Icons Widget by WPZOOM\" "
+"plugin and add the widget here."
+msgstr ""
+
+#: inc/common-functions.php:175
+msgid "Footer Instagram Bar"
+msgstr ""
+
+#: inc/common-functions.php:177
+msgid "Widget area for \"Instagram widget by WPZOOM\"."
+msgstr ""
+
+#: inc/common-functions.php:205 template-parts/post/content.php:81
+#. translators: %s: Post title.
+msgid "Read more<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: inc/common-functions.php:369
+msgid "%s @ %s"
+msgstr ""
+
+#: inc/common-functions.php:373
+msgid "Reply"
+msgstr ""
+
+#: inc/common-functions.php:376
+msgid "Edit"
+msgstr ""
+
+#: inc/common-functions.php:384
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/common-functions.php:398
+msgid "Pingback:"
+msgstr ""
+
+#: inc/common-functions.php:398
+msgid "(Edit)"
 msgstr ""
 
 #: inc/custom-header.php:56
@@ -134,99 +208,188 @@ msgstr ""
 msgid "Pause background video"
 msgstr ""
 
-#: inc/customizer.php:60
+#: inc/customizer.php:51
+msgid "Custom Logo Text"
+msgstr ""
+
+#: inc/customizer.php:82
 msgid "Color Scheme"
 msgstr ""
 
-#: inc/customizer.php:62
+#: inc/customizer.php:84
 msgid "Light"
 msgstr ""
 
-#: inc/customizer.php:63
+#: inc/customizer.php:85
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer.php:64
+#: inc/customizer.php:86
 msgid "Custom"
 msgstr ""
 
-#: inc/customizer.php:89
-msgid "Theme Options"
+#: inc/customizer.php:111 template-parts/footer/footer-widgets.php:21
+msgid "Footer"
 msgstr ""
 
-#: inc/customizer.php:106
-msgid "Page Layout"
+#: inc/customizer.php:128
+msgid "Number of Widget Areas"
 msgstr ""
 
-#: inc/customizer.php:109
-msgid ""
-"When the two-column layout is assigned, the page title is in one column and "
-"content is in the other."
+#: inc/customizer.php:132
+msgid "Don't display Widgets"
 msgstr ""
 
-#: inc/customizer.php:111 inc/customizer.php:170
+#: inc/customizer.php:133
 msgid "One Column"
 msgstr ""
 
-#: inc/customizer.php:112 inc/customizer.php:171
-msgid "Two Column"
+#: inc/customizer.php:134
+msgid "Two Columns"
 msgstr ""
 
-#: inc/customizer.php:142
-#. translators: %d: The front page section number.
-msgid "Front Page Section %d Content"
+#: inc/customizer.php:135
+msgid "Three Columns"
 msgstr ""
 
-#: inc/customizer.php:143
-msgid ""
-"Select pages to feature in each area from the dropdowns. Add an image to a "
-"section by setting a featured image in the page editor. Empty sections will "
-"not be displayed."
+#: inc/customizer.php:136
+msgid "Four Columns"
 msgstr ""
 
-#: inc/icon-functions.php:39
-msgid "Please define default parameters in the form of an array."
+#: inc/customizer.php:147
+msgid "Theme Layout"
 msgstr ""
 
-#: inc/icon-functions.php:44
-msgid "Please define an SVG icon filename."
+#: inc/customizer.php:174
+msgid "Blog Layout"
 msgstr ""
 
-#: inc/template-tags.php:21
-#. translators: %s: Post author.
-msgid "by %s"
+#: inc/customizer.php:178 inc/customizer.php:192 inc/customizer.php:305
+msgid "Full width"
 msgstr ""
 
-#: inc/template-tags.php:52
-#. translators: %s: Post date.
-msgid "<span class=\"screen-reader-text\">Posted on</span> %s"
+#: inc/customizer.php:179 inc/customizer.php:193 inc/customizer.php:306
+msgid "Sidebar on the right"
 msgstr ""
 
-#: inc/template-tags.php:66
+#: inc/customizer.php:188
+msgid "Single Post Layout"
+msgstr ""
+
+#: inc/customizer.php:207
+msgid "Single Post Options"
+msgstr ""
+
+#: inc/customizer.php:215
+msgid "Share Buttons"
+msgstr ""
+
+#: inc/customizer.php:233
+msgid "Share on Twitter"
+msgstr ""
+
+#: inc/customizer.php:242
+msgid "Share on Facebook"
+msgstr ""
+
+#: inc/customizer.php:251
+msgid "Share on Linkedin"
+msgstr ""
+
+#: inc/customizer.php:261
+msgid "Display Share Buttons"
+msgstr ""
+
+#: inc/customizer.php:270
+msgid "Twitter Button Label"
+msgstr ""
+
+#: inc/customizer.php:280
+msgid "Facebook Button Label"
+msgstr ""
+
+#: inc/customizer.php:290
+msgid "Linkedin Button Label"
+msgstr ""
+
+#: inc/template-tags.php:20 inc/template-tags.php:60
 #. translators: Used between list items, there is a space after the comma.
 msgid ", "
 msgstr ""
 
-#: inc/template-tags.php:85
-msgid "Categories"
+#: inc/template-tags.php:28
+msgid "in"
 msgstr ""
 
-#: inc/template-tags.php:89
+#: inc/template-tags.php:36
+msgid "by"
+msgstr ""
+
+#: inc/template-tags.php:43
+msgid "on"
+msgstr ""
+
+#: inc/template-tags.php:91
+msgid "0 comments"
+msgstr ""
+
+#: inc/template-tags.php:92
+msgid "1 comment"
+msgstr ""
+
+#: inc/template-tags.php:93
+msgid "% comments"
+msgstr ""
+
+#: inc/template-tags.php:95
+msgid "Comments are Disabled"
+msgstr ""
+
+#: inc/template-tags.php:122 inc/template-tags.php:130
+#. translators: %s: Post date.
+msgid "<span class=\"screen-reader-text\">Posted on</span> %s"
+msgstr ""
+
+#: inc/template-tags.php:148
 msgid "Tags"
 msgstr ""
 
-#: inc/template-tags.php:117
+#: inc/template-tags.php:159
+msgid "Tweet this on Twitter"
+msgstr ""
+
+#: inc/template-tags.php:167
+msgid "Share this on Facebook"
+msgstr ""
+
+#: inc/template-tags.php:174
+msgid "Share this on LinkedIn"
+msgstr ""
+
+#: inc/template-tags.php:178
+msgid "Share"
+msgstr ""
+
+#: inc/template-tags.php:183
+msgid "Post author"
+msgstr ""
+
+#: inc/template-tags.php:185
+msgid "Written by"
+msgstr ""
+
+#: inc/template-tags.php:212
 #. translators: %s: Post title.
 msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: inc/template-tags.php:158
+#: inc/template-tags.php:253
 #. translators: %s: The section ID.
 msgid "Front Page Section %s Placeholder"
 msgstr ""
 
 #: index.php:27
-msgid "Posts"
+msgid "Our Blog"
 msgstr ""
 
 #: search.php:22
@@ -234,61 +397,75 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: search.php:26 template-parts/post/content-none.php:17
+#: search.php:26 template-parts/post/content-none.php:18
 msgid "Nothing Found"
 msgstr ""
 
-#: search.php:59
+#: search.php:57
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: single.php:33
+#: sidebar.php:23
+msgid "Toggle navigation"
+msgstr ""
+
+#: single.php:42
 msgid "Previous Post"
 msgstr ""
 
-#: single.php:34
-msgid "Next Post"
-msgstr ""
-
-#: template-parts/footer/footer-widgets.php:18
-msgid "Footer"
-msgstr ""
-
-#: template-parts/footer/site-info.php:18
+#: template-parts/footer/site-info.php:20
 msgid "https://wordpress.org/"
 msgstr ""
 
 #: template-parts/footer/site-info.php:21
-#. translators: %s: WordPress
-msgid "Proudly powered by %s"
+msgid "Powered by %s"
 msgstr ""
 
-#: template-parts/header/site-branding.php:34
-#: template-parts/navigation/navigation-top.php:31
+#: template-parts/footer/site-info.php:25
+msgid "Inspiro WordPress Theme by"
+msgstr ""
+
+#: template-parts/header/header-image.php:20
+#: template-parts/header/header-image.php:21
 msgid "Scroll down to content"
 msgstr ""
 
-#: template-parts/navigation/navigation-top.php:17
-msgid "Menu"
+#: template-parts/header/search-form.php:2
+msgid "Type your keywords and hit Enter..."
 msgstr ""
 
-#: template-parts/page/content-front-page.php:48
-#: template-parts/page/content-page.php:26
-#: template-parts/post/content-audio.php:91
-#: template-parts/post/content-gallery.php:78
-#: template-parts/post/content-image.php:68
-#: template-parts/post/content-video.php:90 template-parts/post/content.php:64
+#: template-parts/navigation/navigation-primary.php:11
+msgid "Top Menu"
+msgstr ""
+
+#: template-parts/navigation/navigation-primary.php:18
+msgid "Toggle sidebar &amp; navigation"
+msgstr ""
+
+#: template-parts/page/content-page.php:61
+#: template-parts/post/content-audio.php:90
+#: template-parts/post/content-gallery.php:77
+#: template-parts/post/content-image.php:67
+#: template-parts/post/content-video.php:99 template-parts/post/content.php:88
 msgid "Pages:"
 msgstr ""
 
-#: template-parts/post/content-none.php:27
+#: template-parts/post/content-audio.php:83
+#: template-parts/post/content-gallery.php:70
+#: template-parts/post/content-image.php:60
+#: template-parts/post/content-video.php:92
+#. translators: %s: Post title.
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/post/content-none.php:29
 #. translators: %s: Post editor URL.
 msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
 msgstr ""
 
-#: template-parts/post/content-none.php:33
+#: template-parts/post/content-none.php:35
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
@@ -318,41 +495,22 @@ msgstr ""
 msgid "https://www.wpzoom.com/"
 msgstr ""
 
-#: comments.php:37
-#. translators: %s: Post title.
-msgctxt "comments title"
-msgid "One Reply to &ldquo;%s&rdquo;"
-msgstr ""
-
-#: comments.php:41
-#. translators: 1: Number of comments, 2: Post title.
-msgctxt "comments title"
-msgid "%1$s Reply to &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s Replies to &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-
-#: functions.php:172
-msgctxt "Theme starter content"
-msgid "Espresso"
-msgstr ""
-
-#: functions.php:176
-msgctxt "Theme starter content"
-msgid "Sandwich"
-msgstr ""
-
-#: functions.php:180
-msgctxt "Theme starter content"
-msgid "Coffee"
-msgstr ""
-
-#: functions.php:289
+#: inc/common-functions.php:13
 #. translators: If there are characters in your language that are not supported
 #. by Libre Franklin, translate this to 'off'. Do not translate into your own
 #. language.
 msgctxt "Libre Franklin font: on or off"
 msgid "on"
+msgstr ""
+
+#: inc/starter-content.php:50
+msgctxt "Theme starter content"
+msgid "Create your website with blocks"
+msgstr ""
+
+#: inc/starter-content.php:114
+msgctxt "Theme starter content"
+msgid "Aerial Land"
 msgstr ""
 
 #: searchform.php:17
