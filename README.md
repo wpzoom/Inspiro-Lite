@@ -10,7 +10,7 @@
 
 A professional Photo and Video focused theme with a modern design. Packed with features including a fullscreen slideshow that supports YouTube, Vimeo & self-hosted videos in background, Page Builder integration and a gallery module, Inspiro is perfect for showing off your portfolio, images and videos.
 
-For more information about Inspiro please go to https://wordpress.org/TODO:add url.
+For more information about Inspiro please go to https://wordpress.org/themes/inspiro/.
 
 Please note:
 More customization options & features are available in the paid version.
