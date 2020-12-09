@@ -1,6 +1,6 @@
 <?php
 /**
- * Twenty Seventeen: Customizer
+ * Inspiro Lite: Customizer
  *
  * @package Inspiro
  * @subpackage Inspiro_Lite

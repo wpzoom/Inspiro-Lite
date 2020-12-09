@@ -1,6 +1,6 @@
 <?php
 /**
- * Twenty Seventeen: Color Patterns
+ * Inspiro Lite: Color Patterns
  *
  * @package Inspiro
  * @subpackage Inspiro_Lite
@@ -14,7 +14,7 @@ function inspiro_custom_colors_css() {
 	$hue = absint( get_theme_mod( 'colorscheme_hue', 250 ) );
 
 	/**
-	 * Filters Twenty Seventeen default saturation level.
+	 * Filters Inspiro Lite default saturation level.
 	 *
 	 * @since Inspiro Lite 1.0.0
 	 *
@@ -25,7 +25,7 @@ function inspiro_custom_colors_css() {
 	$saturation         = $saturation . '%';
 	$css                = '
 /**
- * Twenty Seventeen: Color Patterns
+ * Inspiro Lite: Color Patterns
  *
  * Colors are ordered from dark to light.
  */
@@ -568,7 +568,7 @@ body.colors-custom,
 }';
 
 	/**
-	 * Filters Twenty Seventeen custom colors CSS.
+	 * Filters Inspiro Lite custom colors CSS.
 	 *
 	 * @since Inspiro Lite 1.0.0
 	 *

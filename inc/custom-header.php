@@ -19,7 +19,7 @@ function inspiro_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		/**
-		 * Filters Twenty Seventeen custom-header support arguments.
+		 * Filters Inspiro Lite custom-header support arguments.
 		 *
 		 * @since Inspiro Lite 1.0.0
 		 *
@@ -38,7 +38,7 @@ function inspiro_custom_header_setup() {
 		apply_filters(
 			'inspiro_custom_header_args',
 			array(
-				'default-image'    => get_parent_theme_file_uri( '/assets/images/header.jpg' ),
+				'default-image'    => get_parent_theme_file_uri( '/assets/images/StockSnap_U94B4HVBAO.jpg' ),
 				'width'            => 2000,
 				'height'           => 1200,
 				'flex-height'      => true,
@@ -51,8 +51,8 @@ function inspiro_custom_header_setup() {
 	register_default_headers(
 		array(
 			'default-image' => array(
-				'url'           => '%s/assets/images/header.jpg',
-				'thumbnail_url' => '%s/assets/images/header.jpg',
+				'url'           => '%s/assets/images/StockSnap_U94B4HVBAO.jpg',
+				'thumbnail_url' => '%s/assets/images/StockSnap_U94B4HVBAO.jpg',
 				'description'   => __( 'Default Header Image', 'inspiro' ),
 			),
 		)

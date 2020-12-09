@@ -18,15 +18,15 @@ More customization options & features are available in the paid version.
 ## Installation ##
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in Twenty Seventeen in the search form and press the 'Enter' key on your keyboard.
+2. Type in Inspiro Lite in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
 4. Go to https://wordpress.org/support/article/twenty-seventeen/ for a guide on how to customize this theme.
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 ## Copyright ##
 
-Twenty Seventeen WordPress Theme, Copyright 2016-2020 WordPress.org
-Twenty Seventeen is distributed under the terms of the GNU GPL
+Inspiro Lite WordPress Theme, Copyright 2016-2020 WordPress.org
+Inspiro Lite is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -38,7 +38,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Twenty Seventeen bundles the following third-party resources:
+Inspiro Lite bundles the following third-party resources:
 
 HTML5 Shiv, Copyright 2014 Alexander Farkas
 Licenses: MIT/GPL2

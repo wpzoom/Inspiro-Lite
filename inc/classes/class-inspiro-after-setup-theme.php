@@ -175,102 +175,15 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
             // Add support for responsive embeds.
             add_theme_support( 'responsive-embeds' );
 
-            // TODO: Add starter content
-            // // Define and register starter content to showcase the theme on new sites.
-            // $starter_content = array(
-            //     'widgets'     => array(
-            //         // Place three core-defined widgets in the sidebar area.
-            //         'sidebar' => array(
-            //             'search',
-            //             'text_about',
-            //             'text_business_info',
-            //         ),
-
-            //         // Add the core-defined business info widget to the footer 1 area.
-            //         'footer_1' => array(
-            //             'text_business_info',
-            //         ),
-
-            //         // Put two core-defined widgets in the footer 2 area.
-            //         'footer_2' => array(
-            //             'text_about',
-            //             'search',
-            //         ),
-            //     ),
-
-            //     // Specify the core-defined pages to create and add custom thumbnails to some of them.
-            //     'posts'       => array(
-            //         'home',
-            //         'about'            => array(
-            //             'thumbnail' => '{{image-sandwich}}',
-            //         ),
-            //         'contact'          => array(
-            //             'thumbnail' => '{{image-espresso}}',
-            //         ),
-            //         'blog'             => array(
-            //             'thumbnail' => '{{image-coffee}}',
-            //         ),
-            //         'homepage-section' => array(
-            //             'thumbnail' => '{{image-espresso}}',
-            //         ),
-            //     ),
-
-            //     // Create the custom image attachments used as post thumbnails for pages.
-            //     'attachments' => array(
-            //         'image-espresso' => array(
-            //             'post_title' => _x( 'Espresso', 'Theme starter content', 'inspiro' ),
-            //             'file'       => 'assets/images/espresso.jpg', // URL relative to the template directory.
-            //         ),
-            //         'image-sandwich' => array(
-            //             'post_title' => _x( 'Sandwich', 'Theme starter content', 'inspiro' ),
-            //             'file'       => 'assets/images/sandwich.jpg',
-            //         ),
-            //         'image-coffee'   => array(
-            //             'post_title' => _x( 'Coffee', 'Theme starter content', 'inspiro' ),
-            //             'file'       => 'assets/images/coffee.jpg',
-            //         ),
-            //     ),
-
-            //     // Default to a static front page and assign the front and posts pages.
-            //     'options'     => array(
-            //         'show_on_front'  => 'page',
-            //         'page_on_front'  => '{{home}}',
-            //         'page_for_posts' => '{{blog}}',
-            //     ),
-
-            //     // Set the front page section theme mods to the IDs of the core-registered pages.
-            //     'theme_mods'  => array(
-            //         'panel_1' => '{{homepage-section}}',
-            //         'panel_2' => '{{about}}',
-            //         'panel_3' => '{{blog}}',
-            //         'panel_4' => '{{contact}}',
-            //     ),
-
-            //     // Set up nav menus for each of the two areas registered in the theme.
-            //     'nav_menus'   => array(
-            //         // Assign a menu to the "primary" location.
-            //         'primary'   => array(
-            //             'name'  => __( 'Main Menu', 'inspiro' ),
-            //             'items' => array(
-            //                 'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
-            //                 'page_about',
-            //                 'page_blog',
-            //                 'page_contact',
-            //             ),
-            //         ),
-            //     ),
-            // );
-
-            // /**
-            //  * Filters Inspiro array of starter content.
-            //  *
-            //  * @since Inspiro 1.0.0
-            //  *
-            //  * @param array $starter_content Array of starter content.
-            //  */
-            // $starter_content = apply_filters( 'inspiro_starter_content', $starter_content );
-
-            // add_theme_support( 'starter-content', $starter_content );
+            /*
+             * Adds starter content to highlight the theme on fresh sites.
+             * This is done conditionally to avoid loading the starter content on every
+             * page load, as it is a one-off operation only needed once in the customizer.
+             */
+            if ( is_customize_preview() ) {
+                require get_template_directory() . '/inc/starter-content.php';
+                add_theme_support( 'starter-content', inspiro_get_starter_content() );
+            }
         }
 
         /**

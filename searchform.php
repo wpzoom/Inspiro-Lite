@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for displaying search forms in Twenty Seventeen
+ * Template for displaying search forms in Inspiro Lite
  *
  * @package Inspiro
  * @subpackage Inspiro_Lite
