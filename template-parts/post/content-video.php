@@ -20,6 +20,11 @@
 	?>
 	<header class="entry-header">
 		<?php
+		if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) ) {
+			echo '<div class="inner-wrap">';
+		}
+		?>
+		<?php
 		if ( 'post' === get_post_type() ) {
 			echo '<div class="entry-meta">';
 			if ( is_single() ) {
@@ -36,6 +41,11 @@
 			the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 		} else {
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		}
+		?>
+		<?php
+		if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) ) {
+			echo '</div><!-- .inner-wrap -->';
 		}
 		?>
 	</header><!-- .entry-header -->

@@ -14,7 +14,9 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php _e( 'Nothing Found', 'inspiro' ); ?></h1>
+		<div class="inner-wrap">
+			<h1 class="page-title"><?php _e( 'Nothing Found', 'inspiro' ); ?></h1>
+		</div>
 	</header>
 	<div class="page-content">
 		<?php

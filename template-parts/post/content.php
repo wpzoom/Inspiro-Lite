@@ -37,7 +37,7 @@
 	<header class="entry-header">
 
 		<?php
-		if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) && has_post_thumbnail( get_the_ID() ) ) {
+		if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) ) {
 			echo '<div class="inner-wrap">';
 		}
 		?>
@@ -61,7 +61,7 @@
 			echo '</div><!-- .entry-meta -->';
 		}
 
-		if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) && has_post_thumbnail( get_the_ID() ) ) {
+		if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) ) {
 			echo '</div><!-- .inner-wrap -->';
 		}
 		?>
