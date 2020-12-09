@@ -512,12 +512,17 @@ button,
 input,
 select,
 textarea {
-    color: #333;
+    margin: 0;
+    padding: 0;
     font-family: "Libre Franklin", sans-serif;
     font-size: 16px;
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.66;
+    background-repeat: no-repeat;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.8;
+    color: #444;
 }
 
 h1,
@@ -1806,6 +1811,13 @@ body.side-nav-open .side-nav__scrollable-container {
 --------------------------------------------------------------*/
 html {
     box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 *,
@@ -1825,17 +1837,24 @@ body {
     word-wrap: break-word;
 }
 
+.wrap,
 .inner-wrap {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1000px;
+    max-width: 1200px;
     padding-left: 2em;
     padding-right: 2em;
 }
 
+.wrap:before, .wrap:after,
+.inner-wrap:before,
 .inner-wrap:after {
     content: "";
     display: table;
+}
+
+.wrap:after,
+.inner-wrap:after {
     clear: both;
 }
 
