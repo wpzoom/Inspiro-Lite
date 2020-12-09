@@ -22,6 +22,21 @@
 			$( '.site-header .custom-logo-text' ).text( to );
 		});
 	});
+	wp.customize( 'post_share_label_twitter', function( value ) {
+		value.bind( function( to ) {
+			$( '.entry-footer .share-links a.inspiro-share-on-twitter' ).text( to );
+		});
+	});
+	wp.customize( 'post_share_label_facebook', function( value ) {
+		value.bind( function( to ) {
+			$( '.entry-footer .share-links a.inspiro-share-on-facebook' ).text( to );
+		});
+	});
+	wp.customize( 'post_share_label_linkedin', function( value ) {
+		value.bind( function( to ) {
+			$( '.entry-footer .share-links a.inspiro-share-on-linkedin' ).text( to );
+		});
+	});
 
 	// Header text color.
 	wp.customize( 'header_textcolor', function( value ) {

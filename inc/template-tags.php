@@ -150,30 +150,33 @@ if ( ! function_exists( 'inspiro_entry_footer' ) ) :
 			    '</div>'
 			);
 
-			$share_links = sprintf(
-				'<a href="https://twitter.com/intent/tweet?url=%s&text=%s" target="_blank" title="%s" class="inspiro-share-on-twitter">%s</a>',
-				urlencode( get_permalink() ),
-				urlencode( get_the_title() ),
-				esc_attr__( 'Tweet this on Twitter', 'inspiro' ),
-				esc_attr__( 'Share on Twitter', 'inspiro' )
-			);
+			if ( get_theme_mod( 'post_share' ) ) {
+				
+				$share_links = sprintf(
+					'<a href="https://twitter.com/intent/tweet?url=%s&text=%s" target="_blank" title="%s" class="inspiro-share-on-twitter">%s</a>',
+					urlencode( get_permalink() ),
+					urlencode( get_the_title() ),
+					esc_attr__( 'Tweet this on Twitter', 'inspiro' ),
+					get_theme_mod( 'post_share_label_twitter' )
+				);
 
-			$share_links .= sprintf(
-				'<a href="https://facebook.com/sharer.php?u=%s&t=%s" target="_blank" title="%s" class="inspiro-share-on-facebook">%s</a>',
-				urlencode( get_permalink() ),
-				urlencode( get_the_title() ),
-				esc_attr__( 'Share this on Facebook', 'wpzoom' ),
-				esc_attr__( 'Share on Facebook', 'wpzoom' )
-			);
+				$share_links .= sprintf(
+					'<a href="https://facebook.com/sharer.php?u=%s&t=%s" target="_blank" title="%s" class="inspiro-share-on-facebook">%s</a>',
+					urlencode( get_permalink() ),
+					urlencode( get_the_title() ),
+					esc_attr__( 'Share this on Facebook', 'wpzoom' ),
+					get_theme_mod( 'post_share_label_facebook' )
+				);
 
-            $share_links .= sprintf(
-            	'<a href="https://www.linkedin.com/cws/share?url=%s" target="_blank" title="%s" class="inspiro-share-on-linkedin">%s</a>',
-            	urlencode( get_permalink() ),
-            	esc_attr__( 'Share this on LinkedIn', 'wpzoom' ),
-            	esc_attr__( 'Share on LinkedIn', 'wpzoom' ),
-            );
+	            $share_links .= sprintf(
+	            	'<a href="https://www.linkedin.com/cws/share?url=%s" target="_blank" title="%s" class="inspiro-share-on-linkedin">%s</a>',
+	            	urlencode( get_permalink() ),
+	            	esc_attr__( 'Share this on LinkedIn', 'wpzoom' ),
+	            	get_theme_mod( 'post_share_label_linkedin' )
+	            );
 
-			echo '<div class="share-links"><h4 class="section-title">' . __( 'Share', 'wpzoom' ) . '</h4>' . $share_links . '</div>';
+				echo '<div class="share-links"><h4 class="section-title">' . __( 'Share', 'wpzoom' ) . '</h4>' . $share_links . '</div>';
+			}
 
 			echo sprintf(
 				'<div class="post-author"><h4 class="section-title">%s</h4>%s<span>%s</span>%s</div>',
