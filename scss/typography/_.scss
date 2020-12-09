@@ -19,17 +19,16 @@ h6 {
     color: #000;
     clear: both;
     line-height: 1.4;
-    margin: 0 0 0.75em;
-    padding: 1.5em 0 0;
+
+    &:first-child {
+        padding-top: 0;
+    }
 }
 
-h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child,
-h6:first-child {
-    padding-top: 0;
+h1,
+h2,
+h3 {
+    padding-top: em(10);
 }
 
 h1 {
@@ -49,19 +48,17 @@ h3 {
 
 h4 {
     @include font-size($font-size-root);
-    font-weight: 800;
+    font-weight: 700;
 }
 
 h5 {
     @include font-size(14);
-    font-weight: 800;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+    font-weight: 700;
 }
 
 h6 {
     @include font-size(13);
-    font-weight: 800;
+    font-weight: 700;
 }
 
 p {

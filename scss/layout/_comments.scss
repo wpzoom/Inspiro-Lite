@@ -60,6 +60,7 @@
 .commentlist {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 
     li {
         list-style-type: none
@@ -106,7 +107,7 @@
         color: #222;
         @include font-size(20);
         font-style: normal;
-        font-weight: bold;
+        font-weight: 700;
     }
 
     .fn a:hover {

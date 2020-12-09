@@ -51,14 +51,82 @@ p > object:only-child {
     max-width: 100%;
 }
 
-.wp-caption img[class*="wp-image-"] {
+.wp-caption {
+    img[class*="wp-image-"] {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .wp-caption-text {
+        color: #8c888c;
+        @include font-size(16);
+        margin: em(15) 0;
+        font-style: italic;
+    }
+
+    &.aligncenter {
+        margin: 0 auto 15px
+    }
+}
+
+.entry-content .aligncenter,
+div.aligncenter {
     display: block;
+    clear: both;
     margin-left: auto;
     margin-right: auto;
 }
 
-.wp-caption .wp-caption-text {
-    margin: 0.8075em 0;
+.alignleft,
+.entry-content .alignleft {
+    float: left;
+    margin-right: 15px;
+}
+
+.alignright,
+.entry-content .alignright {
+    float: right;
+    margin-left: 15px;
+}
+
+.fullimg,
+.fullimg figure {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+    max-width: none;
+}
+
+.fullimg img,
+.fullimg figure img {
+    width: 100% !important;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.entry-content {
+    .wp-caption {
+        width: auto;
+        text-align: center;
+
+        img {
+            background: none;
+            border: 0 none;
+        }
+    }
+
+    .fullimg .wp-caption.aligncenter {
+        margin-bottom: 0
+    }
+
+    .fullimg .aligncenter {
+        margin-bottom: 0
+    }
+
+    .fullimg p {
+        margin-bottom: 0
+    }
 }
 
 /* Media Elements */
@@ -173,7 +241,7 @@ p > object:only-child {
 .site-content .wp-playlist-current-item .wp-playlist-item-artist {
     font-size: 10px;
     font-size: 0.625rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 0.1818em;
     text-transform: uppercase;
 }

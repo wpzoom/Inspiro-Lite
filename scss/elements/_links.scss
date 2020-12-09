@@ -103,6 +103,19 @@ a:hover .nav-title,
     color: $color-link-hover;
 }
 
+.entry-content .more-link,
+.entry-content .more_link,
+.entry-summary .more-link,
+.entry-summary .more_link {
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+
+    &:hover {
+        text-decoration: none;
+        color: $primary-color;
+        border-color: $primary-color;
+    }
+}
+
 /* Fixes linked images */
 .entry-content a img,
 .comment-content a img,

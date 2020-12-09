@@ -3,7 +3,7 @@
 .btn,
 .more-link,
 .more_link,
-.side-nav .search-form .search-submit{
+.side-nav .search-form .search-submit {
     font-family: $font-headings;
     font-weight: bold;
     display: inline-block;
@@ -22,11 +22,9 @@
 
 .button:hover,
 .btn:hover,
-.more-link:hover,
-.more_link:hover,
 .side-nav .search-form .search-submit:hover,
 .site-footer .search-form .search-submit:hover,
-.infinite-scroll #infinite-handle span:hover  {
+.infinite-scroll #infinite-handle span:hover {
     text-decoration: none;
     color: $primary-color;
     border-color: $primary-color;
@@ -38,8 +36,6 @@
     color: $primary-color;
     border-color: $primary-color;
 }
-
-
 
 div.wpforms-container-full .wpforms-form input[type=submit],
 div.wpforms-container-full .wpforms-form button[type=submit],

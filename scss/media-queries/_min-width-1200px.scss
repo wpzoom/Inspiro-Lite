@@ -1,0 +1,10 @@
+@media (min-width: em(1200)) {
+    .single {
+        .entry-content .alignwide {
+            margin-left: -125px;
+            margin-right: -125px;
+            max-width: 1200px;
+            width: 1200px;
+        }
+    }
+}

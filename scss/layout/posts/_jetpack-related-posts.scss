@@ -1,0 +1,59 @@
+/* Jetpack Related Posts */
+
+h4.jp-relatedposts-post-title {
+    margin: 10px 0 5px !important;
+    font-weight: bold;
+    position: relative;
+}
+
+.single {
+    #jp-relatedposts {
+        margin-bottom: 0;
+
+        .jp-relatedposts-items-visual h4.jp-relatedposts-post-title {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+
+        .jp-relatedposts-items-visual h4.jp-relatedposts-post-title a {
+            color: #171615;
+            font-weight: bold;
+        }
+
+        .jp-relatedposts-items-visual h4.jp-relatedposts-post-title a:hover {
+            text-decoration: none;
+            color: $primary-color;
+        }
+
+        .jp-relatedposts-items .jp-relatedposts-post:hover .jp-relatedposts-post-title a {
+            text-decoration: none;
+        }
+
+        h3.jp-relatedposts-headline {
+            display: block;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            float: none;
+            color: #666;
+            font-size: 16px;
+            font-weight: normal;
+            font-family: $font-headings;
+            text-transform: uppercase;
+        }
+
+        h3.jp-relatedposts-headline em {
+            font-weight: normal;
+        }
+
+        h3.jp-relatedposts-headline em:before {
+            display: none;
+        }
+
+        .jp-relatedposts-items-visual .jp-relatedposts-post {
+            opacity: 1;
+            margin-bottom: 0;
+        }
+    }
+}

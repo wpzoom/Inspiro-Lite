@@ -20,6 +20,7 @@
             text-decoration: none;
             text-transform: uppercase;
             @include font-size(14);
+            font-family: inherit;
             color: #fff;
             padding: 5px 18px;
             border-radius: 3px;
@@ -45,7 +46,10 @@
 
     .post-author {
         .section-title {
-            text-indent: -9999;
+            clip: rect(1px, 1px, 1px, 1px);
+            overflow: hidden;
+            height: 1px;
+            margin-bottom: em(48);
         }
 
         img {
