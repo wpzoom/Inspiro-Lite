@@ -89,10 +89,10 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
              * Register image sizes.
              */
             add_image_size( 'inspiro-featured-image', 2000 );
-            add_image_size( 'inspiro-thumbnail-avatar', 100, 100, true );
             add_image_size( 'inspiro-recent-thumbnail', 345, 192, true );
             add_image_size( 'inspiro-recent-thumbnail-retina', 690, 384, true );
             add_image_size( 'inspiro-entry-cover', 1800 );
+            add_image_size( 'inspiro-loop', 950, 320, true );
 
             // Set the default content width.
             $GLOBALS['content_width'] = 950;
@@ -204,7 +204,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 
             // Check if layout is full width.
             if ( 'full' === $blog_layout ) {
-                if ( inspiro_is_frontpage() ) {
+                if ( inspiro_is_frontpage() && ! is_active_sidebar( 'blog-sidebar' ) ) {
                     $content_width = 1200;
                 } elseif ( is_page() ) {
                     $content_width = 950;
