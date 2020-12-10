@@ -137,3 +137,22 @@
     font-family: inherit;
     font-size: 14px;
 }
+
+.bypostauthor {
+    padding: 2em;
+    margin-bottom: 1em;
+
+    .bypostauthor {
+        background: transparent;
+        margin-bottom: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    
+    li {
+        background: transparent;
+        margin-bottom: 0;
+        padding: 0 0 0 2em;
+    }
+}

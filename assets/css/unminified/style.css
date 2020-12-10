@@ -3213,6 +3213,25 @@ h4.jp-relatedposts-post-title {
     font-size: 14px;
 }
 
+.bypostauthor {
+    padding: 2em;
+    margin-bottom: 1em;
+}
+
+.bypostauthor .bypostauthor {
+    background: transparent;
+    margin-bottom: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.bypostauthor li {
+    background: transparent;
+    margin-bottom: 0;
+    padding: 0 0 0 2em;
+}
+
 /*--------------------------------------------------------------
 15.0 Widgets
 --------------------------------------------------------------*/
