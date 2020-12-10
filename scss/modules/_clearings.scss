@@ -1,5 +1,7 @@
 .clear:before,
 .clear:after,
+.entry-wrapper:before,
+.entry-wrapper:after,
 .entry-content:before,
 .entry-content:after,
 .entry-footer:before,
@@ -29,6 +31,7 @@
 }
 
 .clear:after,
+.entry-wrapper:after,
 .entry-content:after,
 .entry-footer:after,
 .comment-content:after,

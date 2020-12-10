@@ -26,6 +26,24 @@ body:not(.inspiro-front-page) .entry-header {
     padding-top: 0;
 }
 
+body:not(.page-layout-sidebar-right) {
+    #primary {
+        max-width: 950px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &.blog .site-main article,
+    &.archive .site-main article,
+    &.search .site-main article {
+        text-align: center;
+
+        .entry-title {
+            text-align: center;
+        }
+    }
+}
+
 .blog,
 .archive,
 .search {

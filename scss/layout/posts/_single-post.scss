@@ -1,11 +1,18 @@
 /* Single Post */
 
-.single .entry-content,
-.page:not(.inspiro-front-page) .entry-content,
+.single .entry-wrapper {
+    max-width: 1200px;
+    margin: em(60) auto;
+    padding-left: em(32);
+    padding-right: em(32);
+}
+
 .single .entry-footer,
 .page:not(.inspiro-front-page) .entry-footer {
     margin: em(45) auto;
-    max-width: 950px;
+    max-width: 970px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .page,
@@ -77,11 +84,6 @@
 
 .page,
 .single {
-    .inner-wrap {
-        max-width: 950px;
-        padding: 0;
-    }
-
     article:not(.has-post-thumbnail) {
         .inner-wrap {
             margin: em(70) auto 0;

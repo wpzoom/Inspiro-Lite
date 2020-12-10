@@ -1,0 +1,35 @@
+/* Header Social Icons */
+
+.header_social {
+    float: right;
+    text-align: right;
+    margin: 0 0 0 10px;
+
+    .widget {
+        margin: 0;
+
+        .title {
+            display: none;
+        }
+
+        .zoom-social-icons-list--no-labels{
+            &.zoom-social-icons-list--without-canvas {
+                margin: 0;
+            }
+
+            .zoom-social_icons-list__item {
+                margin-top: 0;
+                margin-bottom: 0;
+                padding: em(6) 0;
+            }
+        }
+    }
+
+    .zoom-social-icons-list--without-canvas .socicon {
+        transition: 0.3s ease all;
+    }
+
+    .zoom-social-icons-list .socicon:hover {
+        opacity: 0.8;
+    }
+}

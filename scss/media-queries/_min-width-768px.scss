@@ -72,6 +72,20 @@
                 margin-bottom: em(32);
                 border-left: 1px solid $color-border;
             }
+
+            &.page,
+            &.single {
+                .entry-wrapper {
+                    .entry-content {
+                        float: left;
+                        width: 75%;
+                        padding-right: 4%;
+                    }
+                }
+                .entry-footer {
+                    clear: left;
+                }
+            }
         }
     }
 

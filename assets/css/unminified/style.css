@@ -448,6 +448,8 @@ template {
 --------------------------------------------------------------*/
 .clear:before,
 .clear:after,
+.entry-wrapper:before,
+.entry-wrapper:after,
 .entry-content:before,
 .entry-content:after,
 .entry-footer:before,
@@ -478,6 +480,7 @@ template {
 }
 
 .clear:after,
+.entry-wrapper:after,
 .entry-content:after,
 .entry-footer:after,
 .comment-content:after,
@@ -1806,6 +1809,39 @@ body.side-nav-open .side-nav__scrollable-container {
     z-index: 90;
 }
 
+/* Header Social Icons */
+.header_social {
+    float: right;
+    text-align: right;
+    margin: 0 0 0 10px;
+}
+
+.header_social .widget {
+    margin: 0;
+}
+
+.header_social .widget .title {
+    display: none;
+}
+
+.header_social .widget .zoom-social-icons-list--no-labels.zoom-social-icons-list--without-canvas {
+    margin: 0;
+}
+
+.header_social .widget .zoom-social-icons-list--no-labels .zoom-social_icons-list__item {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0.375em 0;
+}
+
+.header_social .zoom-social-icons-list--without-canvas .socicon {
+    transition: 0.3s ease all;
+}
+
+.header_social .zoom-social-icons-list .socicon:hover {
+    opacity: 0.8;
+}
+
 /*--------------------------------------------------------------
 13.0 Layout
 --------------------------------------------------------------*/
@@ -2277,6 +2313,7 @@ body.page:not(.inspiro-front-page) .entry-title {
 
 .entry-header .entry-title {
     margin-bottom: 20px;
+    margin-top: 0;
 }
 
 .entry-title {
@@ -2488,6 +2525,24 @@ body:not(.inspiro-front-page) .entry-header {
     padding-top: 0;
 }
 
+body:not(.page-layout-sidebar-right) #primary {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body:not(.page-layout-sidebar-right).blog .site-main article,
+body:not(.page-layout-sidebar-right).archive .site-main article,
+body:not(.page-layout-sidebar-right).search .site-main article {
+    text-align: center;
+}
+
+body:not(.page-layout-sidebar-right).blog .site-main article .entry-title,
+body:not(.page-layout-sidebar-right).archive .site-main article .entry-title,
+body:not(.page-layout-sidebar-right).search .site-main article .entry-title {
+    text-align: center;
+}
+
 .blog .entry-meta a,
 .archive .entry-meta a,
 .search .entry-meta a {
@@ -2517,12 +2572,19 @@ body:not(.inspiro-front-page) .entry-header {
 }
 
 /* Single Post */
-.single .entry-content,
-.page:not(.inspiro-front-page) .entry-content,
+.single .entry-wrapper {
+    max-width: 1200px;
+    margin: 3.75em auto;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
 .single .entry-footer,
 .page:not(.inspiro-front-page) .entry-footer {
     margin: 2.8125em auto;
-    max-width: 950px;
+    max-width: 970px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .page .entry-cover-image,
@@ -2595,12 +2657,6 @@ body:not(.inspiro-front-page) .entry-header {
 .page .entry-cover-image .single-featured-image-header img,
 .single .entry-cover-image .single-featured-image-header img {
     width: 100%;
-}
-
-.page .inner-wrap,
-.single .inner-wrap {
-    max-width: 950px;
-    padding: 0;
 }
 
 .page article:not(.has-post-thumbnail) .inner-wrap,
@@ -2898,27 +2954,16 @@ h4.jp-relatedposts-post-title {
 /*--------------------------------------------------------------
 13.5 Pages
 --------------------------------------------------------------*/
-.page-header {
-    padding-bottom: 2em;
+/* Pages */
+/* 404 page */
+.error404 .page-content,
+.no-results {
+    padding-bottom: 3.5em;
 }
 
-.page .entry-header .edit-link {
-    font-size: 14px;
-    font-size: 0.875rem;
-}
-
-.search .page .entry-header .edit-link {
-    font-size: 11px;
-    font-size: 0.6875rem;
-}
-
-.page-links {
-    clear: both;
-    margin: 0 0 1.5em;
-}
-
-.page:not(.home) #content {
-    padding-bottom: 1.5em;
+.error404 .page-content .search-form,
+.search .page-content .search-form {
+    margin-bottom: 3em;
 }
 
 /*--------------------------------------------------------------
@@ -4094,6 +4139,14 @@ div.aligncenter {
         margin-bottom: 2em;
         border-left: 1px solid #f1f2f2;
     }
+    .page-layout-sidebar-right.has-sidebar.page .entry-wrapper .entry-content, .page-layout-sidebar-right.has-sidebar.single .entry-wrapper .entry-content {
+        float: left;
+        width: 75%;
+        padding-right: 4%;
+    }
+    .page-layout-sidebar-right.has-sidebar.page .entry-footer, .page-layout-sidebar-right.has-sidebar.single .entry-footer {
+        clear: left;
+    }
     .error404 #primary,
     .search #primary,
     .archive #primary {
@@ -4255,6 +4308,9 @@ div.aligncenter {
 @media screen and (max-width: 37.5em) {
     .admin-bar #header.headroom--not-top {
         margin-top: 0;
+    }
+    .header_social {
+        display: none;
     }
 }
 
