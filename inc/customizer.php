@@ -197,12 +197,57 @@ function inspiro_customize_register( $wp_customize ) {
 	);
 
 	/**
+	 * Blog Post Options.
+	 */
+	$wp_customize->add_panel(
+		'blog_post_options_panel',
+		array(
+		 	'priority'       	=> 51,
+		  	'capability'     	=> 'edit_theme_options',
+		  	'title'          	=> __( 'Blog Post Options', 'inspiro' ),
+		  	'active_callback' 	=> 'inspiro_is_view_is_blog',
+		)
+	);
+
+	$wp_customize->add_section(
+		'blog_post_options',
+		array(
+			'title'    		=> __( 'Post Options', 'inspiro' ),
+	        'capability' 	=> 'edit_theme_options',
+	        'panel'			=> 'blog_post_options_panel',
+		)
+	);
+
+	$wp_customize->add_setting(
+		'display_content',
+		array(
+			'default'  			=> 'excerpt',
+			'sanitize_callback' => 'inspiro_sanitize_display_content',
+			'transport'     	=> 'refresh',
+		)
+	);
+
+	$wp_customize->add_control(
+		'display_content',
+		array(
+			'label'           => __( 'Content', 'inspiro' ),
+			'section'         => 'blog_post_options',
+			'type'            => 'radio',
+			'choices'         => array(
+				'excerpt' 		=> __( 'Excerpt', 'inspiro' ),
+				'full-content'  => __( 'Full Content', 'inspiro' ),
+				'none'  		=> __( 'None', 'inspiro' ),
+			),
+		)
+	);
+
+	/**
 	 * Single Post Options.
 	 */
 	$wp_customize->add_panel(
 		'single_post_options_panel',
 		array(
-		 	'priority'       	=> 51,
+		 	'priority'       	=> 52,
 		  	'capability'     	=> 'edit_theme_options',
 		  	'title'          	=> __( 'Single Post Options', 'inspiro' ),
 		  	'active_callback' 	=> 'inspiro_is_view_is_single',
@@ -329,6 +374,21 @@ function inspiro_sanitize_colorscheme( $input ) {
 }
 
 /**
+ * Sanitize the display content.
+ *
+ * @param string $input Content to display.
+ */
+function inspiro_sanitize_display_content( $input ) {
+	$valid = array( 'excerpt', 'full-content', 'none' );
+
+	if ( in_array( $input, $valid, true ) ) {
+		return $input;
+	}
+
+	return 'excerpt';
+}
+
+/**
  * Render the site title for the selective refresh partial.
  *
  * @since Inspiro Lite 1.0.0
@@ -359,6 +419,13 @@ function inspiro_customize_partial_blogdescription() {
  */
 function inspiro_is_static_front_page() {
 	return ( is_front_page() && ! is_home() );
+}
+
+/**
+ * Return whether we're previewing the blog page.
+ */
+function inspiro_is_view_is_blog() {
+	return is_home();
 }
 
 /**
