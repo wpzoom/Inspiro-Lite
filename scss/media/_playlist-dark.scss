@@ -1,0 +1,37 @@
+.wp-playlist-dark {
+    background: #222;
+    border-color: #333;
+
+    .mejs-container .mejs-controls {
+        background-color: #333;
+    }
+    .wp-playlist-caption {
+        color: #fff;
+    }
+    .wp-playlist-current-item .wp-playlist-item-album {
+        color: #eee;
+    }
+    .wp-playlist-current-item .wp-playlist-item-artist {
+        color: #aaa;
+    }
+    .wp-playlist-playing {
+        background-color: #333;
+    }
+    .wp-playlist-item {
+        border-bottom: 1px dotted #555;
+        -webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
+        transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+            border-bottom-color: rgba(0, 0, 0, 0);
+            background-color: #aaa;
+            color: #222;
+        }
+    }
+    a.wp-playlist-caption:hover,
+    .wp-playlist-item:hover a,
+    .wp-playlist-item:focus a {
+        color: #222;
+    }
+}

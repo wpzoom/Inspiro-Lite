@@ -47,7 +47,7 @@
     .previous-content {
         position: relative;
         z-index: 50;
-        max-width: 1200px;
+        max-width: $content-width;
         margin: 0 auto;
 
         .nav-subtitle {

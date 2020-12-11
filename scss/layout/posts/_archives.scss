@@ -10,7 +10,7 @@
         display: block;
         width: 130px;
         height: 1px;
-        background: #e6e6e6;
+        background: $color-border;
         margin: 50px auto 0;
     }
 }
@@ -28,7 +28,7 @@ body:not(.inspiro-front-page) .entry-header {
 
 body:not(.page-layout-sidebar-right) {
     #primary {
-        max-width: 950px;
+        max-width: $content-width-small;
         margin-left: auto;
         margin-right: auto;
     }

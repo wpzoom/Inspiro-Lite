@@ -3,7 +3,6 @@
 .entry-content blockquote.alignleft,
 .entry-content blockquote.alignright {
     color: #666;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    @include font-size(14);
     width: 48%;
 }

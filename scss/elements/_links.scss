@@ -1,5 +1,5 @@
 a {
-    transition: 0.1s ease all;
+    transition: all 0.1s ease-in;
     text-decoration: none;
     color: $color-link;
 
@@ -24,10 +24,7 @@ a {
 .site-footer .widget-area a,
 .posts-navigation a,
 .widget_authors a strong {
-    -webkit-transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
-    transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
-    transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
-    transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
+    transition: color 80ms ease-in;
 }
 
 .entry-title a,
@@ -52,10 +49,7 @@ a .nav-title,
 .site-footer .widget-area ul li a,
 .site-footer .widget-area ul li a {
     text-decoration: none;
-    -webkit-transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
-    transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
-    transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
-    transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
+    transition: color 80ms ease-in;
 }
 
 .entry-content a:focus,

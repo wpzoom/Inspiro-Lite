@@ -117,7 +117,7 @@ body.page:not(.inspiro-front-page) .entry-title {
 }
 
 .entry-content {
-    line-height: 1.9;
+    line-height: $entry-content-line-height;
 
     p {
         margin-bottom: em(28);

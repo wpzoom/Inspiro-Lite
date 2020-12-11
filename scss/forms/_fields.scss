@@ -11,7 +11,7 @@ label {
 
 input, textarea {
     padding: 11px 10px;
-    font-size: 16px;
+    @include font-size($font-size-root);
     background: white;
     border: 2px solid rgba(68, 68, 68, 0.19);
     width: auto;

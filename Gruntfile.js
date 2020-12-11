@@ -78,6 +78,7 @@ module.exports = function(grunt) {
         files: [
           {
             'assets/css/unminified/style.css': 'scss/style.scss',
+            'assets/css/unminified/editor-style.css': 'scss/editor-style.scss',
           },
           {
             expand: true,

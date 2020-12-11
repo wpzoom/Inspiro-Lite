@@ -11,7 +11,7 @@ textarea {
     background-repeat: no-repeat;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    line-height: 1.8;
+    line-height: $font-line-height-body;
     color: #444;
 }
 
@@ -101,9 +101,9 @@ address {
 
 pre {
     background: #eee;
-    font-family: "Courier 10 Pitch", Courier, monospace;
+    font-family: $font-pre;
     @include font-size(15);
-    line-height: 1.6;
+    line-height: $font-line-height-pre;
     margin-bottom: 1.6em;
     max-width: 100%;
     overflow: auto;
@@ -114,7 +114,7 @@ code,
 kbd,
 tt,
 var {
-    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    font-family: $font-code;
     @include font-size(15);
 }
 
@@ -126,7 +126,7 @@ acronym {
 
 mark,
 ins {
-    background: #eee;
+    background: $color-background-ins;
     text-decoration: none;
 }
 

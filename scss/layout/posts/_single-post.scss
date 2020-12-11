@@ -1,7 +1,7 @@
 /* Single Post */
 
 .single .entry-wrapper {
-    max-width: 1200px;
+    max-width: $content-width;
     margin: em(60) auto;
     padding-left: em(32);
     padding-right: em(32);

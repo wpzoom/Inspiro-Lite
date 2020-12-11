@@ -8,6 +8,7 @@ Description: Inspiro is a theme that suits best for portfolio and photography si
 Version: 1.0.0
 Requires at least: 5.0
 Requires PHP: 5.6
+Tested up to: 5.6
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: inspiro
@@ -405,7 +406,7 @@ template {
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    color: #21759b;
+    color: #444444;
     display: block;
     font-size: 14px;
     font-size: 0.875rem;
@@ -419,6 +420,11 @@ template {
     width: auto;
     z-index: 100000;
     /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+    outline: 0;
 }
 
 /*--------------------------------------------------------------
@@ -653,7 +659,7 @@ acronym {
 
 mark,
 ins {
-    background: #eee;
+    background: #fff9c0;
     text-decoration: none;
 }
 
@@ -1019,6 +1025,7 @@ label {
 input, textarea {
     padding: 11px 10px;
     font-size: 16px;
+    font-size: 1rem;
     background: white;
     border: 2px solid rgba(68, 68, 68, 0.19);
     width: auto;
@@ -1122,7 +1129,7 @@ button:hover, input[type=button]:hover, input[type=reset]:hover, input[type=subm
 7.0 Formatting
 --------------------------------------------------------------*/
 hr {
-    background-color: #bbb;
+    background-color: #eee;
     border: 0;
     height: 1px;
     margin-bottom: 1.5em;
@@ -1202,7 +1209,7 @@ td:last-child {
 10.0 Links
 --------------------------------------------------------------*/
 a {
-    transition: 0.1s ease all;
+    transition: all 0.1s ease-in;
     text-decoration: none;
     color: #0bb4aa;
 }
@@ -1224,7 +1231,7 @@ a:hover, a:active {
 .site-footer .widget-area a,
 .posts-navigation a,
 .widget_authors a strong {
-    transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
+    transition: color 80ms ease-in;
 }
 
 .entry-title a,
@@ -1249,7 +1256,7 @@ a .nav-title,
 .site-footer .widget-area ul li a,
 .site-footer .widget-area ul li a {
     text-decoration: none;
-    transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
+    transition: color 80ms ease-in;
 }
 
 .entry-content a:focus,
@@ -2491,8 +2498,8 @@ body.page:not(.inspiro-front-page) .entry-title {
 .entry-content blockquote.alignleft,
 .entry-content blockquote.alignright {
     color: #666;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    font-size: 14px;
+    font-size: 0.875rem;
     width: 48%;
 }
 
@@ -3052,8 +3059,7 @@ h4.jp-relatedposts-post-title {
     width: 40px;
 }
 
-.social-navigation a:hover,
-.social-navigation a:focus {
+.social-navigation a:hover, .social-navigation a:focus {
     background-color: #333;
 }
 
@@ -3093,7 +3099,7 @@ h4.jp-relatedposts-post-title {
 #respond > h3:after {
     width: 130px;
     content: " ";
-    border-bottom: 1px solid #E6E6E6;
+    border-bottom: 1px solid #e6e6e6;
     bottom: -40px;
     left: 0;
     position: absolute;
@@ -3211,6 +3217,7 @@ h4.jp-relatedposts-post-title {
     text-transform: none;
     font-family: inherit;
     font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .bypostauthor {
@@ -3644,34 +3651,6 @@ p > object:only-child {
     margin-bottom: 0;
 }
 
-.wp-caption,
-.gallery-caption {
-    color: #666;
-    font-size: 13px;
-    font-size: 0.8125rem;
-    font-style: italic;
-    margin-bottom: 1.5em;
-    max-width: 100%;
-}
-
-.wp-caption img[class*="wp-image-"] {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.wp-caption .wp-caption-text {
-    color: #8c888c;
-    font-size: 16px;
-    font-size: 1rem;
-    margin: 0.9375em 0;
-    font-style: italic;
-}
-
-.wp-caption.aligncenter {
-    margin: 0 auto 15px;
-}
-
 .entry-content .aligncenter,
 div.aligncenter {
     display: block;
@@ -3705,6 +3684,35 @@ div.aligncenter {
     width: 100% !important;
     height: auto;
     margin-bottom: 20px;
+}
+
+/* Caption */
+.wp-caption,
+.gallery-caption {
+    color: #666;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    font-style: italic;
+    margin-bottom: 1.5em;
+    max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+    color: #8c888c;
+    font-size: 16px;
+    font-size: 1rem;
+    margin: 0.9375em 0;
+    font-style: italic;
+}
+
+.wp-caption.aligncenter {
+    margin: 0 auto 15px;
 }
 
 .entry-content .wp-caption {
@@ -3761,8 +3769,7 @@ div.aligncenter {
     transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
 }
 
-.site-content .wp-playlist-light .wp-playlist-item:hover,
-.site-content .wp-playlist-light .wp-playlist-item:focus {
+.site-content .wp-playlist-light .wp-playlist-item:hover, .site-content .wp-playlist-light .wp-playlist-item:focus {
     border-bottom-color: rgba(0, 0, 0, 0);
     background-color: #767676;
     color: #fff;
@@ -3805,8 +3812,7 @@ div.aligncenter {
     transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
 }
 
-.site-content .wp-playlist-dark .wp-playlist-item:hover,
-.site-content .wp-playlist-dark .wp-playlist-item:focus {
+.site-content .wp-playlist-dark .wp-playlist-item:hover, .site-content .wp-playlist-dark .wp-playlist-item:focus {
     border-bottom-color: rgba(0, 0, 0, 0);
     background-color: #aaa;
     color: #222;
@@ -3853,9 +3859,7 @@ div.aligncenter {
     border-bottom: none;
 }
 
-.site-content .wp-playlist-item a,
-.site-content .wp-playlist-item a:focus,
-.site-content .wp-playlist-item a:hover {
+.site-content .wp-playlist-item a, .site-content .wp-playlist-item a:focus, .site-content .wp-playlist-item a:hover {
     box-shadow: none;
     background: transparent;
 }
@@ -4156,7 +4160,7 @@ div.aligncenter {
         padding: 0 0 1.25em 4%;
         width: 25%;
         margin-bottom: 2em;
-        border-left: 1px solid #f1f2f2;
+        border-left: 1px solid #e6e6e6;
     }
     .page-layout-sidebar-right.has-sidebar.page .entry-wrapper .entry-content, .page-layout-sidebar-right.has-sidebar.single .entry-wrapper .entry-content {
         float: left;
