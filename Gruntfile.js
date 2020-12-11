@@ -58,13 +58,31 @@ module.exports = function(grunt) {
       // },
     },
 
-    // rtlcss: {
-    //   options: {
-    //     config: {
-
-    //     }
-    //   }
-    // },
+    rtlcss: {
+      options: {
+          // rtlcss options
+          config: {
+            preserveComments: true,
+            greedy: true
+          },
+          // generate source maps
+          map: false
+      },
+      dist: {
+        files: [
+          {
+            expand: true,
+            cwd: 'assets/css/unminified/',
+            src: [
+                '*.css',
+                '!*-rtl.css',
+            ],
+            dest: 'assets/css/unminified',
+            ext: '-rtl.css'
+          },
+        ]
+      }
+  },
 
     sass: {
       options: {
@@ -427,6 +445,7 @@ module.exports = function(grunt) {
     },
   });
 
+  // Load grunt tasks.
   grunt.loadNpmTasks('grunt-rtlcss');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('@lodder/grunt-postcss');
@@ -458,11 +477,14 @@ module.exports = function(grunt) {
     }
   });
 
+  // rtlcss, you will still need to install ruby and sass on your system manually to run this
+  grunt.registerTask('rtl', ['rtlcss']);
+
   // SASS compile
   grunt.registerTask('scss', ['sass']);
 
   // Style
-  grunt.registerTask('style', ['scss', 'postcss:style']);
+  grunt.registerTask('style', ['scss', 'postcss:style', 'rtl']);
 
   // Lint the "beforeminify" files first, then minify
   grunt.registerTask('jshint-before-minify', ['jshint:beforeminify', 'uglify:js']);
