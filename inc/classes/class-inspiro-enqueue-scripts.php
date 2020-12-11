@@ -43,6 +43,9 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
             // Theme stylesheet.
             wp_enqueue_style( 'inspiro-style', inspiro_get_assets_uri( 'style', 'css' ), array(), INSPIRO_THEME_VERSION );
 
+            // RTL support.
+            wp_style_add_data( 'inspiro-style', 'rtl', 'replace' );
+
             wp_enqueue_script( 'inspiro-lite-js-plugins', inspiro_get_assets_uri( 'plugins', 'js' ), array( 'jquery' ), INSPIRO_THEME_VERSION, true );
 
             wp_enqueue_script( 'inspiro-lite-script', inspiro_get_assets_uri( 'scripts', 'js' ), array( 'inspiro-lite-js-plugins', 'jquery' ), INSPIRO_THEME_VERSION, true );
@@ -60,6 +63,10 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
         function block_editor_styles() {
             // Block styles.
             wp_enqueue_style( 'inspiro-block-editor-style', inspiro_get_assets_uri( 'editor-blocks', 'css' ), array(), INSPIRO_THEME_VERSION );
+
+            // RTL support.
+            wp_style_add_data( 'inspiro-block-editor-style', 'rtl', 'replace' );
+
             // Add custom fonts.
             wp_enqueue_style( 'inspiro-fonts', inspiro_fonts_url(), array(), null );
         }
