@@ -28,9 +28,10 @@ body:not(.inspiro-front-page) .entry-header {
 
 body:not(.page-layout-sidebar-right) {
     #primary {
-        max-width: $content-width-small;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: calc( #{ $content-width-small } + 20px );
+        margin: 0 auto em(48);
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     &.blog .site-main article,

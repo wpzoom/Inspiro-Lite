@@ -17,33 +17,6 @@
     width: 20px;
 }
 
-.page-title {
-    margin-top: em(32);
-    color: #222;
-    @include font-size(26);
-    font-weight: bold;
-    text-align: center;
-    font-family: $font-headings;
-    text-transform: uppercase;
-
-    &:after {
-        display: block;
-        content: " ";
-        width: 130px;
-        height: 1px;
-        background: #E6E6E6;
-        margin: 40px auto 48px;
-    }
-}
-
-body.page:not(.inspiro-front-page) .entry-title {
-    color: #222;
-    font-size: 14px;
-    font-size: 0.875rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
 .home.blog {
     .entry-title {
         margin-top: 0;

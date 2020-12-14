@@ -79,7 +79,10 @@
                     .entry-content {
                         float: left;
                         width: 75%;
+                        max-width: 100%;
                         padding-right: 4%;
+                        padding-left: 0;
+                        margin: 0;
                     }
                 }
                 .entry-footer {

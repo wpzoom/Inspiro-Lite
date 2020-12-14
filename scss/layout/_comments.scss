@@ -1,6 +1,6 @@
 #comments {
     clear: both;
-    max-width: 970px;
+    max-width: calc( #{ $content-width-small } + 20px );
     margin: 0 auto;
     padding: 0 10px;
 }
@@ -25,7 +25,7 @@
 }
 
 #respond {
-    margin-bottom: 85px;
+    margin-bottom: em(85);
 
     h3 {
         margin-top: 100px

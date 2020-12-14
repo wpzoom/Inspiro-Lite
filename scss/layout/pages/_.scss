@@ -1,4 +1,28 @@
 /* Pages */
 
+.page-title,
+.page .entry-title {
+    margin-top: em(32);
+    color: #222;
+    @include font-size(26);
+    font-weight: bold;
+    text-align: center;
+    font-family: $font-headings;
+    text-transform: uppercase;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 130px;
+        height: 1px;
+        background: $color-border;
+        margin: 40px auto 48px;
+    }
+}
+
+.page #comments {
+    padding-left: 0;
+    padding-right: 0;
+}
 
 @import "404";

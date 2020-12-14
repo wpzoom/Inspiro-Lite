@@ -2267,34 +2267,6 @@ body:not(.has-header-image):not(.has-header-video) #scroll-to-content {
     width: 20px;
 }
 
-.page-title {
-    margin-top: 2em;
-    color: #222;
-    font-size: 26px;
-    font-size: 1.625rem;
-    font-weight: bold;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    text-transform: uppercase;
-}
-
-.page-title:after {
-    display: block;
-    content: " ";
-    width: 130px;
-    height: 1px;
-    background: #E6E6E6;
-    margin: 40px auto 48px;
-}
-
-body.page:not(.inspiro-front-page) .entry-title {
-    color: #222;
-    font-size: 14px;
-    font-size: 0.875rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
 .home.blog .entry-title {
     margin-top: 0;
     color: #222;
@@ -2533,9 +2505,10 @@ body:not(.inspiro-front-page) .entry-header {
 }
 
 body:not(.page-layout-sidebar-right) #primary {
-    max-width: 950px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: calc( 950px + 20px);
+    margin: 0 auto 3em;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 body:not(.page-layout-sidebar-right).blog .site-main article,
@@ -2586,10 +2559,11 @@ body:not(.page-layout-sidebar-right).search .site-main article .entry-title {
     padding-right: 2em;
 }
 
+.single .entry-content,
 .single .entry-footer,
 .page:not(.inspiro-front-page) .entry-footer {
     margin: 2.8125em auto;
-    max-width: 970px;
+    max-width: calc( 950px + 20px);
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -2962,6 +2936,33 @@ h4.jp-relatedposts-post-title {
 13.5 Pages
 --------------------------------------------------------------*/
 /* Pages */
+.page-title,
+.page .entry-title {
+    margin-top: 2em;
+    color: #222;
+    font-size: 26px;
+    font-size: 1.625rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+}
+
+.page-title:after,
+.page .entry-title:after {
+    content: '';
+    display: block;
+    width: 130px;
+    height: 1px;
+    background: #e6e6e6;
+    margin: 40px auto 48px;
+}
+
+.page #comments {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 /* 404 page */
 .error404 .page-content,
 .no-results {
@@ -3080,7 +3081,7 @@ h4.jp-relatedposts-post-title {
 --------------------------------------------------------------*/
 #comments {
     clear: both;
-    max-width: 970px;
+    max-width: calc( 950px + 20px);
     margin: 0 auto;
     padding: 0 10px;
 }
@@ -3106,7 +3107,7 @@ h4.jp-relatedposts-post-title {
 }
 
 #respond {
-    margin-bottom: 85px;
+    margin-bottom: 5.3125em;
 }
 
 #respond h3 {
@@ -4165,7 +4166,10 @@ div.aligncenter {
     .page-layout-sidebar-right.has-sidebar.page .entry-wrapper .entry-content, .page-layout-sidebar-right.has-sidebar.single .entry-wrapper .entry-content {
         float: left;
         width: 75%;
+        max-width: 100%;
         padding-right: 4%;
+        padding-left: 0;
+        margin: 0;
     }
     .page-layout-sidebar-right.has-sidebar.page .entry-footer, .page-layout-sidebar-right.has-sidebar.single .entry-footer {
         clear: left;
