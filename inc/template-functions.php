@@ -35,7 +35,19 @@ function inspiro_body_classes( $classes ) {
 	}
 
 	// Add a class if there is a custom header.
-	if ( has_header_image() && ( is_home() || is_page() && inspiro_is_frontpage() ) ) {
+	if ( is_front_page() && is_home() && has_header_image() ) { // Default homepage
+		$classes[] = 'has-header-image';
+	}
+	elseif ( is_front_page() && has_header_image() ) { // static homepage
+		$classes[] = 'has-header-image';
+	}
+	elseif ( is_page() && inspiro_is_frontpage() ) {
+		$classes[] = 'has-header-image';
+	}
+	if ( is_page_template( 'page-templates/full-width-transparent.php' ) ) {
+		$classes[] = 'has-header-image';
+	}
+	if ( is_page_template( 'page-templates/homepage-builder-bb.php' ) && has_header_image() ) {
 		$classes[] = 'has-header-image';
 	}
 

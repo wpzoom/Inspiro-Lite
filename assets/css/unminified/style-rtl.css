@@ -2559,6 +2559,7 @@ body:not(.page-layout-sidebar-right).search .site-main article .entry-title {
     padding-left: 2em;
 }
 
+.page .entry-content,
 .single .entry-content,
 .single .entry-footer,
 .page:not(.inspiro-front-page) .entry-footer {
@@ -2566,6 +2567,13 @@ body:not(.page-layout-sidebar-right).search .site-main article .entry-title {
     max-width: calc( 950px + 20px);
     padding-right: 10px;
     padding-left: 10px;
+}
+
+.page .full-width .entry-content,
+.single .full-width .entry-content {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .page .entry-cover-image,
@@ -2595,6 +2603,13 @@ body:not(.page-layout-sidebar-right).search .site-main article .entry-title {
     bottom: 30px;
     width: 100%;
     z-index: 5;
+}
+
+.page .entry-cover-image .entry-header .inner-wrap,
+.single .entry-cover-image .entry-header .inner-wrap {
+    padding-right: 10px;
+    padding-left: 10px;
+    max-width: calc( 950px + 20px);
 }
 
 .page .entry-cover-image .entry-header .entry-title,
@@ -2937,7 +2952,7 @@ h4.jp-relatedposts-post-title {
 --------------------------------------------------------------*/
 /* Pages */
 .page-title,
-.page .entry-title {
+.page article > .entry-header .entry-title {
     margin-top: 2em;
     color: #222;
     font-size: 26px;
@@ -2949,7 +2964,7 @@ h4.jp-relatedposts-post-title {
 }
 
 .page-title:after,
-.page .entry-title:after {
+.page article > .entry-header .entry-title:after {
     content: '';
     display: block;
     width: 130px;

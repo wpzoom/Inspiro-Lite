@@ -37,11 +37,16 @@
 	</header><!-- #masthead -->
 
 	<?php
-
-	/*
-	 * If not a regular post or page, and is the front page, show the custom header image.
-	 */
-	if ( ! is_single() && ( is_home() || is_page() && inspiro_is_frontpage() ) ) {
+	if ( is_front_page() && is_home() && has_header_image() ) { // Default homepage
+		get_template_part( 'template-parts/header/header', 'image' );
+	}
+	elseif ( is_front_page() && has_header_image() ) { // static homepage
+		get_template_part( 'template-parts/header/header', 'image' );
+	}
+	elseif ( is_page() && inspiro_is_frontpage() ) {
+		get_template_part( 'template-parts/header/header', 'image' );
+	}
+	elseif ( is_page_template( 'page-templates/homepage-builder-bb.php' ) && has_header_image() ) {
 		get_template_part( 'template-parts/header/header', 'image' );
 	}
 	?>
