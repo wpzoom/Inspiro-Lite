@@ -14,6 +14,8 @@
  * @return array
  */
 function inspiro_body_classes( $classes ) {
+	global $paged;
+
 	// Add class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -34,20 +36,29 @@ function inspiro_body_classes( $classes ) {
 		$classes[] = 'inspiro-front-page';
 	}
 
-	// Add a class if there is a custom header.
-	if ( is_front_page() && is_home() && has_header_image() ) { // Default homepage
-		$classes[] = 'has-header-image';
+	if ( $paged < 2 ) {
+
+		// Add a class if there is a custom header.
+		if ( is_front_page() && is_home() && has_header_image() ) { // Default homepage
+			$classes[] = 'has-header-image';
+		}
+		elseif ( is_front_page() && has_header_image() ) { // static homepage
+			$classes[] = 'has-header-image';
+		}
+		elseif ( is_page() && inspiro_is_frontpage() ) {
+			$classes[] = 'has-header-image';
+		}
+		if ( is_page_template( 'page-templates/full-width-transparent.php' ) ) {
+			$classes[] = 'has-header-image';
+		}
+		if ( is_page_template( 'page-templates/homepage-builder-bb.php' ) && has_header_image() ) {
+			$classes[] = 'has-header-image';
+		}
+
 	}
-	elseif ( is_front_page() && has_header_image() ) { // static homepage
-		$classes[] = 'has-header-image';
-	}
-	elseif ( is_page() && inspiro_is_frontpage() ) {
-		$classes[] = 'has-header-image';
-	}
-	if ( is_page_template( 'page-templates/full-width-transparent.php' ) ) {
-		$classes[] = 'has-header-image';
-	}
-	if ( is_page_template( 'page-templates/homepage-builder-bb.php' ) && has_header_image() ) {
+
+	// Add class if is single page and has post thumbnail.
+	if ( is_single() && has_post_thumbnail() ) {
 		$classes[] = 'has-header-image';
 	}
 
@@ -79,6 +90,11 @@ function inspiro_body_classes( $classes ) {
 	// Add class if the site title and tagline is hidden.
 	if ( 'blank' === get_header_textcolor() ) {
 		$classes[] = 'title-tagline-hidden';
+	}
+
+	// Add class if has the archive descrption.
+	if ( get_the_archive_description() ) {
+		$classes[] = 'has-archive-description';
 	}
 
 	// Get the colorscheme or the default if there isn't one.
