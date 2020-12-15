@@ -15,7 +15,7 @@
         color: #444;
         transition: 0.2s ease all;
 
-        &:hover,
+        &:not(.dots):hover,
         &.current {
             text-decoration: none;
             color: $primary-color;

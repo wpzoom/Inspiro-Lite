@@ -1,8 +1,29 @@
 /* Blog landing, search, archives */
 
-.blog .site-main > article,
-.archive .site-main > article,
-.search .site-main > article {
+body:not(.has-archive-description) {
+    .page-title,
+    &.page .entry-title {
+        &:after {
+            content: '';
+            display: block;
+            width: 130px;
+            height: 1px;
+            background: $color-border;
+            margin: 40px auto 48px;
+        }
+    }
+}
+
+.tag,
+.category {
+    .page-title span {
+        text-transform: none;
+    }
+}
+
+.blog .site-main > article:not(.sticky),
+.archive .site-main > article:not(.sticky),
+.search .site-main > article:not(.sticky) {
     padding-bottom: em(60);
 
     &:after {
@@ -32,6 +53,11 @@ body:not(.page-layout-sidebar-right) {
         margin: 0 auto em(48);
         padding-left: 10px;
         padding-right: 10px;
+
+        .entry-content {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 
     &.blog .site-main article,
@@ -62,6 +88,23 @@ body:not(.page-layout-sidebar-right) {
 
 .taxonomy-description {
     color: #666;
-    font-size: 13px;
-    font-size: 0.8125rem;
+    @include font-size(14);
+    text-align: center;
+
+    p {
+        margin: 0;
+    }
+}
+
+body.has-archive-description {
+    .taxonomy-description {
+        &:after {
+            content: '';
+            display: block;
+            width: 130px;
+            height: 1px;
+            background: $color-border;
+            margin: 40px auto 48px;
+        }
+    }
 }

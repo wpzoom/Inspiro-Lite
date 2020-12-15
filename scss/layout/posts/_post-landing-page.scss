@@ -2,19 +2,26 @@
 
 .sticky {
     position: relative;
+    padding: em(32) em(20);
+    border: 2px $color-border dashed;
+    margin-bottom: em(60);
 }
 
-.post:not(.sticky) .icon-thumb-tack {
+.post:not(.sticky) .svg-icon-thumb-tack {
     display: none;
 }
 
-.sticky .icon-thumb-tack {
-    display: block;
-    height: 18px;
-    left: -1.5em;
+.sticky .svg-icon-thumb-tack {
     position: absolute;
-    top: 1.65em;
-    width: 20px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    left: 50%;
+    top: -16px;
+    padding: 5px;
+    transform: translateX(-50%);
+    fill: $primary-color;
+    background-color: $color-background-body;
 }
 
 .home.blog {
@@ -49,7 +56,6 @@
     color: #222;
     @include font-size(42);
     font-weight: 700;
-    font-family: $font-headings;
 
     &:not(:first-child) {
         padding-top: 0;
@@ -118,7 +124,7 @@
     img.alignleft,
     img.alignright,
     img.attachment-fullsize {
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
         max-width: 100%;
         height: auto;
     }

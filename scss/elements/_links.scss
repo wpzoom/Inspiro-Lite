@@ -110,6 +110,26 @@ a:hover .nav-title,
     }
 }
 
+.page-links {
+    @include font-size(14);
+    font-weight: 800;
+    padding: em(20) 0 em(30);
+
+    .page-number {
+        color: #767676;
+        display: inline-block;
+        padding: 0.5em 1em;
+    }
+
+    a {
+        display: inline-block;
+
+        .page-number {
+            color: #222;
+        }
+    }
+}
+
 /* Fixes linked images */
 .entry-content a img,
 .comment-content a img,

@@ -92,7 +92,7 @@ body {
 .custom-logo-text {
     display: inline-block;
     padding: 0;
-    padding-right: 1em;
+    padding-right: em(10);
     vertical-align: middle;
     max-width: 350px;
     float: left;

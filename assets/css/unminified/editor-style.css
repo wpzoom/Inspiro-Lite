@@ -51,8 +51,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
 }
 
 .wrap:before, .wrap:after,
@@ -748,6 +748,27 @@ a:hover .nav-title,
     border-color: #0bb4aa;
 }
 
+.page-links {
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 800;
+    padding: 1.25em 0 1.875em;
+}
+
+.page-links .page-number {
+    color: #767676;
+    display: inline-block;
+    padding: 0.5em 1em;
+}
+
+.page-links a {
+    display: inline-block;
+}
+
+.page-links a .page-number {
+    color: #222;
+}
+
 /* Fixes linked images */
 .entry-content a img,
 .comment-content a img,
@@ -919,7 +940,7 @@ p > object:only-child {
 
 .entry-content .aligncenter,
 div.aligncenter {
-    display: block;
+    display: table;
     clear: both;
     margin-left: auto;
     margin-right: auto;
@@ -1123,6 +1144,10 @@ div.aligncenter {
 .gallery-columns-8 .gallery-caption,
 .gallery-columns-9 .gallery-caption {
     display: none;
+}
+
+.entry-content ul.blocks-gallery-grid {
+    margin-bottom: 0;
 }
 
 /**

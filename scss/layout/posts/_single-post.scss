@@ -104,6 +104,15 @@
             margin: em(70) auto 0;
         }
     }
+    &.page-layout-full-width {
+        article:not(.has-post-thumbnail) {
+            .inner-wrap {
+                padding-left: 10px;
+                padding-right: 10px;
+                max-width: calc( #{ $content-width-small } + 20px );
+            }
+        }
+    }
 
     .entry-meta {
         margin-bottom: 0;
@@ -112,19 +121,16 @@
 
 /* Gutenberg Images */
 
-.page,
-.single {
-    .entry-content {
-        .alignfull {
-            margin-left: calc( -100vw / 2 + 100% / 2);
-            margin-right: calc( -100vw / 2 + 100% / 2);
-        }
+.entry-content {
+    .alignfull {
+        margin-left: calc( -100vw / 2 + 100% / 2);
+        margin-right: calc( -100vw / 2 + 100% / 2);
+    }
 
-        .alignfull,
-        .alignfull img {
-            width: 100vw;
-            max-width: 100vw;
-        }
+    .alignfull,
+    .alignfull img {
+        width: 100vw;
+        max-width: 100vw;
     }
 }
 
