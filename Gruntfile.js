@@ -432,6 +432,7 @@ module.exports = function(grunt) {
           '!assets/js/unminified/scripts.js',
           '!assets/js/unminified/global.js',
           '!assets/js/unminified/plugins.js',
+          '!assets/js/unminified/custom-header-vimeo.js',
         ],
         dest: 'assets/js/unminified/plugins.js',
       },
@@ -439,6 +440,7 @@ module.exports = function(grunt) {
         src: [
           'assets/js/unminified/global.js',
           'assets/js/unminified/navigation.js',
+          'assets/js/unminified/custom-header-vimeo.js'
         ],
         dest: 'assets/js/unminified/scripts.js',
       }

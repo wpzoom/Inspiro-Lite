@@ -2060,6 +2060,7 @@ body:not(.title-tagline-hidden) .site-branding-text {
 
 .custom-header {
     position: relative;
+    background-color: #000;
 }
 
 .has-header-image.inspiro-front-page .site-branding, .has-header-image.home.blog .site-branding,

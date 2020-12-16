@@ -32,6 +32,19 @@ function inspiro_customize_register( $wp_customize ) {
 		)
 	);
 
+	$wp_customize->add_control(
+		'external_header_video',
+		array(
+			'theme_supports'  => array( 'custom-header', 'video' ),
+			'type'            => 'url',
+			'label'           => __( 'External Header Video', 'inspiro' ),
+			'description'     => __( 'Enter a YouTube or Vimeo URL:', 'inspiro' ),
+			'section'         => 'header_image',
+			'priority'		  => 5,
+			'active_callback' => 'is_header_video_active',
+		)
+	);
+
 	/**
 	 * Custom field for Logo text.
 	 */

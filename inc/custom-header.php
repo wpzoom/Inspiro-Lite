@@ -126,6 +126,37 @@ endif; // End of inspiro_header_style().
 function inspiro_video_controls( $settings ) {
 	$settings['l10n']['play']  = '<span class="screen-reader-text">' . __( 'Play background video', 'inspiro' ) . '</span>' . inspiro_get_theme_svg( 'play' );
 	$settings['l10n']['pause'] = '<span class="screen-reader-text">' . __( 'Pause background video', 'inspiro' ) . '</span>' . inspiro_get_theme_svg( 'pause' );
+
+	/**
+	 * Adds support for Vimeo to the video in the custom header.
+	 * 
+	 * @see https://github.com/bradyvercher/custom-header-vimeo
+	 */
+	if ( preg_match( '#^https?://(.+\.)?vimeo\.com/.*#', $settings['videoUrl'] ) ) {
+		$settings['mimeType'] = 'video/x-vimeo';
+	}
+
 	return $settings;
 }
 add_filter( 'header_video_settings', 'inspiro_video_controls' );
+
+function inspiro_maybe_enqueue_vimeo_handler() {
+	if ( wp_script_is( 'wp-custom-header' ) ) {
+		wp_enqueue_script(
+			'wp-custom-header-vimeo',
+			inspiro_get_assets_uri( 'custom-header-vimeo', 'js' ),
+			array( 'wp-custom-header' )
+		);
+	}
+}
+add_action( 'wp_footer', 'inspiro_maybe_enqueue_vimeo_handler' );
+
+function inspiro_filter_external_header_video_setting_validity( $validity, $value ) {
+	if ( preg_match( '#^https?://(.+\.)?vimeo\.com/.*#', $value ) ) {
+		return true;
+	}
+
+	return $validity;
+}
+add_filter( 'customize_validate_external_header_video', 'inspiro_filter_external_header_video_setting_validity', 11, 2 );
+
