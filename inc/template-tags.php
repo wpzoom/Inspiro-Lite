@@ -30,13 +30,7 @@ if ( ! function_exists( 'inspiro_single_entry_meta' ) ) :
 			);
 		}
 
-		// Get the author name; wrap it in a link.
-		$byline = sprintf(
-			'<span class="entry-author">%s <a class="url fn n" href="%s">%s</a></span>',
-			__( 'by', 'inspiro' ),
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			get_the_author()
-		);
+		$byline = inspiro_author_link();
 
 		$datetime = sprintf(
 			'<span class="entry-date">%s %s</span>',
@@ -69,17 +63,33 @@ if ( ! function_exists( 'inspiro_entry_meta' ) ) :
 			);
 		}
 
+		$byline = inspiro_author_link();
+
 		$datetime = sprintf(
 			'<span class="entry-date">%s</span>',
 			inspiro_time_link(false)
 		);
 
 		// Finally, let's write all of this to the page.
-		echo $datetime . $catlinks;
+		echo $byline . $datetime . $catlinks;
 		inspiro_comments_link();
 		inspiro_edit_link();
 	}
 endif;
+
+if ( ! function_exists( 'inspiro_author_link' ) ) {
+	/**
+	 * Get the author name; wrap it in a link.
+	 */
+	function inspiro_author_link() {
+		return sprintf(
+			'<span class="entry-author">%s <a class="url fn n" href="%s">%s</a></span>',
+			__( 'by', 'inspiro' ),
+			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+			get_the_author()
+		);
+	}
+}
 
 if ( ! function_exists( 'inspiro_comments_link' ) ) {
 	/**

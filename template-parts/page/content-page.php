@@ -38,8 +38,10 @@
 			echo '</div><!-- .entry-meta -->';
 			echo '</div><!-- .inner-wrap -->';
 		} else {
+			echo '<div class="inner-wrap">';
 			the_title( '<h1 class="entry-title">', '</h1>' );
 			inspiro_edit_link( get_the_ID() );
+			echo '</div><!-- .inner-wrap -->';
 		}
 
 		?>
