@@ -95,6 +95,12 @@
     }
 }
 
+.post-display-content-none {
+    .entry-meta {
+        margin-bottom: 0
+    }
+}
+
 .entry-content {
     line-height: $entry-content-line-height;
 

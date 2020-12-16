@@ -117,11 +117,17 @@ a:hover .nav-title,
     @include font-size(14);
     font-weight: 800;
     padding: em(20) 0 em(30);
+    clear: left;
 
-    .page-number {
+    .page-number,
+    .post-page-numbers {
         color: #767676;
         display: inline-block;
         padding: 0.5em 1em;
+
+        &.current {
+            color: #222;
+        }
     }
 
     a {

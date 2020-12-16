@@ -1327,12 +1327,19 @@ a:hover .nav-title,
     font-size: 0.875rem;
     font-weight: 800;
     padding: 1.25em 0 1.875em;
+    clear: right;
 }
 
-.page-links .page-number {
+.page-links .page-number,
+.page-links .post-page-numbers {
     color: #767676;
     display: inline-block;
     padding: 0.5em 1em;
+}
+
+.page-links .page-number.current,
+.page-links .post-page-numbers.current {
+    color: #222;
 }
 
 .page-links a {
@@ -2368,6 +2375,10 @@ body:not(.has-header-image):not(.has-header-video) #scroll-to-content {
 
 .entry-meta a {
     color: #222;
+}
+
+.post-display-content-none .entry-meta {
+    margin-bottom: 0;
 }
 
 .entry-content {

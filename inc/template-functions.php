@@ -87,6 +87,11 @@ function inspiro_body_classes( $classes ) {
 		}
 	}
 
+	// Add class for display content.
+	if ( get_theme_mod( 'display_content' ) ) {
+		$classes[] = 'post-display-content-' . esc_attr( get_theme_mod( 'display_content' ) );
+	}
+
 	// Add class if the site title and tagline is hidden.
 	if ( 'blank' === get_header_textcolor() ) {
 		$classes[] = 'title-tagline-hidden';
