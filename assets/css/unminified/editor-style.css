@@ -709,8 +709,6 @@ a .nav-title,
 .widget_authors a:hover strong,
 .entry-title a:focus,
 .entry-title a:hover,
-.entry-meta a:focus,
-.entry-meta a:hover,
 .page-links a:focus .page-number,
 .page-links a:hover .page-number,
 .entry-footer a:focus,
@@ -730,6 +728,11 @@ a:hover .nav-title,
 .widget ul li a:focus,
 .widget ul li a:hover {
     color: #076c65;
+}
+
+.entry-meta a:focus,
+.entry-meta a:hover {
+    color: #0bb4aa;
 }
 
 .entry-content .more-link,

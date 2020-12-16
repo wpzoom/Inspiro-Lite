@@ -33,4 +33,6 @@
     height: auto;
 }
 
-@import "forms", "lists", "gravatar", "gallery", "search", "tagcloud", "widget-text", "widget-rss", "widget-contact-info", "widget-recent-comments", "widget-recent-posts", "widget-calendar"; 
+@import "forms", "lists", "gravatar", "gallery", "search", "tagcloud";
+@import "widget-text", "widget-rss", "widget-contact-info", "widget-recent-comments", "widget-recent-posts", "widget-calendar"; 
+@import "wpzoom-instagram";

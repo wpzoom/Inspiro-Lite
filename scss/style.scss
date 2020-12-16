@@ -42,7 +42,6 @@ Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-rea
    16.1 Galleries
 17.0 Customizer
 18.0 Media Queries
-19.0 Print
 --------------------------------------------------------------*/
 
 @import "variables-site/", "mixins/";
@@ -171,8 +170,3 @@ Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-rea
 18.0 Media Queries
 --------------------------------------------------------------*/
 @import "media-queries/";
-
-/*--------------------------------------------------------------
-19.0 Print
---------------------------------------------------------------*/
-@import "print/";

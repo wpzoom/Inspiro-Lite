@@ -7,10 +7,12 @@
     padding-right: em(32);
 }
 
+.page .entry-header .inner-wrap,
 .page .entry-content,
+.page:not(.inspiro-front-page) .entry-footer,
+.single .entry-header .inner-wrap,
 .single .entry-content,
-.single .entry-footer,
-.page:not(.inspiro-front-page) .entry-footer {
+.single .entry-footer {
     margin: em(45) auto;
     max-width: calc( #{ $content-width-small } + 20px );
     padding-left: 10px;
@@ -54,9 +56,7 @@
             z-index: 5;
 
             .inner-wrap {
-                padding-left: 10px;
-                padding-right: 10px;
-                max-width: calc( #{ $content-width-small } + 20px );
+                margin-bottom: 0;
             }
 
             .entry-title {
@@ -99,11 +99,6 @@
 
 .page,
 .single {
-    article:not(.has-post-thumbnail) {
-        .inner-wrap {
-            margin: em(70) auto 0;
-        }
-    }
     &.page-layout-full-width {
         article:not(.has-post-thumbnail) {
             .inner-wrap {

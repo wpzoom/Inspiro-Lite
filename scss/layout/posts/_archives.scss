@@ -14,10 +14,15 @@ body:not(.has-archive-description) {
     }
 }
 
-.tag,
-.category {
-    .page-title span {
-        text-transform: none;
+.blog,
+.search,
+.archive {
+    .page-title {
+        margin-top: em(32);
+
+        span {
+            text-transform: none;
+        }
     }
 }
 
@@ -54,6 +59,7 @@ body:not(.page-layout-sidebar-right) {
         padding-left: 10px;
         padding-right: 10px;
 
+        .entry-header .inner-wrap,
         .entry-content {
             padding-left: 0;
             padding-right: 0;
