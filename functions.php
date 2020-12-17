@@ -50,24 +50,24 @@ require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-svg-icons.php';
 /**
  * Implement the Custom Header feature.
  */
-require get_parent_theme_file_path( '/inc/custom-header.php' );
+require INSPIRO_THEME_DIR . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
  */
-require get_parent_theme_file_path( '/inc/template-tags.php' );
+require INSPIRO_THEME_DIR . '/inc/template-tags.php';
 
 /**
  * Additional features to allow styling of the templates.
  */
-require get_parent_theme_file_path( '/inc/template-functions.php' );
+require INSPIRO_THEME_DIR . '/inc/template-functions.php';
 
 /**
  * Customizer additions.
  */
-require get_parent_theme_file_path( '/inc/customizer.php' );
+require INSPIRO_THEME_DIR . '/inc/customizer.php';
 
 /**
  * SVG icons functions and filters.
  */
-require get_parent_theme_file_path( '/inc/icon-functions.php' );
+require INSPIRO_THEME_DIR . '/inc/icon-functions.php';

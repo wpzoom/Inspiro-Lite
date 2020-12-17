@@ -1,0 +1,148 @@
+/**
+ * Inspiro Lite: Dark Color Scheme
+ *
+ * See inc/color-patterns.php for dynamic color overrides for the theme.
+ *
+ * Colors are ordered from light to dark.
+ */
+body.colors-dark {
+    background-color: #222;
+    color: #eee;
+}
+
+body.colors-dark .site-content-contain {
+    background: #222;
+    color: #eee;
+}
+
+body.colors-dark h1,
+body.colors-dark h2,
+body.colors-dark h3,
+body.colors-dark h4,
+body.colors-dark h5,
+body.colors-dark h6,
+body.colors-dark.blog .page-title,
+body.colors-dark.search .page-title,
+body.colors-dark.archive .page-title,
+body.colors-dark .widget .title,
+body.colors-dark .entry-title {
+    color: #ddd;
+}
+
+body.colors-dark .entry-meta,
+body.colors-dark .entry-footer {
+    color: #777;
+}
+
+body.colors-dark .entry-meta a,
+body.colors-dark .entry-title a,
+body.colors-dark .entry-footer .post-author a {
+    color: #ddd;
+}
+
+body.colors-dark .entry-meta a:hover,
+body.colors-dark .entry-title a:hover,
+body.colors-dark .entry-footer .post-author a:hover {
+    color: #0bb4aa;
+}
+
+body.colors-dark .pagination .page-numbers,
+body.colors-dark .comments-pagination .page-numbers {
+    color: #777;
+}
+
+body.colors-dark .pagination .page-numbers:not(.dots):hover,
+body.colors-dark .pagination .page-numbers.current,
+body.colors-dark .comments-pagination .page-numbers:not(.dots):hover,
+body.colors-dark .comments-pagination .page-numbers.current {
+    color: #0bb4aa;
+}
+
+body.colors-dark.blog .entry-meta a,
+body.colors-dark.archive .entry-meta a,
+body.colors-dark.search .entry-meta a {
+    border-color: #333;
+}
+
+body.colors-dark.blog .site-main > article:not(.sticky):after,
+body.colors-dark.archive .site-main > article:not(.sticky):after,
+body.colors-dark.search .site-main > article:not(.sticky):after,
+body.colors-dark:not(.has-archive-description) .page-title:after,
+body.colors-dark:not(.has-archive-description).page .entry-title:after,
+body.colors-dark .entry-footer .section-title:before,
+body.colors-dark #comments > h3:after,
+body.colors-dark #respond > h3:after {
+    background-color: #333;
+}
+
+body.colors-dark.page-layout-sidebar-right.has-sidebar #secondary {
+    border-color: #555;
+}
+
+body.colors-dark .button,
+body.colors-dark .btn,
+body.colors-dark .more-link,
+body.colors-dark .more_link,
+body.colors-dark .side-nav .search-form .search-submit,
+body.colors-dark div.wpforms-container-full .wpforms-form input[type=submit],
+body.colors-dark div.wpforms-container-full .wpforms-form button[type=submit],
+body.colors-dark div.wpforms-container-full .wpforms-form .wpforms-page-button,
+body.colors-dark button,
+body.colors-dark input[type=button],
+body.colors-dark input[type=reset],
+body.colors-dark input[type=submit] {
+    color: #eee;
+    border-color: #555;
+}
+
+body.colors-dark input,
+body.colors-dark textarea {
+    background-color: transparent;
+}
+
+body.colors-dark pre,
+body.colors-dark mark,
+body.colors-dark ins,
+body.colors-dark input[type="text"],
+body.colors-dark input[type="email"],
+body.colors-dark input[type="url"],
+body.colors-dark input[type="password"],
+body.colors-dark input[type="search"],
+body.colors-dark input[type="number"],
+body.colors-dark input[type="tel"],
+body.colors-dark input[type="range"],
+body.colors-dark input[type="date"],
+body.colors-dark input[type="month"],
+body.colors-dark input[type="week"],
+body.colors-dark input[type="time"],
+body.colors-dark input[type="datetime"],
+body.colors-dark input[type="datetime-local"],
+body.colors-dark input[type="color"],
+body.colors-dark textarea,
+body.colors-dark select,
+body.colors-dark fieldset {
+    color: #ccc;
+    background: #333;
+}
+
+body.colors-dark .sticky {
+    border-color: #555;
+}
+
+body.colors-dark .sticky .svg-icon-thumb-tack {
+    background-color: #222;
+}
+
+body.colors-dark .sb-search.sb-search-open .sb-search-input {
+    background-color: #000;
+}
+
+body.colors-dark .side-nav .search-form .search-submit:hover {
+    color: #0bb4aa;
+    border-color: #0bb4aa;
+}
+
+body.colors-dark .navbar-toggle {
+    background-color: transparent;
+    border-color: transparent;
+}

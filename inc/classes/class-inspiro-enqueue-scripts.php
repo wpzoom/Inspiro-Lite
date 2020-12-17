@@ -46,6 +46,11 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
             // RTL support.
             wp_style_add_data( 'inspiro-style', 'rtl', 'replace' );
 
+            // Load the dark colorscheme.
+            if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {
+                wp_enqueue_style( 'inspiro-colors-dark', inspiro_get_assets_uri( 'colors-dark', 'css' ), array( 'inspiro-style' ), INSPIRO_THEME_VERSION );
+            }
+
             wp_enqueue_script( 'inspiro-lite-js-plugins', inspiro_get_assets_uri( 'plugins', 'js' ), array( 'jquery' ), INSPIRO_THEME_VERSION, true );
 
             wp_enqueue_script( 'inspiro-lite-script', inspiro_get_assets_uri( 'scripts', 'js' ), array( 'inspiro-lite-js-plugins', 'jquery' ), INSPIRO_THEME_VERSION, true );

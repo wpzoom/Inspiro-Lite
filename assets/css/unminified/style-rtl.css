@@ -3054,11 +3054,6 @@ h4.jp-relatedposts-post-title {
 }
 
 /* 404 page */
-.error404 .page-content,
-.no-results {
-    padding-bottom: 3.5em;
-}
-
 .error404 .page-content .search-form,
 .search .page-content .search-form {
     margin-bottom: 3em;
@@ -3218,6 +3213,11 @@ h4.jp-relatedposts-post-title {
 
 #respond #submit {
     width: auto;
+}
+
+#respond #submit:hover {
+    color: #0bb4aa;
+    border-color: #0bb4aa;
 }
 
 #respond code {

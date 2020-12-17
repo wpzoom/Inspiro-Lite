@@ -1,0 +1,148 @@
+/**
+ * Inspiro Lite: Dark Color Scheme
+ *
+ * See inc/color-patterns.php for dynamic color overrides for the theme.
+ *
+ * Colors are ordered from light to dark.
+ */
+@import "variables-site/colors";
+
+body.colors-dark {
+    background-color: #222;
+    color: #eee;
+
+    .site-content-contain {
+        background: #222;
+        color: #eee;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    &.blog .page-title,
+    &.search .page-title,
+    &.archive .page-title,
+    .widget .title,
+    .entry-title {
+        color: #ddd;
+    }
+
+    .entry-meta,
+    .entry-footer {
+        color: #777;
+    }
+
+    .entry-meta a,
+    .entry-title a,
+    .entry-footer .post-author a {
+        color: #ddd;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    .pagination .page-numbers,
+    .comments-pagination .page-numbers {
+        color: #777;
+    }
+
+    .pagination .page-numbers:not(.dots):hover,
+    .pagination .page-numbers.current,
+    .comments-pagination .page-numbers:not(.dots):hover,
+    .comments-pagination .page-numbers.current {
+        color: $primary-color;
+    }
+
+    &.blog .entry-meta a,
+    &.archive .entry-meta a,
+    &.search .entry-meta a {
+        border-color: #333;
+    }
+
+    &.blog .site-main > article:not(.sticky):after,
+    &.archive .site-main > article:not(.sticky):after,
+    &.search .site-main > article:not(.sticky):after,
+    &:not(.has-archive-description) .page-title:after,
+    &:not(.has-archive-description).page .entry-title:after,
+    .entry-footer .section-title:before,
+    #comments > h3:after,
+    #respond > h3:after {
+        background-color: #333;
+    }
+
+    &.page-layout-sidebar-right.has-sidebar #secondary {
+        border-color: #555;
+    }
+
+    .button,
+    .btn,
+    .more-link,
+    .more_link,
+    .side-nav .search-form .search-submit,
+    div.wpforms-container-full .wpforms-form input[type=submit],
+    div.wpforms-container-full .wpforms-form button[type=submit],
+    div.wpforms-container-full .wpforms-form .wpforms-page-button,
+    button,
+    input[type=button],
+    input[type=reset],
+    input[type=submit] {
+        color: #eee;
+        border-color: #555;
+    }
+
+    input,
+    textarea {
+        background-color: transparent;
+    }
+
+    pre,
+    mark,
+    ins,
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="range"],
+    input[type="date"],
+    input[type="month"],
+    input[type="week"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="color"],
+    textarea,
+    select,
+    fieldset {
+        color: #ccc;
+        background: #333;
+    }
+
+    .sticky {
+        border-color: #555;
+
+        .svg-icon-thumb-tack {
+            background-color: #222;
+        }
+    }
+
+    .sb-search.sb-search-open .sb-search-input {
+        background-color: #000;
+    }
+
+    .side-nav .search-form .search-submit:hover {
+        color: $primary-color;
+        border-color: $primary-color
+    }
+
+    .navbar-toggle {
+        background-color: transparent;
+        border-color: transparent;
+    }
+}
