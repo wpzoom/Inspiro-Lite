@@ -13,22 +13,52 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function inspiro_customize_register( $wp_customize ) {
-	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-	$wp_customize->selective_refresh->add_partial(
-		'blogname',
+	/**
+	 * Custom Header.
+	 */
+	$wp_customize->add_setting(
+		'header_site_title',
 		array(
-			'selector'        => '.site-title a',
-			'render_callback' => 'inspiro_customize_partial_blogname',
+			'default'           => get_bloginfo( 'name' ),
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
-	$wp_customize->selective_refresh->add_partial(
-		'blogdescription',
+
+	$wp_customize->add_setting(
+		'header_site_description',
 		array(
-			'selector'        => '.site-description',
-			'render_callback' => 'inspiro_customize_partial_blogdescription',
+			'default'           => get_bloginfo( 'description' ),
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+
+	$wp_customize->add_control(
+		'header_site_title',
+		array(
+			'theme_supports'  => array( 'custom-header' ),
+			'type'            => 'text',
+			'label'           => __( 'Header Title', 'inspiro' ),
+			'description'     => __( 'Enter a site title which appears in the header on front-page', 'inspiro' ),
+			'section'         => 'header_image',
+			'priority'		  => 1,
+			'active_callback' => 'is_header_video_active',
+		)
+	);
+
+	$wp_customize->add_control(
+		'header_site_description',
+		array(
+			'theme_supports'  => array( 'custom-header' ),
+			'type'            => 'text',
+			'label'           => __( 'Header Description', 'inspiro' ),
+			'description'     => __( 'Enter a site description which appears in the header on front-page', 'inspiro' ),
+			'section'         => 'header_image',
+			'priority'		  => 1,
+			'active_callback' => 'is_header_video_active',
 		)
 	);
 
@@ -398,32 +428,6 @@ function inspiro_sanitize_display_content( $input ) {
 	}
 
 	return 'excerpt';
-}
-
-/**
- * Render the site title for the selective refresh partial.
- *
- * @since Inspiro Lite 1.0.0
- *
- * @see inspiro_customize_register()
- *
- * @return void
- */
-function inspiro_customize_partial_blogname() {
-	bloginfo( 'name' );
-}
-
-/**
- * Render the site tagline for the selective refresh partial.
- *
- * @since Inspiro Lite 1.0.0
- *
- * @see inspiro_customize_register()
- *
- * @return void
- */
-function inspiro_customize_partial_blogdescription() {
-	bloginfo( 'description' );
 }
 
 /**
