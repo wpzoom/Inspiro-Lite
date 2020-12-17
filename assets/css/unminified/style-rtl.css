@@ -1230,7 +1230,7 @@ a:hover, a:active {
 .site-footer .widget-area a,
 .posts-navigation a,
 .widget_authors a strong {
-    transition: color 80ms ease-in;
+    transition: color .1s ease-in;
 }
 
 .entry-title a,
@@ -1255,7 +1255,7 @@ a .nav-title,
 .site-footer .widget-area ul li a,
 .site-footer .widget-area ul li a {
     text-decoration: none;
-    transition: color 80ms ease-in;
+    transition: color .1s ease-in;
 }
 
 .entry-content a:focus,
@@ -1546,7 +1546,7 @@ a:hover .nav-title,
     position: absolute;
     bottom: 100%;
     right: 50%;
-    margin-right: -em(8);
+    margin-right: -8px;
     width: 0;
     height: 0;
     border-bottom: 8px solid #0bb4aa;

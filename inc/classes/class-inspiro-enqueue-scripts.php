@@ -105,14 +105,14 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
             }
 
             require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
-            $hue = absint( get_theme_mod( 'colorscheme_hue', 250 ) );
+            $hex = get_theme_mod( 'colorscheme_hex', '#0bb4aa' );
 
-            $customize_preview_data_hue = '';
+            $customize_preview_data_hex = '';
             if ( is_customize_preview() ) {
-                $customize_preview_data_hue = 'data-hue="' . $hue . '"';
+                $customize_preview_data_hex = 'data-hex="' . $hex . '"';
             }
             ?>
-            <style type="text/css" id="custom-theme-colors" <?php echo $customize_preview_data_hue; ?>>
+            <style type="text/css" id="custom-theme-colors" <?php echo $customize_preview_data_hex; ?>>
                 <?php echo inspiro_custom_colors_css(); ?>
             </style>
             <?php

@@ -80,11 +80,11 @@ function inspiro_customize_register( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'colorscheme_hue',
+		'colorscheme_hex',
 		array(
-			'default'           => 250,
+			'default'           => '#0bb4aa',
 			'transport'         => 'postMessage',
-			'sanitize_callback' => 'absint', // The hue is stored as a positive integer.
+			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
 
@@ -106,9 +106,8 @@ function inspiro_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'colorscheme_hue',
+			'colorscheme_hex',
 			array(
-				'mode'     => 'hue',
 				'section'  => 'colors',
 				'priority' => 6,
 			)

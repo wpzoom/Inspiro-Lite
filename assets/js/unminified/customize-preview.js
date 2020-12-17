@@ -78,18 +78,17 @@
 		});
 	});
 
-	// Custom color hue.
-	wp.customize( 'colorscheme_hue', function( value ) {
+	// Custom color hex.
+	wp.customize( 'colorscheme_hex', function( value ) {
 		value.bind( function( to ) {
 
 			// Update custom color CSS.
 			var style = $( '#custom-theme-colors' ),
-				hue = style.data( 'hue' ),
+				hex = style.data( 'hex' ),
 				css = style.html();
 
-			// Equivalent to css.replaceAll, with hue followed by comma to prevent values with units from being changed.
-			css = css.split( hue + ',' ).join( to + ',' );
-			style.html( css ).data( 'hue', to );
+			css = css.replaceAll( hex, to );
+			style.html( css ).data( 'hex', to );
 		});
 	});
 
