@@ -72,24 +72,24 @@ function inspiro_body_classes( $classes ) {
 
 	// Add class for full width or sidebar right page layouts.
 	if ( is_front_page() || is_home() ) {
-		if ( 'full' === get_theme_mod( 'layout_blog_page' ) ) {
+		if ( 'full' === get_theme_mod( 'layout_blog_page', 'full' ) ) {
 			$classes[] = 'page-layout-full-width';
-		} elseif ( 'side-right' === get_theme_mod( 'layout_blog_page' ) && is_active_sidebar( 'blog-sidebar' ) ) {
+		} elseif ( 'side-right' === get_theme_mod( 'layout_blog_page', 'full' ) && is_active_sidebar( 'blog-sidebar' ) ) {
 			$classes[] = 'page-layout-sidebar-right';
 		}
 	}
 
 	if ( is_single() ) {
-		if ( 'full' === get_theme_mod( 'layout_single_post' ) ) {
+		if ( 'full' === get_theme_mod( 'layout_single_post', 'full' ) ) {
 			$classes[] = 'page-layout-full-width';
-		} elseif ( 'side-right' === get_theme_mod( 'layout_single_post' ) && is_active_sidebar( 'blog-sidebar' ) ) {
+		} elseif ( 'side-right' === get_theme_mod( 'layout_single_post', 'full' ) && is_active_sidebar( 'blog-sidebar' ) ) {
 			$classes[] = 'page-layout-sidebar-right';
 		}
 	}
 
 	// Add class for display content.
-	if ( get_theme_mod( 'display_content' ) ) {
-		$classes[] = 'post-display-content-' . esc_attr( get_theme_mod( 'display_content' ) );
+	if ( get_theme_mod( 'display_content', 'excerpt' ) ) {
+		$classes[] = 'post-display-content-' . esc_attr( get_theme_mod( 'display_content', 'excerpt' ) );
 	}
 
 	// Add class if the site title and tagline is hidden.

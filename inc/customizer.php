@@ -459,7 +459,7 @@ function inspiro_is_view_with_layout_option() {
  * Return the value of post_share option.
  */
 function inspiro_is_post_share_buttons_enabled() {
-	return get_theme_mod( 'post_share' );
+	return get_theme_mod( 'post_share', true );
 }
 
 /**

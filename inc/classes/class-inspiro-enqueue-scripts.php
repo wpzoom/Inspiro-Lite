@@ -100,7 +100,7 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
          * Display custom color CSS.
          */
         function colors_css_wrap() {
-            if ( 'custom' !== get_theme_mod( 'colorscheme' ) && ! is_customize_preview() ) {
+            if ( 'custom' !== get_theme_mod( 'colorscheme', 'light' ) && ! is_customize_preview() ) {
                 return;
             }
 
