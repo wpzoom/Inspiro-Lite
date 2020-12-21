@@ -83,6 +83,7 @@ body {
     vertical-align: middle;
     max-width: 350px;
     float: left;
+    transition: max-width .2s ease-in-out;
 
     h1 {
         margin: 0;

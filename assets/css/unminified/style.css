@@ -2017,6 +2017,7 @@ body.has-header-image .site-description, body.has-header-video .site-description
     vertical-align: middle;
     max-width: 350px;
     float: left;
+    transition: max-width .2s ease-in-out;
 }
 
 .custom-logo-link h1 {
@@ -4235,7 +4236,7 @@ div.aligncenter {
         background: rgba(0, 0, 0, 0.9);
         padding: 12px 0;
     }
-    .headroom--not-top.wp-custom-logo .custom-logo-link img {
+    body.wp-custom-logo .headroom--not-top .custom-logo-link img {
         transition: all .2s ease-in-out;
         max-height: 70px;
         width: auto;
