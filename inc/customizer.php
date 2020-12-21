@@ -186,9 +186,10 @@ function inspiro_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'theme_layout',
 		array(
-			'title'    => __( 'Theme Layout', 'inspiro' ),
-			'priority' => 50,
-	        'capability' => 'edit_theme_options',
+			'title'    			=> __( 'Theme Layout', 'inspiro' ),
+			'description'		=> sprintf( __( 'If you want to display "Sidebar on the right", please make sure you have added some widgets to %s', 'inspiro' ), '<a href="javascript:wp.customize.panel( \'widgets\' ).focus();" title="Open Widgets Panel">' . __( 'Blog Sidebar', 'inspiro') . '</a>' ),
+			'priority' 			=> 50,
+	        'capability' 		=> 'edit_theme_options',
 		)
 	);
 
@@ -286,99 +287,15 @@ function inspiro_customize_register( $wp_customize ) {
 	/**
 	 * Single Post Options.
 	 */
-	$wp_customize->add_panel(
-		'single_post_options_panel',
-		array(
-		 	'priority'       	=> 52,
-		  	'capability'     	=> 'edit_theme_options',
-		  	'title'          	=> __( 'Single Post Options', 'inspiro' ),
-		  	'active_callback' 	=> 'inspiro_is_view_is_single',
-		)
-	);
-
-	$wp_customize->add_section(
-		'share_buttons',
-		array(
-			'title'    		=> __( 'Share Buttons', 'inspiro' ),
-	        'capability' 	=> 'edit_theme_options',
-	        'panel'			=> 'single_post_options_panel',
-		)
-	);
-
-	$wp_customize->add_setting(
-		'post_share',
-		array(
-			'default'  			=> true,
-			'sanitize_callback' => 'wp_validate_boolean',
-			'transport'     	=> 'refresh',
-		)
-	);
-
-	$wp_customize->add_setting(
-		'post_share_label_twitter',
-		array(
-			'default'           => __( 'Share on Twitter', 'inspiro' ),
-			'transport'         => 'postMessage',
-			'sanitize_callback' => 'sanitize_text_field',
-		)
-	);
-
-	$wp_customize->add_setting(
-		'post_share_label_facebook',
-		array(
-			'default'           => __( 'Share on Facebook', 'inspiro' ),
-			'transport'         => 'postMessage',
-			'sanitize_callback' => 'sanitize_text_field',
-		)
-	);
-
-	$wp_customize->add_setting(
-		'post_share_label_linkedin',
-		array(
-			'default'           => __( 'Share on Linkedin', 'inspiro' ),
-			'transport'         => 'postMessage',
-			'sanitize_callback' => 'sanitize_text_field',
-		)
-	);
-
-	$wp_customize->add_control(
-		'post_share',
-		array(
-			'type'            => 'checkbox',
-			'label'           => __( 'Display Share Buttons', 'inspiro' ),
-			'section'         => 'share_buttons',
-		)
-	);
-
-	$wp_customize->add_control(
-		'post_share_label_twitter',
-		array(
-			'type' 				=> 'text',
-			'label'				=> __( 'Twitter Button Label', 'inspiro' ),
-			'section' 			=> 'share_buttons',
-			'active_callback' 	=> 'inspiro_is_post_share_buttons_enabled',
-		)
-	);
-
-	$wp_customize->add_control(
-		'post_share_label_facebook',
-		array(
-			'type' 				=> 'text',
-			'label'				=> __( 'Facebook Button Label', 'inspiro' ),
-			'section' 			=> 'share_buttons',
-			'active_callback' 	=> 'inspiro_is_post_share_buttons_enabled',
-		)
-	);
-
-	$wp_customize->add_control(
-		'post_share_label_linkedin',
-		array(
-			'type' 				=> 'text',
-			'label'				=> __( 'Linkedin Button Label', 'inspiro' ),
-			'section' 			=> 'share_buttons',
-			'active_callback' 	=> 'inspiro_is_post_share_buttons_enabled',
-		)
-	);
+	// $wp_customize->add_panel(
+	// 	'single_post_options_panel',
+	// 	array(
+	// 	 	'priority'       	=> 52,
+	// 	  	'capability'     	=> 'edit_theme_options',
+	// 	  	'title'          	=> __( 'Single Post Options', 'inspiro' ),
+	// 	  	'active_callback' 	=> 'inspiro_is_view_is_single',
+	// 	)
+	// );
 }
 add_action( 'customize_register', 'inspiro_customize_register' );
 
@@ -457,13 +374,6 @@ function inspiro_is_view_is_single() {
 function inspiro_is_view_with_layout_option() {
 	// This option is available on all pages. It's also available on archives when there isn't a sidebar.
 	return ( is_front_page() || is_home() || is_single() );
-}
-
-/**
- * Return the value of post_share option.
- */
-function inspiro_is_post_share_buttons_enabled() {
-	return get_theme_mod( 'post_share', true );
 }
 
 /**
