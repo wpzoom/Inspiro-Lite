@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Inspiro 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/inspiro-lite\n"
-"POT-Creation-Date: 2020-12-09 16:59:43+00:00\n"
+"POT-Creation-Date: 2020-12-21 16:06:38+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -120,7 +120,7 @@ msgid ""
 "on the menu icon."
 msgstr ""
 
-#: inc/common-functions.php:102
+#: inc/common-functions.php:102 inc/customizer.php:190
 msgid "Blog Sidebar"
 msgstr ""
 
@@ -167,7 +167,7 @@ msgstr ""
 msgid "Widget area for \"Instagram widget by WPZOOM\"."
 msgstr ""
 
-#: inc/common-functions.php:205 template-parts/post/content.php:81
+#: inc/common-functions.php:205 template-parts/post/content.php:37
 #. translators: %s: Post title.
 msgid "Read more<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
@@ -208,111 +208,129 @@ msgstr ""
 msgid "Pause background video"
 msgstr ""
 
-#: inc/customizer.php:51
+#: inc/customizer.php:44
+msgid "Header Title"
+msgstr ""
+
+#: inc/customizer.php:45
+msgid "Enter a site title which appears in the header on front-page"
+msgstr ""
+
+#: inc/customizer.php:57
+msgid "Header Description"
+msgstr ""
+
+#: inc/customizer.php:58
+msgid "Enter a site description which appears in the header on front-page"
+msgstr ""
+
+#: inc/customizer.php:70
+msgid "External Header Video"
+msgstr ""
+
+#: inc/customizer.php:71
+msgid "Enter a YouTube or Vimeo URL:"
+msgstr ""
+
+#: inc/customizer.php:94
 msgid "Custom Logo Text"
 msgstr ""
 
-#: inc/customizer.php:82
+#: inc/customizer.php:125
 msgid "Color Scheme"
 msgstr ""
 
-#: inc/customizer.php:84
+#: inc/customizer.php:127
 msgid "Light"
 msgstr ""
 
-#: inc/customizer.php:85
+#: inc/customizer.php:128
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer.php:86
+#: inc/customizer.php:129
 msgid "Custom"
 msgstr ""
 
-#: inc/customizer.php:111 template-parts/footer/footer-widgets.php:21
+#: inc/customizer.php:153 template-parts/footer/footer-widgets.php:21
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer.php:128
+#: inc/customizer.php:170
 msgid "Number of Widget Areas"
 msgstr ""
 
-#: inc/customizer.php:132
+#: inc/customizer.php:174
 msgid "Don't display Widgets"
 msgstr ""
 
-#: inc/customizer.php:133
+#: inc/customizer.php:175
 msgid "One Column"
 msgstr ""
 
-#: inc/customizer.php:134
+#: inc/customizer.php:176
 msgid "Two Columns"
 msgstr ""
 
-#: inc/customizer.php:135
+#: inc/customizer.php:177
 msgid "Three Columns"
 msgstr ""
 
-#: inc/customizer.php:136
+#: inc/customizer.php:178
 msgid "Four Columns"
 msgstr ""
 
-#: inc/customizer.php:147
+#: inc/customizer.php:189
 msgid "Theme Layout"
 msgstr ""
 
-#: inc/customizer.php:174
+#: inc/customizer.php:190
+msgid ""
+"If you want to display \"Sidebar on the right\", please make sure you have "
+"added some widgets to %s"
+msgstr ""
+
+#: inc/customizer.php:217
 msgid "Blog Layout"
 msgstr ""
 
-#: inc/customizer.php:178 inc/customizer.php:192 inc/customizer.php:305
+#: inc/customizer.php:221 inc/customizer.php:235 inc/customizer.php:309
 msgid "Full width"
 msgstr ""
 
-#: inc/customizer.php:179 inc/customizer.php:193 inc/customizer.php:306
+#: inc/customizer.php:222 inc/customizer.php:236 inc/customizer.php:310
 msgid "Sidebar on the right"
 msgstr ""
 
-#: inc/customizer.php:188
+#: inc/customizer.php:231
 msgid "Single Post Layout"
 msgstr ""
 
-#: inc/customizer.php:207
-msgid "Single Post Options"
+#: inc/customizer.php:250
+msgid "Blog Post Options"
 msgstr ""
 
-#: inc/customizer.php:215
-msgid "Share Buttons"
+#: inc/customizer.php:258
+msgid "Post Options"
 msgstr ""
 
-#: inc/customizer.php:233
-msgid "Share on Twitter"
-msgstr ""
-
-#: inc/customizer.php:242
-msgid "Share on Facebook"
-msgstr ""
-
-#: inc/customizer.php:251
-msgid "Share on Linkedin"
-msgstr ""
-
-#: inc/customizer.php:261
-msgid "Display Share Buttons"
-msgstr ""
-
-#: inc/customizer.php:270
-msgid "Twitter Button Label"
+#: inc/customizer.php:276
+msgid "Content"
 msgstr ""
 
 #: inc/customizer.php:280
-msgid "Facebook Button Label"
+msgid "Excerpt"
 msgstr ""
 
-#: inc/customizer.php:290
-msgid "Linkedin Button Label"
+#: inc/customizer.php:281
+msgid "Full Content"
 msgstr ""
 
-#: inc/template-tags.php:20 inc/template-tags.php:60
+#: inc/customizer.php:282
+msgid "None"
+msgstr ""
+
+#: inc/template-tags.php:20 inc/template-tags.php:54
 #. translators: Used between list items, there is a space after the comma.
 msgid ", "
 msgstr ""
@@ -321,69 +339,53 @@ msgstr ""
 msgid "in"
 msgstr ""
 
-#: inc/template-tags.php:36
-msgid "by"
-msgstr ""
-
-#: inc/template-tags.php:43
+#: inc/template-tags.php:37
 msgid "on"
 msgstr ""
 
-#: inc/template-tags.php:91
+#: inc/template-tags.php:87
+msgid "by"
+msgstr ""
+
+#: inc/template-tags.php:101
 msgid "0 comments"
 msgstr ""
 
-#: inc/template-tags.php:92
+#: inc/template-tags.php:102
 msgid "1 comment"
 msgstr ""
 
-#: inc/template-tags.php:93
+#: inc/template-tags.php:103
 msgid "% comments"
 msgstr ""
 
-#: inc/template-tags.php:95
+#: inc/template-tags.php:105
 msgid "Comments are Disabled"
 msgstr ""
 
-#: inc/template-tags.php:122 inc/template-tags.php:130
+#: inc/template-tags.php:132 inc/template-tags.php:140
 #. translators: %s: Post date.
 msgid "<span class=\"screen-reader-text\">Posted on</span> %s"
 msgstr ""
 
-#: inc/template-tags.php:148
+#: inc/template-tags.php:158
 msgid "Tags"
 msgstr ""
 
-#: inc/template-tags.php:159
-msgid "Tweet this on Twitter"
-msgstr ""
-
-#: inc/template-tags.php:167
-msgid "Share this on Facebook"
-msgstr ""
-
-#: inc/template-tags.php:174
-msgid "Share this on LinkedIn"
-msgstr ""
-
-#: inc/template-tags.php:178
-msgid "Share"
-msgstr ""
-
-#: inc/template-tags.php:183
+#: inc/template-tags.php:165
 msgid "Post author"
 msgstr ""
 
-#: inc/template-tags.php:185
+#: inc/template-tags.php:167
 msgid "Written by"
 msgstr ""
 
-#: inc/template-tags.php:212
+#: inc/template-tags.php:194
 #. translators: %s: Post title.
 msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: inc/template-tags.php:253
+#: inc/template-tags.php:235
 #. translators: %s: The section ID.
 msgid "Front Page Section %s Placeholder"
 msgstr ""
@@ -444,18 +446,18 @@ msgstr ""
 msgid "Toggle sidebar &amp; navigation"
 msgstr ""
 
-#: template-parts/page/content-page.php:61
-#: template-parts/post/content-audio.php:90
-#: template-parts/post/content-gallery.php:77
-#: template-parts/post/content-image.php:67
-#: template-parts/post/content-video.php:99 template-parts/post/content.php:88
+#: template-parts/page/content-page.php:63
+#: template-parts/post/content-audio.php:57
+#: template-parts/post/content-gallery.php:45
+#: template-parts/post/content-image.php:35
+#: template-parts/post/content-video.php:57 template-parts/post/content.php:44
 msgid "Pages:"
 msgstr ""
 
-#: template-parts/post/content-audio.php:83
-#: template-parts/post/content-gallery.php:70
-#: template-parts/post/content-image.php:60
-#: template-parts/post/content-video.php:92
+#: template-parts/post/content-audio.php:50
+#: template-parts/post/content-gallery.php:38
+#: template-parts/post/content-image.php:28
+#: template-parts/post/content-video.php:50
 #. translators: %s: Post title.
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
@@ -493,6 +495,22 @@ msgstr ""
 
 #. Author URI of the plugin/theme
 msgid "https://www.wpzoom.com/"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full-width (Page Builder)"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Page Builder (Without Page Title)"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Page Builder (Transparent Header, Without Title)"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Homepage (Page Builder)"
 msgstr ""
 
 #: inc/common-functions.php:13
