@@ -1,0 +1,73 @@
+@media screen and (max-width: em(640)) {
+    body:not(.wp-custom-logo) a.custom-logo-text {
+        @include font-size(20);
+        letter-spacing: 0;
+        line-height: 2em;
+    }
+
+    .clean_skin_wrap_post h3 { font-size: 16px; }
+
+    .site-title {
+        @include font-size(24);
+        padding-bottom: 0;
+        margin-bottom: 10px;
+
+        &:after {
+            display: none;
+        }
+    }
+
+    .site-description {
+        @include font-size(16);
+        text-shadow: none;
+    }
+
+    .page .entry-content,
+    .single .entry-content {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .page .entry-cover-image .entry-header .entry-title,
+    .single .entry-cover-image .entry-header .entry-title {
+        @include font-size(24);
+    }
+
+    .entry-title { font-size: 24px; line-height: 1.5;}
+
+    .widget_wpzoom-instagram li:nth-child(3n+3) { margin-right: 15px }
+
+    .side-nav__close-button { display: block; }
+
+    .side-nav-open .site .navbar-toggle .icon-bar:nth-child(2) { -webkit-transform: rotateZ(-40deg) translate3d(4px, 17px, 0); transform: rotateZ(-40deg) translate3d(4px, 17px, 0); width: 12px; }
+    .side-nav-open .site .navbar-toggle .icon-bar:nth-child(3) { -webkit-transform: translateX(3px); -ms-transform: translateX(3px); transform: translateX(3px); opacity: 1; }
+    .side-nav-open .site .navbar-toggle .icon-bar:nth-child(4) { -webkit-transform: rotateZ(40deg) translate3d(4px, -17px, 0); transform: rotateZ(40deg) translate3d(4px, -17px, 0); width: 12px; }
+
+    .side-nav__wrap { padding-top: 20px; }
+
+    .site-info {
+        @include font-size(14);
+
+        .copyright span:nth-child(1) {
+            margin-bottom: 10px;
+        }
+        .copyright span:nth-child(1),
+        .copyright span:nth-child(2) {
+            flex: 100%;
+            text-align: center;
+        }
+    }
+    
+    .previous-post-cover .previous-info {
+        min-height: 200px;
+    }
+
+    .header_social {
+        display: none;
+    }
+
+    .sb-search .sb-icon-search .svg-icon {
+        height: 14px;
+        margin: 14px 0;
+    }
+}

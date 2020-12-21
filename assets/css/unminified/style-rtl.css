@@ -1629,6 +1629,7 @@ a:hover .nav-title,
 
 .side-nav .widget .title {
     font-size: 18px;
+    font-size: 1.125rem;
     color: #fff;
 }
 
@@ -4435,6 +4436,124 @@ div.aligncenter {
     }
 }
 
+@media screen and (max-width: 64em) {
+    .side-nav .navbar-nav {
+        display: block;
+        margin-right: 0;
+        position: relative;
+    }
+    .side-nav .navbar-nav ul {
+        display: none;
+        margin-right: 20px;
+    }
+    .side-nav .navbar-nav li a:hover,
+    .side-nav .navbar-nav li a:active {
+        color: #fff;
+    }
+    .side-nav .navbar-nav li.menu-item-has-children > a .svg-icon {
+        float: left;
+        fill: #999;
+        height: 26px;
+        width: 26px;
+        margin: 4px 10px 0 0;
+        transition: 0.1s ease color, 0.5s ease transform;
+    }
+    .side-nav .navbar-nav li.menu-item-has-children > a .svg-icon:hover, .side-nav .navbar-nav li.menu-item-has-children > a .svg-icon:active {
+        fill: #fff;
+    }
+    .side-nav .navbar-nav li.menu-item-has-children.open > a .svg-icon {
+        transform: rotate(-180deg);
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        display: none;
+    }
+    .navbar-nav {
+        float: none;
+    }
+    .navbar-nav a:hover,
+    .navbar-nav > li > a:hover {
+        border: none;
+    }
+    .navbar-nav > li > a.sf-with-ul:hover {
+        border-bottom: none;
+    }
+    .navbar-nav li {
+        display: block;
+        position: relative;
+        float: none;
+        margin: 10px 0;
+        padding: 0 0 5px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .navbar-nav li a {
+        border: none;
+        padding: 4px 0;
+        margin: 7px 0;
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .navbar-nav li li a {
+        color: #ccc;
+    }
+    .navbar-nav ul:before {
+        display: none;
+    }
+    .navbar-nav ul li {
+        border: none;
+        padding: 0;
+        margin: 7px 0;
+    }
+    .navbar-nav ul li a {
+        text-transform: none;
+        font-weight: normal;
+        font-size: 14px;
+    }
+    .navbar-nav ul ul {
+        right: 0;
+    }
+    .current-menu-item a,
+    .current_page_item a,
+    .current-menu-parent a,
+    .current_page_parent a {
+        border-bottom: none;
+    }
+    .site-title {
+        font-size: 56px;
+        font-size: 3.5rem;
+    }
+    .site-description {
+        font-size: 18px;
+        font-size: 1.125rem;
+    }
+    .previous-post-cover .previous-content .nav-title {
+        font-size: 30px;
+        font-size: 1.875rem;
+    }
+    #comments,
+    .page #comments,
+    .page .entry-header .inner-wrap,
+    .page .entry-content,
+    .page:not(.inspiro-front-page) .entry-footer,
+    .single .entry-header .inner-wrap,
+    .single .entry-content,
+    .single .entry-footer {
+        padding: 0 4%;
+    }
+    .wrap,
+    .inner-wrap {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    body:not(.page-layout-sidebar-right) #primary {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
 @media screen and (max-width: 48.875em) {
     .admin-bar #header {
         margin-top: 46px;
@@ -4442,13 +4561,110 @@ div.aligncenter {
     .admin-bar .side-nav__wrap {
         padding-top: 106px;
     }
+    .site-title {
+        font-size: 32px;
+        font-size: 2rem;
+    }
+    .side-nav .widget .title {
+        font-size: 20px;
+        font-size: 1.25rem;
+    }
+    .page .entry-cover-image .entry-header .entry-title,
+    .single .entry-cover-image .entry-header .entry-title {
+        font-size: 32px;
+        font-size: 2rem;
+    }
+    .previous-post-cover .previous-content .nav-title {
+        font-size: 24px;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    body:not(.wp-custom-logo) a.custom-logo-text {
+        font-size: 20px;
+        font-size: 1.25rem;
+        letter-spacing: 0;
+        line-height: 2em;
+    }
+    .clean_skin_wrap_post h3 {
+        font-size: 16px;
+    }
+    .site-title {
+        font-size: 24px;
+        font-size: 1.5rem;
+        padding-bottom: 0;
+        margin-bottom: 10px;
+    }
+    .site-title:after {
+        display: none;
+    }
+    .site-description {
+        font-size: 16px;
+        font-size: 1rem;
+        text-shadow: none;
+    }
+    .page .entry-content,
+    .single .entry-content {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .page .entry-cover-image .entry-header .entry-title,
+    .single .entry-cover-image .entry-header .entry-title {
+        font-size: 24px;
+        font-size: 1.5rem;
+    }
+    .entry-title {
+        font-size: 24px;
+        line-height: 1.5;
+    }
+    .widget_wpzoom-instagram li:nth-child(3n+3) {
+        margin-left: 15px;
+    }
+    .side-nav__close-button {
+        display: block;
+    }
+    .side-nav-open .site .navbar-toggle .icon-bar:nth-child(2) {
+        transform: rotateZ(40deg) translate3d(-4px, 17px, 0);
+        width: 12px;
+    }
+    .side-nav-open .site .navbar-toggle .icon-bar:nth-child(3) {
+        transform: translateX(-3px);
+        opacity: 1;
+    }
+    .side-nav-open .site .navbar-toggle .icon-bar:nth-child(4) {
+        transform: rotateZ(-40deg) translate3d(-4px, -17px, 0);
+        width: 12px;
+    }
+    .side-nav__wrap {
+        padding-top: 20px;
+    }
+    .site-info {
+        font-size: 14px;
+        font-size: 0.875rem;
+    }
+    .site-info .copyright span:nth-child(1) {
+        margin-bottom: 10px;
+    }
+    .site-info .copyright span:nth-child(1),
+    .site-info .copyright span:nth-child(2) {
+        flex: 100%;
+        text-align: center;
+    }
+    .previous-post-cover .previous-info {
+        min-height: 200px;
+    }
+    .header_social {
+        display: none;
+    }
+    .sb-search .sb-icon-search .svg-icon {
+        height: 14px;
+        margin: 14px 0;
+    }
 }
 
 @media screen and (max-width: 37.5em) {
     .admin-bar #header.headroom--not-top {
         margin-top: 0;
-    }
-    .header_social {
-        display: none;
     }
 }

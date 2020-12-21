@@ -32,7 +32,7 @@
             margin-bottom: 0;
         }
         .title {
-            font-size: 18px;
+            @include font-size(18);
             color: #fff;
         }
     }

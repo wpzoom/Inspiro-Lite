@@ -331,7 +331,7 @@
 			});
 		}
 
-		$('<span class="child-arrow">&#62279;</span>')
+		$('.side-nav .navbar-nav li.menu-item-has-children > a .svg-icon')
 			.on( 'click', function(e) {
 				e.preventDefault();
 
@@ -345,8 +345,7 @@
 					$sub.slideDown();
 					$li.addClass('open');
 				}
-			})
-			.appendTo('.side-nav .navbar-nav li.menu-item-has-children > a');
+			});
 	});
 })( jQuery );
 

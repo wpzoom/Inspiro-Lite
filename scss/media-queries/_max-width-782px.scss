@@ -7,4 +7,17 @@
             padding-top: 106px/* 60 + 46 */
         }
     }
+    .site-title {
+        @include font-size(32);
+    }
+    .side-nav .widget .title {
+        @include font-size(20);
+    }
+    .page .entry-cover-image .entry-header .entry-title,
+    .single .entry-cover-image .entry-header .entry-title {
+        @include font-size(32);
+    }
+    .previous-post-cover .previous-content .nav-title {
+        @include font-size(24);
+    }
 }
