@@ -37,7 +37,9 @@ body.colors-dark {
 
     .entry-meta a,
     .entry-title a,
-    .entry-footer .post-author a {
+    .entry-footer .post-author a,
+    .comment-author .fn,
+    .comment-author .fn a {
         color: #ddd;
 
         &:hover {
@@ -66,8 +68,8 @@ body.colors-dark {
     &.blog .site-main > article:not(.sticky):after,
     &.archive .site-main > article:not(.sticky):after,
     &.search .site-main > article:not(.sticky):after,
-    &:not(.has-archive-description) .page-title:after,
-    &:not(.has-archive-description).page .entry-title:after,
+    &:not(.has-archive-description):not(.has-header-image) .page-title:after,
+    &:not(.has-archive-description):not(.has-header-image).page .entry-title:after,
     .entry-footer .section-title:before,
     #comments > h3:after,
     #respond > h3:after {

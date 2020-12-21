@@ -1,6 +1,6 @@
 /* Blog landing, search, archives */
 
-body:not(.has-archive-description) {
+body:not(.has-archive-description):not(.has-header-image) {
     .page-title,
     &.page .entry-title {
         &:after {
@@ -102,7 +102,7 @@ body:not(.page-layout-sidebar-right) {
     }
 }
 
-body.has-archive-description {
+body.has-archive-description:not(.has-header-image) {
     .taxonomy-description {
         &:after {
             content: '';

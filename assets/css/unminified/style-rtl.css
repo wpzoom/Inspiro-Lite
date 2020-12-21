@@ -2539,8 +2539,8 @@ body:not(.has-header-image):not(.has-header-video) #scroll-to-content {
 }
 
 /* Blog landing, search, archives */
-body:not(.has-archive-description) .page-title:after,
-body:not(.has-archive-description).page .entry-title:after {
+body:not(.has-archive-description):not(.has-header-image) .page-title:after,
+body:not(.has-archive-description):not(.has-header-image).page .entry-title:after {
     content: '';
     display: block;
     width: 130px;
@@ -2638,7 +2638,7 @@ body:not(.page-layout-sidebar-right).search .site-main article .entry-title {
     margin: 0;
 }
 
-body.has-archive-description .taxonomy-description:after {
+body.has-archive-description:not(.has-header-image) .taxonomy-description:after {
     content: '';
     display: block;
     width: 130px;
@@ -2661,11 +2661,17 @@ body.has-archive-description .taxonomy-description:after {
 }
 
 /* Single Post */
+.single.has-sidebar.page-layout-sidebar-right .entry-header .inner-wrap,
 .single .entry-wrapper {
     max-width: 1200px;
     margin: 3.75em auto;
-    padding-right: 2em;
-    padding-left: 2em;
+    padding-right: 1.25em;
+    padding-left: 1.25em;
+}
+
+.single.has-sidebar.page-layout-sidebar-right .entry-header .inner-wrap {
+    margin-top: 2.8125em;
+    margin-bottom: 0;
 }
 
 .page .entry-header .inner-wrap,
@@ -2810,33 +2816,6 @@ body.has-archive-description .taxonomy-description:after {
     color: #aaa;
 }
 
-.entry-footer .share-links a {
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-size: 0.875rem;
-    font-family: inherit;
-    color: #fff;
-    padding: 5px 18px;
-    border-radius: 3px;
-    margin: 0 0 0 10px;
-    transition: all .2s ease;
-    font-weight: 500;
-}
-
-.entry-footer .share-links a.inspiro-share-on-twitter {
-    background-color: #3a93d8;
-}
-
-.entry-footer .share-links a.inspiro-share-on-facebook {
-    background-color: #2e6cc8;
-}
-
-.entry-footer .share-links a.inspiro-share-on-linkedin {
-    background-color: #0077b5;
-}
-
 .entry-footer .post-author .section-title {
     clip: rect(1px, 1px, 1px, 1px);
     overflow: hidden;
@@ -2868,7 +2847,6 @@ body.has-archive-description .taxonomy-description:after {
 }
 
 .entry-footer .tags-links,
-.entry-footer .share-links,
 .entry-footer .post-author {
     margin: 0 0 1.875em 0;
 }
@@ -3837,7 +3815,7 @@ p > object:only-child {
 
 .entry-content .aligncenter,
 div.aligncenter {
-    display: table;
+    display: block;
     clear: both;
     margin-right: auto;
     margin-left: auto;

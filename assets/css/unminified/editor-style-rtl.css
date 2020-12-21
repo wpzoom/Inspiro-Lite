@@ -950,7 +950,7 @@ p > object:only-child {
 
 .entry-content .aligncenter,
 div.aligncenter {
-    display: table;
+    display: block;
     clear: both;
     margin-right: auto;
     margin-left: auto;

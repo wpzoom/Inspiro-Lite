@@ -36,13 +36,17 @@ body.colors-dark .entry-footer {
 
 body.colors-dark .entry-meta a,
 body.colors-dark .entry-title a,
-body.colors-dark .entry-footer .post-author a {
+body.colors-dark .entry-footer .post-author a,
+body.colors-dark .comment-author .fn,
+body.colors-dark .comment-author .fn a {
     color: #ddd;
 }
 
 body.colors-dark .entry-meta a:hover,
 body.colors-dark .entry-title a:hover,
-body.colors-dark .entry-footer .post-author a:hover {
+body.colors-dark .entry-footer .post-author a:hover,
+body.colors-dark .comment-author .fn:hover,
+body.colors-dark .comment-author .fn a:hover {
     color: #0bb4aa;
 }
 
@@ -67,8 +71,8 @@ body.colors-dark.search .entry-meta a {
 body.colors-dark.blog .site-main > article:not(.sticky):after,
 body.colors-dark.archive .site-main > article:not(.sticky):after,
 body.colors-dark.search .site-main > article:not(.sticky):after,
-body.colors-dark:not(.has-archive-description) .page-title:after,
-body.colors-dark:not(.has-archive-description).page .entry-title:after,
+body.colors-dark:not(.has-archive-description):not(.has-header-image) .page-title:after,
+body.colors-dark:not(.has-archive-description):not(.has-header-image).page .entry-title:after,
 body.colors-dark .entry-footer .section-title:before,
 body.colors-dark #comments > h3:after,
 body.colors-dark #respond > h3:after {
