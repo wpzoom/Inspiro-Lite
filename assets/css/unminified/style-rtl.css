@@ -1968,6 +1968,19 @@ body {
     letter-spacing: 0.08em;
     margin: 0;
     padding: 0;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.site-title:after {
+    content: '';
+    position: absolute;
+    width: 310px;
+    border-bottom: 2px solid rgba(201, 201, 201, 0.4);
+    bottom: 0px;
+    right: 50%;
+    margin-right: -155px;
 }
 
 .site-title,
@@ -1987,7 +2000,8 @@ body.has-header-video .site-title a {
     color: #666;
     font-size: 20px;
     font-size: 1.25rem;
-    margin-bottom: 0;
+    margin: 0 auto;
+    max-width: 950px;
 }
 
 body.has-header-image .site-description, body.has-header-video .site-description {
@@ -2068,9 +2082,18 @@ body:not(.title-tagline-hidden) .site-branding-text {
 .has-header-video.home.blog .site-branding {
     position: absolute;
     right: 50%;
-    top: 50%;
+    top: 45%;
     width: 100%;
+    opacity: 0;
     transform: translate(50%, -50%);
+    transition: top .3s linear, opacity .3s ease-in;
+}
+
+.has-header-image.inspiro-front-page.inspiro-page-loaded .site-branding, .has-header-image.home.blog.inspiro-page-loaded .site-branding,
+.has-header-video.inspiro-front-page.inspiro-page-loaded .site-branding,
+.has-header-video.home.blog.inspiro-page-loaded .site-branding {
+    opacity: 1;
+    top: 50%;
 }
 
 .has-header-image.inspiro-front-page .custom-header, .has-header-image.home.blog .custom-header,

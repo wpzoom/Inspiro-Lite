@@ -156,6 +156,10 @@
         }, 300 );
     });
 
+    $(window).on('load', function() {
+        $body.addClass('inspiro-page-loaded');
+    });
+
     // Add header video class after the video is loaded.
     $( document ).on( 'wp-custom-header-video-loaded', function() {
         $body.addClass( 'has-header-video' );

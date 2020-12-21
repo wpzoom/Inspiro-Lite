@@ -32,7 +32,7 @@ function inspiro_customize_register( $wp_customize ) {
 		array(
 			'default'           => get_bloginfo( 'description' ),
 			'transport'         => 'postMessage',
-			'sanitize_callback' => 'sanitize_text_field',
+			'sanitize_callback' => 'sanitize_textarea_field',
 		)
 	);
 
@@ -53,7 +53,7 @@ function inspiro_customize_register( $wp_customize ) {
 		'header_site_description',
 		array(
 			'theme_supports'  => array( 'custom-header' ),
-			'type'            => 'text',
+			'type'            => 'textarea',
 			'label'           => __( 'Header Description', 'inspiro' ),
 			'description'     => __( 'Enter a site description which appears in the header on front-page', 'inspiro' ),
 			'section'         => 'header_image',

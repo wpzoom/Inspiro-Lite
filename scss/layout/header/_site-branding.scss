@@ -26,6 +26,19 @@
     letter-spacing: 0.08em;
     margin: 0;
     padding: 0;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 310px;
+        border-bottom: 2px solid rgba(201, 201, 201, 0.4);
+        bottom: 0px;
+        left: 50%;
+        margin-left: -155px;
+    }
 
     &,
     a {
@@ -49,7 +62,8 @@ body {
 .site-description {
     color: #666;
     @include font-size(20);
-    margin-bottom: 0;
+    margin: 0 auto;
+    max-width: $content-width-small;
 }
 
 body {
@@ -146,9 +160,17 @@ body {
         .site-branding {
             position: absolute;
             left: 50%;
-            top: 50%;
+            top: 45%;
             width: 100%;
+            opacity: 0;
             transform: translate(-50%, -50%);
+            transition: top .3s linear, opacity .3s ease-in;
+        }
+        &.inspiro-page-loaded {
+            .site-branding {
+                opacity: 1;
+                top: 50%;
+            }
         }
         .custom-header {
             display: table;
