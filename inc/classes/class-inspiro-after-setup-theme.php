@@ -44,7 +44,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
          * Constructor
          */
         public function __construct() {
-            add_action( 'after_setup_theme', array( $this, 'theme_setup' ), 2 );
+            add_action( 'after_setup_theme', array( $this, 'theme_setup' ) );
             add_action( 'template_redirect', array( $this, 'theme_content_width' ), 0 );
         }
 

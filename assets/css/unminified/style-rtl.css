@@ -2330,6 +2330,15 @@ body:not(.has-header-image):not(.has-header-video) #scroll-to-content {
     background-color: #fff;
 }
 
+.home.blog .page-title:after {
+    content: '';
+    display: block;
+    width: 130px;
+    height: 1px;
+    background: #e6e6e6;
+    margin: 40px auto 48px;
+}
+
 .home.blog .entry-title {
     margin-top: 0;
     color: #222;

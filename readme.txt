@@ -4,11 +4,11 @@ Tested up to: 5.5
 Version: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+Tags: one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
 == Description ==
 
-A professional Photo and Video focused theme with a modern design. Packed with features including a fullscreen slideshow that supports YouTube, Vimeo & self-hosted videos in background, Page Builder integration and a gallery module, Inspiro is perfect for showing off your portfolio, images and videos.
+A professional Photo and Video focused theme with a modern design. Packed with features including a fullscreen custom header that supports YouTube, Vimeo & self-hosted videos in background, Inspiro is perfect for showing off your portfolio, images and videos.
 
 For more information about Inspiro please go to https://wordpress.org/themes/inspiro/.
 
@@ -20,7 +20,7 @@ More customization options & features are available in the paid version.
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
 2. Type in Inspiro Lite in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
-4. Go to https://wordpress.org/support/article/twenty-seventeen/ for a guide on how to customize this theme.
+4. Go to https://www.wpzoom.com/documentation/inspiro-lite for a guide on how to customize this theme.
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Copyright ==
@@ -40,10 +40,6 @@ GNU General Public License for more details.
 
 Inspiro Lite bundles the following third-party resources:
 
-HTML5 Shiv, Copyright 2014 Alexander Farkas
-Licenses: MIT/GPL2
-Source: https://github.com/aFarkas/html5shiv
-
 jQuery scrollTo, Copyright 2007-2015 Ariel Flesler
 License: MIT
 Source: https://github.com/flesler/jquery.scrollTo
@@ -52,17 +48,21 @@ normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
 License: MIT
 Source: https://necolas.github.io/normalize.css/
 
-Font Awesome icons, Copyright Dave Gandy
-License: SIL Open Font License, version 1.1.
-Source: http://fontawesome.io/
-
-Bundled header image, Copyright Alvin Engler
+Bundled header image, Copyright Burst
 License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/@englr?photo=bIhpiQA009k
+Source: https://stocksnap.io/photo/dock-lake-U94B4HVBAO
+
+Starter content image, Copyright Ishan @seefromthesky
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://stocksnap.io/photo/aerial-land-PU4RMD67KZ
+
+Starter content image, Copyright Bonnie Moreland
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 
 == Changelog ==
 
 = 1.0.0 =
-* Released: December 6, 2016
+* Released: TODO: add release date
 
 Initial release
