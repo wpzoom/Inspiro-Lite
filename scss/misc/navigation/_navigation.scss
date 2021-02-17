@@ -131,6 +131,14 @@
             border-right: 8px solid transparent;
             border-left: 8px solid transparent;
         }
+
+        &.current-menu-item > a,
+        &.current_page_item > a,
+        &.current-menu-parent > a,
+        &.current_page_parent > a {
+            border-bottom: 1px solid rgba(255,255,255,.3);
+        }
+
     }
 
     a {

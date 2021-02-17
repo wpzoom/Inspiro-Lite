@@ -17,6 +17,17 @@
 		?>
 
 		<div class="site-branding-text">
+            <?php
+            $query['autofocus[section]'] = 'header_image';
+            $section_link = add_query_arg( $query, admin_url( 'customize.php' ) );
+            ?>
+
+            <?php if( current_user_can('editor') || current_user_can('administrator') ) {  ?>
+
+                <small class="edit-link"><a href="<?php echo esc_url( $section_link ); ?>"><?php _e( '[Edit]', 'inspiro' ); ?></a></small>
+
+            <?php } ?>
+
 			<?php if ( is_front_page() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html( $site_title ); ?></a></h1>
 			<?php else : ?>

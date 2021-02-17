@@ -53,6 +53,17 @@
             border-bottom: none
         }
 
+        > li {
+
+            &.current-menu-item > a,
+            &.current_page_item > a,
+            &.current-menu-parent > a,
+            &.current_page_parent > a {
+                color: $primary-color;
+            }
+
+        }
+
         li {
             display: block;
             position: relative;
@@ -62,7 +73,7 @@
             border-bottom: 1px solid rgba(255, 255, 255, .1);
 
             a {
-                border: none; 
+                border: none !important;
                 padding: 4px 0;
                 margin: 7px 0;
                 color: #fff;
@@ -76,7 +87,7 @@
 
         ul {
             &:before {
-                display: none 
+                display: none
             }
             li {
                 border: none;

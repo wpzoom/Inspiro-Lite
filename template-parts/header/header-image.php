@@ -11,7 +11,7 @@
 ?>
 <div class="custom-header">
     <?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
-    
+
 	<div class="custom-header-media">
 		<?php the_custom_header_markup(); ?>
 	</div>
