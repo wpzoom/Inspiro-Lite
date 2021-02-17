@@ -234,10 +234,6 @@ blockquote:after {
     content: "";
 }
 
-:focus {
-    outline: none;
-}
-
 /* Typography for Arabic Font */
 html[lang="ar"] body,
 html[lang="ar"] button,
@@ -645,10 +641,6 @@ a {
 a:hover {
     text-decoration: none;
     color: #076c65;
-}
-
-a:hover, a:active {
-    outline: 0;
 }
 
 /* Hover effects */

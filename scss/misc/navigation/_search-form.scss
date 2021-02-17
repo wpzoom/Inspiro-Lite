@@ -6,10 +6,9 @@
     text-align: right;
     width: 24px;
     height: 40px;
-    
+
     .sb-search-input {
         position: relative;
-        outline: none;
         width: 20px;
         padding: 2% 2%;
         margin: 0;
@@ -60,7 +59,7 @@
             display: none;
         }
     }
-    
+
     // Open state
     &.sb-search-open {
         .sb-search-input {

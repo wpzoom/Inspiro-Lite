@@ -58,7 +58,7 @@ function inspiro_body_classes( $classes ) {
 	}
 
 	// Add class if is single page and has post thumbnail.
-	if ( ( is_single() || is_page() ) && has_post_thumbnail() ) {
+	if ( ( ( is_single() && 'post' == get_post_type() ) || is_page() ) && has_post_thumbnail() ) {
 		$classes[] = 'has-header-image';
 	}
 
@@ -138,7 +138,7 @@ function inspiro_get_footer_class( $class = '' ) {
 	$has_footer_widgets = false;
 
 	if ( $widgets_columns > 0 ) {
-		for ( $i=0; $i <= intval( $widgets_columns ); $i++ ) { 
+		for ( $i=0; $i <= intval( $widgets_columns ); $i++ ) {
 			if ( $has_footer_widgets ) {
 				$classes[] = 'has-footer-widgets';
 				break;
@@ -156,9 +156,9 @@ function inspiro_get_footer_class( $class = '' ) {
 		// Ensure that we always coerce class to being an array.
 		$class = array();
 	}
-	
+
 	$classes = array_map( 'esc_attr', $classes );
-	
+
 	/**
 	 * Filters the list of CSS footer class names.
 	 *
@@ -168,7 +168,7 @@ function inspiro_get_footer_class( $class = '' ) {
 	 * @param string[] $class   An array of additional class names added to the footer.
 	 */
 	$classes = apply_filters( 'inspiro_footer_class', $classes, $class );
-	
+
 	return array_unique( $classes );
 }
 

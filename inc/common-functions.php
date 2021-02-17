@@ -32,9 +32,9 @@ function inspiro_fonts_url() {
 /**
  * Get assets url depending on constant SCRIPT_DEBUG.
  * If value of this constant is `true` then theme will load unminified assets
- * 
+ *
  * @since x.x.x
- * 
+ *
  * @param  string $filename The file name
  * @param  string $filetype The file type [css|js]
  * @return string           The full assets url
@@ -400,5 +400,17 @@ if ( ! function_exists( 'inspiro_comment' ) ) {
                 break;
         endswitch;
     }
+
+}
+
+/**
+ * WooCommerce compatibility.
+ */
+
+if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+    add_theme_support( 'woocommerce' );
+    add_theme_support( 'wc-product-gallery-zoom' );
+    add_theme_support( 'wc-product-gallery-lightbox' );
+    add_theme_support( 'wc-product-gallery-slider' );
 
 }

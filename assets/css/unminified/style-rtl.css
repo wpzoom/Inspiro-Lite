@@ -679,10 +679,6 @@ blockquote:after {
     content: "";
 }
 
-:focus {
-    outline: none;
-}
-
 /* Typography for Arabic Font */
 html[lang="ar"] body,
 html[lang="ar"] button,
@@ -1037,7 +1033,6 @@ input[type=text], textarea {
 
 input:focus, textarea:focus {
     border-color: #0bb4aa;
-    outline: 0;
 }
 
 .wpzabb-post-grid-more,
@@ -1216,10 +1211,6 @@ a {
 a:hover {
     text-decoration: none;
     color: #076c65;
-}
-
-a:hover, a:active {
-    outline: 0;
 }
 
 /* Hover effects */
@@ -1614,7 +1605,6 @@ a:hover .nav-title,
     width: 380px;
     z-index: -1;
     visibility: hidden;
-    outline: 0;
     transform-style: preserve-3d;
     -webkit-overflow-scrolling: touch;
 }
@@ -1739,7 +1729,6 @@ body.side-nav-open .side-nav__scrollable-container {
 
 .sb-search .sb-search-input {
     position: relative;
-    outline: none;
     width: 20px;
     padding: 2% 2%;
     margin: 0;
@@ -1973,7 +1962,6 @@ body {
     font-size: 4.5rem;
     font-weight: 200;
     line-height: 1.25;
-    letter-spacing: 0.08em;
     margin: 0;
     padding: 0;
     padding-bottom: 30px;
@@ -2316,13 +2304,10 @@ body:not(.has-header-image):not(.has-header-video) #scroll-to-content {
     position: relative;
 }
 
-.site-content {
-    padding: 2.5em 0 0;
-}
-
 .page-template-homepage-builder-bb .site-content,
-.page-template-full-width-builder-bb .site-content {
-    padding: 0;
+.page-template-full-width-no-title .site-content,
+.page-template-full-width-transparent .site-content {
+    padding-top: 0 !important;
 }
 
 /*--------------------------------------------------------------
@@ -3422,7 +3407,7 @@ h4.jp-relatedposts-post-title {
 
 .widget ul li,
 .widget ol li {
-    padding: 0.375em 0;
+    padding: 0.0625em 0;
 }
 
 .widget:not(.widget_tag_cloud) ul li + li {
@@ -3501,7 +3486,6 @@ h4.jp-relatedposts-post-title {
 .search-form input:focus,
 .search-form button:focus {
     border-color: #0bb4aa;
-    outline: none;
 }
 
 .search-form .search-field {

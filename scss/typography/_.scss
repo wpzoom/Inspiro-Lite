@@ -147,9 +147,6 @@ blockquote:after {
     content: "";
 }
 
-:focus {
-    outline: none;
-}
 
 @import "arabic", "chinese", "cyrillic", "devanagri", "greek", "gujarati", "hebrew", "japanese", "korean", "thai";
 
