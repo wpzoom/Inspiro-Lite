@@ -46,7 +46,7 @@
 		elseif ( is_front_page() && has_header_image() ) { // static homepage
 			get_template_part( 'template-parts/header/header', 'image' );
 		}
-		elseif ( is_page() && inspiro_is_frontpage() ) {
+		elseif ( is_page() && inspiro_is_frontpage() && has_header_image() ) {
 			get_template_part( 'template-parts/header/header', 'image' );
 		}
 		elseif ( is_page_template( 'page-templates/homepage-builder-bb.php' ) && has_header_image() ) {

@@ -45,7 +45,7 @@ function inspiro_body_classes( $classes ) {
 		elseif ( is_front_page() && has_header_image() ) { // static homepage
 			$classes[] = 'has-header-image';
 		}
-		elseif ( is_page() && inspiro_is_frontpage() ) {
+		elseif ( is_page() && inspiro_is_frontpage() && has_header_image() ) {
 			$classes[] = 'has-header-image';
 		}
 		if ( is_page_template( 'page-templates/full-width-transparent.php' ) ) {

@@ -2302,6 +2302,11 @@ body:not(.has-header-image):not(.has-header-video) #scroll-to-content {
     padding: 2.5em 0 0;
 }
 
+.page-template-homepage-builder-bb .site-content,
+.page-template-full-width-builder-bb .site-content {
+    padding: 0;
+}
+
 /*--------------------------------------------------------------
 13.4 Posts
 --------------------------------------------------------------*/
