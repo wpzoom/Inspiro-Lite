@@ -1,10 +1,10 @@
 # Inspiro #
-**Contributors:** [WPZOOM](https://profiles.wordpress.org/WPZOOM)  
-**Tested up to:** 5.6  
-**Version:** 1.0.0  
-**License:** GPLv2 or later  
-**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
-**Tags:** one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready  
+**Contributors:** [WPZOOM](https://profiles.wordpress.org/WPZOOM)
+**Tested up to:** 5.7
+**Version:** 1.2.0
+**License:** GPLv2 or later
+**License URI:** http://www.gnu.org/licenses/gpl-2.0.html
+**Tags:** one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
 ## Description ##
 
@@ -18,15 +18,15 @@ More customization options & features are available in the paid version.
 ## Installation ##
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in Inspiro Lite in the search form and press the 'Enter' key on your keyboard.
+2. Type in Inspiro in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
 4. Go to https://www.wpzoom.com/documentation/inspiro-lite for a guide on how to customize this theme.
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 ## Copyright ##
 
-Inspiro Lite WordPress Theme, Copyright 2016-2020 WordPress.org
-Inspiro Lite is distributed under the terms of the GNU GPL
+Inspiro WordPress Theme, Copyright 2016-2020 WordPress.org
+Inspiro is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -38,7 +38,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Inspiro Lite bundles the following third-party resources:
+Inspiro bundles the following third-party resources:
 
 jQuery scrollTo, Copyright 2007-2015 Ariel Flesler
 License: MIT
@@ -62,7 +62,5 @@ Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 
 ## Changelog ##
 
-### 1.0.0 ###
-* Released: TODO: add release date
-
-Initial release
+### 1.2.0 ###
+* Initial release
