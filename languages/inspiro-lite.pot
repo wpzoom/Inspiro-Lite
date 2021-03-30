@@ -1,14 +1,14 @@
-# <!=Copyright (C) 2020 WPZOOM
+# <!=Copyright (C) 2021 WPZOOM
 # This file is distributed under the GNU General Public License v3 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Inspiro 1.0.0\n"
+"Project-Id-Version: Inspiro 1.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/inspiro-lite\n"
-"POT-Creation-Date: 2020-12-21 16:06:38+00:00\n"
+"POT-Creation-Date: 2021-03-30 12:29:45+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2021-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: en\n"
@@ -23,6 +23,14 @@ msgstr ""
 "X-Poedit-Bookmarks: \n"
 "X-Textdomain-Support: yes\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: inc/theme-info-page.php:158
+msgid "1"
+msgstr ""
+
+#: inc/theme-info-page.php:163
+msgid "6"
+msgstr ""
 
 #: 404.php:21
 msgid "Oops! That page can&rsquo;t be found."
@@ -96,6 +104,37 @@ msgstr ""
 
 #: header.php:29
 msgid "Skip to content"
+msgstr ""
+
+#: inc/admin-notice.php:47
+msgid "Action failed. Please refresh the page and retry."
+msgstr ""
+
+#: inc/admin-notice.php:50
+msgid "You do not have the necessary permission to perform this action."
+msgstr ""
+
+#: inc/admin-notice.php:69
+msgid "Dismiss this notice."
+msgstr ""
+
+#: inc/admin-notice.php:72
+msgid ""
+"Thank you for using %1$s! To get started please make sure you visit our "
+"%2$swelcome page%3$s."
+msgstr ""
+
+#: inc/admin-notice.php:75 inc/theme-info-page.php:72
+msgid "Get Started with %s"
+msgstr ""
+
+#: inc/admin-notice.php:77
+msgid "https://www.wpzoom.com/themes/inspiro/"
+msgstr ""
+
+#: inc/admin-notice.php:78 inc/customizer.php:316 inc/theme-info-page.php:121
+#: inc/theme-info-page.php:261
+msgid "Upgrade to Inspiro PRO"
 msgstr ""
 
 #: inc/back-compat.php:39 inc/back-compat.php:53 inc/back-compat.php:72
@@ -294,11 +333,11 @@ msgstr ""
 msgid "Blog Layout"
 msgstr ""
 
-#: inc/customizer.php:221 inc/customizer.php:235 inc/customizer.php:309
+#: inc/customizer.php:221 inc/customizer.php:235 inc/customizer.php:334
 msgid "Full width"
 msgstr ""
 
-#: inc/customizer.php:222 inc/customizer.php:236 inc/customizer.php:310
+#: inc/customizer.php:222 inc/customizer.php:236 inc/customizer.php:335
 msgid "Sidebar on the right"
 msgstr ""
 
@@ -328,6 +367,17 @@ msgstr ""
 
 #: inc/customizer.php:282
 msgid "None"
+msgstr ""
+
+#: inc/customizer.php:317
+msgid ""
+"Unlock premium features: 7 Style Kits, 9 Predefined templates, "
+"Automatically play background videos, Portfolios, Premium Support and much "
+"more..."
+msgstr ""
+
+#: inc/customizer.php:318
+msgid "View Inspiro PRO"
 msgstr ""
 
 #: inc/template-tags.php:20 inc/template-tags.php:54
@@ -390,6 +440,217 @@ msgstr ""
 msgid "Front Page Section %s Placeholder"
 msgstr ""
 
+#: inc/theme-info-page.php:20
+msgid "Welcome to Inspiro Theme"
+msgstr ""
+
+#: inc/theme-info-page.php:21 inc/theme-info-page.php:55
+msgid "About Inspiro"
+msgstr ""
+
+#: inc/theme-info-page.php:41
+msgid "Theme Screenshot"
+msgstr ""
+
+#: inc/theme-info-page.php:46
+msgid "Welcome to %1$1s %2$2s"
+msgstr ""
+
+#: inc/theme-info-page.php:50
+msgid ""
+"Inspiro is perfect for creating food based blogs and recipe websites. A "
+"beautiful featured slider and WooCommerce integration mean Inspiro is "
+"packed with features to help you stand out."
+msgstr ""
+
+#: inc/theme-info-page.php:54 inc/theme-info-page.php:120
+#: inc/theme-info-page.php:260
+msgid "https://www.wpzoom.com/wordpress-food-themes/inspiro-pro/"
+msgstr ""
+
+#: inc/theme-info-page.php:57 inc/theme-info-page.php:85
+msgid "https://www.wpzoom.com/documentation/inspiro-lite/"
+msgstr ""
+
+#: inc/theme-info-page.php:58
+msgid "Documentation"
+msgstr ""
+
+#: inc/theme-info-page.php:60
+msgid "https://www.wpzoom.com/showcase/theme/inspiro/"
+msgstr ""
+
+#: inc/theme-info-page.php:61
+msgid "Inspiro Showcase"
+msgstr ""
+
+#: inc/theme-info-page.php:79 inc/theme-info-page.php:86
+msgid "Theme Documentation"
+msgstr ""
+
+#: inc/theme-info-page.php:82
+msgid ""
+"Need help configuring %s? In the documentation you can find all theme "
+"related information that is needed to get your site up and running in no "
+"time."
+msgstr ""
+
+#: inc/theme-info-page.php:88
+msgid "https://wordpress.org/support/theme/inspiro"
+msgstr ""
+
+#: inc/theme-info-page.php:89 inc/theme-info-page.php:253
+msgid "Support Forum"
+msgstr ""
+
+#: inc/theme-info-page.php:98 inc/theme-info-page.php:105
+msgid "Recommended Plugins"
+msgstr ""
+
+#: inc/theme-info-page.php:101
+msgid ""
+"In order to enable all theme features, it's necessary to install a few "
+"recommended plugins."
+msgstr ""
+
+#: inc/theme-info-page.php:114
+msgid "Inspiro Pro"
+msgstr ""
+
+#: inc/theme-info-page.php:117
+msgid ""
+"If you like the free version of this theme, you will LOVE the full version "
+"of Inspiro which includes unique custom widgets, additional features and "
+"more useful options to customize your website."
+msgstr ""
+
+#: inc/theme-info-page.php:128
+msgid "Why Upgrade?"
+msgstr ""
+
+#: inc/theme-info-page.php:131
+msgid ""
+"Upgrading to Inspiro PRO you will unlock a dozen of unique features that "
+"will take your food blog to the next level. See in the table below just a "
+"few of the features included in the PRO version."
+msgstr ""
+
+#: inc/theme-info-page.php:134
+msgid "http://demo.wpzoom.com/?theme=inspiro"
+msgstr ""
+
+#: inc/theme-info-page.php:135
+msgid "View Inspiro PRO Demo"
+msgstr ""
+
+#: inc/theme-info-page.php:145
+msgid "Inspiro Lite vs. Inspiro PRO"
+msgstr ""
+
+#: inc/theme-info-page.php:150
+msgid "Features"
+msgstr ""
+
+#: inc/theme-info-page.php:151
+msgid "Inspiro Lite"
+msgstr ""
+
+#: inc/theme-info-page.php:152
+msgid "Inspiro PRO"
+msgstr ""
+
+#: inc/theme-info-page.php:157
+msgid "Custom Widgets"
+msgstr ""
+
+#: inc/theme-info-page.php:159
+msgid "6 (Featured Categories, Carousel, Author Bio, Image Box)"
+msgstr ""
+
+#: inc/theme-info-page.php:162
+msgid "Widget Areas"
+msgstr ""
+
+#: inc/theme-info-page.php:164
+msgid "15 (5 on Homepage)"
+msgstr ""
+
+#: inc/theme-info-page.php:167
+msgid "Responsive Layout"
+msgstr ""
+
+#: inc/theme-info-page.php:172
+msgid "Magazine Layout"
+msgstr ""
+
+#: inc/theme-info-page.php:177
+msgid "Demo Content Importer"
+msgstr ""
+
+#: inc/theme-info-page.php:182
+msgid "Recipe Index"
+msgstr ""
+
+#: inc/theme-info-page.php:187
+msgid "Recipe Shortcodes"
+msgstr ""
+
+#: inc/theme-info-page.php:192
+msgid "10 Color Schemes"
+msgstr ""
+
+#: inc/theme-info-page.php:197
+msgid "3 Slider Styles"
+msgstr ""
+
+#: inc/theme-info-page.php:202
+msgid "Multiple Posts Layouts"
+msgstr ""
+
+#: inc/theme-info-page.php:207
+msgid "Built-in Social Buttons"
+msgstr ""
+
+#: inc/theme-info-page.php:212
+msgid "Extended WooCommerce Integration"
+msgstr ""
+
+#: inc/theme-info-page.php:217
+msgid "Advertising Options"
+msgstr ""
+
+#: inc/theme-info-page.php:222
+msgid "Theme Options"
+msgstr ""
+
+#: inc/theme-info-page.php:227
+msgid "Carousel Widget"
+msgstr ""
+
+#: inc/theme-info-page.php:232
+msgid "100+ Color Options"
+msgstr ""
+
+#: inc/theme-info-page.php:237
+msgid "600+ Google Fonts"
+msgstr ""
+
+#: inc/theme-info-page.php:242
+msgid "Typography Options"
+msgstr ""
+
+#: inc/theme-info-page.php:247
+msgid "Instagram Bar in the Footer"
+msgstr ""
+
+#: inc/theme-info-page.php:252
+msgid "Support"
+msgstr ""
+
+#: inc/theme-info-page.php:254
+msgid "Fast & Friendly Email Support"
+msgstr ""
+
 #: index.php:27
 msgid "Our Blog"
 msgstr ""
@@ -436,6 +697,10 @@ msgstr ""
 
 #: template-parts/header/search-form.php:2
 msgid "Type your keywords and hit Enter..."
+msgstr ""
+
+#: template-parts/header/site-branding.php:27
+msgid "[Edit]"
 msgstr ""
 
 #: template-parts/navigation/navigation-primary.php:11
