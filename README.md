@@ -1,10 +1,11 @@
 # Inspiro #
-**Contributors:** [WPZOOM](https://profiles.wordpress.org/WPZOOM)
-**Tested up to:** 5.7
-**Version:** 1.2.0
-**License:** GPLv2 or later
-**License URI:** http://www.gnu.org/licenses/gpl-2.0.html
-**Tags:** one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+**Contributors:** [WPZOOM](https://profiles.wordpress.org/WPZOOM)  
+**Requires at least:** 5.2  
+**Tested up to:** 5.7  
+**Version:** 1.2.0  
+**License:** GPLv2 or later  
+**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
+**Tags:** one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready  
 
 ## Description ##
 
@@ -25,7 +26,7 @@ More customization options & features are available in the paid version.
 
 ## Copyright ##
 
-Inspiro WordPress Theme, Copyright 2016-2020 WordPress.org
+Inspiro WordPress Theme, Copyright 2016-2021 WordPress.org
 Inspiro is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
