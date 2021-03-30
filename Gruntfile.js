@@ -76,7 +76,8 @@ module.exports = function(grunt) {
             src: [
                 '*.css',
                 '!*-rtl.css',
-                '!colors-dark.css'
+                '!colors-dark.css',
+                '!customize.css'
             ],
             dest: 'assets/css/unminified',
             ext: '-rtl.css'
@@ -99,6 +100,7 @@ module.exports = function(grunt) {
             'assets/css/unminified/style.css': 'scss/style.scss',
             'assets/css/unminified/editor-style.css': 'scss/editor-style.scss',
             'assets/css/unminified/colors-dark.css': 'scss/colors-dark.scss',
+            'assets/css/unminified/customize.css': 'scss/customize.scss',
           },
           {
             expand: true,

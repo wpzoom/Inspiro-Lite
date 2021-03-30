@@ -296,6 +296,31 @@ function inspiro_customize_register( $wp_customize ) {
 	// 	  	'active_callback' 	=> 'inspiro_is_view_is_single',
 	// 	)
 	// );
+
+	/**
+	 * Add custom section to Customizer
+	 * This section will display upsell message to Customizer at the top of all section panels.
+	 * 
+	 * @since x.x.x
+	 */
+	require INSPIRO_THEME_DIR . '/inc/classes/class-inspiro-customize-section-pro.php';
+	
+    $wp_customize->register_section_type( 'Inspiro_Customize_Section_Pro' );
+
+    // Register sections.
+    $wp_customize->add_section(
+        new Inspiro_Customize_Section_Pro(
+            $wp_customize,
+            'inspiro_upgrade_pro',
+            array(
+                'title'    		=> esc_html__( 'Upgrade to Inspiro PRO', 'inspiro' ),
+                'description' 	=> esc_html__( 'Unlock premium features: 7 Style Kits, 9 Predefined templates, Automatically play background videos, Portfolios, Premium Support and much more...', 'inspiro' ),
+                'pro_text' 		=> esc_html__( 'View Inspiro PRO', 'inspiro' ),
+                'pro_url'  		=> 'https://www.wpzoom.com/themes/inspiro/',
+                'priority' 		=> 5
+            )
+        )
+    );
 }
 add_action( 'customize_register', 'inspiro_customize_register' );
 
@@ -380,14 +405,31 @@ function inspiro_is_view_with_layout_option() {
  * Bind JS handlers to instantly live-preview changes.
  */
 function inspiro_customize_preview_js() {
-	wp_enqueue_script( 'inspiro-customize-preview', inspiro_get_assets_uri( 'customize-preview', 'js' ), array( 'customize-preview' ), INSPIRO_THEME_VERSION, true );
+	wp_enqueue_script(
+		'inspiro-customize-preview',
+		inspiro_get_assets_uri( 'customize-preview', 'js' ),
+		array( 'customize-preview' ),
+		INSPIRO_THEME_VERSION,
+		true
+	);
 }
 add_action( 'customize_preview_init', 'inspiro_customize_preview_js' );
 
 /**
  * Load dynamic logic for the customizer controls area.
  */
-function inspiro_panels_js() {
-	wp_enqueue_script( 'inspiro-customize-controls', inspiro_get_assets_uri( 'customize-controls', 'js' ), array(), INSPIRO_THEME_VERSION, true );
+function inspiro_enqueue_control_scripts() {
+	wp_enqueue_script(
+		'inspiro-customize-controls',
+		inspiro_get_assets_uri( 'customize-controls', 'js' ),
+		array( 'customize-controls' ),
+		INSPIRO_THEME_VERSION,
+		true
+	);
+
+	wp_enqueue_style(
+		'inspiro-customize-controls',
+		inspiro_get_assets_uri( 'customize', 'css' )
+	);
 }
-add_action( 'customize_controls_enqueue_scripts', 'inspiro_panels_js' );
+add_action( 'customize_controls_enqueue_scripts', 'inspiro_enqueue_control_scripts' );
