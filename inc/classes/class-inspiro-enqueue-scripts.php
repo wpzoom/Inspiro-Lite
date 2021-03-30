@@ -31,6 +31,14 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 
             add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
             add_action( 'enqueue_block_editor_assets', array( $this, 'block_editor_styles' ) );
+            add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
+        }
+
+        /**
+         * Enqueue scripts and styles for all admin pages.
+         */
+        function admin_scripts() {
+            wp_enqueue_style( 'inspiro-admin', inspiro_get_assets_uri( 'admin', 'css' ), array(), INSPIRO_THEME_VERSION );
         }
 
         /**

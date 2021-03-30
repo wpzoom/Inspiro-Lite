@@ -71,3 +71,9 @@ require INSPIRO_THEME_DIR . '/inc/customizer.php';
  * SVG icons functions and filters.
  */
 require INSPIRO_THEME_DIR . '/inc/icon-functions.php';
+
+/**
+ * Welcome notice and Theme info page
+ */
+require INSPIRO_THEME_DIR . '/inc/admin-notice.php';
+require INSPIRO_THEME_DIR . '/inc/theme-info-page.php';

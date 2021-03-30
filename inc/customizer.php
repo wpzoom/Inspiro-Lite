@@ -304,7 +304,7 @@ function inspiro_customize_register( $wp_customize ) {
 	 * @since x.x.x
 	 */
 	require INSPIRO_THEME_DIR . '/inc/classes/class-inspiro-customize-section-pro.php';
-	
+
     $wp_customize->register_section_type( 'Inspiro_Customize_Section_Pro' );
 
     // Register sections.
@@ -429,7 +429,9 @@ function inspiro_enqueue_control_scripts() {
 
 	wp_enqueue_style(
 		'inspiro-customize-controls',
-		inspiro_get_assets_uri( 'customize', 'css' )
+		inspiro_get_assets_uri( 'customize', 'css' ),
+		array(),
+		INSPIRO_THEME_VERSION
 	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'inspiro_enqueue_control_scripts' );
