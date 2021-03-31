@@ -24,7 +24,7 @@ get_header(); ?>
         </header>
     <?php else : ?>
     <header class="page-header">
-        <h2 class="page-title"><?php _e( 'Our Blog', 'inspiro' ); ?></h2>
+        <h2 class="page-title"><?php esc_html_e( 'Our Blog', 'inspiro' ); ?></h2>
     </header>
     <?php endif; ?>
 

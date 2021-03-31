@@ -381,7 +381,7 @@ if ( ! function_exists( 'inspiro_comment' ) ) {
                     </div>
                     <!-- .comment-author .vcard -->
                     <?php if ( $comment->comment_approved == '0' ) : ?>
-                        <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'inspiro' ); ?></em>
+                        <em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'inspiro' ); ?></em>
                         <br/>
                     <?php endif; ?>
 
@@ -395,7 +395,7 @@ if ( ! function_exists( 'inspiro_comment' ) ) {
             case 'trackback' :
                 ?>
                 <li class="post pingback">
-                <p><?php _e( 'Pingback:', 'inspiro' ); ?><?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'inspiro' ), ' ' ); ?></p>
+                <p><?php esc_html_e( 'Pingback:', 'inspiro' ); ?><?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'inspiro' ), ' ' ); ?></p>
                 <?php
                 break;
         endswitch;

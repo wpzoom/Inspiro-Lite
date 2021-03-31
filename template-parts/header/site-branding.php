@@ -24,7 +24,7 @@
 
             <?php if( current_user_can('editor') || current_user_can('administrator') ) {  ?>
 
-                <small class="edit-link"><a href="<?php echo esc_url( $section_link ); ?>"><?php _e( '[Edit]', 'inspiro' ); ?></a></small>
+                <small class="edit-link"><a href="<?php echo esc_url( $section_link ); ?>"><?php esc_html_e( '[Edit]', 'inspiro' ); ?></a></small>
 
             <?php } ?>
 

@@ -15,7 +15,7 @@
 
         <?php if ( has_nav_menu( 'primary' ) || is_active_sidebar( 'sidebar' ) ) : ?>
             <button type="button" class="navbar-toggle">
-                <span class="screen-reader-text"><?php _e( 'Toggle sidebar &amp; navigation', 'inspiro' ); ?></span>
+                <span class="screen-reader-text"><?php esc_html_e( 'Toggle sidebar &amp; navigation', 'inspiro' ); ?></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -25,9 +25,11 @@
         <div id="sb-search" class="sb-search">
             <?php get_template_part( 'template-parts/header/search', 'form' ); ?>
         </div>
-        <div class="header_social">
-            <?php dynamic_sidebar( 'header_social' ); ?>
-        </div>
+        <?php if ( is_active_sidebar( 'header_social' ) ): ?>
+            <div class="header_social">
+                <?php dynamic_sidebar( 'header_social' ); ?>
+            </div>
+        <?php endif ?>
 
         <?php if ( has_nav_menu( 'primary' ) ): ?>
             <div class="navbar-collapse collapse">
