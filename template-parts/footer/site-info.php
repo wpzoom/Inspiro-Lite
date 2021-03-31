@@ -22,7 +22,7 @@
 			</a>
 		</span>
 		<span>
-			<?php echo esc_html__( 'Inspiro WordPress Theme by', 'inspiro' ); ?> <a href="<?php echo esc_url( 'https://www.wpzoom.com/' ) ?>" target="_blank" rel="nofollow">WPZOOM</a>
+			<?php esc_html_e( 'Inspiro WordPress Theme by', 'inspiro' ); ?> <a href="<?php echo 'https://www.wpzoom.com/' ?>" target="_blank" rel="nofollow">WPZOOM</a>
 		</span>
 	</span>
 </div><!-- .site-info -->

@@ -178,3 +178,17 @@ function inspiro_get_footer_class( $class = '' ) {
 function inspiro_is_frontpage() {
 	return ( is_front_page() && ! is_home() );
 }
+
+/**
+ * Add a pingback url auto-discovery header for single posts, pages, or attachments.
+ *
+ * @since x.x.x
+ *
+ * @return void
+ */
+function inspiro_pingback_header() {
+	if ( is_singular() && pings_open() ) {
+		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
+	}
+}
+add_action( 'wp_head', 'inspiro_pingback_header' );

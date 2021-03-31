@@ -45,6 +45,27 @@ jQuery scrollTo, Copyright 2007-2015 Ariel Flesler
 License: MIT
 Source: https://github.com/flesler/jquery.scrollTo
 
+uisearch.js, Copyright 2013 Codrops
+License: MIT
+Sourse: http://www.codrops.com
+
+jQuery Superfish Menu Plugin, 2013 Joel Birch
+Dual licensed under the MIT and GPL licenses: http://www.opensource.org/licenses/mit-license.php, http://www.gnu.org/licenses/gpl.html
+Sourse: https://superfish.joelbirch.design/
+
+headroom.js, Copyright 2020 Nick Williams
+License: MIT
+Sourse: http://wicky.nillia.ms/headroom.js
+
+jQuery FitVids, Copyright 2013 Chris Coyier
+Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+Sourse: http://css-tricks.com + Dave Rupert - http://daverupert.com
+Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+
+classie.js, Copyright 2016 David DeSandro
+License: MIT
+Sourse: https://github.com/desandro/classie
+
 normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
 License: MIT
 Source: https://necolas.github.io/normalize.css/
