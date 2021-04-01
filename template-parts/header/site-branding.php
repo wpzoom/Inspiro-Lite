@@ -4,8 +4,8 @@
  *
  * @package Inspiro
  * @subpackage Inspiro_Lite
- * @since Inspiro Lite x.x.x
- * @version x.x.x
+ * @since Inspiro Lite 1.0.0
+ * @version 1.0.0
  */
 
 ?>

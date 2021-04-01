@@ -33,7 +33,7 @@ function inspiro_fonts_url() {
  * Get assets url depending on constant SCRIPT_DEBUG.
  * If value of this constant is `true` then theme will load unminified assets
  *
- * @since x.x.x
+ * @since 1.0.0
  *
  * @param  string $filename The file name
  * @param  string $filetype The file type [css|js]

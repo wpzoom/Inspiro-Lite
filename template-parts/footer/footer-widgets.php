@@ -5,7 +5,7 @@
  * @package Inspiro
  * @subpackage Inspiro_Lite
  * @since Inspiro Lite 1.0.0
- * @version x.x.x
+ * @version 1.0.0
  */
 
 $widgets_columns = get_theme_mod( 'footer-widget-areas', 3 );

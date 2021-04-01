@@ -4,7 +4,7 @@
  *
  * @package Inspiro
  * @subpackage Inspiro_Lite
- * @since Inspiro Lite x.x.x
+ * @since Inspiro Lite 1.0.0
  */
 
 if ( ! class_exists( 'Inspiro_SVG_Icons' ) ) {
@@ -34,7 +34,7 @@ if ( ! class_exists( 'Inspiro_SVG_Icons' ) ) {
              * The dynamic portion of the hook name, `$group`, refers to
              * the name of the group of icons, either "ui".
              *
-             * @since Inspiro Lite x.x.x
+             * @since Inspiro Lite 1.0.0
              *
              * @param array $arr Array of icons.
              */
@@ -43,7 +43,7 @@ if ( ! class_exists( 'Inspiro_SVG_Icons' ) ) {
             /**
              * Filters an SVG icon's color.
              *
-             * @since Inspiro Lite x.x.x
+             * @since Inspiro Lite 1.0.0
              *
              * @param string $color The icon color.
              * @param string $icon  The icon name.

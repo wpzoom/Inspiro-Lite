@@ -113,7 +113,7 @@ add_filter( 'body_class', 'inspiro_body_classes' );
 /**
  * Displays the class names for the footer element.
  *
- * @since x.x.x
+ * @since 1.0.0
  * @see https://core.trac.wordpress.org/browser/tags/5.5.1/src/wp-includes/post-template.php#L586
  *
  * @param string|string[] $class Space-separated string or array of class names to add to the class list.
@@ -126,7 +126,7 @@ function inspiro_footer_class( $class = '' ) {
 /**
  * Retrieves an array of the class names for the footer element.
  *
- * @since x.x.x
+ * @since 1.0.0
  * @see https://core.trac.wordpress.org/browser/tags/5.5.1/src/wp-includes/post-template.php#L608
  *
  * @param string|string[] $class Space-separated string or array of class names to add to the class list.
@@ -162,7 +162,7 @@ function inspiro_get_footer_class( $class = '' ) {
 	/**
 	 * Filters the list of CSS footer class names.
 	 *
-	 * @since x.x.x
+	 * @since 1.0.0
 	 *
 	 * @param string[] $classes An array of footer class names.
 	 * @param string[] $class   An array of additional class names added to the footer.
@@ -182,7 +182,7 @@ function inspiro_is_frontpage() {
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  *
- * @since x.x.x
+ * @since 1.0.0
  *
  * @return void
  */
