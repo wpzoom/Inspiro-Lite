@@ -70,6 +70,16 @@ normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
 License: MIT
 Source: https://necolas.github.io/normalize.css/
 
+Code from Twenty Seventeen
+Copyright (c) 2016-2021 WordPress.org
+License: GPLv2
+Source: https://wordpress.org/themes/twentyseventeen/
+Included as part of the following classes and functions:
+- Inspiro_SVG_Icons
+- inspiro_the_theme_svg()
+- inspiro_get_theme_svg()
+- inspiro_dropdown_icon_to_menu_link()
+
 Bundled header image, Copyright Burst
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/dock-lake-U94B4HVBAO
