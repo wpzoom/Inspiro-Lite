@@ -7,12 +7,9 @@
  * @package Inspiro
  * @subpackage Inspiro_Lite
  * @since Inspiro Lite 1.0.0
- * @version x.x.x
+ * @version 1.0.0
  */
 
-if ( ! is_active_sidebar( 'sidebar' ) ) {
-	return;
-}
 ?>
 
 <aside id="side-nav" class="side-nav" tabindex="-1">
@@ -20,21 +17,28 @@ if ( ! is_active_sidebar( 'sidebar' ) ) {
         <div class="side-nav__wrap">
             <div class="side-nav__close-button">
                 <button type="button" class="navbar-toggle">
-                    <span class="screen-reader-text"><?php _e( 'Toggle navigation', 'inspiro' ); ?></span>
+                    <span class="screen-reader-text"><?php esc_html_e( 'Toggle navigation', 'inspiro' ); ?></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
             </div>
+            <?php if ( has_nav_menu( 'primary' ) ): ?>
+                <nav class="mobile-menu-wrapper" aria-label="<?php echo esc_attr_x( 'Mobile Menu', 'menu', 'inspiro' ); ?>" role="navigation">
+                    <?php
+                        wp_nav_menu( array(
+                            'menu_class'        => 'nav navbar-nav',
+                            'theme_location'    => 'primary',
+                            'container'         => '',
+                        ) );
+                    ?>
+                </nav>
+            <?php endif ?>
             <?php
-                if ( has_nav_menu( 'primary' ) ) :
-                    wp_nav_menu( array(
-                        'menu_class'     => 'nav navbar-nav',
-                        'theme_location' => 'primary',
-                    ) );
-                endif;
+                if ( is_active_sidebar( 'sidebar' ) ) {
+                    dynamic_sidebar( 'sidebar' );
+                }
             ?>
-            <?php dynamic_sidebar( 'sidebar' ); ?>
         </div>
     </div>
 </aside>

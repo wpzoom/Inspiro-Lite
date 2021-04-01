@@ -1,11 +1,16 @@
 .sb-search {
     position: relative;
-    float: right;
-    margin: 0 0 0 5px;
+    margin: 0;
+    margin-left: em(10);
     z-index: 200;
-    text-align: right;
-    width: 24px;
-    height: 40px;
+
+    #searchform > label {
+        align-items: stretch;
+        display: flex;
+        font-size: inherit;
+        margin: 0;
+        width: 100%;
+    }
 
     .sb-search-input {
         position: relative;
@@ -41,23 +46,34 @@
     input[type="search"].sb-search-input {
         -webkit-appearance: none;
     }
-    .sb-icon-search {
-        z-index: 90;
-        transition: opacity 0.3s ease;
-        &:hover {
-            opacity: .7;
+
+    .sb-search-button-open,
+    .sb-search-button-close {
+        background-color: transparent;
+        border: none;
+        padding: em(10);
+
+        .sb-icon-search {
+            display: flex;
+            justify-content: center;
+            z-index: 90;
+            transition: opacity 0.3s ease;
+            &:hover {
+                opacity: .7;
+            }
+            .svg-icon {
+                width: 18px;
+                height: 45px;
+                margin: 0;
+                padding: 0;
+                cursor: pointer;
+                fill: #fff;
+            }
         }
-        .svg-icon {
-            width: 18px;
-            height: 45px;
-            margin: 0;
-            padding: 0;
-            cursor: pointer;
-            fill: #fff;
-        }
-        .svg-icon-cross {
-            display: none;
-        }
+    }
+
+    .sb-search-button-close {
+        display: none;
     }
 
     // Open state
@@ -76,22 +92,23 @@
             height: 100vh;
             text-align: center;
         }
-        .sb-icon-search {
-            background: none;
+        .sb-search-button-open {
+            display: none;
+        }
+        .sb-search-button-close {
+            display: block;
             right: 2%;
             top: 25px;
             position: fixed;
             z-index: 999;
-            opacity: .8;
-            animation: fade-in-almost 0.3s ease-out;
-            &:hover {
-                opacity: 1;
-            }
-            .svg-icon-search {
-                display: none;
-            }
-            .svg-icon-cross {
-                display: block;
+
+            .sb-icon-search {
+                background: none;
+                opacity: .8;
+                animation: fade-in-almost 0.3s ease-out;
+                &:hover {
+                    opacity: 1;
+                }
             }
         }
         .sb-search-submit {

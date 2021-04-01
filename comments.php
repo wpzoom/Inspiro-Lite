@@ -10,7 +10,7 @@
  * @package Inspiro
  * @subpackage Inspiro_Lite
  * @since Inspiro Lite 1.0.0
- * @version x.x.x
+ * @version 1.0.0
  */
 
 /*
@@ -55,7 +55,7 @@ if ( post_password_required() ) {
 		 */
 		if ( ! comments_open() ) :
 	?>
-		<p class="nocomments"><?php _e( 'Comments are closed.', 'inspiro' ); ?></p>
+		<p class="nocomments"><?php esc_html_e( 'Comments are closed.', 'inspiro' ); ?></p>
 	<?php endif; // end ! comments_open() ?>
 
 <?php endif; // end have_comments() ?>

@@ -5,7 +5,7 @@
  * @package Inspiro
  * @subpackage Inspiro_Lite
  * @since Inspiro Lite 1.0.0
- * @version x.x.x
+ * @version 1.0.0
  */
 
 ?>
@@ -17,8 +17,8 @@
 	</div>
 
     <?php if ( inspiro_is_frontpage() || ( is_home() && is_front_page() ) ) : ?>
-    <div id="scroll-to-content" title="<?php _e( 'Scroll down to content', 'inspiro' ); ?>">
-        <span class="screen-reader-text"><?php _e( 'Scroll down to content', 'inspiro' ); ?></span>
+    <div id="scroll-to-content" title="<?php esc_attr_e( 'Scroll down to content', 'inspiro' ); ?>">
+        <span class="screen-reader-text"><?php esc_html_e( 'Scroll down to content', 'inspiro' ); ?></span>
     </div>
     <?php endif; ?>
 </div><!-- .custom-header -->

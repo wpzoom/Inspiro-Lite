@@ -222,7 +222,7 @@ module.exports = function(grunt) {
       target: {
         options: {
           domainPath: '/languages',
-          potFilename: '<%= pkg.name %>.pot',
+          potFilename: '<%= pkg._project.textdomain %>.pot',
           potHeaders: {
             poedit: true,
             'x-poedit-keywordslist': true
@@ -319,7 +319,7 @@ module.exports = function(grunt) {
 
     replace: {
       theme_main: {
-        src: ['style.css'],
+        src: ['style.css', 'readme.txt'],
         overwrite: true,
         replacements: [
           {

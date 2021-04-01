@@ -16,11 +16,35 @@
     a {
         color: inherit;
     }
-    .inner-wrap {
+    .header-inner {
         width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        &:before,
+        &:after {
+            display: none;
+        }
+
         .navbar-secondary {
             display: none;
         }
+    }
+    .header-logo-wrapper {
+        margin-right: em(10);
+        max-width: 50%;
+    }
+    .header-logo-wrapper {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        text-align: left;
+    }
+    .header-navigation-wrapper {
+        align-items: center;
+        display: flex;
     }
 }
 .has-header-image,
@@ -38,8 +62,8 @@
 .navbar-toggle {
     display: none;
     position: relative;
-    float: right;
-    margin: 0 0 0 15px;
+    margin: 0;
+    margin-left: em(10);
     padding-left: 0;
     padding-right: 0;
     width: 40px;
@@ -112,9 +136,10 @@
 }
 
 .navbar-nav {
+    display: flex;
     font-weight: 400;
-    float: right;
-    padding: 5px 0 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 
     > li {
         margin: 0 em(15);

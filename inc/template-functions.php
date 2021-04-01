@@ -113,7 +113,7 @@ add_filter( 'body_class', 'inspiro_body_classes' );
 /**
  * Displays the class names for the footer element.
  *
- * @since x.x.x
+ * @since 1.0.0
  * @see https://core.trac.wordpress.org/browser/tags/5.5.1/src/wp-includes/post-template.php#L586
  *
  * @param string|string[] $class Space-separated string or array of class names to add to the class list.
@@ -126,7 +126,7 @@ function inspiro_footer_class( $class = '' ) {
 /**
  * Retrieves an array of the class names for the footer element.
  *
- * @since x.x.x
+ * @since 1.0.0
  * @see https://core.trac.wordpress.org/browser/tags/5.5.1/src/wp-includes/post-template.php#L608
  *
  * @param string|string[] $class Space-separated string or array of class names to add to the class list.
@@ -162,7 +162,7 @@ function inspiro_get_footer_class( $class = '' ) {
 	/**
 	 * Filters the list of CSS footer class names.
 	 *
-	 * @since x.x.x
+	 * @since 1.0.0
 	 *
 	 * @param string[] $classes An array of footer class names.
 	 * @param string[] $class   An array of additional class names added to the footer.
@@ -178,3 +178,17 @@ function inspiro_get_footer_class( $class = '' ) {
 function inspiro_is_frontpage() {
 	return ( is_front_page() && ! is_home() );
 }
+
+/**
+ * Add a pingback url auto-discovery header for single posts, pages, or attachments.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function inspiro_pingback_header() {
+	if ( is_singular() && pings_open() ) {
+		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
+	}
+}
+add_action( 'wp_head', 'inspiro_pingback_header' );

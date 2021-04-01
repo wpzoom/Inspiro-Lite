@@ -7,7 +7,7 @@
  * @package Inspiro
  * @subpackage Inspiro_Lite
  * @since Inspiro Lite 1.0.0
- * @version x.x.x
+ * @version 1.0.0
  */
 
 ?>
@@ -15,7 +15,7 @@
 <section class="no-results not-found">
 	<header class="page-header">
 		<div class="inner-wrap">
-			<h1 class="page-title"><?php _e( 'Nothing Found', 'inspiro' ); ?></h1>
+			<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'inspiro' ); ?></h1>
 		</div>
 	</header>
 	<div class="page-content">
@@ -32,7 +32,7 @@
 
 		<?php else : ?>
 
-			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'inspiro' ); ?></p>
+			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'inspiro' ); ?></p>
 			<?php
 				get_search_form();
 

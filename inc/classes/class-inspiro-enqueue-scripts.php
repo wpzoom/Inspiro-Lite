@@ -71,7 +71,7 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
         /**
          * Enqueues styles for the block-based editor.
          *
-         * @since x.x.x
+         * @since 1.0.0
          */
         function block_editor_styles() {
             // Block styles.
@@ -89,7 +89,7 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
          *
          * Adds a `js` class to the root `<html>` element when JavaScript is detected.
          *
-         * @since x.x.x
+         * @since 1.0.0
          */
         function javascript_detection() {
             echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";

@@ -33,7 +33,7 @@ function inspiro_fonts_url() {
  * Get assets url depending on constant SCRIPT_DEBUG.
  * If value of this constant is `true` then theme will load unminified assets
  *
- * @since x.x.x
+ * @since 1.0.0
  *
  * @param  string $filename The file name
  * @param  string $filetype The file type [css|js]
@@ -336,7 +336,7 @@ function inspiro_unique_id( $prefix = '' ) {
  * Show custom logo or blog title and description (backward compatibility)
  */
 function inspiro_custom_logo() {
-    has_custom_logo() ? the_custom_logo() : printf( '<a href="%s" title="%s" class="custom-logo-text">%s</a>', home_url(), get_bloginfo( 'description' ), get_theme_mod( 'custom_logo_text', get_bloginfo( 'name' ) ) );
+    has_custom_logo() ? the_custom_logo() : printf( '<a href="%1$s" title="%2$s" class="custom-logo-text">%3$s</a>', esc_url( home_url() ), esc_html( get_bloginfo( 'description' ) ), esc_html( get_theme_mod( 'custom_logo_text', get_bloginfo( 'name' ) ) ) );
 }
 
 /**
@@ -381,7 +381,7 @@ if ( ! function_exists( 'inspiro_comment' ) ) {
                     </div>
                     <!-- .comment-author .vcard -->
                     <?php if ( $comment->comment_approved == '0' ) : ?>
-                        <em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'inspiro' ); ?></em>
+                        <em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'inspiro' ); ?></em>
                         <br/>
                     <?php endif; ?>
 
@@ -395,7 +395,7 @@ if ( ! function_exists( 'inspiro_comment' ) ) {
             case 'trackback' :
                 ?>
                 <li class="post pingback">
-                <p><?php _e( 'Pingback:', 'inspiro' ); ?><?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'inspiro' ), ' ' ); ?></p>
+                <p><?php esc_html_e( 'Pingback:', 'inspiro' ); ?><?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'inspiro' ), ' ' ); ?></p>
                 <?php
                 break;
         endswitch;

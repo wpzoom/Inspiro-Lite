@@ -4,7 +4,13 @@
             margin-top: 46px;
         }
         .side-nav__wrap {
-            padding-top: 106px/* 60 + 46 */
+            padding-top: calc(46px + 18px + 12px); // admin bar + masthead padding top + toggle button padding top
+        }
+    }
+    .side-nav__wrap {
+        .navbar-toggle {
+            margin: 0;
+            margin-bottom: 15px;
         }
     }
     .site-title {

@@ -80,7 +80,7 @@
 
     function UISearch( el, options ) {
         this.el = el;
-        this.inputEl = el.querySelector( 'form > input.sb-search-input' );
+        this.inputEl = el.querySelector( 'form input.sb-search-input' );
         this._initEvents();
     }
 
@@ -118,7 +118,14 @@
             this.inputEl.focus();
             // close the search input if body is clicked
             var bodyFn = function( ev ) {
-                self.close();
+                if (classie.has(self.el, 'sb-search-open') && /^\s*$/.test(self.inputEl.value)) { // close it
+                    ev.preventDefault();
+                    self.close();
+                }
+                else if (classie.has(self.el, 'sb-search-open') && (classie.has(ev.target, 'sb-icon-search') || ev.target.nodeName === 'use')) {
+                    ev.preventDefault();
+                    self.close();
+                }
                 this.removeEventListener( 'click', bodyFn );
                 this.removeEventListener( 'touchstart', bodyFn );
             };
@@ -128,6 +135,7 @@
         close : function() {
             this.inputEl.blur();
             classie.remove( this.el, 'sb-search-open' );
+            this.el.querySelector('.sb-search-button-open').focus();
         }
     }
 

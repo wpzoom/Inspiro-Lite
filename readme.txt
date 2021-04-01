@@ -2,7 +2,7 @@
 Contributors: WPZOOM
 Requires at least: 5.2
 Tested up to: 5.7
-Version: 1.2.0
+Version: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
@@ -45,9 +45,40 @@ jQuery scrollTo, Copyright 2007-2015 Ariel Flesler
 License: MIT
 Source: https://github.com/flesler/jquery.scrollTo
 
+uisearch.js, Copyright 2013 Codrops
+License: MIT
+Sourse: http://www.codrops.com
+
+jQuery Superfish Menu Plugin, 2013 Joel Birch
+Dual licensed under the MIT and GPL licenses: http://www.opensource.org/licenses/mit-license.php, http://www.gnu.org/licenses/gpl.html
+Sourse: https://superfish.joelbirch.design/
+
+headroom.js, Copyright 2020 Nick Williams
+License: MIT
+Sourse: http://wicky.nillia.ms/headroom.js
+
+jQuery FitVids, Copyright 2013 Chris Coyier
+Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+Sourse: http://css-tricks.com + Dave Rupert - http://daverupert.com
+Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+
+classie.js, Copyright 2016 David DeSandro
+License: MIT
+Sourse: https://github.com/desandro/classie
+
 normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
 License: MIT
 Source: https://necolas.github.io/normalize.css/
+
+Code from Twenty Seventeen
+Copyright (c) 2016-2021 WordPress.org
+License: GPLv2
+Source: https://wordpress.org/themes/twentyseventeen/
+Included as part of the following classes and functions:
+- Inspiro_SVG_Icons
+- inspiro_the_theme_svg()
+- inspiro_get_theme_svg()
+- inspiro_dropdown_icon_to_menu_link()
 
 Bundled header image, Copyright Burst
 License: CC0 1.0 Universal (CC0 1.0)
