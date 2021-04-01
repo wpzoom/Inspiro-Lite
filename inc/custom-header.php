@@ -6,7 +6,7 @@
  *
  * @package Inspiro
  * @subpackage Inspiro_Lite
- * @since Inspiro Lite 1.0.0
+ * @since Inspiro 1.0.0
  */
 
 /**
@@ -21,7 +21,7 @@ function inspiro_custom_header_setup() {
 		/**
 		 * Filters Inspiro Lite custom-header support arguments.
 		 *
-		 * @since Inspiro Lite 1.0.0
+		 * @since Inspiro 1.0.0
 		 *
 		 * @param array $args {
 		 *     An array of custom-header support arguments.

@@ -4,7 +4,7 @@
  *
  * @package Inspiro
  * @subpackage Inspiro_Lite
- * @since Inspiro Lite 1.0.0
+ * @since Inspiro 1.0.0
  */
 
 /**
@@ -156,7 +156,7 @@ a:focus,
 	/**
 	 * Filters Inspiro Lite custom colors CSS.
 	 *
-	 * @since Inspiro Lite 1.0.0
+	 * @since Inspiro 1.0.0
 	 *
 	 * @param string $css        Base theme colors CSS.
 	 * @param string $hex        The user's selected color HEX.

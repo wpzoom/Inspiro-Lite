@@ -6,7 +6,7 @@
  *
  * @package Inspiro
  * @subpackage Inspiro_Lite
- * @since Inspiro Lite 1.0.0
+ * @since Inspiro 1.0.0
  */
 
 if ( ! function_exists( 'inspiro_single_entry_meta' ) ) :
@@ -290,13 +290,13 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 	 *
 	 * Added for backward compatibility to support pre-5.2.0 WordPress versions.
 	 *
-	 * @since Inspiro Lite 1.0.0
+	 * @since Inspiro 1.0.0
 	 */
 	function wp_body_open() {
 		/**
 		 * Triggered after the opening <body> tag.
 		 *
-		 * @since Inspiro Lite 1.0.0
+		 * @since Inspiro 1.0.0
 		 */
 		do_action( 'wp_body_open' );
 	}
