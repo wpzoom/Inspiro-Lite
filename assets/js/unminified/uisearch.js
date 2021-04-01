@@ -80,7 +80,7 @@
 
     function UISearch( el, options ) {
         this.el = el;
-        this.inputEl = el.querySelector( 'form > input.sb-search-input' );
+        this.inputEl = el.querySelector( 'form input.sb-search-input' );
         this._initEvents();
     }
 
@@ -128,6 +128,7 @@
         close : function() {
             this.inputEl.blur();
             classie.remove( this.el, 'sb-search-open' );
+            this.el.querySelector('.sb-search-button-open').focus();
         }
     }
 

@@ -115,6 +115,36 @@
 	   	});
 	};
 
+	$.fn.keepFocusInSearchModal = function() {
+		$document.on('keydown', function(event) {
+			var modal, selectors, elements, activeEl, lastEl, firstEl, tabKey, shiftKey;
+
+			if ($('#sb-search').hasClass('sb-search-open')) {
+				selectors = 'input, a, button';
+				modal = $document.find('#sb-search');
+
+				elements = modal.find(selectors);
+				elements = Array.prototype.slice.call(elements);
+
+				lastEl = elements[elements.length - 1];
+				firstEl = elements[0];
+				activeEl = document.activeElement;
+				tabKey = event.keyCode === 9;
+				shiftKey = event.shiftKey;
+
+				if (!shiftKey && tabKey && lastEl === activeEl) {
+					event.preventDefault();
+					firstEl.focus();
+				}
+
+				if (shiftKey && tabKey && firstEl === activeEl) {
+					event.preventDefault();
+					lastEl.focus();
+				}
+			}
+		});
+	};
+
 	$(function() {
 		$.fn.sideNav();
 
@@ -122,6 +152,7 @@
 		 * Search form in header.
 		 */
 		$("#sb-search").sbSearch();
+		$.fn.keepFocusInSearchModal();
 
 		/**
 		 * FitVids - Responsive Videos in posts

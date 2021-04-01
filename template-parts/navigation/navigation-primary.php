@@ -8,38 +8,44 @@
  * @version x.x.x
  */
 ?>
-<nav id="site-navigation" class="navbar" role="navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'inspiro' ); ?>">
-    <div class="inner-wrap">
+<div id="site-navigation" class="navbar">
+    <div class="header-inner inner-wrap">
 
-    	<?php inspiro_custom_logo(); ?>
-
-        <?php if ( has_nav_menu( 'primary' ) || is_active_sidebar( 'sidebar' ) ) : ?>
-            <button type="button" class="navbar-toggle">
-                <span class="screen-reader-text"><?php esc_html_e( 'Toggle sidebar &amp; navigation', 'inspiro' ); ?></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        <?php endif ?>
-
-        <div id="sb-search" class="sb-search">
-            <?php get_template_part( 'template-parts/header/search', 'form' ); ?>
+        <div class="header-logo-wrapper">
+            <?php inspiro_custom_logo(); ?>
         </div>
-        <?php if ( is_active_sidebar( 'header_social' ) ): ?>
-            <div class="header_social">
-                <?php dynamic_sidebar( 'header_social' ); ?>
-            </div>
-        <?php endif ?>
 
-        <?php if ( has_nav_menu( 'primary' ) ): ?>
-            <div class="navbar-collapse collapse">
-                <?php
-                    wp_nav_menu( array(
-                        'menu_class'     => 'nav navbar-nav dropdown sf-menu',
-                        'theme_location' => 'primary',
-                    ) );
-                ?>
-            </div><!-- .navbar-collapse -->
-        <?php endif ?>
+        <div class="header-navigation-wrapper">
+            <?php if ( has_nav_menu( 'primary' ) ): ?>
+                <nav class="primary-menu-wrapper navbar-collapse collapse" aria-label="<?php echo esc_attr_x( 'Top Horizontal Menu', 'menu', 'inspiro' ); ?>" role="navigation">
+                    <?php
+                        wp_nav_menu( array(
+                            'menu_class'        => 'nav navbar-nav dropdown sf-menu',
+                            'theme_location'    => 'primary',
+                            'container'         => '',
+                        ) );
+                    ?>
+                </nav>
+            <?php endif ?>
+
+            <?php if ( is_active_sidebar( 'header_social' ) ): ?>
+                <div class="header_social">
+                    <?php dynamic_sidebar( 'header_social' ); ?>
+                </div>
+            <?php endif ?>
+
+            <div id="sb-search" class="sb-search">
+                <?php get_template_part( 'template-parts/header/search', 'form' ); ?>
+            </div>
+
+            <?php if ( has_nav_menu( 'primary' ) || is_active_sidebar( 'sidebar' ) ) : ?>
+                <button type="button" class="navbar-toggle">
+                    <span class="screen-reader-text"><?php esc_html_e( 'Toggle sidebar &amp; navigation', 'inspiro' ); ?></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            <?php endif ?>
+        </div>
     </div><!-- .inner-wrap -->
-</nav><!-- #site-navigation -->
+</div><!-- #site-navigation -->

@@ -1401,10 +1401,6 @@ a:hover .nav-title,
     display: block;
 }
 
-.sf-menu > li {
-    float: right;
-}
-
 .sf-menu a {
     display: block;
     position: relative;
@@ -1437,12 +1433,40 @@ a:hover .nav-title,
     color: inherit;
 }
 
-.navbar .inner-wrap {
+.navbar .header-inner {
     width: 100%;
+    align-items: center;
+    -js-display: flex;
+    display: flex;
+    justify-content: space-between;
 }
 
-.navbar .inner-wrap .navbar-secondary {
+.navbar .header-inner:before, .navbar .header-inner:after {
     display: none;
+}
+
+.navbar .header-inner .navbar-secondary {
+    display: none;
+}
+
+.navbar .header-logo-wrapper {
+    margin-left: 0.625em;
+    max-width: 50%;
+}
+
+.navbar .header-logo-wrapper {
+    align-items: center;
+    -js-display: flex;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    text-align: right;
+}
+
+.navbar .header-navigation-wrapper {
+    align-items: center;
+    -js-display: flex;
+    display: flex;
 }
 
 .has-header-image .navbar,
@@ -1458,8 +1482,8 @@ a:hover .nav-title,
 .navbar-toggle {
     display: none;
     position: relative;
-    float: left;
-    margin: 0 15px 0 0;
+    margin: 0;
+    margin-right: 0.625em;
     padding-right: 0;
     padding-left: 0;
     width: 40px;
@@ -1523,9 +1547,11 @@ a:hover .nav-title,
 }
 
 .navbar-nav {
+    -js-display: flex;
+    display: flex;
     font-weight: 400;
-    float: left;
-    padding: 5px 0 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .navbar-nav > li {
@@ -1719,12 +1745,18 @@ body.side-nav-open .side-nav__scrollable-container {
 
 .sb-search {
     position: relative;
-    float: left;
-    margin: 0 5px 0 0;
+    margin: 0;
+    margin-right: 0.625em;
     z-index: 200;
-    text-align: left;
-    width: 24px;
-    height: 40px;
+}
+
+.sb-search #searchform > label {
+    align-items: stretch;
+    -js-display: flex;
+    display: flex;
+    font-size: inherit;
+    margin: 0;
+    width: 100%;
 }
 
 .sb-search .sb-search-input {
@@ -1767,16 +1799,29 @@ body.side-nav-open .side-nav__scrollable-container {
     -webkit-appearance: none;
 }
 
-.sb-search .sb-icon-search {
+.sb-search .sb-search-button-open,
+.sb-search .sb-search-button-close {
+    background-color: transparent;
+    border: none;
+    padding: 0.625em;
+}
+
+.sb-search .sb-search-button-open .sb-icon-search,
+.sb-search .sb-search-button-close .sb-icon-search {
+    -js-display: flex;
+    display: flex;
+    justify-content: center;
     z-index: 90;
     transition: opacity 0.3s ease;
 }
 
-.sb-search .sb-icon-search:hover {
+.sb-search .sb-search-button-open .sb-icon-search:hover,
+.sb-search .sb-search-button-close .sb-icon-search:hover {
     opacity: .7;
 }
 
-.sb-search .sb-icon-search .svg-icon {
+.sb-search .sb-search-button-open .sb-icon-search .svg-icon,
+.sb-search .sb-search-button-close .sb-icon-search .svg-icon {
     width: 18px;
     height: 45px;
     margin: 0;
@@ -1785,7 +1830,7 @@ body.side-nav-open .side-nav__scrollable-container {
     fill: #fff;
 }
 
-.sb-search .sb-icon-search .svg-icon-cross {
+.sb-search .sb-search-button-close {
     display: none;
 }
 
@@ -1802,26 +1847,26 @@ body.side-nav-open .side-nav__scrollable-container {
     text-align: center;
 }
 
-.sb-search.sb-search-open .sb-icon-search {
-    background: none;
+.sb-search.sb-search-open .sb-search-button-open {
+    display: none;
+}
+
+.sb-search.sb-search-open .sb-search-button-close {
+    display: block;
     left: 2%;
     top: 25px;
     position: fixed;
     z-index: 999;
+}
+
+.sb-search.sb-search-open .sb-search-button-close .sb-icon-search {
+    background: none;
     opacity: .8;
     animation: fade-in-almost 0.3s ease-out;
 }
 
-.sb-search.sb-search-open .sb-icon-search:hover {
+.sb-search.sb-search-open .sb-search-button-close .sb-icon-search:hover {
     opacity: 1;
-}
-
-.sb-search.sb-search-open .sb-icon-search .svg-icon-search {
-    display: none;
-}
-
-.sb-search.sb-search-open .sb-icon-search .svg-icon-cross {
-    display: block;
 }
 
 .sb-search.sb-search-open .sb-search-submit {
@@ -1931,10 +1976,6 @@ body {
 /*--------------------------------------------------------------
 13.1 Header
 --------------------------------------------------------------*/
-#masthead .inner-wrap {
-    position: relative;
-}
-
 .site-header {
     width: 100%;
 }
@@ -2019,10 +2060,7 @@ body.has-header-image .site-description, body.has-header-video .site-description
 .custom-logo-link {
     display: inline-block;
     padding: 0;
-    padding-left: 1em;
-    vertical-align: middle;
     max-width: 350px;
-    float: right;
     transition: max-width .2s ease-in-out;
 }
 
@@ -2049,10 +2087,8 @@ body.has-header-image .site-description, body.has-header-video .site-description
 .custom-logo-text {
     display: inline-block;
     padding: 0;
-    padding-left: 0.625em;
     vertical-align: middle;
     max-width: 350px;
-    float: right;
 }
 
 body.wp-custom-logo .custom-logo-link a {

@@ -90,10 +90,7 @@ body {
 .custom-logo-link {
     display: inline-block;
     padding: 0;
-    padding-right: 1em;
-    vertical-align: middle;
     max-width: 350px;
-    float: left;
     transition: max-width .2s ease-in-out;
 
     h1 {
@@ -118,10 +115,8 @@ body {
 .custom-logo-text {
     display: inline-block;
     padding: 0;
-    padding-right: em(10);
     vertical-align: middle;
     max-width: 350px;
-    float: left;
 }
 
 body.wp-custom-logo {
