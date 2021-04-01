@@ -11,7 +11,7 @@ a {
 }
 
 .entry-content a,
-.entry-summary a,
+.entry-summary a:not(.more-link),
 .comment-body a,
 .textwidget a {
     text-decoration: underline;
