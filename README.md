@@ -2,7 +2,7 @@
 **Contributors:** [WPZOOM](https://profiles.wordpress.org/WPZOOM)  
 **Requires at least:** 5.2  
 **Tested up to:** 5.7  
-**Version:** 1.2.0  
+**Version:** 1.2.1  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 **Tags:** one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready  

@@ -314,7 +314,7 @@ module.exports = function(grunt) {
 
     replace: {
       theme_main: {
-        src: ['style.css'],
+        src: ['style.css', 'readme.txt'],
         overwrite: true,
         replacements: [
           {
