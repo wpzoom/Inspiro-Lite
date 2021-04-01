@@ -1265,7 +1265,14 @@ if ( typeof define === 'function' && define.amd ) {
             this.inputEl.focus();
             // close the search input if body is clicked
             var bodyFn = function( ev ) {
-                self.close();
+                if (classie.has(self.el, 'sb-search-open') && /^\s*$/.test(self.inputEl.value)) { // close it
+                    ev.preventDefault();
+                    self.close();
+                }
+                else if (classie.has(self.el, 'sb-search-open') && (classie.has(ev.target, 'sb-icon-search') || ev.target.nodeName === 'use')) {
+                    ev.preventDefault();
+                    self.close();
+                }
                 this.removeEventListener( 'click', bodyFn );
                 this.removeEventListener( 'touchstart', bodyFn );
             };

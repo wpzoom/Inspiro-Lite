@@ -75,6 +75,18 @@
 	        }
 
 	        toggleNav();
+
+	        if ( ! $(document.body).hasClass('side-nav-open') ) {
+				$document.find('.header-navigation-wrapper button.navbar-toggle').focus();
+	        } else {
+				if ($window.width() <= 640) {
+					$document.find('.side-nav__close-button > button').focus();
+				} else {
+					$document.find('nav.mobile-menu-wrapper ul li:first-child').focus();
+				}
+	        }
+
+			$.fn.keepFocusInMobileSidebar();
 	    });
 
 	    /* allow closing sidenav with escape key */
@@ -124,6 +136,36 @@
 				modal = $document.find('#sb-search');
 
 				elements = modal.find(selectors);
+				elements = Array.prototype.slice.call(elements);
+
+				lastEl = elements[elements.length - 1];
+				firstEl = elements[0];
+				activeEl = document.activeElement;
+				tabKey = event.keyCode === 9;
+				shiftKey = event.shiftKey;
+
+				if (!shiftKey && tabKey && lastEl === activeEl) {
+					event.preventDefault();
+					firstEl.focus();
+				}
+
+				if (shiftKey && tabKey && firstEl === activeEl) {
+					event.preventDefault();
+					lastEl.focus();
+				}
+			}
+		});
+	};
+
+	$.fn.keepFocusInMobileSidebar = function() {
+		$document.on('keydown', function(event) {
+			var sidebar, selectors, elements, activeEl, lastEl, firstEl, tabKey, shiftKey;
+
+			if ($(document.body).hasClass('side-nav-open')) {
+				selectors = 'input, a, button';
+				sidebar = $document.find('aside#side-nav');
+
+				elements = sidebar.find(selectors);
 				elements = Array.prototype.slice.call(elements);
 
 				lastEl = elements[elements.length - 1];

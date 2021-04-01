@@ -10,7 +10,7 @@
     right: 0;
     bottom: -70px;
     overflow: hidden;
-    width: 380px;
+    width: $sidebar-nav-width;
     z-index: -1;
     visibility: hidden;
 
@@ -51,7 +51,7 @@
 .side-nav-transitioning,
 .side-nav-open .side-nav-overlay {
     display: block;
-    right: 380px;
+    right: $sidebar-nav-width;
     z-index: 900;
     cursor: e-resize;
 }
@@ -71,9 +71,9 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 
-    -webkit-transform: translateX(380px);
-    -ms-transform: translateX(380px);
-    transform: translateX(380px);
+    -webkit-transform: translateX($sidebar-nav-width);
+    -ms-transform: translateX($sidebar-nav-width);
+    transform: translateX($sidebar-nav-width);
 
     -webkit-transition: -webkit-transform .18s ease;
     transition: transform .18s ease;
@@ -100,8 +100,7 @@
     }
 }
 .admin-bar .side-nav__wrap {
-    padding-top: 92px;
-    /* 60 + 32 */
+    padding-top: calc( 32px + 18px + 12px );
 }
 
 // Open state
@@ -109,9 +108,9 @@ body.side-nav-open {
     height: 100%;
     .site {
         z-index: 300;
-        -webkit-transform: translateX(-380px);
-        -ms-transform: translateX(-380px);
-        transform: translateX(-380px);
+        -webkit-transform: translateX(-$sidebar-nav-width);
+        -ms-transform: translateX(-$sidebar-nav-width);
+        transform: translateX(-$sidebar-nav-width);
     }
     .side-nav {
         visibility: visible;

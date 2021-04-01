@@ -1,0 +1,21 @@
+@media screen and (max-width: em(480)) {
+    .side-nav {
+        width: $sidebar-nav-width-mobile;
+    }
+    .side-nav-transitioning,
+    .side-nav-open .side-nav-overlay {
+        right: $sidebar-nav-width-mobile;
+    }
+    .side-nav__scrollable-container {
+        -webkit-transform: translateX($sidebar-nav-width-mobile);
+        -ms-transform: translateX($sidebar-nav-width-mobile);
+        transform: translateX($sidebar-nav-width-mobile);
+    }
+    body.side-nav-open {
+        .site {
+            -webkit-transform: translateX(-$sidebar-nav-width-mobile);
+            -ms-transform: translateX(-$sidebar-nav-width-mobile);
+            transform: translateX(-$sidebar-nav-width-mobile);
+        }
+    }
+}
