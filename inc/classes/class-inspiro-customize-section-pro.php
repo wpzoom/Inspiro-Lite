@@ -2,7 +2,7 @@
 /**
  * Pro customizer section.
  *
- * @since  x.x.x
+ * @since  1.2.2
  * @access public
  */
 class Inspiro_Customize_Section_Pro extends WP_Customize_Section {
@@ -10,7 +10,7 @@ class Inspiro_Customize_Section_Pro extends WP_Customize_Section {
     /**
      * The type of customize section being rendered.
      *
-     * @since  x.x.x
+     * @since  1.2.2
      * @access public
      * @var    string
      */
@@ -19,7 +19,7 @@ class Inspiro_Customize_Section_Pro extends WP_Customize_Section {
     /**
      * Custom description text to output.
      *
-     * @since  x.x.x
+     * @since  1.2.2
      * @access public
      * @var    string
      */
@@ -28,7 +28,7 @@ class Inspiro_Customize_Section_Pro extends WP_Customize_Section {
     /**
      * Custom button text to output.
      *
-     * @since  x.x.x
+     * @since  1.2.2
      * @access public
      * @var    string
      */
@@ -37,7 +37,7 @@ class Inspiro_Customize_Section_Pro extends WP_Customize_Section {
     /**
      * Custom pro button URL.
      *
-     * @since  x.x.x
+     * @since  1.2.2
      * @access public
      * @var    string
      */
@@ -46,7 +46,7 @@ class Inspiro_Customize_Section_Pro extends WP_Customize_Section {
     /**
      * Add custom parameters to pass to the JS via JSON.
      *
-     * @since  x.x.x
+     * @since  1.2.2
      * @access public
      * @return void
      */
@@ -63,7 +63,7 @@ class Inspiro_Customize_Section_Pro extends WP_Customize_Section {
     /**
      * Outputs the Underscore.js template.
      *
-     * @since  x.x.x
+     * @since  1.2.2
      * @access public
      * @return void
      */

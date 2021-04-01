@@ -482,7 +482,7 @@ module.exports = function(grunt) {
       newVersion = newVersion ? newVersion : 'patch';
 
       grunt.task.run('bumpup:' + newVersion);
-      grunt.task.run('replace:theme_main', 'replace:theme_const', 'replace:theme_function_comment');
+      grunt.task.run('replace:theme_main', 'replace:theme_const', 'replace:theme_function_comment', 'readme');
     }
   });
 

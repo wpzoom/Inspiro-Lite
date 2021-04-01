@@ -301,7 +301,7 @@ function inspiro_customize_register( $wp_customize ) {
 	 * Add custom section to Customizer
 	 * This section will display upsell message to Customizer at the top of all section panels.
 	 * 
-	 * @since x.x.x
+	 * @since 1.2.2
 	 */
 	require INSPIRO_THEME_DIR . '/inc/classes/class-inspiro-customize-section-pro.php';
 
