@@ -643,6 +643,13 @@ a:hover {
     color: #076c65;
 }
 
+.entry-content a,
+.entry-summary a,
+.comment-body a,
+.textwidget a {
+    text-decoration: underline;
+}
+
 /* Hover effects */
 .entry-content a,
 .entry-summary a,

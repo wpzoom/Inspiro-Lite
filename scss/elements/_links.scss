@@ -10,6 +10,13 @@ a {
 
 }
 
+.entry-content a,
+.entry-summary a,
+.comment-body a,
+.textwidget a {
+    text-decoration: underline;
+}
+
 
 /* Hover effects */
 
