@@ -4,7 +4,7 @@
  *
  * @package Inspiro
  * @subpackage Inspiro_Lite
- * @since Inspiro Lite x.x.x
+ * @since Inspiro x.x.x
  */
 
 if (!defined('ABSPATH')) {
@@ -47,17 +47,17 @@ if ( ! function_exists('inspiro_display_theme_page') ) {
                     </h1>
 
 
-                    <?php esc_html_e('Inspiro is perfect for creating food based blogs and recipe websites. A beautiful featured slider and WooCommerce integration mean Inspiro is packed with features to help you stand out.', 'inspiro'); ?>
+                    <?php esc_html_e('Inspiro is a theme that suits best for portfolio and photography sites. Widgetized homepage allows you to use the theme for a business site as well. Our theme works great in many languages, for any abilities, and on any device.', 'inspiro'); ?>
 
                     <div class="theme-links wpz-clearfix">
                         <p>
-                            <a href="<?php echo esc_url(__('https://www.wpzoom.com/wordpress-food-themes/inspiro-pro/', 'inspiro')); ?>" class="button button-primary" target="_blank">
+                            <a href="https://www.wpzoom.com/free-wordpress-themes/inspiro-lite/" class="button button-primary" target="_blank">
                                 <?php esc_html_e('About Inspiro', 'inspiro'); ?>
                             </a>
-                            <a href="<?php echo esc_url(__('https://www.wpzoom.com/documentation/inspiro-lite/','inspiro')); ?>" target="_blank">
+                            <a href="https://www.wpzoom.com/documentation/inspiro/" target="_blank">
                                 <?php esc_html_e('Documentation', 'inspiro'); ?>
                             </a>
-                            <a href="<?php echo esc_url(__('https://www.wpzoom.com/showcase/theme/inspiro/', 'inspiro')); ?>" target="_blank">
+                            <a href="https://www.wpzoom.com/showcase/theme/inspiro/" target="_blank">
                                 <?php esc_html_e('Inspiro Showcase', 'inspiro'); ?>
                             </a>
                         </p>
@@ -82,10 +82,10 @@ if ( ! function_exists('inspiro_display_theme_page') ) {
                                 <?php printf(esc_html__('Need help configuring %s? In the documentation you can find all theme related information that is needed to get your site up and running in no time.', 'inspiro'), 'Inspiro' ); ?>
                             </p>
                             <p>
-                                <a href="<?php echo esc_url(__('https://www.wpzoom.com/documentation/inspiro-lite/', 'inspiro')); ?>" target="_blank" class="button button-primary">
+                                <a href="https://www.wpzoom.com/documentation/inspiro/" target="_blank" class="button button-primary">
                                     <?php esc_html_e('Theme Documentation', 'inspiro'); ?>
                                 </a>
-                                <a href="<?php echo esc_url(__('https://wordpress.org/support/theme/inspiro', 'inspiro')); ?>" target="_blank" class="button button-secondary">
+                                <a href="https://wordpress.org/support/theme/inspiro/" target="_blank" class="button button-secondary">
                                     <?php esc_html_e('Support Forum', 'inspiro'); ?>
                                 </a>
                             </p>
@@ -128,7 +128,7 @@ if ( ! function_exists('inspiro_display_theme_page') ) {
                                 <?php esc_html_e('Why Upgrade?', 'inspiro'); ?>
                             </h4>
                             <p class="about">
-                                <?php esc_html_e('Upgrading to Inspiro PRO you will unlock a dozen of unique features that will take your food blog to the next level. See in the table below just a few of the features included in the PRO version.', 'inspiro'); ?>
+                                <?php esc_html_e('Upgrading to Inspiro PRO you will unlock a dozen of unique features that will take your website to the next level. See in the table below just a few of the features included in the PRO version.', 'inspiro'); ?>
                             </p>
                             <p>
                                 <a href="<?php echo esc_url(__('http://demo.wpzoom.com/?theme=inspiro', 'inspiro')); ?>" target="_blank" class="button button-primary">
@@ -142,35 +142,35 @@ if ( ! function_exists('inspiro_display_theme_page') ) {
             <hr>
             <div class="theme-comparison">
                 <h3 class="theme-comparison-intro">
-                    <?php esc_html_e('Inspiro Lite vs. Inspiro PRO', 'inspiro'); ?>
+                    <?php esc_html_e('Inspiro vs. Inspiro PRO', 'inspiro'); ?>
                 </h3>
                 <table>
                     <thead class="theme-comparison-header">
                         <tr>
                             <th class="table-feature-title"><h3><?php esc_html_e('Features', 'inspiro'); ?></h3></th>
-                            <th><h3><?php esc_html_e('Inspiro Lite', 'inspiro'); ?></h3></th>
+                            <th><h3><?php esc_html_e('Inspiro', 'inspiro'); ?></h3></th>
                             <th><h3><?php esc_html_e('Inspiro PRO', 'inspiro'); ?></h3></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><h3><?php esc_html_e('Custom Widgets', 'inspiro'); ?></h3></td>
-                            <td><?php esc_html_e('1', 'inspiro'); ?></td>
-                            <td><?php esc_html_e('6 (Featured Categories, Carousel, Author Bio, Image Box)', 'inspiro'); ?></td>
-                        </tr>
-                        <tr>
-                            <td><h3><?php esc_html_e('Widget Areas', 'inspiro'); ?></h3></td>
-                            <td><?php esc_html_e('6', 'inspiro'); ?></td>
-                            <td><?php esc_html_e('15 (5 on Homepage)', 'inspiro'); ?></td>
-                        </tr>
                         <tr>
                             <td><h3><?php esc_html_e('Responsive Layout', 'inspiro'); ?></h3></td>
                             <td><span class="dashicons dashicons-yes"></span></td>
                             <td><span class="dashicons dashicons-yes"></span></td>
                         </tr>
                         <tr>
-                            <td><h3><?php esc_html_e('Magazine Layout', 'inspiro'); ?></h3></td>
-                            <td><span class="dashicons dashicons-no"></span></td>
+                            <td><h3><?php esc_html_e('Live Customizer', 'inspiro'); ?></h3></td>
+                            <td><span class="dashicons dashicons-yes"></span></td>
+                            <td><span class="dashicons dashicons-yes"></span></td>
+                        </tr>
+                        <tr>
+                            <td><h3><?php esc_html_e('Fullscreen Header on Homepage', 'inspiro'); ?></h3></td>
+                            <td><span class="dashicons dashicons-yes"></span></td>
+                            <td><span class="dashicons dashicons-yes"></span></td>
+                        </tr>
+                        <tr>
+                            <td><h3><?php esc_html_e('Sliding Sidebar', 'inspiro'); ?></h3></td>
+                            <td><span class="dashicons dashicons-yes"></span></td>
                             <td><span class="dashicons dashicons-yes"></span></td>
                         </tr>
                         <tr>
@@ -179,37 +179,57 @@ if ( ! function_exists('inspiro_display_theme_page') ) {
                             <td><span class="dashicons dashicons-yes"></span></td>
                         </tr>
                         <tr>
-                            <td><h3><?php esc_html_e('Recipe Index', 'inspiro'); ?></h3></td>
+                            <td><h3><?php esc_html_e('Beaver Builder Integration', 'inspiro'); ?></h3></td>
                             <td><span class="dashicons dashicons-no"></span></td>
                             <td><span class="dashicons dashicons-yes"></span></td>
                         </tr>
                         <tr>
-                            <td><h3><?php esc_html_e('Recipe Shortcodes', 'inspiro'); ?></h3></td>
+                            <td><h3><?php esc_html_e('Pre-built Page Builder Templates', 'inspiro'); ?></h3></td>
                             <td><span class="dashicons dashicons-no"></span></td>
                             <td><span class="dashicons dashicons-yes"></span></td>
                         </tr>
                         <tr>
-                            <td><h3><?php esc_html_e('10 Color Schemes', 'inspiro'); ?></h3></td>
+                            <td><h3><?php esc_html_e('Porftolio Templates', 'inspiro'); ?></h3></td>
                             <td><span class="dashicons dashicons-no"></span></td>
                             <td><span class="dashicons dashicons-yes"></span></td>
                         </tr>
                         <tr>
-                            <td><h3><?php esc_html_e('3 Slider Styles', 'inspiro'); ?></h3></td>
+                            <td><h3><?php esc_html_e('Multiple Columns Layout', 'inspiro'); ?></h3></td>
+                            <td><span class="dashicons dashicons-no"></span></td>
+                            <td><span class="dashicons dashicons-yes"></span></td>
+                        </tr>
+                        <tr>
+                            <td><h3><?php esc_html_e('Predefined Style Kits', 'inspiro'); ?></h3></td>
+                            <td><span class="dashicons dashicons-no"></span></td>
+                            <td><span class="dashicons dashicons-yes"></span></td>
+                        </tr>
+                        <tr>
+                            <td><h3><?php esc_html_e('Video Autoplay', 'inspiro'); ?></h3></td>
+                            <td><span class="dashicons dashicons-no"></span></td>
+                            <td><span class="dashicons dashicons-yes"></span></td>
+                        </tr>
+                        <tr>
+                            <td><h3><?php esc_html_e('Gallery Module', 'inspiro'); ?></h3></td>
+                            <td><span class="dashicons dashicons-no"></span></td>
+                            <td><span class="dashicons dashicons-yes"></span></td>
+                        </tr>
+                        <tr>
+                            <td><h3><?php esc_html_e('Video Headers in Pages & Posts', 'inspiro'); ?></h3></td>
+                            <td><span class="dashicons dashicons-no"></span></td>
+                            <td><span class="dashicons dashicons-yes"></span></td>
+                        </tr>
+                        <tr>
+                            <td><h3><?php esc_html_e('Fullscreen Slideshow with Video Background', 'inspiro'); ?></h3></td>
+                            <td><span class="dashicons dashicons-no"></span></td>
+                            <td><span class="dashicons dashicons-yes"></span></td>
+                        </tr>
+                        <tr>
+                            <td><h3><?php esc_html_e('Video & Image Lightbox for Portfolio Posts', 'inspiro'); ?></h3></td>
                             <td><span class="dashicons dashicons-no"></span></td>
                             <td><span class="dashicons dashicons-yes"></span></td>
                         </tr>
                         <tr>
                             <td><h3><?php esc_html_e('Multiple Posts Layouts', 'inspiro'); ?></h3></td>
-                            <td><span class="dashicons dashicons-no"></span></td>
-                            <td><span class="dashicons dashicons-yes"></span></td>
-                        </tr>
-                        <tr>
-                            <td><h3><?php esc_html_e('Built-in Social Buttons', 'inspiro'); ?></h3></td>
-                            <td><span class="dashicons dashicons-no"></span></td>
-                            <td><span class="dashicons dashicons-yes"></span></td>
-                        </tr>
-                        <tr>
-                            <td><h3><?php esc_html_e('Extended WooCommerce Integration', 'inspiro'); ?></h3></td>
                             <td><span class="dashicons dashicons-no"></span></td>
                             <td><span class="dashicons dashicons-yes"></span></td>
                         </tr>
@@ -224,27 +244,12 @@ if ( ! function_exists('inspiro_display_theme_page') ) {
                             <td><span class="dashicons dashicons-yes"></span></td>
                         </tr>
                         <tr>
-                            <td><h3><?php esc_html_e('Carousel Widget', 'inspiro'); ?></h3></td>
-                            <td><span class="dashicons dashicons-no"></span></td>
-                            <td><span class="dashicons dashicons-yes"></span></td>
-                        </tr>
-                        <tr>
-                            <td><h3><?php esc_html_e('100+ Color Options', 'inspiro'); ?></h3></td>
-                            <td><span class="dashicons dashicons-no"></span></td>
-                            <td><span class="dashicons dashicons-yes"></span></td>
-                        </tr>
-                        <tr>
                             <td><h3><?php esc_html_e('600+ Google Fonts', 'inspiro'); ?></h3></td>
                             <td><span class="dashicons dashicons-no"></span></td>
                             <td><span class="dashicons dashicons-yes"></span></td>
                         </tr>
                         <tr>
                             <td><h3><?php esc_html_e('Typography Options', 'inspiro'); ?></h3></td>
-                            <td><span class="dashicons dashicons-no"></span></td>
-                            <td><span class="dashicons dashicons-yes"></span></td>
-                        </tr>
-                        <tr>
-                            <td><h3><?php esc_html_e('Instagram Bar in the Footer', 'inspiro'); ?></h3></td>
                             <td><span class="dashicons dashicons-no"></span></td>
                             <td><span class="dashicons dashicons-yes"></span></td>
                         </tr>
@@ -257,7 +262,7 @@ if ( ! function_exists('inspiro_display_theme_page') ) {
                             <td></td>
                             <td></td>
                             <td>
-                                <a href="<?php echo esc_url(__('https://www.wpzoom.com/wordpress-food-themes/inspiro-pro/', 'inspiro')); ?>" target="_blank" class="upgrade-button">
+                                <a href="https://www.wpzoom.com/themes/inspiro/" target="_blank" class="upgrade-button">
                                     <?php esc_html_e('Upgrade to Inspiro PRO', 'inspiro'); ?>
                                 </a>
                             </td>
