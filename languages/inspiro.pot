@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Inspiro 1.2.1\n"
+"Project-Id-Version: Inspiro 1.2.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/inspiro-lite\n"
-"POT-Creation-Date: 2021-04-01 11:38:56+00:00\n"
+"POT-Creation-Date: 2021-04-01 13:00:43+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,14 +23,6 @@ msgstr ""
 "X-Poedit-Bookmarks: \n"
 "X-Textdomain-Support: yes\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
-
-#: inc/theme-info-page.php:158
-msgid "1"
-msgstr ""
-
-#: inc/theme-info-page.php:163
-msgid "6"
-msgstr ""
 
 #: 404.php:21
 msgid "Oops! That page can&rsquo;t be found."
@@ -133,7 +125,7 @@ msgid "https://www.wpzoom.com/themes/inspiro/"
 msgstr ""
 
 #: inc/admin-notice.php:78 inc/customizer.php:316 inc/theme-info-page.php:121
-#: inc/theme-info-page.php:261
+#: inc/theme-info-page.php:266
 msgid "Upgrade to Inspiro PRO"
 msgstr ""
 
@@ -456,28 +448,16 @@ msgstr ""
 msgid "Welcome to %1$1s %2$2s"
 msgstr ""
 
-#: inc/theme-info-page.php:50
+#. Description of the plugin/theme
 msgid ""
-"Inspiro is perfect for creating food based blogs and recipe websites. A "
-"beautiful featured slider and WooCommerce integration mean Inspiro is "
-"packed with features to help you stand out."
-msgstr ""
-
-#: inc/theme-info-page.php:54 inc/theme-info-page.php:120
-#: inc/theme-info-page.php:260
-msgid "https://www.wpzoom.com/wordpress-food-themes/inspiro-pro/"
-msgstr ""
-
-#: inc/theme-info-page.php:57 inc/theme-info-page.php:85
-msgid "https://www.wpzoom.com/documentation/inspiro-lite/"
+"Inspiro is a theme that suits best for portfolio and photography sites. "
+"Widgetized homepage allows you to use the theme for a business site as "
+"well. Our theme works great in many languages, for any abilities, and on "
+"any device."
 msgstr ""
 
 #: inc/theme-info-page.php:58
 msgid "Documentation"
-msgstr ""
-
-#: inc/theme-info-page.php:60
-msgid "https://www.wpzoom.com/showcase/theme/inspiro/"
 msgstr ""
 
 #: inc/theme-info-page.php:61
@@ -495,11 +475,7 @@ msgid ""
 "time."
 msgstr ""
 
-#: inc/theme-info-page.php:88
-msgid "https://wordpress.org/support/theme/inspiro"
-msgstr ""
-
-#: inc/theme-info-page.php:89 inc/theme-info-page.php:253
+#: inc/theme-info-page.php:89 inc/theme-info-page.php:258
 msgid "Support Forum"
 msgstr ""
 
@@ -524,6 +500,10 @@ msgid ""
 "more useful options to customize your website."
 msgstr ""
 
+#: inc/theme-info-page.php:120
+msgid "https://www.wpzoom.com/wordpress-food-themes/inspiro-pro/"
+msgstr ""
+
 #: inc/theme-info-page.php:128
 msgid "Why Upgrade?"
 msgstr ""
@@ -531,8 +511,8 @@ msgstr ""
 #: inc/theme-info-page.php:131
 msgid ""
 "Upgrading to Inspiro PRO you will unlock a dozen of unique features that "
-"will take your food blog to the next level. See in the table below just a "
-"few of the features included in the PRO version."
+"will take your website to the next level. See in the table below just a few "
+"of the features included in the PRO version."
 msgstr ""
 
 #: inc/theme-info-page.php:134
@@ -544,15 +524,15 @@ msgid "View Inspiro PRO Demo"
 msgstr ""
 
 #: inc/theme-info-page.php:145
-msgid "Inspiro Lite vs. Inspiro PRO"
+msgid "Inspiro vs. Inspiro PRO"
 msgstr ""
 
 #: inc/theme-info-page.php:150
 msgid "Features"
 msgstr ""
 
-#: inc/theme-info-page.php:151
-msgid "Inspiro Lite"
+#. Theme Name of the plugin/theme
+msgid "Inspiro"
 msgstr ""
 
 #: inc/theme-info-page.php:152
@@ -560,27 +540,19 @@ msgid "Inspiro PRO"
 msgstr ""
 
 #: inc/theme-info-page.php:157
-msgid "Custom Widgets"
-msgstr ""
-
-#: inc/theme-info-page.php:159
-msgid "6 (Featured Categories, Carousel, Author Bio, Image Box)"
-msgstr ""
-
-#: inc/theme-info-page.php:162
-msgid "Widget Areas"
-msgstr ""
-
-#: inc/theme-info-page.php:164
-msgid "15 (5 on Homepage)"
-msgstr ""
-
-#: inc/theme-info-page.php:167
 msgid "Responsive Layout"
 msgstr ""
 
+#: inc/theme-info-page.php:162
+msgid "Live Customizer"
+msgstr ""
+
+#: inc/theme-info-page.php:167
+msgid "Fullscreen Header on Homepage"
+msgstr ""
+
 #: inc/theme-info-page.php:172
-msgid "Magazine Layout"
+msgid "Sliding Sidebar"
 msgstr ""
 
 #: inc/theme-info-page.php:177
@@ -588,66 +560,70 @@ msgid "Demo Content Importer"
 msgstr ""
 
 #: inc/theme-info-page.php:182
-msgid "Recipe Index"
+msgid "Beaver Builder Integration"
 msgstr ""
 
 #: inc/theme-info-page.php:187
-msgid "Recipe Shortcodes"
+msgid "Pre-built Page Builder Templates"
 msgstr ""
 
 #: inc/theme-info-page.php:192
-msgid "10 Color Schemes"
+msgid "Porftolio Templates"
 msgstr ""
 
 #: inc/theme-info-page.php:197
-msgid "3 Slider Styles"
+msgid "Multiple Columns Layout"
 msgstr ""
 
 #: inc/theme-info-page.php:202
-msgid "Multiple Posts Layouts"
+msgid "Predefined Style Kits"
 msgstr ""
 
 #: inc/theme-info-page.php:207
-msgid "Built-in Social Buttons"
+msgid "Video Autoplay"
 msgstr ""
 
 #: inc/theme-info-page.php:212
-msgid "Extended WooCommerce Integration"
+msgid "Gallery Module"
 msgstr ""
 
 #: inc/theme-info-page.php:217
-msgid "Advertising Options"
+msgid "Video Headers in Pages & Posts"
 msgstr ""
 
 #: inc/theme-info-page.php:222
-msgid "Theme Options"
+msgid "Fullscreen Slideshow with Video Background"
 msgstr ""
 
 #: inc/theme-info-page.php:227
-msgid "Carousel Widget"
+msgid "Video & Image Lightbox for Portfolio Posts"
 msgstr ""
 
 #: inc/theme-info-page.php:232
-msgid "100+ Color Options"
+msgid "Multiple Posts Layouts"
 msgstr ""
 
 #: inc/theme-info-page.php:237
-msgid "600+ Google Fonts"
+msgid "Advertising Options"
 msgstr ""
 
 #: inc/theme-info-page.php:242
-msgid "Typography Options"
+msgid "Theme Options"
 msgstr ""
 
 #: inc/theme-info-page.php:247
-msgid "Instagram Bar in the Footer"
+msgid "600+ Google Fonts"
 msgstr ""
 
 #: inc/theme-info-page.php:252
+msgid "Typography Options"
+msgstr ""
+
+#: inc/theme-info-page.php:257
 msgid "Support"
 msgstr ""
 
-#: inc/theme-info-page.php:254
+#: inc/theme-info-page.php:259
 msgid "Fast & Friendly Email Support"
 msgstr ""
 
@@ -738,20 +714,8 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#. Theme Name of the plugin/theme
-msgid "Inspiro"
-msgstr ""
-
 #. Theme URI of the plugin/theme
 msgid "https://www.wpzoom.com/free-wordpress-themes/inspiro-lite/"
-msgstr ""
-
-#. Description of the plugin/theme
-msgid ""
-"Inspiro is a theme that suits best for portfolio and photography sites. "
-"Widgetized homepage allows you to use the theme for a business site as "
-"well. Our theme works great in many languages, for any abilities, and on "
-"any device."
 msgstr ""
 
 #. Author of the plugin/theme
