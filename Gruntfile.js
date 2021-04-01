@@ -217,7 +217,7 @@ module.exports = function(grunt) {
       target: {
         options: {
           domainPath: '/languages',
-          potFilename: '<%= pkg.name %>.pot',
+          potFilename: '<%= pkg._project.textdomain %>.pot',
           potHeaders: {
             poedit: true,
             'x-poedit-keywordslist': true
