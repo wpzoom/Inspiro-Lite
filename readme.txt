@@ -94,5 +94,8 @@ Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 
 == Changelog ==
 
-= 1.2.0 =
+= 1.2.3 =
+* Added TGM Plugin Activation with a few recommended plugins
+
+= 1.2.2 =
 * Initial release

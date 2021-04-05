@@ -45,7 +45,6 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
          */
         public function __construct() {
             add_action( 'after_setup_theme', array( $this, 'theme_setup' ) );
-            add_action( 'after_setup_theme', array( $this, 'load_bb_templates' ) );
             add_action( 'template_redirect', array( $this, 'theme_content_width' ), 0 );
             add_action( 'tgmpa_register',    array( $this, 'register_required_plugins' ) );
         }
@@ -315,22 +314,6 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
             tgmpa( $plugins, $config );
         }
 
-        /**
-         *
-         * Register Beaver Builder Templates in our theme
-         *
-         * @since 1.2.3
-         * @return void
-         */
-        public function load_bb_templates() {
-            if ( ! class_exists( 'FLBuilder' ) || ! method_exists( 'FLBuilder', 'register_templates' ) ) {
-                return;
-            }
-
-            FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/default.dat' );
-            FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/about.dat' );
-            FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/services.dat' );
-        }
     }
 
 }
