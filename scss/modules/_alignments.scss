@@ -16,3 +16,37 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.wp-block-image .aligncenter>figcaption,
+.wp-block-image .alignleft>figcaption,
+.wp-block-image .alignright>figcaption,
+.wp-block-image.is-resized>figcaption {
+    display: block;
+    margin-top: 0;
+    font-size: 14px;
+}
+
+.entry-content .wp-block-image img,
+.entry-content img.alignnone,
+.entry-content img.aligncenter,
+.entry-content img.alignleft,
+.entry-content img.alignright,
+.entry-content img.attachment-fullsize {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+figure {
+    margin: 0;
+}
+
+
+.wp-block-image.alignfull, .wp-block-image.alignwide {
+    max-width: none;
+}
+
+.wp-block-image.alignfull img, .wp-block-image.alignwide img {
+    width: 100%;
+}

@@ -14,11 +14,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * Inspiro_After_Setup_Theme initial setup
- * 
+ *
  * @since 1.0.0
  */
 if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
-    
+
     class Inspiro_After_Setup_Theme {
         /**
          * Instance
@@ -56,7 +56,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
          * Note that this function is hooked into the after_setup_theme hook, which
          * runs before the init hook. The init hook is too late for some features, such
          * as indicating support for post thumbnails.
-         * 
+         *
          * @since 1.0.0
          */
         public function theme_setup() {
@@ -197,7 +197,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
          * Priority 0 to make it available to lower priority callbacks.
          *
          * @since 1.0.0
-         * 
+         *
          * @global int $content_width
          */
         public function theme_content_width() {
@@ -247,7 +247,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
          * In that case, the TGMPA default settings will be used.
          *
          * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
-         * 
+         *
          * @since x.x.x
          * @return void
          */
@@ -328,14 +328,8 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
             }
 
             FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/default.dat' );
-            FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/agency.dat' );
-            FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/hotel.dat' );
-            FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/video.dat' );
-            FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/video2.dat' );
-            FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/events.dat' );
             FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/about.dat' );
             FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/services.dat' );
-            FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/pricing.dat' );
         }
     }
 

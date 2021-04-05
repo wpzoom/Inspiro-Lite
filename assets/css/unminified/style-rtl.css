@@ -4,11 +4,11 @@ Theme Name: Inspiro
 Theme URI: https://www.wpzoom.com/free-wordpress-themes/inspiro-lite/
 Author: WPZOOM
 Author URI: https://www.wpzoom.com/
-Description: Inspiro is a theme that suits best for portfolio and photography sites. Widgetized homepage allows you to use the theme for a business site as well. Our theme works great in many languages, for any abilities, and on any device.
-Version: 1.0.0
-Requires at least: 5.0
+Description: Inspiro is a professional photo and video focused theme with a modern design. Packed with features including a fullscreen area that supports Vimeo & self-hosted videos in background, Page Builder integration, Inspiro is perfect for showing off your photography and video portfolio.
+Version: 1.2.3
+Requires at least: 5.2
 Requires PHP: 5.6
-Tested up to: 5.6
+Tested up to: 5.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: inspiro
@@ -446,6 +446,38 @@ template {
     display: block;
     margin-right: auto;
     margin-left: auto;
+}
+
+.wp-block-image .aligncenter > figcaption,
+.wp-block-image .alignleft > figcaption,
+.wp-block-image .alignright > figcaption,
+.wp-block-image.is-resized > figcaption {
+    display: block;
+    margin-top: 0;
+    font-size: 14px;
+}
+
+.entry-content .wp-block-image img,
+.entry-content img.alignnone,
+.entry-content img.aligncenter,
+.entry-content img.alignleft,
+.entry-content img.alignright,
+.entry-content img.attachment-fullsize {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+figure {
+    margin: 0;
+}
+
+.wp-block-image.alignfull, .wp-block-image.alignwide {
+    max-width: none;
+}
+
+.wp-block-image.alignfull img, .wp-block-image.alignwide img {
+    width: 100%;
 }
 
 /*--------------------------------------------------------------
