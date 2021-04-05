@@ -28,6 +28,11 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 }
 
 /**
+ * Recommended Plugins
+ */
+require INSPIRO_THEME_DIR . '/inc/classes/class-tgm-plugin-activation.php';
+
+/**
  * Setup helper functions.
  */
 require INSPIRO_THEME_DIR . '/inc/common-functions.php';
