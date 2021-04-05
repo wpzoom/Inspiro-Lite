@@ -45,6 +45,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
          */
         public function __construct() {
             add_action( 'after_setup_theme', array( $this, 'theme_setup' ) );
+            add_action( 'after_setup_theme', array( $this, 'load_bb_templates' ) );
             add_action( 'template_redirect', array( $this, 'theme_content_width' ), 0 );
             add_action( 'tgmpa_register',    array( $this, 'register_required_plugins' ) );
         }
@@ -185,7 +186,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
              * page load, as it is a one-off operation only needed once in the customizer.
              */
             if ( is_customize_preview() ) {
-                require get_template_directory() . '/inc/starter-content.php';
+                require INSPIRO_THEME_DIR . '/inc/starter-content.php';
                 add_theme_support( 'starter-content', inspiro_get_starter_content() );
             }
         }
@@ -246,6 +247,9 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
          * In that case, the TGMPA default settings will be used.
          *
          * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
+         * 
+         * @since x.x.x
+         * @return void
          */
         public function register_required_plugins() {
             /*
@@ -309,6 +313,29 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
             );
 
             tgmpa( $plugins, $config );
+        }
+
+        /**
+         *
+         * Register Beaver Builder Templates in our theme
+         *
+         * @since x.x.x
+         * @return void
+         */
+        public function load_bb_templates() {
+            if ( ! class_exists( 'FLBuilder' ) || ! method_exists( 'FLBuilder', 'register_templates' ) ) {
+                return;
+            }
+
+            FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/default.dat' );
+            FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/agency.dat' );
+            FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/hotel.dat' );
+            FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/video.dat' );
+            FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/video2.dat' );
+            FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/events.dat' );
+            FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/about.dat' );
+            FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/services.dat' );
+            FLBuilder::register_templates( INSPIRO_THEME_DIR . '/bb-templates/pricing.dat' );
         }
     }
 
