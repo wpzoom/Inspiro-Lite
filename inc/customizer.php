@@ -309,7 +309,7 @@ function inspiro_customize_register( $wp_customize ) {
 	/**
 	 * Add custom section to Customizer
 	 * This section will display upsell message to Customizer at the top of all section panels.
-	 * 
+	 *
 	 * @since 1.2.2
 	 */
 	require INSPIRO_THEME_DIR . '/inc/classes/class-inspiro-customize-section-pro.php';
@@ -323,7 +323,7 @@ function inspiro_customize_register( $wp_customize ) {
             'inspiro_upgrade_pro',
             array(
                 'title'    		=> esc_html__( 'Upgrade to Inspiro PRO', 'inspiro' ),
-                'description' 	=> esc_html__( 'Unlock premium features: 7 Style Kits, 9 Predefined templates, Automatically play background videos, Portfolios, Premium Support and much more...', 'inspiro' ),
+                'description' 	=> esc_html__( 'Unlock premium features: 7 Style Kits, Google Fonts, Video Backgrounds, Portfolio Integration, Premium Support and much more...', 'inspiro' ),
                 'pro_text' 		=> esc_html__( 'View Inspiro PRO', 'inspiro' ),
                 'pro_url'  		=> 'https://www.wpzoom.com/themes/inspiro/',
                 'priority' 		=> 5
