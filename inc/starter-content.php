@@ -6,7 +6,7 @@
  *
  * @package Inspiro
  * @subpackage Inspiro_Lite
- * @since Inspiro Lite 1.0.0
+ * @since Inspiro 1.0.0
  */
 
 /**
@@ -14,7 +14,7 @@
  *
  * Passes it through the `inspiro_starter_content` filter before returning.
  *
- * @since Inspiro Lite 1.0.0
+ * @since Inspiro 1.0.0
  *
  * @return array A filtered array of args for the starter_content.
  */

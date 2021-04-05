@@ -24,4 +24,15 @@
 			});
 		});
 	});
+
+	// Extends our custom "upgrade-pro" section.
+	wp.customize.sectionConstructor['upgrade-pro'] = wp.customize.Section.extend({
+		// No events for this type of section.
+		attachEvents: function() { },
+
+		// Always make the section active.
+		isContextuallyActive: function() {
+			return true;
+		}
+	});
 })();

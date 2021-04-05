@@ -76,7 +76,9 @@ module.exports = function(grunt) {
             src: [
                 '*.css',
                 '!*-rtl.css',
-                '!colors-dark.css'
+                '!colors-dark.css',
+                '!customize.css',
+                '!welcome-notice.css'
             ],
             dest: 'assets/css/unminified',
             ext: '-rtl.css'
@@ -99,6 +101,9 @@ module.exports = function(grunt) {
             'assets/css/unminified/style.css': 'scss/style.scss',
             'assets/css/unminified/editor-style.css': 'scss/editor-style.scss',
             'assets/css/unminified/colors-dark.css': 'scss/colors-dark.scss',
+            'assets/css/unminified/customize.css': 'scss/customize.scss',
+            'assets/css/unminified/welcome-notice.css': 'scss/admin/welcome-notice.scss',
+            'assets/css/unminified/admin.css': 'scss/admin/admin.scss',
           },
           {
             expand: true,
@@ -477,7 +482,7 @@ module.exports = function(grunt) {
       newVersion = newVersion ? newVersion : 'patch';
 
       grunt.task.run('bumpup:' + newVersion);
-      grunt.task.run('replace:theme_main', 'replace:theme_const', 'replace:theme_function_comment');
+      grunt.task.run('replace:theme_main', 'replace:theme_const', 'replace:theme_function_comment', 'readme');
     }
   });
 
