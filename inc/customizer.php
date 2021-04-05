@@ -18,6 +18,15 @@ function inspiro_customize_register( $wp_customize ) {
 	/**
 	 * Custom Header.
 	 */
+	$wp_customize->add_section(
+		'header_image',
+		array(
+			'title'    			=> __( 'Homepage Media', 'inspiro' ),
+			'theme_supports' 	=> 'custom-header',
+			'priority' 			=> 60,
+		)
+	);
+
 	$wp_customize->add_setting(
 		'header_site_title',
 		array(
