@@ -248,7 +248,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
          *
          * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
          *
-         * @since x.x.x
+         * @since 1.2.3
          * @return void
          */
         public function register_required_plugins() {
@@ -319,7 +319,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
          *
          * Register Beaver Builder Templates in our theme
          *
-         * @since x.x.x
+         * @since 1.2.3
          * @return void
          */
         public function load_bb_templates() {
