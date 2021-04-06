@@ -188,11 +188,6 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
                 require INSPIRO_THEME_DIR . '/inc/starter-content.php';
                 add_theme_support( 'starter-content', inspiro_get_starter_content() );
             }
-
-            /**
-             * Add support for Beaver Builder Templates by WPZOOM
-             */
-            add_theme_support( 'wpzoom-beaver-builder-templates' );
         }
 
         /**

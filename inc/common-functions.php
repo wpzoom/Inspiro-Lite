@@ -414,13 +414,3 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     add_theme_support( 'wc-product-gallery-slider' );
 
 }
-
-/**
- * Compatibility with plugin: Beaver Builder Templates by WPZOOM
- * 
- * @since x.x.x
- */
-function inspiro_beaver_builder_templates() {
-    return 'inspiro';
-}
-add_filter( 'wpzoom/bb-templates/theme', 'inspiro_beaver_builder_templates' );
