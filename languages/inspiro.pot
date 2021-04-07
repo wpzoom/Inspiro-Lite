@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Inspiro 1.2.3\n"
+"Project-Id-Version: Inspiro 1.2.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/inspiro-lite\n"
-"POT-Creation-Date: 2021-04-05 17:29:11+00:00\n"
+"POT-Creation-Date: 2021-04-07 15:27:27+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -98,7 +98,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/admin-notice.php:47
+#: inc/admin-notice.php:47 inc/classes/class-inspiro-notices.php:81
 msgid "Action failed. Please refresh the page and retry."
 msgstr ""
 
@@ -135,9 +135,34 @@ msgid ""
 "%s. Please upgrade and try again."
 msgstr ""
 
-#: inc/classes/class-inspiro-after-setup-theme.php:105
+#: inc/classes/class-inspiro-after-setup-theme.php:104
 #: inc/starter-content.php:130
 msgid "Main Menu"
+msgstr ""
+
+#: inc/classes/class-inspiro-notice-review.php:60
+msgid "inspiro"
+msgstr ""
+
+#: inc/classes/class-inspiro-notice-review.php:68
+#. Translators: %1$s current user display name.
+msgid ""
+"Dear %1$s! We hope you are happy with everything that the %2$s has to "
+"offer. %3$sIf you can spare a moment, please consider adding a rating for "
+"%4$s on WordPress.org. %3$sIt helps us continue providing updates and "
+"support for this theme."
+msgstr ""
+
+#: inc/classes/class-inspiro-notice-review.php:80
+msgid "Add a Rating for Inspiro"
+msgstr ""
+
+#: inc/classes/class-inspiro-notice-review.php:81
+msgid "Hide this notice"
+msgstr ""
+
+#: inc/classes/class-inspiro-notices.php:85
+msgid "Cheatin&#8217; huh?"
 msgstr ""
 
 #: inc/classes/class-tgm-plugin-activation.php:327
