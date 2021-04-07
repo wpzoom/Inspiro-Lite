@@ -1,9 +1,16 @@
-# Files to exclude when creating archive.
+# Directories
+/.wordpress-org export-ignore
+/.github export-ignore
+/scss export-ignore
 
+# Files
 *.git export-ignore
 *.github export-ignore
 *.gitignore export-ignore
 *.gitattributes export-ignore
+*.dist export-ignore
+.distignore export-ignore
+.editorconfig export-ignore
 .jscsrc export-ignore
 .jshintignore export-ignore
 .travis.yml export-ignore
@@ -12,4 +19,5 @@ CONTRIBUTORS.md export-ignore
 Gruntfile.js export-ignore
 package-lock.json export-ignore
 package.json export-ignore
-scss export-ignore
+composer.json export-ignore
+composer.lock export-ignore
