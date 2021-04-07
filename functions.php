@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Define Constants
  */
-define( 'INSPIRO_THEME_VERSION', '1.2.3' );
+define( 'INSPIRO_THEME_VERSION', '1.2.4' );
 define( 'INSPIRO_THEME_DIR', trailingslashit( get_template_directory() ) );
 define( 'INSPIRO_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
 
@@ -78,7 +78,14 @@ require INSPIRO_THEME_DIR . '/inc/customizer.php';
 require INSPIRO_THEME_DIR . '/inc/icon-functions.php';
 
 /**
- * Welcome notice and Theme info page
+ * Theme admin notices and info page
  */
-require INSPIRO_THEME_DIR . '/inc/admin-notice.php';
-require INSPIRO_THEME_DIR . '/inc/theme-info-page.php';
+if ( is_admin() ) {
+    require INSPIRO_THEME_DIR . '/inc/admin-notice.php';
+    require INSPIRO_THEME_DIR . '/inc/theme-info-page.php';
+
+    if ( current_user_can( 'manage_options' ) ) {
+        require INSPIRO_THEME_DIR . '/inc/classes/class-inspiro-notices.php';
+        require INSPIRO_THEME_DIR . '/inc/classes/class-inspiro-notice-review.php';
+    }
+}
