@@ -1,15 +1,14 @@
-# Ignore OS Specific files.
 .DS_Store
-
-# Leave node_modules from git
+phpcs.xml
+phpunit.xml
+Thumbs.db
+wp-cli.local.yml
 node_modules/
-
-# map files
+*.sql
+*.tar.gz
+*.zip
 *.map
-
-# sass cache
 .sass-cache
 
-# Package
-inspiro-lite
-*.zip
+/vendor/
+/inspiro-lite
