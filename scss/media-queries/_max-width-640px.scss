@@ -22,6 +22,10 @@
         text-shadow: none;
     }
 
+    .custom-header-button {
+        @include font-size(12);
+    }
+
     .page .entry-content,
     .single .entry-content {
         margin-top: 20px;
