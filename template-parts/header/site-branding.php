@@ -14,7 +14,7 @@
 		<?php
 			$site_title = get_theme_mod( 'header_site_title', get_bloginfo( 'name' ) );
 			$description = get_theme_mod( 'header_site_description', get_bloginfo( 'description' ) );
-            $button_title = get_theme_mod( 'header_button_title', esc_html__( 'Click here' ) );
+            $button_title = get_theme_mod( 'header_button_title', esc_html__( 'Click here', 'inspiro' ) );
             $button_url = get_theme_mod( 'header_button_url', get_home_url() );
 		?>
 

@@ -56,7 +56,7 @@ function inspiro_customize_register( $wp_customize ) {
 			$wp_customize,
 			'header_button_textcolor',
 			array(
-				'label'   => esc_html__( 'Header Button Text Color' ),
+				'label'   => esc_html__( 'Header Button Text Color', 'inspiro' ),
 				'section' => 'colors',
 			)
 		)
@@ -67,7 +67,7 @@ function inspiro_customize_register( $wp_customize ) {
 			$wp_customize,
 			'header_button_textcolor_hover',
 			array(
-				'label'   => esc_html__( 'Header Button Text Color Hover' ),
+				'label'   => esc_html__( 'Header Button Text Color Hover', 'inspiro' ),
 				'section' => 'colors',
 			)
 		)
@@ -78,7 +78,7 @@ function inspiro_customize_register( $wp_customize ) {
 			$wp_customize,
 			'header_button_bgcolor_hover',
 			array(
-				'label'   => esc_html__( 'Header Button Background Color Hover' ),
+				'label'   => esc_html__( 'Header Button Background Color Hover', 'inspiro' ),
 				'section' => 'colors',
 			)
 		)
@@ -158,7 +158,7 @@ function inspiro_customize_register( $wp_customize ) {
 		'header_button_title',
 		array(
 			'theme_supports' 	=> 'custom-header',
-			'default'           => esc_html__( 'Click here' ),
+			'default'           => esc_html__( 'Click here', 'inspiro' ),
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
