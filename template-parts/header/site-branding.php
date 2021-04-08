@@ -12,10 +12,11 @@
 <div class="site-branding">
 	<div class="inner-wrap">
 		<?php
-			$site_title = get_theme_mod( 'header_site_title', get_bloginfo( 'name' ) );
-			$description = get_theme_mod( 'header_site_description', get_bloginfo( 'description' ) );
-            $button_title = get_theme_mod( 'header_button_title', esc_html__( 'Click here', 'inspiro' ) );
-            $button_url = get_theme_mod( 'header_button_url', get_home_url() );
+			$site_title         = get_theme_mod( 'header_site_title', get_bloginfo( 'name' ) );
+			$description        = get_theme_mod( 'header_site_description', get_bloginfo( 'description' ) );
+            $button_url         = get_theme_mod( 'header_button_url', get_home_url() );
+            $button_link_open   = get_theme_mod( 'header_button_link_open', true );
+            $button_target      = $button_link_open ? '_blank' : '_self';
 		?>
 
 		<div class="site-branding-text">
@@ -29,9 +30,9 @@
             <?php } ?>
 
 			<?php if ( is_front_page() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( $button_url ); ?>" rel="home"><?php echo esc_html( $site_title ); ?></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>"><?php echo esc_html( $site_title ); ?></a></h1>
 			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( $button_url ); ?>" rel="home"><?php echo esc_html( $site_title ); ?></a></p>
+				<p class="site-title"><a href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>"><?php echo esc_html( $site_title ); ?></a></p>
 			<?php endif; ?>
 
 			<?php
@@ -40,9 +41,7 @@
 			<?php endif; ?>
 		</div><!-- .site-branding-text -->
 
-        <?php if ( ! empty( $button_url ) && ! empty( $button_title ) ): ?>
-            <?php get_template_part( 'template-parts/header/header', 'button' ); ?>
-        <?php endif ?>
+        <?php get_template_part( 'template-parts/header/header', 'button' ); ?>
 
 	</div><!-- .inner-wrap -->
 </div><!-- .site-branding -->

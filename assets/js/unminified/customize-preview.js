@@ -24,7 +24,11 @@
 	});
 	wp.customize( 'header_button_title', function( value ) {
 		value.bind(function(to) {
-			$( '.custom-header-button' ).text( to );
+			if ( to === '' ) {
+				$('.custom-header-button').css('display', 'none');
+			} else {
+				$('.custom-header-button').css('display', 'inline-block').text(to);
+			}
 		});
 	});
 

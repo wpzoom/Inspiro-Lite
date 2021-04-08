@@ -158,7 +158,7 @@ function inspiro_customize_register( $wp_customize ) {
 		'header_button_title',
 		array(
 			'theme_supports' 	=> 'custom-header',
-			'default'           => esc_html__( 'Click here', 'inspiro' ),
+			'default'           => '',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
@@ -171,6 +171,15 @@ function inspiro_customize_register( $wp_customize ) {
 			'default'           => '',
 			'transport'         => 'refresh',
 			'sanitize_callback' => 'inspiro_sanitize_header_button_url',
+		)
+	);
+
+	$wp_customize->add_setting(
+		'header_button_link_open',
+		array(
+			'capability'        => 'edit_theme_options',
+			'default'           => true,
+			'sanitize_callback' => 'inspiro_sanitize_checkbox',
 		)
 	);
 
@@ -221,6 +230,15 @@ function inspiro_customize_register( $wp_customize ) {
 			'description'     => esc_html__( 'Enter a Button URL:', 'inspiro' ),
 			'section'         => 'header_content',
 			'active_callback' => 'is_header_video_active',
+		)
+	);
+
+	$wp_customize->add_control(
+		'header_button_link_open',
+		array(
+			'type'    => 'checkbox',
+			'section' => 'header_content',
+			'label'   => esc_html__( 'Open link on new tab', 'inspiro' ),
 		)
 	);
 
@@ -555,6 +573,18 @@ function inspiro_sanitize_header_button_textcolor( $color ) {
 	}
 
 	return $color;
+}
+
+/**
+ * Sanitize boolean for checkbox.
+ *
+ * @since x.x.x
+ *
+ * @param bool $checked Whether or not a box is checked.
+ * @return bool
+ */
+function inspiro_sanitize_checkbox( $checked = null ) {
+	return (bool) isset( $checked ) && true === $checked;
 }
 
 /**
