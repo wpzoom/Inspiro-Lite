@@ -22,6 +22,11 @@
 			$( '.site-header .custom-logo-text' ).text( to );
 		});
 	});
+	wp.customize( 'header_button_title', function( value ) {
+		value.bind(function(to) {
+			$( '.custom-header-button' ).text( to );
+		});
+	});
 
 	// Header text color.
 	wp.customize( 'header_textcolor', function( value ) {
@@ -43,11 +48,26 @@
 					clip: 'auto',
 					position: 'relative'
 				});
-				$( '.site-branding, .site-branding a, .site-description, .site-description a' ).css({
+				$( '.site-branding-text, .site-branding-text a, .site-description, .site-description a' ).css({
 					color: to
 				});
 				// Add class for different logo styles if title and description are visible.
 				$( 'body' ).removeClass( 'title-tagline-hidden' );
+			}
+		});
+	});
+
+	// Header button text color.
+	wp.customize('header_button_textcolor', function(value) {
+		value.bind(function(to) {
+			if ('blank' === to) {
+				$('.custom-header-button').css({
+					color: '#ffffff'
+				});
+			} else {
+				$('.custom-header-button').css({
+					color: to
+				});
 			}
 		});
 	});
