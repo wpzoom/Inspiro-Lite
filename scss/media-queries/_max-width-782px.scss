@@ -16,6 +16,9 @@
     .site-title {
         @include font-size(32);
     }
+    .custom-header-button {
+        @include font-size(14);
+    }
     .side-nav .widget .title {
         @include font-size(20);
     }
