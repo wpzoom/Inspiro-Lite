@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Inspiro 1.2.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/inspiro-lite\n"
-"POT-Creation-Date: 2021-04-05 17:29:11+00:00\n"
+"POT-Creation-Date: 2021-04-08 19:04:21+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -124,7 +124,7 @@ msgstr ""
 msgid "https://www.wpzoom.com/themes/inspiro/"
 msgstr ""
 
-#: inc/admin-notice.php:78 inc/customizer.php:325 inc/theme-info-page.php:253
+#: inc/admin-notice.php:78 inc/customizer.php:483 inc/theme-info-page.php:253
 msgid "Upgrade to Inspiro PRO"
 msgstr ""
 
@@ -135,7 +135,7 @@ msgid ""
 "%s. Please upgrade and try again."
 msgstr ""
 
-#: inc/classes/class-inspiro-after-setup-theme.php:105
+#: inc/classes/class-inspiro-after-setup-theme.php:104
 #: inc/starter-content.php:130
 msgid "Main Menu"
 msgstr ""
@@ -500,7 +500,7 @@ msgid ""
 "on the menu icon."
 msgstr ""
 
-#: inc/common-functions.php:102 inc/customizer.php:199
+#: inc/common-functions.php:102 inc/customizer.php:357
 msgid "Blog Sidebar"
 msgstr ""
 
@@ -580,147 +580,183 @@ msgstr ""
 msgid "Default Header Image"
 msgstr ""
 
-#: inc/custom-header.php:127
+#: inc/custom-header.php:150
 msgid "Play background video"
 msgstr ""
 
-#: inc/custom-header.php:128
+#: inc/custom-header.php:151
 msgid "Pause background video"
 msgstr ""
 
-#: inc/customizer.php:24
+#: inc/customizer.php:59
+msgid "Header Button Text Color"
+msgstr ""
+
+#: inc/customizer.php:70
+msgid "Header Button Text Color Hover"
+msgstr ""
+
+#: inc/customizer.php:81
+msgid "Header Button Background Color Hover"
+msgstr ""
+
+#: inc/customizer.php:94
 msgid "Homepage Media"
 msgstr ""
 
-#: inc/customizer.php:53
-msgid "Header Title"
+#: inc/customizer.php:106
+msgid "Media"
 msgstr ""
 
-#: inc/customizer.php:54
-msgid "Enter a site title which appears in the header on front-page"
-msgstr ""
-
-#: inc/customizer.php:66
-msgid "Header Description"
-msgstr ""
-
-#: inc/customizer.php:67
-msgid "Enter a site description which appears in the header on front-page"
-msgstr ""
-
-#: inc/customizer.php:79
+#: inc/customizer.php:118
 msgid "External Header Video"
 msgstr ""
 
-#: inc/customizer.php:80
+#: inc/customizer.php:119
 msgid "Enter a YouTube or Vimeo URL:"
 msgstr ""
 
-#: inc/customizer.php:103
+#: inc/customizer.php:132 inc/customizer.php:443
+msgid "Content"
+msgstr ""
+
+#: inc/customizer.php:191
+msgid "Header Title"
+msgstr ""
+
+#: inc/customizer.php:192
+msgid "Enter a site title which appears in the header on front-page"
+msgstr ""
+
+#: inc/customizer.php:204
+msgid "Header Description"
+msgstr ""
+
+#: inc/customizer.php:205
+msgid "Enter a site description which appears in the header on front-page"
+msgstr ""
+
+#: inc/customizer.php:217
+msgid "Header Button Title"
+msgstr ""
+
+#: inc/customizer.php:218
+msgid "Enter a title for Header Button"
+msgstr ""
+
+#: inc/customizer.php:229
+msgid "Header Button URL"
+msgstr ""
+
+#: inc/customizer.php:230
+msgid "Enter a Button URL:"
+msgstr ""
+
+#: inc/customizer.php:241
+msgid "Open link on new tab"
+msgstr ""
+
+#: inc/customizer.php:261
 msgid "Custom Logo Text"
 msgstr ""
 
-#: inc/customizer.php:134
+#: inc/customizer.php:292
 msgid "Color Scheme"
 msgstr ""
 
-#: inc/customizer.php:136
+#: inc/customizer.php:294
 msgid "Light"
 msgstr ""
 
-#: inc/customizer.php:137
+#: inc/customizer.php:295
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer.php:138
+#: inc/customizer.php:296
 msgid "Custom"
 msgstr ""
 
-#: inc/customizer.php:162 template-parts/footer/footer-widgets.php:21
+#: inc/customizer.php:320 template-parts/footer/footer-widgets.php:21
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer.php:179
+#: inc/customizer.php:337
 msgid "Number of Widget Areas"
 msgstr ""
 
-#: inc/customizer.php:183
+#: inc/customizer.php:341
 msgid "Don't display Widgets"
 msgstr ""
 
-#: inc/customizer.php:184
+#: inc/customizer.php:342
 msgid "One Column"
 msgstr ""
 
-#: inc/customizer.php:185
+#: inc/customizer.php:343
 msgid "Two Columns"
 msgstr ""
 
-#: inc/customizer.php:186
+#: inc/customizer.php:344
 msgid "Three Columns"
 msgstr ""
 
-#: inc/customizer.php:187
+#: inc/customizer.php:345
 msgid "Four Columns"
 msgstr ""
 
-#: inc/customizer.php:198
+#: inc/customizer.php:356
 msgid "Theme Layout"
 msgstr ""
 
-#: inc/customizer.php:199
+#: inc/customizer.php:357
 msgid ""
 "If you want to display \"Sidebar on the right\", please make sure you have "
 "added some widgets to %s"
 msgstr ""
 
-#: inc/customizer.php:226
+#: inc/customizer.php:384
 msgid "Blog Layout"
 msgstr ""
 
-#: inc/customizer.php:230 inc/customizer.php:244 inc/customizer.php:343
+#: inc/customizer.php:388 inc/customizer.php:402 inc/customizer.php:501
 msgid "Full width"
 msgstr ""
 
-#: inc/customizer.php:231 inc/customizer.php:245 inc/customizer.php:344
+#: inc/customizer.php:389 inc/customizer.php:403 inc/customizer.php:502
 msgid "Sidebar on the right"
 msgstr ""
 
-#: inc/customizer.php:240
+#: inc/customizer.php:398
 msgid "Single Post Layout"
 msgstr ""
 
-#: inc/customizer.php:259
+#: inc/customizer.php:417
 msgid "Blog Post Options"
 msgstr ""
 
-#: inc/customizer.php:267
+#: inc/customizer.php:425
 msgid "Post Options"
 msgstr ""
 
-#: inc/customizer.php:285
-msgid "Content"
-msgstr ""
-
-#: inc/customizer.php:289
+#: inc/customizer.php:447
 msgid "Excerpt"
 msgstr ""
 
-#: inc/customizer.php:290
+#: inc/customizer.php:448
 msgid "Full Content"
 msgstr ""
 
-#: inc/customizer.php:291
+#: inc/customizer.php:449
 msgid "None"
 msgstr ""
 
-#: inc/customizer.php:326
+#: inc/customizer.php:484
 msgid ""
 "Unlock premium features: 7 Style Kits, Google Fonts, Video Backgrounds, "
 "Portfolio Integration, Premium Support and much more..."
 msgstr ""
 
-#: inc/customizer.php:327
+#: inc/customizer.php:485
 msgid "View Inspiro PRO"
 msgstr ""
 
@@ -1037,7 +1073,7 @@ msgstr ""
 msgid "Type your keywords and hit Enter..."
 msgstr ""
 
-#: template-parts/header/site-branding.php:27
+#: template-parts/header/site-branding.php:29
 msgid "[Edit]"
 msgstr ""
 
