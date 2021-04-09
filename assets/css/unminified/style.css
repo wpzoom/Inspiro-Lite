@@ -1230,7 +1230,7 @@ a:hover {
     color: #076c65;
 }
 
-.entry-content a,
+body:not(.fl-builder) .entry-content a,
 .entry-summary a:not(.more-link),
 .comment-body a,
 .textwidget a {
