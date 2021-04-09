@@ -21,7 +21,7 @@
 
 		<div class="site-branding-text">
             <?php
-            $query['autofocus[section]'] = 'header_image';
+            $query['autofocus[panel]'] = 'homepage_media_panel';
             $section_link = add_query_arg( $query, admin_url( 'customize.php' ) );
             ?>
 
