@@ -542,7 +542,7 @@ function inspiro_sanitize_display_content( $input ) {
 /**
  * Callback for sanitizing the header_button_url value.
  *
- * @since x.x.x
+ * @since 1.2.5
  *
  * @param string $value URL.
  * @return string Sanitized URL.
@@ -557,7 +557,7 @@ function inspiro_sanitize_header_button_url( $value ) {
  * Accepts 'blank', and otherwise uses sanitize_hex_color_no_hash().
  * Returns default text color if hex color is empty.
  *
- * @since x.x.x
+ * @since 1.2.5
  *
  * @param string $color
  * @return mixed
@@ -578,7 +578,7 @@ function inspiro_sanitize_header_button_textcolor( $color ) {
 /**
  * Sanitize boolean for checkbox.
  *
- * @since x.x.x
+ * @since 1.2.5
  *
  * @param bool $checked Whether or not a box is checked.
  * @return bool

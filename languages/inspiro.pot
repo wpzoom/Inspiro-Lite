@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Inspiro 1.2.4\n"
+"Project-Id-Version: Inspiro 1.2.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/inspiro-lite\n"
-"POT-Creation-Date: 2021-04-08 19:04:21+00:00\n"
+"POT-Creation-Date: 2021-04-09 12:53:40+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -577,27 +577,27 @@ msgstr ""
 msgid "Read more<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: inc/common-functions.php:369
+#: inc/common-functions.php:355
 msgid "%s @ %s"
 msgstr ""
 
-#: inc/common-functions.php:373
+#: inc/common-functions.php:359
 msgid "Reply"
 msgstr ""
 
-#: inc/common-functions.php:376
+#: inc/common-functions.php:362
 msgid "Edit"
 msgstr ""
 
-#: inc/common-functions.php:384
+#: inc/common-functions.php:370
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/common-functions.php:398
+#: inc/common-functions.php:384
 msgid "Pingback:"
 msgstr ""
 
-#: inc/common-functions.php:398
+#: inc/common-functions.php:384
 msgid "(Edit)"
 msgstr ""
 
@@ -838,11 +838,6 @@ msgstr ""
 #: inc/template-tags.php:194
 #. translators: %s: Post title.
 msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
-
-#: inc/template-tags.php:235
-#. translators: %s: The section ID.
-msgid "Front Page Section %s Placeholder"
 msgstr ""
 
 #: inc/theme-info-page.php:20
@@ -1143,10 +1138,14 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Inspiro is a professional photo and video focused theme with a modern "
-"design. Packed with features including a fullscreen area that supports "
-"Vimeo & self-hosted videos in background, Page Builder integration, Inspiro "
-"is perfect for showing off your photography and video portfolio."
+"Inspiro is a professional & lightweight photo and video-focused WordPress "
+"theme with a modern design. Packed with features including a fullscreen "
+"area that supports Vimeo, YouTube & self-hosted video background, Page "
+"Builder integration, Inspiro is perfect for showing off your photography "
+"and video portfolio. Moreover, the theme is compatible with WooCommerce and "
+"popular Page Builders such as Elementor, Beaver Builder. Learn more and "
+"check out our powerful premium version at "
+"https://www.wpzoom.com/themes/inspiro/"
 msgstr ""
 
 #. Author of the plugin/theme
