@@ -1,20 +1,26 @@
 {
-    "name": "wpzoom/inspiro-lite",
-    "description": "Inspiro is a professional photo and video focused theme with a modern design. Packed with features including a fullscreen area that supports Vimeo & self-hosted videos in background, Page Builder integration, Inspiro is perfect for showing off your photography and video portfolio.",
-    "type": "wordpress-theme",
-    "require-dev": {
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
-        "wp-coding-standards/wpcs": "^2.3",
-        "phpcompatibility/phpcompatibility-wp": "^2.1",
-        "squizlabs/php_codesniffer": "^3.5",
-        "phpstan/phpstan": "^0.12.83",
-        "szepeviktor/phpstan-wordpress": "^0.7.5"
-    },
-    "license": "GPL-2.0-or-later",
-    "authors": [
-        {
-            "name": "WPZOOM",
-            "email": "support@wpzoom.com"
-        }
-    ]
+  "name": "wpzoom/inspiro-lite",
+  "description": "Inspiro is a professional & lightweight photo and video-focused WordPress theme with a modern design. Packed with features including a fullscreen area that supports Vimeo, YouTube & self-hosted video background, Page Builder integration, Inspiro is perfect for showing off your photography and video portfolio. Moreover, the theme is compatible with WooCommerce and popular Page Builders such as Elementor, Beaver Builder. Learn more and check out our powerful premium version at https://www.wpzoom.com/themes/inspiro/",
+  "type": "wordpress-theme",
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+    "wp-coding-standards/wpcs": "^2.3",
+    "phpcompatibility/phpcompatibility-wp": "^2.1",
+    "squizlabs/php_codesniffer": "^3.5",
+    "phpstan/phpstan": "^0.12.83",
+    "szepeviktor/phpstan-wordpress": "^0.7.5",
+    "wptrt/wpthemereview": "^0.2.1"
+  },
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "WPZOOM",
+      "email": "support@wpzoom.com"
+    }
+  ],
+  "scripts": {
+    "format": "phpcbf --standard=.phpcs.xml.dist --report-summary --report-source",
+    "lint": "phpcs --standard=.phpcs.xml.dist --report-summary --report-source",
+    "phpstan": "@php vendor/bin/phpstan analyse"
+  }
 }
