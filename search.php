@@ -42,22 +42,19 @@ get_header(); ?>
 				 * called content-search.php and that will be used instead.
 				 */
 				get_template_part( 'template-parts/post/content', 'excerpt' );
-
 			endwhile; // End the loop.
 
 			the_posts_pagination(
-			    array(
-			        'prev_next' => false
-			    )
+				array(
+					'prev_next' => false,
+				)
 			);
-
 		else :
 			?>
 
 			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'inspiro' ); ?></p>
 			<?php
 				get_search_form();
-
 		endif;
 		?>
 

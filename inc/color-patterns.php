@@ -68,12 +68,12 @@ a:focus,
 .colors-custom.search .entry-meta a:hover,
 .colors-custom .comment-author .fn a:focus,
 .colors-custom .comment-author .fn a:hover {
-	color: '. $hex .';
+	color: ' . $hex . ';
 }
 
 .colors-custom.page .entry-cover-image .entry-header .entry-meta a:hover,
 .colors-custom.single .entry-cover-image .entry-header .entry-meta a:hover {
-	color: '. $hex .';
+	color: ' . $hex . ';
 }
 
 .colors-custom .entry-content .more-link:hover,
@@ -84,8 +84,8 @@ a:focus,
 .colors-custom .entry-summary .more-link:focus,
 .colors-custom .entry-summary .more_link:hover,
 .colors-custom .entry-summary .more_link:focus {
-    color: '. $hex .';
-    border-color: '. $hex .';
+    color: ' . $hex . ';
+    border-color: ' . $hex . ';
 }
 
 .colors-custom .btn-primary,
@@ -104,52 +104,52 @@ a:focus,
 .colors-custom input[type=reset]:hover,
 .colors-custom input[type=submit]:hover,
 .colors-custom #respond #submit:hover {
-	color: '. $hex .';
-	border-color: '. $hex .';
+	color: ' . $hex . ';
+	border-color: ' . $hex . ';
 }
 
 .colors-custom input:focus,
 .colors-custom textarea:focus {
-	border-color: '. $hex .';
+	border-color: ' . $hex . ';
 }
 
 .colors-custom .navbar-nav > li > ul:before {
-	border-bottom: 8px solid '. $hex .';
+	border-bottom: 8px solid ' . $hex . ';
 }
 
 .colors-custom.single #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title a:hover {
-	color: '. $hex .';
+	color: ' . $hex . ';
 }
 
 .colors-custom .sticky .svg-icon-thumb-tack {
-    fill: '. $hex .';
+    fill: ' . $hex . ';
 }
 
 .colors-custom .pagination .page-numbers&:not(.dots):hover,
 .colors-custom .pagination .page-numbers.current,
 .colors-custom .comments-pagination .page-numbers:not(.dots):hover,
 .colors-custom .comments-pagination .page-numbers.current {
-	color: '. $hex .';
+	color: ' . $hex . ';
 }
 
 .colors-custom .search-form input:focus,
 .colors-custom .search-form button:focus {
-    border-color: '. $hex .';
+    border-color: ' . $hex . ';
 }
 
 .colors-custom .side-nav .search-form .search-submit,
 .colors-custom .side-nav .search-form .search-submit:hover {
-    color: '. $hex .';
-    border: 2px solid '. $hex .';
+    color: ' . $hex . ';
+    border: 2px solid ' . $hex . ';
 }
 
 .colors-custom .section-footer .zoom-instagram-widget a.ig-b-v-24:hover {
-    color: '. $hex .' !important;
+    color: ' . $hex . ' !important;
 }
 
 @media (min-width: 64em) {
 	.colors-custom .navbar-nav ul {
-	    border-top: 2px solid '. $hex .';
+	    border-top: 2px solid ' . $hex . ';
 	}
 }';
 

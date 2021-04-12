@@ -36,7 +36,6 @@ get_header(); ?>
 				if ( comments_open() || get_comments_number() ) :
 					comments_template();
 				endif;
-
 			endwhile; // End the loop.
 			?>
 

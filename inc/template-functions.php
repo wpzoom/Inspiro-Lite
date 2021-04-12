@@ -41,11 +41,9 @@ function inspiro_body_classes( $classes ) {
 		// Add a class if there is a custom header.
 		if ( is_front_page() && is_home() && has_header_image() ) { // Default homepage
 			$classes[] = 'has-header-image';
-		}
-		elseif ( is_front_page() && has_header_image() ) { // static homepage
+		} elseif ( is_front_page() && has_header_image() ) { // static homepage
 			$classes[] = 'has-header-image';
-		}
-		elseif ( is_page() && inspiro_is_frontpage() && has_header_image() ) {
+		} elseif ( is_page() && inspiro_is_frontpage() && has_header_image() ) {
 			$classes[] = 'has-header-image';
 		}
 		if ( is_page_template( 'page-templates/full-width-transparent.php' ) ) {
@@ -54,7 +52,6 @@ function inspiro_body_classes( $classes ) {
 		if ( is_page_template( 'page-templates/homepage-builder-bb.php' ) && has_header_image() ) {
 			$classes[] = 'has-header-image';
 		}
-
 	}
 
 	// Add class if is single page and has post thumbnail.
@@ -133,12 +130,12 @@ function inspiro_footer_class( $class = '' ) {
  * @return string[] Array of class names.
  */
 function inspiro_get_footer_class( $class = '' ) {
-	$classes = array('site-footer');
-	$widgets_columns = get_theme_mod( 'footer-widget-areas', 3 );
+	$classes            = array( 'site-footer' );
+	$widgets_columns    = get_theme_mod( 'footer-widget-areas', 3 );
 	$has_footer_widgets = false;
 
 	if ( $widgets_columns > 0 ) {
-		for ( $i=0; $i <= intval( $widgets_columns ); $i++ ) {
+		for ( $i = 0; $i <= intval( $widgets_columns ); $i++ ) {
 			if ( $has_footer_widgets ) {
 				$classes[] = 'has-footer-widgets';
 				break;

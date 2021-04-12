@@ -7,15 +7,18 @@ get_header(); ?>
 
 <main id="content" class="clearfix" role="main">
 
-    <div class="builder-wrap">
+	<div class="builder-wrap">
 
-        <?php while ( have_posts() ) : the_post(); ?>
+		<?php 
+		while ( have_posts() ) :
+			the_post(); 
+			?>
 
-            <?php the_content(); ?>
+			<?php the_content(); ?>
 
-        <?php endwhile; // end of the loop. ?>
+		<?php endwhile; // end of the loop. ?>
 
-    </div>
+	</div>
 
 </main><!-- #content -->
 

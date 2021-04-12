@@ -81,11 +81,11 @@ require INSPIRO_THEME_DIR . '/inc/icon-functions.php';
  * Theme admin notices and info page
  */
 if ( is_admin() ) {
-    require INSPIRO_THEME_DIR . '/inc/admin-notice.php';
-    require INSPIRO_THEME_DIR . '/inc/theme-info-page.php';
+	require INSPIRO_THEME_DIR . '/inc/admin-notice.php';
+	require INSPIRO_THEME_DIR . '/inc/theme-info-page.php';
 
-    if ( current_user_can( 'manage_options' ) ) {
-        require INSPIRO_THEME_DIR . '/inc/classes/class-inspiro-notices.php';
-        require INSPIRO_THEME_DIR . '/inc/classes/class-inspiro-notice-review.php';
-    }
+	if ( current_user_can( 'manage_options' ) ) {
+		require INSPIRO_THEME_DIR . '/inc/classes/class-inspiro-notices.php';
+		require INSPIRO_THEME_DIR . '/inc/classes/class-inspiro-notice-review.php';
+	}
 }

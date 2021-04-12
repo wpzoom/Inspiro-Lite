@@ -11,13 +11,13 @@
  */
 
 if ( ! is_active_sidebar( 'footer_instagram_section' ) ) {
-    return;
+	return;
 }
 ?>
 
 <section class="site-widgetized-section section-footer">
-    <div class="widgets clearfix">
-        <?php dynamic_sidebar( 'footer_instagram_section' ); ?>
-    </div>
+	<div class="widgets clearfix">
+		<?php dynamic_sidebar( 'footer_instagram_section' ); ?>
+	</div>
 </section><!-- .site-widgetized-section -->
 

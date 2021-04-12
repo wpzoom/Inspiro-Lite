@@ -38,16 +38,15 @@
 					'link_after'  => '</span>',
 				)
 			);
-
 		};
 		?>
 
 	</div><!-- .entry-content -->
 
-	<?php if ( is_single() && 'side-right' === get_theme_mod( 'layout_single_post', 'full' ) && is_active_sidebar( 'blog-sidebar' ) ): ?>
+	<?php if ( is_single() && 'side-right' === get_theme_mod( 'layout_single_post', 'full' ) && is_active_sidebar( 'blog-sidebar' ) ) : ?>
 		
 		<aside id="secondary" class="widget-area" role="complementary">
-		    <?php dynamic_sidebar( 'blog-sidebar' ); ?>
+			<?php dynamic_sidebar( 'blog-sidebar' ); ?>
 		</aside>
 		
 	<?php endif ?>

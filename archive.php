@@ -41,19 +41,15 @@ get_header(); ?>
 				 * will be used instead.
 				 */
 				get_template_part( 'template-parts/post/content', get_post_format() );
-
 			endwhile;
 
 			the_posts_pagination(
-			    array(
-			        'prev_next' => false
-			    )
+				array(
+					'prev_next' => false,
+				)
 			);
-
 		else :
-
 			get_template_part( 'template-parts/post/content', 'none' );
-
 		endif;
 		?>
 

@@ -15,26 +15,29 @@
  * @version     1.6.4
  */
 
-get_header('shop'); ?>
+get_header( 'shop' ); ?>
 
 <div class="inner-wrap">
 
-    <main id="main" class="site-main" role="main">
+	<main id="main" class="site-main" role="main">
 
-        <?php woocommerce_breadcrumb(); ?>
+		<?php woocommerce_breadcrumb(); ?>
 
-            <?php do_action('woocommerce_output_content_wrapper'); ?>
+			<?php do_action( 'woocommerce_output_content_wrapper' ); ?>
 
-                <?php while ( have_posts() ) : the_post(); ?>
+				<?php 
+				while ( have_posts() ) :
+					the_post(); 
+					?>
 
-                    <?php wc_get_template_part( 'content', 'single-product' ); ?>
+					<?php wc_get_template_part( 'content', 'single-product' ); ?>
 
-                <?php endwhile; // end of the loop. ?>
+				<?php endwhile; // end of the loop. ?>
 
-            <div class="cleaner">&nbsp;</div>
+			<div class="cleaner">&nbsp;</div>
 
-    </main><!-- /#main -->
+	</main><!-- /#main -->
 
 </div>
 
-<?php get_footer('shop'); ?>
+<?php get_footer( 'shop' ); ?>

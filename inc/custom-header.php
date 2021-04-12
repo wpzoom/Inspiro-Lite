@@ -15,7 +15,6 @@
  * @uses inspiro_header_style()
  */
 function inspiro_custom_header_setup() {
-
 	add_theme_support(
 		'custom-header',
 		/**
@@ -67,15 +66,15 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 	 * @see inspiro_custom_header_setup().
 	 */
 	function inspiro_header_style() {
-		$header_text_color = get_header_textcolor();
-		$header_button_text_color = get_theme_mod( 'header_button_textcolor', 'ffffff' );
+		$header_text_color              = get_header_textcolor();
+		$header_button_text_color       = get_theme_mod( 'header_button_textcolor', 'ffffff' );
 		$header_button_text_color_hover = get_theme_mod( 'header_button_textcolor_hover', 'ffffff' );
-		$header_button_bg_color_hover = get_theme_mod( 'header_button_bgcolor_hover', '0bb4aa' );
+		$header_button_bg_color_hover   = get_theme_mod( 'header_button_bgcolor_hover', '0bb4aa' );
 
 		// // If no custom options for text are set, let's bail.
 		// // get_header_textcolor() options: add_theme_support( 'custom-header' ) is default, hide text (returns 'blank') or any hex value.
 		// if ( get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color ) {
-		// 	return;
+		// return;
 		// }
 
 		// If we get this far, we have custom styles. Let's do this.
@@ -83,15 +82,15 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		<style id="inspiro-custom-header-styles" type="text/css">
 		<?php
 			// Has the text been hidden?
-			if ( 'blank' === $header_text_color ) :
-				?>
+		if ( 'blank' === $header_text_color ) :
+			?>
 			.site-title,
 			.site-description {
 				position: absolute;
 				clip: rect(1px, 1px, 1px, 1px);
 			}
-				<?php
-				// If the user has set a custom color for the text use that.
+			<?php
+			// If the user has set a custom color for the text use that.
 			else :
 				?>
 			.site-title a,

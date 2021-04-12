@@ -21,9 +21,9 @@
 		$video   = false;
 
 		// Only get video from the content if a playlist isn't present.
-		if ( false === strpos( $content, 'wp-playlist-script' ) ) {
-			$video = get_media_embedded_in_content( $content, array( 'video', 'object', 'embed', 'iframe' ) );
-		}
+	if ( false === strpos( $content, 'wp-playlist-script' ) ) {
+		$video = get_media_embedded_in_content( $content, array( 'video', 'object', 'embed', 'iframe' ) );
+	}
 	?>
 
 	<div class="entry-content">
@@ -39,11 +39,9 @@
 					echo '</div>';
 				}
 			};
-
 		};
 
 		if ( is_single() || empty( $video ) ) {
-
 			the_content(
 				sprintf(
 					/* translators: %s: Post title. */
@@ -65,10 +63,10 @@
 
 	</div><!-- .entry-content -->
 
-	<?php if ( is_single() && 'side-right' === get_theme_mod( 'layout_single_post', 'full' ) && is_active_sidebar( 'blog-sidebar' ) ): ?>
+	<?php if ( is_single() && 'side-right' === get_theme_mod( 'layout_single_post', 'full' ) && is_active_sidebar( 'blog-sidebar' ) ) : ?>
 		
 		<aside id="secondary" class="widget-area" role="complementary">
-		    <?php dynamic_sidebar( 'blog-sidebar' ); ?>
+			<?php dynamic_sidebar( 'blog-sidebar' ); ?>
 		</aside>
 		
 	<?php endif ?>

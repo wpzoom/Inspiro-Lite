@@ -23,7 +23,7 @@ function inspiro_customize_register( $wp_customize ) {
 		array(
 			'theme_supports'       => array( 'custom-header', 'header-text' ),
 			'default'              => 'ffffff',
-			'transport'			   => 'postMessage',
+			'transport'            => 'postMessage',
 			'sanitize_callback'    => 'inspiro_sanitize_header_button_textcolor',
 			'sanitize_js_callback' => 'maybe_hash_hex_color',
 		)
@@ -34,7 +34,7 @@ function inspiro_customize_register( $wp_customize ) {
 		array(
 			'theme_supports'       => array( 'custom-header', 'header-text' ),
 			'default'              => 'ffffff',
-			'transport'			   => 'refresh',
+			'transport'            => 'refresh',
 			'sanitize_callback'    => 'inspiro_sanitize_header_button_textcolor',
 			'sanitize_js_callback' => 'maybe_hash_hex_color',
 		)
@@ -45,7 +45,7 @@ function inspiro_customize_register( $wp_customize ) {
 		array(
 			'theme_supports'       => array( 'custom-header', 'header-text' ),
 			'default'              => '0bb4aa',
-			'transport'			   => 'refresh',
+			'transport'            => 'refresh',
 			'sanitize_callback'    => 'inspiro_sanitize_header_button_textcolor',
 			'sanitize_js_callback' => 'maybe_hash_hex_color',
 		)
@@ -90,10 +90,10 @@ function inspiro_customize_register( $wp_customize ) {
 	$wp_customize->add_panel(
 		'homepage_media_panel',
 		array(
-		  	'capability'     	=> 'edit_theme_options',
-		  	'title'          	=> esc_html__( 'Homepage Media', 'inspiro' ),
-		  	'active_callback' 	=> 'is_header_video_active',
-		  	'priority'			=> 40
+			'capability'      => 'edit_theme_options',
+			'title'           => esc_html__( 'Homepage Media', 'inspiro' ),
+			'active_callback' => 'is_header_video_active',
+			'priority'        => 40,
 		)
 	);
 
@@ -103,10 +103,10 @@ function inspiro_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'header_image',
 		array(
-			'title'    			=> esc_html__( 'Media', 'inspiro' ),
-			'theme_supports' 	=> 'custom-header',
-			'priority' 			=> 60,
-			'panel'				=> 'homepage_media_panel'
+			'title'          => esc_html__( 'Media', 'inspiro' ),
+			'theme_supports' => 'custom-header',
+			'priority'       => 60,
+			'panel'          => 'homepage_media_panel',
 		)
 	);
 
@@ -118,7 +118,7 @@ function inspiro_customize_register( $wp_customize ) {
 			'label'           => esc_html__( 'External Header Video', 'inspiro' ),
 			'description'     => esc_html__( 'Enter a YouTube or Vimeo URL:', 'inspiro' ),
 			'section'         => 'header_image',
-			'priority'		  => 5,
+			'priority'        => 5,
 			'active_callback' => 'is_header_video_active',
 		)
 	);
@@ -129,10 +129,10 @@ function inspiro_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'header_content',
 		array(
-			'title'    			=> esc_html__( 'Content', 'inspiro' ),
-			'theme_supports' 	=> 'custom-header',
-			'priority' 			=> 70,
-			'panel'				=> 'homepage_media_panel'
+			'title'          => esc_html__( 'Content', 'inspiro' ),
+			'theme_supports' => 'custom-header',
+			'priority'       => 70,
+			'panel'          => 'homepage_media_panel',
 		)
 	);
 
@@ -157,7 +157,7 @@ function inspiro_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'header_button_title',
 		array(
-			'theme_supports' 	=> 'custom-header',
+			'theme_supports'    => 'custom-header',
 			'default'           => '',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'sanitize_text_field',
@@ -167,7 +167,7 @@ function inspiro_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'header_button_url',
 		array(
-			'theme_supports' 	=> 'custom-header',
+			'theme_supports'    => 'custom-header',
 			'default'           => '',
 			'transport'         => 'refresh',
 			'sanitize_callback' => 'inspiro_sanitize_header_button_url',
@@ -191,7 +191,7 @@ function inspiro_customize_register( $wp_customize ) {
 			'label'           => esc_html__( 'Header Title', 'inspiro' ),
 			'description'     => esc_html__( 'Enter a site title which appears in the header on front-page', 'inspiro' ),
 			'section'         => 'header_content',
-			'priority'		  => 1,
+			'priority'        => 1,
 			'active_callback' => 'is_header_video_active',
 		)
 	);
@@ -204,7 +204,7 @@ function inspiro_customize_register( $wp_customize ) {
 			'label'           => esc_html__( 'Header Description', 'inspiro' ),
 			'description'     => esc_html__( 'Enter a site description which appears in the header on front-page', 'inspiro' ),
 			'section'         => 'header_content',
-			'priority'		  => 1,
+			'priority'        => 1,
 			'active_callback' => 'is_header_video_active',
 		)
 	);
@@ -257,10 +257,10 @@ function inspiro_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'custom_logo_text',
 		array(
-			'type' 		=> 'text',
-			'label'		=> esc_html__( 'Custom Logo Text', 'inspiro' ),
-			'section' 	=> 'title_tagline',
-			'priority'	=> 5
+			'type'     => 'text',
+			'label'    => esc_html__( 'Custom Logo Text', 'inspiro' ),
+			'section'  => 'title_tagline',
+			'priority' => 5,
 		)
 	);
 
@@ -334,10 +334,10 @@ function inspiro_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'footer-widget-areas',
 		array(
-			'label'           => esc_html__( 'Number of Widget Areas', 'inspiro' ),
-			'section'         => 'footer-area',
-			'type'            => 'radio',
-			'choices'         => array(
+			'label'   => esc_html__( 'Number of Widget Areas', 'inspiro' ),
+			'section' => 'footer-area',
+			'type'    => 'radio',
+			'choices' => array(
 				__( 'Don\'t display Widgets', 'inspiro' ),
 				__( 'One Column', 'inspiro' ),
 				__( 'Two Columns', 'inspiro' ),
@@ -353,10 +353,10 @@ function inspiro_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'theme_layout',
 		array(
-			'title'    			=> esc_html__( 'Theme Layout', 'inspiro' ),
-			'description'		=> sprintf( __( 'If you want to display "Sidebar on the right", please make sure you have added some widgets to %s', 'inspiro' ), '<a href="javascript:wp.customize.panel( \'widgets\' ).focus();" title="Open Widgets Panel">' . __( 'Blog Sidebar', 'inspiro') . '</a>' ),
-			'priority' 			=> 50,
-	        'capability' 		=> 'edit_theme_options',
+			'title'       => esc_html__( 'Theme Layout', 'inspiro' ),
+			'description' => sprintf( __( 'If you want to display "Sidebar on the right", please make sure you have added some widgets to %s', 'inspiro' ), '<a href="javascript:wp.customize.panel( \'widgets\' ).focus();" title="Open Widgets Panel">' . __( 'Blog Sidebar', 'inspiro' ) . '</a>' ),
+			'priority'    => 50,
+			'capability'  => 'edit_theme_options',
 		)
 	);
 
@@ -385,8 +385,8 @@ function inspiro_customize_register( $wp_customize ) {
 			'section'         => 'theme_layout',
 			'type'            => 'radio',
 			'choices'         => array(
-				'full' 		  => esc_html__( 'Full width', 'inspiro' ),
-				'side-right'  => esc_html__( 'Sidebar on the right', 'inspiro' ),
+				'full'       => esc_html__( 'Full width', 'inspiro' ),
+				'side-right' => esc_html__( 'Sidebar on the right', 'inspiro' ),
 			),
 			'active_callback' => 'inspiro_is_view_with_layout_option',
 		)
@@ -399,8 +399,8 @@ function inspiro_customize_register( $wp_customize ) {
 			'section'         => 'theme_layout',
 			'type'            => 'radio',
 			'choices'         => array(
-				'full' 		  => esc_html__( 'Full width', 'inspiro' ),
-				'side-right'  => esc_html__( 'Sidebar on the right', 'inspiro' ),
+				'full'       => esc_html__( 'Full width', 'inspiro' ),
+				'side-right' => esc_html__( 'Sidebar on the right', 'inspiro' ),
 			),
 			'active_callback' => 'inspiro_is_view_with_layout_option',
 		)
@@ -412,41 +412,41 @@ function inspiro_customize_register( $wp_customize ) {
 	$wp_customize->add_panel(
 		'blog_post_options_panel',
 		array(
-		 	'priority'       	=> 51,
-		  	'capability'     	=> 'edit_theme_options',
-		  	'title'          	=> esc_html__( 'Blog Post Options', 'inspiro' ),
-		  	'active_callback' 	=> 'inspiro_is_view_is_blog',
+			'priority'        => 51,
+			'capability'      => 'edit_theme_options',
+			'title'           => esc_html__( 'Blog Post Options', 'inspiro' ),
+			'active_callback' => 'inspiro_is_view_is_blog',
 		)
 	);
 
 	$wp_customize->add_section(
 		'blog_post_options',
 		array(
-			'title'    		=> esc_html__( 'Post Options', 'inspiro' ),
-	        'capability' 	=> 'edit_theme_options',
-	        'panel'			=> 'blog_post_options_panel',
+			'title'      => esc_html__( 'Post Options', 'inspiro' ),
+			'capability' => 'edit_theme_options',
+			'panel'      => 'blog_post_options_panel',
 		)
 	);
 
 	$wp_customize->add_setting(
 		'display_content',
 		array(
-			'default'  			=> 'excerpt',
+			'default'           => 'excerpt',
 			'sanitize_callback' => 'inspiro_sanitize_display_content',
-			'transport'     	=> 'refresh',
+			'transport'         => 'refresh',
 		)
 	);
 
 	$wp_customize->add_control(
 		'display_content',
 		array(
-			'label'           => esc_html__( 'Content', 'inspiro' ),
-			'section'         => 'blog_post_options',
-			'type'            => 'radio',
-			'choices'         => array(
-				'excerpt' 		=> esc_html__( 'Excerpt', 'inspiro' ),
-				'full-content'  => esc_html__( 'Full Content', 'inspiro' ),
-				'none'  		=> esc_html__( 'None', 'inspiro' ),
+			'label'   => esc_html__( 'Content', 'inspiro' ),
+			'section' => 'blog_post_options',
+			'type'    => 'radio',
+			'choices' => array(
+				'excerpt'      => esc_html__( 'Excerpt', 'inspiro' ),
+				'full-content' => esc_html__( 'Full Content', 'inspiro' ),
+				'none'         => esc_html__( 'None', 'inspiro' ),
 			),
 		)
 	);
@@ -455,13 +455,13 @@ function inspiro_customize_register( $wp_customize ) {
 	 * Single Post Options.
 	 */
 	// $wp_customize->add_panel(
-	// 	'single_post_options_panel',
-	// 	array(
-	// 	 	'priority'       	=> 52,
-	// 	  	'capability'     	=> 'edit_theme_options',
-	// 	  	'title'          	=> esc_html__( 'Single Post Options', 'inspiro' ),
-	// 	  	'active_callback' 	=> 'inspiro_is_view_is_single',
-	// 	)
+	// 'single_post_options_panel',
+	// array(
+	// 'priority'          => 52,
+	// 'capability'        => 'edit_theme_options',
+	// 'title'             => esc_html__( 'Single Post Options', 'inspiro' ),
+	// 'active_callback'   => 'inspiro_is_view_is_single',
+	// )
 	// );
 
 	/**
@@ -472,22 +472,22 @@ function inspiro_customize_register( $wp_customize ) {
 	 */
 	require INSPIRO_THEME_DIR . '/inc/classes/class-inspiro-customize-section-pro.php';
 
-    $wp_customize->register_section_type( 'Inspiro_Customize_Section_Pro' );
+	$wp_customize->register_section_type( 'Inspiro_Customize_Section_Pro' );
 
-    // Register sections.
-    $wp_customize->add_section(
-        new Inspiro_Customize_Section_Pro(
-            $wp_customize,
-            'inspiro_upgrade_pro',
-            array(
-                'title'    		=> esc_html__( 'Upgrade to Inspiro PRO', 'inspiro' ),
-                'description' 	=> esc_html__( 'Unlock premium features: 7 Style Kits, Google Fonts, Video Backgrounds, Portfolio Integration, Premium Support and much more...', 'inspiro' ),
-                'pro_text' 		=> esc_html__( 'View Inspiro PRO', 'inspiro' ),
-                'pro_url'  		=> 'https://www.wpzoom.com/themes/inspiro/',
-                'priority' 		=> 5
-            )
-        )
-    );
+	// Register sections.
+	$wp_customize->add_section(
+		new Inspiro_Customize_Section_Pro(
+			$wp_customize,
+			'inspiro_upgrade_pro',
+			array(
+				'title'       => esc_html__( 'Upgrade to Inspiro PRO', 'inspiro' ),
+				'description' => esc_html__( 'Unlock premium features: 7 Style Kits, Google Fonts, Video Backgrounds, Portfolio Integration, Premium Support and much more...', 'inspiro' ),
+				'pro_text'    => esc_html__( 'View Inspiro PRO', 'inspiro' ),
+				'pro_url'     => 'https://www.wpzoom.com/themes/inspiro/',
+				'priority'    => 5,
+			)
+		)
+	);
 }
 add_action( 'customize_register', 'inspiro_customize_register' );
 
@@ -498,8 +498,8 @@ add_action( 'customize_register', 'inspiro_customize_register' );
  */
 function inspiro_sanitize_page_layout( $input ) {
 	$valid = array(
-		'full' 			=> esc_html__( 'Full width', 'inspiro' ),
-		'side-right' 	=> esc_html__( 'Sidebar on the right', 'inspiro' ),
+		'full'       => esc_html__( 'Full width', 'inspiro' ),
+		'side-right' => esc_html__( 'Sidebar on the right', 'inspiro' ),
 	);
 
 	if ( array_key_exists( $input, $valid ) ) {
