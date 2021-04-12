@@ -1,19 +1,4 @@
 @charset "UTF-8";
-/*
-Theme Name: Inspiro
-Theme URI: https://www.wpzoom.com/free-wordpress-themes/inspiro-lite/
-Author: WPZOOM
-Author URI: https://www.wpzoom.com/
-Description: Inspiro is a professional photo and video focused theme with a modern design. Packed with features including a fullscreen area that supports Vimeo & self-hosted videos in background, Page Builder integration, Inspiro is perfect for showing off your photography and video portfolio.
-Version: 1.2.3
-Requires at least: 5.2
-Requires PHP: 5.6
-Tested up to: 5.7
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: inspiro
-Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
-*/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -1245,7 +1230,7 @@ a:hover {
     color: #076c65;
 }
 
-.entry-content a,
+body:not(.fl-builder) .entry-content a,
 .entry-summary a:not(.more-link),
 .comment-body a,
 .textwidget a {
@@ -2095,6 +2080,30 @@ body.has-header-image .site-description, body.has-header-video .site-description
     opacity: 0.8;
 }
 
+.custom-header-button {
+    margin-top: 3.125em;
+    font-size: 16px;
+    font-size: 1rem;
+    color: #fff;
+    border-color: inherit;
+    transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
+}
+
+.custom-header-button:hover {
+    opacity: 1;
+    color: #fff;
+    background-color: #0bb4aa;
+    border-color: #0bb4aa;
+}
+
+body.has-header-image .custom-header-button, body.has-header-video .custom-header-button {
+    transition: background-color .2s ease-in-out, border-color .2s ease-in-out, color .2s ease-in-out;
+}
+
+body.has-header-image .custom-header-button:hover, body.has-header-video .custom-header-button:hover {
+    opacity: 1;
+}
+
 .custom-logo-link {
     display: inline-block;
     padding: 0;
@@ -2171,9 +2180,9 @@ body:not(.title-tagline-hidden) .site-branding-text {
     transition: top .3s linear, opacity .3s ease-in;
 }
 
-.has-header-image.inspiro-front-page.inspiro-page-loaded .site-branding, .has-header-image.home.blog.inspiro-page-loaded .site-branding,
-.has-header-video.inspiro-front-page.inspiro-page-loaded .site-branding,
-.has-header-video.home.blog.inspiro-page-loaded .site-branding {
+.has-header-image.inspiro-front-page.inspiro-page-ready .site-branding, .has-header-image.home.blog.inspiro-page-ready .site-branding,
+.has-header-video.inspiro-front-page.inspiro-page-ready .site-branding,
+.has-header-video.home.blog.inspiro-page-ready .site-branding {
     opacity: 1;
     top: 50%;
 }
@@ -4666,6 +4675,10 @@ div.aligncenter {
         font-size: 32px;
         font-size: 2rem;
     }
+    .custom-header-button {
+        font-size: 14px;
+        font-size: 0.875rem;
+    }
     .side-nav .widget .title {
         font-size: 20px;
         font-size: 1.25rem;
@@ -4704,6 +4717,10 @@ div.aligncenter {
         font-size: 16px;
         font-size: 1rem;
         text-shadow: none;
+    }
+    .custom-header-button {
+        font-size: 12px;
+        font-size: 0.75rem;
     }
     .page .entry-content,
     .single .entry-content {

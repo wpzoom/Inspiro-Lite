@@ -106,6 +106,8 @@
     // Fire on document ready.
     $( document ).ready( function() {
 
+        $body.addClass('inspiro-page-ready');
+
         // If navigation menu is present on page, setNavProps.
         if ( $navigation.length ) {
             setNavProps();

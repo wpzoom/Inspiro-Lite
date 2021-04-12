@@ -201,43 +201,6 @@ if ( ! function_exists( 'inspiro_edit_link' ) ) :
 endif;
 
 /**
- * Display a front page section.
- *
- * @param WP_Customize_Partial $partial Partial associated with a selective refresh request.
- * @param integer              $id Front page section to display.
- */
-function inspiro_front_page_section( $partial = null, $id = 0 ) {
-	if ( is_a( $partial, 'WP_Customize_Partial' ) ) {
-		// Find out the ID and set it up during a selective refresh.
-		global $inspirocounter;
-
-		$id = str_replace( 'panel_', '', $partial->id );
-
-		$inspirocounter = $id;
-	}
-
-	global $post; // Modify the global post object before setting up post data.
-	if ( get_theme_mod( 'panel_' . $id ) ) {
-		$post = get_post( get_theme_mod( 'panel_' . $id ) );
-		setup_postdata( $post );
-		set_query_var( 'panel', $id );
-
-		get_template_part( 'template-parts/page/content', 'front-page-panels' );
-
-		wp_reset_postdata();
-	} elseif ( is_customize_preview() ) {
-		// The output placeholder anchor.
-		printf(
-			'<article class="panel-placeholder panel inspiro-panel inspiro-panel%1$s" id="panel%1$s">' .
-			'<span class="inspiro-panel-title">%2$s</span></article>',
-			$id,
-			/* translators: %s: The section ID. */
-			sprintf( __( 'Front Page Section %s Placeholder', 'inspiro' ), $id )
-		);
-	}
-}
-
-/**
  * Returns true if a blog has more than 1 category.
  *
  * @return bool

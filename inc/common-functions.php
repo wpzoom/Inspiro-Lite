@@ -277,20 +277,6 @@ function inspiro_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 add_filter( 'wp_get_attachment_image_attributes', 'inspiro_post_thumbnail_sizes_attr', 10, 3 );
 
 /**
- * Use front-page.php when Front page displays is set to a static page.
- *
- * @since Inspiro 1.0.0
- *
- * @param string $template front-page.php.
- * @return string The template to be used: blank if is_home() is true (defaults to index.php),
- *                otherwise $template.
- */
-function inspiro_front_page_template( $template ) {
-    return is_home() ? '' : $template;
-}
-add_filter( 'frontpage_template', 'inspiro_front_page_template' );
-
-/**
  * Modifies tag cloud widget arguments to display all tags in the same font size
  * and use list format for better accessibility.
  *

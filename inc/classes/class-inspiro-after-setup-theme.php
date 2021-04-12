@@ -272,6 +272,12 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
                 ),
 
                 array(
+                    'name'      => 'WPZOOM Beaver Builder Templates',
+                    'slug'      => 'wpzoom-beaver-builder-templates',
+                    'required'  => false,
+                ),
+
+                array(
                     'name'      => 'WPZOOM Addons for Beaver Builder',
                     'slug'      => 'wpzoom-addons-for-beaver-builder',
                     'required'  => false,

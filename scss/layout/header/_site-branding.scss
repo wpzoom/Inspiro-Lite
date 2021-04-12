@@ -87,6 +87,34 @@ body {
     }
 }
 
+.custom-header-button {
+    margin-top: em(50);
+    @include font-size(16);
+    color: #fff;
+    border-color: inherit;
+    transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+        color: #fff;
+        background-color: $color-background-button-hover;
+        border-color: $color-background-button-hover;
+    }
+}
+
+body {
+    &.has-header-image,
+    &.has-header-video {
+        .custom-header-button {
+            transition: background-color .2s ease-in-out, border-color .2s ease-in-out, color .2s ease-in-out;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
 .custom-logo-link {
     display: inline-block;
     padding: 0;
@@ -173,7 +201,7 @@ body {
             transform: translate(-50%, -50%);
             transition: top .3s linear, opacity .3s ease-in;
         }
-        &.inspiro-page-loaded {
+        &.inspiro-page-ready {
             .site-branding {
                 opacity: 1;
                 top: 50%;
