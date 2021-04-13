@@ -12,13 +12,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-/**
- * Inspiro_After_Setup_Theme initial setup
- *
- * @since 1.0.0
- */
 if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
-
+	/**
+	 * Inspiro_After_Setup_Theme initial setup
+	 *
+	 * @since 1.0.0
+	 */
 	class Inspiro_After_Setup_Theme {
 		/**
 		 * Instance

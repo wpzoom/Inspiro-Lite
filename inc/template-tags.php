@@ -110,7 +110,10 @@ if ( ! function_exists( 'inspiro_comments_link' ) ) {
 
 if ( ! function_exists( 'inspiro_time_link' ) ) :
 	/**
-	 * Gets a nicely formatted string for the published date.
+	 * Gets a nicely formatted string for the published date
+	 *
+	 * @param boolean $link Display time as a link.
+	 * @return string
 	 */
 	function inspiro_time_link( $link = true ) {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';

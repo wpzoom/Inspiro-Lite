@@ -18,7 +18,10 @@
 	<span class="copyright">
 		<span>
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'inspiro' ) ); ?>" target="_blank">
-				<?php printf( __( 'Powered by %s', 'inspiro' ), 'WordPress' ); ?>
+				<?php
+				/* translators: %s: WordPress trademark */
+				printf( __( 'Powered by %s', 'inspiro' ), 'WordPress' );
+				?>
 			</a>
 		</span>
 		<span>

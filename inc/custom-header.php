@@ -71,8 +71,8 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$header_button_text_color_hover = get_theme_mod( 'header_button_textcolor_hover', 'ffffff' );
 		$header_button_bg_color_hover   = get_theme_mod( 'header_button_bgcolor_hover', '0bb4aa' );
 
-		// // If no custom options for text are set, let's bail.
-		// // get_header_textcolor() options: add_theme_support( 'custom-header' ) is default, hide text (returns 'blank') or any hex value.
+		// If no custom options for text are set, let's bail.
+		// get_header_textcolor() options: add_theme_support( 'custom-header' ) is default, hide text (returns 'blank') or any hex value.
 		// if ( get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color ) {
 		// return;
 		// }
@@ -151,7 +151,7 @@ function inspiro_video_controls( $settings ) {
 
 	/**
 	 * Adds support for Vimeo to the video in the custom header.
-	 * 
+	 *
 	 * @see https://github.com/bradyvercher/custom-header-vimeo
 	 */
 	if ( preg_match( '#^https?://(.+\.)?vimeo\.com/.*#', $settings['videoUrl'] ) ) {
@@ -162,17 +162,28 @@ function inspiro_video_controls( $settings ) {
 }
 add_filter( 'header_video_settings', 'inspiro_video_controls' );
 
+/**
+ * Maybe enqueue custom header vimeo scripts
+ */
 function inspiro_maybe_enqueue_vimeo_handler() {
 	if ( wp_script_is( 'wp-custom-header' ) ) {
 		wp_enqueue_script(
 			'wp-custom-header-vimeo',
 			inspiro_get_assets_uri( 'custom-header-vimeo', 'js' ),
-			array( 'wp-custom-header' )
+			array( 'wp-custom-header' ),
+			INSPIRO_THEME_VERSION
 		);
 	}
 }
 add_action( 'wp_footer', 'inspiro_maybe_enqueue_vimeo_handler' );
 
+/**
+ * Filter extenal header video settting validity
+ *
+ * @param boolean $validity Validity.
+ * @param string  $value Video setting value.
+ * @return boolean
+ */
 function inspiro_filter_external_header_video_setting_validity( $validity, $value ) {
 	if ( preg_match( '#^https?://(.+\.)?vimeo\.com/.*#', $value ) ) {
 		return true;

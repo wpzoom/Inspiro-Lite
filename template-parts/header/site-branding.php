@@ -36,7 +36,7 @@
 			<?php endif; ?>
 
 			<?php
-			if ( $description || is_customize_preview() ) : 
+			if ( $description || is_customize_preview() ) :
 				?>
 				<p class="site-description"><?php echo esc_html( $description ); ?></p>
 			<?php endif; ?>

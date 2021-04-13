@@ -1,3 +1,15 @@
+<?php
+/**
+ * The template for displaying search form
+ *
+ * @package Inspiro
+ * @subpackage Inspiro_Lite
+ * @since Inspiro 1.0.0
+ * @version 1.0.0
+ */
+
+?>
+
 <form method="get" id="searchform" action="<?php echo esc_url( home_url() ); ?>/">
 	<label for="search-form-input">
 		<span class="screen-reader-text"><?php esc_html_e( 'Search for:', 'inspiro' ); ?></span>

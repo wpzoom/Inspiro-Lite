@@ -39,9 +39,9 @@ function inspiro_body_classes( $classes ) {
 	if ( $paged < 2 ) {
 
 		// Add a class if there is a custom header.
-		if ( is_front_page() && is_home() && has_header_image() ) { // Default homepage
+		if ( is_front_page() && is_home() && has_header_image() ) { // Default homepage.
 			$classes[] = 'has-header-image';
-		} elseif ( is_front_page() && has_header_image() ) { // static homepage
+		} elseif ( is_front_page() && has_header_image() ) { // static homepage.
 			$classes[] = 'has-header-image';
 		} elseif ( is_page() && inspiro_is_frontpage() && has_header_image() ) {
 			$classes[] = 'has-header-image';
@@ -55,7 +55,7 @@ function inspiro_body_classes( $classes ) {
 	}
 
 	// Add class if is single page and has post thumbnail.
-	if ( ( ( is_single() && 'post' == get_post_type() ) || is_page() ) && has_post_thumbnail() ) {
+	if ( ( ( is_single() && 'post' === get_post_type() ) || is_page() ) && has_post_thumbnail() ) {
 		$classes[] = 'has-header-image';
 	}
 

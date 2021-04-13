@@ -354,7 +354,7 @@ function inspiro_customize_register( $wp_customize ) {
 		'theme_layout',
 		array(
 			'title'       => esc_html__( 'Theme Layout', 'inspiro' ),
-			'description' => sprintf( __( 'If you want to display "Sidebar on the right", please make sure you have added some widgets to %s', 'inspiro' ), '<a href="javascript:wp.customize.panel( \'widgets\' ).focus();" title="Open Widgets Panel">' . __( 'Blog Sidebar', 'inspiro' ) . '</a>' ),
+			'description' => sprintf( __( 'If you want to display "Sidebar on the right", please make sure you have added some widgets to %s', 'inspiro' ), '<a href="javascript:wp.customize.panel( \'widgets\' ).focus();" title="Open Widgets Panel">' . __( 'Blog Sidebar', 'inspiro' ) . '</a>' ), // phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
 			'priority'    => 50,
 			'capability'  => 'edit_theme_options',
 		)
@@ -559,7 +559,7 @@ function inspiro_sanitize_header_button_url( $value ) {
  *
  * @since 1.2.5
  *
- * @param string $color
+ * @param string $color Color value.
  * @return mixed
  */
 function inspiro_sanitize_header_button_textcolor( $color ) {

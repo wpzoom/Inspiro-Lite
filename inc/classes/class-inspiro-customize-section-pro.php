@@ -1,5 +1,12 @@
 <?php
 /**
+ * Add upsell section to Customizer
+ *
+ * @package Inspiro
+ * @since Inspiro 1.2.2
+ */
+
+/**
  * Pro customizer section.
  *
  * @since  1.2.2
@@ -48,7 +55,7 @@ class Inspiro_Customize_Section_Pro extends WP_Customize_Section {
 	 *
 	 * @since  1.2.2
 	 * @access public
-	 * @return void
+	 * @return array
 	 */
 	public function json() {
 		$json = parent::json();
@@ -85,6 +92,6 @@ class Inspiro_Customize_Section_Pro extends WP_Customize_Section {
 
 
 		</li>
-		<?php 
+		<?php
 	}
 }

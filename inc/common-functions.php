@@ -1,4 +1,11 @@
 <?php
+/**
+ * Inspiro Lite: Common functions
+ *
+ * @package Inspiro
+ * @subpackage Inspiro_Lite
+ * @since Inspiro 1.0.0
+ */
 
 /**
  * Register custom fonts.
@@ -18,9 +25,9 @@ function inspiro_fonts_url() {
 		$font_families[] = 'Libre Franklin:200,200i,300,300i,400,400i,600,600i,700,700i|Montserrat:500,700';
 
 		$query_args = array(
-			'family'  => urlencode( implode( '|', $font_families ) ),
-			'subset'  => urlencode( 'latin,latin-ext' ),
-			'display' => urlencode( 'fallback' ),
+			'family'  => rawurlencode( implode( '|', $font_families ) ),
+			'subset'  => rawurlencode( 'latin,latin-ext' ),
+			'display' => rawurlencode( 'fallback' ),
 		);
 
 		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
@@ -35,14 +42,14 @@ function inspiro_fonts_url() {
  *
  * @since 1.0.0
  *
- * @param  string $filename The file name
- * @param  string $filetype The file type [css|js]
- * @return string           The full assets url
+ * @param  string $filename The file name.
+ * @param  string $filetype The file type [css|js].
+ * @return string           The full assets url.
  */
 function inspiro_get_assets_uri( $filename, $filetype ) {
 	$assets_uri = '';
 
-	// Directory and Extension
+	// Directory and Extension.
 	$file_prefix = ( SCRIPT_DEBUG ) ? '' : '.min';
 	$dir_name    = ( SCRIPT_DEBUG ) ? 'unminified' : 'minified';
 
@@ -333,11 +340,15 @@ function display_sidebar_body_open() {
 }
 add_action( 'wp_body_open', 'display_sidebar_body_open' );
 
-/**
- * Custom Comments Template.
- */
 if ( ! function_exists( 'inspiro_comment' ) ) {
-
+	/**
+	 * Custom Comments Template
+	 *
+	 * @param string  $comment Comment text.
+	 * @param array   $args Comment args.
+	 * @param boolean $depth Comment depth.
+	 * @return void
+	 */
 	function inspiro_comment( $comment, $args, $depth ) {
 		$GLOBALS['comment'] = $comment;
 		switch ( $comment->comment_type ) :
@@ -353,7 +364,7 @@ if ( ! function_exists( 'inspiro_comment' ) ) {
 						<div class="comment-meta commentmetadata"><a
 								href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 								<?php printf( __( '%1$s @ %2$s', 'inspiro' ), get_comment_date(), get_comment_time() ); ?></a>
-							<?php 
+							<?php
 							comment_reply_link(
 								array_merge(
 									$args,
@@ -362,9 +373,9 @@ if ( ! function_exists( 'inspiro_comment' ) ) {
 										'max_depth'  => $args['max_depth'],
 										'reply_text' => __( 'Reply', 'inspiro' ),
 										'before'     => '&nbsp;·&nbsp;&nbsp;',
-									) 
-								) 
-							); 
+									)
+								)
+							);
 							?>
 							<?php edit_comment_link( __( 'Edit', 'inspiro' ), '&nbsp;·&nbsp;&nbsp;' ); ?>
 
@@ -373,7 +384,7 @@ if ( ! function_exists( 'inspiro_comment' ) ) {
 
 					</div>
 					<!-- .comment-author .vcard -->
-					<?php if ( $comment->comment_approved == '0' ) : ?>
+					<?php if ( '0' === $comment->comment_approved ) : ?>
 						<em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'inspiro' ); ?></em>
 						<br/>
 					<?php endif; ?>
@@ -398,7 +409,6 @@ if ( ! function_exists( 'inspiro_comment' ) ) {
 /**
  * WooCommerce compatibility.
  */
-
 if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 	add_theme_support( 'woocommerce' );
 	add_theme_support( 'wc-product-gallery-zoom' );

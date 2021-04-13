@@ -12,13 +12,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-/**
- * Inspiro_Enqueue_Scripts initial setup
- * 
- * @since 1.0.0
- */
 if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
-	
+
+	/**
+	 * Inspiro_Enqueue_Scripts initial setup
+	 *
+	 * @since 1.0.0
+	 */
 	class Inspiro_Enqueue_Scripts {
 
 		/**
@@ -37,16 +37,16 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 		/**
 		 * Enqueue scripts and styles for all admin pages.
 		 */
-		function admin_scripts() {
+		public function admin_scripts() {
 			wp_enqueue_style( 'inspiro-admin', inspiro_get_assets_uri( 'admin', 'css' ), array(), INSPIRO_THEME_VERSION );
 		}
 
 		/**
 		 * Enqueues scripts and styles.
 		 */
-		function enqueue_scripts() {
+		public function enqueue_scripts() {
 			// Add custom fonts, used in the main stylesheet.
-			wp_enqueue_style( 'inspiro-fonts', inspiro_fonts_url(), array(), null );
+			wp_enqueue_style( 'inspiro-fonts', inspiro_fonts_url(), array(), INSPIRO_THEME_VERSION );
 
 			// Theme stylesheet.
 			wp_enqueue_style( 'inspiro-style', inspiro_get_assets_uri( 'style', 'css' ), array(), INSPIRO_THEME_VERSION );
@@ -73,7 +73,7 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 		 *
 		 * @since 1.0.0
 		 */
-		function block_editor_styles() {
+		public function block_editor_styles() {
 			// Block styles.
 			wp_enqueue_style( 'inspiro-block-editor-style', inspiro_get_assets_uri( 'editor-blocks', 'css' ), array(), INSPIRO_THEME_VERSION );
 
@@ -81,7 +81,7 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 			wp_style_add_data( 'inspiro-block-editor-style', 'rtl', 'replace' );
 
 			// Add custom fonts.
-			wp_enqueue_style( 'inspiro-fonts', inspiro_fonts_url(), array(), null );
+			wp_enqueue_style( 'inspiro-fonts', inspiro_fonts_url(), array(), INSPIRO_THEME_VERSION );
 		}
 
 		/**
@@ -91,14 +91,14 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 		 *
 		 * @since 1.0.0
 		 */
-		function javascript_detection() {
+		public function javascript_detection() {
 			echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 		}
 
 		/**
 		 * Add a pingback url auto-discovery header for singularly identifiable articles.
 		 */
-		function pingback_header() {
+		public function pingback_header() {
 			if ( is_singular() && pings_open() ) {
 				printf( '<link rel="pingback" href="%s">' . "\n", esc_url( get_bloginfo( 'pingback_url' ) ) );
 			}
@@ -107,7 +107,7 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 		/**
 		 * Display custom color CSS.
 		 */
-		function colors_css_wrap() {
+		public function colors_css_wrap() {
 			if ( 'custom' !== get_theme_mod( 'colorscheme', 'light' ) && ! is_customize_preview() ) {
 				return;
 			}

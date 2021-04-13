@@ -7,6 +7,7 @@
  * @since Inspiro 1.0.0
  * @version 1.0.0
  */
+
 ?>
 <div id="site-navigation" class="navbar">
 	<div class="header-inner inner-wrap">
@@ -24,7 +25,7 @@
 								'menu_class'     => 'nav navbar-nav dropdown sf-menu',
 								'theme_location' => 'primary',
 								'container'      => '',
-							) 
+							)
 						);
 					?>
 				</nav>

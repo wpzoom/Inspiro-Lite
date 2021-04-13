@@ -16,6 +16,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class Inspiro_Notice_Review extends Inspiro_Notices {
 
+	/**
+	 * The constructor.
+	 */
 	public function __construct() {
 		add_action( 'wp_loaded', array( $this, 'review_notice' ), 20 );
 		add_action( 'wp_loaded', array( $this, 'hide_notices' ), 15 );
@@ -23,6 +26,12 @@ class Inspiro_Notice_Review extends Inspiro_Notices {
 		$this->current_user_id = get_current_user_id();
 	}
 
+	/**
+	 * Update option 'inspiro_theme_installed_time' if is not exists
+	 * Add action if notice wasn't dismissed
+	 *
+	 * @return void
+	 */
 	public function review_notice() {
 		if ( ! get_option( 'inspiro_theme_installed_time' ) ) {
 			update_option( 'inspiro_theme_installed_time', time() );
@@ -36,7 +45,9 @@ class Inspiro_Notice_Review extends Inspiro_Notices {
 	}
 
 	/**
-	 * Show HTML markup if conditions meet.
+	 * Show HTML markup if conditions meet
+	 *
+	 * @return void
 	 */
 	public function review_notice_markup() {
 		$dismiss_url = wp_nonce_url(
@@ -70,9 +81,10 @@ class Inspiro_Notice_Review extends Inspiro_Notices {
 								'inspiro'
 							),
 							'<strong>' . esc_html( $current_user->display_name ) . '</strong>',
+							// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 							'<a href="' . esc_url( admin_url( 'themes.php?page=inspiro' ) ) . '"><strong>' . esc_html( $theme_data->Name ) . ' Theme</strong></a>',
 							'<br>',
-							esc_html( $theme_data->Name )
+							esc_html( $theme_data->Name ) // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 						);
 						?>
 					</p>
