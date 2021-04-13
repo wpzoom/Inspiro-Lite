@@ -457,7 +457,7 @@ function inspiro_customize_register( $wp_customize ) {
 	 *
 	 * @since 1.2.2
 	 */
-	require INSPIRO_THEME_DIR . '/inc/classes/class-inspiro-customize-section-pro.php';
+	require INSPIRO_THEME_DIR . '/inc/classes/class-inspiro-customize-section-pro.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 	$wp_customize->register_section_type( 'Inspiro_Customize_Section_Pro' );
 

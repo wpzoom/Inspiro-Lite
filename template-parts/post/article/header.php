@@ -38,7 +38,7 @@ if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) && has_post_th
 	if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) ) {
 		echo '<div class="inner-wrap">';
 	}
-	
+
 	if ( is_single() ) {
 		the_title( '<h1 class="entry-title">', '</h1>' );
 	} elseif ( is_front_page() && is_home() ) {
@@ -46,13 +46,13 @@ if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) && has_post_th
 	} else {
 		the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 	}
-	
+
 	if ( 'post' === get_post_type() ) {
 		echo '<div class="entry-meta">';
 		if ( is_single() ) {
 			inspiro_single_entry_meta();
 		} else {
-			echo inspiro_entry_meta();
+			echo wp_kses_post( inspiro_entry_meta() );
 		};
 		echo '</div><!-- .entry-meta -->';
 	}

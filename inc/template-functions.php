@@ -135,7 +135,7 @@ function inspiro_get_footer_class( $class = '' ) {
 	$has_footer_widgets = false;
 
 	if ( $widgets_columns > 0 ) {
-		for ( $i = 0; $i <= intval( $widgets_columns ); $i++ ) {
+		for ( $i = 0; $i <= intval( $widgets_columns ); $i++ ) { // phpcs:ignore Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed
 			if ( $has_footer_widgets ) {
 				$classes[] = 'has-footer-widgets';
 				break;

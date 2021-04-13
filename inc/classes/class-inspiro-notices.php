@@ -123,14 +123,14 @@ class Inspiro_Notices {
 	public function hide_notices() {
 		if ( isset( $_GET['inspiro-hide-notice'] ) && isset( $_GET['_inspiro_notice_nonce'] ) ) {
 			if ( ! check_admin_referer( 'inspiro_hide_notices_nonce', '_inspiro_notice_nonce' ) ) {
-				wp_die( __( 'Action failed. Please refresh the page and retry.', 'inspiro' ) );
+				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'inspiro' ) );
 			}
 
 			if ( ! current_user_can( 'manage_options' ) ) {
-				wp_die( __( 'Cheatin&#8217; huh?', 'inspiro' ) );
+				wp_die( esc_html__( 'Cheatin&#8217; huh?', 'inspiro' ) );
 			}
 
-			if ( wp_unslash( $_GET['inspiro-hide-notice'] ) ) {
+			if ( wp_unslash( $_GET['inspiro-hide-notice'] ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 				$hide_notice_id = sanitize_text_field( wp_unslash( $_GET['inspiro-hide-notice'] ) );
 
 				$theme_admin_notices = $this->get_notices();

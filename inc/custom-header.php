@@ -163,7 +163,8 @@ function inspiro_maybe_enqueue_vimeo_handler() {
 			'wp-custom-header-vimeo',
 			inspiro_get_assets_uri( 'custom-header-vimeo', 'js' ),
 			array( 'wp-custom-header' ),
-			INSPIRO_THEME_VERSION
+			INSPIRO_THEME_VERSION,
+			true
 		);
 	}
 }

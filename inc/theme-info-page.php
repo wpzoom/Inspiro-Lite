@@ -38,11 +38,8 @@ function inspiro_display_theme_page() {
 
 		<div class="wpz-row theme-intro wpz-clearfix">
 
-
 			<div class="wpz-col-1-4">
-				<img class="theme-screenshot"
-					 src="<?php echo esc_url( get_template_directory_uri() . '/screenshot.png' ); ?>"
-					 alt="<?php esc_attr_e( 'Theme Screenshot', 'inspiro' ); ?>"/>
+				<img class="theme-screenshot" src="<?php echo esc_url( get_template_directory_uri() . '/screenshot.png' ); ?>" alt="<?php esc_attr_e( 'Theme Screenshot', 'inspiro' ); ?>"/>
 			</div>
 			<div class="wpz-col-3-4 theme-description">
 

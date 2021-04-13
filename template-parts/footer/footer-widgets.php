@@ -22,10 +22,10 @@ if ( is_active_sidebar( 'footer_1' ) || is_active_sidebar( 'footer_2' ) || is_ac
 	<aside class="footer-widgets widgets widget-columns-<?php echo intval( $inspiro_widgets_columns ); ?>" role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'inspiro' ); ?>">
 
 		<?php
-		for ( $i = 0; $i <= intval( $inspiro_widgets_columns ); $i++ ) {
+		for ( $i = 0; $i <= intval( $inspiro_widgets_columns ); $i++ ) { // phpcs:ignore Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed
 			if ( is_active_sidebar( "footer_$i" ) ) {
 				?>
-					<div class="widget-column footer-widget-<?php echo $i; ?>">
+					<div class="widget-column footer-widget-<?php echo esc_attr( $i ); ?>">
 					<?php dynamic_sidebar( "footer_$i" ); ?>
 					</div>
 				<?php

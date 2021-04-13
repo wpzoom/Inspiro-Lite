@@ -20,7 +20,7 @@
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'inspiro' ) ); ?>" target="_blank">
 				<?php
 				/* translators: %s: WordPress trademark */
-				printf( __( 'Powered by %s', 'inspiro' ), 'WordPress' );
+				printf( esc_html__( 'Powered by %s', 'inspiro' ), 'WordPress' );
 				?>
 			</a>
 		</span>

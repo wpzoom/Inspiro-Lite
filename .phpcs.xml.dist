@@ -52,4 +52,11 @@
 			<property name="blank_line_check" value="true"/>
 		</properties>
 	</rule>
+	<rule ref="WordPress.Security.EscapeOutput">
+		<properties>
+			<property name="customAutoEscapedFunctions" type="array">
+				<element value="inspiro_get_theme_svg"/>
+			</property>
+		</properties>
+	</rule>
 </ruleset>

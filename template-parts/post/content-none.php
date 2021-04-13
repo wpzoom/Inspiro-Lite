@@ -26,7 +26,7 @@
 			<p>
 			<?php
 			/* translators: %s: Post editor URL. */
-			printf( __( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'inspiro' ), esc_url( admin_url( 'post-new.php' ) ) );
+			printf( __( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'inspiro' ), esc_url( admin_url( 'post-new.php' ) ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			?>
 			</p>
 

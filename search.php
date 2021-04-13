@@ -19,7 +19,7 @@ get_header(); ?>
 			<h1 class="page-title">
 			<?php
 			/* translators: Search query. */
-			printf( __( 'Search Results for: %s', 'inspiro' ), '<span>' . get_search_query() . '</span>' );
+			printf( esc_html__( 'Search Results for: %s', 'inspiro' ), '<span>' . get_search_query() . '</span>' );
 			?>
 			</h1>
 		<?php else : ?>
@@ -60,7 +60,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	
+
 </div><!-- .inner-wrap -->
 
 <?php

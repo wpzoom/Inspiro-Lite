@@ -39,7 +39,7 @@ if ( ! function_exists( 'inspiro_single_entry_meta' ) ) :
 		);
 
 		// Finally, let's write all of this to the page.
-		echo $byline . $catlinks . $datetime;
+		echo wp_kses_post( $byline . $catlinks . $datetime );
 	}
 endif;
 
@@ -71,7 +71,7 @@ if ( ! function_exists( 'inspiro_entry_meta' ) ) :
 		);
 
 		// Finally, let's write all of this to the page.
-		echo $byline . $datetime . $catlinks;
+		echo wp_kses_post( $byline . $datetime . $catlinks );
 		inspiro_comments_link();
 		inspiro_edit_link();
 	}
@@ -166,7 +166,7 @@ if ( ! function_exists( 'inspiro_entry_footer' ) ) :
 				esc_html__( 'Post author', 'inspiro' ),
 				get_avatar( get_the_author_meta( 'ID' ), 65 ),
 				esc_html__( 'Written by', 'inspiro' ),
-				get_the_author_posts_link()
+				wp_kses_post( get_the_author_posts_link() )
 			);
 		}
 

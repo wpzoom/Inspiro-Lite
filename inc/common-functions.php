@@ -17,7 +17,7 @@ function inspiro_fonts_url() {
 	 * translators: If there are characters in your language that are not supported
 	 * by Libre Franklin, translate this to 'off'. Do not translate into your own language.
 	 */
-	$libre_franklin = _x( 'on', 'Libre Franklin font: on or off', 'inspiro' );
+	$libre_franklin = esc_html_x( 'on', 'Libre Franklin font: on or off', 'inspiro' );
 
 	if ( 'off' !== $libre_franklin ) {
 		$font_families = array();
@@ -365,7 +365,7 @@ if ( ! function_exists( 'inspiro_comment' ) ) {
 								href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 								<?php
 								/* translators: %1$s: Comment date %2$s: Comment time */
-								printf( __( '%1$s @ %2$s', 'inspiro' ), get_comment_date(), get_comment_time() ); 
+								printf( __( '%1$s @ %2$s', 'inspiro' ), get_comment_date(), get_comment_time() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 								?>
 								</a>
 							<?php
