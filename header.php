@@ -38,9 +38,9 @@
 	<?php
 	// Display custom header only on first page.
 	if ( isset( $paged ) && $paged < 2 ) {
-		if ( is_front_page() && is_home() && has_header_image() ) { // Default homepage
+		if ( is_front_page() && is_home() && has_header_image() ) { // Default homepage.
 			get_template_part( 'template-parts/header/header', 'image' );
-		} elseif ( is_front_page() && has_header_image() ) { // static homepage
+		} elseif ( is_front_page() && has_header_image() ) { // static homepage.
 			get_template_part( 'template-parts/header/header', 'image' );
 		} elseif ( is_page() && inspiro_is_frontpage() && has_header_image() ) {
 			get_template_part( 'template-parts/header/header', 'image' );

@@ -36,7 +36,7 @@
 			if ( ! empty( $audio ) ) {
 				foreach ( $audio as $audio_html ) {
 					echo '<div class="entry-audio">';
-						echo $audio_html;
+						echo wp_kses_post( $audio_html );
 					echo '</div><!-- .entry-audio -->';
 				}
 			};

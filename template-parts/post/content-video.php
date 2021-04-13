@@ -36,7 +36,7 @@
 			if ( ! empty( $video ) ) {
 				foreach ( $video as $video_html ) {
 					echo '<div class="entry-video">';
-						echo $video_html;
+						echo wp_kses_post( $video_html );
 					echo '</div>';
 				}
 			};

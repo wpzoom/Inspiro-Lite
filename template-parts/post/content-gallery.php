@@ -24,7 +24,7 @@
 			// If not a single post, highlight the gallery.
 			if ( get_post_gallery() ) {
 				echo '<div class="entry-gallery">';
-					echo get_post_gallery();
+					echo wp_kses_post( get_post_gallery() );
 				echo '</div>';
 			};
 		};

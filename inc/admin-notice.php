@@ -22,7 +22,7 @@ if ( ! function_exists( 'inspiro_admin_notice' ) ) {
 
 		$welcome_notice        = get_option( 'inspiro_notice_welcome' );
 		$current_user_can      = current_user_can( 'edit_theme_options' );
-		$should_display_notice = ( $current_user_can && 'index.php' === $pagenow && ! $welcome_notice ) || ( $current_user_can && 'themes.php' === $pagenow && isset( $_GET['activated'] ) && ! $welcome_notice );
+		$should_display_notice = ( $current_user_can && 'index.php' === $pagenow && ! $welcome_notice ) || ( $current_user_can && 'themes.php' === $pagenow && isset( $_GET['activated'] ) && ! $welcome_notice ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
 		if ( $should_display_notice ) {
 			wp_enqueue_style(
@@ -46,13 +46,15 @@ if ( ! function_exists( 'inspiro_hide_notice' ) ) {
 	 */
 	function inspiro_hide_notice() {
 		if ( isset( $_GET['inspiro-hide-notice'] ) && isset( $_GET['_inspiro_notice_nonce'] ) ) {
-			if ( ! wp_verify_nonce( $_GET['_inspiro_notice_nonce'], 'inspiro_hide_notices_nonce' ) ) {
+			if ( ! check_admin_referer( 'inspiro_hide_notices_nonce', '_inspiro_notice_nonce' ) ) {
 				wp_die( esc_html__( 'Action failed. Please refresh the page and retry.', 'inspiro' ) );
 			}
+
 			if ( ! current_user_can( 'edit_theme_options' ) ) {
 				wp_die( esc_html__( 'You do not have the necessary permission to perform this action.', 'inspiro' ) );
 			}
-			$hide_notice = sanitize_text_field( $_GET['inspiro-hide-notice'] );
+
+			$hide_notice = sanitize_text_field( wp_unslash( $_GET['inspiro-hide-notice'] ) );
 			update_option( 'inspiro_notice_' . $hide_notice, 1 );
 		}
 	}

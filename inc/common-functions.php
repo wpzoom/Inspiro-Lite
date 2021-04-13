@@ -350,7 +350,7 @@ if ( ! function_exists( 'inspiro_comment' ) ) {
 	 * @return void
 	 */
 	function inspiro_comment( $comment, $args, $depth ) {
-		$GLOBALS['comment'] = $comment;
+		$GLOBALS['comment'] = $comment; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 		switch ( $comment->comment_type ) :
 			case '':
 			case 'comment':
@@ -363,7 +363,11 @@ if ( ! function_exists( 'inspiro_comment' ) ) {
 
 						<div class="comment-meta commentmetadata"><a
 								href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
-								<?php printf( __( '%1$s @ %2$s', 'inspiro' ), get_comment_date(), get_comment_time() ); ?></a>
+								<?php
+								/* translators: %1$s: Comment date %2$s: Comment time */
+								printf( __( '%1$s @ %2$s', 'inspiro' ), get_comment_date(), get_comment_time() ); 
+								?>
+								</a>
 							<?php
 							comment_reply_link(
 								array_merge(

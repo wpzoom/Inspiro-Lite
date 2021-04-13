@@ -32,7 +32,7 @@ if ( post_password_required() ) {
 	<ol class="commentlist">
 		<?php
 			/*
-			 Loop through and list the comments. Tell wp_list_comments()
+			 * Loop through and list the comments. Tell wp_list_comments()
 			 * to use inspiro_comment() to format the comments.
 			 * If you want to overload this in a child theme then you can
 			 * define inspiro_comment() and that will be used instead.
@@ -44,34 +44,34 @@ if ( post_password_required() ) {
 
 	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<div class="navigation">
-			<?php 
+			<?php
 			paginate_comments_links(
 				array(
 					'prev_text' => '' . __( '<span class="meta-nav">&larr;</span> Older Comments', 'inspiro' ) . '',
 					'next_text' => '' . __(
 						'Newer Comments <span class="meta-nav">&rarr;</span>',
-						'inspiro' 
+						'inspiro'
 					) . '',
-				) 
-			); 
+				)
+			);
 			?>
 		</div><!-- .navigation -->
-	<?php endif; // check for comment navigation ?>
+	<?php endif; // check for comment navigation. ?>
 
 
-	<?php 
-	else : // or, if we don't have comments:
+	<?php
+	else : // or, if we don't have comments.
 
 		/*
-		 If there are no comments and comments are closed,
+		 * If there are no comments and comments are closed,
 		 * let's leave a little note, shall we?
 		 */
 		if ( ! comments_open() ) :
 			?>
 		<p class="nocomments"><?php esc_html_e( 'Comments are closed.', 'inspiro' ); ?></p>
-	<?php endif; // end ! comments_open() ?>
+	<?php endif; ?>
 
-<?php endif; // end have_comments() ?>
+<?php endif; // end have_comments(). ?>
 
 <?php
 
@@ -101,12 +101,13 @@ $custom_comment_form = array(
 					'</p></div><div class="clear"></div>',
 			'cookies' => '<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . ' />' .
 						'<label for="wp-comment-cookies-consent">' . __( 'Save my name, email, and website in this browser for the next time I comment.', 'inspiro' ) . '</label></p>',
-		) 
+		)
 	),
 	'comment_field'      => '<p class="comment-form-comment">' .
 			'<label for="comment">' . __( 'Message:', 'inspiro' ) . '</label> ' .
 			'<textarea id="comment" name="comment" cols="35" rows="5" aria-required="true" class="required"></textarea>' .
 			'</p><div class="clear"></div>',
+	/* translators: %1$s: admin url to profile %2$s: User identity %3$s: logout URL */
 	'logged_in_as'       => '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s">Log out?</a>', 'inspiro' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink() ) ) ) . '</p>',
 	'title_reply'        => __( 'Leave a Comment', 'inspiro' ),
 	'cancel_reply_link'  => __( 'Cancel', 'inspiro' ),

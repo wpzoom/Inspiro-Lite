@@ -1,7 +1,12 @@
 <?php
-/*
-Template Name: Homepage (Page Builder)
-*/
+/**
+ * Template Name: Homepage (Page Builder)
+ *
+ * @package Inspiro
+ * @subpackage Inspiro_Lite
+ * @since Inspiro 1.0.0
+ * @version 1.0.0
+ */
 
 get_header(); ?>
 
@@ -9,9 +14,9 @@ get_header(); ?>
 
 	<div class="builder-wrap">
 
-		<?php 
+		<?php
 		while ( have_posts() ) :
-			the_post(); 
+			the_post();
 			?>
 
 			<?php the_content(); ?>

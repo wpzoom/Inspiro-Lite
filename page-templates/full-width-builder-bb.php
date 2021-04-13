@@ -1,15 +1,20 @@
 <?php
 /**
- Template Name: Full-width (Page Builder)
+ * Template Name: Full-width (Page Builder)
+ *
+ * @package Inspiro
+ * @subpackage Inspiro_Lite
+ * @since Inspiro 1.0.0
+ * @version 1.0.0
  */
 
 get_header(); ?>
 
 <main id="main" class="site-main" role="main">
 
-	<?php 
+	<?php
 	while ( have_posts() ) :
-		the_post(); 
+		the_post();
 		?>
 
 		<div class="builder-wrap full-width">

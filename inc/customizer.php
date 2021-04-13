@@ -452,19 +452,6 @@ function inspiro_customize_register( $wp_customize ) {
 	);
 
 	/**
-	 * Single Post Options.
-	 */
-	// $wp_customize->add_panel(
-	// 'single_post_options_panel',
-	// array(
-	// 'priority'          => 52,
-	// 'capability'        => 'edit_theme_options',
-	// 'title'             => esc_html__( 'Single Post Options', 'inspiro' ),
-	// 'active_callback'   => 'inspiro_is_view_is_single',
-	// )
-	// );
-
-	/**
 	 * Add custom section to Customizer
 	 * This section will display upsell message to Customizer at the top of all section panels.
 	 *

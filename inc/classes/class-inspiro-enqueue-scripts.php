@@ -112,16 +112,11 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 				return;
 			}
 
-			require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
+			require_once get_parent_theme_file_path( '/inc/color-patterns.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 			$hex = get_theme_mod( 'colorscheme_hex', '#0bb4aa' );
-
-			$customize_preview_data_hex = '';
-			if ( is_customize_preview() ) {
-				$customize_preview_data_hex = 'data-hex="' . $hex . '"';
-			}
 			?>
-			<style type="text/css" id="custom-theme-colors" <?php echo $customize_preview_data_hex; ?>>
-				<?php echo inspiro_custom_colors_css(); ?>
+			<style type="text/css" id="custom-theme-colors" data-hex="<?php echo esc_attr( $hex ); ?>">
+				<?php echo inspiro_custom_colors_css(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			</style>
 			<?php
 		}
