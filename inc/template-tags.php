@@ -39,7 +39,23 @@ if ( ! function_exists( 'inspiro_single_entry_meta' ) ) :
 		);
 
 		// Finally, let's write all of this to the page.
-		echo wp_kses_post( $byline . $catlinks . $datetime );
+		echo wp_kses(
+			$byline . $catlinks . $datetime,
+			array(
+				'a'    => array(
+					'href'  => array(),
+					'title' => array(),
+					'class' => array(),
+				),
+				'time' => array(
+					'datetime' => array(),
+					'class'    => array(),
+				),
+				'span' => array(
+					'class' => array(),
+				),
+			) 
+		);
 	}
 endif;
 
@@ -71,7 +87,24 @@ if ( ! function_exists( 'inspiro_entry_meta' ) ) :
 		);
 
 		// Finally, let's write all of this to the page.
-		echo wp_kses_post( $byline . $datetime . $catlinks );
+		echo wp_kses(
+			$byline . $catlinks . $datetime,
+			array(
+				'a'    => array(
+					'href'  => array(),
+					'title' => array(),
+					'class' => array(),
+				),
+				'time' => array(
+					'datetime' => array(),
+					'class'    => array(),
+				),
+				'span' => array(
+					'class' => array(),
+				),
+			) 
+		);
+
 		inspiro_comments_link();
 		inspiro_edit_link();
 	}

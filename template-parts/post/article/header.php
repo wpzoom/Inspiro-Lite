@@ -52,7 +52,7 @@ if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) && has_post_th
 		if ( is_single() ) {
 			inspiro_single_entry_meta();
 		} else {
-			echo wp_kses_post( inspiro_entry_meta() );
+			echo inspiro_entry_meta(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		};
 		echo '</div><!-- .entry-meta -->';
 	}
