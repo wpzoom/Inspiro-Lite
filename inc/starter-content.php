@@ -20,35 +20,35 @@
  */
 function inspiro_get_starter_content() {
 
-    // Define and register starter content to showcase the theme on new sites.
-    $starter_content = array(
-        'widgets'     => array(
-            // Place three core-defined widgets in the sidebar area.
-            'sidebar' => array(
-                'search',
-                'text_about',
-                'text_business_info',
-            ),
+	// Define and register starter content to showcase the theme on new sites.
+	$starter_content = array(
+		'widgets'     => array(
+			// Place three core-defined widgets in the sidebar area.
+			'sidebar'  => array(
+				'search',
+				'text_about',
+				'text_business_info',
+			),
 
-            // Add the core-defined business info widget to the footer 1 area.
-            'footer_1' => array(
-                'text_business_info',
-            ),
+			// Add the core-defined business info widget to the footer 1 area.
+			'footer_1' => array(
+				'text_business_info',
+			),
 
-            // Put two core-defined widgets in the footer 2 area.
-            'footer_2' => array(
-                'text_about',
-                'search',
-            ),
-        ),
+			// Put two core-defined widgets in the footer 2 area.
+			'footer_2' => array(
+				'text_about',
+				'search',
+			),
+		),
 
-        // Specify the core-defined pages to create and add custom thumbnails to some of them.
-        'posts'       => array(
-            'front' => array(
-                'thumbnail'    => '{{image-aerial-land}}',
-                'post_type'    => 'page',
-                'post_title'   => esc_html_x( 'Create your website with blocks', 'Theme starter content', 'inspiro' ),
-                'post_content' => '
+		// Specify the core-defined pages to create and add custom thumbnails to some of them.
+		'posts'       => array(
+			'front' => array(
+				'thumbnail'    => '{{image-aerial-land}}',
+				'post_type'    => 'page',
+				'post_title'   => esc_html_x( 'Create your website with blocks', 'Theme starter content', 'inspiro' ),
+				'post_content' => '
                     <!-- wp:paragraph -->
                     <p>This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual copy might look like if it were real content.</p>
                     <!-- /wp:paragraph -->
@@ -102,48 +102,48 @@ function inspiro_get_starter_content() {
                     <!-- wp:paragraph -->
                     <p>This is dummy copy. It is not meant to be read. Accordingly, it is difficult to figure out when to end it. If this were real copy, it would have ended long ago, because‚ as we all know‚ no one reads body copy, and even fewer read body copy this long. But then, this is dummy copy. It is not meant to be read. Period.</p>
                     <!-- /wp:paragraph -->',
-            ),
-            'about',
-            'contact',
-            'blog',
-        ),
+			),
+			'about',
+			'contact',
+			'blog',
+		),
 
-        // Create the custom image attachments used as post thumbnails for pages.
-        'attachments' => array(
-            'image-aerial-land' => array(
-                'post_title' => _x( 'Aerial Land', 'Theme starter content', 'inspiro' ),
-                'file'       => 'assets/images/StockSnap_PU4RMD67KZ.jpg', // URL relative to the template directory.
-            ),
-        ),
+		// Create the custom image attachments used as post thumbnails for pages.
+		'attachments' => array(
+			'image-aerial-land' => array(
+				'post_title' => _x( 'Aerial Land', 'Theme starter content', 'inspiro' ),
+				'file'       => 'assets/images/StockSnap_PU4RMD67KZ.jpg', // URL relative to the template directory.
+			),
+		),
 
-        // Default to a static front page and assign the front and posts pages.
-        'options'     => array(
-            'show_on_front'  => 'page',
-            'page_on_front'  => '{{home}}',
-            'page_for_posts' => '{{blog}}',
-        ),
+		// Default to a static front page and assign the front and posts pages.
+		'options'     => array(
+			'show_on_front'  => 'page',
+			'page_on_front'  => '{{home}}',
+			'page_for_posts' => '{{blog}}',
+		),
 
-        // Set up nav menus for each of the two areas registered in the theme.
-        'nav_menus'   => array(
-            // Assign a menu to the "primary" location.
-            'primary'   => array(
-                'name'  => __( 'Main Menu', 'inspiro' ),
-                'items' => array(
-                    'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
-                    'page_about',
-                    'page_blog',
-                    'page_contact',
-                ),
-            ),
-        ),
-    );
+		// Set up nav menus for each of the two areas registered in the theme.
+		'nav_menus'   => array(
+			// Assign a menu to the "primary" location.
+			'primary' => array(
+				'name'  => __( 'Main Menu', 'inspiro' ),
+				'items' => array(
+					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
+					'page_about',
+					'page_blog',
+					'page_contact',
+				),
+			),
+		),
+	);
 
-    /**
-     * Filters Inspiro array of starter content.
-     *
-     * @since Inspiro 1.0.0
-     *
-     * @param array $starter_content Array of starter content.
-     */
-    return apply_filters( 'inspiro_starter_content', $starter_content );
+	/**
+	 * Filters Inspiro array of starter content.
+	 *
+	 * @since Inspiro 1.0.0
+	 *
+	 * @param array $starter_content Array of starter content.
+	 */
+	return apply_filters( 'inspiro_starter_content', $starter_content );
 }

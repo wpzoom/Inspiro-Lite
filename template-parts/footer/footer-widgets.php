@@ -8,28 +8,29 @@
  * @version 1.0.0
  */
 
-$widgets_columns = get_theme_mod( 'footer-widget-areas', 3 );
+$inspiro_widgets_columns = get_theme_mod( 'footer-widget-areas', 3 );
 
-if ( $widgets_columns <= 0 ) {
+if ( $inspiro_widgets_columns <= 0 ) {
 	return;
 }
 ?>
 
 <?php
-if ( is_active_sidebar( 'footer_1' ) || is_active_sidebar( 'footer_2' ) || is_active_sidebar( 'footer_3' ) || is_active_sidebar( 'footer_4' ) ) : ?>
+if ( is_active_sidebar( 'footer_1' ) || is_active_sidebar( 'footer_2' ) || is_active_sidebar( 'footer_3' ) || is_active_sidebar( 'footer_4' ) ) :
+	?>
 
-	<aside class="footer-widgets widgets widget-columns-<?php echo intval( $widgets_columns ); ?>" role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'inspiro' ); ?>">
+	<aside class="footer-widgets widgets widget-columns-<?php echo intval( $inspiro_widgets_columns ); ?>" role="complementary" aria-label="<?php esc_attr_e( 'Footer', 'inspiro' ); ?>">
 
 		<?php
-			for ($i=0; $i <= intval( $widgets_columns ); $i++) { 
-				if ( is_active_sidebar( "footer_$i" ) ) {
+		for ( $i = 0; $i <= intval( $inspiro_widgets_columns ); $i++ ) { // phpcs:ignore Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed
+			if ( is_active_sidebar( "footer_$i" ) ) {
 				?>
-					<div class="widget-column footer-widget-<?php echo $i ?>">
-						<?php dynamic_sidebar( "footer_$i" ); ?>
+					<div class="widget-column footer-widget-<?php echo esc_attr( $i ); ?>">
+					<?php dynamic_sidebar( "footer_$i" ); ?>
 					</div>
 				<?php
-				}
 			}
+		}
 		?>
 
 	</aside><!-- .widget-area -->

@@ -26,7 +26,7 @@
 			<p>
 			<?php
 			/* translators: %s: Post editor URL. */
-			printf( __( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'inspiro' ), esc_url( admin_url( 'post-new.php' ) ) );
+			printf( __( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'inspiro' ), esc_url( admin_url( 'post-new.php' ) ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			?>
 			</p>
 
@@ -35,7 +35,6 @@
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'inspiro' ); ?></p>
 			<?php
 				get_search_form();
-
 		endif;
 		?>
 	</div><!-- .page-content -->

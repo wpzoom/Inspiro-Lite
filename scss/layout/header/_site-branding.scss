@@ -201,7 +201,7 @@ body {
             transform: translate(-50%, -50%);
             transition: top .3s linear, opacity .3s ease-in;
         }
-        &.inspiro-page-loaded {
+        &.inspiro-page-ready {
             .site-branding {
                 opacity: 1;
                 top: 50%;

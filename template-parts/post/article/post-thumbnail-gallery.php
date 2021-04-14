@@ -13,9 +13,9 @@
 ?>
 
 <?php if ( '' !== get_the_post_thumbnail() && ! is_single() && ! get_post_gallery() ) : ?>
-    <div class="post-thumbnail">
-        <a href="<?php the_permalink(); ?>">
-            <?php the_post_thumbnail( 'inspiro-loop' ); ?>
-        </a>
-    </div><!-- .post-thumbnail -->
+	<div class="post-thumbnail">
+		<a href="<?php the_permalink(); ?>">
+			<?php the_post_thumbnail( 'inspiro-loop' ); ?>
+		</a>
+	</div><!-- .post-thumbnail -->
 <?php endif; ?>

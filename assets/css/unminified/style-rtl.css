@@ -2180,9 +2180,9 @@ body:not(.title-tagline-hidden) .site-branding-text {
     transition: top .3s linear, opacity .3s ease-in;
 }
 
-.has-header-image.inspiro-front-page.inspiro-page-loaded .site-branding, .has-header-image.home.blog.inspiro-page-loaded .site-branding,
-.has-header-video.inspiro-front-page.inspiro-page-loaded .site-branding,
-.has-header-video.home.blog.inspiro-page-loaded .site-branding {
+.has-header-image.inspiro-front-page.inspiro-page-ready .site-branding, .has-header-image.home.blog.inspiro-page-ready .site-branding,
+.has-header-video.inspiro-front-page.inspiro-page-ready .site-branding,
+.has-header-video.home.blog.inspiro-page-ready .site-branding {
     opacity: 1;
     top: 50%;
 }

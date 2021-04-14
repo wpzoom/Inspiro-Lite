@@ -39,7 +39,7 @@ if ( ! function_exists( 'inspiro_single_entry_meta' ) ) :
 		);
 
 		// Finally, let's write all of this to the page.
-		echo $byline . $catlinks . $datetime;
+		echo wp_kses_post( $byline . $catlinks . $datetime );
 	}
 endif;
 
@@ -67,11 +67,11 @@ if ( ! function_exists( 'inspiro_entry_meta' ) ) :
 
 		$datetime = sprintf(
 			'<span class="entry-date">%s</span>',
-			inspiro_time_link(false)
+			inspiro_time_link( false )
 		);
 
 		// Finally, let's write all of this to the page.
-		echo $byline . $datetime . $catlinks;
+		echo wp_kses_post( $byline . $datetime . $catlinks );
 		inspiro_comments_link();
 		inspiro_edit_link();
 	}
@@ -98,11 +98,11 @@ if ( ! function_exists( 'inspiro_comments_link' ) ) {
 	function inspiro_comments_link() {
 		echo '<span class="entry-comments">';
 		comments_popup_link(
-			__('0 comments', 'inspiro'),
-			__('1 comment', 'inspiro'),
-			__('% comments', 'inspiro'),
+			__( '0 comments', 'inspiro' ),
+			__( '1 comment', 'inspiro' ),
+			__( '% comments', 'inspiro' ),
 			'',
-			__('Comments are Disabled', 'inspiro')
+			__( 'Comments are Disabled', 'inspiro' )
 		);
 		echo '</span>';
 	}
@@ -110,7 +110,10 @@ if ( ! function_exists( 'inspiro_comments_link' ) ) {
 
 if ( ! function_exists( 'inspiro_time_link' ) ) :
 	/**
-	 * Gets a nicely formatted string for the published date.
+	 * Gets a nicely formatted string for the published date
+	 *
+	 * @param boolean $link Display time as a link.
+	 * @return string
 	 */
 	function inspiro_time_link( $link = true ) {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
@@ -149,31 +152,27 @@ if ( ! function_exists( 'inspiro_entry_footer' ) ) :
 	 * Prints HTML with meta information for the tags, share buttons and author.
 	 */
 	function inspiro_entry_footer() {
-
 		echo '<footer class="entry-footer">';
 
 		if ( 'post' === get_post_type() ) {
-
 			the_tags(
-			    '<div class="tags-links"><h4 class="section-title">' . __( 'Tags', 'inspiro' ). '</h4>',
-			    '<span class="separator">,</span>',
-			    '</div>'
+				'<div class="tags-links"><h4 class="section-title">' . __( 'Tags', 'inspiro' ) . '</h4>',
+				'<span class="separator">,</span>',
+				'</div>'
 			);
 
 			echo sprintf(
 				'<div class="post-author"><h4 class="section-title">%s</h4>%s<span>%s</span>%s</div>',
 				esc_html__( 'Post author', 'inspiro' ),
-				get_avatar( get_the_author_meta( 'ID' ) , 65 ),
+				get_avatar( get_the_author_meta( 'ID' ), 65 ),
 				esc_html__( 'Written by', 'inspiro' ),
-				get_the_author_posts_link()
+				wp_kses_post( get_the_author_posts_link() )
 			);
-			
 		}
 
 		inspiro_edit_link();
 
 		echo '</footer> <!-- .entry-footer -->';
-
 	}
 endif;
 

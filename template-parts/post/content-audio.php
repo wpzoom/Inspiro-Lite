@@ -13,17 +13,18 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
+
 	<?php get_template_part( 'template-parts/post/article/header' ); ?>
 
 	<?php
+		// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
 		$content = apply_filters( 'the_content', get_the_content() );
 		$audio   = false;
 
 		// Only get audio from the content if a playlist isn't present.
-		if ( false === strpos( $content, 'wp-playlist-script' ) ) {
-			$audio = get_media_embedded_in_content( $content, array( 'audio' ) );
-		}
+	if ( false === strpos( $content, 'wp-playlist-script' ) ) {
+		$audio = get_media_embedded_in_content( $content, array( 'audio' ) );
+	}
 	?>
 
 	<div class="entry-content">
@@ -35,15 +36,13 @@
 			if ( ! empty( $audio ) ) {
 				foreach ( $audio as $audio_html ) {
 					echo '<div class="entry-audio">';
-						echo $audio_html;
+						echo wp_kses_post( $audio_html );
 					echo '</div><!-- .entry-audio -->';
 				}
 			};
-
 		};
 
 		if ( is_single() || empty( $audio ) ) {
-
 			the_content(
 				sprintf(
 					/* translators: %s: Post title. */
@@ -60,18 +59,17 @@
 					'link_after'  => '</span>',
 				)
 			);
-
 		};
 		?>
 
 	</div><!-- .entry-content -->
 
-	<?php if ( is_single() && 'side-right' === get_theme_mod( 'layout_single_post', 'full' ) && is_active_sidebar( 'blog-sidebar' ) ): ?>
-		
+	<?php if ( is_single() && 'side-right' === get_theme_mod( 'layout_single_post', 'full' ) && is_active_sidebar( 'blog-sidebar' ) ) : ?>
+
 		<aside id="secondary" class="widget-area" role="complementary">
-		    <?php dynamic_sidebar( 'blog-sidebar' ); ?>
+			<?php dynamic_sidebar( 'blog-sidebar' ); ?>
 		</aside>
-		
+
 	<?php endif ?>
 
 	<?php

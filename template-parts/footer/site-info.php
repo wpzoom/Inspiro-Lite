@@ -18,11 +18,14 @@
 	<span class="copyright">
 		<span>
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'inspiro' ) ); ?>" target="_blank">
-				<?php printf( __( 'Powered by %s', 'inspiro' ), 'WordPress' ); ?>
+				<?php
+				/* translators: %s: WordPress trademark */
+				printf( esc_html__( 'Powered by %s', 'inspiro' ), 'WordPress' );
+				?>
 			</a>
 		</span>
 		<span>
-			<?php esc_html_e( 'Inspiro WordPress Theme by', 'inspiro' ); ?> <a href="<?php echo 'https://www.wpzoom.com/' ?>" target="_blank" rel="nofollow">WPZOOM</a>
+			<?php esc_html_e( 'Inspiro WordPress Theme by', 'inspiro' ); ?> <a href="<?php echo 'https://www.wpzoom.com/'; ?>" target="_blank" rel="nofollow">WPZOOM</a>
 		</span>
 	</span>
 </div><!-- .site-info -->

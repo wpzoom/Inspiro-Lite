@@ -19,7 +19,7 @@ get_header(); ?>
 			<h1 class="page-title">
 			<?php
 			/* translators: Search query. */
-			printf( __( 'Search Results for: %s', 'inspiro' ), '<span>' . get_search_query() . '</span>' );
+			printf( esc_html__( 'Search Results for: %s', 'inspiro' ), '<span>' . get_search_query() . '</span>' );
 			?>
 			</h1>
 		<?php else : ?>
@@ -42,28 +42,25 @@ get_header(); ?>
 				 * called content-search.php and that will be used instead.
 				 */
 				get_template_part( 'template-parts/post/content', 'excerpt' );
-
 			endwhile; // End the loop.
 
 			the_posts_pagination(
-			    array(
-			        'prev_next' => false
-			    )
+				array(
+					'prev_next' => false,
+				)
 			);
-
 		else :
 			?>
 
 			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'inspiro' ); ?></p>
 			<?php
 				get_search_form();
-
 		endif;
 		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	
+
 </div><!-- .inner-wrap -->
 
 <?php

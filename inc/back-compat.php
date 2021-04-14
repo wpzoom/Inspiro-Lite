@@ -19,7 +19,7 @@
  */
 function inspiro_switch_theme() {
 	switch_theme( WP_DEFAULT_THEME );
-	unset( $_GET['activated'] );
+	unset( $_GET['activated'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 	add_action( 'admin_notices', 'inspiro_upgrade_notice' );
 }
 add_action( 'after_switch_theme', 'inspiro_switch_theme' );
@@ -37,7 +37,7 @@ add_action( 'after_switch_theme', 'inspiro_switch_theme' );
 function inspiro_upgrade_notice() {
 	/* translators: %s: The current WordPress version. */
 	$message = sprintf( __( 'Inspiro requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'inspiro' ), $GLOBALS['wp_version'] );
-	printf( '<div class="error"><p>%s</p></div>', $message );
+	echo '<div class="error"><p>' . esc_html( $message ) . '</p></div>';
 }
 
 /**
@@ -50,7 +50,7 @@ function inspiro_upgrade_notice() {
 function inspiro_customize() {
 	wp_die(
 		/* translators: %s: The current WordPress version. */
-		sprintf( __( 'Inspiro requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'inspiro' ), $GLOBALS['wp_version'] ),
+		sprintf( __( 'Inspiro requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'inspiro' ), $GLOBALS['wp_version'] ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		'',
 		array(
 			'back_link' => true,
@@ -67,9 +67,9 @@ add_action( 'load-customize.php', 'inspiro_customize' );
  * @global string $wp_version WordPress version.
  */
 function inspiro_preview() {
-	if ( isset( $_GET['preview'] ) ) {
+	if ( isset( $_GET['preview'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		/* translators: %s: The current WordPress version. */
-		wp_die( sprintf( __( 'Inspiro requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'inspiro' ), $GLOBALS['wp_version'] ) );
+		wp_die( sprintf( __( 'Inspiro requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'inspiro' ), $GLOBALS['wp_version'] ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
 add_action( 'template_redirect', 'inspiro_preview' );
