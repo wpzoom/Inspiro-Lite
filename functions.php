@@ -19,12 +19,9 @@ define( 'INSPIRO_THEME_VERSION', '1.2.6' );
 define( 'INSPIRO_THEME_DIR', trailingslashit( get_template_directory() ) );
 define( 'INSPIRO_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
 
-/**
- * Inspiro only works in WordPress 4.7 or later.
- */
-if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
+// This theme requires WordPress 5.3 or later.
+if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 	require INSPIRO_THEME_DIR . '/inc/back-compat.php';
-	return;
 }
 
 /**
