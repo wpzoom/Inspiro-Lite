@@ -216,34 +216,6 @@ function inspiro_excerpt_more( $link ) {
 add_filter( 'excerpt_more', 'inspiro_excerpt_more' );
 
 /**
- * Add custom image sizes attribute to enhance responsive image functionality
- * for content images.
- *
- * @since Inspiro 1.0.0
- *
- * @param string $sizes A source size value for use in a 'sizes' attribute.
- * @param array  $size  Image size. Accepts an array of width and height
- *                      values in pixels (in that order).
- * @return string A source size value for use in a content image 'sizes' attribute.
- */
-function inspiro_content_image_sizes_attr( $sizes, $size ) {
-	$width = $size[0];
-
-	if ( 740 <= $width ) {
-		$sizes = '(max-width: 706px) 89vw, (max-width: 767px) 82vw, 740px';
-	}
-
-	if ( is_active_sidebar( 'blog-sidebar' ) || is_archive() || is_search() || is_home() || is_page() ) {
-		if ( ! ( is_page() && 'one-column' === get_theme_mod( 'page_options' ) ) && 767 <= $width ) {
-			$sizes = '(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px';
-		}
-	}
-
-	return $sizes;
-}
-add_filter( 'wp_calculate_image_sizes', 'inspiro_content_image_sizes_attr', 10, 2 );
-
-/**
  * Filters the `sizes` value in the header image markup.
  *
  * @since Inspiro 1.0.0
