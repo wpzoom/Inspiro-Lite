@@ -359,6 +359,19 @@ module.exports = function (grunt) {
 				],
 			},
 
+			changelog: {
+				src: [
+					"readme.txt",
+				],
+				overwrite: true,
+				replacements: [
+					{
+						from: "x.x.x",
+						to: "<%= pkg.version %>",
+					},
+				],
+			},
+
 			theme_based_replace: {
 				src: [
 					"**",
@@ -487,6 +500,7 @@ module.exports = function (grunt) {
 				"replace:theme_main",
 				"replace:theme_const",
 				"replace:theme_function_comment",
+				"replace:changelog",
 				"readme"
 			);
 		}

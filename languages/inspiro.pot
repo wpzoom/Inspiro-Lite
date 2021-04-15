@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Inspiro 1.2.6\n"
+"Project-Id-Version: Inspiro 1.2.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/inspiro-lite\n"
-"POT-Creation-Date: 2021-04-14 16:36:47+00:00\n"
+"POT-Creation-Date: 2021-04-15 09:13:46+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -582,28 +582,28 @@ msgstr ""
 msgid "Read more<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: inc/common-functions.php:368
+#: inc/common-functions.php:340
 #. translators: %1$s: Comment date %2$s: Comment time
 msgid "%1$s @ %2$s"
 msgstr ""
 
-#: inc/common-functions.php:378
+#: inc/common-functions.php:350
 msgid "Reply"
 msgstr ""
 
-#: inc/common-functions.php:384
+#: inc/common-functions.php:356
 msgid "Edit"
 msgstr ""
 
-#: inc/common-functions.php:392
+#: inc/common-functions.php:364
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/common-functions.php:406
+#: inc/common-functions.php:378
 msgid "Pingback:"
 msgstr ""
 
-#: inc/common-functions.php:406
+#: inc/common-functions.php:378
 msgid "(Edit)"
 msgstr ""
 

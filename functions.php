@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Define Constants
  */
-define( 'INSPIRO_THEME_VERSION', '1.2.6' );
+define( 'INSPIRO_THEME_VERSION', '1.2.7' );
 define( 'INSPIRO_THEME_DIR', trailingslashit( get_template_directory() ) );
 define( 'INSPIRO_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
 
