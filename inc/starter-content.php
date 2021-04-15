@@ -119,7 +119,7 @@ function inspiro_get_starter_content() {
 		// Default to a static front page and assign the front and posts pages.
 		'options'     => array(
 			'show_on_front'  => 'page',
-			'page_on_front'  => '{{home}}',
+			'page_on_front'  => '{{front}}',
 			'page_for_posts' => '{{blog}}',
 		),
 
