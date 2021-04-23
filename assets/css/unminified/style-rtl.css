@@ -539,7 +539,7 @@ select,
 textarea {
     margin: 0;
     padding: 0;
-    font-family: "Libre Franklin", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     font-size: 1rem;
     font-weight: 400;
@@ -1025,7 +1025,7 @@ html[lang="th"] * {
 --------------------------------------------------------------*/
 input,
 textarea {
-    font-family: "Libre Franklin", sans-serif;
+    font-family: "Inter", sans-serif;
     color: #444;
 }
 
@@ -2022,9 +2022,9 @@ body {
 
 .site-title {
     clear: none;
-    font-size: 72px;
-    font-size: 4.5rem;
-    font-weight: 200;
+    font-size: 80px;
+    font-size: 5rem;
+    font-weight: 700;
     line-height: 1.25;
     margin: 0;
     padding: 0;
@@ -2087,6 +2087,7 @@ body.has-header-image .site-description, body.has-header-video .site-description
     color: #fff;
     border-color: inherit;
     transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
+    font-weight: normal;
 }
 
 .custom-header-button:hover {
@@ -3636,7 +3637,6 @@ h4.jp-relatedposts-post-title {
 .widget .tagcloud a,
 .widget.widget_tag_cloud a,
 .wp_widget_tag_cloud a {
-    border: 1px solid #ddd;
     box-shadow: none;
     display: block;
     padding: 4px 10px 5px;

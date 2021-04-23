@@ -64,11 +64,15 @@ function inspiro_get_starter_content() {
                     <!-- /wp:cover -->
 
                     <!-- wp:paragraph -->
+                    <p>&nbsp;</p>
+                    <!-- /wp:paragraph -->
+
+                    <!-- wp:paragraph -->
                     <p>In today’s competitive market environment, the body copy of your entry must lead the reader through a series of disarmingly simple thoughts.</p>
                     <!-- /wp:paragraph -->
 
                     <!-- wp:image {"align":"wide","id":5834} -->
-                    <figure class="wp-block-image alignwide"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_U94B4HVBAO.jpg" alt="" class="wp-image-5834"/><figcaption>Wide width image</figcaption></figure>
+                    <figure class="wp-block-image alignwide"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_M6D1GS9PSL.jpg" alt="" class="wp-image-5834"/><figcaption>Wide width image</figcaption></figure>
                     <!-- /wp:image -->
 
                     <!-- wp:paragraph -->

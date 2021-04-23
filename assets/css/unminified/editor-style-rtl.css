@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: Inspiro Lite
+Theme Name: Inspiro
 Description: Used to style the TinyMCE editor.
 */
 /**
@@ -77,7 +77,7 @@ select,
 textarea {
     margin: 0;
     padding: 0;
-    font-family: "Libre Franklin", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     font-size: 1rem;
     font-weight: 400;
@@ -835,7 +835,7 @@ a:hover .nav-title,
 }
 
 .editor-post-title__block .editor-post-title__input {
-    font-family: "Libre Franklin", sans-serif;
+    font-family: "Inter", sans-serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
