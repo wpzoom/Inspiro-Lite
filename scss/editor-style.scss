@@ -1,5 +1,5 @@
 /*
-Theme Name: Inspiro Lite
+Theme Name: Inspiro
 Description: Used to style the TinyMCE editor.
 */
 
@@ -54,9 +54,6 @@ Description: Used to style the TinyMCE editor.
         max-width: none;
     }
 
-    .wp-block {
-        width: 100%;
-    }
 }
 
 @media screen and (min-width: 719px) {
@@ -83,54 +80,6 @@ Description: Used to style the TinyMCE editor.
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-.wp-block-button {
-    .wp-block-button__link {
-        border-radius: 0;
-        padding: 10px 30px;
-        color: #fff;
-        font-size: 18px;
-        font-weight: 500;
-        border: 2px solid #fff;
-        text-transform: uppercase;
-        font-family: "Montserrat", sans-serif;
-        transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
-        transform: translate3d(0, 0, 0);
-
-        &:not(.has-background),
-        &:not(.has-background):hover,
-        &:not(.has-background):active,
-        &:not(.has-background):focus {
-            background-color: #0bb4aa;
-        }
-    }
-
-    &.is-style-default .wp-block-button__link {
-        border-radius: 30px;
-    }
-
-    &.is-style-outline .wp-block-button__link,
-    &.is-style-outline .wp-block-button__link:hover,
-    &.is-style-outline .wp-block-button__link:focus,
-    &.is-style-outline .wp-block-button__link:active {
-        background: transparent !important;
-    }
-
-
-    &.is-style-squared .wp-block-button__link,
-    &.is-style-squared .wp-block-button__link:hover,
-    &.is-style-squared .wp-block-button__link:focus,
-    &.is-style-squared .wp-block-button__link:active {
-        border-radius: 0;
-    }
-
-
-    .wp-block-button__link.has-white-background-color,
-    &.is-style-outline .wp-block-button__link {
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-        text-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-    }
 }
 
 /**
@@ -177,4 +126,20 @@ Description: Used to style the TinyMCE editor.
 
 .rtl .mejs-offscreen {
     right: -10000px;
+}
+
+.wp-block-button .wp-block-button__link {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: $font-headings;
+    text-decoration: none !important;
+    transition: background-color .3s ease;
+    font-family: "Montserrat", sans-serif;
+}
+
+.wp-block-button .wp-block-button__link:hover {
+    background-color: #0bb4aa;
+    border-color: #0bb4aa;
+    color: #fff;
 }

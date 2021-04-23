@@ -15,19 +15,19 @@ function inspiro_fonts_url() {
 
 	/*
 	 * translators: If there are characters in your language that are not supported
-	 * by Libre Franklin, translate this to 'off'. Do not translate into your own language.
+	 * by Inter, translate this to 'off'. Do not translate into your own language.
 	 */
-	$libre_franklin = esc_html_x( 'on', 'Libre Franklin font: on or off', 'inspiro' );
+	$inter_font = esc_html_x( 'on', 'Inter font: on or off', 'inspiro' );
 
-	if ( 'off' !== $libre_franklin ) {
+	if ( 'off' !== $inter_font ) {
 		$font_families = array();
 
-		$font_families[] = 'Libre Franklin:200,200i,300,300i,400,400i,600,600i,700,700i|Montserrat:500,700';
+		$font_families[] = 'Inter:200,300,400,500,600,700|Montserrat:500,700';
 
 		$query_args = array(
 			'family'  => rawurlencode( implode( '|', $font_families ) ),
 			'subset'  => rawurlencode( 'latin,latin-ext' ),
-			'display' => rawurlencode( 'fallback' ),
+			'display' => rawurlencode( 'swap' ),
 		);
 
 		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );

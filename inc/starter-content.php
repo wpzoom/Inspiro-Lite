@@ -47,61 +47,109 @@ function inspiro_get_starter_content() {
 			'front' => array(
 				'thumbnail'    => '{{image-aerial-land}}',
 				'post_type'    => 'page',
-				'post_title'   => esc_html_x( 'Create your website with blocks', 'Theme starter content', 'inspiro' ),
+				'post_title'   => esc_html_x( 'Beautiful portfolios for exceptional creatives', 'Theme starter content', 'inspiro' ),
 				'post_content' => '
+                    <!-- wp:paragraph {"align":"center"} -->
+                    <p class="has-text-align-center"><meta charset="utf-8">This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual copy might look like if it were real content.</p>
+                    <!-- /wp:paragraph -->
+
+                    <!-- wp:spacer {"height":55} -->
+                    <div style="height:55px" aria-hidden="true" class="wp-block-spacer"></div>
+                    <!-- /wp:spacer -->
+
+                    <!-- wp:group {"align":"full","style":{"color":{"background":"#e5e9ec"}}} -->
+                    <div class="wp-block-group alignfull has-background" style="background-color:#e5e9ec"><div class="wp-block-group__inner-container"><!-- wp:columns -->
+                    <div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"center"} -->
+                    <div class="wp-block-column is-vertically-aligned-center"><!-- wp:heading -->
+                    <h2>About us</h2>
+                    <!-- /wp:heading -->
+
                     <!-- wp:paragraph -->
                     <p>This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual copy might look like if it were real content.</p>
                     <!-- /wp:paragraph -->
 
-                    <!-- wp:paragraph -->
-                    <p>If you want to read, I might suggest a good book, perhaps Melville. That’s why they call it, the dummy copy. This, of course, is not the real copy for this entry. Rest assured, the words will expand the concept. With clarity. Conviction. And a little wit.</p>
-                    <!-- /wp:paragraph -->
-
-                    <!-- wp:cover {"url":"' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_WV0YTVMU7P.jpg","id":5284,"hasParallax":true,"align":"full"} -->
-                    <div class="wp-block-cover alignfull has-background-dim has-parallax" style="background-image:url(' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_WV0YTVMU7P.jpg)"><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","fontSize":"large"} -->
-                    <p class="has-text-align-center has-large-font-size">Nice to meet you, Gutenberg</p>
-                    <!-- /wp:paragraph --></div></div>
-                    <!-- /wp:cover -->
-
-                    <!-- wp:paragraph -->
-                    <p>In today’s competitive market environment, the body copy of your entry must lead the reader through a series of disarmingly simple thoughts.</p>
-                    <!-- /wp:paragraph -->
-
-                    <!-- wp:image {"align":"wide","id":5834} -->
-                    <figure class="wp-block-image alignwide"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_U94B4HVBAO.jpg" alt="" class="wp-image-5834"/><figcaption>Wide width image</figcaption></figure>
-                    <!-- /wp:image -->
+                    <!-- wp:buttons {"contentJustification":"left"} -->
+                    <div class="wp-block-buttons is-content-justification-left"><!-- wp:button {"borderRadius":0,"className":"is-style-outline"} -->
+                    <div class="wp-block-button is-style-outline"><a class="wp-block-button__link no-border-radius" href="#">About Us</a></div>
+                    <!-- /wp:button --></div>
+                    <!-- /wp:buttons -->
 
                     <!-- wp:paragraph -->
                     <p></p>
-                    <!-- /wp:paragraph -->
+                    <!-- /wp:paragraph --></div>
+                    <!-- /wp:column -->
+
+                    <!-- wp:column -->
+                    <div class="wp-block-column"><!-- wp:spacer {"height":48} -->
+                    <div style="height:48px" aria-hidden="true" class="wp-block-spacer"></div>
+                    <!-- /wp:spacer -->
+
+                    <!-- wp:image {"id":26,"sizeSlug":"large","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_JKMGVEJMPU.jpg" alt="" class="wp-image-26"/></figure>
+                    <!-- /wp:image --></div>
+                    <!-- /wp:column --></div>
+                    <!-- /wp:columns --></div></div>
+                    <!-- /wp:group -->
+
+                    <!-- wp:group {"align":"full"} -->
+                    <div class="wp-block-group alignfull"><div class="wp-block-group__inner-container"><!-- wp:columns {"verticalAlignment":"center"} -->
+                    <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
+                    <div class="wp-block-column is-vertically-aligned-center"><!-- wp:spacer {"height":48} -->
+                    <div style="height:48px" aria-hidden="true" class="wp-block-spacer"></div>
+                    <!-- /wp:spacer -->
+
+                    <!-- wp:image {"id":27,"sizeSlug":"large","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_M6D1GS9PSL.jpg" alt="" class="wp-image-27"/></figure>
+                    <!-- /wp:image --></div>
+                    <!-- /wp:column -->
+
+                    <!-- wp:column {"verticalAlignment":"center"} -->
+                    <div class="wp-block-column is-vertically-aligned-center"><!-- wp:heading -->
+                    <h2>Our Services</h2>
+                    <!-- /wp:heading -->
 
                     <!-- wp:paragraph -->
-                    <p>All your supporting arguments must be communicated with simplicity and charm. And in such a way that the reader will read on. (After all, that’s a reader’s job: to read, isn’t it?) And by the time your readers have reached this point in the finished copy, you will have convinced them that you not only respect their intelligence, but you also understand their needs as consumers.</p>
+                    <p>This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual copy might look like if it were real content.</p>
                     <!-- /wp:paragraph -->
 
-                    <!-- wp:image {"align":"full","id":5835} -->
-                    <figure class="wp-block-image alignfull"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_PU4RMD67KZ.jpg" alt="" class="wp-image-5835"/><figcaption>Full width image</figcaption></figure>
-                    <!-- /wp:image -->
+                    <!-- wp:buttons -->
+                    <div class="wp-block-buttons"><!-- wp:button {"borderRadius":0,"className":"is-style-outline"} -->
+                    <div class="wp-block-button is-style-outline"><a class="wp-block-button__link no-border-radius" href="#">Services</a></div>
+                    <!-- /wp:button --></div>
+                    <!-- /wp:buttons --></div>
+                    <!-- /wp:column --></div>
+                    <!-- /wp:columns --></div></div>
+                    <!-- /wp:group -->
 
-                    <!-- wp:paragraph -->
-                    <p></p>
+                    <!-- wp:group {"align":"full","backgroundColor":"black"} -->
+                    <div class="wp-block-group alignfull has-black-background-color has-background"><div class="wp-block-group__inner-container"><!-- wp:heading {"textAlign":"center","textColor":"white"} -->
+                    <h2 class="has-text-align-center has-white-color has-text-color"><strong>Gallery</strong></h2>
+                    <!-- /wp:heading -->
+
+                    <!-- wp:gallery {"ids":[28,27,26,25,24,29],"linkTo":"none","align":"center"} -->
+                    <figure class="wp-block-gallery aligncenter columns-3 is-cropped"><ul class="blocks-gallery-grid"><li class="blocks-gallery-item"><figure><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_P9QYJ8AAL8.jpg" alt="" data-id="28" data-full-url="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_P9QYJ8AAL8.jpg" data-link="http://localhost/wporg/sample-page/stocksnap_p9qyj8aal8/" class="wp-image-28"/></figure></li><li class="blocks-gallery-item"><figure><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_M6D1GS9PSL.jpg" alt="" data-id="27" data-full-url="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_M6D1GS9PSL.jpg" data-link="http://localhost/wporg/sample-page/stocksnap_m6d1gs9psl/" class="wp-image-27"/></figure></li><li class="blocks-gallery-item"><figure><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_JKMGVEJMPU.jpg" alt="" data-id="26" data-full-url="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_JKMGVEJMPU.jpg" data-link="http://localhost/wporg/sample-page/stocksnap_jkmgvejmpu/" class="wp-image-26"/></figure></li><li class="blocks-gallery-item"><figure><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_CXVCF2NNWJ.jpg" alt="" data-id="25" data-full-url="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_CXVCF2NNWJ.jpg" data-link="http://localhost/wporg/sample-page/stocksnap_cxvcf2nnwj/" class="wp-image-25"/></figure></li><li class="blocks-gallery-item"><figure><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_89BQZ89TLH.jpg" alt="" data-id="24" data-full-url="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_89BQZ89TLH.jpg" data-link="http://localhost/wporg/sample-page/stocksnap_89bqz89tlh/" class="wp-image-24"/></figure></li><li class="blocks-gallery-item"><figure><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_PGXCCTCLB5.jpg" alt="" data-id="29" data-full-url="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_PGXCCTCLB5.jpg" data-link="http://localhost/wporg/sample-page/stocksnap_pgxcctclb5/" class="wp-image-29"/></figure></li></ul></figure>
+                    <!-- /wp:gallery --></div></div>
+                    <!-- /wp:group -->
+
+                    <!-- wp:cover {"url":"' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_89BQZ89TLH.jpg","id":24,"hasParallax":true,"dimRatio":40,"overlayColor":"black","minHeight":375,"minHeightUnit":"px","contentPosition":"center center","align":"full","className":"is-position-center-center"} -->
+                    <div class="wp-block-cover alignfull has-background-dim-40 has-black-background-color has-background-dim has-parallax is-position-center-center" style="background-image:url(' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_89BQZ89TLH.jpg);min-height:375px"><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","style":{"typography":{"lineHeight":"1.1"},"color":{"text":"#fffffa"}},"fontSize":"huge"} -->
+                    <p class="has-text-align-center has-text-color has-huge-font-size" style="color:#fffffa;line-height:1.1"><strong>Unleash your creativity with Inspiro</strong></p>
                     <!-- /wp:paragraph -->
 
-                    <!-- wp:paragraph -->
-                    <p>As a result of which, your entry will repay your efforts. Take your sales; simply put, they will rise. Likewise your credibility. There’s every chance your competitors will wish they’d placed this entry, not you. While your customers will have probably forgotten that your competitors even exist. Which brings us, by a somewhat circuitous route, to another small point, but one which we feel should be raised.</p>
+                    <!-- wp:paragraph {"align":"center"} -->
+                    <p class="has-text-align-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                     <!-- /wp:paragraph -->
 
-                    <!-- wp:image {"id":5829} -->
-                    <figure class="wp-block-image"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_WV0YTVMU7P.jpg" alt="" class="wp-image-5829"/><figcaption>Simple image (default size)</figcaption></figure>
-                    <!-- /wp:image -->
+                    <!-- wp:spacer {"height":39} -->
+                    <div style="height:39px" aria-hidden="true" class="wp-block-spacer"></div>
+                    <!-- /wp:spacer -->
 
-                    <!-- wp:paragraph -->
-                    <p></p>
-                    <!-- /wp:paragraph -->
-
-                    <!-- wp:paragraph -->
-                    <p>This is dummy copy. It is not meant to be read. Accordingly, it is difficult to figure out when to end it. If this were real copy, it would have ended long ago, because‚ as we all know‚ no one reads body copy, and even fewer read body copy this long. But then, this is dummy copy. It is not meant to be read. Period.</p>
-                    <!-- /wp:paragraph -->',
+                    <!-- wp:buttons {"contentJustification":"center"} -->
+                    <div class="wp-block-buttons is-content-justification-center"><!-- wp:button {"borderRadius":0,"textColor":"white","className":"is-style-outline"} -->
+                    <div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-white-color has-text-color no-border-radius" href="#">Contact us</a></div>
+                    <!-- /wp:button --></div>
+                    <!-- /wp:buttons --></div></div>
+                    <!-- /wp:cover -->',
 			),
 			'about',
 			'contact',

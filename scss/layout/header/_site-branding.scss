@@ -20,8 +20,8 @@
 
 .site-title {
     clear: none;
-    @include font-size(72);
-    font-weight: 200;
+    @include font-size(80);
+    font-weight: 700;
     line-height: 1.25;
     margin: 0;
     padding: 0;
@@ -93,6 +93,7 @@ body {
     color: #fff;
     border-color: inherit;
     transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
+    font-weight: normal;
 
     &:hover {
         opacity: 1;
