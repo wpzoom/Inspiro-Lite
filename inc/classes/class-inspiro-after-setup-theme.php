@@ -177,6 +177,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 			// Add support for responsive embeds.
 			add_theme_support( 'responsive-embeds' );
 
+
 			/*
 			 * Adds starter content to highlight the theme on fresh sites.
 			 * This is done conditionally to avoid loading the starter content on every

@@ -17,12 +17,12 @@ function inspiro_fonts_url() {
 	 * translators: If there are characters in your language that are not supported
 	 * by Inter, translate this to 'off'. Do not translate into your own language.
 	 */
-	$libre_franklin = esc_html_x( 'on', 'Inter font: on or off', 'inspiro' );
+	$inter_font = esc_html_x( 'on', 'Inter font: on or off', 'inspiro' );
 
-	if ( 'off' !== $libre_franklin ) {
+	if ( 'off' !== $inter_font ) {
 		$font_families = array();
 
-		$font_families[] = 'Inter:wght@200;300;400;500;600;700|Montserrat:500,700';
+		$font_families[] = 'Inter:200,300,400,500,600,700|Montserrat:500,700';
 
 		$query_args = array(
 			'family'  => rawurlencode( implode( '|', $font_families ) ),

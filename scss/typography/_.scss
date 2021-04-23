@@ -38,17 +38,17 @@ h3 {
 
 h1 {
     @include font-size(36);
-    font-weight: 300;
+    font-weight: 700;
 }
 
 h2 {
     @include font-size(30);
-    font-weight: 300;
+    font-weight: 700;
 }
 
 h3 {
     @include font-size(24);
-    font-weight: 300;
+    font-weight: 700;
 }
 
 h4 {

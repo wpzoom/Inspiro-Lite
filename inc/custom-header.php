@@ -54,6 +54,11 @@ function inspiro_custom_header_setup() {
 				'thumbnail_url' => '%s/assets/images/StockSnap_M6D1GS9PSL.jpg',
 				'description'   => __( 'Default Header Image', 'inspiro' ),
 			),
+            'forest-image' => array(
+                'url'           => '%s/assets/images/StockSnap_89BQZ89TLH.jpg',
+                'thumbnail_url' => '%s/assets/images/StockSnap_89BQZ89TLH.jpg',
+                'description'   => __( 'Forest', 'inspiro' ),
+            ),
 		)
 	);
 }

@@ -75,7 +75,7 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 		 */
 		public function block_editor_styles() {
 			// Block styles.
-			wp_enqueue_style( 'inspiro-block-editor-style', inspiro_get_assets_uri( 'editor-blocks', 'css' ), array(), INSPIRO_THEME_VERSION );
+			wp_enqueue_style( 'inspiro-block-editor-style', inspiro_get_assets_uri( 'editor-style', 'css' ), array(), INSPIRO_THEME_VERSION );
 
 			// RTL support.
 			wp_style_add_data( 'inspiro-block-editor-style', 'rtl', 'replace' );

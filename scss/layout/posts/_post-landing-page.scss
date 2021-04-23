@@ -79,7 +79,7 @@
         &:hover {
             color: $color-link-title-hover;
             text-decoration: none;
-        }    
+        }
     }
 }
 
@@ -115,7 +115,7 @@
     line-height: $entry-content-line-height;
 
     p {
-        margin-bottom: em(28);
+        margin-bottom: 20px;
         word-wrap: break-word;
 
         &:last-child {

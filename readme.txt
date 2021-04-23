@@ -95,7 +95,9 @@ Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 == Changelog ==
 
 = 1.2.8 =
-* Fixed an issue with the starter content
+* Improvements to the starter content
+* Visual improvements
+* Bug fixes
 
 = 1.2.7 =
 * Fixed header text appearing slow in hero header area
