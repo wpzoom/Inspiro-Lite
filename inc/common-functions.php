@@ -8,35 +8,6 @@
  */
 
 /**
- * Register custom fonts.
- */
-function inspiro_fonts_url() {
-	$fonts_url = '';
-
-	/*
-	 * translators: If there are characters in your language that are not supported
-	 * by Inter, translate this to 'off'. Do not translate into your own language.
-	 */
-	$inter_font = esc_html_x( 'on', 'Inter font: on or off', 'inspiro' );
-
-	if ( 'off' !== $inter_font ) {
-		$font_families = array();
-
-		$font_families[] = 'Inter:200,300,400,500,600,700|Montserrat:500,700';
-
-		$query_args = array(
-			'family'  => rawurlencode( implode( '|', $font_families ) ),
-			'subset'  => rawurlencode( 'latin,latin-ext' ),
-			'display' => rawurlencode( 'swap' ),
-		);
-
-		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	}
-
-	return esc_url_raw( $fonts_url );
-}
-
-/**
  * Get assets url depending on constant SCRIPT_DEBUG.
  * If value of this constant is `true` then theme will load unminified assets
  *

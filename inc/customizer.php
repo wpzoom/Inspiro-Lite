@@ -8,6 +8,33 @@
  */
 
 /**
+ * Register custom control types.
+ *
+ * @since x.x.x
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ */
+function inspiro_register_control_types( $wp_customize ) {
+	// phpcs:disable WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+
+	require INSPIRO_THEME_DIR . 'inc/customizer/class-inspiro-customize-checkbox-multiple-control.php';
+	require INSPIRO_THEME_DIR . 'inc/customizer/class-inspiro-customize-select-optgroup-control.php';
+	require INSPIRO_THEME_DIR . 'inc/customizer/class-inspiro-customize-font-presets-control.php';
+	require INSPIRO_THEME_DIR . 'inc/customizer/class-inspiro-customize-title-control.php';
+	require INSPIRO_THEME_DIR . 'inc/customizer/class-inspiro-customize-range-control.php';
+	require INSPIRO_THEME_DIR . 'inc/customizer/class-inspiro-customize-more-section.php';
+	require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-customize-section-pro.php';
+
+	// phpcs:enable WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+
+	$wp_customize->register_section_type( 'Inspiro_Customize_Section_Pro' );
+	$wp_customize->register_section_type( 'Inspiro_Customize_Range_Control' );
+	$wp_customize->register_section_type( 'Inspiro_Customize_Title_Control' );
+	$wp_customize->register_section_type( 'Inspiro_Customize_More_Section' );
+}
+add_action( 'customize_register', 'inspiro_register_control_types' );
+
+/**
  * Add postMessage support for site title and description for the Theme Customizer.
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
@@ -451,16 +478,6 @@ function inspiro_customize_register( $wp_customize ) {
 		)
 	);
 
-	/**
-	 * Add custom section to Customizer
-	 * This section will display upsell message to Customizer at the top of all section panels.
-	 *
-	 * @since 1.2.2
-	 */
-	require INSPIRO_THEME_DIR . '/inc/classes/class-inspiro-customize-section-pro.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
-
-	$wp_customize->register_section_type( 'Inspiro_Customize_Section_Pro' );
-
 	// Register sections.
 	$wp_customize->add_section(
 		new Inspiro_Customize_Section_Pro(
@@ -468,140 +485,553 @@ function inspiro_customize_register( $wp_customize ) {
 			'inspiro_upgrade_pro',
 			array(
 				'title'       => esc_html__( 'Upgrade to Inspiro PRO', 'inspiro' ),
-				'description' => esc_html__( 'Unlock premium features: 7 Style Kits, Google Fonts, Video Backgrounds, Portfolio Integration, Premium Support and much more...', 'inspiro' ),
+				'description' => esc_html__( 'Unlock premium features: 7 Style Kits, Video Backgrounds, Portfolio Integration, Premium Support and much more...', 'inspiro' ),
 				'pro_text'    => esc_html__( 'View Inspiro PRO', 'inspiro' ),
 				'pro_url'     => 'https://www.wpzoom.com/themes/inspiro/',
 				'priority'    => 5,
 			)
 		)
 	);
-}
-add_action( 'customize_register', 'inspiro_customize_register' );
 
-/**
- * Sanitize the page layout options.
- *
- * @param string $input Page layout.
- */
-function inspiro_sanitize_page_layout( $input ) {
-	$valid = array(
-		'full'       => esc_html__( 'Full width', 'inspiro' ),
-		'side-right' => esc_html__( 'Sidebar on the right', 'inspiro' ),
+	/**
+	 * Fonts
+	 *
+	 * @since x.x.x
+	 */
+
+	$wp_customize->add_section(
+		'inspiro_fonts_section',
+		array(
+			'title'    => __( 'Fonts', 'inspiro' ),
+			'priority' => 41,
+		)
 	);
 
-	if ( array_key_exists( $input, $valid ) ) {
-		return $input;
-	}
+	// phpcs:disable Squiz.PHP.CommentedOutCode.Found
+	// $wp_customize->add_control(
+	// new Inspiro_Customize_Font_Presets_Control(
+	// $wp_customize,
+	// 'inspiro_font_presets',
+	// array(
+	// 'section'  => 'inspiro_fonts_section',
+	// 'settings' => array(),
+	// )
+	// )
+	// );
+	// phpcs:enable Squiz.PHP.CommentedOutCode.Found
 
-	return '';
+	$wp_customize->add_control(
+		new Inspiro_Customize_Title_Control(
+			$wp_customize,
+			'inspiro_fonts_section_title_body',
+			array(
+				'label'    => __( 'Body', 'inspiro' ),
+				'section'  => 'inspiro_fonts_section',
+				'settings' => array(),
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'inspiro_body_font',
+		array(
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'inspiro_sanitize_fonts',
+		)
+	);
+
+	$wp_customize->add_control(
+		new Inspiro_Customize_Select_Optgroup_Control(
+			$wp_customize,
+			'inspiro_body_font',
+			array(
+				'label'   => __( 'Body Font', 'inspiro' ),
+				'section' => 'inspiro_fonts_section',
+				'choices' => array(
+					esc_html__( 'Default Theme Font', 'inspiro' )   => array(
+						'' => __( 'System UI Font', 'inspiro' ),
+					),
+					esc_html__( 'Curated Google Fonts', 'inspiro' ) => inspiro_get_font_choices( 'body', true ),
+					esc_html__( 'Additional Google Fonts', 'inspiro' ) => inspiro_get_font_choices( 'body', false ),
+				),
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'inspiro_body_font_size',
+		array(
+			'default'           => 20,
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'inspiro_sanitize_integer',
+		)
+	);
+
+	$wp_customize->add_control(
+		new Inspiro_Customize_Range_Control(
+			$wp_customize,
+			'inspiro_body_font_size',
+			array(
+				'label'       => __( 'Body Font Size (px)', 'inspiro' ),
+				'section'     => 'inspiro_fonts_section',
+				'input_attrs' => array(
+					'min'  => 16,
+					'max'  => 22,
+					'step' => 1,
+				),
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'inspiro_body_line_height',
+		array(
+			'default'           => 1.7,
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'inspiro_sanitize_float',
+		)
+	);
+
+	$wp_customize->add_control(
+		new Inspiro_Customize_Range_Control(
+			$wp_customize,
+			'inspiro_body_line_height',
+			array(
+				'label'       => __( 'Body Line Height', 'inspiro' ),
+				'section'     => 'inspiro_fonts_section',
+				'input_attrs' => array(
+					'min'  => 1,
+					'max'  => 2,
+					'step' => 0.1,
+				),
+			)
+		)
+	);
+
+	$wp_customize->add_control(
+		new Inspiro_Customize_Title_Control(
+			$wp_customize,
+			'inspiro_fonts_section_title_headings',
+			array(
+				'label'    => __( 'Headings', 'inspiro' ),
+				'section'  => 'inspiro_fonts_section',
+				'settings' => array(),
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'inspiro_heading_font',
+		array(
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'inspiro_sanitize_fonts',
+		)
+	);
+
+	$wp_customize->add_control(
+		new Inspiro_Customize_Select_Optgroup_Control(
+			$wp_customize,
+			'inspiro_heading_font',
+			array(
+				'label'   => __( 'Headings Font', 'inspiro' ),
+				'section' => 'inspiro_fonts_section',
+				'choices' => array(
+					esc_html__( 'Default Theme Font', 'inspiro' )   => array(
+						'' => __( 'System Font', 'inspiro' ),
+					),
+					esc_html__( 'Curated Google Fonts', 'inspiro' ) => inspiro_get_font_choices( 'heading', true ),
+					esc_html__( 'Additional Google Fonts', 'inspiro' ) => inspiro_get_font_choices( 'heading', false ),
+				),
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'inspiro_heading_font_weight',
+		array(
+			'default'           => '400',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'inspiro_sanitize_font_weight',
+		)
+	);
+
+	$wp_customize->add_control(
+		'inspiro_heading_font_weight',
+		array(
+			'label'   => __( 'Headings Font Weight', 'inspiro' ),
+			'section' => 'inspiro_fonts_section',
+			'type'    => 'select',
+			'choices' => array(),
+		)
+	);
+
+	$wp_customize->add_setting(
+		'inspiro_heading_letter_spacing',
+		array(
+			'default'           => 0,
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'inspiro_sanitize_float',
+		)
+	);
+
+	$wp_customize->add_control(
+		new Inspiro_Customize_Range_Control(
+			$wp_customize,
+			'inspiro_heading_letter_spacing',
+			array(
+				'label'       => __( 'Headings Letter Spacing', 'inspiro' ),
+				'section'     => 'inspiro_fonts_section',
+				'input_attrs' => array(
+					'min'  => -0.05,
+					'max'  => 0.05,
+					'step' => 0.001,
+				),
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'inspiro_h1_font_size',
+		array(
+			'default'           => 96,
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'inspiro_sanitize_integer',
+		)
+	);
+
+	$wp_customize->add_control(
+		new Inspiro_Customize_Range_Control(
+			$wp_customize,
+			'inspiro_h1_font_size',
+			array(
+				'label'       => __( 'Page Title Font Size (px)', 'inspiro' ),
+				'section'     => 'inspiro_fonts_section',
+				'input_attrs' => array(
+					'min'  => 56,
+					'max'  => 96,
+					'step' => 1,
+				),
+			)
+		)
+	);
+
+	$wp_customize->add_control(
+		new Inspiro_Customize_Title_Control(
+			$wp_customize,
+			'inspiro_fonts_section_title_tertiary_font',
+			array(
+				'label'    => __( 'Secondary Elements', 'inspiro' ),
+				'section'  => 'inspiro_fonts_section',
+				'settings' => array(),
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'inspiro_secondary_elements_font',
+		array(
+			'default'           => 'body',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'inspiro_sanitize_choices',
+		)
+	);
+
+	$wp_customize->add_control(
+		'inspiro_secondary_elements_font',
+		array(
+			'label'       => __( 'Secondary Elements Font', 'inspiro' ),
+			'section'     => 'inspiro_fonts_section',
+			'type'        => 'select',
+			'choices'     => array(
+				'body'    => __( 'Body Font', 'inspiro' ),
+				'heading' => __( 'Headings Font', 'inspiro' ),
+			),
+			'description' => __( 'Applies to meta, footer, buttons, captions, inputs…', 'inspiro' ),
+		)
+	);
+
+	$wp_customize->add_control(
+		new Inspiro_Customize_Title_Control(
+			$wp_customize,
+			'inspiro_fonts_section_title_logo',
+			array(
+				'label'    => __( 'Site Title', 'inspiro' ),
+				'section'  => 'inspiro_fonts_section',
+				'settings' => array(),
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'inspiro_logo_font',
+		array(
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'inspiro_sanitize_fonts',
+		)
+	);
+
+	$wp_customize->add_control(
+		new Inspiro_Customize_Select_Optgroup_Control(
+			$wp_customize,
+			'inspiro_logo_font',
+			array(
+				'label'   => __( 'Site Title Font', 'inspiro' ),
+				'section' => 'inspiro_fonts_section',
+				'choices' => array(
+					esc_html__( 'Default Theme Font', 'inspiro' )   => array(
+						'' => __( 'Headings Font', 'inspiro' ),
+					),
+					esc_html__( 'Curated Google Fonts', 'inspiro' ) => inspiro_get_font_choices( 'heading', true ),
+					esc_html__( 'Additional Google Fonts', 'inspiro' ) => inspiro_get_font_choices( 'heading', false ),
+				),
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'inspiro_logo_font_weight',
+		array(
+			'default'           => '400',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'inspiro_sanitize_font_weight',
+		)
+	);
+
+	$wp_customize->add_control(
+		'inspiro_logo_font_weight',
+		array(
+			'label'   => __( 'Site Title Font Weight', 'inspiro' ),
+			'section' => 'inspiro_fonts_section',
+			'type'    => 'select',
+			'choices' => array(),
+		)
+	);
+
+	$wp_customize->add_setting(
+		'inspiro_logo_font_size',
+		array(
+			'transport'         => 'postMessage',
+			'default'           => 24,
+			'sanitize_callback' => 'inspiro_sanitize_integer',
+		)
+	);
+
+	$wp_customize->add_control(
+		new Inspiro_Customize_Range_Control(
+			$wp_customize,
+			'inspiro_logo_font_size',
+			array(
+				'label'       => __( 'Site Title Font Size (px)', 'inspiro' ),
+				'section'     => 'inspiro_fonts_section',
+				'input_attrs' => array(
+					'min'  => 10,
+					'max'  => 80,
+					'step' => 1,
+				),
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'inspiro_logo_font_size_mobile',
+		array(
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'inspiro_sanitize_integer',
+		)
+	);
+
+	$wp_customize->add_control(
+		new Inspiro_Customize_Range_Control(
+			$wp_customize,
+			'inspiro_logo_font_size_mobile',
+			array(
+				'label'       => __( 'Site Title Font Size on Mobile (px)', 'inspiro' ),
+				'section'     => 'inspiro_fonts_section',
+				'input_attrs' => array(
+					'min'  => 10,
+					'max'  => 80,
+					'step' => 1,
+				),
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'inspiro_logo_letter_spacing',
+		array(
+			'transport'         => 'postMessage',
+			'default'           => 0,
+			'sanitize_callback' => 'inspiro_sanitize_float',
+		)
+	);
+
+	$wp_customize->add_control(
+		new Inspiro_Customize_Range_Control(
+			$wp_customize,
+			'inspiro_logo_letter_spacing',
+			array(
+				'label'       => __( 'Site Title Letter Spacing', 'inspiro' ),
+				'section'     => 'inspiro_fonts_section',
+				'input_attrs' => array(
+					'min'  => -0.1,
+					'max'  => 0.1,
+					'step' => 0.001,
+				),
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'inspiro_logo_text_transform',
+		array(
+			'default'           => 'uppercase',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'inspiro_sanitize_choices',
+		)
+	);
+
+	$wp_customize->add_control(
+		'inspiro_logo_text_transform',
+		array(
+			'label'   => __( 'Site Title Text Transform', 'inspiro' ),
+			'section' => 'inspiro_fonts_section',
+			'type'    => 'select',
+			'choices' => array(
+				'none'       => _x( 'None', 'text transform', 'inspiro' ),
+				'uppercase'  => __( 'Uppercase', 'inspiro' ),
+				'lowercase'  => __( 'Lowercase', 'inspiro' ),
+				'capitalize' => __( 'Capitalize', 'inspiro' ),
+			),
+		)
+	);
+
+	$wp_customize->add_control(
+		new Inspiro_Customize_Title_Control(
+			$wp_customize,
+			'inspiro_fonts_section_title_menu',
+			array(
+				'label'    => __( 'Primary Menu', 'inspiro' ),
+				'section'  => 'inspiro_fonts_section',
+				'settings' => array(),
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'inspiro_menu_font',
+		array(
+			'default'           => 'body',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'inspiro_sanitize_choices',
+		)
+	);
+
+	$wp_customize->add_control(
+		'inspiro_menu_font',
+		array(
+			'label'   => __( 'Menu Font', 'inspiro' ),
+			'section' => 'inspiro_fonts_section',
+			'type'    => 'select',
+			'choices' => array(
+				'body'    => __( 'Body Font', 'inspiro' ),
+				'heading' => __( 'Headings Font', 'inspiro' ),
+			),
+		)
+	);
+
+	$wp_customize->add_setting(
+		'inspiro_menu_font_weight',
+		array(
+			'default'           => '400',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'inspiro_sanitize_font_weight',
+		)
+	);
+
+	$wp_customize->add_control(
+		'inspiro_menu_font_weight',
+		array(
+			'label'   => __( 'Menu Font Weight', 'inspiro' ),
+			'section' => 'inspiro_fonts_section',
+			'type'    => 'select',
+			'choices' => array(),
+		)
+	);
+
+	$wp_customize->add_setting(
+		'inspiro_menu_font_size',
+		array(
+			'transport'         => 'postMessage',
+			'default'           => 20,
+			'sanitize_callback' => 'inspiro_sanitize_integer',
+		)
+	);
+
+	$wp_customize->add_control(
+		new Inspiro_Customize_Range_Control(
+			$wp_customize,
+			'inspiro_menu_font_size',
+			array(
+				'label'       => __( 'Menu Font Size (px)', 'inspiro' ),
+				'section'     => 'inspiro_fonts_section',
+				'input_attrs' => array(
+					'min'  => 14,
+					'max'  => 22,
+					'step' => 1,
+				),
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'inspiro_menu_letter_spacing',
+		array(
+			'default'           => 0,
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'inspiro_sanitize_float',
+		)
+	);
+
+	$wp_customize->add_control(
+		new Inspiro_Customize_Range_Control(
+			$wp_customize,
+			'inspiro_menu_letter_spacing',
+			array(
+				'label'       => __( 'Menu Letter Spacing', 'inspiro' ),
+				'section'     => 'inspiro_fonts_section',
+				'input_attrs' => array(
+					'min'  => -0.1,
+					'max'  => 0.1,
+					'step' => 0.001,
+				),
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'inspiro_menu_text_transform',
+		array(
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'inspiro_sanitize_choices',
+		)
+	);
+
+	$wp_customize->add_control(
+		'inspiro_menu_text_transform',
+		array(
+			'label'   => __( 'Menu Text Transform', 'inspiro' ),
+			'section' => 'inspiro_fonts_section',
+			'type'    => 'select',
+			'choices' => array(
+				''           => _x( 'None', 'text transform', 'inspiro' ),
+				'uppercase'  => __( 'Uppercase', 'inspiro' ),
+				'lowercase'  => __( 'Lowercase', 'inspiro' ),
+				'capitalize' => __( 'Capitalize', 'inspiro' ),
+			),
+		)
+	);
 }
-
-/**
- * Sanitize the colorscheme.
- *
- * @param string $input Color scheme.
- */
-function inspiro_sanitize_colorscheme( $input ) {
-	$valid = array( 'light', 'dark', 'custom' );
-
-	if ( in_array( $input, $valid, true ) ) {
-		return $input;
-	}
-
-	return 'light';
-}
-
-/**
- * Sanitize the display content.
- *
- * @param string $input Content to display.
- */
-function inspiro_sanitize_display_content( $input ) {
-	$valid = array( 'excerpt', 'full-content', 'none' );
-
-	if ( in_array( $input, $valid, true ) ) {
-		return $input;
-	}
-
-	return 'excerpt';
-}
-
-/**
- * Callback for sanitizing the header_button_url value.
- *
- * @since 1.2.5
- *
- * @param string $value URL.
- * @return string Sanitized URL.
- */
-function inspiro_sanitize_header_button_url( $value ) {
-	return esc_url_raw( trim( $value ) );
-}
-
-/**
- * Callback for validating the header_textcolor value.
- *
- * Accepts 'blank', and otherwise uses sanitize_hex_color_no_hash().
- * Returns default text color if hex color is empty.
- *
- * @since 1.2.5
- *
- * @param string $color Color value.
- * @return mixed
- */
-function inspiro_sanitize_header_button_textcolor( $color ) {
-	if ( 'blank' === $color ) {
-		return 'blank';
-	}
-
-	$color = sanitize_hex_color_no_hash( $color );
-	if ( empty( $color ) ) {
-		$color = 'ffffff';
-	}
-
-	return $color;
-}
-
-/**
- * Sanitize boolean for checkbox.
- *
- * @since 1.2.5
- *
- * @param bool $checked Whether or not a box is checked.
- * @return bool
- */
-function inspiro_sanitize_checkbox( $checked = null ) {
-	return (bool) isset( $checked ) && true === $checked;
-}
-
-/**
- * Return whether we're previewing the front page and it's a static page.
- */
-function inspiro_is_static_front_page() {
-	return ( is_front_page() && ! is_home() );
-}
-
-/**
- * Return whether we're previewing the blog page.
- */
-function inspiro_is_view_is_blog() {
-	return is_home();
-}
-
-/**
- * Return whether we're previewing the single page.
- */
-function inspiro_is_view_is_single() {
-	return is_single();
-}
-
-/**
- * Return whether we're on a view that supports a full width or sidebar right layout.
- */
-function inspiro_is_view_with_layout_option() {
-	// This option is available on all pages. It's also available on archives when there isn't a sidebar.
-	return ( is_front_page() || is_home() || is_single() );
-}
+add_action( 'customize_register', 'inspiro_customize_register', 11 );
 
 /**
  * Bind JS handlers to instantly live-preview changes.
