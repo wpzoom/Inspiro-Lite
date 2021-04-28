@@ -75,7 +75,7 @@ module.exports = function (grunt) {
 							"*.css",
 							"!*-rtl.css",
 							"!colors-dark.css",
-							"!customize.css",
+							"!customize-controls.css",
 							"!welcome-notice.css",
 						],
 						dest: "assets/css/unminified",
@@ -101,8 +101,8 @@ module.exports = function (grunt) {
 							"scss/editor-style.scss",
 						"assets/css/unminified/colors-dark.css":
 							"scss/colors-dark.scss",
-						"assets/css/unminified/customize.css":
-							"scss/customize.scss",
+						"assets/css/unminified/customize-controls.css":
+							"scss/customize-controls.scss",
 						"assets/css/unminified/welcome-notice.css":
 							"scss/admin/welcome-notice.scss",
 						"assets/css/unminified/admin.css":

@@ -2154,7 +2154,7 @@ function inspiro_enqueue_control_scripts() {
 
 	wp_enqueue_style(
 		'inspiro-customize-controls',
-		inspiro_get_assets_uri( 'customize', 'css' ),
+		inspiro_get_assets_uri( 'customize-controls', 'css' ),
 		array(),
 		INSPIRO_THEME_VERSION
 	);

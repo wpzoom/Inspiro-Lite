@@ -24,7 +24,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 */
 		public function content_template() { ?>
 				<# if ( data.label ) { #>
-					<h4 class="inspiro-customize-section-title">{{{ data.label }}}</h4>
+					<h4 class="inspiro-customize-section-title wp-ui-text-highlight">{{{ data.label }}}</h4>
 				<# } #>
 				<# if ( data.description ) { #>
 					<span class="description customize-control-description">{{{ data.description }}}</span>
