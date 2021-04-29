@@ -221,7 +221,10 @@ module.exports = function (grunt) {
 				},
 			},
 			scripts: {
-				files: ["assets/js/unminified/*.js", "inc/customizer/custom-controls/**/*.js"],
+				files: [
+					"assets/js/unminified/*.js",
+					"inc/customizer/custom-controls/**/*.js",
+				],
 				tasks: ["jshint", "concat", "clean:minifiedJS", "uglify"],
 				options: {
 					livereload: true,
@@ -495,6 +498,25 @@ module.exports = function (grunt) {
 				],
 			},
 		},
+
+		json2php: {
+			options: {
+				// Task-specific options go here.
+				compress: true,
+				cover: function (phpArrayString, destFilePath) {
+					return (
+						"<?php\n/**\n * Google fonts array file.\n *\n * @package     Inspiro\n * @author      WPZOOM\n * @copyright   Copyright (c) 2021, WPZOOM\n * @link        https://wpzoom.com\n * @since       Inspiro_Lite x.x.x\n */\n\n/**\n * Returns google fonts array\n *\n * @since x.x.x\n */\nreturn " +
+						phpArrayString +
+						";\n"
+					);
+				},
+			},
+			your_target: {
+				files: {
+					"inc/google-fonts.php": "assets/fonts/google-fonts.json",
+				},
+			},
+		},
 	});
 
 	// Load grunt tasks.
@@ -513,6 +535,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks("grunt-wp-i18n");
 	grunt.loadNpmTasks("grunt-bumpup");
 	grunt.loadNpmTasks("grunt-text-replace");
+	grunt.loadNpmTasks("grunt-json2php");
 
 	// Register Tasks.
 
@@ -532,6 +555,46 @@ module.exports = function (grunt) {
 				"readme"
 			);
 		}
+	});
+
+	grunt.registerTask("download-google-fonts", function () {
+		var done = this.async();
+		var request = require("request");
+		var fs = require("fs");
+
+		request(
+			"https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCjpo9bj5Y08pYGwheAu8rubIWB8fP3ALQ",
+			function (error, response, body) {
+				console.log(error, response);
+				if (response && response.statusCode == 200) {
+					var fonts = JSON.parse(body).items.map(function (font) {
+						return {
+							[font.family]: {
+								variants: font.variants,
+								category: font.category,
+							},
+						};
+					});
+
+					fs.writeFile(
+						"assets/fonts/google-fonts.json",
+						JSON.stringify(fonts, undefined, 4),
+						function (err) {
+							if (!err) {
+								console.log("Google Fonts Updated!");
+								done();
+							}
+						}
+					);
+				}
+			}
+		);
+	});
+
+	// Update google Fonts
+	grunt.registerTask("google-fonts", function () {
+		grunt.task.run("download-google-fonts");
+		grunt.task.run("json2php");
 	});
 
 	// rtlcss, you will still need to install ruby and sass on your system manually to run this

@@ -13,7 +13,8 @@
     "textdomain": "inspiro",
     "slug": "inspiro",
     "package": "Inspiro",
-    "subpackage": "Inspiro_Lite"
+    "subpackage": "Inspiro_Lite",
+    "author_site": "https://wpzoom.com/"
   },
   "_forkProject": {
     "name": "Twenty Seventeen",
@@ -36,6 +37,7 @@
     "grunt-contrib-jshint": "^3.0.0",
     "grunt-contrib-uglify": "^5.0.0",
     "grunt-contrib-watch": "^1.1.0",
+    "grunt-json2php": "^0.1.4",
     "grunt-replace": "^2.0.1",
     "grunt-rtlcss": "^2.0.2",
     "grunt-sass": "^3.1.0",
