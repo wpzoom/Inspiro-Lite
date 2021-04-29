@@ -126,7 +126,7 @@ function inspiro_get_font_choices( $type = 'heading', $curated = true ) {
 	$font_options  = array();
 	$curated_fonts = 'body' === $type ? inspiro_get_body_curated_fonts() : inspiro_get_heading_curated_fonts();
 
-	$google_font_options = inspiro_get_fonts();
+	$google_font_options = inspiro_get_google_fonts();
 	foreach ( $google_font_options as $font ) {
 		if ( $curated ) {
 			if ( ! in_array( $font['name'], $curated_fonts, true ) ) {
@@ -145,9 +145,9 @@ function inspiro_get_font_choices( $type = 'heading', $curated = true ) {
 /**
  * Returns all Google fonts.
  */
-function inspiro_get_fonts() {
+function inspiro_get_google_fonts() {
 	$fonts = inspiro_get_data_from_file( INSPIRO_THEME_DIR . 'assets/fonts/google-fonts.json' );
-	return apply_filters( 'inspiro_fonts', $fonts );
+	return apply_filters( 'inspiro_google_fonts', $fonts );
 }
 
 /**
@@ -339,18 +339,26 @@ function inspiro_get_body_curated_fonts() {
 /**
  * Returns font weight choices.
  */
-function inspiro_get_font_styles() {
+function inspiro_get_all_font_weight() {
 	$list_font_weights = array(
-		''    => __( 'Default', 'inspiro' ),
-		'100' => 'Thin 100',
-		'200' => 'Extra-light 200',
-		'300' => 'Light 300',
-		'400' => 'Regular 400',
-		'500' => 'Medium 500',
-		'600' => 'Semi-Bold 600',
-		'700' => 'Bold 700',
-		'800' => 'Extra-Bold 800',
-		'900' => 'Black 900',
+		'100'       => __( 'Thin 100', 'inspiro' ),
+		'100italic' => __( '100 Italic', 'inspiro' ),
+		'200'       => __( 'Extra-Light 200', 'inspiro' ),
+		'200italic' => __( '200 Italic', 'inspiro' ),
+		'300'       => __( 'Light 300', 'inspiro' ),
+		'300italic' => __( '300 Italic', 'inspiro' ),
+		'400'       => __( 'Normal 400', 'inspiro' ),
+		'italic'    => __( '400 Italic', 'inspiro' ),
+		'500'       => __( 'Medium 500', 'inspiro' ),
+		'500italic' => __( '500 Italic', 'inspiro' ),
+		'600'       => __( 'Semi-Bold 600', 'inspiro' ),
+		'600italic' => __( '600 Italic', 'inspiro' ),
+		'700'       => __( 'Bold 700', 'inspiro' ),
+		'700italic' => __( '700 Italic', 'inspiro' ),
+		'800'       => __( 'Extra-Bold 800', 'inspiro' ),
+		'800italic' => __( '800 Italic', 'inspiro' ),
+		'900'       => __( 'Ultra-Bold 900', 'inspiro' ),
+		'900italic' => __( '900 Italic', 'inspiro' ),
 	);
 	return $list_font_weights;
 }
