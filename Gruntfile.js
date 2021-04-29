@@ -221,7 +221,7 @@ module.exports = function (grunt) {
 				},
 			},
 			scripts: {
-				files: ["assets/js/unminified/*.js"],
+				files: ["assets/js/unminified/*.js", "inc/customizer/custom-controls/**/*.js"],
 				tasks: ["jshint", "concat", "clean:minifiedJS", "uglify"],
 				options: {
 					livereload: true,
