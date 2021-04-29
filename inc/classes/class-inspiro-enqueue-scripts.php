@@ -51,9 +51,6 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 			// Theme stylesheet.
 			wp_enqueue_style( 'inspiro-style', inspiro_get_assets_uri( 'style', 'css' ), array(), INSPIRO_THEME_VERSION );
 
-			// RTL support.
-			wp_style_add_data( 'inspiro-style', 'rtl', 'replace' );
-
 			// Load the dark colorscheme.
 			if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {
 				wp_enqueue_style( 'inspiro-colors-dark', inspiro_get_assets_uri( 'colors-dark', 'css' ), array( 'inspiro-style' ), INSPIRO_THEME_VERSION );
@@ -76,9 +73,6 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 		public function block_editor_styles() {
 			// Block styles.
 			wp_enqueue_style( 'inspiro-block-editor-style', inspiro_get_assets_uri( 'editor-style', 'css' ), array(), INSPIRO_THEME_VERSION );
-
-			// RTL support.
-			wp_style_add_data( 'inspiro-block-editor-style', 'rtl', 'replace' );
 
 			// Add custom fonts.
 			wp_enqueue_style( 'inspiro-fonts', inspiro_fonts_url(), array(), INSPIRO_THEME_VERSION );

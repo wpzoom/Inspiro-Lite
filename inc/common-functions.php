@@ -15,20 +15,22 @@
  *
  * @param  string $filename The file name.
  * @param  string $filetype The file type [css|js].
+ * @param  string $folder   The folder name.
  * @return string           The full assets url.
  */
-function inspiro_get_assets_uri( $filename, $filetype ) {
+function inspiro_get_assets_uri( $filename, $filetype, $folder = 'assets/' ) {
 	$assets_uri = '';
 
 	// Directory and Extension.
 	$file_prefix = ( SCRIPT_DEBUG ) ? '' : '.min';
 	$dir_name    = ( SCRIPT_DEBUG ) ? 'unminified' : 'minified';
+	$file_rtl    = ( is_rtl() ) ? '-rtl' : '';
 
-	$css_uri = INSPIRO_THEME_URI . 'assets/css/' . $dir_name . '/';
-	$js_uri  = INSPIRO_THEME_URI . 'assets/js/' . $dir_name . '/';
+	$css_uri = INSPIRO_THEME_URI . $folder . 'css/' . $dir_name . '/';
+	$js_uri  = INSPIRO_THEME_URI . $folder . 'js/' . $dir_name . '/';
 
 	if ( 'css' === $filetype ) {
-		$assets_uri = $css_uri . $filename . $file_prefix . '.' . $filetype;
+		$assets_uri = $css_uri . $filename . $file_rtl . $file_prefix . '.' . $filetype;
 	} elseif ( 'js' === $filetype ) {
 		$assets_uri = $js_uri . $filename . $file_prefix . '.' . $filetype;
 	}
