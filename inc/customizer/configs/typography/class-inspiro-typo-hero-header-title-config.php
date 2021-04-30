@@ -55,7 +55,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 			'slider-title-font-family',
 			array(
 				'transport'         => 'postMessage',
-				'sanitize_callback' => 'inspiro_sanitize_fonts',
+				'sanitize_callback' => 'sanitize_text_field',
 				'default'           => "'Inter', sans-serif",
 			)
 		);
@@ -100,7 +100,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 		$wp_customize->add_setting(
 			'slider-title-font-weight',
 			array(
-				'default'           => '',
+				'default'           => '700',
 				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_font_weight',
 			)
@@ -112,7 +112,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 				'label'   => __( 'Font Weight', 'inspiro' ),
 				'section' => 'inspiro_typography_section_hero_header',
 				'type'    => 'select',
-				'choices' => array(),
+				'choices' => Inspiro_Font_Family_Manager::get_font_family_weight( 'slider-title-font-family', $wp_customize ),
 			)
 		);
 
@@ -121,7 +121,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 			array(
 				'default'           => '',
 				'transport'         => 'postMessage',
-				'sanitize_callback' => 'inspiro_sanitize_font_weight',
+				'sanitize_callback' => 'inspiro_sanitize_choices',
 			)
 		);
 

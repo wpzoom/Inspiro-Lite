@@ -175,6 +175,35 @@ if ( ! class_exists( 'Inspiro_Font_Family_Manager' ) ) {
 		}
 
 		/**
+		 * Get font weight for selected Font Family passed by setting key
+		 *
+		 * @param string               $setting_key The setting key name for Font Family control.
+		 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+		 * @return array
+		 */
+		public static function get_font_family_weight( $setting_key, $wp_customize ) {
+			$default            = $wp_customize->get_setting( $setting_key )->default;
+			$select_font_family = get_theme_mod( $setting_key, $default );
+			$font_family        = self::clean_google_fonts( $select_font_family );
+			$all_font_weight    = self::get_all_font_weight();
+
+			$font_family_weight = array(
+				'' => __( 'Inherit', 'inspiro' ),
+			);
+
+			if ( isset( self::$google_fonts[ $font_family ][0] ) && is_array( self::$google_fonts[ $font_family ][0] ) ) {
+				foreach ( self::$google_fonts[ $font_family ][0] as $font_weight ) {
+					// Skip font variants (italic, i).
+					if ( strpos( $font_weight, 'italic' ) === false || strpos( $font_weight, 'i' ) === false ) {
+						$font_family_weight[ $font_weight ] = $all_font_weight[ $font_weight ];
+					}
+				}
+			}
+
+			return $font_family_weight;
+		}
+
+		/**
 		 * Get font presets
 		 *
 		 * @return array Array of all font presets for Inspiro theme
@@ -198,6 +227,34 @@ if ( ! class_exists( 'Inspiro_Font_Family_Manager' ) ) {
 			}
 
 			return apply_filters( 'inspiro/font-presets', self::$font_presets );
+		}
+
+		/**
+		 * Clean font name.
+		 *
+		 * Google Fonts are saved as {'Font Name', Category}. This function cleanes this up to retreive only the {Font Name}.
+		 *
+		 * @since  x.x.x
+		 * @param string $font_value Name of the font.
+		 *
+		 * @return string Font name where commas and inverted commas are removed if the font is a Google Font.
+		 */
+		public static function clean_google_fonts( $font_value ) {
+			// Bail if fontVAlue does not contain a comma.
+			if ( strpos( $font_value, ',' ) === false ) {
+				return $font_value;
+			}
+
+			$split_font        = explode( ',', $font_value );
+			$google_font_value = str_replace( "'", '', $split_font[0] );
+
+			// Check if the cleaned font exists in the Google fonts array.
+			$google_fonts = self::get_google_fonts();
+			if ( isset( $google_fonts[ $google_font_value ] ) ) {
+				$font_value = $google_font_value;
+			}
+
+			return $font_value;
 		}
 
 	}

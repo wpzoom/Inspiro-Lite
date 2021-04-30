@@ -43,7 +43,7 @@ class Inspiro_Typo_Body_Config {
 			'body-font-family',
 			array(
 				'transport'         => 'postMessage',
-				'sanitize_callback' => 'inspiro_sanitize_fonts',
+				'sanitize_callback' => 'sanitize_text_field',
 				'default'           => "'Inter', sans-serif",
 			)
 		);
@@ -56,6 +56,27 @@ class Inspiro_Typo_Body_Config {
 					'label'   => __( 'Font Family', 'inspiro' ),
 					'section' => 'inspiro_typography_section_body',
 					'connect' => 'body-font-weight',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'body-font-variant',
+			array(
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'sanitize_text_field',
+				'default'           => '',
+			)
+		);
+
+		$wp_customize->add_control(
+			new Inspiro_Customize_Font_Variant_Control(
+				$wp_customize,
+				'body-font-variant',
+				array(
+					'label'   => __( 'Variants', 'inspiro' ),
+					'section' => 'inspiro_typography_section_body',
+					'connect' => 'body-font-family',
 				)
 			)
 		);
@@ -100,7 +121,7 @@ class Inspiro_Typo_Body_Config {
 				'label'   => __( 'Font Weight', 'inspiro' ),
 				'section' => 'inspiro_typography_section_body',
 				'type'    => 'select',
-				'choices' => array(),
+				'choices' => Inspiro_Font_Family_Manager::get_font_family_weight( 'body-font-family', $wp_customize ),
 			)
 		);
 
@@ -109,7 +130,7 @@ class Inspiro_Typo_Body_Config {
 			array(
 				'default'           => '',
 				'transport'         => 'postMessage',
-				'sanitize_callback' => 'inspiro_sanitize_font_weight',
+				'sanitize_callback' => 'inspiro_sanitize_choices',
 			)
 		);
 

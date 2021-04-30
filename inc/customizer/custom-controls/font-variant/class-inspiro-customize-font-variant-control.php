@@ -127,14 +127,14 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		<# } #>
 
 		</label>
-		<select data-inherit="<?php echo esc_attr( $this->inspiro_inherit ); ?>" <?php $this->link(); ?>  multiple data-name={{ data.name }}
+		<select data-inherit="<?php echo esc_attr( $this->inspiro_inherit ); ?>" <?php $this->link(); ?>  multiple data-name="{{ data.name }}"
 		data-value="{{data.value}}"
 
 		<# if ( data.connect ) { #>
 			data-connected-control={{ data.connect }}
 		<# } #>
 		<# if ( data.variant ) { #>
-			data-connected-variant="{{data.variant}}";
+			data-connected-variant="{{data.variant}}"
 		<# } #>
 
 		>

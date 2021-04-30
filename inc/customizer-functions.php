@@ -154,18 +154,6 @@ function inspiro_sanitize_multi_choices( $value ) {
 }
 
 /**
- * Sanitize fonts choices.
- *
- * @param string $choice  The value from the setting.
- * @param object $setting The selected setting.
- */
-function inspiro_sanitize_fonts( $choice, $setting ) {
-	$choices = $setting->manager->get_control( $setting->id )->choices;
-	$choices = call_user_func_array( 'array_merge', array_values( $choices ) );
-	return ( array_key_exists( $choice, $choices ) ? $choice : $setting->default );
-}
-
-/**
  * Sanitizes font-weight value.
  *
  * @param string $choice  The value from the setting.

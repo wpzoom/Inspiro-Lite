@@ -85,14 +85,6 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		public $inspiro_inherit = '';
 
 		/**
-		 * All font weights
-		 *
-		 * @since x.x.x
-		 * @var string $inspiro_inherit
-		 */
-		public $inspiro_all_font_weight = array();
-
-		/**
 		 * If true, the preview button for a control will be rendered.
 		 *
 		 * @since x.x.x
@@ -109,8 +101,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * @param array                $args    Default parent's arguments.
 		 */
 		public function __construct( $manager, $id, $args = array() ) {
-			$this->inspiro_inherit         = __( 'Inherit', 'inspiro' );
-			$this->inspiro_all_font_weight = Inspiro_Font_Family_Manager::get_all_font_weight();
+			$this->inspiro_inherit = __( 'Inherit', 'inspiro' );
 			parent::__construct( $manager, $id, $args );
 		}
 

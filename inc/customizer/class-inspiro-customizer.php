@@ -272,6 +272,22 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 			return ob_get_clean();
 		}
 
+		/**
+		 * Print Footer Scripts
+		 *
+		 * @see https://github.com/brainstormforce/astra/blob/663761d3419f25640af9b59e64384bd07f810bc4/inc/customizer/class-astra-customizer.php#L286
+		 *
+		 * @since x.x.x
+		 * @return void
+		 */
+		public function print_footer_scripts() {
+			$output  = '<script type="text/javascript">';
+			$output .= Inspiro_Fonts_Manager::js();
+			$output .= '</script>';
+
+			echo $output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		}
+
 	}
 
 }

@@ -620,7 +620,7 @@ module.exports = function (grunt) {
 	]);
 
 	// Default task.
-	grunt.registerTask("default", ["jshint:uses_defaults", "style", "minify"]);
+	grunt.registerTask("default", ["jshint:uses_defaults", "concat", "minify"]);
 
 	// Grunt release - Create installable package of the local files
 	grunt.registerTask("release", [

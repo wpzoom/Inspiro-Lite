@@ -24,6 +24,16 @@ if ( ! class_exists( 'Inspiro_Fonts_Manager' ) ) {
 		 */
 		public static $fonts = array();
 
+		/**
+		 * Localize Fonts
+		 */
+		public static function js() {
+			$system = wp_json_encode( Inspiro_Font_Family_Manager::get_system_fonts() );
+			$google = wp_json_encode( Inspiro_Font_Family_Manager::get_google_fonts() );
+
+			return 'var InspiroFontFamilies = { system: ' . $system . ', google: ' . $google . ' };';
+		}
+
 	}
 
 }

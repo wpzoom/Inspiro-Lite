@@ -71,7 +71,7 @@ class Inspiro_Typo_H3_Config {
 		$wp_customize->add_setting(
 			'heading3-font-weight',
 			array(
-				'default'           => '',
+				'default'           => '700',
 				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_font_weight',
 			)
@@ -83,7 +83,7 @@ class Inspiro_Typo_H3_Config {
 				'label'   => __( 'Font Weight', 'inspiro' ),
 				'section' => 'inspiro_typography_section_headings',
 				'type'    => 'select',
-				'choices' => array(),
+				'choices' => Inspiro_Font_Family_Manager::get_font_family_weight( 'headings-font-family', $wp_customize ),
 			)
 		);
 
@@ -92,7 +92,7 @@ class Inspiro_Typo_H3_Config {
 			array(
 				'default'           => '',
 				'transport'         => 'postMessage',
-				'sanitize_callback' => 'inspiro_sanitize_font_weight',
+				'sanitize_callback' => 'inspiro_sanitize_choices',
 			)
 		);
 
