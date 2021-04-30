@@ -115,6 +115,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 
 			$this->json['label']       = esc_html( $this->label );
 			$this->json['description'] = $this->description;
+			$this->json['id']          = $this->id;
 			$this->json['name']        = $this->name;
 			$this->json['value']       = $this->value();
 			$this->json['connect']     = $this->connect;
@@ -145,7 +146,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 
 </label>
 
-<select data-inherit="<?php echo esc_attr( $this->inspiro_inherit ); ?>" <?php $this->link(); ?> class="{{ data.font_type }}" data-name="{{ data.name }}" data-value="{{data.value}}" <# if ( data.connect ) { #>data-connected-control={{ data.connect }}<# } #> <# if ( data.variant ) { #>data-connected-variant="{{data.variant}}"<# } #>>
+<select data-inherit="<?php echo esc_attr( $this->inspiro_inherit ); ?>" <?php $this->link(); ?> class="{{ data.font_type }}" data-name="{{ data.id }}" data-value="{{data.value}}" <# if ( data.connect ) { #>data-connected-control={{ data.connect }}<# } #> <# if ( data.variant ) { #>data-connected-variant="{{data.variant}}"<# } #>>
 </select>
 
 			<?php

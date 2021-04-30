@@ -225,6 +225,9 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 							),
 						),
 						'font_weight' => Inspiro_Font_Family_Manager::get_all_font_weight(),
+						'strings'     => array(
+							'inherit' => __( 'Inherit', 'inspiro' ),
+						),
 					)
 				)
 			);

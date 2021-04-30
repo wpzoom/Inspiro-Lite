@@ -74,7 +74,8 @@
 			$(".customize-control-inspiro-font-variant select").on(
 				"select2:unselecting",
 				function (e) {
-					var variantSelect = $(this).data("customize-setting-link"),
+					var name = $(this).data("name"),
+						variantSelect = $(this).data("customize-setting-link") || name,
 						unselectedValue = e.params.args.data.id || "";
 
 					if (unselectedValue) {
@@ -100,7 +101,8 @@
 		 */
 		_initFont: function () {
 			var select = $(this),
-				link = select.data("customize-setting-link"),
+				name = select.data("name"),
+				link = select.data("customize-setting-link") || name,
 				weight = select.data("connected-control"),
 				variant = select.data("connected-variant");
 
@@ -226,7 +228,7 @@
 				selected = "",
 				weightKey = fontSelect.data("connected-control"),
 				weightSelect = api.control(weightKey).container.find("select"),
-				currentWeightTitle = weightSelect.data("inherit"),
+				currentWeightTitle = inspiroCustomControl.strings.inherit,
 				weightValue = init ? weightSelect.val() : "400",
 				inheritWeightObject = ["inherit"],
 				weightObject = ["400", "600"],
