@@ -56,7 +56,7 @@ class Inspiro_Typo_Main_Menu_Config {
 			array(
 				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_fonts',
-				'default'           => 'Inter',
+				'default'           => "'Inter', sans-serif",
 			)
 		);
 

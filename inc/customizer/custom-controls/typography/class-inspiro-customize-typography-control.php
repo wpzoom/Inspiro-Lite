@@ -156,20 +156,6 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 </label>
 
 <select data-inherit="<?php echo esc_attr( $this->inspiro_inherit ); ?>" <?php $this->link(); ?> class="{{ data.font_type }}" data-name="{{ data.name }}" data-value="{{data.value}}" <# if ( data.connect ) { #>data-connected-control={{ data.connect }}<# } #> <# if ( data.variant ) { #>data-connected-variant="{{data.variant}}"<# } #>>
-				<?php
-				var_dump( $this->choices );
-				foreach ( $this->choices as $value => $data ) {
-					if ( is_array( $data ) && ! empty( $data ) ) {
-						echo '<optgroup label="' . esc_attr( $value ) . '">';
-						foreach ( $data as $optgroup_val => $optgroup_data ) {
-							echo '<option value="' . esc_attr( $optgroup_val ) . '"' . selected( $this->value(), $value, false ) . '>' . esc_html( $optgroup_data ) . '</option>';
-						}
-						echo '</optgroup>';
-					} else {
-						echo '<option value="' . esc_attr( $value ) . '"' . selected( $this->value(), $value, false ) . '>' . esc_html( $data ) . '</option>';
-					}
-				}
-				?>
 </select>
 
 			<?php

@@ -48,7 +48,7 @@ class Inspiro_Typo_Mobile_Menu_Config {
 			array(
 				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_fonts',
-				'default'           => 'Inter',
+				'default'           => "'Inter', sans-serif",
 			)
 		);
 
