@@ -32,8 +32,8 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		public function __construct() {
 			add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
 
-			add_action( 'customize_register', array( $this, 'register_control_types' ) );
-			add_action( 'customize_register', array( $this, 'customize_register' ), 11 );
+			add_action( 'customize_register', array( $this, 'register_control_types' ), 2 );
+			add_action( 'customize_register', array( $this, 'include_configurations' ), 2 );
 
 			add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue_control_scripts' ) );
 
@@ -99,7 +99,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		 *
 		 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
 		 */
-		public function customize_register( $wp_customize ) {
+		public function include_configurations( $wp_customize ) {
 			/**
 			 * Upgrade to Inspiro Premium
 			 */
@@ -233,7 +233,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		/**
 		 * Generates HTML for font dropdown
 		 *
-		 * @see https://github.com/brainstormforce/astra/blob/663761d3419f25640af9b59e64384bd07f810bc4/inc/customizer/class-astra-customizer.php#L1265
+		 * @link https://github.com/brainstormforce/astra/blob/663761d3419f25640af9b59e64384bd07f810bc4/inc/customizer/class-astra-customizer.php#L1265
 		 *
 		 * @return string
 		 */
@@ -277,7 +277,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		/**
 		 * Print Footer Scripts
 		 *
-		 * @see https://github.com/brainstormforce/astra/blob/663761d3419f25640af9b59e64384bd07f810bc4/inc/customizer/class-astra-customizer.php#L286
+		 * @link https://github.com/brainstormforce/astra/blob/663761d3419f25640af9b59e64384bd07f810bc4/inc/customizer/class-astra-customizer.php#L286
 		 *
 		 * @since x.x.x
 		 * @return void

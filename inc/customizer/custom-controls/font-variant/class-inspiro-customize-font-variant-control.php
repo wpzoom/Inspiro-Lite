@@ -2,7 +2,7 @@
 /**
  * Customize Typography Control class.
  *
- * @see https://github.com/brainstormforce/astra/
+ * @link https://github.com/brainstormforce/astra/
  *
  * @package Inspiro
  * @since Inspiro x.x.x

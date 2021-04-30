@@ -7,7 +7,7 @@
  *
  * Handles Typography of the site
  *
- * @see https://github.com/brainstormforce/astra/blob/master/inc/customizer/custom-controls/typography/typography.js
+ * @link https://github.com/brainstormforce/astra/blob/master/inc/customizer/custom-controls/typography/typography.js
  */
 
 (function ($) {

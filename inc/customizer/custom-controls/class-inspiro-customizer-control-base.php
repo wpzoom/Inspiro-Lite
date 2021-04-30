@@ -2,7 +2,7 @@
 /**
  * Inspiro Lite: Customizer Control Base
  *
- * @see https://github.com/brainstormforce/astra/
+ * @link https://github.com/brainstormforce/astra/
  *
  * @package Inspiro
  * @subpackage Inspiro_Lite
