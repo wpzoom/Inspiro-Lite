@@ -113,14 +113,13 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		public function to_json() {
 			parent::to_json();
 
-			$this->json['label']                   = esc_html( $this->label );
-			$this->json['description']             = $this->description;
-			$this->json['name']                    = $this->name;
-			$this->json['value']                   = $this->value();
-			$this->json['connect']                 = $this->connect;
-			$this->json['variant']                 = $this->variant;
-			$this->json['link']                    = $this->get_link();
-			$this->json['inspiro_all_font_weight'] = $this->inspiro_all_font_weight;
+			$this->json['label']       = esc_html( $this->label );
+			$this->json['description'] = $this->description;
+			$this->json['name']        = $this->name;
+			$this->json['value']       = $this->value();
+			$this->json['connect']     = $this->connect;
+			$this->json['variant']     = $this->variant;
+			$this->json['link']        = $this->get_link();
 		}
 
 		/**

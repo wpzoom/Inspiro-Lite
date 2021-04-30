@@ -36,6 +36,8 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 			add_action( 'customize_register', array( $this, 'customize_register' ), 11 );
 
 			add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue_control_scripts' ) );
+
+			add_action( 'customize_controls_print_footer_scripts', array( $this, 'print_footer_scripts' ) );
 		}
 
 		/**
