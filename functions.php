@@ -68,9 +68,10 @@ require INSPIRO_THEME_DIR . 'inc/template-functions.php';
 /**
  * Customizer additions.
  */
+require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-font-family-manager.php';
+require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-fonts-manager.php';
 require INSPIRO_THEME_DIR . 'inc/customizer-functions.php';
-require INSPIRO_THEME_DIR . 'inc/customizer.php';
-require INSPIRO_THEME_DIR . 'inc/font.php';
+require INSPIRO_THEME_DIR . 'inc/customizer/class-inspiro-customizer.php';
 
 /**
  * SVG icons functions and filters.

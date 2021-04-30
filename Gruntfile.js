@@ -225,7 +225,7 @@ module.exports = function (grunt) {
 					"assets/js/unminified/*.js",
 					"inc/customizer/custom-controls/**/*.js",
 				],
-				tasks: ["jshint", "concat", "clean:minifiedJS", "uglify"],
+				tasks: ["jshint", "concat", "clean:minifiedJS"],
 				options: {
 					livereload: true,
 				},
@@ -566,7 +566,7 @@ module.exports = function (grunt) {
 			"https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCjpo9bj5Y08pYGwheAu8rubIWB8fP3ALQ",
 			function (error, response, body) {
 				console.log(error, response);
-				if (response && response.statusCode == 200) {
+				if (response && response.statusCode === 200) {
 					var fonts = JSON.parse(body).items.map(function (font) {
 						return {
 							[font.family]: {

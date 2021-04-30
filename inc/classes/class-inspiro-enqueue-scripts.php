@@ -46,7 +46,7 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 		 */
 		public function enqueue_scripts() {
 			// Add custom fonts, used in the main stylesheet.
-			wp_enqueue_style( 'inspiro-fonts', inspiro_fonts_url(), array(), INSPIRO_THEME_VERSION );
+			// wp_enqueue_style( 'inspiro-fonts', inspiro_fonts_url(), array(), INSPIRO_THEME_VERSION );
 
 			// Theme stylesheet.
 			wp_enqueue_style( 'inspiro-style', inspiro_get_assets_uri( 'style', 'css' ), array(), INSPIRO_THEME_VERSION );
@@ -75,7 +75,7 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 			wp_enqueue_style( 'inspiro-block-editor-style', inspiro_get_assets_uri( 'editor-style', 'css' ), array(), INSPIRO_THEME_VERSION );
 
 			// Add custom fonts.
-			wp_enqueue_style( 'inspiro-fonts', inspiro_fonts_url(), array(), INSPIRO_THEME_VERSION );
+			// wp_enqueue_style( 'inspiro-fonts', inspiro_fonts_url(), array(), INSPIRO_THEME_VERSION );
 		}
 
 		/**

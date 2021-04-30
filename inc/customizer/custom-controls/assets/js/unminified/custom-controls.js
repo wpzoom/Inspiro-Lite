@@ -18,7 +18,7 @@
 	/**
 	 * Helper class for the main Customizer interface.
 	 *
-	 * @since 1.0.0
+	 * @since x.x.x
 	 * @class InspiroTypography
 	 */
 	InspiroTypography = {
@@ -26,7 +26,7 @@
 		/**
 		 * Initializes our custom logic for the Customizer.
 		 *
-		 * @since 1.0.0
+		 * @since x.x.x
 		 * @method init
 		 */
 		init: function() {
@@ -36,7 +36,7 @@
 		/**
 		 * Initializes logic for font controls.
 		 *
-		 * @since 1.0.0
+		 * @since x.x.x
 		 * @access private
 		 * @method _initFonts
 		 */
@@ -79,7 +79,7 @@
 		/**
 		 * Initializes logic for a single font control.
 		 *
-		 * @since 1.0.0
+		 * @since x.x.x
 		 * @access private
 		 * @method _initFont
 		 */
@@ -90,12 +90,12 @@
 			weight  = select.data( 'connected-control' ),
 			variant  = select.data( 'connected-variant' );
 
-			if ( 'undefined' != typeof weight ) {
+			if ( 'undefined' != typeof link && 'undefined' != typeof weight ) {
 				api( link ).bind( InspiroTypography._fontSelectChange );
 				InspiroTypography._setFontWeightOptions.apply( api( link ), [ true ] );
 			}
 
-			if ( 'undefined' != typeof variant ) {
+			if ( 'undefined' != typeof link && 'undefined' != typeof variant ) {
 				api( link ).bind( InspiroTypography._fontSelectChange );
 				InspiroTypography._setFontVarianttOptions.apply( api( link ), [ true ] );
 			}
@@ -104,7 +104,7 @@
 		/**
 		 * Callback for when a font control changes.
 		 *
-		 * @since 1.0.0
+		 * @since x.x.x
 		 * @access private
 		 * @method _fontSelectChange
 		 */
@@ -125,7 +125,7 @@
 		 *
 		 * Google Fonts are saved as {'Font Name', Category}. This function cleanes this up to retreive only the {Font Name}.
 		 *
-		 * @since  1.3.0
+		 * @since  x.x.x
 		 * @param  {String} fontValue Name of the font.
 		 *
 		 * @return {String}  Font name where commas and inverted commas are removed if the font is a Google Font.
@@ -152,7 +152,7 @@
 		 *
 		 * This function gets the font weights values respective to the selected fonts family{Font Name}.
 		 *
-		 * @since  1.5.2
+		 * @since  x.x.x
 		 * @param  {String} fontValue Name of the font.
 		 *
 		 * @return {String}  Available font weights for the selected fonts.
@@ -180,7 +180,7 @@
 		 * Sets the options for a font weight control when a
 		 * font family control changes.
 		 *
-		 * @since 1.0.0
+		 * @since x.x.x
 		 * @access private
 		 * @method _setFontWeightOptions
 		 * @param {Boolean} init Whether or not we're initializing this font weight control.
@@ -232,7 +232,7 @@
 		 * Sets the options for a font variant control when a
 		 * font family control changes.
 		 *
-		 * @since 1.5.2
+		 * @since x.x.x
 		 * @access private
 		 * @method _setFontVarianttOptions
 		 * @param {Boolean} init Whether or not we're initializing this font variant control.

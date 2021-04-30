@@ -6,6 +6,11 @@
  * @since Inspiro x.x.x
  */
 
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 if ( class_exists( 'WP_Customize_Control' ) ) {
 
 	/**
