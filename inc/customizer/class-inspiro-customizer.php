@@ -4,7 +4,7 @@
  *
  * @package Inspiro
  * @subpackage Inspiro_Lite
- * @since Inspiro 1.0.0
+ * @since Inspiro x.x.x
  */
 
 if ( ! class_exists( 'Inspiro_Customizer' ) ) {
@@ -151,12 +151,15 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 					'typo-panel',
 					'typo-body',
 					'typo-headings',
-					'typo-h1',
-					'typo-h2',
-					'typo-h3',
-					'typo-h4',
-					'typo-h5',
-					'typo-h6',
+					// phpcs:disable Squiz.PHP.CommentedOutCode.Found
+					// TODO: Enable all panels in the next update
+					// 'typo-h1',
+					// 'typo-h2',
+					// 'typo-h3',
+					// 'typo-h4',
+					// 'typo-h5',
+					// 'typo-h6'.
+					// phpcs:enable Squiz.PHP.CommentedOutCode.Found
 					'typo-main-menu',
 					'typo-mobile-menu',
 					'typo-hero-header-title',

@@ -66,7 +66,7 @@ class Inspiro_Typo_Headings_Config {
 			array(
 				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_font_variant',
-				'default'           => '',
+				'default'           => '700',
 			)
 		);
 

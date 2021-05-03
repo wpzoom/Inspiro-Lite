@@ -56,7 +56,7 @@ class Inspiro_Typo_Main_Menu_Config {
 			array(
 				'transport'         => 'postMessage',
 				'sanitize_callback' => 'sanitize_text_field',
-				'default'           => "'Inter', sans-serif",
+				'default'           => 'inherit',
 			)
 		);
 
@@ -78,7 +78,7 @@ class Inspiro_Typo_Main_Menu_Config {
 			array(
 				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_font_variant',
-				'default'           => '',
+				'default'           => '400',
 			)
 		);
 

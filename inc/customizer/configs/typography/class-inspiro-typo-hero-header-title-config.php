@@ -78,7 +78,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 			array(
 				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_font_variant',
-				'default'           => '',
+				'default'           => '700',
 			)
 		);
 

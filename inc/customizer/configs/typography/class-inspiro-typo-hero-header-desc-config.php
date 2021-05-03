@@ -115,7 +115,7 @@ class Inspiro_Typo_Hero_Header_Desc_Config {
 		$wp_customize->add_setting(
 			'slider-text-font-weight',
 			array(
-				'default'           => '400',
+				'default'           => 'inherit',
 				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_font_weight',
 			)

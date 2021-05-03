@@ -53,7 +53,7 @@ if ( ! class_exists( 'Inspiro_Fonts_Manager' ) ) {
 		 * Constructor
 		 */
 		public function __construct() {
-			add_action( 'init', array( $this, 'add_fonts' ) );
+			add_action( 'init', array( $this, 'add_theme_fonts' ) );
 		}
 
 		/**
@@ -71,11 +71,62 @@ if ( ! class_exists( 'Inspiro_Fonts_Manager' ) ) {
 		 *
 		 * @return void
 		 */
-		public function add_fonts() {
+		public function add_theme_fonts() {
+			/**
+			 * Body
+			 */
+
 			$body_font_family   = get_theme_mod( 'body-font-family', "'Inter', sans-serif" );
 			$body_font_variants = get_theme_mod( 'body-font-variant', '400' );
-
 			self::add_font( $body_font_family, $body_font_variants );
+
+			/**
+			 * Headings
+			 */
+
+			$headings_font_family   = get_theme_mod( 'headings-font-family', "'Montserrat', sans-serif" );
+			$headings_font_variants = get_theme_mod( 'headings-font-variant', '500,700' );
+			self::add_font( $headings_font_family, $headings_font_variants );
+
+			/**
+			 * Hero Header Title
+			 */
+
+			$hero_header_title_font_family   = get_theme_mod( 'slider-title-font-family', "'Inter', sans-serif" );
+			$hero_header_title_font_variants = get_theme_mod( 'slider-title-font-variant', '700' );
+			self::add_font( $hero_header_title_font_family, $hero_header_title_font_variants );
+
+			/**
+			 * Hero Header Description
+			 */
+
+			$hero_header_desc_font_family   = get_theme_mod( 'slider-text-font-family', "'Inter', sans-serif" );
+			$hero_header_desc_font_variants = get_theme_mod( 'slider-text-font-variant', 'inherit' );
+			self::add_font( $hero_header_desc_font_family, $hero_header_desc_font_variants );
+
+			/**
+			 * Hero Header Button
+			 */
+
+			$hero_header_button_font_family   = get_theme_mod( 'slider-button-font-family', "'Inter', sans-serif" );
+			$hero_header_button_font_variants = get_theme_mod( 'slider-button-font-variant', 'inherit' );
+			self::add_font( $hero_header_button_font_family, $hero_header_button_font_variants );
+
+			/**
+			 * Main Menu
+			 */
+
+			$mainmenu_font_family   = get_theme_mod( 'mainmenu-font-family', 'inherit' );
+			$mainmenu_font_variants = get_theme_mod( 'mainmenu-font-variant', 'inherit' );
+			self::add_font( $mainmenu_font_family, $mainmenu_font_variants );
+
+			/**
+			 * Mobile Menu
+			 */
+
+			$mobilemenu_font_family   = get_theme_mod( 'mobilemenu-font-family', 'inherit' );
+			$mobilemenu_font_variants = get_theme_mod( 'mobilemenu-font-variant', '600' );
+			self::add_font( $mobilemenu_font_family, $mobilemenu_font_variants );
 		}
 
 		/**
