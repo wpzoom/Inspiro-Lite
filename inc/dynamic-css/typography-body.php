@@ -20,7 +20,7 @@ add_filter( 'inspiro/dynamic_theme_css', 'inspiro_typo_body_dynamic_theme_css' )
  * @return string Generated dynamic CSS for Body typography.
  */
 function inspiro_typo_body_dynamic_theme_css( $dynamic_css ) {
-	$body_font_family    = get_theme_mod( 'body-font-family', 'inherit' );
+	$body_font_family    = get_theme_mod( 'body-font-family', "'Inter', sans-serif" );
 	$body_font_size      = get_theme_mod( 'body-font-size', '16' );
 	$body_font_weight    = get_theme_mod( 'body-font-weight', '400' );
 	$body_text_transform = get_theme_mod( 'body-text-transform', '' );

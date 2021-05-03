@@ -20,7 +20,7 @@ add_filter( 'inspiro/dynamic_theme_css', 'inspiro_typo_headings_dynamic_theme_cs
  * @return string Generated dynamic CSS for Headings typography.
  */
 function inspiro_typo_headings_dynamic_theme_css( $dynamic_css ) {
-	$headings_font_family    = get_theme_mod( 'headings-font-family', 'inherit' );
+	$headings_font_family    = get_theme_mod( 'headings-font-family', "'Montserrat', sans-serif" );
 	$headings_font_weight    = get_theme_mod( 'headings-font-weight', '700' );
 	$headings_text_transform = get_theme_mod( 'headings-text-transform', '' );
 	$headings_line_height    = get_theme_mod( 'headings-line-height', '1.4' );

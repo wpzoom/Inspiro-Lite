@@ -20,7 +20,7 @@ add_filter( 'inspiro/dynamic_theme_css', 'inspiro_typo_hero_header_desc_dynamic_
  * @return string Generated dynamic CSS for Header Description typography.
  */
 function inspiro_typo_hero_header_desc_dynamic_theme_css( $dynamic_css ) {
-	$hero_header_desc_font_family    = get_theme_mod( 'slider-text-font-family', 'inherit' );
+	$hero_header_desc_font_family    = get_theme_mod( 'slider-text-font-family', "'Inter', sans-serif" );
 	$hero_header_desc_font_size      = get_theme_mod( 'slider-text-font-size', '20' );
 	$hero_header_desc_font_weight    = get_theme_mod( 'slider-text-font-weight', '400' );
 	$hero_header_desc_text_transform = get_theme_mod( 'slider-text-text-transform', '' );

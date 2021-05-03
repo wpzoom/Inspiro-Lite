@@ -20,7 +20,7 @@ add_filter( 'inspiro/dynamic_theme_css', 'inspiro_typo_hero_header_title_dynamic
  * @return string Generated dynamic CSS for Header Title typography.
  */
 function inspiro_typo_hero_header_title_dynamic_theme_css( $dynamic_css ) {
-	$hero_header_title_font_family    = get_theme_mod( 'slider-title-font-family', 'inherit' );
+	$hero_header_title_font_family    = get_theme_mod( 'slider-title-font-family', "'Inter', sans-serif" );
 	$hero_header_title_font_size      = get_theme_mod( 'slider-title-font-size', '80' );
 	$hero_header_title_font_weight    = get_theme_mod( 'slider-title-font-weight', '700' );
 	$hero_header_title_text_transform = get_theme_mod( 'slider-title-text-transform', '' );
