@@ -25,6 +25,38 @@ if ( ! class_exists( 'Inspiro_Fonts_Manager' ) ) {
 		public static $fonts = array();
 
 		/**
+		 * Google Font URL
+		 *
+		 * @var string
+		 */
+		public static $google_font_url = '';
+
+		/**
+		 * Instance
+		 *
+		 * @access private
+		 * @var object
+		 */
+		private static $instance;
+
+		/**
+		 * Initiator
+		 */
+		public static function get_instance() {
+			if ( ! isset( self::$instance ) ) {
+				self::$instance = new self();
+			}
+			return self::$instance;
+		}
+
+		/**
+		 * Constructor
+		 */
+		public function __construct() {
+			add_action( 'init', array( $this, 'add_fonts' ) );
+		}
+
+		/**
 		 * Localize Fonts
 		 */
 		public static function js() {
@@ -34,6 +66,179 @@ if ( ! class_exists( 'Inspiro_Fonts_Manager' ) ) {
 			return 'var InspiroFontFamilies = { system: ' . $system . ', google: ' . $google . ' };';
 		}
 
+		/**
+		 * Register all Fonts
+		 *
+		 * @return void
+		 */
+		public function add_fonts() {
+			$body_font_family   = get_theme_mod( 'body-font-family', "'Inter', sans-serif" );
+			$body_font_variants = get_theme_mod( 'body-font-variant', '400' );
+
+			self::add_font( $body_font_family, $body_font_variants );
+		}
+
+		/**
+		 * Adds data to the $fonts array for a font to be rendered.
+		 *
+		 * @since x.x.x
+		 * @param string $name The name key of the font to add.
+		 * @param array  $variants An array of weight variants.
+		 * @return void
+		 */
+		public static function add_font( $name, $variants = array() ) {
+			if ( 'inherit' == $name ) {
+				return;
+			}
+			if ( ! is_array( $variants ) ) {
+				// For multiple variant selectons for fonts.
+				$variants = explode( ',', str_replace( 'italic', 'i', $variants ) );
+			}
+
+			if ( is_array( $variants ) ) {
+				$key = array_search( 'inherit', $variants );
+				if ( false !== $key ) {
+					unset( $variants[ $key ] );
+
+					if ( ! in_array( 400, $variants ) ) {
+						$variants[] = 400;
+					}
+				}
+			} elseif ( 'inherit' == $variants ) {
+				$variants = 400;
+			}
+
+			if ( isset( self::$fonts[ $name ] ) ) {
+				foreach ( (array) $variants as $variant ) {
+					if ( ! in_array( $variant, self::$fonts[ $name ]['variants'] ) ) {
+						self::$fonts[ $name ]['variants'][] = $variant;
+					}
+				}
+			} else {
+				self::$fonts[ $name ] = array(
+					'variants' => (array) $variants,
+				);
+			}
+		}
+
+		/**
+		 * Get fonts
+		 *
+		 * @return array
+		 */
+		public function get_fonts() {
+			do_action( 'inspiro/get_fonts' );
+			return apply_filters( 'inspiro/add_fonts', self::$fonts );
+		}
+
+		/**
+		 * Get google font url
+		 *
+		 * @return string
+		 */
+		public static function get_google_font_url() {
+			return self::$google_font_url;
+		}
+
+		/**
+		 * Renders the <link> tag for all fonts in the $fonts array.
+		 *
+		 * @since x.x.x
+		 * @return void
+		 */
+		public static function render_fonts() {
+			$font_list = apply_filters( 'inspiro/render_fonts', self::get_fonts() );
+
+			$google_fonts = array();
+			$font_subset  = array();
+
+			$system_fonts = Inspiro_Font_Family_Manager::get_system_fonts();
+
+			foreach ( $font_list as $name => $font ) {
+				if ( ! empty( $name ) && ! isset( $system_fonts[ $name ] ) ) {
+
+					// Add font variants.
+					$google_fonts[ $name ] = $font['variants'];
+
+					// Add Subset.
+					$subset = apply_filters( 'inspiro/font_subset', '', $name );
+					if ( ! empty( $subset ) ) {
+						$font_subset[] = $subset;
+					}
+				}
+			}
+
+			self::$google_font_url = self::google_fonts_url( $google_fonts, $font_subset );
+			wp_enqueue_style( 'inspiro-google-fonts', self::$google_font_url, array(), INSPIRO_THEME_VERSION, 'all' );
+		}
+
+		/**
+		 * Google Font URL
+		 * Combine multiple google font in one URL
+		 *
+		 * @link https://shellcreeper.com/?p=1476
+		 * @param array $fonts      Google Fonts array.
+		 * @param array $subsets    Font's Subsets array.
+		 *
+		 * @return string
+		 */
+		public static function google_fonts_url( $fonts, $subsets = array() ) {
+
+			/* URL */
+			$base_url  = '//fonts.googleapis.com/css';
+			$font_args = array();
+			$family    = array();
+
+			$fonts = apply_filters( 'inspiro/google_fonts_selected', $fonts );
+
+			/* Format Each Font Family in Array */
+			foreach ( $fonts as $font_name => $font_weight ) {
+				$font_name = str_replace( ' ', '+', $font_name );
+				if ( ! empty( $font_weight ) ) {
+					if ( is_array( $font_weight ) ) {
+						$font_weight = implode( ',', $font_weight );
+					}
+					$font_family = explode( ',', $font_name );
+					$font_family = str_replace( "'", '', inspiro_get_prop( $font_family, 0 ) );
+					$family[]    = trim( $font_family . ':' . rawurlencode( trim( $font_weight ) ) );
+				} else {
+					$family[] = trim( $font_name );
+				}
+			}
+
+			/* Only return URL if font family defined. */
+			if ( ! empty( $family ) ) {
+
+				/* Make Font Family a String */
+				$family = implode( '|', $family );
+
+				/* Add font family in args */
+				$font_args['family'] = $family;
+
+				/* Add font subsets in args */
+				if ( ! empty( $subsets ) ) {
+
+					/* format subsets to string */
+					if ( is_array( $subsets ) ) {
+						$subsets = implode( ',', $subsets );
+					}
+
+					$font_args['subset'] = rawurlencode( trim( $subsets ) );
+				}
+
+				$font_args['display'] = 'swap';
+
+				return add_query_arg( $font_args, $base_url );
+			}
+
+			return '';
+		}
+
 	}
 
 }
+
+/**
+ *  Kicking this off by calling 'get_instance()' method
+ */
+Inspiro_Fonts_Manager::get_instance();

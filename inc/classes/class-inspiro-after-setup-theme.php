@@ -161,7 +161,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 			add_editor_style(
 				array(
 					'assets/css/' . $dir_name . '/editor-style' . $file_prefix . '.css',
-					// inspiro_fonts_url(),
+					Inspiro_Fonts_Manager::get_google_font_url(),
 				)
 			);
 

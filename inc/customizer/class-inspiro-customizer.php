@@ -9,6 +9,9 @@
 
 if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 
+	/**
+	 * Help class for Customizer
+	 */
 	class Inspiro_Customizer {
 
 		/**
@@ -29,6 +32,9 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 			return self::$instance;
 		}
 
+		/**
+		 * Constructor
+		 */
 		public function __construct() {
 			add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
 

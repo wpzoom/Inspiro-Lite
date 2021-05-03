@@ -66,7 +66,7 @@ class Inspiro_Typo_Body_Config {
 			array(
 				'transport'         => 'postMessage',
 				'sanitize_callback' => 'sanitize_text_field',
-				'default'           => '',
+				'default'           => '400',
 			)
 		);
 
