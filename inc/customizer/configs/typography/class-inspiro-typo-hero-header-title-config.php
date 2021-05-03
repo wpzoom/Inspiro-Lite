@@ -54,7 +54,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 		$wp_customize->add_setting(
 			'slider-title-font-family',
 			array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'sanitize_text_field',
 				'default'           => "'Inter', sans-serif",
 			)
@@ -76,7 +76,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 		$wp_customize->add_setting(
 			'slider-title-font-variant',
 			array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_font_variant',
 				'default'           => '700',
 			)
@@ -99,7 +99,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 			'slider-title-font-size',
 			array(
 				'default'           => 80,
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_integer',
 			)
 		);
@@ -124,7 +124,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 			'slider-title-font-weight',
 			array(
 				'default'           => '700',
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_font_weight',
 			)
 		);
@@ -143,7 +143,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 			'slider-title-text-transform',
 			array(
 				'default'           => '',
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_choices',
 			)
 		);
@@ -168,7 +168,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 			'slider-title-line-height',
 			array(
 				'default'           => 1.25,
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_float',
 			)
 		);

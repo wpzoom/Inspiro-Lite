@@ -54,7 +54,7 @@ class Inspiro_Typo_Main_Menu_Config {
 		$wp_customize->add_setting(
 			'mainmenu-font-family',
 			array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'sanitize_text_field',
 				'default'           => 'inherit',
 			)
@@ -76,7 +76,7 @@ class Inspiro_Typo_Main_Menu_Config {
 		$wp_customize->add_setting(
 			'mainmenu-font-variant',
 			array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_font_variant',
 				'default'           => '400',
 			)
@@ -99,7 +99,7 @@ class Inspiro_Typo_Main_Menu_Config {
 			'mainmenu-font-size',
 			array(
 				'default'           => 16,
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_integer',
 			)
 		);
@@ -124,7 +124,7 @@ class Inspiro_Typo_Main_Menu_Config {
 			'mainmenu-font-weight',
 			array(
 				'default'           => '400',
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_font_weight',
 			)
 		);
@@ -143,7 +143,7 @@ class Inspiro_Typo_Main_Menu_Config {
 			'mainmenu-text-transform',
 			array(
 				'default'           => '',
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_choices',
 			)
 		);
@@ -168,7 +168,7 @@ class Inspiro_Typo_Main_Menu_Config {
 			'mainmenu-line-height',
 			array(
 				'default'           => 1.4,
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_float',
 			)
 		);

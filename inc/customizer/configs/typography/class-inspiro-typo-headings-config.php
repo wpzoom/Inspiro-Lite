@@ -42,7 +42,7 @@ class Inspiro_Typo_Headings_Config {
 		$wp_customize->add_setting(
 			'headings-font-family',
 			array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'sanitize_text_field',
 				'default'           => "'Montserrat', sans-serif",
 			)
@@ -64,7 +64,7 @@ class Inspiro_Typo_Headings_Config {
 		$wp_customize->add_setting(
 			'headings-font-variant',
 			array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_font_variant',
 				'default'           => '700',
 			)
@@ -87,7 +87,7 @@ class Inspiro_Typo_Headings_Config {
 			'headings-font-weight',
 			array(
 				'default'           => '700',
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_font_weight',
 			)
 		);
@@ -106,7 +106,7 @@ class Inspiro_Typo_Headings_Config {
 			'headings-text-transform',
 			array(
 				'default'           => 'inherit',
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_choices',
 			)
 		);
@@ -131,7 +131,7 @@ class Inspiro_Typo_Headings_Config {
 			'headings-line-height',
 			array(
 				'default'           => 1.4,
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_float',
 			)
 		);

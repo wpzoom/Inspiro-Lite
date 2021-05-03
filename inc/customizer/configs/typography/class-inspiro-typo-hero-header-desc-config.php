@@ -46,7 +46,7 @@ class Inspiro_Typo_Hero_Header_Desc_Config {
 		$wp_customize->add_setting(
 			'slider-text-font-family',
 			array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'sanitize_text_field',
 				'default'           => "'Inter', sans-serif",
 			)
@@ -68,7 +68,7 @@ class Inspiro_Typo_Hero_Header_Desc_Config {
 		$wp_customize->add_setting(
 			'slider-text-font-variant',
 			array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_font_variant',
 				'default'           => '',
 			)
@@ -91,7 +91,7 @@ class Inspiro_Typo_Hero_Header_Desc_Config {
 			'slider-text-font-size',
 			array(
 				'default'           => 20,
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_integer',
 			)
 		);
@@ -116,7 +116,7 @@ class Inspiro_Typo_Hero_Header_Desc_Config {
 			'slider-text-font-weight',
 			array(
 				'default'           => 'inherit',
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_font_weight',
 			)
 		);
@@ -135,7 +135,7 @@ class Inspiro_Typo_Hero_Header_Desc_Config {
 			'slider-text-text-transform',
 			array(
 				'default'           => '',
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_choices',
 			)
 		);
@@ -160,7 +160,7 @@ class Inspiro_Typo_Hero_Header_Desc_Config {
 			'slider-text-line-height',
 			array(
 				'default'           => 1.8,
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_float',
 			)
 		);

@@ -46,7 +46,7 @@ class Inspiro_Typo_Hero_Header_Button_Config {
 		$wp_customize->add_setting(
 			'slider-button-font-family',
 			array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'sanitize_text_field',
 				'default'           => "'Inter', sans-serif",
 			)
@@ -68,7 +68,7 @@ class Inspiro_Typo_Hero_Header_Button_Config {
 		$wp_customize->add_setting(
 			'slider-button-font-variant',
 			array(
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_font_variant',
 				'default'           => '',
 			)
@@ -91,7 +91,7 @@ class Inspiro_Typo_Hero_Header_Button_Config {
 			'slider-button-font-size',
 			array(
 				'default'           => 16,
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_integer',
 			)
 		);
@@ -116,7 +116,7 @@ class Inspiro_Typo_Hero_Header_Button_Config {
 			'slider-button-font-weight',
 			array(
 				'default'           => 'inherit',
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_font_weight',
 			)
 		);
@@ -135,7 +135,7 @@ class Inspiro_Typo_Hero_Header_Button_Config {
 			'slider-button-text-transform',
 			array(
 				'default'           => '',
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_choices',
 			)
 		);
@@ -160,7 +160,7 @@ class Inspiro_Typo_Hero_Header_Button_Config {
 			'slider-button-line-height',
 			array(
 				'default'           => 1.8,
-				'transport'         => 'postMessage',
+				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_float',
 			)
 		);
