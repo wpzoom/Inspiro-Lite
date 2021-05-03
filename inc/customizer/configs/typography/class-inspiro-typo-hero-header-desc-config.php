@@ -60,6 +60,29 @@ class Inspiro_Typo_Hero_Header_Desc_Config {
 					'label'   => __( 'Font Family', 'inspiro' ),
 					'section' => 'inspiro_typography_section_hero_header',
 					'connect' => 'slider-text-font-weight',
+					'variant' => 'slider-text-font-variant',
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'slider-text-font-variant',
+			array(
+				'transport'         => 'postMessage',
+				'sanitize_callback' => 'sanitize_text_field',
+				'default'           => '',
+			)
+		);
+
+		$wp_customize->add_control(
+			new Inspiro_Customize_Font_Variant_Control(
+				$wp_customize,
+				'slider-text-font-variant',
+				array(
+					'label'       => __( 'Variants', 'inspiro' ),
+					'description' => __( 'Only selected Font Variants will be loaded from Google Fonts.', 'inspiro' ),
+					'section'     => 'inspiro_typography_section_hero_header',
+					'connect'     => 'slider-text-font-family',
 				)
 			)
 		);

@@ -111,7 +111,7 @@
 
 			if ("undefined" != typeof link && "undefined" != typeof variant) {
 				api(link).bind(InspiroTypography._fontSelectChange);
-				InspiroTypography._setFontVarianttOptions.apply(api(link), [
+				InspiroTypography._setFontVariantOptions.apply(api(link), [
 					true,
 				]);
 			}
@@ -131,7 +131,7 @@
 			InspiroTypography._setFontWeightOptions.apply(this, [false]);
 
 			if ("undefined" != typeof variants) {
-				InspiroTypography._setFontVarianttOptions.apply(this, [false]);
+				InspiroTypography._setFontVariantOptions.apply(this, [false]);
 			}
 		},
 
@@ -275,10 +275,10 @@
 		 *
 		 * @since x.x.x
 		 * @access private
-		 * @method _setFontVarianttOptions
+		 * @method _setFontVariantOptions
 		 * @param {Boolean} init Whether or not we're initializing this font variant control.
 		 */
-		_setFontVarianttOptions: function (init) {
+		_setFontVariantOptions: function (init) {
 			var i = 0,
 				fontSelect = api.control(this.id).container.find("select"),
 				fontValue = this(),
@@ -302,9 +302,9 @@
 					.closest("optgroup")
 					.attr("label") || "";
 			if ("Google" == selectedOptionGroup) {
-				variantSelect.parent().removeClass("inspiro-hide");
+				variantSelect.parent().show();
 			} else {
-				variantSelect.parent().addClass("inspiro-hide");
+				variantSelect.parent().hide();
 			}
 
 			var fontValue = InspiroTypography._cleanGoogleFonts(fontValue);

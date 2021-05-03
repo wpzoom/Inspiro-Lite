@@ -147,7 +147,6 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 			?>
 		<input class="inspiro-font-variant-hidden-value" type="hidden" value="{{data.value}}">
 		</select>
-		<span class="inspiro-control-tooltip dashicons dashicons-editor-help inspiro-variant-description" title="<?php esc_attr_e( 'Only selected Font Variants will be loaded from Google Fonts.', 'inspiro' ); ?>"></span>
 			<?php
 		}
 	}

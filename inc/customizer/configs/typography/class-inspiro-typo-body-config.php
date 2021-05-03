@@ -56,6 +56,7 @@ class Inspiro_Typo_Body_Config {
 					'label'   => __( 'Font Family', 'inspiro' ),
 					'section' => 'inspiro_typography_section_body',
 					'connect' => 'body-font-weight',
+					'variant' => 'body-font-variant',
 				)
 			)
 		);
@@ -74,9 +75,10 @@ class Inspiro_Typo_Body_Config {
 				$wp_customize,
 				'body-font-variant',
 				array(
-					'label'   => __( 'Variants', 'inspiro' ),
-					'section' => 'inspiro_typography_section_body',
-					'connect' => 'body-font-family',
+					'label'       => __( 'Variants', 'inspiro' ),
+					'description' => __( 'Only selected Font Variants will be loaded from Google Fonts.', 'inspiro' ),
+					'section'     => 'inspiro_typography_section_body',
+					'connect'     => 'body-font-family',
 				)
 			)
 		);
