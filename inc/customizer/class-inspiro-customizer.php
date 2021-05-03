@@ -39,7 +39,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 			add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
 
 			add_action( 'customize_register', array( $this, 'register_control_types' ), 2 );
-			add_action( 'customize_register', array( $this, 'include_configurations' ), 2 );
+			add_action( 'customize_register', array( $this, 'include_configurations' ) );
 
 			add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue_control_scripts' ) );
 
