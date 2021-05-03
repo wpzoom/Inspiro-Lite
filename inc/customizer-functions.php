@@ -168,6 +168,19 @@ function inspiro_sanitize_font_weight( $choice, $setting ) {
 }
 
 /**
+ * Sanitize Font variant
+ *
+ * @param  mixed $input setting input.
+ * @return mixed        setting input value.
+ */
+function inspiro_sanitize_font_variant( $input ) {
+	if ( is_array( $input ) ) {
+		$input = implode( ',', $input );
+	}
+	return sanitize_text_field( $input );
+}
+
+/**
  * Sanitizes integer.
  *
  * @param int $value The value from the setting.

@@ -77,7 +77,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 			'slider-title-font-variant',
 			array(
 				'transport'         => 'postMessage',
-				'sanitize_callback' => 'sanitize_text_field',
+				'sanitize_callback' => 'inspiro_sanitize_font_variant',
 				'default'           => '',
 			)
 		);

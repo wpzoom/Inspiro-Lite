@@ -65,7 +65,7 @@ class Inspiro_Typo_Headings_Config {
 			'headings-font-variant',
 			array(
 				'transport'         => 'postMessage',
-				'sanitize_callback' => 'sanitize_text_field',
+				'sanitize_callback' => 'inspiro_sanitize_font_variant',
 				'default'           => '',
 			)
 		);

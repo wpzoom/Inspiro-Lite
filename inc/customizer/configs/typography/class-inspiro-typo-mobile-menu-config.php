@@ -69,7 +69,7 @@ class Inspiro_Typo_Mobile_Menu_Config {
 			'mobilemenu-font-variant',
 			array(
 				'transport'         => 'postMessage',
-				'sanitize_callback' => 'sanitize_text_field',
+				'sanitize_callback' => 'inspiro_sanitize_font_variant',
 				'default'           => '',
 			)
 		);

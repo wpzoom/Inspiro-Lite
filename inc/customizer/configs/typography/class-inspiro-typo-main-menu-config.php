@@ -77,7 +77,7 @@ class Inspiro_Typo_Main_Menu_Config {
 			'mainmenu-font-variant',
 			array(
 				'transport'         => 'postMessage',
-				'sanitize_callback' => 'sanitize_text_field',
+				'sanitize_callback' => 'inspiro_sanitize_font_variant',
 				'default'           => '',
 			)
 		);
