@@ -5,34 +5,64 @@
  * when users open or close the front page sections section.
  */
 
-(function() {
-	wp.customize.bind( 'ready', function() {
-
+(function (api, $) {
+	api.bind("ready", function () {
 		// Only show the color hex control when there's a custom color scheme.
-		wp.customize( 'colorscheme', function( setting ) {
-			wp.customize.control( 'colorscheme_hex', function( control ) {
-				var visibility = function() {
-					if ( 'custom' === setting.get() ) {
-						control.container.slideDown( 180 );
+		api("colorscheme", function (setting) {
+			api.control("colorscheme_hex", function (control) {
+				var visibility = function () {
+					if ("custom" === setting.get()) {
+						control.container.slideDown(180);
 					} else {
-						control.container.slideUp( 180 );
+						control.container.slideUp(180);
 					}
 				};
 
 				visibility();
-				setting.bind( visibility );
+				setting.bind(visibility);
 			});
 		});
 	});
 
 	// Extends our custom "upgrade-pro" section.
-	wp.customize.sectionConstructor['upgrade-pro'] = wp.customize.Section.extend({
+	api.sectionConstructor["upgrade-pro"] = api.Section.extend({
 		// No events for this type of section.
-		attachEvents: function() { },
+		attachEvents: function () {},
 
 		// Always make the section active.
-		isContextuallyActive: function() {
+		isContextuallyActive: function () {
 			return true;
-		}
+		},
 	});
-})();
+
+	api.controlConstructor["inspiro-range"] = api.Control.extend({
+		ready: function () {
+			var control = this,
+				$input = this.container.find(".inspiro-control-range-value"),
+				$slider = this.container.find(".inspiro-control-range");
+
+			$slider.on("input change keyup", function () {
+				$input.val($(this).val()).trigger("change");
+			});
+
+			if (control.setting() === "") {
+				$slider.val(parseFloat($slider.attr("min")));
+			}
+
+			$input.on("change keyup", function () {
+				var value = $(this).val();
+				control.setting.set(value);
+				if (value) {
+					$slider.val(parseFloat(value));
+				} else {
+					$slider.val(parseFloat($slider.attr("min")));
+				}
+			});
+
+			// Update the slider if the setting changes.
+			control.setting.bind(function (value) {
+				$slider.val(parseFloat(value));
+			});
+		},
+	});
+})(wp.customize, jQuery);
