@@ -16,25 +16,12 @@ Description: Used to style the TinyMCE editor.
  * 8.0 - RTL
  */
 
-@import "variables-site/", "mixins/";
+@import "variables-site/";
 
-/**
- * 1.0 - Body
- */
-
-@import "layout/";
-
-/**
- * 2.0 - Typography
- */
-
-@import "typography/";
 
 /**
  * 3.0 - Elements
  */
-
-@import "modules/formatting", "elements/lists", "elements/tables", "elements/links";
 
 .wp-block {
     margin-bottom: 30px;
@@ -82,51 +69,7 @@ Description: Used to style the TinyMCE editor.
     -moz-osx-font-smoothing: grayscale;
 }
 
-/**
- * 4.0 - Alignment
- */
 
-@import "modules/alignments", "media/alignment";
-
-/**
- * 5.0 - Caption
- */
-
-@import "media/caption";
-
-/**
- * 6.0 - Galleries
- */
-
-@import "media/galleries";
-
-/**
- * 7.0 - Media Elements
- */
-@import "media/audio-player", "media/playlist-light", "media/playlist-dark", "media/playlist-overrides";
-
-/**
- * 8.0 - RTL
- */
-
-.rtl th {
-    text-align: right;
-}
-
-.rtl ol > li:before {
-    left: auto;
-    right: -1.5em;
-}
-
-.rtl li > ul,
-.rtl li > ol {
-    margin-left: 0;
-    margin-right: 1.5em;
-}
-
-.rtl .mejs-offscreen {
-    right: -10000px;
-}
 
 .wp-block-button .wp-block-button__link {
     text-transform: uppercase;

@@ -160,7 +160,7 @@ function inspiro_get_starter_content() {
 		'attachments' => array(
 			'image-aerial-land' => array(
 				'post_title' => _x( 'Aerial Land', 'Theme starter content', 'inspiro' ),
-				'file'       => 'assets/images/StockSnap_PU4RMD67KZ.jpg', // URL relative to the template directory.
+				'file'       => 'assets/images/StockSnap_M6D1GS9PSL.jpg', // URL relative to the template directory.
 			),
 		),
 
