@@ -22,6 +22,7 @@ if ( ! function_exists( 'inspiro_selector_mainmenu' ) ) {
 	 */
 	function inspiro_selector_mainmenu( $selectors ) {
 		$selectors['typo-mainmenu'] = '.navbar-nav a';
+		$selectors['mainmenu-font-size-media'] = '@media screen and (min-width: 782px)';
 		return $selectors;
 	}
 }
@@ -43,13 +44,11 @@ function inspiro_dynamic_theme_css_mainmenu( $dynamic_css ) {
 
 	$selectors = apply_filters( 'inspiro/dynamic_theme_css/selectors', array() );
 	$selector  = inspiro_get_prop( $selectors, 'typo-mainmenu' );
+	$media_query  = inspiro_get_prop( $selectors, 'mainmenu-font-size-media' );
 
 	$dynamic_css .= "{$selector} {\n";
 	if ( ! empty( $mainmenu_font_family ) && 'inherit' !== $mainmenu_font_family ) {
 		$dynamic_css .= "font-family: {$mainmenu_font_family};\n";
-	}
-	if ( absint( $mainmenu_font_size ) >= 14 && absint( $mainmenu_font_size ) <= 18 ) {
-		$dynamic_css .= "font-size: {$mainmenu_font_size}px;\n";
 	}
 	if ( ! empty( $mainmenu_font_weight ) && 'inherit' !== $mainmenu_font_weight ) {
 		$dynamic_css .= "font-weight: {$mainmenu_font_weight};\n";
@@ -57,10 +56,17 @@ function inspiro_dynamic_theme_css_mainmenu( $dynamic_css ) {
 	if ( ! empty( $mainmenu_text_transform ) && 'inherit' !== $mainmenu_text_transform ) {
 		$dynamic_css .= "text-transform: {$mainmenu_text_transform};\n";
 	}
+	$dynamic_css .= "}\n";
+
+	$dynamic_css .= "{$media_query} {\n";
+	$dynamic_css .= "{$selector} {\n";
+	if ( absint( $mainmenu_font_size ) >= 12 && absint( $mainmenu_font_size ) <= 20 ) {
+		$dynamic_css .= "font-size: {$mainmenu_font_size}px;\n";
+	}
 	if ( ! empty( $mainmenu_line_height ) && 'inherit' !== $mainmenu_line_height ) {
 		$dynamic_css .= "line-height: {$mainmenu_line_height};\n";
 	}
-	$dynamic_css .= "}\n";
+	$dynamic_css .= "} }\n";
 
 	return $dynamic_css;
 }

@@ -48,7 +48,7 @@ function inspiro_dynamic_theme_css_hero_header_button( $dynamic_css ) {
 	if ( ! empty( $hero_header_button_font_family ) && 'inherit' !== $hero_header_button_font_family ) {
 		$dynamic_css .= "font-family: {$hero_header_button_font_family};\n";
 	}
-	if ( absint( $hero_header_button_font_size ) >= 14 && absint( $hero_header_button_font_size ) <= 18 ) {
+	if ( absint( $hero_header_button_font_size ) >= 12 && absint( $hero_header_button_font_size ) <= 22 ) {
 		$dynamic_css .= "font-size: {$hero_header_button_font_size}px;\n";
 	}
 	if ( ! empty( $hero_header_button_font_weight ) && 'inherit' !== $hero_header_button_font_weight ) {

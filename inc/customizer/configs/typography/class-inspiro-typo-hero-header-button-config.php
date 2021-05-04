@@ -104,8 +104,8 @@ class Inspiro_Typo_Hero_Header_Button_Config {
 					'label'       => __( 'Font Size (px)', 'inspiro' ),
 					'section'     => 'inspiro_typography_section_hero_header',
 					'input_attrs' => array(
-						'min'  => 14,
-						'max'  => 18,
+						'min'  => 12,
+						'max'  => 22,
 						'step' => 1,
 					),
 				)

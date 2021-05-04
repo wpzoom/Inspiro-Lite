@@ -100,8 +100,8 @@ class Inspiro_Typo_Body_Config {
 					'label'       => __( 'Font Size (px)', 'inspiro' ),
 					'section'     => 'inspiro_typography_section_body',
 					'input_attrs' => array(
-						'min'  => 14,
-						'max'  => 18,
+						'min'  => 12,
+						'max'  => 26,
 						'step' => 1,
 					),
 				)

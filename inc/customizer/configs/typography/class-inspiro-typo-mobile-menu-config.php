@@ -104,8 +104,8 @@ class Inspiro_Typo_Mobile_Menu_Config {
 					'label'       => __( 'Font Size (px)', 'inspiro' ),
 					'section'     => 'inspiro_typography_section_menu',
 					'input_attrs' => array(
-						'min'  => 14,
-						'max'  => 18,
+						'min'  => 12,
+						'max'  => 20,
 						'step' => 1,
 					),
 				)
