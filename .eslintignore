@@ -1,0 +1,14 @@
+# Deployed files
+**/*.min.js
+**/*.build.js
+
+node_modules
+
+# Vendor
+assets/js/unminified/vendor
+
+# Automatically generated files
+assets/js/unminified/plugins.js
+assets/js/unminified/scripts.js
+inc/customizer/custom-controls/assets/js/unminified/custom-controls.js
+inc/customizer/custom-controls/typography/selectWoo.js
