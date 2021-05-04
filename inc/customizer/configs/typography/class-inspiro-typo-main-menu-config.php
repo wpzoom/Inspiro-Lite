@@ -56,7 +56,7 @@ class Inspiro_Typo_Main_Menu_Config {
 			array(
 				'transport'         => 'postMessage',
 				'sanitize_callback' => 'sanitize_text_field',
-				'default'           => 'inherit',
+				'default'           => "'Montserrat', sans-serif",
 			)
 		);
 
@@ -78,7 +78,7 @@ class Inspiro_Typo_Main_Menu_Config {
 			array(
 				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_font_variant',
-				'default'           => '400',
+				'default'           => '500',
 			)
 		);
 
@@ -123,7 +123,7 @@ class Inspiro_Typo_Main_Menu_Config {
 		$wp_customize->add_setting(
 			'mainmenu-font-weight',
 			array(
-				'default'           => '400',
+				'default'           => '500',
 				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_font_weight',
 			)
@@ -167,7 +167,7 @@ class Inspiro_Typo_Main_Menu_Config {
 		$wp_customize->add_setting(
 			'mainmenu-line-height',
 			array(
-				'default'           => 1.4,
+				'default'           => 1.8,
 				'transport'         => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_float',
 			)

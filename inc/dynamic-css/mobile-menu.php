@@ -36,7 +36,7 @@ add_filter( 'inspiro/dynamic_theme_css', 'inspiro_dynamic_theme_css_mobilemenu' 
  * @return string Generated dynamic CSS for Mobile Menu.
  */
 function inspiro_dynamic_theme_css_mobilemenu( $dynamic_css ) {
-	$mobilemenu_font_family    = get_theme_mod( 'mobilemenu-font-family', 'inherit' );
+	$mobilemenu_font_family    = get_theme_mod( 'mobilemenu-font-family', "'Montserrat', sans-serif" );
 	$mobilemenu_font_size      = get_theme_mod( 'mobilemenu-font-size', '16' );
 	$mobilemenu_font_weight    = get_theme_mod( 'mobilemenu-font-weight', '600' );
 	$mobilemenu_text_transform = get_theme_mod( 'mobilemenu-text-transform', 'uppercase' );

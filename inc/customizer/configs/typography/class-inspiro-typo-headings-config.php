@@ -44,7 +44,7 @@ class Inspiro_Typo_Headings_Config {
 			array(
 				'transport'         => 'postMessage',
 				'sanitize_callback' => 'sanitize_text_field',
-				'default'           => "'Montserrat', sans-serif",
+				'default'           => 'inherit',
 			)
 		);
 
