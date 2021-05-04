@@ -99,7 +99,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 			'slider-title-font-size',
 			array(
 				'default'           => 80,
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_integer',
 			)
 		);
@@ -143,7 +143,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 			'slider-title-text-transform',
 			array(
 				'default'           => '',
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_choices',
 			)
 		);
@@ -168,7 +168,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 			'slider-title-line-height',
 			array(
 				'default'           => 1.25,
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_float',
 			)
 		);

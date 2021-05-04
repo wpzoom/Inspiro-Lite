@@ -87,7 +87,7 @@ class Inspiro_Typo_Body_Config {
 			'body-font-size',
 			array(
 				'default'           => 16,
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_integer',
 			)
 		);
@@ -131,7 +131,7 @@ class Inspiro_Typo_Body_Config {
 			'body-text-transform',
 			array(
 				'default'           => '',
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_choices',
 			)
 		);
@@ -156,7 +156,7 @@ class Inspiro_Typo_Body_Config {
 			'body-line-height',
 			array(
 				'default'           => 1.8,
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_float',
 			)
 		);

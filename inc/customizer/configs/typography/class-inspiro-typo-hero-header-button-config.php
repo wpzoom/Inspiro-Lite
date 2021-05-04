@@ -91,7 +91,7 @@ class Inspiro_Typo_Hero_Header_Button_Config {
 			'slider-button-font-size',
 			array(
 				'default'           => 16,
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_integer',
 			)
 		);
@@ -135,7 +135,7 @@ class Inspiro_Typo_Hero_Header_Button_Config {
 			'slider-button-text-transform',
 			array(
 				'default'           => '',
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_choices',
 			)
 		);
@@ -160,7 +160,7 @@ class Inspiro_Typo_Hero_Header_Button_Config {
 			'slider-button-line-height',
 			array(
 				'default'           => 1.8,
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_float',
 			)
 		);

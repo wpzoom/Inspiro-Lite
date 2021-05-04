@@ -21,7 +21,8 @@ if ( ! function_exists( 'inspiro_selector_hero_header_button' ) ) {
 	 * @return array The array with HTML selectors.
 	 */
 	function inspiro_selector_hero_header_button( $selectors ) {
-		$selectors['typo-slider-button'] = '.custom-header-button';
+		$selectors['typo-slider-button']            = '.custom-header-button';
+		$selectors['slider-button-font-size-media'] = '@media screen and (min-width: 782px)';
 		return $selectors;
 	}
 }
@@ -41,15 +42,13 @@ function inspiro_dynamic_theme_css_hero_header_button( $dynamic_css ) {
 	$hero_header_button_text_transform = get_theme_mod( 'slider-button-text-transform', '' );
 	$hero_header_button_line_height    = get_theme_mod( 'slider-button-line-height', '1.8' );
 
-	$selectors = apply_filters( 'inspiro/dynamic_theme_css/selectors', array() );
-	$selector  = inspiro_get_prop( $selectors, 'typo-slider-button' );
+	$selectors   = apply_filters( 'inspiro/dynamic_theme_css/selectors', array() );
+	$selector    = inspiro_get_prop( $selectors, 'typo-slider-button' );
+	$media_query = inspiro_get_prop( $selectors, 'slider-button-font-size-media' );
 
 	$dynamic_css .= "{$selector} {\n";
 	if ( ! empty( $hero_header_button_font_family ) && 'inherit' !== $hero_header_button_font_family ) {
 		$dynamic_css .= "font-family: {$hero_header_button_font_family};\n";
-	}
-	if ( absint( $hero_header_button_font_size ) >= 12 && absint( $hero_header_button_font_size ) <= 22 ) {
-		$dynamic_css .= "font-size: {$hero_header_button_font_size}px;\n";
 	}
 	if ( ! empty( $hero_header_button_font_weight ) && 'inherit' !== $hero_header_button_font_weight ) {
 		$dynamic_css .= "font-weight: {$hero_header_button_font_weight};\n";
@@ -61,6 +60,13 @@ function inspiro_dynamic_theme_css_hero_header_button( $dynamic_css ) {
 		$dynamic_css .= "line-height: {$hero_header_button_line_height};\n";
 	}
 	$dynamic_css .= "}\n";
+
+	$dynamic_css .= "{$media_query} {\n";
+	$dynamic_css .= "{$selector} {\n";
+	if ( absint( $hero_header_button_font_size ) >= 12 && absint( $hero_header_button_font_size ) <= 22 ) {
+		$dynamic_css .= "font-size: {$hero_header_button_font_size}px;\n";
+	}
+	$dynamic_css .= "} }\n";
 
 	return $dynamic_css;
 }

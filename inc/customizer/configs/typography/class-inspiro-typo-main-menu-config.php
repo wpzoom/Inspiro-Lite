@@ -99,7 +99,7 @@ class Inspiro_Typo_Main_Menu_Config {
 			'mainmenu-font-size',
 			array(
 				'default'           => 16,
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_integer',
 			)
 		);
@@ -143,7 +143,7 @@ class Inspiro_Typo_Main_Menu_Config {
 			'mainmenu-text-transform',
 			array(
 				'default'           => '',
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_choices',
 			)
 		);
@@ -168,7 +168,7 @@ class Inspiro_Typo_Main_Menu_Config {
 			'mainmenu-line-height',
 			array(
 				'default'           => 1.8,
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_float',
 			)
 		);

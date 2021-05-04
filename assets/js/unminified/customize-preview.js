@@ -18,12 +18,25 @@
 function inspiroBuildStyleTag( control, value, cssProperty ) {
 	let style = '';
 	let selector = '';
+	let hasMediaQuery = false;
 
 	let fakeControl = control.replace( '-' + cssProperty, '' );
 	fakeControl = 'typo-' + fakeControl;
 
+	const mediaQuery = control + '-media';
+	if ( mediaQuery in inspiroCustomizePreview.selectors ) {
+		hasMediaQuery = true;
+	}
+
 	if ( fakeControl in inspiroCustomizePreview.selectors ) {
+		if ( hasMediaQuery ) {
+			selector += inspiroCustomizePreview.selectors[ mediaQuery ] + '{';
+		}
 		selector += inspiroCustomizePreview.selectors[ fakeControl ];
+
+		if ( cssProperty === 'font-size' ) {
+			value += 'px';
+		}
 
 		// Build <style>.
 		style =
@@ -38,6 +51,7 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 			': ' +
 			value +
 			' }' +
+			( hasMediaQuery ? ' }' : '' ) +
 			'</style>';
 	}
 
@@ -185,10 +199,11 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 			'mainmenu-font-family',
 			'mobilemenu-font-family',
 		],
-		function ( index, control ) {
+		function ( __, control ) {
 			/**
 			 * Generate Font Family CSS
 			 *
+			 * @since x.x.x
 			 * @see https://github.com/brainstormforce/astra/blob/663761d3419f25640af9b59e64384bd07f810bc4/assets/js/unminified/customizer-preview.js#L369
 			 */
 			wp.customize( control, function ( value ) {
@@ -238,10 +253,11 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 			'mainmenu-font-weight',
 			'mobilemenu-font-weight',
 		],
-		function ( index, control ) {
+		function ( __, control ) {
 			/**
 			 * Generate Font Weight CSS
 			 *
+			 * @since x.x.x
 			 * @see https://github.com/brainstormforce/astra/blob/663761d3419f25640af9b59e64384bd07f810bc4/assets/js/unminified/customizer-preview.js#L409
 			 */
 			wp.customize( control, function ( value ) {
@@ -296,6 +312,105 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 						// Remove old.
 						$( 'style#' + control ).remove();
 					}
+				} );
+			} );
+		}
+	);
+
+	$.each(
+		[
+			'body-font-size',
+			'headings-font-size',
+			'slider-title-font-size',
+			'slider-text-font-size',
+			'slider-button-font-size',
+			'mainmenu-font-size',
+			'mobilemenu-font-size',
+		],
+		function ( __, control ) {
+			/**
+			 * Generate Font Size CSS
+			 *
+			 * @since x.x.x
+			 */
+			wp.customize( control, function ( value ) {
+				value.bind( function ( newValue ) {
+					const cssProperty = 'font-size';
+					const style = inspiroBuildStyleTag(
+						control,
+						newValue,
+						cssProperty
+					);
+					// Remove old.
+					$( 'style#' + control + '-' + cssProperty ).remove();
+
+					$( 'head' ).append( style );
+				} );
+			} );
+		}
+	);
+
+	$.each(
+		[
+			'body-text-transform',
+			'headings-text-transform',
+			'slider-title-text-transform',
+			'slider-text-text-transform',
+			'slider-button-text-transform',
+			'mainmenu-text-transform',
+			'mobilemenu-text-transform',
+		],
+		function ( __, control ) {
+			/**
+			 * Generate Text Transform CSS
+			 *
+			 * @since x.x.x
+			 */
+			wp.customize( control, function ( value ) {
+				value.bind( function ( newValue ) {
+					const cssProperty = 'text-transform';
+					const style = inspiroBuildStyleTag(
+						control,
+						newValue,
+						cssProperty
+					);
+					// Remove old.
+					$( 'style#' + control + '-' + cssProperty ).remove();
+
+					$( 'head' ).append( style );
+				} );
+			} );
+		}
+	);
+
+	$.each(
+		[
+			'body-line-height',
+			'headings-line-height',
+			'slider-title-line-height',
+			'slider-text-line-height',
+			'slider-button-line-height',
+			'mainmenu-line-height',
+			'mobilemenu-line-height',
+		],
+		function ( __, control ) {
+			/**
+			 * Generate Line Height CSS
+			 *
+			 * @since x.x.x
+			 */
+			wp.customize( control, function ( value ) {
+				value.bind( function ( newValue ) {
+					const cssProperty = 'line-height';
+					const style = inspiroBuildStyleTag(
+						control,
+						newValue,
+						cssProperty
+					);
+					// Remove old.
+					$( 'style#' + control + '-' + cssProperty ).remove();
+
+					$( 'head' ).append( style );
 				} );
 			} );
 		}

@@ -56,15 +56,15 @@ function inspiro_dynamic_theme_css_hero_header_desc( $dynamic_css ) {
 	if ( ! empty( $hero_header_desc_text_transform ) && 'inherit' !== $hero_header_desc_text_transform ) {
 		$dynamic_css .= "text-transform: {$hero_header_desc_text_transform};\n";
 	}
+	if ( ! empty( $hero_header_desc_line_height ) && 'inherit' !== $hero_header_desc_line_height ) {
+		$dynamic_css .= "line-height: {$hero_header_desc_line_height};\n";
+	}
 	$dynamic_css .= "}\n";
 
 	$dynamic_css .= "{$media_query} {\n";
 	$dynamic_css .= "{$selector} {\n";
 	if ( absint( $hero_header_desc_font_size ) >= 16 && absint( $hero_header_desc_font_size ) <= 42 ) {
 		$dynamic_css .= "font-size: {$hero_header_desc_font_size}px;\n";
-	}
-	if ( ! empty( $hero_header_desc_line_height ) && 'inherit' !== $hero_header_desc_line_height ) {
-		$dynamic_css .= "line-height: {$hero_header_desc_line_height};\n";
 	}
 	$dynamic_css .= "} }\n";
 
