@@ -21,7 +21,7 @@ if ( ! function_exists( 'inspiro_selector_mainmenu' ) ) {
 	 * @return array The array with HTML selectors.
 	 */
 	function inspiro_selector_mainmenu( $selectors ) {
-		$selectors['typo-mainmenu'] = '.navbar-nav a';
+		$selectors['typo-mainmenu']            = '.navbar-nav a';
 		$selectors['mainmenu-font-size-media'] = '@media screen and (min-width: 782px)';
 		return $selectors;
 	}
@@ -42,9 +42,9 @@ function inspiro_dynamic_theme_css_mainmenu( $dynamic_css ) {
 	$mainmenu_text_transform = get_theme_mod( 'mainmenu-text-transform', '' );
 	$mainmenu_line_height    = get_theme_mod( 'mainmenu-line-height', '1.8' );
 
-	$selectors = apply_filters( 'inspiro/dynamic_theme_css/selectors', array() );
-	$selector  = inspiro_get_prop( $selectors, 'typo-mainmenu' );
-	$media_query  = inspiro_get_prop( $selectors, 'mainmenu-font-size-media' );
+	$selectors   = apply_filters( 'inspiro/dynamic_theme_css/selectors', array() );
+	$selector    = inspiro_get_prop( $selectors, 'typo-mainmenu' );
+	$media_query = inspiro_get_prop( $selectors, 'mainmenu-font-size-media' );
 
 	$dynamic_css .= "{$selector} {\n";
 	if ( ! empty( $mainmenu_font_family ) && 'inherit' !== $mainmenu_font_family ) {
