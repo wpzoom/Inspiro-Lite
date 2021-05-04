@@ -43,7 +43,7 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 			cssProperty +
 			'">' +
 			selector +
-			'	{ ' +
+			' { ' +
 			cssProperty +
 			': ' +
 			value +
