@@ -2243,7 +2243,7 @@ body:not(.title-tagline-hidden) .site-branding-text {
 }
 
 .has-header-image .custom-header-media img {
-    position: fixed;
+    position: absolute;
     height: auto;
     right: 50%;
     max-width: 1000%;
@@ -2260,7 +2260,7 @@ body:not(.title-tagline-hidden) .site-branding-text {
 
 .has-header-video .custom-header-media video,
 .has-header-video .custom-header-media iframe {
-    position: fixed;
+    position: absolute;
     height: auto;
     right: 50%;
     max-width: 1000%;

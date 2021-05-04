@@ -270,7 +270,7 @@ body {
 .has-header-image {
     .custom-header-media {
         img {
-            position: fixed;
+            position: absolute;
             height: auto;
             left: 50%;
             max-width: 1000%;
@@ -292,7 +292,7 @@ body {
     .custom-header-media {
         video,
         iframe {
-            position: fixed;
+            position: absolute;
             height: auto;
             left: 50%;
             max-width: 1000%;
