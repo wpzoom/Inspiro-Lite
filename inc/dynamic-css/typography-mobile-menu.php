@@ -26,6 +26,7 @@ function inspiro_typo_mobilemenu_dynamic_theme_css( $dynamic_css ) {
 	$mobilemenu_text_transform = get_theme_mod( 'mobilemenu-text-transform', 'uppercase' );
 	$mobilemenu_line_height    = get_theme_mod( 'mobilemenu-line-height', '1.8' );
 
+	$dynamic_css .= "@media screen and (max-width: 64em) {\n";
 	$dynamic_css .= '.navbar-nav li a {';
 	if ( ! empty( $mobilemenu_font_family ) ) {
 		$dynamic_css .= "font-family: {$mobilemenu_font_family};\n";
@@ -42,7 +43,7 @@ function inspiro_typo_mobilemenu_dynamic_theme_css( $dynamic_css ) {
 	if ( ! empty( $mobilemenu_line_height ) ) {
 		$dynamic_css .= "line-height: {$mobilemenu_line_height};\n";
 	}
-	$dynamic_css .= '}';
+	$dynamic_css .= "}\n}";
 
 	return $dynamic_css;
 }

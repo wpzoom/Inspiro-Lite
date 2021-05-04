@@ -177,7 +177,7 @@ if ( ! class_exists( 'Inspiro_Fonts_Manager' ) ) {
 		 *
 		 * @return array
 		 */
-		public function get_fonts() {
+		public static function get_fonts() {
 			do_action( 'inspiro/get_fonts' );
 			return apply_filters( 'inspiro/add_fonts', self::$fonts );
 		}
