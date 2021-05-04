@@ -199,6 +199,14 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 				INSPIRO_THEME_VERSION,
 				true
 			);
+
+			$selectors      = apply_filters( 'inspiro/dynamic_theme_css/selectors', array() );
+			$localize_array = array(
+				'googleFonts' => Inspiro_Font_Family_Manager::get_google_fonts(),
+				'selectors'   => $selectors,
+			);
+
+			wp_localize_script( 'inspiro-customize-preview', 'inspiroCustomizePreview', $localize_array );
 		}
 
 		/**

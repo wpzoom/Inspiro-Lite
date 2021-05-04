@@ -46,7 +46,7 @@ class Inspiro_Typo_Mobile_Menu_Config {
 		$wp_customize->add_setting(
 			'mobilemenu-font-family',
 			array(
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'sanitize_text_field',
 				'default'           => 'inherit',
 			)
@@ -68,7 +68,7 @@ class Inspiro_Typo_Mobile_Menu_Config {
 		$wp_customize->add_setting(
 			'mobilemenu-font-variant',
 			array(
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_font_variant',
 				'default'           => '600',
 			)
@@ -116,7 +116,7 @@ class Inspiro_Typo_Mobile_Menu_Config {
 			'mobilemenu-font-weight',
 			array(
 				'default'           => '600',
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_font_weight',
 			)
 		);

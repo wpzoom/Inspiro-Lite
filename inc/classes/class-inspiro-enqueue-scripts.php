@@ -29,7 +29,7 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 			add_action( 'wp_head', array( $this, 'pingback_header' ) );
 			add_action( 'wp_head', array( $this, 'colors_css_wrap' ) );
 
-			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 1 );
 			add_action( 'enqueue_block_editor_assets', array( $this, 'block_editor_styles' ) );
 			add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
 		}

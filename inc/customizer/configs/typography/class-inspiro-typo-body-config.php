@@ -42,7 +42,7 @@ class Inspiro_Typo_Body_Config {
 		$wp_customize->add_setting(
 			'body-font-family',
 			array(
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'sanitize_text_field',
 				'default'           => "'Inter', sans-serif",
 			)
@@ -64,7 +64,7 @@ class Inspiro_Typo_Body_Config {
 		$wp_customize->add_setting(
 			'body-font-variant',
 			array(
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_font_variant',
 				'default'           => '400',
 			)
@@ -112,7 +112,7 @@ class Inspiro_Typo_Body_Config {
 			'body-font-weight',
 			array(
 				'default'           => '400',
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_font_weight',
 			)
 		);

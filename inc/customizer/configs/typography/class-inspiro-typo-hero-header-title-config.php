@@ -54,7 +54,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 		$wp_customize->add_setting(
 			'slider-title-font-family',
 			array(
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'sanitize_text_field',
 				'default'           => "'Inter', sans-serif",
 			)
@@ -76,7 +76,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 		$wp_customize->add_setting(
 			'slider-title-font-variant',
 			array(
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_font_variant',
 				'default'           => '700',
 			)
@@ -124,7 +124,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 			'slider-title-font-weight',
 			array(
 				'default'           => '700',
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_font_weight',
 			)
 		);

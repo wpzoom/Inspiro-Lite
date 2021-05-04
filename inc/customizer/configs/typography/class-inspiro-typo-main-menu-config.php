@@ -54,7 +54,7 @@ class Inspiro_Typo_Main_Menu_Config {
 		$wp_customize->add_setting(
 			'mainmenu-font-family',
 			array(
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'sanitize_text_field',
 				'default'           => 'inherit',
 			)
@@ -76,7 +76,7 @@ class Inspiro_Typo_Main_Menu_Config {
 		$wp_customize->add_setting(
 			'mainmenu-font-variant',
 			array(
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_font_variant',
 				'default'           => '400',
 			)
@@ -124,7 +124,7 @@ class Inspiro_Typo_Main_Menu_Config {
 			'mainmenu-font-weight',
 			array(
 				'default'           => '400',
-				'transport'         => 'refresh',
+				'transport'         => 'postMessage',
 				'sanitize_callback' => 'inspiro_sanitize_font_weight',
 			)
 		);
