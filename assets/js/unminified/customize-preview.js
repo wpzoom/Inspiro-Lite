@@ -18,20 +18,11 @@
 function inspiroBuildStyleTag( control, value, cssProperty ) {
 	let style = '';
 	let selector = '';
-	let hasMediaQuery = false;
 
 	let fakeControl = control.replace( '-' + cssProperty, '' );
 	fakeControl = 'typo-' + fakeControl;
 
-	const mediaQuery = fakeControl + '-media';
-	if ( mediaQuery in inspiroCustomizePreview.selectors ) {
-		hasMediaQuery = true;
-	}
-
 	if ( fakeControl in inspiroCustomizePreview.selectors ) {
-		if ( hasMediaQuery ) {
-			selector += inspiroCustomizePreview.selectors[ mediaQuery ];
-		}
 		selector += inspiroCustomizePreview.selectors[ fakeControl ];
 
 		// Build <style>.
@@ -47,7 +38,6 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 			': ' +
 			value +
 			' }' +
-			( hasMediaQuery ? ' }' : '' ) +
 			'</style>';
 	}
 
