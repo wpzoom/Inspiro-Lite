@@ -161,7 +161,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 			add_editor_style(
 				array(
 					'assets/css/' . $dir_name . '/editor-style' . $file_prefix . '.css',
-					inspiro_fonts_url(),
+					Inspiro_Fonts_Manager::get_google_font_url(),
 				)
 			);
 
@@ -184,7 +184,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 			 * page load, as it is a one-off operation only needed once in the customizer.
 			 */
 			if ( is_customize_preview() ) {
-				require INSPIRO_THEME_DIR . '/inc/starter-content.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+				require INSPIRO_THEME_DIR . 'inc/starter-content.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 				add_theme_support( 'starter-content', inspiro_get_starter_content() );
 			}
 		}

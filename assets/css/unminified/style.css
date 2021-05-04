@@ -1766,6 +1766,15 @@ body.side-nav-open .side-nav__scrollable-container {
     transform: translateX(0);
 }
 
+body.side-nav-open.has-header-image .custom-header-media img {
+    position: absolute;
+}
+
+body.side-nav-open.has-header-video .custom-header-media video,
+body.side-nav-open.has-header-video .custom-header-media iframe {
+    position: absolute;
+}
+
 .sb-search {
     position: relative;
     margin: 0;
@@ -4710,8 +4719,8 @@ div.aligncenter {
         margin-bottom: 15px;
     }
     .site-title {
-        font-size: 32px;
-        font-size: 2rem;
+        font-size: 42px;
+        font-size: 2.625rem;
     }
     .custom-header-button {
         font-size: 14px;

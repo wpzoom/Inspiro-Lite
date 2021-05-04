@@ -10,6 +10,8 @@
 	<exclude-pattern>/woocommerce/</exclude-pattern>
 	<!-- Exclude TGMPA class -->
 	<exclude-pattern>/inc/classes/class-tgm-plugin-activation.php</exclude-pattern>
+	<!-- Exclude google-fonts.php -->
+	<exclude-pattern>/inc/google-fonts.php</exclude-pattern>
 
 	<!-- How to scan -->
 	<!-- Usage instructions: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Usage -->

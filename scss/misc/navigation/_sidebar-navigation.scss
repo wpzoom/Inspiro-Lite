@@ -121,4 +121,19 @@ body.side-nav-open {
         -ms-transform: translateX(0);
         transform: translateX(0);
     }
+	&.has-header-image {
+		.custom-header-media {
+			img {
+				position: absolute;
+			}
+		}
+	}
+	&.has-header-video {
+		.custom-header-media {
+			video,
+			iframe {
+				position: absolute;
+			}
+		}
+	}
 }

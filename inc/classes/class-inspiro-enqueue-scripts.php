@@ -29,7 +29,7 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 			add_action( 'wp_head', array( $this, 'pingback_header' ) );
 			add_action( 'wp_head', array( $this, 'colors_css_wrap' ) );
 
-			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 1 );
 			add_action( 'enqueue_block_editor_assets', array( $this, 'block_editor_styles' ) );
 			add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
 		}
@@ -46,13 +46,10 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 		 */
 		public function enqueue_scripts() {
 			// Add custom fonts, used in the main stylesheet.
-			wp_enqueue_style( 'inspiro-fonts', inspiro_fonts_url(), array(), INSPIRO_THEME_VERSION );
+			Inspiro_Fonts_Manager::render_fonts();
 
 			// Theme stylesheet.
 			wp_enqueue_style( 'inspiro-style', inspiro_get_assets_uri( 'style', 'css' ), array(), INSPIRO_THEME_VERSION );
-
-			// RTL support.
-			wp_style_add_data( 'inspiro-style', 'rtl', 'replace' );
 
 			// Load the dark colorscheme.
 			if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {
@@ -66,6 +63,9 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 			if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 				wp_enqueue_script( 'comment-reply' );
 			}
+
+			$theme_css_data = apply_filters( 'inspiro/dynamic_theme_css', '' );
+			wp_add_inline_style( 'inspiro-style', $theme_css_data );
 		}
 
 		/**
@@ -77,11 +77,8 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 			// Block styles.
 			wp_enqueue_style( 'inspiro-block-editor-style', inspiro_get_assets_uri( 'editor-style', 'css' ), array(), INSPIRO_THEME_VERSION );
 
-			// RTL support.
-			wp_style_add_data( 'inspiro-block-editor-style', 'rtl', 'replace' );
-
 			// Add custom fonts.
-			wp_enqueue_style( 'inspiro-fonts', inspiro_fonts_url(), array(), INSPIRO_THEME_VERSION );
+			Inspiro_Fonts_Manager::render_fonts();
 		}
 
 		/**
