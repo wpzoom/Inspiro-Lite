@@ -11,21 +11,39 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-add_filter( 'inspiro/dynamic_theme_css', 'inspiro_typo_headings_dynamic_theme_css' );
+add_filter( 'inspiro/dynamic_theme_css/selectors', 'inspiro_selector_headings' );
+
+if ( ! function_exists( 'inspiro_selector_headings' ) ) {
+	/**
+	 * Set HTML selector for Headings
+	 *
+	 * @param array $selectors HTML selectors.
+	 * @return array The array with HTML selectors.
+	 */
+	function inspiro_selector_headings( $selectors ) {
+		$selectors['typo-headings'] = 'h1, h2, h3, h4, h5, h6';
+		return $selectors;
+	}
+}
+
+add_filter( 'inspiro/dynamic_theme_css', 'inspiro_dynamic_theme_css_headings' );
 
 /**
  * Typography -> Headings
  *
  * @param string $dynamic_css Dynamic CSS from Customizer.
- * @return string Generated dynamic CSS for Headings typography.
+ * @return string Generated dynamic CSS for Headings.
  */
-function inspiro_typo_headings_dynamic_theme_css( $dynamic_css ) {
+function inspiro_dynamic_theme_css_headings( $dynamic_css ) {
 	$headings_font_family    = get_theme_mod( 'headings-font-family', "'Montserrat', sans-serif" );
 	$headings_font_weight    = get_theme_mod( 'headings-font-weight', '700' );
 	$headings_text_transform = get_theme_mod( 'headings-text-transform', '' );
 	$headings_line_height    = get_theme_mod( 'headings-line-height', '1.4' );
 
-	$dynamic_css .= 'h1, h2, h3, h4, h5, h6 {';
+	$selectors = apply_filters( 'inspiro/dynamic_theme_css/selectors', array() );
+	$selector  = inspiro_get_prop( $selectors, 'typo-headings' );
+
+	$dynamic_css .= "{$selector} {\n";
 	if ( ! empty( $headings_font_family ) ) {
 		$dynamic_css .= "font-family: {$headings_font_family};\n";
 	}
@@ -38,7 +56,7 @@ function inspiro_typo_headings_dynamic_theme_css( $dynamic_css ) {
 	if ( ! empty( $headings_line_height ) ) {
 		$dynamic_css .= "line-height: {$headings_line_height};\n";
 	}
-	$dynamic_css .= '}';
+	$dynamic_css .= "}\n";
 
 	return $dynamic_css;
 }

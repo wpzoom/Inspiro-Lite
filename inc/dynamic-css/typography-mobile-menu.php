@@ -11,23 +11,43 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-add_filter( 'inspiro/dynamic_theme_css', 'inspiro_typo_mobilemenu_dynamic_theme_css' );
+add_filter( 'inspiro/dynamic_theme_css/selectors', 'inspiro_selector_mobilemenu' );
+
+if ( ! function_exists( 'inspiro_selector_mobilemenu' ) ) {
+	/**
+	 * Set HTML selector for Mobile Menu
+	 *
+	 * @param array $selectors HTML selectors.
+	 * @return array The array with HTML selectors.
+	 */
+	function inspiro_selector_mobilemenu( $selectors ) {
+		$selectors['typo-mobilemenu-media'] = '@media screen and (max-width: 64em)';
+		$selectors['typo-mobilemenu']       = '.navbar-nav li a';
+		return $selectors;
+	}
+}
+
+add_filter( 'inspiro/dynamic_theme_css', 'inspiro_dynamic_theme_css_mobilemenu' );
 
 /**
  * Typography -> Menu -> Mobile Menu
  *
  * @param string $dynamic_css Dynamic CSS from Customizer.
- * @return string Generated dynamic CSS for Mobile Menu typography.
+ * @return string Generated dynamic CSS for Mobile Menu.
  */
-function inspiro_typo_mobilemenu_dynamic_theme_css( $dynamic_css ) {
+function inspiro_dynamic_theme_css_mobilemenu( $dynamic_css ) {
 	$mobilemenu_font_family    = get_theme_mod( 'mobilemenu-font-family', 'inherit' );
 	$mobilemenu_font_size      = get_theme_mod( 'mobilemenu-font-size', '16' );
 	$mobilemenu_font_weight    = get_theme_mod( 'mobilemenu-font-weight', '600' );
 	$mobilemenu_text_transform = get_theme_mod( 'mobilemenu-text-transform', 'uppercase' );
 	$mobilemenu_line_height    = get_theme_mod( 'mobilemenu-line-height', '1.8' );
 
-	$dynamic_css .= "@media screen and (max-width: 64em) {\n";
-	$dynamic_css .= '.navbar-nav li a {';
+	$selectors   = apply_filters( 'inspiro/dynamic_theme_css/selectors', array() );
+	$selector    = inspiro_get_prop( $selectors, 'typo-mobilemenu' );
+	$media_query = inspiro_get_prop( $selectors, 'typo-mobilemenu-media' );
+
+	$dynamic_css .= "{$media_query} {\n";
+	$dynamic_css .= "{$selector} {\n";
 	if ( ! empty( $mobilemenu_font_family ) ) {
 		$dynamic_css .= "font-family: {$mobilemenu_font_family};\n";
 	}
