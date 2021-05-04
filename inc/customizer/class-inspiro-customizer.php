@@ -263,7 +263,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 			?>
 
 			<option value="inherit"><?php esc_html_e( 'Default System Font', 'inspiro' ); ?></option>
-			<optgroup label="<?php esc_html_e( 'System Fonts', 'inspiro' ); ?>">
+			<optgroup label="<?php esc_attr_e( 'System Fonts', 'inspiro' ); ?>">
 
 			<?php
 

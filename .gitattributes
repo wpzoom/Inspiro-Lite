@@ -10,6 +10,8 @@
 *.gitattributes export-ignore
 *.dist export-ignore
 .distignore export-ignore
+.eslintrc export-ignore
+.eslintignore export-ignore
 .editorconfig export-ignore
 .phpcs.xml.dist export-ignore
 phpstan.neon.dist export-ignore
