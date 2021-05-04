@@ -94,10 +94,10 @@ if ( is_admin() ) {
 /**
  * Inline theme css generated dynamically
  */
-require INSPIRO_THEME_DIR . 'inc/dynamic-css/typography-body.php';
-require INSPIRO_THEME_DIR . 'inc/dynamic-css/typography-headings.php';
-require INSPIRO_THEME_DIR . 'inc/dynamic-css/typography-hero-header-title.php';
-require INSPIRO_THEME_DIR . 'inc/dynamic-css/typography-hero-header-desc.php';
-require INSPIRO_THEME_DIR . 'inc/dynamic-css/typography-hero-header-button.php';
-require INSPIRO_THEME_DIR . 'inc/dynamic-css/typography-main-menu.php';
-require INSPIRO_THEME_DIR . 'inc/dynamic-css/typography-mobile-menu.php';
+require INSPIRO_THEME_DIR . 'inc/dynamic-css/body.php';
+require INSPIRO_THEME_DIR . 'inc/dynamic-css/headings.php';
+require INSPIRO_THEME_DIR . 'inc/dynamic-css/hero-header-title.php';
+require INSPIRO_THEME_DIR . 'inc/dynamic-css/hero-header-desc.php';
+require INSPIRO_THEME_DIR . 'inc/dynamic-css/hero-header-button.php';
+require INSPIRO_THEME_DIR . 'inc/dynamic-css/main-menu.php';
+require INSPIRO_THEME_DIR . 'inc/dynamic-css/mobile-menu.php';
