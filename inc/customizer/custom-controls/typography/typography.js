@@ -1,14 +1,16 @@
+/* global jQuery, inspiroCustomControl, InspiroFontFamilies */
+
 /**
  * File typography.js
  *
  * Handles Typography of the site
  *
- * @link https://github.com/brainstormforce/astra/blob/master/inc/customizer/custom-controls/typography/typography.js
+ * @see https://github.com/brainstormforce/astra/blob/master/inc/customizer/custom-controls/typography/typography.js
  */
 
-(function ($) {
+( function ( $ ) {
 	/* Internal shorthand */
-	var api = wp.customize;
+	const api = wp.customize;
 
 	/**
 	 * Helper class for the main Customizer interface.
@@ -16,14 +18,14 @@
 	 * @since x.x.x
 	 * @class InspiroTypography
 	 */
-	InspiroTypography = {
+	const InspiroTypography = {
 		/**
 		 * Initializes our custom logic for the Customizer.
 		 *
 		 * @since x.x.x
-		 * @method init
+		 * @function init
 		 */
-		init: function () {
+		init() {
 			InspiroTypography._initFonts();
 		},
 
@@ -32,56 +34,59 @@
 		 *
 		 * @since x.x.x
 		 * @access private
-		 * @method _initFonts
+		 * @function _initFonts
 		 */
-		_initFonts: function () {
-			$(".customize-control-inspiro-font-family select").each(
+		_initFonts() {
+			$( '.customize-control-inspiro-font-family select' ).each(
 				function () {
-					if ("undefined" != typeof inspiroCustomControl.customizer) {
-						var fonts =
+					if (
+						'undefined' !== typeof inspiroCustomControl.customizer
+					) {
+						const fonts =
 							inspiroCustomControl.customizer.settings
 								.google_fonts;
-						var optionName = $(this).data("name");
+						const optionName = $( this ).data( 'name' );
 
-						$(this).html(fonts);
+						$( this ).html( fonts );
 
 						// Set inherit option text defined in control parameters.
 						$(
 							"select[data-name='" +
 								optionName +
 								"'] option[value='inherit']"
-						).text($(this).data("inherit"));
+						).text( $( this ).data( 'inherit' ) );
 
-						var font_val = $(this).data("value");
+						const fontVal = $( this ).data( 'value' );
 
-						$(this).val(font_val);
+						$( this ).val( fontVal );
 					}
 				}
 			);
 
-			$(".customize-control-inspiro-font-family select").each(
+			$( '.customize-control-inspiro-font-family select' ).each(
 				InspiroTypography._initFont
 			);
 			// Added select2 for all font family & font variant.
 			$(
-				".customize-control-inspiro-font-family select, .customize-control-inspiro-font-variant select"
+				'.customize-control-inspiro-font-family select, .customize-control-inspiro-font-variant select'
 			).selectWoo();
 
-			$(".customize-control-inspiro-font-variant select").on(
-				"select2:unselecting",
-				function (e) {
-					var name = $(this).data("name"),
-						variantSelect = $(this).data("customize-setting-link") || name,
-						unselectedValue = e.params.args.data.id || "";
+			$( '.customize-control-inspiro-font-variant select' ).on(
+				'select2:unselecting',
+				function ( e ) {
+					const name = $( this ).data( 'name' ),
+						variantSelect =
+							$( this ).data( 'customize-setting-link' ) || name,
+						unselectedValue = e.params.args.data.id || '';
 
-					if (unselectedValue) {
-						$(this)
+					if ( unselectedValue ) {
+						$( this )
 							.find(
 								'option[value="' + e.params.args.data.id + '"]'
 							)
-							.removeAttr("selected");
-						if (null === $(this).val()) {
-							api(variantSelect).set("");
+							.removeAttr( 'selected' );
+						if ( null === $( this ).val() ) {
+							api( variantSelect ).set( '' );
 						}
 					}
 				}
@@ -93,27 +98,33 @@
 		 *
 		 * @since x.x.x
 		 * @access private
-		 * @method _initFont
+		 * @function _initFont
 		 */
-		_initFont: function () {
-			var select = $(this),
-				name = select.data("name"),
-				link = select.data("customize-setting-link") || name,
-				weight = select.data("connected-control"),
-				variant = select.data("connected-variant");
+		_initFont() {
+			const select = $( this ),
+				name = select.data( 'name' ),
+				link = select.data( 'customize-setting-link' ) || name,
+				weight = select.data( 'connected-control' ),
+				variant = select.data( 'connected-variant' );
 
-			if ("undefined" != typeof link && "undefined" != typeof weight) {
-				api(link).bind(InspiroTypography._fontSelectChange);
-				InspiroTypography._setFontWeightOptions.apply(api(link), [
+			if (
+				'undefined' !== typeof link &&
+				'undefined' !== typeof weight
+			) {
+				api( link ).bind( InspiroTypography._fontSelectChange );
+				InspiroTypography._setFontWeightOptions.apply( api( link ), [
 					true,
-				]);
+				] );
 			}
 
-			if ("undefined" != typeof link && "undefined" != typeof variant) {
-				api(link).bind(InspiroTypography._fontSelectChange);
-				InspiroTypography._setFontVariantOptions.apply(api(link), [
+			if (
+				'undefined' !== typeof link &&
+				'undefined' !== typeof variant
+			) {
+				api( link ).bind( InspiroTypography._fontSelectChange );
+				InspiroTypography._setFontVariantOptions.apply( api( link ), [
 					true,
-				]);
+				] );
 			}
 		},
 
@@ -122,16 +133,20 @@
 		 *
 		 * @since x.x.x
 		 * @access private
-		 * @method _fontSelectChange
+		 * @function _fontSelectChange
 		 */
-		_fontSelectChange: function () {
-			var fontSelect = api.control(this.id).container.find("select"),
-				variants = fontSelect.data("connected-variant");
+		_fontSelectChange() {
+			const fontSelect = api
+					.control( this.id )
+					.container.find( 'select' ),
+				variants = fontSelect.data( 'connected-variant' );
 
-			InspiroTypography._setFontWeightOptions.apply(this, [false]);
+			InspiroTypography._setFontWeightOptions.apply( this, [ false ] );
 
-			if ("undefined" != typeof variants) {
-				InspiroTypography._setFontVariantOptions.apply(this, [false]);
+			if ( 'undefined' !== typeof variants ) {
+				InspiroTypography._setFontVariantOptions.apply( this, [
+					false,
+				] );
 			}
 		},
 
@@ -141,22 +156,22 @@
 		 * Google Fonts are saved as {'Font Name', Category}. This function cleanes this up to retreive only the {Font Name}.
 		 *
 		 * @since  x.x.x
-		 * @param  {String} fontValue Name of the font.
+		 * @param  {string} fontValue Name of the font.
 		 *
-		 * @return {String}  Font name where commas and inverted commas are removed if the font is a Google Font.
+		 * @return {string}  Font name where commas and inverted commas are removed if the font is a Google Font.
 		 */
-		_cleanGoogleFonts: function (fontValue) {
+		_cleanGoogleFonts( fontValue ) {
 			// Bail if fontVAlue does not contain a comma.
-			if (!fontValue.includes(",")) return fontValue;
+			if ( ! fontValue.includes( ',' ) ) return fontValue;
 
-			var splitFont = fontValue.split(",");
-			var pattern = new RegExp("'", "gi");
+			const splitFont = fontValue.split( ',' );
+			const pattern = new RegExp( "'", 'gi' );
 
 			// Check if the cleaned font exists in the Google fonts array.
-			var googleFontValue = splitFont[0].replace(pattern, "");
+			const googleFontValue = splitFont[ 0 ].replace( pattern, '' );
 			if (
-				"undefined" !=
-				typeof InspiroFontFamilies.google[googleFontValue]
+				'undefined' !==
+				typeof InspiroFontFamilies.google[ googleFontValue ]
 			) {
 				fontValue = googleFontValue;
 			}
@@ -170,39 +185,39 @@
 		 * This function gets the font weights values respective to the selected fonts family{Font Name}.
 		 *
 		 * @since  x.x.x
-		 * @param  {String} fontValue Name of the font.
+		 * @param  {string} fontValue Name of the font.
 		 *
-		 * @return {String}  Available font weights for the selected fonts.
+		 * @return {string}  Available font weights for the selected fonts.
 		 */
-		_getWeightObject: function (fontValue) {
-			var weightObject = ["400", "600"];
-			if (fontValue == "inherit") {
+		_getWeightObject( fontValue ) {
+			let weightObject = [ '400', '600' ];
+			if ( fontValue === 'inherit' ) {
 				weightObject = [
-					"100",
-					"200",
-					"300",
-					"400",
-					"500",
-					"600",
-					"700",
-					"800",
-					"900",
+					'100',
+					'200',
+					'300',
+					'400',
+					'500',
+					'600',
+					'700',
+					'800',
+					'900',
 				];
 			} else if (
-				"undefined" != typeof InspiroFontFamilies.system[fontValue]
+				'undefined' !== typeof InspiroFontFamilies.system[ fontValue ]
 			) {
-				weightObject = InspiroFontFamilies.system[fontValue].weights;
+				weightObject = InspiroFontFamilies.system[ fontValue ].weights;
 			} else if (
-				"undefined" != typeof InspiroFontFamilies.google[fontValue]
+				'undefined' !== typeof InspiroFontFamilies.google[ fontValue ]
 			) {
-				weightObject = InspiroFontFamilies.google[fontValue][0];
-				weightObject = Object.keys(weightObject).map(function (k) {
-					return weightObject[k];
-				});
+				weightObject = InspiroFontFamilies.google[ fontValue ][ 0 ];
+				weightObject = Object.keys( weightObject ).map( function ( k ) {
+					return weightObject[ k ];
+				} );
 			} else if (
-				"undefined" != typeof InspiroFontFamilies.custom[fontValue]
+				'undefined' !== typeof InspiroFontFamilies.custom[ fontValue ]
 			) {
-				weightObject = InspiroFontFamilies.custom[fontValue].weights;
+				weightObject = InspiroFontFamilies.custom[ fontValue ].weights;
 			}
 
 			return weightObject;
@@ -214,58 +229,66 @@
 		 *
 		 * @since x.x.x
 		 * @access private
-		 * @method _setFontWeightOptions
-		 * @param {Boolean} init Whether or not we're initializing this font weight control.
+		 * @function _setFontWeightOptions
+		 * @param {boolean} init Whether or not we're initializing this font weight control.
 		 */
-		_setFontWeightOptions: function (init) {
-			var i = 0,
-				fontSelect = api.control(this.id).container.find("select"),
-				fontValue = this(),
-				selected = "",
-				weightKey = fontSelect.data("connected-control"),
-				weightSelect = api.control(weightKey).container.find("select"),
+		_setFontWeightOptions( init ) {
+			const fontSelect = api
+					.control( this.id )
+					.container.find( 'select' ),
+				weightKey = fontSelect.data( 'connected-control' ),
+				weightSelect = api
+					.control( weightKey )
+					.container.find( 'select' ),
 				currentWeightTitle = inspiroCustomControl.strings.inherit,
-				weightValue = init ? weightSelect.val() : "400",
-				inheritWeightObject = ["inherit"],
-				weightObject = ["400", "600"],
-				weightOptions = "",
+				inheritWeightObject = [ 'inherit' ],
 				weightMap = inspiroCustomControl.font_weight;
-			if (fontValue == "inherit") {
-				weightValue = init ? weightSelect.val() : "inherit";
+
+			let selected = '',
+				fontValue = this(),
+				weightValue = init ? weightSelect.val() : '400',
+				weightObject = [ '400', '600' ],
+				weightOptions = '';
+
+			if ( fontValue === 'inherit' ) {
+				weightValue = init ? weightSelect.val() : 'inherit';
 			}
 
-			var fontValue = InspiroTypography._cleanGoogleFonts(fontValue);
-			var weightObject = InspiroTypography._getWeightObject(fontValue);
+			fontValue = InspiroTypography._cleanGoogleFonts( fontValue );
+			weightObject = InspiroTypography._getWeightObject( fontValue );
 
-			weightObject = $.merge(inheritWeightObject, weightObject);
-			weightMap["inherit"] = currentWeightTitle;
-			for (; i < weightObject.length; i++) {
-				if (0 === i && -1 === $.inArray(weightValue, weightObject)) {
-					weightValue = weightObject[0];
+			weightObject = $.merge( inheritWeightObject, weightObject );
+			weightMap.inherit = currentWeightTitle;
+			for ( let i = 0; i < weightObject.length; i++ ) {
+				if (
+					0 === i &&
+					-1 === $.inArray( weightValue, weightObject )
+				) {
+					weightValue = weightObject[ 0 ];
 					selected = ' selected="selected"';
 				} else {
 					selected =
-						weightObject[i] == weightValue
+						weightObject[ i ] === weightValue
 							? ' selected="selected"'
-							: "";
+							: '';
 				}
-				if (!weightObject[i].includes("italic")) {
+				if ( ! weightObject[ i ].includes( 'italic' ) ) {
 					weightOptions +=
 						'<option value="' +
-						weightObject[i] +
+						weightObject[ i ] +
 						'"' +
 						selected +
-						">" +
-						weightMap[weightObject[i]] +
-						"</option>";
+						'>' +
+						weightMap[ weightObject[ i ] ] +
+						'</option>';
 				}
 			}
 
-			weightSelect.html(weightOptions);
+			weightSelect.html( weightOptions );
 
-			if (!init) {
-				api(weightKey).set("");
-				api(weightKey).set(weightValue);
+			if ( ! init ) {
+				api( weightKey ).set( '' );
+				api( weightKey ).set( weightValue );
 			}
 		},
 
@@ -275,73 +298,79 @@
 		 *
 		 * @since x.x.x
 		 * @access private
-		 * @method _setFontVariantOptions
-		 * @param {Boolean} init Whether or not we're initializing this font variant control.
+		 * @function _setFontVariantOptions
+		 * @param {boolean} init Whether or not we're initializing this font variant control.
 		 */
-		_setFontVariantOptions: function (init) {
-			var i = 0,
-				fontSelect = api.control(this.id).container.find("select"),
+		_setFontVariantOptions( init ) {
+			let selected = '',
 				fontValue = this(),
-				selected = "",
-				variants = fontSelect.data("connected-variant"),
-				variantSelect = api.control(variants).container.find("select"),
+				weightValue = '',
+				weightOptions = '';
+
+			const fontSelect = api
+					.control( this.id )
+					.container.find( 'select' ),
+				variants = fontSelect.data( 'connected-variant' ),
+				variantSelect = api
+					.control( variants )
+					.container.find( 'select' ),
 				variantSavedField = api
-					.control(variants)
-					.container.find(".inspiro-font-variant-hidden-value"),
-				weightValue = "",
-				weightOptions = "",
-				currentWeightTitle = variantSelect.data("inherit"),
+					.control( variants )
+					.container.find( '.inspiro-font-variant-hidden-value' ),
+				currentWeightTitle = variantSelect.data( 'inherit' ),
 				weightMap = inspiroCustomControl.font_weight;
 
-			var variantArray = variantSavedField.val().split(",");
+			const variantArray = variantSavedField.val().split( ',' );
 
 			// Hide font variant for any ohter fonts then Google
-			var selectedOptionGroup =
+			const selectedOptionGroup =
 				fontSelect
-					.find('option[value="' + fontSelect.val() + '"]')
-					.closest("optgroup")
-					.attr("label") || "";
-			if ("Google" == selectedOptionGroup) {
+					.find( 'option[value="' + fontSelect.val() + '"]' )
+					.closest( 'optgroup' )
+					.attr( 'label' ) || '';
+			if ( 'Google' === selectedOptionGroup ) {
 				variantSelect.parent().show();
 			} else {
 				variantSelect.parent().hide();
 			}
 
-			var fontValue = InspiroTypography._cleanGoogleFonts(fontValue);
-			var weightObject = InspiroTypography._getWeightObject(fontValue);
+			fontValue = InspiroTypography._cleanGoogleFonts( fontValue );
+			const weightObject = InspiroTypography._getWeightObject(
+				fontValue
+			);
 
-			weightMap["inherit"] = currentWeightTitle;
+			weightMap.inherit = currentWeightTitle;
 
-			for (var i = 0; i < weightObject.length; i++) {
-				for (var e = 0; e < variantArray.length; e++) {
-					if (weightObject[i] === variantArray[e]) {
-						weightValue = weightObject[i];
+			for ( let i = 0; i < weightObject.length; i++ ) {
+				for ( let e = 0; e < variantArray.length; e++ ) {
+					if ( weightObject[ i ] === variantArray[ e ] ) {
+						weightValue = weightObject[ i ];
 						selected = ' selected="selected"';
 					} else {
 						selected =
-							weightObject[i] == weightValue
+							weightObject[ i ] === weightValue
 								? ' selected="selected"'
-								: "";
+								: '';
 					}
 				}
 				weightOptions +=
 					'<option value="' +
-					weightObject[i] +
+					weightObject[ i ] +
 					'"' +
 					selected +
-					">" +
-					weightMap[weightObject[i]] +
-					"</option>";
+					'>' +
+					weightMap[ weightObject[ i ] ] +
+					'</option>';
 			}
 
-			variantSelect.html(weightOptions);
-			if (!init) {
-				api(variants).set("");
+			variantSelect.html( weightOptions );
+			if ( ! init ) {
+				api( variants ).set( '' );
 			}
 		},
 	};
 
-	$(function () {
+	$( function () {
 		InspiroTypography.init();
-	});
-})(jQuery);
+	} );
+} )( jQuery );

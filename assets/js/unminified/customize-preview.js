@@ -1,4 +1,3 @@
-/* eslint-disable no-var */
 /* global inspiroCustomizePreview, jQuery */
 
 /**
@@ -17,11 +16,11 @@
  * @param {string} cssProperty The CSS property.
  */
 function inspiroBuildStyleTag( control, value, cssProperty ) {
-	var style = '';
-	var selector = '';
-	var hasMediaQuery = false;
+	let style = '';
+	let selector = '';
+	let hasMediaQuery = false;
 
-	var fakeControl = control.replace( '-' + cssProperty, '' );
+	let fakeControl = control.replace( '-' + cssProperty, '' );
 	fakeControl = 'typo-' + fakeControl;
 
 	const mediaQuery = fakeControl + '-media';
@@ -145,7 +144,7 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 			// Update custom color CSS.
 			const style = $( '#custom-theme-colors' );
 			const hex = style.data( 'hex' );
-			var css = style.html();
+			let css = style.html();
 
 			css = css.replaceAll( hex, to );
 			style.html( css ).data( 'hex', to );
@@ -210,9 +209,9 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 						newValue,
 						cssProperty
 					);
-					var link = '';
+					let link = '';
 
-					var fontName = newValue.split( ',' )[ 0 ];
+					let fontName = newValue.split( ',' )[ 0 ];
 					// Replace ' character with space, necessary to separate out font prop value.
 					fontName = fontName.replace( /'/g, '' );
 
@@ -267,10 +266,10 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 						'font-weight',
 						'font-family'
 					);
-					var link = '';
+					let link = '';
 
 					if ( newValue ) {
-						var fontName =
+						let fontName =
 							wp.customize._value[ fontControl ]._value;
 						fontName = fontName.split( ',' );
 						fontName = fontName[ 0 ].replace( /'/g, '' );
