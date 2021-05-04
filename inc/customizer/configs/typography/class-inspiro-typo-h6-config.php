@@ -4,7 +4,7 @@
  *
  * @package Inspiro
  * @subpackage Inspiro_Lite
- * @since Inspiro x.x.x
+ * @since Inspiro 1.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * PHP Class for Registering Customizer Confugration
  *
- * @since x.x.x
+ * @since 1.3.0
  */
 class Inspiro_Typo_H6_Config {
 	/**

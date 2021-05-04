@@ -3,7 +3,7 @@
  * Helper class for font settings
  *
  * @package Inspiro
- * @since Inspiro x.x.x
+ * @since Inspiro 1.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -234,7 +234,7 @@ if ( ! class_exists( 'Inspiro_Font_Family_Manager' ) ) {
 		 *
 		 * Google Fonts are saved as {'Font Name', Category}. This function cleanes this up to retreive only the {Font Name}.
 		 *
-		 * @since  x.x.x
+		 * @since  1.3.0
 		 * @param string $font_value Name of the font.
 		 *
 		 * @return string Font name where commas and inverted commas are removed if the font is a Google Font.

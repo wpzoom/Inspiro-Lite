@@ -15,14 +15,14 @@
 	/**
 	 * Helper class for the main Customizer interface.
 	 *
-	 * @since x.x.x
+	 * @since 1.3.0
 	 * @class InspiroTypography
 	 */
 	const InspiroTypography = {
 		/**
 		 * Initializes our custom logic for the Customizer.
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @function init
 		 */
 		init() {
@@ -32,7 +32,7 @@
 		/**
 		 * Initializes logic for font controls.
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @access private
 		 * @function _initFonts
 		 */
@@ -96,7 +96,7 @@
 		/**
 		 * Initializes logic for a single font control.
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @access private
 		 * @function _initFont
 		 */
@@ -131,7 +131,7 @@
 		/**
 		 * Callback for when a font control changes.
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @access private
 		 * @function _fontSelectChange
 		 */
@@ -227,7 +227,7 @@
 		 * Sets the options for a font weight control when a
 		 * font family control changes.
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @access private
 		 * @function _setFontWeightOptions
 		 * @param {boolean} init Whether or not we're initializing this font weight control.
@@ -296,7 +296,7 @@
 		 * Sets the options for a font variant control when a
 		 * font family control changes.
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @access private
 		 * @function _setFontVariantOptions
 		 * @param {boolean} init Whether or not we're initializing this font variant control.

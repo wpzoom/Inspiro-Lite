@@ -372,7 +372,7 @@ if ( ! function_exists( 'inspiro_get_prop' ) ) :
 	 *
 	 * Provide a default value if you want to return a specific value if the property is not set.
 	 *
-	 * @since  x.x.x
+	 * @since  1.3.0
 	 * @access public
 	 * @author Gravity Forms - Easiest Tool to Create Advanced Forms for Your WordPress-Powered Website.
 	 * @link  https://www.gravityforms.com/
@@ -406,7 +406,7 @@ endif;
 /**
  * Register Block Patterns categories
  *
- * @since x.x.x
+ * @since 1.3.0
  *
  * @return void
  */

@@ -3,7 +3,7 @@
  * Customize Font Presets Control class.
  *
  * @package Inspiro
- * @since Inspiro x.x.x
+ * @since Inspiro 1.3.0
  */
 
 // Exit if accessed directly.

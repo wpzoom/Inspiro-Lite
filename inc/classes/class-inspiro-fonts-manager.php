@@ -3,7 +3,7 @@
  * Helper class for load google fonts to front-end
  *
  * @package Inspiro
- * @since Inspiro x.x.x
+ * @since Inspiro 1.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -143,7 +143,7 @@ if ( ! class_exists( 'Inspiro_Fonts_Manager' ) ) {
 		/**
 		 * Adds data to the $fonts array for a font to be rendered.
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @param string $name The name key of the font to add.
 		 * @param array  $variants An array of weight variants.
 		 * @return void
@@ -205,7 +205,7 @@ if ( ! class_exists( 'Inspiro_Fonts_Manager' ) ) {
 		/**
 		 * Renders the <link> tag for all fonts in the $fonts array.
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @return void
 		 */
 		public static function render_fonts() {

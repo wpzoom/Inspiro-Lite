@@ -9,7 +9,7 @@
 /**
  * Build <style> tag.
  *
- * @since x.x.x
+ * @since 1.3.0
  *
  * @param {wp.customize} control The WordPress Customize API control.
  * @param {string} value The control value.
@@ -203,7 +203,7 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 			/**
 			 * Generate Font Family CSS
 			 *
-			 * @since x.x.x
+			 * @since 1.3.0
 			 * @see https://github.com/brainstormforce/astra/blob/663761d3419f25640af9b59e64384bd07f810bc4/assets/js/unminified/customizer-preview.js#L369
 			 */
 			wp.customize( control, function ( value ) {
@@ -257,7 +257,7 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 			/**
 			 * Generate Font Weight CSS
 			 *
-			 * @since x.x.x
+			 * @since 1.3.0
 			 * @see https://github.com/brainstormforce/astra/blob/663761d3419f25640af9b59e64384bd07f810bc4/assets/js/unminified/customizer-preview.js#L409
 			 */
 			wp.customize( control, function ( value ) {
@@ -331,7 +331,7 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 			/**
 			 * Generate Font Size CSS
 			 *
-			 * @since x.x.x
+			 * @since 1.3.0
 			 */
 			wp.customize( control, function ( value ) {
 				value.bind( function ( newValue ) {
@@ -364,7 +364,7 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 			/**
 			 * Generate Text Transform CSS
 			 *
-			 * @since x.x.x
+			 * @since 1.3.0
 			 */
 			wp.customize( control, function ( value ) {
 				value.bind( function ( newValue ) {
@@ -397,7 +397,7 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 			/**
 			 * Generate Line Height CSS
 			 *
-			 * @since x.x.x
+			 * @since 1.3.0
 			 */
 			wp.customize( control, function ( value ) {
 				value.bind( function ( newValue ) {

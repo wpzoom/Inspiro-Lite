@@ -5,7 +5,7 @@
  * @link https://github.com/brainstormforce/astra/
  *
  * @package Inspiro
- * @since Inspiro x.x.x
+ * @since Inspiro 1.3.0
  */
 
 // Exit if accessed directly.
@@ -23,7 +23,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		/**
 		 * Used to connect controls to each other.
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @var bool $connect
 		 */
 		public $connect = false;
@@ -31,7 +31,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		/**
 		 * Option name.
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @var string $name
 		 */
 		public $name = '';
@@ -39,7 +39,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		/**
 		 * Option label.
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @var string $label
 		 */
 		public $label = '';
@@ -47,7 +47,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		/**
 		 * Option description.
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @var string $description
 		 */
 		public $description = '';
@@ -55,7 +55,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		/**
 		 * Control type.
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @var string $type
 		 */
 		public $type = 'inspiro-font-family';
@@ -71,7 +71,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		/**
 		 * Used to set the mode for code controls.
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @var bool $mode
 		 */
 		public $mode = 'html';
@@ -79,7 +79,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		/**
 		 * Used to set the default font options.
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @var string $inspiro_inherit
 		 */
 		public $inspiro_inherit = '';
@@ -87,7 +87,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		/**
 		 * If true, the preview button for a control will be rendered.
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @var bool $preview_button
 		 */
 		public $preview_button = false;
@@ -95,7 +95,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		/**
 		 * Set the default font options.
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @param WP_Customize_Manager $manager Customizer bootstrap instance.
 		 * @param string               $id      Control ID.
 		 * @param array                $args    Default parent's arguments.

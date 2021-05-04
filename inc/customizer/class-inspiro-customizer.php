@@ -4,7 +4,7 @@
  *
  * @package Inspiro
  * @subpackage Inspiro_Lite
- * @since Inspiro x.x.x
+ * @since Inspiro 1.3.0
  */
 
 if ( ! class_exists( 'Inspiro_Customizer' ) ) {
@@ -49,7 +49,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		/**
 		 * Register custom control types.
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 *
 		 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
 		 */
@@ -181,7 +181,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 			/**
 			 * Fires to register all customizer custom panels, settings and controls
 			 *
-			 * @since x.x.x
+			 * @since 1.3.0
 			 */
 			do_action( 'inspiro/customize_register', $wp_customize );
 		}
@@ -299,7 +299,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		 *
 		 * @link https://github.com/brainstormforce/astra/blob/663761d3419f25640af9b59e64384bd07f810bc4/inc/customizer/class-astra-customizer.php#L286
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @return void
 		 */
 		public function print_footer_scripts() {

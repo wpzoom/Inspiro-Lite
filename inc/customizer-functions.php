@@ -3,7 +3,7 @@
  * Functions for the Customizer
  *
  * @package Inspiro
- * @since Inspiro x.x.x
+ * @since Inspiro 1.3.0
  */
 
 /**

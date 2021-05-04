@@ -4,7 +4,7 @@
  *
  * @package Inspiro
  * @subpackage Inspiro_Lite
- * @since Inspiro x.x.x
+ * @since Inspiro 1.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

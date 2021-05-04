@@ -6,7 +6,7 @@
  *
  * @package Inspiro
  * @subpackage Inspiro_Lite
- * @since Inspiro x.x.x
+ * @since Inspiro 1.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Base Class for Registering Customizer Controls.
  *
- * @since x.x.x
+ * @since 1.3.0
  */
 if ( ! class_exists( 'Inspiro_Customizer_Control_Base' ) ) {
 
@@ -28,7 +28,7 @@ if ( ! class_exists( 'Inspiro_Customizer_Control_Base' ) ) {
 		/**
 		 * Registered Controls.
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @var Array
 		 */
 		private static $controls;
@@ -43,7 +43,7 @@ if ( ! class_exists( 'Inspiro_Customizer_Control_Base' ) ) {
 		/**
 		 * Enqueue Admin Scripts
 		 *
-		 * @since x.x.x
+		 * @since 1.3.0
 		 */
 		public function enqueue_scripts() {
 			wp_enqueue_style(
@@ -105,7 +105,7 @@ if ( ! class_exists( 'Inspiro_Customizer_Control_Base' ) ) {
 		 * Returns control instance
 		 *
 		 * @param  string $control_type control type.
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @return string
 		 */
 		public static function get_control_instance( $control_type ) {
@@ -122,7 +122,7 @@ if ( ! class_exists( 'Inspiro_Customizer_Control_Base' ) ) {
 		 * Returns control and its attributes
 		 *
 		 * @param  string $control_type control type.
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @return array
 		 */
 		public static function get_control( $control_type ) {
@@ -137,7 +137,7 @@ if ( ! class_exists( 'Inspiro_Customizer_Control_Base' ) ) {
 		 * Returns Santize callback for control
 		 *
 		 * @param  string $control control.
-		 * @since x.x.x
+		 * @since 1.3.0
 		 * @return string
 		 */
 		public static function get_sanitize_call( $control ) {
