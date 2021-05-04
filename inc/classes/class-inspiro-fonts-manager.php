@@ -84,7 +84,7 @@ if ( ! class_exists( 'Inspiro_Fonts_Manager' ) ) {
 			 * Headings
 			 */
 
-			$headings_font_family   = get_theme_mod( 'headings-font-family', "'Montserrat', sans-serif" );
+			$headings_font_family   = get_theme_mod( 'headings-font-family', "'Inter', sans-serif" );
 			$headings_font_variants = get_theme_mod( 'headings-font-variant', '500,700' );
 			self::add_font( $headings_font_family, $headings_font_variants );
 
@@ -116,15 +116,15 @@ if ( ! class_exists( 'Inspiro_Fonts_Manager' ) ) {
 			 * Main Menu
 			 */
 
-			$mainmenu_font_family   = get_theme_mod( 'mainmenu-font-family', 'inherit' );
-			$mainmenu_font_variants = get_theme_mod( 'mainmenu-font-variant', 'inherit' );
+			$mainmenu_font_family   = get_theme_mod( 'mainmenu-font-family', "'Montserrat', sans-serif" );
+			$mainmenu_font_variants = get_theme_mod( 'mainmenu-font-variant', '500' );
 			self::add_font( $mainmenu_font_family, $mainmenu_font_variants );
 
 			/**
 			 * Mobile Menu
 			 */
 
-			$mobilemenu_font_family   = get_theme_mod( 'mobilemenu-font-family', 'inherit' );
+			$mobilemenu_font_family   = get_theme_mod( 'mobilemenu-font-family', "'Montserrat', sans-serif" );
 			$mobilemenu_font_variants = get_theme_mod( 'mobilemenu-font-variant', '600' );
 			self::add_font( $mobilemenu_font_family, $mobilemenu_font_variants );
 		}
