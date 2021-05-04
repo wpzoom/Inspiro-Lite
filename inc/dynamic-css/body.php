@@ -45,19 +45,19 @@ function inspiro_dynamic_theme_css_body( $dynamic_css ) {
 	$selector  = inspiro_get_prop( $selectors, 'typo-body' );
 
 	$dynamic_css .= "{$selector} {\n";
-	if ( ! empty( $body_font_family ) ) {
+	if ( ! empty( $body_font_family ) && 'inherit' !== $body_font_family ) {
 		$dynamic_css .= "font-family: {$body_font_family};\n";
 	}
 	if ( absint( $body_font_size ) >= 14 && absint( $body_font_size ) <= 18 ) {
 		$dynamic_css .= "font-size: {$body_font_size}px;\n";
 	}
-	if ( ! empty( $body_font_weight ) ) {
+	if ( ! empty( $body_font_weight ) && 'inherit' !== $body_font_weight ) {
 		$dynamic_css .= "font-weight: {$body_font_weight};\n";
 	}
-	if ( ! empty( $body_text_transform ) ) {
+	if ( ! empty( $body_text_transform ) && 'inherit' !== $body_text_transform ) {
 		$dynamic_css .= "text-transform: {$body_text_transform};\n";
 	}
-	if ( ! empty( $body_line_height ) ) {
+	if ( ! empty( $body_line_height ) && 'inherit' !== $body_line_height ) {
 		$dynamic_css .= "line-height: {$body_line_height};\n";
 	}
 	$dynamic_css .= "}\n";

@@ -48,19 +48,19 @@ function inspiro_dynamic_theme_css_mobilemenu( $dynamic_css ) {
 
 	$dynamic_css .= "{$media_query} {\n";
 	$dynamic_css .= "{$selector} {\n";
-	if ( ! empty( $mobilemenu_font_family ) ) {
+	if ( ! empty( $mobilemenu_font_family ) && 'inherit' !== $mobilemenu_font_family ) {
 		$dynamic_css .= "font-family: {$mobilemenu_font_family};\n";
 	}
 	if ( absint( $mobilemenu_font_size ) >= 14 && absint( $mobilemenu_font_size ) <= 18 ) {
 		$dynamic_css .= "font-size: {$mobilemenu_font_size}px;\n";
 	}
-	if ( ! empty( $mobilemenu_font_weight ) ) {
+	if ( ! empty( $mobilemenu_font_weight ) && 'inherit' !== $mobilemenu_font_weight ) {
 		$dynamic_css .= "font-weight: {$mobilemenu_font_weight};\n";
 	}
-	if ( ! empty( $mobilemenu_text_transform ) ) {
+	if ( ! empty( $mobilemenu_text_transform ) && 'inherit' !== $mobilemenu_text_transform ) {
 		$dynamic_css .= "text-transform: {$mobilemenu_text_transform};\n";
 	}
-	if ( ! empty( $mobilemenu_line_height ) ) {
+	if ( ! empty( $mobilemenu_line_height ) && 'inherit' !== $mobilemenu_line_height ) {
 		$dynamic_css .= "line-height: {$mobilemenu_line_height};\n";
 	}
 	$dynamic_css .= "}\n}";

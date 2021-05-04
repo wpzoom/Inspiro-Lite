@@ -44,16 +44,16 @@ function inspiro_dynamic_theme_css_headings( $dynamic_css ) {
 	$selector  = inspiro_get_prop( $selectors, 'typo-headings' );
 
 	$dynamic_css .= "{$selector} {\n";
-	if ( ! empty( $headings_font_family ) ) {
+	if ( ! empty( $headings_font_family ) && 'inherit' !== $headings_font_family ) {
 		$dynamic_css .= "font-family: {$headings_font_family};\n";
 	}
-	if ( ! empty( $headings_font_weight ) ) {
+	if ( ! empty( $headings_font_weight ) && 'inherit' !== $headings_font_weight ) {
 		$dynamic_css .= "font-weight: {$headings_font_weight};\n";
 	}
-	if ( ! empty( $headings_text_transform ) ) {
+	if ( ! empty( $headings_text_transform ) && 'inherit' !== $headings_text_transform ) {
 		$dynamic_css .= "text-transform: {$headings_text_transform};\n";
 	}
-	if ( ! empty( $headings_line_height ) ) {
+	if ( ! empty( $headings_line_height ) && 'inherit' !== $headings_line_height ) {
 		$dynamic_css .= "line-height: {$headings_line_height};\n";
 	}
 	$dynamic_css .= "}\n";

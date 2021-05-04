@@ -45,19 +45,19 @@ function inspiro_dynamic_theme_css_hero_header_button( $dynamic_css ) {
 	$selector  = inspiro_get_prop( $selectors, 'typo-slider-button' );
 
 	$dynamic_css .= "{$selector} {\n";
-	if ( ! empty( $hero_header_button_font_family ) ) {
+	if ( ! empty( $hero_header_button_font_family ) && 'inherit' !== $hero_header_button_font_family ) {
 		$dynamic_css .= "font-family: {$hero_header_button_font_family};\n";
 	}
 	if ( absint( $hero_header_button_font_size ) >= 14 && absint( $hero_header_button_font_size ) <= 18 ) {
 		$dynamic_css .= "font-size: {$hero_header_button_font_size}px;\n";
 	}
-	if ( ! empty( $hero_header_button_font_weight ) ) {
+	if ( ! empty( $hero_header_button_font_weight ) && 'inherit' !== $hero_header_button_font_weight ) {
 		$dynamic_css .= "font-weight: {$hero_header_button_font_weight};\n";
 	}
-	if ( ! empty( $hero_header_button_text_transform ) ) {
+	if ( ! empty( $hero_header_button_text_transform ) && 'inherit' !== $hero_header_button_text_transform ) {
 		$dynamic_css .= "text-transform: {$hero_header_button_text_transform};\n";
 	}
-	if ( ! empty( $hero_header_button_line_height ) ) {
+	if ( ! empty( $hero_header_button_line_height ) && 'inherit' !== $hero_header_button_line_height ) {
 		$dynamic_css .= "line-height: {$hero_header_button_line_height};\n";
 	}
 	$dynamic_css .= "}\n";
