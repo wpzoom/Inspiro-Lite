@@ -177,6 +177,8 @@
 	// Add header video class after the video is loaded.
 	$( document ).on( 'wp-custom-header-video-loaded', function () {
 		$body.addClass( 'has-header-video' );
+		$( '#wp-custom-header-video' ).attr( 'autoplay', true );
+		$( '#wp-custom-header-video' ).attr( 'playsinline', true );
 	} );
 } )( jQuery );
 
