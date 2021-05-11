@@ -4712,7 +4712,7 @@ div.aligncenter {
         margin-top: 46px;
     }
     .admin-bar .side-nav__wrap {
-        padding-top: calc(46px + 18px + 12px);
+        padding-top: calc( 46px + 18px + 12px);
     }
     .side-nav__wrap .navbar-toggle {
         margin: 0;
@@ -4738,6 +4738,10 @@ div.aligncenter {
     .previous-post-cover .previous-content .nav-title {
         font-size: 24px;
         font-size: 1.5rem;
+    }
+    /* Make sure play/pause button can be clicked on smaller screens */
+    .wp-custom-header .wp-custom-header-video-button {
+        z-index: 10;
     }
 }
 

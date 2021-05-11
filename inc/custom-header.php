@@ -147,6 +147,14 @@ function inspiro_video_controls( $settings ) {
 	$settings['l10n']['pause'] = '<span class="screen-reader-text">' . __( 'Pause background video', 'inspiro' ) . '</span>' . inspiro_get_theme_svg( 'pause' );
 
 	/**
+	 * Change the minimum screen size to use the video header.
+	 *
+	 * @since x.x.x
+	 */
+	$settings['minWidth']  = 100;
+	$settings['minHeight'] = 100;
+
+	/**
 	 * Adds support for Vimeo to the video in the custom header.
 	 *
 	 * @see https://github.com/bradyvercher/custom-header-vimeo

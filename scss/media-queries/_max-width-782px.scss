@@ -1,32 +1,38 @@
 @media screen and (max-width: em(782)) {
-    .admin-bar {
-        #header {
-            margin-top: 46px;
-        }
-        .side-nav__wrap {
-            padding-top: calc(46px + 18px + 12px); // admin bar + masthead padding top + toggle button padding top
-        }
-    }
-    .side-nav__wrap {
-        .navbar-toggle {
-            margin: 0;
-            margin-bottom: 15px;
-        }
-    }
-    .site-title {
-        @include font-size(42);
-    }
-    .custom-header-button {
-        @include font-size(14);
-    }
-    .side-nav .widget .title {
-        @include font-size(20);
-    }
-    .page .entry-cover-image .entry-header .entry-title,
-    .single .entry-cover-image .entry-header .entry-title {
-        @include font-size(32);
-    }
-    .previous-post-cover .previous-content .nav-title {
-        @include font-size(24);
-    }
+	.admin-bar {
+		#header {
+			margin-top: 46px;
+		}
+		.side-nav__wrap {
+			padding-top: calc(
+				46px + 18px + 12px
+			); // admin bar + masthead padding top + toggle button padding top
+		}
+	}
+	.side-nav__wrap {
+		.navbar-toggle {
+			margin: 0;
+			margin-bottom: 15px;
+		}
+	}
+	.site-title {
+		@include font-size(42);
+	}
+	.custom-header-button {
+		@include font-size(14);
+	}
+	.side-nav .widget .title {
+		@include font-size(20);
+	}
+	.page .entry-cover-image .entry-header .entry-title,
+	.single .entry-cover-image .entry-header .entry-title {
+		@include font-size(32);
+	}
+	.previous-post-cover .previous-content .nav-title {
+		@include font-size(24);
+	}
+	/* Make sure play/pause button can be clicked on smaller screens */
+	.wp-custom-header .wp-custom-header-video-button {
+		z-index: 10;
+	}
 }
