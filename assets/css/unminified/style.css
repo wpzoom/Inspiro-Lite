@@ -1369,7 +1369,7 @@ a:hover .nav-title,
 .entry-content a img,
 .comment-content a img,
 .widget a img {
-    box-shadow: 0 0 0 8px #fff;
+    box-shadow: none;
 }
 
 .post-navigation a:focus .icon,
