@@ -149,7 +149,7 @@ function inspiro_video_controls( $settings ) {
 	/**
 	 * Change the minimum screen size to use the video header.
 	 *
-	 * @since x.x.x
+	 * @since 1.3.1
 	 */
 	$settings['minWidth']  = 100;
 	$settings['minHeight'] = 100;
