@@ -38,6 +38,12 @@
 	<rule ref="WordPress-Core" />
 	<rule ref="WordPress-Extra"/>
 	<rule ref="WordPress-Docs"/>
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<!-- Value: replace the function, class, and variable prefixes used. Separate multiple prefixes with a comma. -->
+			<property name="prefixes" type="array" value="WPZOOM,wpzoom"/>
+		</properties>
+	</rule>
 	<rule ref="WordPress.NamingConventions.ValidHookName">
 		<properties>
 			<property name="additionalWordDelimiters" value="-/."/>
