@@ -25,20 +25,37 @@ class Inspiro_Homepage_Media_Panel_Config {
 	}
 
 	/**
+	 * Configurations
+	 *
+	 * @since x.x.x Store configurations to class method.
+	 * @return array
+	 */
+	public static function config() {
+		return array(
+			'panel' => array(
+				'id'   => 'homepage_media_panel',
+				'args' => array(
+					'capability'      => 'edit_theme_options',
+					'title'           => esc_html__( 'Homepage Media', 'inspiro' ),
+					'active_callback' => 'is_header_video_active',
+					'priority'        => 40,
+				),
+			),
+		);
+	}
+
+	/**
 	 * Register configurations
 	 *
 	 * @param WP_Customize_Manager $wp_customize instance of WP_Customize_Manager.
 	 * @return void
 	 */
 	public function register_configuration( $wp_customize ) {
+		$configs = self::config();
+
 		$wp_customize->add_panel(
-			'homepage_media_panel',
-			array(
-				'capability'      => 'edit_theme_options',
-				'title'           => esc_html__( 'Homepage Media', 'inspiro' ),
-				'active_callback' => 'is_header_video_active',
-				'priority'        => 40,
-			)
+			$configs['panel']['id'],
+			$configs['panel']['args']
 		);
 	}
 }
