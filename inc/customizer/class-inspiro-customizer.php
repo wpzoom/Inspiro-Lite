@@ -13,6 +13,22 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 	 * Help class for Customizer
 	 */
 	class Inspiro_Customizer {
+		/**
+		 * Store all customizer data
+		 *
+		 * @since x.x.x
+		 * @var array
+		 */
+		public static $customizer_data = array();
+
+		/**
+		 * Store all configuration class names
+		 *
+		 * @since x.x.x
+		 *
+		 * @var array
+		 */
+		public $config_class_names = array();
 
 		/**
 		 * Instance
@@ -36,6 +52,9 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		 * Constructor
 		 */
 		public function __construct() {
+			add_action( 'init', array( $this, 'autoload_configuration_files' ) );
+			add_action( 'inspiro/configuration-files-loaded', array( $this, 'store_customizer_data' ) );
+
 			add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
 
 			add_action( 'customize_register', array( $this, 'register_control_types' ), 2 );
@@ -44,6 +63,81 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 			add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue_control_scripts' ) );
 
 			add_action( 'customize_controls_print_footer_scripts', array( $this, 'print_footer_scripts' ) );
+		}
+
+		/**
+		 * Set customizer data
+		 *
+		 * @since x.x.x
+		 *
+		 * @param string $setting_id Customizer setting id.
+		 * @param array  $setting_args Customizer setting args.
+		 * @return boolean
+		 */
+		public function set_customizer_data( $setting_id, $setting_args ) {
+			if ( ! $setting_id || ! $setting_args ) {
+				return false;
+			}
+
+			if ( ! in_array( $setting_id, self::$customizer_data ) ) {
+				self::$customizer_data[ $setting_id ] = $setting_args;
+			}
+
+			return true;
+		}
+
+		/**
+		 * All configuration files
+		 *
+		 * @since x.x.x Moved to class method all configuration files.
+		 *
+		 * @return array
+		 */
+		public static function configuration_files() {
+			return array(
+				'blog-post'      => array(
+					'blog-post-panel',
+					'post-options',
+				),
+				'colors'         => array(
+					'header-textcolor',
+					'header-button-color',
+					'color-scheme',
+				),
+				'footer'         => array(
+					'footer-widget-areas',
+				),
+				'homepage-media' => array(
+					'homepage-media-panel',
+					'homepage-media-media',
+					'homepage-media-content',
+				),
+				'logo'           => array(
+					'custom-logo-text',
+				),
+				'theme-layout'   => array(
+					'theme-layout',
+				),
+				'typography'     => array(
+					'typo-panel',
+					'typo-body',
+					'typo-headings',
+					// phpcs:disable Squiz.PHP.CommentedOutCode.Found
+					// TODO: Enable all panels in the next update
+					// 'typo-h1',
+					// 'typo-h2',
+					// 'typo-h3',
+					// 'typo-h4',
+					// 'typo-h5',
+					// 'typo-h6'.
+					// phpcs:enable Squiz.PHP.CommentedOutCode.Found
+					'typo-main-menu',
+					'typo-mobile-menu',
+					'typo-hero-header-title',
+					'typo-hero-header-desc',
+					'typo-hero-header-button',
+				),
+			);
 		}
 
 		/**
@@ -123,67 +217,82 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 				)
 			);
 
-			$configuration_files = array(
-				'blog-post'      => array(
-					'blog-post-panel',
-					'post-options',
-				),
-				'colors'         => array(
-					'header-textcolor',
-					'header-button-color',
-					'color-scheme',
-				),
-				'footer'         => array(
-					'footer-widget-areas',
-				),
-				'homepage-media' => array(
-					'homepage-media-panel',
-					'homepage-media-media',
-					'homepage-media-content',
-				),
-				'logo'           => array(
-					'custom-logo-text',
-				),
-				'theme-layout'   => array(
-					'theme-layout',
-				),
-				'typography'     => array(
-					'typo-panel',
-					'typo-body',
-					'typo-headings',
-					// phpcs:disable Squiz.PHP.CommentedOutCode.Found
-					// TODO: Enable all panels in the next update
-					// 'typo-h1',
-					// 'typo-h2',
-					// 'typo-h3',
-					// 'typo-h4',
-					// 'typo-h5',
-					// 'typo-h6'.
-					// phpcs:enable Squiz.PHP.CommentedOutCode.Found
-					'typo-main-menu',
-					'typo-mobile-menu',
-					'typo-hero-header-title',
-					'typo-hero-header-desc',
-					'typo-hero-header-button',
-				),
-			);
-
-			// phpcs:disable WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
-			foreach ( $configuration_files as $folder_name => $files ) {
-				foreach ( $files as $file_name ) {
-					if ( file_exists( INSPIRO_THEME_DIR . "inc/customizer/configs/{$folder_name}/class-inspiro-{$file_name}-config.php" ) ) {
-						require INSPIRO_THEME_DIR . "inc/customizer/configs/{$folder_name}/class-inspiro-{$file_name}-config.php";
-					}
-				}
-			}
-			// phpcs:enable WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
-
 			/**
 			 * Fires to register all customizer custom panels, settings and controls
 			 *
 			 * @since 1.3.0
 			 */
 			do_action( 'inspiro/customize_register', $wp_customize );
+		}
+
+		/**
+		 * Autoload all customizer configuration files
+		 *
+		 * @since x.x.x
+		 *
+		 * @return void
+		 */
+		public function autoload_configuration_files() {
+			$configuration_files = self::configuration_files();
+
+			// phpcs:disable WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+			foreach ( $configuration_files as $folder_name => $files ) {
+				foreach ( $files as $file_name ) {
+					$class_name = str_replace( '-', '_', ucwords( "inspiro-{$file_name}-config", '-' ) ); // phpcs:ignore PHPCompatibility.FunctionUse.NewFunctionParameters.ucwords_delimitersFound
+
+					if ( ! class_exists( $class_name ) ) {
+						if ( file_exists( INSPIRO_THEME_DIR . "inc/customizer/configs/{$folder_name}/class-inspiro-{$file_name}-config.php" ) ) {
+							require INSPIRO_THEME_DIR . "inc/customizer/configs/{$folder_name}/class-inspiro-{$file_name}-config.php";
+
+							if ( method_exists( $class_name, 'config' ) && ! isset( $this->config_class_names[ $class_name ] ) ) {
+								$this->config_class_names[ $class_name ] = call_user_func( array( $class_name, 'config' ) );
+							}
+						}
+					}
+				}
+			}
+			// phpcs:enable WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+
+			/**
+			 * Fires after all customizer configuration files are loaded.
+			 * Pass array with configuration class names.
+			 *
+			 * @since x.x.x
+			 */
+			do_action( 'inspiro/configuration-files-loaded', $this->config_class_names );
+		}
+
+		/**
+		 * Store customizer data to static class variable
+		 *
+		 * @since x.x.x
+		 *
+		 * @param array $config_class_names All configuration class names.
+		 * @return array Array of customizer data.
+		 */
+		public function store_customizer_data( $config_class_names ) {
+			if ( ! is_array( $config_class_names ) || empty( $config_class_names ) ) {
+				return;
+			}
+
+			foreach ( $config_class_names as $class_name => $configs ) {
+				$setting      = $configs['setting'];
+				$setting_id   = inspiro_get_prop( $setting, 'id' );
+				$setting_args = inspiro_get_prop( $setting, 'args' );
+
+				$this->set_customizer_data( $setting_id, $setting_args );
+
+				if ( ! $setting_id || ! $setting_args ) {
+					foreach ( $setting as $_setting ) {
+						$setting_id   = inspiro_get_prop( $_setting, 'id' );
+						$setting_args = inspiro_get_prop( $_setting, 'args' );
+
+						$this->set_customizer_data( $setting_id, $setting_args );
+					}
+				}
+			}
+
+			return apply_filters( 'inspiro/store_customizer_data', self::$customizer_data );
 		}
 
 		/**
