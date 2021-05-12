@@ -92,6 +92,11 @@ if ( is_admin() ) {
 }
 
 /**
+ * Theme Upgrader
+ */
+require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-theme-upgrader.php';
+
+/**
  * Inline theme css generated dynamically
  */
 require INSPIRO_THEME_DIR . 'inc/dynamic-css/body.php';
