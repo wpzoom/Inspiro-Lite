@@ -398,6 +398,7 @@ body {
     cursor: pointer;
     height: em(24);
     width: em(56);
+	@include font-size(16);
     overflow: hidden;
     opacity: 0.5;
     transform: translateX(-50%);
