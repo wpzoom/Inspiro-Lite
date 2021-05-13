@@ -4,7 +4,7 @@
  *
  * @package Inspiro
  * @subpackage Upgrader
- * @since x.x.x
+ * @since Inspiro x.x.x
  */
 
 /**
@@ -18,14 +18,7 @@ class Inspiro_Theme_Upgrader {
 	 *
 	 * @var array
 	 */
-	private $current_theme_data = [];
-
-	/**
-	 * New theme data
-	 *
-	 * @var array
-	 */
-	private $new_theme_data = [];
+	private $old_theme_data = array();
 
 	/**
 	 * Uploaded premium version.
@@ -54,16 +47,15 @@ class Inspiro_Theme_Upgrader {
 	 * @return string The compare table output.
 	 */
 	public function theme_overwrite_table( $table, $current_theme_data, $new_theme_data ) {
-		$this->current_theme_data = $current_theme_data;
-		$this->new_theme_data = $new_theme_data;
+		$this->old_theme_data = $current_theme_data;
 
 		if ( version_compare( $new_theme_data['Version'], '6.8.0', '>=' ) ) {
 			$this->uploaded_premium = true;
 		}
 
 		if ( $this->uploaded_premium ) {
-			$table .= '<h2 class="update-from-upload-heading">' . esc_html__( 'It seems you want to upgrade to premium version of the Inspiro WordPress Theme.' ) . '</h2>';
-			$table .= '<p class="update-from-upload-notice">' . esc_html__( 'After the upgrade all the settings will be kept but we still recommend that you make a backup of the database and files before proceeding to the replace process.' ) . '</p>';
+			$table .= '<h2 class="update-from-upload-heading">' . esc_html__( 'It seems you want to upgrade to premium version of the Inspiro WordPress Theme.', 'inspiro' ) . '</h2>';
+			$table .= '<p class="update-from-upload-notice">' . esc_html__( 'After the upgrade all the settings will be kept but we still recommend that you make a backup of the database and files before proceeding to the replace process.', 'inspiro' ) . '</p>';
 		}
 
 		return $table;
@@ -80,13 +72,37 @@ class Inspiro_Theme_Upgrader {
 	 * @return array List of action links available following a single theme installation
 	 */
 	public function install_theme_complete( $install_actions, $api, $stylesheet, $theme_info ) {
-		echo '<pre>';
-		print_r($api);
-		print_r($stylesheet);
-		print_r($theme_info);
-		echo '</pre>';
+		if ( $this->uploaded_premium ) {
+			$string = __( 'Migrate Customizer Settings to Inspiro Premium', 'inspiro' );
+			show_message( $string );
+			$this->migrate_customizer_settings();
+		}
 
 		return $install_actions;
+	}
+
+	/**
+	 * Migrate Customizer settings to Inspiro Premium
+	 *
+	 * @return void
+	 */
+	public function migrate_customizer_settings() {
+		$customizer_data = Inspiro_Customizer::$customizer_data;
+
+		foreach ( $customizer_data as $name => $args ) {
+			$default   = inspiro_get_prop( $args, 'default' );
+			$theme_mod = get_theme_mod( $name, $default );
+
+			if ( strpos( $name, 'font-family' ) !== false ) {
+				$font_family = Inspiro_Font_Family_Manager::clean_google_fonts( $theme_mod );
+				set_theme_mod( $name, $font_family );
+			}
+			if ( 'custom_logo_text' === $name ) {
+				update_option( 'blogname', $theme_mod );
+			}
+
+			// TODO: Make all settings compatible with premium version.
+		}
 	}
 }
 
