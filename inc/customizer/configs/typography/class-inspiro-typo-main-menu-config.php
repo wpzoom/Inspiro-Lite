@@ -41,48 +41,48 @@ class Inspiro_Typo_Main_Menu_Config {
 			),
 			'setting' => array(
 				array(
-					'mainmenu-font-family',
-					array(
+					'id'   => 'mainmenu-font-family',
+					'args' => array(
 						'transport'         => 'postMessage',
 						'sanitize_callback' => 'sanitize_text_field',
 						'default'           => "'Montserrat', sans-serif",
 					),
 				),
 				array(
-					'mainmenu-font-variant',
-					array(
+					'id'   => 'mainmenu-font-variant',
+					'args' => array(
 						'transport'         => 'postMessage',
 						'sanitize_callback' => 'inspiro_sanitize_font_variant',
 						'default'           => '500',
 					),
 				),
 				array(
-					'mainmenu-font-size',
-					array(
+					'id'   => 'mainmenu-font-size',
+					'args' => array(
 						'default'           => 16,
 						'transport'         => 'postMessage',
 						'sanitize_callback' => 'inspiro_sanitize_integer',
 					),
 				),
 				array(
-					'mainmenu-font-weight',
-					array(
+					'id'   => 'mainmenu-font-weight',
+					'args' => array(
 						'default'           => '500',
 						'transport'         => 'postMessage',
 						'sanitize_callback' => 'inspiro_sanitize_font_weight',
 					),
 				),
 				array(
-					'mainmenu-text-transform',
-					array(
+					'id'   => 'mainmenu-text-transform',
+					'args' => array(
 						'default'           => '',
 						'transport'         => 'postMessage',
 						'sanitize_callback' => 'inspiro_sanitize_choices',
 					),
 				),
 				array(
-					'mainmenu-line-height',
-					array(
+					'id'   => 'mainmenu-line-height',
+					'args' => array(
 						'default'           => 1.8,
 						'transport'         => 'postMessage',
 						'sanitize_callback' => 'inspiro_sanitize_float',
@@ -99,8 +99,8 @@ class Inspiro_Typo_Main_Menu_Config {
 					),
 				),
 				array(
-					'mainmenu-font-family',
-					array(
+					'id'   => 'mainmenu-font-family',
+					'args' => array(
 						'label'   => __( 'Font Family', 'inspiro' ),
 						'section' => 'inspiro_typography_section_menu',
 						'connect' => 'mainmenu-font-weight',
@@ -108,8 +108,8 @@ class Inspiro_Typo_Main_Menu_Config {
 					),
 				),
 				array(
-					'mainmenu-font-variant',
-					array(
+					'id'   => 'mainmenu-font-variant',
+					'args' => array(
 						'label'       => __( 'Variants', 'inspiro' ),
 						'description' => __( 'Only selected Font Variants will be loaded from Google Fonts.', 'inspiro' ),
 						'section'     => 'inspiro_typography_section_menu',
@@ -117,8 +117,8 @@ class Inspiro_Typo_Main_Menu_Config {
 					),
 				),
 				array(
-					'mainmenu-font-size',
-					array(
+					'id'   => 'mainmenu-font-size',
+					'args' => array(
 						'label'       => __( 'Font Size (px)', 'inspiro' ),
 						'section'     => 'inspiro_typography_section_menu',
 						'input_attrs' => array(
@@ -129,8 +129,8 @@ class Inspiro_Typo_Main_Menu_Config {
 					),
 				),
 				array(
-					'mainmenu-font-weight',
-					array(
+					'id'   => 'mainmenu-font-weight',
+					'args' => array(
 						'label'   => __( 'Font Weight', 'inspiro' ),
 						'section' => 'inspiro_typography_section_menu',
 						'type'    => 'select',
@@ -138,8 +138,8 @@ class Inspiro_Typo_Main_Menu_Config {
 					),
 				),
 				array(
-					'mainmenu-text-transform',
-					array(
+					'id'   => 'mainmenu-text-transform',
+					'args' => array(
 						'label'   => __( 'Text Transform', 'inspiro' ),
 						'section' => 'inspiro_typography_section_menu',
 						'type'    => 'select',
@@ -153,8 +153,8 @@ class Inspiro_Typo_Main_Menu_Config {
 					),
 				),
 				array(
-					'mainmenu-line-height',
-					array(
+					'id'   => 'mainmenu-line-height',
+					'args' => array(
 						'label'       => __( 'Line Height', 'inspiro' ),
 						'section'     => 'inspiro_typography_section_menu',
 						'input_attrs' => array(
