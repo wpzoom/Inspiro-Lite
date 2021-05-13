@@ -79,7 +79,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 				return false;
 			}
 
-			if ( ! in_array( $setting_id, self::$customizer_data ) ) {
+			if ( ! isset( self::$customizer_data[ $setting_id ] ) ) {
 				self::$customizer_data[ $setting_id ] = $setting_args;
 			}
 
