@@ -85,7 +85,7 @@ class Inspiro_Typo_Hero_Header_Button_Config {
 			'control' => array(
 				array(
 					'id'  => 'inspiro_typography_section_title_header_button',
-					'arg' => array(
+					'args' => array(
 						'label'    => __( 'Header Button', 'inspiro' ),
 						'section'  => 'inspiro_typography_section_hero_header',
 						'settings' => array(),
