@@ -234,7 +234,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 			$configs['setting'][3]['args']
 		);
 
-		$configs['control'][4]['args'] = Inspiro_Font_Family_Manager::get_font_family_weight( 'slider-title-font-family', $wp_customize );
+		$configs['control'][4]['args']['choices'] = Inspiro_Font_Family_Manager::get_font_family_weight( 'slider-title-font-family', $wp_customize );
 
 		$wp_customize->add_control(
 			$configs['control'][4]['id'],
