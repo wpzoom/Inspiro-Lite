@@ -58,7 +58,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 			add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
 
 			add_action( 'customize_register', array( $this, 'register_control_types' ), 2 );
-			add_action( 'customize_register', array( $this, 'include_configurations' ) );
+			add_action( 'customize_register', array( $this, 'register_configurations' ) );
 
 			add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue_control_scripts' ) );
 
@@ -195,11 +195,11 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		}
 
 		/**
-		 * Add postMessage support for site title and description for the Theme Customizer.
+		 * Register all configurations for Theme Customizer.
 		 *
 		 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
 		 */
-		public function include_configurations( $wp_customize ) {
+		public function register_configurations( $wp_customize ) {
 			/**
 			 * Upgrade to Inspiro Premium
 			 */
