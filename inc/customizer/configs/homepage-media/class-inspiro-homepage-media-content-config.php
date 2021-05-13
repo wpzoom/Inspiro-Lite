@@ -184,28 +184,28 @@ class Inspiro_Homepage_Media_Content_Config {
 		);
 
 		$wp_customize->add_control(
-			$configs['setting'][0]['id'],
-			$configs['setting'][0]['args']
+			$configs['control'][0]['id'],
+			$configs['control'][0]['args']
 		);
 
 		$wp_customize->add_control(
-			$configs['setting'][1]['id'],
-			$configs['setting'][1]['args']
+			$configs['control'][1]['id'],
+			$configs['control'][1]['args']
 		);
 
 		$wp_customize->add_control(
-			$configs['setting'][2]['id'],
-			$configs['setting'][2]['args']
+			$configs['control'][2]['id'],
+			$configs['control'][2]['args']
 		);
 
 		$wp_customize->add_control(
-			$configs['setting'][3]['id'],
-			$configs['setting'][3]['args']
+			$configs['control'][3]['id'],
+			$configs['control'][3]['args']
 		);
 
 		$wp_customize->add_control(
-			$configs['setting'][4]['id'],
-			$configs['setting'][4]['args']
+			$configs['control'][4]['id'],
+			$configs['control'][4]['args']
 		);
 	}
 }
