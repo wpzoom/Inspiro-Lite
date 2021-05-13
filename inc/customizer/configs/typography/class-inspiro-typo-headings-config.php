@@ -106,7 +106,7 @@ class Inspiro_Typo_Headings_Config {
 						'label'   => __( 'Font Weight', 'inspiro' ),
 						'section' => 'inspiro_typography_section_headings',
 						'type'    => 'select',
-						'choices' => '',
+						'choices' => array(),
 					),
 				),
 				array(

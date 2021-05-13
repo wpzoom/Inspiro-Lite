@@ -126,7 +126,7 @@ class Inspiro_Typo_Body_Config {
 						'label'   => __( 'Font Weight', 'inspiro' ),
 						'section' => 'inspiro_typography_section_body',
 						'type'    => 'select',
-						'choices' => '',
+						'choices' => array(),
 					),
 				),
 				array(

@@ -127,7 +127,7 @@ class Inspiro_Typo_Mobile_Menu_Config {
 						'label'   => __( 'Font Weight', 'inspiro' ),
 						'section' => 'inspiro_typography_section_menu',
 						'type'    => 'select',
-						'choices' => '',
+						'choices' => array(),
 					),
 				),
 				array(

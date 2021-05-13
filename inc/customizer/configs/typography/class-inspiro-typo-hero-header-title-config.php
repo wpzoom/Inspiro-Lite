@@ -134,7 +134,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 						'label'   => __( 'Font Weight', 'inspiro' ),
 						'section' => 'inspiro_typography_section_hero_header',
 						'type'    => 'select',
-						'choices' => '',
+						'choices' => array(),
 					),
 				),
 				array(
