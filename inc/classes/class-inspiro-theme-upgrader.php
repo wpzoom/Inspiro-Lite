@@ -197,21 +197,21 @@ class Inspiro_Theme_Upgrader {
 					set_theme_mod( 'color-body-text', '#eeeeee' );
 				} elseif ( 'custom' === $theme_mod ) {
 					$custom_color_hex = get_theme_mod( 'colorscheme_hex', '#0bb4aa' );
-					set_theme_mod( 'color-accent', $custom_color_hex );
+					set_theme_mod( 'color-accent', maybe_hash_hex_color( $custom_color_hex ) );
 				}
 			}
 			if ( 'header_textcolor' === $name ) {
-				set_theme_mod( 'color-slider-title', $theme_mod );
-				set_theme_mod( 'color-slider-description', $theme_mod );
+				set_theme_mod( 'color-slider-title', maybe_hash_hex_color( $theme_mod ) );
+				set_theme_mod( 'color-slider-description', maybe_hash_hex_color( $theme_mod ) );
 			}
 			if ( 'header_button_textcolor' === $name ) {
-				set_theme_mod( 'color-slider-button-text', $theme_mod );
+				set_theme_mod( 'color-slider-button-text', maybe_hash_hex_color( $theme_mod ) );
 			}
 			if ( 'header_button_textcolor_hover' === $name ) {
-				set_theme_mod( 'color-slider-button-text-hover', $theme_mod );
+				set_theme_mod( 'color-slider-button-text-hover', maybe_hash_hex_color( $theme_mod ) );
 			}
 			if ( 'header_button_bgcolor_hover' === $name ) {
-				set_theme_mod( 'color-slider-button-background-hover', $theme_mod );
+				set_theme_mod( 'color-slider-button-background-hover', maybe_hash_hex_color( $theme_mod ) );
 			}
 			if ( 'header_site_title' === $name ) {
 				$this->slide_post_attr['post_title'] = $theme_mod;
