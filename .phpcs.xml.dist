@@ -58,6 +58,7 @@
 		<properties>
 			<property name="customAutoEscapedFunctions" type="array">
 				<element value="inspiro_get_theme_svg"/>
+				<element value="inspiro_get_theme_mod"/>
 			</property>
 		</properties>
 	</rule>
