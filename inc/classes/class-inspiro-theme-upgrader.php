@@ -93,7 +93,7 @@ class Inspiro_Theme_Upgrader {
 	public function generic_strings() {
 		$this->strings['migrate_customizer_settings'] = __( 'Migrate Customizer Settings to Inspiro Premium', 'inspiro' ) . '&hellip;';
 		/* translators: %s: New slide title */
-		$this->strings['setup_slider_item']           = __( 'Setup new slider item with title: %s', 'inspiro' ) . '&hellip;';
+		$this->strings['setup_slider_item']           = __( 'Setup new slider item with title: <strong>%s</strong>', 'inspiro' ) . '&hellip;';
 		$this->strings['setup_slider_item_error']     = __( 'Something went wrong to create new slider item!', 'inspiro' );
 		$this->strings['create_temporary_slider_cpt'] = __( 'Create temporary custom post type Slider', 'inspiro' ) . '&hellip;';
 	}
@@ -163,7 +163,7 @@ class Inspiro_Theme_Upgrader {
 			$description   = inspiro_get_prop( $default_header_image, 'description' );
 
 			// Receive full path url.
-			$url           = $url ? get_parent_theme_file_uri( str_replace( '%s', '', $url ) ) : '';
+			$url           = $url ? get_parent_theme_file_path( str_replace( '%s', '', $url ) ) : '';
 			$thumbnail_url = $thumbnail_url ? get_parent_theme_file_uri( str_replace( '%s', '', $thumbnail_url ) ) : '';
 
 			$header_image_data = array(
@@ -232,7 +232,7 @@ class Inspiro_Theme_Upgrader {
 		}
 
 		if ( is_array( $header_image_data ) ) {
-			$this->slide_post_attr['post_thumbnail_url'] = $header_image_data['thumbnail_url'];
+			$this->slide_post_attr['post_thumbnail_path_url'] = $header_image_data['url'];
 		} elseif ( is_object( $header_image_data ) ) {
 			$this->slide_post_attr['post_thumbnail_id'] = $header_image_data->attachment_id;
 		}
@@ -256,13 +256,13 @@ class Inspiro_Theme_Upgrader {
 			return;
 		}
 
-		$slide_title         = inspiro_get_prop( $this->slide_post_attr, 'post_title' );
-		$slide_content       = inspiro_get_prop( $this->slide_post_attr, 'post_content' );
-		$slide_thumbnail_url = inspiro_get_prop( $this->slide_post_attr, 'post_thumbnail_url' );
-		$slide_thumbnail_id  = inspiro_get_prop( $this->slide_post_attr, 'post_thumbnail_id' );
-		$slide_url           = inspiro_get_prop( $this->slide_post_attr, 'wpzoom_slide_url' );
-		$slide_button_title  = inspiro_get_prop( $this->slide_post_attr, 'wpzoom_slide_button_title' );
-		$slide_button_url    = inspiro_get_prop( $this->slide_post_attr, 'wpzoom_slide_button_url' );
+		$slide_title              = inspiro_get_prop( $this->slide_post_attr, 'post_title' );
+		$slide_content            = inspiro_get_prop( $this->slide_post_attr, 'post_content' );
+		$slide_thumbnail_path_url = inspiro_get_prop( $this->slide_post_attr, 'post_thumbnail_path_url' );
+		$slide_thumbnail_id       = inspiro_get_prop( $this->slide_post_attr, 'post_thumbnail_id' );
+		$slide_url                = inspiro_get_prop( $this->slide_post_attr, 'wpzoom_slide_url' );
+		$slide_button_title       = inspiro_get_prop( $this->slide_post_attr, 'wpzoom_slide_button_title' );
+		$slide_button_url         = inspiro_get_prop( $this->slide_post_attr, 'wpzoom_slide_button_url' );
 
 		show_message( sprintf( $this->strings['setup_slider_item'], $slide_title ) );
 
@@ -291,46 +291,66 @@ class Inspiro_Theme_Upgrader {
 		if ( $slide_thumbnail_id ) {
 			set_post_thumbnail( $slide_id, $slide_thumbnail_id );
 		}
-		if ( $slide_thumbnail_url ) {
-			$this->set_slide_thumbnail( $slide_thumbnail_url, $slide_id );
+		if ( $slide_thumbnail_path_url ) {
+			$this->set_slide_thumbnail( $slide_thumbnail_path_url, $slide_id );
 		}
 	}
 
 	/**
 	 * Set slide thumbnail
-	 * Custom header image needs to pe uploaded first to be able to set as post thumbnail for new created slider post
 	 *
-	 * @param string     $filename The path to a file which will be uploaded in the upload directory.
+	 * @param string     $image_url The absolute path url to a default custom header image.
 	 * @param string|int $parent_post_id The ID of the post this attachment is for.
 	 * @return void
 	 */
-	public function set_slide_thumbnail( $filename, $parent_post_id ) {
+	public function set_slide_thumbnail( $image_url, $parent_post_id ) {
+		global $wp_filesystem;
+
+		require_once ABSPATH . '/wp-admin/includes/file.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+		WP_Filesystem();
+
+		if ( ! $wp_filesystem->exists( $image_url ) ) {
+			return;
+		}
+
+		// Get image data.
+		$image_data = $wp_filesystem->get_contents( $image_url );
+
+		$filename = basename( $image_url );
+
 		// Check the type of file. We'll use this as the 'post_mime_type'.
-		$filetype = wp_check_filetype( basename( $filename ), null );
+		$wp_filetype = wp_check_filetype( basename( $filename ), null );
 
 		// Get the path to the upload directory.
 		$wp_upload_dir = wp_upload_dir();
 
 		// Prepare an array of post data for the attachment.
 		$attachment = array(
-			'guid'           => $wp_upload_dir['url'] . '/' . basename( $filename ),
-			'post_mime_type' => $filetype['type'],
-			'post_title'     => preg_replace( '/\.[^.]+$/', '', basename( $filename ) ),
+			'post_mime_type' => $wp_filetype['type'],
+			'post_title'     => sanitize_file_name( $filename ),
 			'post_content'   => '',
 			'post_status'    => 'inherit',
 		);
 
+		if ( wp_mkdir_p( $wp_upload_dir['path'] ) ) {
+			$file = $wp_upload_dir['path'] . '/' . $filename;
+		} else {
+			$file = $wp_upload_dir['basedir'] . '/' . $filename;
+		}
+
+		$wp_filesystem->put_contents( $file, $image_data );
+
 		// Insert the attachment.
-		$thumbnail_id = wp_insert_attachment( $attachment, $filename, $parent_post_id );
+		$attach_id = wp_insert_attachment( $attachment, $file, $parent_post_id );
 
 		// Make sure that this file is included, as wp_generate_attachment_metadata() depends on it.
 		require_once ABSPATH . 'wp-admin/includes/image.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 		// Generate the metadata for the attachment, and update the database record.
-		$attach_data = wp_generate_attachment_metadata( $thumbnail_id, $filename );
-		wp_update_attachment_metadata( $thumbnail_id, $attach_data );
+		$attach_data = wp_generate_attachment_metadata( $attach_id, $file );
+		wp_update_attachment_metadata( $attach_id, $attach_data );
 
-		set_post_thumbnail( $parent_post_id, $thumbnail_id );
+		set_post_thumbnail( $parent_post_id, $attach_id );
 	}
 
 	/**
