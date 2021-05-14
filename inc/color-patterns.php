@@ -11,7 +11,7 @@
  * Generate the CSS for the current custom color scheme.
  */
 function inspiro_custom_colors_css() {
-	$hex = inspiro_get_theme_mod('colorscheme_hex');
+	$hex = inspiro_get_theme_mod( 'colorscheme_hex' );
 	$css = '
 /**
  * Inspiro Lite: Color Patterns
