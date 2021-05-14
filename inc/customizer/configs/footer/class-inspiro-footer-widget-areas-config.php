@@ -39,7 +39,7 @@ class Inspiro_Footer_Widget_Areas_Config {
 					'priority' => 130, // Before Additional CSS.
 				),
 			),
-			'settings' => array(
+			'setting' => array(
 				'id'   => 'footer-widget-areas',
 				'args' => array(
 					'default'           => 3,
