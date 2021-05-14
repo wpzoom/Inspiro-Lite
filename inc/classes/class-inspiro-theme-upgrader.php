@@ -268,7 +268,7 @@ class Inspiro_Theme_Upgrader {
 
 		$defaults = array(
 			'post_type'   => 'slider',
-			'post_status' => 'public',
+			'post_status' => 'publish',
 		);
 
 		$data     = wp_parse_args( $this->slide_post_attr, $defaults );
