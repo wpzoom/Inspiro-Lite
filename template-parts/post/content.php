@@ -16,19 +16,19 @@
 
 	<?php get_template_part( 'template-parts/post/article/header' ); ?>
 
-	<?php if ( ! is_single() && 'excerpt' === get_theme_mod( 'display_content', 'excerpt' ) ) : ?>
+	<?php if ( ! is_single() && 'excerpt' === inspiro_get_theme_mod( 'display_content' ) ) : ?>
 		<div class="entry-summary">
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
 	<?php endif ?>
 
 	<?php
-	if ( is_single() && 'side-right' === get_theme_mod( 'layout_single_post', 'full' ) && is_active_sidebar( 'blog-sidebar' ) ) {
+	if ( is_single() && 'side-right' === inspiro_get_theme_mod( 'layout_single_post' ) && is_active_sidebar( 'blog-sidebar' ) ) {
 		echo '<div class="entry-wrapper">';
 	}
 	?>
 
-	<?php if ( is_single() || ( ! is_single() && 'full-content' === get_theme_mod( 'display_content', 'excerpt' ) ) ) : ?>
+	<?php if ( is_single() || ( ! is_single() && 'full-content' === inspiro_get_theme_mod( 'display_content' ) ) ) : ?>
 		<div class="entry-content">
 			<?php
 			the_content(
@@ -51,7 +51,7 @@
 		</div><!-- .entry-content -->
 	<?php endif ?>
 
-	<?php if ( is_single() && 'side-right' === get_theme_mod( 'layout_single_post', 'full' ) && is_active_sidebar( 'blog-sidebar' ) ) : ?>
+	<?php if ( is_single() && 'side-right' === inspiro_get_theme_mod( 'layout_single_post' ) && is_active_sidebar( 'blog-sidebar' ) ) : ?>
 
 		<aside id="secondary" class="widget-area" role="complementary">
 			<?php dynamic_sidebar( 'blog-sidebar' ); ?>

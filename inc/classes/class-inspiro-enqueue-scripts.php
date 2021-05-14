@@ -52,7 +52,7 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 			wp_enqueue_style( 'inspiro-style', inspiro_get_assets_uri( 'style', 'css' ), array(), INSPIRO_THEME_VERSION );
 
 			// Load the dark colorscheme.
-			if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {
+			if ( 'dark' === inspiro_get_theme_mod( 'colorscheme' ) || is_customize_preview() ) {
 				wp_enqueue_style( 'inspiro-colors-dark', inspiro_get_assets_uri( 'colors-dark', 'css' ), array( 'inspiro-style' ), INSPIRO_THEME_VERSION );
 			}
 
@@ -105,12 +105,12 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 		 * Display custom color CSS.
 		 */
 		public function colors_css_wrap() {
-			if ( 'custom' !== get_theme_mod( 'colorscheme', 'light' ) && ! is_customize_preview() ) {
+			if ( 'custom' !== inspiro_get_theme_mod( 'colorscheme' ) && ! is_customize_preview() ) {
 				return;
 			}
 
 			require_once get_parent_theme_file_path( '/inc/color-patterns.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
-			$hex = get_theme_mod( 'colorscheme_hex', '#0bb4aa' );
+			$hex = inspiro_get_theme_mod( 'colorscheme_hex' );
 			?>
 			<style type="text/css" id="custom-theme-colors" data-hex="<?php echo esc_attr( $hex ); ?>">
 				<?php echo inspiro_custom_colors_css(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>

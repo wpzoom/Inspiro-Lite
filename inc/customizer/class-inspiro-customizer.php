@@ -52,7 +52,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		 * Constructor
 		 */
 		public function __construct() {
-			add_action( 'init', array( $this, 'autoload_configuration_files' ) );
+			add_action( 'init', array( $this, 'autoload_configuration_files' ), 1 );
 			add_action( 'inspiro/configuration-files-loaded', array( $this, 'store_customizer_data' ) );
 
 			add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
@@ -84,6 +84,22 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 			}
 
 			return true;
+		}
+
+		/**
+		 * Retrieves theme modification default value for the passed theme modification name.
+		 *
+		 * @since x.x.x
+		 *
+		 * @param string $name Theme modification name.
+		 * @return mixed
+		 */
+		public static function get_theme_mod_default_value( $name ) {
+			if ( ! isset( self::$customizer_data[ $name ] ) ) {
+				return false;
+			}
+			$default = inspiro_get_prop( self::$customizer_data[ $name ], 'default' );
+			return $default;
 		}
 
 		/**

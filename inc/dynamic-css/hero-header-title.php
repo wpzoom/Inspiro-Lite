@@ -36,11 +36,11 @@ add_filter( 'inspiro/dynamic_theme_css', 'inspiro_dynamic_theme_css_hero_header_
  * @return string Generated dynamic CSS for Header Title.
  */
 function inspiro_dynamic_theme_css_hero_header_title( $dynamic_css ) {
-	$hero_header_title_font_family    = get_theme_mod( 'slider-title-font-family', "'Inter', sans-serif" );
-	$hero_header_title_font_size      = get_theme_mod( 'slider-title-font-size', '80' );
-	$hero_header_title_font_weight    = get_theme_mod( 'slider-title-font-weight', '700' );
-	$hero_header_title_text_transform = get_theme_mod( 'slider-title-text-transform', '' );
-	$hero_header_title_line_height    = get_theme_mod( 'slider-title-line-height', '1.25' );
+	$hero_header_title_font_family    = inspiro_get_theme_mod( 'slider-title-font-family' );
+	$hero_header_title_font_size      = inspiro_get_theme_mod( 'slider-title-font-size' );
+	$hero_header_title_font_weight    = inspiro_get_theme_mod( 'slider-title-font-weight' );
+	$hero_header_title_text_transform = inspiro_get_theme_mod( 'slider-title-text-transform' );
+	$hero_header_title_line_height    = inspiro_get_theme_mod( 'slider-title-line-height' );
 
 	$selectors   = apply_filters( 'inspiro/dynamic_theme_css/selectors', array() );
 	$selector    = inspiro_get_prop( $selectors, 'typo-slider-title' );

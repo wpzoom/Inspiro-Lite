@@ -196,7 +196,7 @@ class Inspiro_Theme_Upgrader {
 					set_theme_mod( 'color-background', '#222222' );
 					set_theme_mod( 'color-body-text', '#eeeeee' );
 				} elseif ( 'custom' === $theme_mod ) {
-					$custom_color_hex = get_theme_mod( 'colorscheme_hex', '#0bb4aa' );
+					$custom_color_hex = inspiro_get_theme_mod( 'colorscheme_hex' );
 					set_theme_mod( 'color-accent', maybe_hash_hex_color( $custom_color_hex ) );
 				}
 			}

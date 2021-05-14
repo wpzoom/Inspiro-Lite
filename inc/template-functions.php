@@ -69,24 +69,24 @@ function inspiro_body_classes( $classes ) {
 
 	// Add class for full width or sidebar right page layouts.
 	if ( is_front_page() || is_home() ) {
-		if ( 'full' === get_theme_mod( 'layout_blog_page', 'full' ) ) {
+		if ( 'full' === inspiro_get_theme_mod( 'layout_blog_page' ) ) {
 			$classes[] = 'page-layout-full-width';
-		} elseif ( 'side-right' === get_theme_mod( 'layout_blog_page', 'full' ) && is_active_sidebar( 'blog-sidebar' ) ) {
+		} elseif ( 'side-right' === inspiro_get_theme_mod( 'layout_blog_page' ) && is_active_sidebar( 'blog-sidebar' ) ) {
 			$classes[] = 'page-layout-sidebar-right';
 		}
 	}
 
 	if ( is_single() ) {
-		if ( 'full' === get_theme_mod( 'layout_single_post', 'full' ) ) {
+		if ( 'full' === inspiro_get_theme_mod( 'layout_single_post' ) ) {
 			$classes[] = 'page-layout-full-width';
-		} elseif ( 'side-right' === get_theme_mod( 'layout_single_post', 'full' ) && is_active_sidebar( 'blog-sidebar' ) ) {
+		} elseif ( 'side-right' === inspiro_get_theme_mod( 'layout_single_post' ) && is_active_sidebar( 'blog-sidebar' ) ) {
 			$classes[] = 'page-layout-sidebar-right';
 		}
 	}
 
 	// Add class for display content.
-	if ( get_theme_mod( 'display_content', 'excerpt' ) ) {
-		$classes[] = 'post-display-content-' . esc_attr( get_theme_mod( 'display_content', 'excerpt' ) );
+	if ( inspiro_get_theme_mod( 'display_content' ) ) {
+		$classes[] = 'post-display-content-' . esc_attr( inspiro_get_theme_mod( 'display_content' ) );
 	}
 
 	// Add class if the site title and tagline is hidden.
@@ -100,7 +100,7 @@ function inspiro_body_classes( $classes ) {
 	}
 
 	// Get the colorscheme or the default if there isn't one.
-	$colors    = inspiro_sanitize_colorscheme( get_theme_mod( 'colorscheme', 'light' ) );
+	$colors    = inspiro_sanitize_colorscheme( inspiro_get_theme_mod( 'colorscheme' ) );
 	$classes[] = 'colors-' . $colors;
 
 	return $classes;
@@ -131,7 +131,7 @@ function inspiro_footer_class( $class = '' ) {
  */
 function inspiro_get_footer_class( $class = '' ) {
 	$classes            = array( 'site-footer' );
-	$widgets_columns    = get_theme_mod( 'footer-widget-areas', 3 );
+	$widgets_columns    = inspiro_get_theme_mod( 'footer-widget-areas' );
 	$has_footer_widgets = false;
 
 	if ( $widgets_columns > 0 ) {

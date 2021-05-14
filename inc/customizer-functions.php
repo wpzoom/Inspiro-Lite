@@ -67,30 +67,6 @@ function inspiro_sanitize_header_button_url( $value ) {
 }
 
 /**
- * Callback for validating the header_textcolor value.
- *
- * Accepts 'blank', and otherwise uses sanitize_hex_color_no_hash().
- * Returns default text color if hex color is empty.
- *
- * @since 1.2.5
- *
- * @param string $color Color value.
- * @return mixed
- */
-function inspiro_sanitize_header_button_textcolor( $color ) {
-	if ( 'blank' === $color ) {
-		return 'blank';
-	}
-
-	$color = sanitize_hex_color_no_hash( $color );
-	if ( empty( $color ) ) {
-		$color = 'ffffff';
-	}
-
-	return $color;
-}
-
-/**
  * Sanitize boolean for checkbox.
  *
  * @since 1.2.5
@@ -241,4 +217,17 @@ function inspiro_get_data_from_file( $file_path ) {
 	}
 
 	return $config;
+}
+
+/**
+ * Retrieves theme modification value.
+ *
+ * @since x.x.x
+ *
+ * @param string $name Theme modification name.
+ * @return mixed
+ */
+function inspiro_get_theme_mod( $name ) {
+	$default = Inspiro_Customizer::get_theme_mod_default_value( $name );
+	return get_theme_mod( $name, $default );
 }

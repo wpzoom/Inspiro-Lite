@@ -36,11 +36,11 @@ add_filter( 'inspiro/dynamic_theme_css', 'inspiro_dynamic_theme_css_hero_header_
  * @return string Generated dynamic CSS for Header Button.
  */
 function inspiro_dynamic_theme_css_hero_header_button( $dynamic_css ) {
-	$hero_header_button_font_family    = get_theme_mod( 'slider-button-font-family', 'inherit' );
-	$hero_header_button_font_size      = get_theme_mod( 'slider-button-font-size', '16' );
-	$hero_header_button_font_weight    = get_theme_mod( 'slider-button-font-weight', '400' );
-	$hero_header_button_text_transform = get_theme_mod( 'slider-button-text-transform', '' );
-	$hero_header_button_line_height    = get_theme_mod( 'slider-button-line-height', '1.8' );
+	$hero_header_button_font_family    = inspiro_get_theme_mod( 'slider-button-font-family' );
+	$hero_header_button_font_size      = inspiro_get_theme_mod( 'slider-button-font-size' );
+	$hero_header_button_font_weight    = inspiro_get_theme_mod( 'slider-button-font-weight' );
+	$hero_header_button_text_transform = inspiro_get_theme_mod( 'slider-button-text-transform' );
+	$hero_header_button_line_height    = inspiro_get_theme_mod( 'slider-button-line-height' );
 
 	$selectors   = apply_filters( 'inspiro/dynamic_theme_css/selectors', array() );
 	$selector    = inspiro_get_prop( $selectors, 'typo-slider-button' );
