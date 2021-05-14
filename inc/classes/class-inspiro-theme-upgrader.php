@@ -14,6 +14,13 @@
  */
 class Inspiro_Theme_Upgrader {
 	/**
+	 * WP_Upgrader instance
+	 *
+	 * @var WP_Upgrader
+	 */
+	private $wp_upgrader;
+
+	/**
 	 * Current theme data
 	 *
 	 * @var array
@@ -47,8 +54,37 @@ class Inspiro_Theme_Upgrader {
 	public function __construct() {
 		$this->generic_strings();
 
+		add_filter( 'upgrader_source_selection', array( $this, 'set_upgrader_instance' ), 10, 4 );
+		add_filter( 'upgrader_source_selection', array( $this, 'start_upgrader_process' ), 11, 4 );
 		add_filter( 'install_theme_overwrite_comparison', array( $this, 'theme_overwrite_table' ), 10, 3 );
-		add_filter( 'install_theme_complete_actions', array( $this, 'install_theme_complete' ), 10, 4 );
+	}
+
+	/**
+	 * Filters the source file location for the upgrade package.
+	 *
+	 * @param string      $source        File source location.
+	 * @param string      $remote_source Remote file source location.
+	 * @param WP_Upgrader $upgrader      WP_Upgrader instance.
+	 * @param array       $hook_extra    Extra arguments passed to hooked filters.
+	 */
+	public function set_upgrader_instance( $source, $remote_source, $upgrader, $hook_extra ) {
+		if ( 'theme' === $hook_extra['type'] ) {
+			$this->wp_upgrader = $upgrader;
+		}
+		return $source;
+	}
+
+	/**
+	 * Check new theme version to make sure we have premium version uploaded
+	 *
+	 * @param array $data New theme data.
+	 * @return boolean
+	 */
+	public function check_new_theme_version( $data ) {
+		if ( version_compare( $data['Version'], '6.8.0', '>=' ) ) {
+			$this->uploaded_premium = true;
+		}
+		return $this->uploaded_premium;
 	}
 
 	/**
@@ -57,8 +93,9 @@ class Inspiro_Theme_Upgrader {
 	public function generic_strings() {
 		$this->strings['migrate_customizer_settings'] = __( 'Migrate Customizer Settings to Inspiro Premium', 'inspiro' ) . '&hellip;';
 		/* translators: %s: New slide title */
-		$this->strings['setup_slider_item']       = __( 'Setup new slider item with title: %s', 'inspiro' ) . '&hellip;';
-		$this->strings['setup_slider_item_error'] = __( 'Something went wrong to create new slider item!', 'inspiro' );
+		$this->strings['setup_slider_item']           = __( 'Setup new slider item with title: %s', 'inspiro' ) . '&hellip;';
+		$this->strings['setup_slider_item_error']     = __( 'Something went wrong to create new slider item!', 'inspiro' );
+		$this->strings['create_temporary_slider_cpt'] = __( 'Create temporary custom post type Slider', 'inspiro' ) . '&hellip;';
 	}
 
 	/**
@@ -75,11 +112,7 @@ class Inspiro_Theme_Upgrader {
 	public function theme_overwrite_table( $table, $current_theme_data, $new_theme_data ) {
 		$this->old_theme_data = $current_theme_data;
 
-		if ( version_compare( $new_theme_data['Version'], '6.8.0', '>=' ) ) {
-			$this->uploaded_premium = true;
-		}
-
-		if ( $this->uploaded_premium ) {
+		if ( $this->check_new_theme_version( $new_theme_data ) ) {
 			$table .= '<h2 class="update-from-upload-heading">' . esc_html__( 'It seems you want to upgrade to premium version of the Inspiro WordPress Theme.', 'inspiro' ) . '</h2>';
 			$table .= '<p class="update-from-upload-notice">' . esc_html__( 'After the upgrade all the settings will be kept but we still recommend that you make a backup of the database and files before proceeding to the replace process.', 'inspiro' ) . '</p>';
 		}
@@ -88,22 +121,25 @@ class Inspiro_Theme_Upgrader {
 	}
 
 	/**
-	 * Filters the list of action links available following a single theme installation.
+	 * Filters the source file location for the upgrade package.
 	 *
-	 * @param string[] $install_actions Array of theme action links.
-	 * @param object   $api             Object containing WordPress.org API theme data.
-	 * @param string   $stylesheet      Theme directory name.
-	 * @param WP_Theme $theme_info      Theme object.
-	 *
-	 * @return array List of action links available following a single theme installation
+	 * @param string      $source        File source location.
+	 * @param string      $remote_source Remote file source location.
+	 * @param WP_Upgrader $upgrader      WP_Upgrader instance.
+	 * @param array       $hook_extra    Extra arguments passed to hooked filters.
 	 */
-	public function install_theme_complete( $install_actions, $api, $stylesheet, $theme_info ) {
-		if ( $this->uploaded_premium ) {
-			$this->migrate_customizer_settings();
-			$this->setup_slider_item();
+	public function start_upgrader_process( $source, $remote_source, $upgrader, $hook_extra ) {
+		$overwrite = isset( $_GET['overwrite'] ) ? sanitize_text_field( wp_unslash( $_GET['overwrite'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+
+		if ( 'theme' === $hook_extra['type'] && 'update-theme' === $overwrite ) {
+			// Allow migration only if premium version is overwrite.
+			if ( $this->check_new_theme_version( $this->wp_upgrader->new_theme_data ) ) {
+				$this->migrate_customizer_settings();
+				$this->setup_slider_item();
+			}
 		}
 
-		return $install_actions;
+		return $source;
 	}
 
 	/**
@@ -112,11 +148,30 @@ class Inspiro_Theme_Upgrader {
 	 * @return void
 	 */
 	public function migrate_customizer_settings() {
+		global $_wp_default_headers;
+
 		show_message( $this->strings['migrate_customizer_settings'] );
 
-		$customizer_data   = Inspiro_Customizer::$customizer_data;
-		$theme_mods        = get_theme_mods();
-		$header_image_data = inspiro_get_prop( $theme_mods, 'header_image_data' );
+		$customizer_data      = Inspiro_Customizer::$customizer_data;
+		$theme_mods           = get_theme_mods();
+		$header_image_data    = inspiro_get_prop( $theme_mods, 'header_image_data' );
+		$default_header_image = inspiro_get_prop( $_wp_default_headers, 'default-image' );
+
+		if ( ! $header_image_data && $default_header_image ) {
+			$url           = inspiro_get_prop( $default_header_image, 'url' );
+			$thumbnail_url = inspiro_get_prop( $default_header_image, 'thumbnail_url' );
+			$description   = inspiro_get_prop( $default_header_image, 'description' );
+
+			// Receive full path url.
+			$url           = $url ? get_parent_theme_file_uri( str_replace( '%s', '', $url ) ) : '';
+			$thumbnail_url = $thumbnail_url ? get_parent_theme_file_uri( str_replace( '%s', '', $thumbnail_url ) ) : '';
+
+			$header_image_data = array(
+				'url'           => $url,
+				'thumbnail_url' => $thumbnail_url,
+				'description'   => $description,
+			);
+		}
 
 		foreach ( $customizer_data as $name => $args ) {
 			$default       = inspiro_get_prop( $args, 'default' );
@@ -135,13 +190,13 @@ class Inspiro_Theme_Upgrader {
 			}
 			if ( 'colorscheme' === $name ) {
 				if ( 'light' === $theme_mod ) {
-					set_theme_mod( 'color-background', 'ffffff' );
-					set_theme_mod( 'color-body-text', '444444' );
+					set_theme_mod( 'color-background', '#ffffff' );
+					set_theme_mod( 'color-body-text', '#444444' );
 				} elseif ( 'dark' === $theme_mod ) {
-					set_theme_mod( 'color-background', '222222' );
-					set_theme_mod( 'color-body-text', 'eeeeee' );
+					set_theme_mod( 'color-background', '#222222' );
+					set_theme_mod( 'color-body-text', '#eeeeee' );
 				} elseif ( 'custom' === $theme_mod ) {
-					$custom_color_hex = get_theme_mod( 'colorscheme_hex', '0bb4aa' );
+					$custom_color_hex = get_theme_mod( 'colorscheme_hex', '#0bb4aa' );
 					set_theme_mod( 'color-accent', $custom_color_hex );
 				}
 			}
@@ -190,27 +245,33 @@ class Inspiro_Theme_Upgrader {
 	 * @return void
 	 */
 	public function setup_slider_item() {
-		global $_wp_default_headers;
+		$slider_cpt = $this->create_temporary_slider_cpt();
+
+		if ( is_wp_error( $slider_cpt ) ) {
+			show_message( $slider_cpt );
+			return;
+		}
 
 		if ( empty( $this->slide_post_attr ) ) {
 			return;
 		}
 
-		$data = wp_parse_args( $this->slide_post_attr );
-
-		$slide_title          = inspiro_get_prop( $this->slide_post_attr, 'post_title' );
-		$slide_content        = inspiro_get_prop( $this->slide_post_attr, 'post_content' );
-		$slide_thumbnail_url  = inspiro_get_prop( $this->slide_post_attr, 'post_thumbnail_url' );
-		$slide_thumbnail_id   = inspiro_get_prop( $this->slide_post_attr, 'post_thumbnail_id' );
-		$slide_url            = inspiro_get_prop( $this->slide_post_attr, 'wpzoom_slide_url' );
-		$slide_button_title   = inspiro_get_prop( $this->slide_post_attr, 'wpzoom_slide_button_title' );
-		$slide_button_url     = inspiro_get_prop( $this->slide_post_attr, 'wpzoom_slide_button_url' );
-		$default_header_image = inspiro_get_prop( $_wp_default_headers, 'default-image' );
+		$slide_title         = inspiro_get_prop( $this->slide_post_attr, 'post_title' );
+		$slide_content       = inspiro_get_prop( $this->slide_post_attr, 'post_content' );
+		$slide_thumbnail_url = inspiro_get_prop( $this->slide_post_attr, 'post_thumbnail_url' );
+		$slide_thumbnail_id  = inspiro_get_prop( $this->slide_post_attr, 'post_thumbnail_id' );
+		$slide_url           = inspiro_get_prop( $this->slide_post_attr, 'wpzoom_slide_url' );
+		$slide_button_title  = inspiro_get_prop( $this->slide_post_attr, 'wpzoom_slide_button_title' );
+		$slide_button_url    = inspiro_get_prop( $this->slide_post_attr, 'wpzoom_slide_button_url' );
 
 		show_message( sprintf( $this->strings['setup_slider_item'], $slide_title ) );
 
-		$data['post_type'] = 'slider';
+		$defaults = array(
+			'post_type'   => 'slider',
+			'post_status' => 'public',
+		);
 
+		$data     = wp_parse_args( $this->slide_post_attr, $defaults );
 		$slide_id = wp_insert_post( $data );
 
 		if ( 0 === $slide_id ) {
@@ -219,23 +280,19 @@ class Inspiro_Theme_Upgrader {
 		}
 
 		if ( $slide_url ) {
-			update_post_meta( $slide_id, $slide_url, 'wpzoom_slide_url' );
+			add_post_meta( $slide_id, 'wpzoom_slide_url', $slide_url );
 		}
 		if ( $slide_button_title ) {
-			update_post_meta( $slide_id, $slide_button_title, 'wpzoom_slide_button_title' );
+			add_post_meta( $slide_id, 'wpzoom_slide_button_title', $slide_button_title );
 		}
 		if ( $slide_button_url ) {
-			update_post_meta( $slide_id, $slide_button_url, 'wpzoom_slide_button_url' );
+			add_post_meta( $slide_id, 'wpzoom_slide_button_url', $slide_button_url );
 		}
 		if ( $slide_thumbnail_id ) {
 			set_post_thumbnail( $slide_id, $slide_thumbnail_id );
 		}
 		if ( $slide_thumbnail_url ) {
 			$this->set_slide_thumbnail( $slide_thumbnail_url, $slide_id );
-		}
-		if ( ! ( $slide_thumbnail_id && $slide_thumbnail_url ) && $default_header_image ) {
-			$filename = get_parent_theme_file_uri( str_replace( '%s', '', $default_header_image['thumbnail_url'] ) );
-			$this->set_slide_thumbnail( $filename, $slide_id );
 		}
 	}
 
@@ -274,6 +331,33 @@ class Inspiro_Theme_Upgrader {
 		wp_update_attachment_metadata( $thumbnail_id, $attach_data );
 
 		set_post_thumbnail( $parent_post_id, $thumbnail_id );
+	}
+
+	/**
+	 * Create custom post type Slider
+	 *
+	 * @return WP_Post_Type|WP_Error The registered post type object on success, WP_Error object on failure.
+	 */
+	private function create_temporary_slider_cpt() {
+		show_message( $this->strings['create_temporary_slider_cpt'] );
+
+		$args = array(
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'query_var'          => true,
+			'rewrite'            => true,
+			'capability_type'    => 'post',
+			'hierarchical'       => false,
+			'menu_position'      => null,
+			'menu_position'      => 20,
+			'menu_icon'          => 'dashicons-slides',
+			'show_in_rest'       => true,
+			'supports'           => array( 'title', 'editor', 'thumbnail' ),
+			'taxonomies'         => array( 'slide-category' ),
+		);
+
+		return register_post_type( 'slider', $args ); // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.plugin_territory_register_post_type
 	}
 }
 
