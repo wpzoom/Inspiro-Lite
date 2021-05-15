@@ -156,6 +156,7 @@ class Inspiro_Theme_Upgrader {
 		$theme_mods           = get_theme_mods();
 		$header_image_data    = inspiro_get_prop( $theme_mods, 'header_image_data' );
 		$default_header_image = inspiro_get_prop( $_wp_default_headers, 'default-image' );
+		$header_video_url     = get_header_video_url();
 
 		if ( ! $header_image_data && $default_header_image ) {
 			$url           = inspiro_get_prop( $default_header_image, 'url' );
@@ -255,6 +256,30 @@ class Inspiro_Theme_Upgrader {
 		} elseif ( is_object( $header_image_data ) ) {
 			$this->slide_post_attr['post_thumbnail_id'] = $header_image_data->attachment_id;
 		}
+
+		/**
+		 * Check for external header video.
+		 */
+		if ( $header_video_url ) {
+			$header_video_settings = get_header_video_settings();
+
+			// Get header video mimeType.
+			$mime_type = inspiro_get_prop( $header_video_settings, 'mimeType' );
+
+			$this->slide_post_attr['wpzoom_slide_play_button']           = true;
+			$this->slide_post_attr['wpzoom_slide_autoplay_video_action'] = true;
+
+			if ( 'video/x-youtube' === $mime_type ) {
+				$this->slide_post_attr['wpzoom_home_slider_video_type']         = 'external_hosted';
+				$this->slide_post_attr['wpzoom_home_slider_video_external_url'] = $header_video_url;
+			} elseif ( 'video/x-vimeo' === $mime_type ) {
+				$this->slide_post_attr['wpzoom_home_slider_video_type']      = 'vimeo_pro';
+				$this->slide_post_attr['wpzoom_home_slider_video_vimeo_pro'] = $header_video_url;
+			} elseif ( 'video/mp4' === $mime_type ) {
+				$this->slide_post_attr['wpzoom_home_slider_video_type']       = 'self_hosted';
+				$this->slide_post_attr['wpzoom_home_slider_video_bg_url_mp4'] = $header_video_url;
+			}
+		}
 	}
 
 	/**
@@ -279,15 +304,14 @@ class Inspiro_Theme_Upgrader {
 		$slide_content            = inspiro_get_prop( $this->slide_post_attr, 'post_content' );
 		$slide_thumbnail_path_url = inspiro_get_prop( $this->slide_post_attr, 'post_thumbnail_path_url' );
 		$slide_thumbnail_id       = inspiro_get_prop( $this->slide_post_attr, 'post_thumbnail_id' );
-		$slide_url                = inspiro_get_prop( $this->slide_post_attr, 'wpzoom_slide_url' );
-		$slide_button_title       = inspiro_get_prop( $this->slide_post_attr, 'wpzoom_slide_button_title' );
-		$slide_button_url         = inspiro_get_prop( $this->slide_post_attr, 'wpzoom_slide_button_url' );
 
 		show_message( sprintf( $this->strings['setup_slider_item'], $slide_title ) );
 
 		$defaults = array(
-			'post_type'   => 'slider',
-			'post_status' => 'publish',
+			'post_title'   => '',
+			'post_content' => '',
+			'post_type'    => 'slider',
+			'post_status'  => 'publish',
 		);
 
 		$data     = wp_parse_args( $this->slide_post_attr, $defaults );
@@ -298,15 +322,15 @@ class Inspiro_Theme_Upgrader {
 			return;
 		}
 
-		if ( $slide_url ) {
-			add_post_meta( $slide_id, 'wpzoom_slide_url', $slide_url );
+		/**
+		 * Loop all Inspiro Premium slide meta settings.
+		 */
+		foreach ( $data as $meta_key => $meta_value ) {
+			if ( strpos( $meta_key, 'wpzoom_' ) !== false ) {
+				add_post_meta( $slide_id, $meta_key, $meta_value );
+			}
 		}
-		if ( $slide_button_title ) {
-			add_post_meta( $slide_id, 'wpzoom_slide_button_title', $slide_button_title );
-		}
-		if ( $slide_button_url ) {
-			add_post_meta( $slide_id, 'wpzoom_slide_button_url', $slide_button_url );
-		}
+
 		if ( $slide_thumbnail_id ) {
 			set_post_thumbnail( $slide_id, $slide_thumbnail_id );
 		}
