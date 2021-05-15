@@ -162,8 +162,10 @@ class Inspiro_Theme_Upgrader {
 			$thumbnail_url = inspiro_get_prop( $default_header_image, 'thumbnail_url' );
 			$description   = inspiro_get_prop( $default_header_image, 'description' );
 
+			// Receive absolute path url.
+			$url = $url ? get_parent_theme_file_path( str_replace( '%s', '', $url ) ) : '';
+
 			// Receive full path url.
-			$url           = $url ? get_parent_theme_file_path( str_replace( '%s', '', $url ) ) : '';
 			$thumbnail_url = $thumbnail_url ? get_parent_theme_file_uri( str_replace( '%s', '', $thumbnail_url ) ) : '';
 
 			$header_image_data = array(
@@ -171,6 +173,23 @@ class Inspiro_Theme_Upgrader {
 				'thumbnail_url' => $thumbnail_url,
 				'description'   => $description,
 			);
+		} else {
+			/**
+			 * User has selected header image from registered default headers.
+			 * In this case we need to convert 'url' to absolute path.
+			 */
+			$url = inspiro_get_prop( $header_image_data, 'url' );
+
+			/**
+			 * Removes the http or https protocols and the template direcotry domain.
+			 * Keeps only root theme path with '/' at the beginning.
+			 */
+			$clear_url = str_replace( INSPIRO_THEME_URI, '/', $url );
+
+			// Convert full URL path to absolute path.
+			$url = get_parent_theme_file_path( $clear_url );
+
+			$header_image_data['url'] = $url;
 		}
 
 		foreach ( $customizer_data as $name => $args ) {

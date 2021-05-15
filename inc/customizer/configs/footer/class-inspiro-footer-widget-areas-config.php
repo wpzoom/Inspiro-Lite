@@ -32,7 +32,7 @@ class Inspiro_Footer_Widget_Areas_Config {
 	 */
 	public static function config() {
 		return array(
-			'section'  => array(
+			'section' => array(
 				'id'   => 'footer-area',
 				'args' => array(
 					'title'    => esc_html__( 'Footer', 'inspiro' ),
@@ -47,7 +47,7 @@ class Inspiro_Footer_Widget_Areas_Config {
 					'transport'         => 'refresh',
 				),
 			),
-			'control'  => array(
+			'control' => array(
 				'id'   => 'footer-widget-areas',
 				'args' => array(
 					'label'   => esc_html__( 'Number of Widget Areas', 'inspiro' ),
