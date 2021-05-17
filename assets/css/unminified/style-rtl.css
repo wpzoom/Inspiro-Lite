@@ -2357,6 +2357,8 @@ body:not(.title-tagline-hidden) .site-branding-text {
     cursor: pointer;
     height: 1.5em;
     width: 3.5em;
+    font-size: 16px;
+    font-size: 1rem;
     overflow: hidden;
     opacity: 0.5;
     transform: translateX(50%);
