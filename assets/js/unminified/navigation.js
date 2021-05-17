@@ -231,13 +231,6 @@
 		$.fn.keepFocusInSearchModal();
 
 		/**
-		 * FitVids - Responsive Videos in posts
-		 */
-		$(
-			'.wpzlb-layout, .builder-wrap, .entry-content, .video_cover, .featured_page_content'
-		).fitVids();
-
-		/**
 		 * Activate superfish menu.
 		 */
 		$( '.sf-menu' ).superfish( {
