@@ -81,6 +81,10 @@ class Inspiro_Theme_Upgrader {
 	 * @return boolean
 	 */
 	public function check_new_theme_version( $data ) {
+		if ( 'Inspiro' !== $data['Name'] ) {
+			$this->uploaded_premium = false;
+			return $this->uploaded_premium;
+		}
 		if ( version_compare( $data['Version'], '6.8.0', '>=' ) ) {
 			$this->uploaded_premium = true;
 		}
@@ -96,6 +100,16 @@ class Inspiro_Theme_Upgrader {
 		$this->strings['setup_slider_item']           = __( 'Setup new slider item with title: <strong>%s</strong>', 'inspiro' ) . '&hellip;';
 		$this->strings['setup_slider_item_error']     = __( 'Something went wrong to create new slider item!', 'inspiro' );
 		$this->strings['create_temporary_slider_cpt'] = __( 'Create temporary custom post type Slider', 'inspiro' ) . '&hellip;';
+	}
+
+	/**
+	 * Adds a new option after theme upgrader
+	 * We may need to use it later in premium version
+	 *
+	 * @return void
+	 */
+	public function set_upgrader_option() {
+		add_option( 'wpzoom_inspiro_upgrader_from_free', true );
 	}
 
 	/**
@@ -115,6 +129,8 @@ class Inspiro_Theme_Upgrader {
 		if ( $this->check_new_theme_version( $new_theme_data ) ) {
 			$table .= '<h2 class="update-from-upload-heading">' . esc_html__( 'It seems you want to upgrade to premium version of the Inspiro WordPress Theme.', 'inspiro' ) . '</h2>';
 			$table .= '<p class="update-from-upload-notice">' . esc_html__( 'After the upgrade all the settings will be kept but we still recommend that you make a backup of the database and files before proceeding to the replace process.', 'inspiro' ) . '</p>';
+			/* translators: %1$s: Documentation URL. %2$s: Link title. */
+			$table .= '<p class="update-from-upload-notice"><strong>' . esc_html__( 'Note:', 'inspiro' ) . '</strong> ' . sprintf( __( 'If you don\'t see the header slider on your front page, please follow <a href="%1$s" target="_blank" title="%2$s">documentation link</a> to see how to set up slideshow on front page.', 'inspiro' ), 'https://www.wpzoom.com/documentation/inspiro/inspiro-homepage-slideshow/', esc_attr__( 'Open documentation link in new tab', 'inspiro' ) ) . '</p>';
 		}
 
 		return $table;
@@ -136,6 +152,7 @@ class Inspiro_Theme_Upgrader {
 			if ( $this->check_new_theme_version( $this->wp_upgrader->new_theme_data ) ) {
 				$this->migrate_customizer_settings();
 				$this->setup_slider_item();
+				$this->set_upgrader_option();
 			}
 		}
 
@@ -157,6 +174,7 @@ class Inspiro_Theme_Upgrader {
 		$header_image_data    = inspiro_get_prop( $theme_mods, 'header_image_data' );
 		$default_header_image = inspiro_get_prop( $_wp_default_headers, 'default-image' );
 		$header_video_url     = get_header_video_url();
+		$header_textcolor     = get_header_textcolor();
 
 		if ( ! $header_image_data && $default_header_image ) {
 			$url           = inspiro_get_prop( $default_header_image, 'url' );
@@ -193,6 +211,11 @@ class Inspiro_Theme_Upgrader {
 			$header_image_data['url'] = $url;
 		}
 
+		if ( 'blank' !== $header_textcolor ) {
+			set_theme_mod( 'color-slider-title', maybe_hash_hex_color( $header_textcolor ) );
+			set_theme_mod( 'color-slider-description', maybe_hash_hex_color( $header_textcolor ) );
+		}
+
 		foreach ( $customizer_data as $name => $args ) {
 			$default       = inspiro_get_prop( $args, 'default' );
 			$saved_setting = inspiro_get_prop( $theme_mods, $name );
@@ -219,10 +242,6 @@ class Inspiro_Theme_Upgrader {
 					$custom_color_hex = inspiro_get_theme_mod( 'colorscheme_hex' );
 					set_theme_mod( 'color-accent', maybe_hash_hex_color( $custom_color_hex ) );
 				}
-			}
-			if ( 'header_textcolor' === $name ) {
-				set_theme_mod( 'color-slider-title', maybe_hash_hex_color( $theme_mod ) );
-				set_theme_mod( 'color-slider-description', maybe_hash_hex_color( $theme_mod ) );
 			}
 			if ( 'header_button_textcolor' === $name ) {
 				set_theme_mod( 'color-slider-button-text', maybe_hash_hex_color( $theme_mod ) );
