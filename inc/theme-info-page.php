@@ -242,17 +242,17 @@ function inspiro_display_theme_page() {
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e( '600+ Google Fonts', 'inspiro' ); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e( 'Typography Options', 'inspiro' ); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e( 'Support', 'inspiro' ); ?></h3></td>
-						<td><?php esc_html_e( 'Support Forum', 'inspiro' ); ?></td>
+						<td><a href="https://wordpress.org/support/theme/inspiro/" target="_blank" title="<?php esc_attr_e( 'Open support forum in new tab', 'inspiro' ); ?>"><?php esc_html_e( 'Support Forum', 'inspiro' ); ?></a</td>
 						<td><?php esc_html_e( 'Fast & Friendly Email Support', 'inspiro' ); ?></td>
 					</tr>
 					<tr>
