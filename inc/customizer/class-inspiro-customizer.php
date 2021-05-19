@@ -292,7 +292,12 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 			}
 
 			foreach ( $config_class_names as $class_name => $configs ) {
-				$setting      = $configs['setting'];
+				$setting = inspiro_get_prop( $configs, 'setting' );
+
+				if ( ! $setting ) {
+					continue;
+				}
+
 				$setting_id   = inspiro_get_prop( $setting, 'id' );
 				$setting_args = inspiro_get_prop( $setting, 'args' );
 
