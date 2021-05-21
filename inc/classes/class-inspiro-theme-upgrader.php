@@ -57,6 +57,8 @@ class Inspiro_Theme_Upgrader {
 		add_filter( 'upgrader_source_selection', array( $this, 'set_upgrader_instance' ), 10, 4 );
 		add_filter( 'upgrader_source_selection', array( $this, 'start_upgrader_process' ), 11, 4 );
 		add_filter( 'install_theme_overwrite_comparison', array( $this, 'theme_overwrite_table' ), 10, 3 );
+		add_filter( 'install_theme_overwrite_comparison', array( $this, 'multisite_overwrite' ), 11, 3 );
+		add_filter( 'install_theme_overwrite_actions', array( $this, 'theme_overwrite_actions' ), 10, 3 );
 	}
 
 	/**
@@ -126,14 +128,80 @@ class Inspiro_Theme_Upgrader {
 	public function theme_overwrite_table( $table, $current_theme_data, $new_theme_data ) {
 		$this->old_theme_data = $current_theme_data;
 
-		if ( $this->check_new_theme_version( $new_theme_data ) ) {
-			$table .= '<h2 class="update-from-upload-heading">' . esc_html__( 'It seems you want to upgrade to premium version of the Inspiro WordPress Theme.', 'inspiro' ) . '</h2>';
+		if ( ! $this->check_new_theme_version( $new_theme_data ) ) {
+			return $table;
+		}
+
+		$table     .= '<h2 class="update-from-upload-heading">' . esc_html__( 'It seems you want to upgrade to premium version of the Inspiro WordPress Theme.', 'inspiro' ) . '</h2>';
 			$table .= '<p class="update-from-upload-notice">' . esc_html__( 'After the upgrade all the settings will be kept but we still recommend that you make a backup of the database and files before proceeding to the replace process.', 'inspiro' ) . '</p>';
 			/* translators: %1$s: Documentation URL. %2$s: Link title. */
 			$table .= '<p class="update-from-upload-notice"><strong>' . esc_html__( 'Note:', 'inspiro' ) . '</strong> ' . sprintf( __( 'If you don\'t see the header slider on your front page, please follow <a href="%1$s" target="_blank" title="%2$s">documentation link</a> to see how to set up slideshow on front page.', 'inspiro' ), 'https://www.wpzoom.com/documentation/inspiro/inspiro-homepage-slideshow/', esc_attr__( 'Open documentation link in new tab', 'inspiro' ) ) . '</p>';
+
+		return $table;
+	}
+
+	/**
+	 * The compare table output for overwriting a theme package on upload.
+	 *
+	 * @param string $table              The output table with Name, Version, Author, RequiresWP, and RequiresPHP info.
+	 * @param array  $current_theme_data Array with current theme data.
+	 * @param array  $new_theme_data     Array with uploaded theme data.
+	 *
+	 * @see WordPress Theme_Installer_Skin
+	 *
+	 * @return string The compare table output.
+	 */
+	public function multisite_overwrite( $table, $current_theme_data, $new_theme_data ) {
+		// Check if user has uploaded .zip file from About Inspiro page.
+		$display_select_network = isset( $_GET['payload'] ) && 'about-inspiro' === $_GET['payload'];
+
+		if ( ! is_multisite() ) {
+			return $table;
+		}
+		if ( ! $display_select_network || ! $this->check_new_theme_version( $new_theme_data ) ) {
+			return $table;
+		}
+
+		$current_blog_id      = get_current_blog_id();
+		$current_blog_details = get_blog_details( $current_blog_id );
+
+		if ( ! empty( $current_blog_details ) ) {
+			$table .= '<h2 class="update-from-upload-heading">' . esc_html__( 'Migrate settings for following blog site:', 'inspiro' ) . '</h2>';
+			$table .= '<table class="update-from-upload-comparison"><tbody>';
+			$table .= '<tr><th>' . __( 'Blogname', 'inspiro' ) . '</th><th>' . __( 'Site URL', 'inspiro' ) . '</th><th>' . __( 'Able to migrate', 'inspiro' ) . '</th></tr>';
+			$table .= '<tr>';
+			$table .= '<td>' . esc_html( $current_blog_details->blogname ) . '</td>';
+			$table .= '<td><a href="' . esc_url( $current_blog_details->siteurl ) . '" target="_blank">' . esc_url( $current_blog_details->siteurl ) . '</a></td>';
+			$table .= '<td>' . ( $current_blog_details->public ? '<span class="dashicons dashicons-yes"></span>' : '<span class="dashicons dashicons-no"></span>' ) . '</td>';
+			$table .= '</tr>';
+			$table .= '</tbody></table>';
 		}
 
 		return $table;
+	}
+
+	/**
+	 * Filters the list of action links available following a single theme installation failure
+	 * when overwriting is allowed.
+	 *
+	 * @param string[] $install_actions Array of theme action links.
+	 * @param object   $api             Object containing WordPress.org API theme data.
+	 * @param array    $new_theme_data  Array with uploaded theme data.
+	 */
+	public function theme_overwrite_actions( $install_actions, $api, $new_theme_data ) {
+		// Check if user has uploaded .zip file from About Inspiro page.
+		$display_select_network = isset( $_GET['payload'] ) && 'about-inspiro' === $_GET['payload'];
+
+		if ( ! is_multisite() ) {
+			return $install_actions;
+		}
+		if ( ! $display_select_network || ! $this->check_new_theme_version( $new_theme_data ) ) {
+			return $install_actions;
+		}
+
+		// TODO: maybe we will need some custom actions here.
+
+		return $install_actions;
 	}
 
 	/**
