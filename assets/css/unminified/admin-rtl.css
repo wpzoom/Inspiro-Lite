@@ -77,11 +77,11 @@
     clear: both;
 }
 
-.theme-info-wrap .wpz-row [class*='wpz-col-']:first-child {
+.theme-info-wrap .wpz-row [class*="wpz-col-"]:nth-child(2n + 1) {
     margin: 0;
 }
 
-.theme-info-wrap [class*='wpz-col-'] {
+.theme-info-wrap [class*="wpz-col-"] {
     float: right;
     margin-right: 2.5%;
 }
@@ -108,8 +108,8 @@
 
 .theme-info-wrap .theme-intro {
     margin: 20px 0;
-    border: 1px solid #E2E9EC;
-    background: #F7FAFA;
+    border: 1px solid #e2e9ec;
+    background: #f7fafa;
     padding: 30px;
     border-radius: 3px;
     margin: 30px 0 30px 0 !important;
@@ -164,20 +164,50 @@
     margin: 16px 0;
     background: #fff;
     padding: 30px;
-    border: 1px solid #DDD;
+    border: 1px solid #ddd;
     border-radius: 3px;
     margin: 30px 0 30px 10px !important;
     box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+#getting-started .wpz-grid-wrap {
+    -js-display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#getting-started .wpz-grid-wrap > .section {
+    flex: 0 0 50%;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+#getting-started .wpz-grid-wrap > .section .inner-section {
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+#getting-started .wpz-grid-wrap > .section::before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 1px;
+    background-color: #eaeaea;
+    top: 0;
+}
+
+#getting-started .wpz-grid-wrap > .section:nth-child(1) .inner-section, #getting-started .wpz-grid-wrap > .section:nth-child(2) .inner-section {
+    padding-top: 0;
+}
+
+#getting-started .wpz-grid-wrap > .section:nth-child(1)::before, #getting-started .wpz-grid-wrap > .section:nth-child(2)::before {
+    display: none;
+}
+
 #getting-started img {
     margin-top: 16px;
     margin-top: 1rem;
-}
-
-#getting-started .section {
-    margin: 8px 0 30px;
-    margin: 0.5rem 0 1.875rem;
 }
 
 #getting-started .section .about {
@@ -189,6 +219,16 @@
 
 #getting-started .section .button {
     max-width: 100%;
+}
+
+#getting-started .section .upload-theme {
+    display: block;
+    padding: 0;
+    top: 0;
+}
+
+#getting-started .section .upload-theme .wp-upload-form {
+    margin: 0;
 }
 
 .theme-comparison {
@@ -259,7 +299,7 @@
 }
 
 .theme-comparison-header th:last-child {
-    background: #13BC6B;
+    background: #13bc6b;
 }
 
 .theme-comparison-header th h3 {
@@ -284,7 +324,7 @@
     .theme-info-wrap .theme-links p strong {
         display: block;
     }
-    .theme-info-wrap [class*='wpz-col-'] {
+    .theme-info-wrap [class*="wpz-col-"] {
         float: none;
         width: 100%;
         margin: 0;
