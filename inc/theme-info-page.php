@@ -112,7 +112,7 @@ function inspiro_display_theme_page() {
 							<?php esc_html_e( 'If you like the free version of this theme, you will LOVE the full version of Inspiro which includes numerous video features, portfolio integration, additional features and more useful options to customize your website.', 'inspiro' ); ?>
 						</p>
 						<p>
-							<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/wordpress-food-themes/inspiro-pro/', 'inspiro' ) ); ?>" target="_blank" class="button button-primary">
+							<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/', 'inspiro' ) ); ?>" target="_blank" class="button button-primary">
 								<?php esc_html_e( 'Upgrade to Inspiro PRO &rarr;', 'inspiro' ); ?>
 							</a>
 						</p>
