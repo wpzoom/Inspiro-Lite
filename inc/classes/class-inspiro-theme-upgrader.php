@@ -153,7 +153,7 @@ class Inspiro_Theme_Upgrader {
 	 */
 	public function multisite_overwrite( $table, $current_theme_data, $new_theme_data ) {
 		// Check if user has uploaded .zip file from About Inspiro page.
-		$display_select_network = isset( $_GET['payload'] ) && 'about-inspiro' === $_GET['payload'];
+		$display_select_network = isset( $_GET['payload'] ) && 'about-inspiro' === $_GET['payload']; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
 		if ( ! is_multisite() ) {
 			return $table;
@@ -190,7 +190,7 @@ class Inspiro_Theme_Upgrader {
 	 */
 	public function theme_overwrite_actions( $install_actions, $api, $new_theme_data ) {
 		// Check if user has uploaded .zip file from About Inspiro page.
-		$display_select_network = isset( $_GET['payload'] ) && 'about-inspiro' === $_GET['payload'];
+		$display_select_network = isset( $_GET['payload'] ) && 'about-inspiro' === $_GET['payload']; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
 		if ( ! is_multisite() ) {
 			return $install_actions;
@@ -303,9 +303,11 @@ class Inspiro_Theme_Upgrader {
 				if ( 'light' === $theme_mod ) {
 					set_theme_mod( 'color-background', '#ffffff' );
 					set_theme_mod( 'color-body-text', '#444444' );
+					set_theme_mod( 'color-post-meta-link', '#444444' );
 				} elseif ( 'dark' === $theme_mod ) {
 					set_theme_mod( 'color-background', '#222222' );
 					set_theme_mod( 'color-body-text', '#eeeeee' );
+					set_theme_mod( 'color-post-meta-link', '#eeeeee' );
 				} elseif ( 'custom' === $theme_mod ) {
 					$custom_color_hex = inspiro_get_theme_mod( 'colorscheme_hex' );
 					set_theme_mod( 'color-accent', maybe_hash_hex_color( $custom_color_hex ) );
@@ -313,9 +315,11 @@ class Inspiro_Theme_Upgrader {
 			}
 			if ( 'header_button_textcolor' === $name ) {
 				set_theme_mod( 'color-slider-button-text', maybe_hash_hex_color( $theme_mod ) );
+				set_theme_mod( 'color-slider-button-border', maybe_hash_hex_color( $theme_mod ) );
 			}
 			if ( 'header_button_textcolor_hover' === $name ) {
 				set_theme_mod( 'color-slider-button-text-hover', maybe_hash_hex_color( $theme_mod ) );
+				set_theme_mod( 'color-slider-button-border-hover', maybe_hash_hex_color( $theme_mod ) );
 			}
 			if ( 'header_button_bgcolor_hover' === $name ) {
 				set_theme_mod( 'color-slider-button-background-hover', maybe_hash_hex_color( $theme_mod ) );

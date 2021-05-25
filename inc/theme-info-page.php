@@ -161,11 +161,11 @@ function inspiro_display_theme_page() {
 								<?php esc_html_e( 'If you have a premium version of Inspiro theme in a .zip format, you may upgrade by uploading it here.', 'inspiro' ); ?>
 							</p>
 							<div class="upload-theme">
-								<form method="post" enctype="multipart/form-data" class="wp-upload-form" action="<?php echo self_admin_url( 'update.php?action=upload-theme&payload=about-inspiro' ); ?>">
+								<form method="post" enctype="multipart/form-data" class="wp-upload-form" action="<?php echo self_admin_url( 'update.php?action=upload-theme&payload=about-inspiro' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>">
 									<?php wp_nonce_field( 'theme-upload' ); ?>
-									<label class="screen-reader-text" for="themezip"><?php _e( 'Theme zip file' ); ?></label>
+									<label class="screen-reader-text" for="themezip"><?php esc_html_e( 'Theme zip file', 'inspiro' ); ?></label>
 									<input type="file" id="themezip" name="themezip" accept=".zip" />
-									<?php submit_button( __( 'Install Now' ), '', 'install-theme-submit', false ); ?>
+									<?php submit_button( __( 'Install Now', 'inspiro' ), '', 'install-theme-submit', false ); ?>
 								</form>
 							</div>
 						</div>
