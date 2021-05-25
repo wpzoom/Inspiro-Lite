@@ -296,6 +296,9 @@ class Inspiro_Theme_Upgrader {
 				$font_family = Inspiro_Font_Family_Manager::clean_google_fonts( $theme_mod );
 				set_theme_mod( $name, $font_family );
 			}
+			if ( strpos( $name, 'font-weight' ) !== false && '400' === $theme_mod ) {
+				set_theme_mod( $name, 'normal' );
+			}
 			if ( 'custom_logo_text' === $name ) {
 				update_option( 'blogname', $theme_mod );
 			}
