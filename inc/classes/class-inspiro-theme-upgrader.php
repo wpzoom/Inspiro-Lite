@@ -306,11 +306,12 @@ class Inspiro_Theme_Upgrader {
 				if ( 'light' === $theme_mod ) {
 					set_theme_mod( 'color-background', '#ffffff' );
 					set_theme_mod( 'color-body-text', '#444444' );
-					set_theme_mod( 'color-post-meta-link', '#444444' );
 				} elseif ( 'dark' === $theme_mod ) {
 					set_theme_mod( 'color-background', '#222222' );
 					set_theme_mod( 'color-body-text', '#eeeeee' );
-					set_theme_mod( 'color-post-meta-link', '#eeeeee' );
+					set_theme_mod( 'color-post-meta', '#777777' );
+					set_theme_mod( 'color-post-meta-link', '#dddddd' );
+					set_theme_mod( 'color-post-title', '#dddddd' );
 				} elseif ( 'custom' === $theme_mod ) {
 					$custom_color_hex = inspiro_get_theme_mod( 'colorscheme_hex' );
 					set_theme_mod( 'color-accent', maybe_hash_hex_color( $custom_color_hex ) );
