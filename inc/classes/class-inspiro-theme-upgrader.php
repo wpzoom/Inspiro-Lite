@@ -319,10 +319,10 @@ class Inspiro_Theme_Upgrader {
 			if ( 'header_button_textcolor' === $name ) {
 				set_theme_mod( 'color-slider-button-text', maybe_hash_hex_color( $theme_mod ) );
 				set_theme_mod( 'color-slider-button-border', maybe_hash_hex_color( $theme_mod ) );
+				set_theme_mod( 'color-slider-button-border-hover', maybe_hash_hex_color( $theme_mod ) );
 			}
 			if ( 'header_button_textcolor_hover' === $name ) {
 				set_theme_mod( 'color-slider-button-text-hover', maybe_hash_hex_color( $theme_mod ) );
-				set_theme_mod( 'color-slider-button-border-hover', maybe_hash_hex_color( $theme_mod ) );
 			}
 			if ( 'header_button_bgcolor_hover' === $name ) {
 				set_theme_mod( 'color-slider-button-background-hover', maybe_hash_hex_color( $theme_mod ) );
