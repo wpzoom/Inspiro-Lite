@@ -225,7 +225,12 @@ module.exports = function ( grunt ) {
 					'assets/js/unminified/*.js',
 					'inc/customizer/custom-controls/**/*.js',
 				],
-				tasks: [ 'jshint', 'concat', 'clean:minifiedJS' ],
+				tasks: [
+					'jshint',
+					'concat',
+					'clean:minifiedJS',
+					'jshint-before-minify',
+				],
 				options: {
 					livereload: true,
 				},
@@ -322,8 +327,14 @@ module.exports = function ( grunt ) {
 		clean: {
 			main: [ '<%= pkg.name %>' ],
 			zip: [ '*.zip' ],
-			minifiedJS: [ 'assets/js/minified/*' ],
-			minifiedCSS: [ 'assets/css/minified/*' ],
+			minifiedJS: [
+				'assets/js/minified/*',
+				'inc/customizer/custom-controls/assets/js/minified/*',
+			],
+			minifiedCSS: [
+				'assets/css/minified/*',
+				'inc/customizer/custom-controls/assets/css/minified/*',
+			],
 		},
 
 		compress: {
