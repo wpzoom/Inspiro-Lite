@@ -167,11 +167,13 @@ module.exports = function ( grunt ) {
 						ext: '.min.js',
 					},
 					{
-						src: [
-							'inc/customizer/custom-controls/assets/js/unminified/custom-controls.js',
-						],
+						expand: true,
+						src: [ '**.js' ],
 						dest:
-							'inc/customizer/custom-controls/assets/js/minified/custom-controls.min.js',
+							'inc/customizer/custom-controls/assets/js/minified',
+						cwd:
+							'inc/customizer/custom-controls/assets/js/unminified',
+						ext: '.min.js',
 					},
 				],
 			},
@@ -225,12 +227,7 @@ module.exports = function ( grunt ) {
 					'assets/js/unminified/*.js',
 					'inc/customizer/custom-controls/**/*.js',
 				],
-				tasks: [
-					'jshint',
-					'concat',
-					'clean:minifiedJS',
-					'jshint-before-minify',
-				],
+				tasks: [ 'jshint', 'concat', 'clean:minifiedJS', 'uglify:js' ],
 				options: {
 					livereload: true,
 				},
