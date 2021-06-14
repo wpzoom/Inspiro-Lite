@@ -100,6 +100,7 @@ require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-theme-upgrader.php';
  * Inline theme css generated dynamically
  */
 require INSPIRO_THEME_DIR . 'inc/dynamic-css/body.php';
+require INSPIRO_THEME_DIR . 'inc/dynamic-css/logo.php';
 require INSPIRO_THEME_DIR . 'inc/dynamic-css/headings.php';
 require INSPIRO_THEME_DIR . 'inc/dynamic-css/hero-header-title.php';
 require INSPIRO_THEME_DIR . 'inc/dynamic-css/hero-header-desc.php';

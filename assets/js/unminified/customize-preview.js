@@ -192,6 +192,7 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 	$.each(
 		[
 			'body-font-family',
+			'logo-font-family',
 			'headings-font-family',
 			'slider-title-font-family',
 			'slider-text-font-family',
@@ -246,6 +247,7 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 	$.each(
 		[
 			'body-font-weight',
+			'logo-font-weight',
 			'headings-font-weight',
 			'slider-title-font-weight',
 			'slider-text-font-weight',
@@ -320,6 +322,7 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 	$.each(
 		[
 			'body-font-size',
+			'logo-font-size',
 			'headings-font-size',
 			'slider-title-font-size',
 			'slider-text-font-size',
@@ -353,6 +356,7 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 	$.each(
 		[
 			'body-text-transform',
+			'logo-text-transform',
 			'headings-text-transform',
 			'slider-title-text-transform',
 			'slider-text-text-transform',
@@ -386,6 +390,7 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 	$.each(
 		[
 			'body-line-height',
+			'logo-line-height',
 			'headings-line-height',
 			'slider-title-line-height',
 			'slider-text-line-height',

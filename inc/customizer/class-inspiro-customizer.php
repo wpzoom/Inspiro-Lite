@@ -137,6 +137,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 				'typography'     => array(
 					'typo-panel',
 					'typo-body',
+					'typo-logo',
 					'typo-headings',
 					// phpcs:disable Squiz.PHP.CommentedOutCode.Found
 					// TODO: Enable all panels in the next update

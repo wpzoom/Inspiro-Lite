@@ -503,6 +503,7 @@ module.exports = function ( grunt ) {
 			options: {
 				// Task-specific options go here.
 				compress: true,
+				// eslint-disable-next-line no-unused-vars
 				cover( phpArrayString, destFilePath ) {
 					return (
 						'<?php\n/**\n * Google fonts array file.\n *\n * @package     Inspiro\n * @author      WPZOOM\n * @copyright   Copyright (c) 2021, WPZOOM\n * @link        https://wpzoom.com\n * @since       Inspiro_Lite x.x.x\n */\n\n/**\n * Returns google fonts array\n *\n * @since x.x.x\n */\nreturn ' +
@@ -540,6 +541,7 @@ module.exports = function ( grunt ) {
 	// Register Tasks.
 
 	// Bump Version - `grunt version-bump --ver=<version-number>`
+	// eslint-disable-next-line no-unused-vars
 	grunt.registerTask( 'version-bump', function ( ver ) {
 		let newVersion = grunt.option( 'ver' );
 
@@ -559,6 +561,7 @@ module.exports = function ( grunt ) {
 
 	grunt.registerTask( 'download-google-fonts', function () {
 		const done = this.async();
+		// eslint-disable-next-line import/no-extraneous-dependencies
 		const request = require( 'request' );
 		const fs = require( 'fs' );
 
