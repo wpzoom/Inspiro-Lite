@@ -151,7 +151,7 @@ function inspiro_display_theme_page() {
 					</div>
 				</div>
 				<?php if ( current_user_can( 'upload_themes' ) ) : ?>
-					<div class="section">
+					<!-- <div class="section">
 						<div class="inner-section">
 							<h4>
 								<span class="dashicons dashicons-upload"></span>
@@ -169,7 +169,7 @@ function inspiro_display_theme_page() {
 								</form>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				<?php endif; ?>
 			</div>
 		</div>
