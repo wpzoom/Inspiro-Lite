@@ -290,6 +290,7 @@ class Inspiro_Theme_Upgrader {
 			$default       = inspiro_get_prop( $args, 'default' );
 			$saved_setting = inspiro_get_prop( $theme_mods, $name );
 			$theme_mod     = get_theme_mod( $name, $default );
+			$name          = $this->sanitize_option_name( $name );
 
 			if ( ! $saved_setting ) {
 				set_theme_mod( $name, $theme_mod );
@@ -518,6 +519,20 @@ class Inspiro_Theme_Upgrader {
 		);
 
 		return register_post_type( 'slider', $args ); // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.plugin_territory_register_post_type
+	}
+
+	/**
+	 * Sanitize customizer data option name
+	 *
+	 * @param string $option_name Theme mod option name.
+	 * @return string
+	 */
+	private function sanitize_option_name( $option_name ) {
+		$logo_whitelist = array( 'logo-font-family', 'logo-font-variant', 'logo-font-size', 'logo-font-weight', 'logo-text-transform', 'logo-line-height' );
+		if ( in_array( $option_name, $logo_whitelist ) ) {
+			$option_name = str_replace( 'logo-', 'title-', $option_name );
+		}
+		return $option_name;
 	}
 }
 
