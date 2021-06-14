@@ -51,7 +51,7 @@ function inspiro_dynamic_theme_css_mobilemenu( $dynamic_css ) {
 	if ( ! empty( $mobilemenu_font_family ) && 'inherit' !== $mobilemenu_font_family ) {
 		$dynamic_css .= "font-family: {$mobilemenu_font_family};\n";
 	}
-	if ( absint( $mobilemenu_font_size ) >= 12 && absint( $mobilemenu_font_size ) <= 20 ) {
+	if ( absint( $mobilemenu_font_size ) >= 12 && absint( $mobilemenu_font_size ) <= 22 ) {
 		$dynamic_css .= "font-size: {$mobilemenu_font_size}px;\n";
 	}
 	if ( ! empty( $mobilemenu_font_weight ) && 'inherit' !== $mobilemenu_font_weight ) {

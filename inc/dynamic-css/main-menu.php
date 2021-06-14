@@ -63,7 +63,7 @@ function inspiro_dynamic_theme_css_mainmenu( $dynamic_css ) {
 
 	$dynamic_css .= "{$media_query} {\n";
 	$dynamic_css .= "{$selector} {\n";
-	if ( absint( $mainmenu_font_size ) >= 12 && absint( $mainmenu_font_size ) <= 20 ) {
+	if ( absint( $mainmenu_font_size ) >= 12 && absint( $mainmenu_font_size ) <= 32 ) {
 		$dynamic_css .= "font-size: {$mainmenu_font_size}px;\n";
 	}
 	$dynamic_css .= "} }\n";

@@ -123,7 +123,7 @@ class Inspiro_Typo_Main_Menu_Config {
 						'section'     => 'inspiro_typography_section_menu',
 						'input_attrs' => array(
 							'min'  => 12,
-							'max'  => 20,
+							'max'  => 32,
 							'step' => 1,
 						),
 					),

@@ -116,7 +116,7 @@ class Inspiro_Typo_Mobile_Menu_Config {
 						'section'     => 'inspiro_typography_section_menu',
 						'input_attrs' => array(
 							'min'  => 12,
-							'max'  => 20,
+							'max'  => 22,
 							'step' => 1,
 						),
 					),

@@ -60,7 +60,7 @@ function inspiro_dynamic_theme_css_body( $dynamic_css ) {
 
 	$dynamic_css .= "{$media_query} {\n";
 	$dynamic_css .= "{$selector} {\n";
-	if ( absint( $body_font_size ) >= 12 && absint( $body_font_size ) <= 26 ) {
+	if ( absint( $body_font_size ) >= 12 && absint( $body_font_size ) <= 36 ) {
 		$dynamic_css .= "font-size: {$body_font_size}px;\n";
 	}
 	if ( ! empty( $body_line_height ) && 'inherit' !== $body_line_height ) {

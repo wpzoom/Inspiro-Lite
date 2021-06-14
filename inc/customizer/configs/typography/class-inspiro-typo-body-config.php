@@ -115,7 +115,7 @@ class Inspiro_Typo_Body_Config {
 						'section'     => 'inspiro_typography_section_body',
 						'input_attrs' => array(
 							'min'  => 12,
-							'max'  => 26,
+							'max'  => 36,
 							'step' => 1,
 						),
 					),
