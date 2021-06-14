@@ -75,7 +75,7 @@ class Inspiro_Typo_Logo_Config {
 				array(
 					'id'   => 'logo-text-transform',
 					'args' => array(
-						'default'           => '',
+						'default'           => 'uppercase',
 						'transport'         => 'postMessage',
 						'sanitize_callback' => 'inspiro_sanitize_choices',
 					),
