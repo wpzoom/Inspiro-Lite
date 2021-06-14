@@ -261,22 +261,24 @@ class Inspiro_Theme_Upgrader {
 				'description'   => $description,
 			);
 		} else {
-			/**
-			 * User has selected header image from registered default headers.
-			 * In this case we need to convert 'url' to absolute path.
-			 */
-			$url = inspiro_get_prop( $header_image_data, 'url' );
+			if ( is_array( $header_image_data ) ) {
+				/**
+				 * User has selected header image from registered default headers.
+				 * In this case we need to convert 'url' to absolute path.
+				 */
+				$url = inspiro_get_prop( $header_image_data, 'url' );
 
-			/**
-			 * Removes the http or https protocols and the template direcotry domain.
-			 * Keeps only root theme path with '/' at the beginning.
-			 */
-			$clear_url = str_replace( INSPIRO_THEME_URI, '/', $url );
+				/**
+				 * Removes the http or https protocols and the template direcotry domain.
+				 * Keeps only root theme path with '/' at the beginning.
+				 */
+				$clear_url = str_replace( INSPIRO_THEME_URI, '/', $url );
 
-			// Convert full URL path to absolute path.
-			$url = get_parent_theme_file_path( $clear_url );
+				// Convert full URL path to absolute path.
+				$url = get_parent_theme_file_path( $clear_url );
 
-			$header_image_data['url'] = $url;
+				$header_image_data['url'] = $url;
+			}
 		}
 
 		if ( 'blank' !== $header_textcolor ) {
