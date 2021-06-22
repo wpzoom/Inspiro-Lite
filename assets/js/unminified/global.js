@@ -140,6 +140,7 @@
 			} );
 		}
 
+		inspiroResponsiveEmbeds();
 		adjustHeaderSpacing();
 		belowEntryMetaClass( 'blockquote.alignleft, blockquote.alignright' );
 
@@ -158,6 +159,8 @@
 	}
 
 	$( window ).on( 'resize', function () {
+		inspiroResponsiveEmbeds();
+
 		clearTimeout( resizeTimer );
 		resizeTimer = setTimeout( function () {
 			belowEntryMetaClass(
@@ -189,9 +192,41 @@
  */
 function inspiroResponsiveEmbeds() {
 	let proportion, parentWidth;
+	let iframeInitialWidth, iframeInitialHeight;
+	const bodyElement = document.querySelectorAll( 'body' )[ 0 ];
 
 	// Loop iframe elements.
 	document.querySelectorAll( 'iframe' ).forEach( function ( iframe ) {
+		// Skip custom video header.
+		if ( 'wp-custom-header' === iframe.parentElement.id ) {
+			if (
+				bodyElement.classList.contains( 'full-height-iframe-video' )
+			) {
+				if ( ! iframe.hasAttribute( 'data-initial-width' ) ) {
+					iframe.setAttribute( 'data-initial-width', iframe.width );
+				}
+				if ( ! iframe.hasAttribute( 'data-initial-height' ) ) {
+					iframe.setAttribute( 'data-initial-height', iframe.height );
+				}
+
+				iframeInitialWidth = iframe.getAttribute(
+					'data-initial-width'
+				);
+				iframeInitialHeight = iframe.getAttribute(
+					'data-initial-height'
+				);
+
+				if ( window.innerWidth < 1200 ) {
+					iframe.width = window.innerHeight + window.innerWidth;
+					iframe.height = window.innerWidth;
+				} else {
+					iframe.width = iframeInitialWidth;
+					iframe.height = iframeInitialHeight;
+				}
+			}
+			return;
+		}
+
 		// Only continue if the iframe has a width & height defined.
 		if ( iframe.width && iframe.height ) {
 			// Calculate the proportion/ratio based on the width & height.
@@ -210,9 +245,3 @@ function inspiroResponsiveEmbeds() {
 		}
 	} );
 }
-
-// Run on initial load.
-inspiroResponsiveEmbeds();
-
-// Run on resize.
-window.onresize = inspiroResponsiveEmbeds;

@@ -108,6 +108,16 @@ function inspiro_is_view_with_layout_option() {
 }
 
 /**
+ * Checks whether the external header video is eligible to show on the current page.
+ */
+function inspiro_is_external_video_active() {
+	$header_video_settings = get_header_video_settings();
+	// Get header video mimeType.
+	$mime_type = inspiro_get_prop( $header_video_settings, 'mimeType' );
+	return is_header_video_active() && 'video/mp4' !== $mime_type;
+}
+
+/**
  * Sanitize select.
  *
  * @param string $choice  The value from the setting.

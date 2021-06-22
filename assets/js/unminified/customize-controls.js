@@ -24,6 +24,53 @@
 				setting.bind( visibility );
 			} );
 		} );
+
+		/**
+		 * Display checkbox field for Full Height video iframe on mobile when input has value.
+		 *
+		 * @since x.x.x
+		 */
+		api( 'external_header_video', function ( setting ) {
+			api.control(
+				'external_header_video_full_height',
+				function ( control ) {
+					const visibility = function () {
+						if ( '' !== setting.get() ) {
+							control.container.slideDown( 180 );
+						} else {
+							control.container.slideUp( 180 );
+						}
+					};
+					visibility();
+					setting.bind( visibility );
+				}
+			);
+		} );
+
+		/**
+		 * Hide external video settings if self-hosted video is uploaded.
+		 *
+		 * @since x.x.x
+		 */
+		api( 'header_video', function ( setting ) {
+			const videoSettingControls = [
+				'external_header_video',
+				'external_header_video_full_height',
+			];
+			$.each( videoSettingControls, function ( _, controlId ) {
+				api.control( controlId, function ( control ) {
+					const visibility = function () {
+						if ( parseInt( setting.get() ) > 0 ) {
+							control.container.slideUp( 180 );
+						} else {
+							control.container.slideDown( 180 );
+						}
+					};
+					visibility();
+					setting.bind( visibility );
+				} );
+			} );
+		} );
 	} );
 
 	// Extends our custom "upgrade-pro" section.

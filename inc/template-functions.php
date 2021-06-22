@@ -99,6 +99,10 @@ function inspiro_body_classes( $classes ) {
 		$classes[] = 'has-archive-description';
 	}
 
+	if ( inspiro_is_external_video_active() && inspiro_get_theme_mod( 'external_header_video_full_height' ) ) {
+		$classes[] = 'full-height-iframe-video';
+	}
+
 	// Get the colorscheme or the default if there isn't one.
 	$colors    = inspiro_sanitize_colorscheme( inspiro_get_theme_mod( 'colorscheme' ) );
 	$classes[] = 'colors-' . $colors;
