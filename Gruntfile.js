@@ -397,6 +397,23 @@ module.exports = function ( grunt ) {
 				],
 			},
 
+			scripts: {
+				src: [
+					'*.js',
+					'**/*.js',
+					'!Gruntfile.js',
+					'!node_modules/**',
+					'!bin/**',
+				],
+				overwrite: true,
+				replacements: [
+					{
+						from: 'x.x.x',
+						to: '<%= pkg.version %>',
+					},
+				],
+			},
+
 			changelog: {
 				src: [ 'readme.txt' ],
 				overwrite: true,
@@ -562,6 +579,7 @@ module.exports = function ( grunt ) {
 				'replace:theme_const',
 				'replace:theme_function_comment',
 				'replace:changelog',
+				'replace:scripts',
 				'readme'
 			);
 		}
