@@ -18,13 +18,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class Inspiro_Typo_H6_Config {
 	/**
-	 * Constructor
-	 */
-	public function __construct() {
-		add_action( 'inspiro/customize_register', array( $this, 'register_configuration' ) );
-	}
-
-	/**
 	 * Register configurations
 	 *
 	 * @param WP_Customize_Manager $wp_customize instance of WP_Customize_Manager.

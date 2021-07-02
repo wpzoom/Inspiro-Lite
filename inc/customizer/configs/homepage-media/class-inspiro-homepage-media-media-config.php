@@ -18,13 +18,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class Inspiro_Homepage_Media_Media_Config {
 	/**
-	 * Constructor
-	 */
-	public function __construct() {
-		add_action( 'inspiro/customize_register', array( $this, 'register_configuration' ) );
-	}
-
-	/**
 	 * Configurations
 	 *
 	 * @since 1.4.0 Store configurations to class method.
@@ -79,36 +72,4 @@ class Inspiro_Homepage_Media_Media_Config {
 			),
 		);
 	}
-
-	/**
-	 * Register configurations
-	 *
-	 * @param WP_Customize_Manager $wp_customize instance of WP_Customize_Manager.
-	 * @return void
-	 */
-	public function register_configuration( $wp_customize ) {
-		$configs = self::config();
-
-		$wp_customize->add_section(
-			$configs['section']['id'],
-			$configs['section']['args']
-		);
-
-		$wp_customize->add_setting(
-			$configs['setting'][0]['id'],
-			$configs['setting'][0]['args']
-		);
-
-		$wp_customize->add_control(
-			$configs['control'][0]['id'],
-			$configs['control'][0]['args']
-		);
-
-		$wp_customize->add_control(
-			$configs['control'][1]['id'],
-			$configs['control'][1]['args']
-		);
-	}
 }
-
-new Inspiro_Homepage_Media_Media_Config();

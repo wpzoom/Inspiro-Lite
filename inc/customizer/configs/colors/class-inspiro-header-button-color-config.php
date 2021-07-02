@@ -18,13 +18,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class Inspiro_Header_Button_Color_Config {
 	/**
-	 * Constructor
-	 */
-	public function __construct() {
-		add_action( 'inspiro/customize_register', array( $this, 'register_configuration' ) );
-	}
-
-	/**
 	 * Configurations
 	 *
 	 * @since 1.4.0 Store configurations to class method.
@@ -66,22 +59,25 @@ class Inspiro_Header_Button_Color_Config {
 			),
 			'control' => array(
 				array(
-					'id'   => 'header_button_textcolor',
-					'args' => array(
+					'id'           => 'header_button_textcolor',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
 						'label'   => esc_html__( 'Header Button Text Color', 'inspiro' ),
 						'section' => 'colors',
 					),
 				),
 				array(
-					'id'   => 'header_button_textcolor_hover',
-					'args' => array(
+					'id'           => 'header_button_textcolor_hover',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
 						'label'   => esc_html__( 'Header Button Text Color Hover', 'inspiro' ),
 						'section' => 'colors',
 					),
 				),
 				array(
-					'id'   => 'header_button_bgcolor_hover',
-					'args' => array(
+					'id'           => 'header_button_bgcolor_hover',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
 						'label'   => esc_html__( 'Header Button Background Color Hover', 'inspiro' ),
 						'section' => 'colors',
 					),
@@ -89,55 +85,4 @@ class Inspiro_Header_Button_Color_Config {
 			),
 		);
 	}
-
-	/**
-	 * Register configurations
-	 *
-	 * @param WP_Customize_Manager $wp_customize instance of WP_Customize_Manager.
-	 * @return void
-	 */
-	public function register_configuration( $wp_customize ) {
-		$configs = self::config();
-
-		$wp_customize->add_setting(
-			$configs['setting'][0]['id'],
-			$configs['setting'][0]['args']
-		);
-
-		$wp_customize->add_setting(
-			$configs['setting'][1]['id'],
-			$configs['setting'][1]['args']
-		);
-
-		$wp_customize->add_setting(
-			$configs['setting'][2]['id'],
-			$configs['setting'][2]['args']
-		);
-
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				$configs['control'][0]['id'],
-				$configs['control'][0]['args']
-			)
-		);
-
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				$configs['control'][1]['id'],
-				$configs['control'][1]['args']
-			)
-		);
-
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				$configs['control'][2]['id'],
-				$configs['control'][2]['args']
-			)
-		);
-	}
 }
-
-new Inspiro_Header_Button_Color_Config();

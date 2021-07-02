@@ -52,13 +52,13 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		 * Constructor
 		 */
 		public function __construct() {
-			add_action( 'init', array( $this, 'autoload_configuration_files' ), 1 );
 			add_action( 'inspiro/configuration-files-loaded', array( $this, 'store_customizer_data' ) );
 
 			add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
 
 			add_action( 'customize_register', array( $this, 'register_control_types' ), 2 );
-			add_action( 'customize_register', array( $this, 'register_configurations' ) );
+			add_action( 'customize_register', array( $this, 'autoload_configuration_files' ), 3 );
+			add_action( 'customize_register', array( $this, 'register_configurations' ), 10 );
 
 			add_action( 'customize_controls_enqueue_scripts', array( $this, 'enqueue_control_scripts' ) );
 
@@ -162,7 +162,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		 *
 		 * @since 1.3.0
 		 *
-		 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+		 * @param WP_Customize_Manager $wp_customize instance of WP_Customize_Manager.
 		 */
 		public function register_control_types( $wp_customize ) {
 			// phpcs:disable WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
@@ -180,21 +180,21 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 			 * Add controls
 			 */
 
-			Inspiro_Customizer_Control_Base::add_control(
+			Inspiro_Customizer_Control_Base::register_custom_control(
 				'inspiro-range',
 				array(
 					'callback' => 'Inspiro_Customize_Range_Control',
 				)
 			);
 
-			Inspiro_Customizer_Control_Base::add_control(
+			Inspiro_Customizer_Control_Base::register_custom_control(
 				'inspiro-title',
 				array(
 					'callback' => 'Inspiro_Customize_Title_Control',
 				)
 			);
 
-			Inspiro_Customizer_Control_Base::add_control(
+			Inspiro_Customizer_Control_Base::register_custom_control(
 				'inspiro-typography',
 				array(
 					'callback'          => 'Inspiro_Customize_Typography_Control',
@@ -202,7 +202,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 				)
 			);
 
-			Inspiro_Customizer_Control_Base::add_control(
+			Inspiro_Customizer_Control_Base::register_custom_control(
 				'inspiro-font-variant',
 				array(
 					'callback'          => 'Inspiro_Customize_Font_Variant_Control',
@@ -214,7 +214,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		/**
 		 * Register all configurations for Theme Customizer.
 		 *
-		 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+		 * @param WP_Customize_Manager $wp_customize instance of WP_Customize_Manager.
 		 */
 		public function register_configurations( $wp_customize ) {
 			/**
@@ -234,22 +234,25 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 				)
 			);
 
+			// Change transport type for Header Text color.
+			$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
 			/**
 			 * Fires to register all customizer custom panels, settings and controls
 			 *
 			 * @since 1.3.0
 			 */
-			do_action( 'inspiro/customize_register', $wp_customize );
+			do_action( 'inspiro/customize_register', $wp_customize, $this->config_class_names );
 		}
 
 		/**
 		 * Autoload all customizer configuration files
 		 *
 		 * @since 1.4.0
-		 *
+		 * @param WP_Customize_Manager $wp_customize instance of WP_Customize_Manager.
 		 * @return void
 		 */
-		public function autoload_configuration_files() {
+		public function autoload_configuration_files( $wp_customize ) {
 			$configuration_files = self::configuration_files();
 
 			// phpcs:disable WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
@@ -262,7 +265,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 							require INSPIRO_THEME_DIR . "inc/customizer/configs/{$folder_name}/class-inspiro-{$file_name}-config.php";
 
 							if ( method_exists( $class_name, 'config' ) && ! isset( $this->config_class_names[ $class_name ] ) ) {
-								$this->config_class_names[ $class_name ] = call_user_func( array( $class_name, 'config' ) );
+								$this->config_class_names[ $class_name ] = (object) call_user_func_array( array( $class_name, 'config' ), array( $wp_customize ) ); // Call a callback with an array of parameters.
 							}
 						}
 					}

@@ -18,13 +18,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class Inspiro_Homepage_Media_Content_Config {
 	/**
-	 * Constructor
-	 */
-	public function __construct() {
-		add_action( 'inspiro/customize_register', array( $this, 'register_configuration' ) );
-	}
-
-	/**
 	 * Configurations
 	 *
 	 * @since 1.4.0 Store configurations to class method.
@@ -143,71 +136,4 @@ class Inspiro_Homepage_Media_Content_Config {
 			),
 		);
 	}
-
-	/**
-	 * Register configurations
-	 *
-	 * @param WP_Customize_Manager $wp_customize instance of WP_Customize_Manager.
-	 * @return void
-	 */
-	public function register_configuration( $wp_customize ) {
-		$configs = self::config();
-
-		$wp_customize->add_section(
-			$configs['section']['id'],
-			$configs['section']['args']
-		);
-
-		$wp_customize->add_setting(
-			$configs['setting'][0]['id'],
-			$configs['setting'][0]['args']
-		);
-
-		$wp_customize->add_setting(
-			$configs['setting'][1]['id'],
-			$configs['setting'][1]['args']
-		);
-
-		$wp_customize->add_setting(
-			$configs['setting'][2]['id'],
-			$configs['setting'][2]['args']
-		);
-
-		$wp_customize->add_setting(
-			$configs['setting'][3]['id'],
-			$configs['setting'][3]['args']
-		);
-
-		$wp_customize->add_setting(
-			$configs['setting'][4]['id'],
-			$configs['setting'][4]['args']
-		);
-
-		$wp_customize->add_control(
-			$configs['control'][0]['id'],
-			$configs['control'][0]['args']
-		);
-
-		$wp_customize->add_control(
-			$configs['control'][1]['id'],
-			$configs['control'][1]['args']
-		);
-
-		$wp_customize->add_control(
-			$configs['control'][2]['id'],
-			$configs['control'][2]['args']
-		);
-
-		$wp_customize->add_control(
-			$configs['control'][3]['id'],
-			$configs['control'][3]['args']
-		);
-
-		$wp_customize->add_control(
-			$configs['control'][4]['id'],
-			$configs['control'][4]['args']
-		);
-	}
 }
-
-new Inspiro_Homepage_Media_Content_Config();
