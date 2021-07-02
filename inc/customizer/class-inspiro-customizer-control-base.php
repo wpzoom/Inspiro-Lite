@@ -351,7 +351,7 @@ if ( ! class_exists( 'Inspiro_Customizer_Control_Base' ) ) {
 
 				// Custom callback to get choices for control.
 				if ( isset( $controls['callable_choices'] ) ) {
-					// [0] callable function, [1] function parameters.
+					/* callable_choices: callable function, function parameters */
 					$control_args['choices'] = call_user_func_array( $controls['callable_choices'][0], $controls['callable_choices'][1] );
 				}
 
@@ -383,7 +383,7 @@ if ( ! class_exists( 'Inspiro_Customizer_Control_Base' ) ) {
 
 					// Custom callback to get choices for control.
 					if ( isset( $control['callable_choices'] ) ) {
-						// [0] callable function, [1] function parameters.
+						/* callable_choices: callable function, function parameters */
 						$control_args['choices'] = call_user_func_array( $control['callable_choices'][0], $control['callable_choices'][1] );
 					}
 
