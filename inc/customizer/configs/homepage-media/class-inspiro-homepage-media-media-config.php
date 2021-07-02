@@ -76,7 +76,7 @@ class Inspiro_Homepage_Media_Media_Config {
 						'active_callback' => 'inspiro_is_external_video_active',
 					),
 				),
-			)
+			),
 		);
 	}
 
