@@ -232,7 +232,7 @@ function inspiro_get_data_from_file( $file_path ) {
 /**
  * Retrieves theme modification value.
  *
- * @since x.x.x
+ * @since 1.4.0
  *
  * @param string $name Theme modification name.
  * @return mixed

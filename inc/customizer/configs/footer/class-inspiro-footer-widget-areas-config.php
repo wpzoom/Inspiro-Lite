@@ -27,7 +27,7 @@ class Inspiro_Footer_Widget_Areas_Config {
 	/**
 	 * Configurations
 	 *
-	 * @since x.x.x Store configurations to class method.
+	 * @since 1.4.0 Store configurations to class method.
 	 * @return array
 	 */
 	public static function config() {

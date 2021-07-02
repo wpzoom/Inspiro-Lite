@@ -16,7 +16,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		/**
 		 * Store all customizer data
 		 *
-		 * @since x.x.x
+		 * @since 1.4.0
 		 * @var array
 		 */
 		public static $customizer_data = array();
@@ -24,7 +24,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		/**
 		 * Store all configuration class names
 		 *
-		 * @since x.x.x
+		 * @since 1.4.0
 		 *
 		 * @var array
 		 */
@@ -68,7 +68,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		/**
 		 * Set customizer data
 		 *
-		 * @since x.x.x
+		 * @since 1.4.0
 		 *
 		 * @param string $setting_id Customizer setting id.
 		 * @param array  $setting_args Customizer setting args.
@@ -89,7 +89,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		/**
 		 * Retrieves theme modification default value for the passed theme modification name.
 		 *
-		 * @since x.x.x
+		 * @since 1.4.0
 		 *
 		 * @param string $name Theme modification name.
 		 * @return mixed
@@ -105,7 +105,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		/**
 		 * All configuration files
 		 *
-		 * @since x.x.x Moved to class method all configuration files.
+		 * @since 1.4.0 Moved to class method all configuration files.
 		 *
 		 * @return array
 		 */
@@ -245,7 +245,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		/**
 		 * Autoload all customizer configuration files
 		 *
-		 * @since x.x.x
+		 * @since 1.4.0
 		 *
 		 * @return void
 		 */
@@ -274,7 +274,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 			 * Fires after all customizer configuration files are loaded.
 			 * Pass array with configuration class names.
 			 *
-			 * @since x.x.x
+			 * @since 1.4.0
 			 */
 			do_action( 'inspiro/configuration-files-loaded', $this->config_class_names );
 		}
@@ -282,7 +282,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		/**
 		 * Store customizer data to static class variable
 		 *
-		 * @since x.x.x
+		 * @since 1.4.0
 		 *
 		 * @param array $config_class_names All configuration class names.
 		 * @return array Array of customizer data.

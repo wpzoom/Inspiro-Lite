@@ -28,7 +28,7 @@
 		/**
 		 * Display checkbox field for Full Height video iframe on mobile when input has value.
 		 *
-		 * @since x.x.x
+		 * @since 1.4.0
 		 */
 		api( 'external_header_video', function ( setting ) {
 			api.control(
@@ -50,7 +50,7 @@
 		/**
 		 * Hide external video settings if self-hosted video is uploaded.
 		 *
-		 * @since x.x.x
+		 * @since 1.4.0
 		 */
 		api( 'header_video', function ( setting ) {
 			const videoSettingControls = [

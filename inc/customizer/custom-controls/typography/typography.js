@@ -155,7 +155,7 @@
 		 *
 		 * Google Fonts are saved as {'Font Name', Category}. This function cleanes this up to retreive only the {Font Name}.
 		 *
-		 * @since  x.x.x
+		 * @since  1.4.0
 		 * @param  {string} fontValue Name of the font.
 		 *
 		 * @return {string}  Font name where commas and inverted commas are removed if the font is a Google Font.
@@ -184,7 +184,7 @@
 		 *
 		 * This function gets the font weights values respective to the selected fonts family{Font Name}.
 		 *
-		 * @since  x.x.x
+		 * @since  1.4.0
 		 * @param  {string} fontValue Name of the font.
 		 *
 		 * @return {string}  Available font weights for the selected fonts.

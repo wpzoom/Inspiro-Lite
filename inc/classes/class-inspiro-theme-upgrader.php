@@ -4,13 +4,13 @@
  *
  * @package Inspiro
  * @subpackage Upgrader
- * @since Inspiro x.x.x
+ * @since Inspiro 1.4.0
  */
 
 /**
  * Theme Upgrader class for the Inspiro theme.
  *
- * @since x.x.x
+ * @since 1.4.0
  */
 class Inspiro_Theme_Upgrader {
 	/**
