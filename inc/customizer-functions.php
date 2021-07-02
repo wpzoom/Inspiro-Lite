@@ -199,17 +199,15 @@ function inspiro_sanitize_float( $value ) {
  * @see get_parent_theme_file_path()
  */
 function inspiro_get_data_from_file( $file_path ) {
-	global $wp_filesystem;
-
-	require_once ABSPATH . '/wp-admin/includes/file.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
-	WP_Filesystem();
+	require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-base.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+	require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-direct.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 	$local_file = get_parent_theme_file_path( $file_path );
 	$content    = '';
 	$config     = array();
 
-	if ( $wp_filesystem->exists( $local_file ) ) {
-		$content = json_decode( $wp_filesystem->get_contents( $local_file ) );
+	if ( WP_Filesystem_Direct::exists( $local_file ) ) {
+		$content = json_decode( WP_Filesystem_Direct::get_contents( $local_file ) );
 
 		$decoded_file = json_decode(
 			$content,
