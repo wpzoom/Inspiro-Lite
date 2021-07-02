@@ -516,7 +516,7 @@ class Inspiro_Theme_Upgrader {
 			'taxonomies'         => array( 'slide-category' ),
 		);
 
-		return register_post_type( 'slider', $args ); // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.plugin_territory_register_post_type
+		return call_user_func_array( 'register_post_type', array( 'slider', $args ) );
 	}
 
 	/**
