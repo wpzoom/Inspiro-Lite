@@ -390,8 +390,8 @@ if ( ! class_exists( 'Inspiro_Customizer_Control_Base' ) ) {
 					self::$controls[ $control_id ] = $control_args;
 
 					// Check for a specialized control class.
-					if ( isset( $controls['control_type'] ) ) {
-						$class = $controls['control_type'];
+					if ( isset( $control['control_type'] ) ) {
+						$class = $control['control_type'];
 
 						self::$controls[ $control_id ]['control_type'] = $class;
 
