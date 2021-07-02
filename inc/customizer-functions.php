@@ -67,30 +67,6 @@ function inspiro_sanitize_header_button_url( $value ) {
 }
 
 /**
- * Callback for validating the header_textcolor value.
- *
- * Accepts 'blank', and otherwise uses sanitize_hex_color_no_hash().
- * Returns default text color if hex color is empty.
- *
- * @since 1.2.5
- *
- * @param string $color Color value.
- * @return mixed
- */
-function inspiro_sanitize_header_button_textcolor( $color ) {
-	if ( 'blank' === $color ) {
-		return 'blank';
-	}
-
-	$color = sanitize_hex_color_no_hash( $color );
-	if ( empty( $color ) ) {
-		$color = 'ffffff';
-	}
-
-	return $color;
-}
-
-/**
  * Sanitize boolean for checkbox.
  *
  * @since 1.2.5
@@ -129,6 +105,16 @@ function inspiro_is_view_is_single() {
 function inspiro_is_view_with_layout_option() {
 	// This option is available on all pages. It's also available on archives when there isn't a sidebar.
 	return ( is_front_page() || is_home() || is_single() );
+}
+
+/**
+ * Checks whether the external header video is eligible to show on the current page.
+ */
+function inspiro_is_external_video_active() {
+	$header_video_settings = get_header_video_settings();
+	// Get header video mimeType.
+	$mime_type = inspiro_get_prop( $header_video_settings, 'mimeType' );
+	return is_header_video_active() && 'video/mp4' !== $mime_type;
 }
 
 /**
@@ -241,4 +227,17 @@ function inspiro_get_data_from_file( $file_path ) {
 	}
 
 	return $config;
+}
+
+/**
+ * Retrieves theme modification value.
+ *
+ * @since 1.4.0
+ *
+ * @param string $name Theme modification name.
+ * @return mixed
+ */
+function inspiro_get_theme_mod( $name ) {
+	$default = Inspiro_Customizer::get_theme_mod_default_value( $name );
+	return get_theme_mod( $name, $default );
 }

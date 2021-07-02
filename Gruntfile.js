@@ -167,11 +167,13 @@ module.exports = function ( grunt ) {
 						ext: '.min.js',
 					},
 					{
-						src: [
-							'inc/customizer/custom-controls/assets/js/unminified/custom-controls.js',
-						],
+						expand: true,
+						src: [ '**.js' ],
 						dest:
-							'inc/customizer/custom-controls/assets/js/minified/custom-controls.min.js',
+							'inc/customizer/custom-controls/assets/js/minified',
+						cwd:
+							'inc/customizer/custom-controls/assets/js/unminified',
+						ext: '.min.js',
 					},
 				],
 			},
@@ -225,7 +227,7 @@ module.exports = function ( grunt ) {
 					'assets/js/unminified/*.js',
 					'inc/customizer/custom-controls/**/*.js',
 				],
-				tasks: [ 'jshint', 'concat', 'clean:minifiedJS' ],
+				tasks: [ 'jshint:uses_defaults', 'concat', 'minify' ],
 				options: {
 					livereload: true,
 				},
@@ -307,9 +309,14 @@ module.exports = function ( grunt ) {
 					'!package.json',
 					'!package-lock.json',
 					'!.gitignore',
+					'!.distignore',
+					'!.eslintrc',
+					'!.gitattributes',
+					'!.phpstan.neon.dist',
 					'!phpunit.xml',
 					'!README.md',
 					'!sass/**',
+					'!scss/**',
 					'!vendor/**',
 					'!composer.json',
 					'!composer.lock',
@@ -322,8 +329,14 @@ module.exports = function ( grunt ) {
 		clean: {
 			main: [ '<%= pkg.name %>' ],
 			zip: [ '*.zip' ],
-			minifiedJS: [ 'assets/js/minified/*' ],
-			minifiedCSS: [ 'assets/css/minified/*' ],
+			minifiedJS: [
+				'assets/js/minified/*',
+				'inc/customizer/custom-controls/assets/js/minified/*',
+			],
+			minifiedCSS: [
+				'assets/css/minified/*',
+				'inc/customizer/custom-controls/assets/css/minified/*',
+			],
 		},
 
 		compress: {
@@ -378,6 +391,23 @@ module.exports = function ( grunt ) {
 					'**/*.php',
 					'!node_modules/**',
 					'!php-tests/**',
+					'!bin/**',
+				],
+				overwrite: true,
+				replacements: [
+					{
+						from: 'x.x.x',
+						to: '<%= pkg.version %>',
+					},
+				],
+			},
+
+			scripts: {
+				src: [
+					'*.js',
+					'**/*.js',
+					'!Gruntfile.js',
+					'!node_modules/**',
 					'!bin/**',
 				],
 				overwrite: true,
@@ -503,6 +533,7 @@ module.exports = function ( grunt ) {
 			options: {
 				// Task-specific options go here.
 				compress: true,
+				// eslint-disable-next-line no-unused-vars
 				cover( phpArrayString, destFilePath ) {
 					return (
 						'<?php\n/**\n * Google fonts array file.\n *\n * @package     Inspiro\n * @author      WPZOOM\n * @copyright   Copyright (c) 2021, WPZOOM\n * @link        https://wpzoom.com\n * @since       Inspiro_Lite x.x.x\n */\n\n/**\n * Returns google fonts array\n *\n * @since x.x.x\n */\nreturn ' +
@@ -540,6 +571,7 @@ module.exports = function ( grunt ) {
 	// Register Tasks.
 
 	// Bump Version - `grunt version-bump --ver=<version-number>`
+	// eslint-disable-next-line no-unused-vars
 	grunt.registerTask( 'version-bump', function ( ver ) {
 		let newVersion = grunt.option( 'ver' );
 
@@ -552,6 +584,7 @@ module.exports = function ( grunt ) {
 				'replace:theme_const',
 				'replace:theme_function_comment',
 				'replace:changelog',
+				'replace:scripts',
 				'readme'
 			);
 		}
@@ -559,6 +592,7 @@ module.exports = function ( grunt ) {
 
 	grunt.registerTask( 'download-google-fonts', function () {
 		const done = this.async();
+		// eslint-disable-next-line import/no-extraneous-dependencies
 		const request = require( 'request' );
 		const fs = require( 'fs' );
 

@@ -25,42 +25,67 @@ class Inspiro_Post_Options_Config {
 	}
 
 	/**
+	 * Configurations
+	 *
+	 * @since 1.4.0 Store configurations to class method.
+	 * @return array
+	 */
+	public static function config() {
+		return array(
+			'section' => array(
+				'id'   => 'blog_post_options',
+				'args' => array(
+					'title'      => esc_html__( 'Post Options', 'inspiro' ),
+					'capability' => 'edit_theme_options',
+					'panel'      => 'blog_post_options_panel',
+				),
+			),
+			'setting' => array(
+				'id'   => 'display_content',
+				'args' => array(
+					'default'           => 'excerpt',
+					'sanitize_callback' => 'inspiro_sanitize_display_content',
+					'transport'         => 'refresh',
+				),
+			),
+			'control' => array(
+				'id'   => 'display_content',
+				'args' => array(
+					'label'   => esc_html__( 'Content', 'inspiro' ),
+					'section' => 'blog_post_options',
+					'type'    => 'radio',
+					'choices' => array(
+						'excerpt'      => esc_html__( 'Excerpt', 'inspiro' ),
+						'full-content' => esc_html__( 'Full Content', 'inspiro' ),
+						'none'         => esc_html__( 'None', 'inspiro' ),
+					),
+				),
+			),
+		);
+	}
+
+	/**
 	 * Register configurations
 	 *
 	 * @param WP_Customize_Manager $wp_customize instance of WP_Customize_Manager.
 	 * @return void
 	 */
 	public function register_configuration( $wp_customize ) {
+		$configs = self::config();
+
 		$wp_customize->add_section(
-			'blog_post_options',
-			array(
-				'title'      => esc_html__( 'Post Options', 'inspiro' ),
-				'capability' => 'edit_theme_options',
-				'panel'      => 'blog_post_options_panel',
-			)
+			$configs['section']['id'],
+			$configs['section']['args']
 		);
 
 		$wp_customize->add_setting(
-			'display_content',
-			array(
-				'default'           => 'excerpt',
-				'sanitize_callback' => 'inspiro_sanitize_display_content',
-				'transport'         => 'refresh',
-			)
+			$configs['setting']['id'],
+			$configs['setting']['args']
 		);
 
 		$wp_customize->add_control(
-			'display_content',
-			array(
-				'label'   => esc_html__( 'Content', 'inspiro' ),
-				'section' => 'blog_post_options',
-				'type'    => 'radio',
-				'choices' => array(
-					'excerpt'      => esc_html__( 'Excerpt', 'inspiro' ),
-					'full-content' => esc_html__( 'Full Content', 'inspiro' ),
-					'none'         => esc_html__( 'None', 'inspiro' ),
-				),
-			)
+			$configs['control']['id'],
+			$configs['control']['args']
 		);
 	}
 }

@@ -202,7 +202,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 			$content_width = $GLOBALS['content_width'];
 
 			// Get layout.
-			$blog_layout = get_theme_mod( 'layout_blog_page', 'full' );
+			$blog_layout = inspiro_get_theme_mod( 'layout_blog_page' );
 
 			// Check if layout is full width.
 			if ( 'full' === $blog_layout ) {

@@ -293,13 +293,11 @@ body {
         video,
         iframe {
             position: fixed;
-            height: auto;
             left: 50%;
-            max-width: 1000%;
+            max-width: none;
             min-height: 100%;
             min-width: 100%;
             min-width: 100vw; /* vw prevents 1px gap on left that 100% has */
-            width: auto;
             top: 50%;
             padding-bottom: 1px; /* Prevent header from extending beyond the footer */
             -ms-transform: translateX(-50%) translateY(-50%);

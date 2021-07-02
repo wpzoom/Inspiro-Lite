@@ -1626,6 +1626,16 @@
         }
     },
     {
+        "Bona Nova": {
+            "variants": [
+                "regular",
+                "italic",
+                "700"
+            ],
+            "category": "serif"
+        }
+    },
+    {
         "Bonbon": {
             "variants": [
                 "regular"
@@ -3127,6 +3137,22 @@
         }
     },
     {
+        "Encode Sans SC": {
+            "variants": [
+                "100",
+                "200",
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800",
+                "900"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
         "Encode Sans Semi Condensed": {
             "variants": [
                 "100",
@@ -3442,6 +3468,14 @@
         }
     },
     {
+        "Festive": {
+            "variants": [
+                "regular"
+            ],
+            "category": "handwriting"
+        }
+    },
+    {
         "Finger Paint": {
             "variants": [
                 "regular"
@@ -3711,6 +3745,14 @@
                 "regular"
             ],
             "category": "display"
+        }
+    },
+    {
+        "Fuggles": {
+            "variants": [
+                "regular"
+            ],
+            "category": "handwriting"
         }
     },
     {
@@ -5373,7 +5415,7 @@
                 "800italic",
                 "900italic"
             ],
-            "category": "display"
+            "category": "sans-serif"
         }
     },
     {
@@ -7491,6 +7533,14 @@
         }
     },
     {
+        "Otomanopee One": {
+            "variants": [
+                "regular"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
         "Over the Rainbow": {
             "variants": [
                 "regular"
@@ -8231,6 +8281,14 @@
         }
     },
     {
+        "Qahiri": {
+            "variants": [
+                "regular"
+            ],
+            "category": "sans-serif"
+        }
+    },
+    {
         "Quando": {
             "variants": [
                 "regular"
@@ -8528,7 +8586,10 @@
     {
         "Reem Kufi": {
             "variants": [
-                "regular"
+                "regular",
+                "500",
+                "600",
+                "700"
             ],
             "category": "sans-serif"
         }
@@ -8880,6 +8941,14 @@
                 "regular"
             ],
             "category": "display"
+        }
+    },
+    {
+        "STIX Two Math": {
+            "variants": [
+                "regular"
+            ],
+            "category": "serif"
         }
     },
     {
@@ -10208,6 +10277,31 @@
         }
     },
     {
+        "Tourney": {
+            "variants": [
+                "100",
+                "200",
+                "300",
+                "regular",
+                "500",
+                "600",
+                "700",
+                "800",
+                "900",
+                "100italic",
+                "200italic",
+                "300italic",
+                "italic",
+                "500italic",
+                "600italic",
+                "700italic",
+                "800italic",
+                "900italic"
+            ],
+            "category": "display"
+        }
+    },
+    {
         "Trade Winds": {
             "variants": [
                 "regular"
@@ -10358,6 +10452,14 @@
                 "700italic"
             ],
             "category": "monospace"
+        }
+    },
+    {
+        "Uchen": {
+            "variants": [
+                "regular"
+            ],
+            "category": "serif"
         }
     },
     {
@@ -10753,6 +10855,14 @@
         }
     },
     {
+        "Yomogi": {
+            "variants": [
+                "regular"
+            ],
+            "category": "handwriting"
+        }
+    },
+    {
         "Yrsa": {
             "variants": [
                 "300",
@@ -10798,6 +10908,23 @@
     },
     {
         "Zen Dots": {
+            "variants": [
+                "regular"
+            ],
+            "category": "display"
+        }
+    },
+    {
+        "Zen Loop": {
+            "variants": [
+                "regular",
+                "italic"
+            ],
+            "category": "display"
+        }
+    },
+    {
+        "Zen Tokyo Zoo": {
             "variants": [
                 "regular"
             ],

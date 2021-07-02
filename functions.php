@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Define Constants
  */
-define( 'INSPIRO_THEME_VERSION', '1.3.4' );
+define( 'INSPIRO_THEME_VERSION', '1.4.0' );
 define( 'INSPIRO_THEME_DIR', trailingslashit( get_template_directory() ) );
 define( 'INSPIRO_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
 define( 'INSPIRO_THEME_ASSETS_URI', INSPIRO_THEME_URI . 'dist' );
@@ -92,9 +92,15 @@ if ( is_admin() ) {
 }
 
 /**
+ * Theme Upgrader
+ */
+require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-theme-upgrader.php';
+
+/**
  * Inline theme css generated dynamically
  */
 require INSPIRO_THEME_DIR . 'inc/dynamic-css/body.php';
+require INSPIRO_THEME_DIR . 'inc/dynamic-css/logo.php';
 require INSPIRO_THEME_DIR . 'inc/dynamic-css/headings.php';
 require INSPIRO_THEME_DIR . 'inc/dynamic-css/hero-header-title.php';
 require INSPIRO_THEME_DIR . 'inc/dynamic-css/hero-header-desc.php';

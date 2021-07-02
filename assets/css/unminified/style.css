@@ -2270,14 +2270,12 @@ body:not(.title-tagline-hidden) .site-branding-text {
 .has-header-video .custom-header-media video,
 .has-header-video .custom-header-media iframe {
     position: fixed;
-    height: auto;
     left: 50%;
-    max-width: 1000%;
+    max-width: none;
     min-height: 100%;
     min-width: 100%;
     min-width: 100vw;
     /* vw prevents 1px gap on left that 100% has */
-    width: auto;
     top: 50%;
     padding-bottom: 1px;
     /* Prevent header from extending beyond the footer */

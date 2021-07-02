@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.3.0
  */
-class Inspiro_Typo_Headings_Config {
+class Inspiro_Typo_Logo_Config {
 	/**
 	 * Constructor
 	 */
@@ -33,23 +33,23 @@ class Inspiro_Typo_Headings_Config {
 	public static function config() {
 		return array(
 			'section' => array(
-				'id'   => 'inspiro_typography_section_headings',
+				'id'   => 'inspiro_typography_section_logo',
 				'args' => array(
-					'title' => __( 'Headings', 'inspiro' ),
+					'title' => __( 'Logo', 'inspiro' ),
 					'panel' => 'inspiro_typography_panel',
 				),
 			),
 			'setting' => array(
 				array(
-					'id'   => 'headings-font-family',
+					'id'   => 'logo-font-family',
 					'args' => array(
 						'transport'         => 'postMessage',
 						'sanitize_callback' => 'sanitize_text_field',
-						'default'           => 'inherit',
+						'default'           => "'Montserrat', sans-serif",
 					),
 				),
 				array(
-					'id'   => 'headings-font-variant',
+					'id'   => 'logo-font-variant',
 					'args' => array(
 						'transport'         => 'postMessage',
 						'sanitize_callback' => 'inspiro_sanitize_font_variant',
@@ -57,7 +57,15 @@ class Inspiro_Typo_Headings_Config {
 					),
 				),
 				array(
-					'id'   => 'headings-font-weight',
+					'id'   => 'logo-font-size',
+					'args' => array(
+						'default'           => 26,
+						'transport'         => 'postMessage',
+						'sanitize_callback' => 'inspiro_sanitize_integer',
+					),
+				),
+				array(
+					'id'   => 'logo-font-weight',
 					'args' => array(
 						'default'           => '700',
 						'transport'         => 'postMessage',
@@ -65,55 +73,67 @@ class Inspiro_Typo_Headings_Config {
 					),
 				),
 				array(
-					'id'   => 'headings-text-transform',
+					'id'   => 'logo-text-transform',
 					'args' => array(
-						'default'           => 'inherit',
-						'transport'         => 'refresh',
+						'default'           => 'uppercase',
+						'transport'         => 'postMessage',
 						'sanitize_callback' => 'inspiro_sanitize_choices',
 					),
 				),
 				array(
-					'id'   => 'headings-line-height',
+					'id'   => 'logo-line-height',
 					'args' => array(
-						'default'           => 1.4,
-						'transport'         => 'refresh',
+						'default'           => 1.8,
+						'transport'         => 'postMessage',
 						'sanitize_callback' => 'inspiro_sanitize_float',
 					),
 				),
 			),
 			'control' => array(
 				array(
-					'id'   => 'headings-font-family',
+					'id'   => 'logo-font-family',
 					'args' => array(
 						'label'   => __( 'Font Family', 'inspiro' ),
-						'section' => 'inspiro_typography_section_headings',
-						'connect' => 'headings-font-weight',
-						'variant' => 'headings-font-variant',
+						'section' => 'inspiro_typography_section_logo',
+						'connect' => 'logo-font-weight',
+						'variant' => 'logo-font-variant',
 					),
 				),
 				array(
-					'id'   => 'headings-font-variant',
+					'id'   => 'logo-font-variant',
 					'args' => array(
 						'label'       => __( 'Variants', 'inspiro' ),
 						'description' => __( 'Only selected Font Variants will be loaded from Google Fonts.', 'inspiro' ),
-						'section'     => 'inspiro_typography_section_headings',
-						'connect'     => 'headings-font-family',
+						'section'     => 'inspiro_typography_section_logo',
+						'connect'     => 'logo-font-family',
 					),
 				),
 				array(
-					'id'   => 'headings-font-weight',
+					'id'   => 'logo-font-size',
+					'args' => array(
+						'label'       => __( 'Font Size (px)', 'inspiro' ),
+						'section'     => 'inspiro_typography_section_logo',
+						'input_attrs' => array(
+							'min'  => 12,
+							'max'  => 42,
+							'step' => 1,
+						),
+					),
+				),
+				array(
+					'id'   => 'logo-font-weight',
 					'args' => array(
 						'label'   => __( 'Font Weight', 'inspiro' ),
-						'section' => 'inspiro_typography_section_headings',
+						'section' => 'inspiro_typography_section_logo',
 						'type'    => 'select',
 						'choices' => array(),
 					),
 				),
 				array(
-					'id'   => 'headings-text-transform',
+					'id'   => 'logo-text-transform',
 					'args' => array(
 						'label'   => __( 'Text Transform', 'inspiro' ),
-						'section' => 'inspiro_typography_section_headings',
+						'section' => 'inspiro_typography_section_logo',
 						'type'    => 'select',
 						'choices' => array(
 							''           => _x( 'Inherit', 'text transform', 'inspiro' ),
@@ -125,13 +145,13 @@ class Inspiro_Typo_Headings_Config {
 					),
 				),
 				array(
-					'id'   => 'headings-line-height',
+					'id'   => 'logo-line-height',
 					'args' => array(
 						'label'       => __( 'Line Height', 'inspiro' ),
-						'section'     => 'inspiro_typography_section_headings',
+						'section'     => 'inspiro_typography_section_logo',
 						'input_attrs' => array(
 							'min'  => 1,
-							'max'  => 2,
+							'max'  => 2.2,
 							'step' => 0.1,
 						),
 					),
@@ -185,17 +205,20 @@ class Inspiro_Typo_Headings_Config {
 			$configs['setting'][2]['args']
 		);
 
-		$configs['control'][2]['args']['choices'] = Inspiro_Font_Family_Manager::get_font_family_weight( 'headings-font-family', $wp_customize );
-
 		$wp_customize->add_control(
-			$configs['control'][2]['id'],
-			$configs['control'][2]['args']
+			new Inspiro_Customize_Range_Control(
+				$wp_customize,
+				$configs['control'][2]['id'],
+				$configs['control'][2]['args']
+			)
 		);
 
 		$wp_customize->add_setting(
 			$configs['setting'][3]['id'],
 			$configs['setting'][3]['args']
 		);
+
+		$configs['control'][3]['args']['choices'] = Inspiro_Font_Family_Manager::get_font_family_weight( 'logo-font-family', $wp_customize );
 
 		$wp_customize->add_control(
 			$configs['control'][3]['id'],
@@ -208,13 +231,23 @@ class Inspiro_Typo_Headings_Config {
 		);
 
 		$wp_customize->add_control(
+			$configs['control'][4]['id'],
+			$configs['control'][4]['args']
+		);
+
+		$wp_customize->add_setting(
+			$configs['setting'][5]['id'],
+			$configs['setting'][5]['args']
+		);
+
+		$wp_customize->add_control(
 			new Inspiro_Customize_Range_Control(
 				$wp_customize,
-				$configs['control'][4]['id'],
-				$configs['control'][4]['args']
+				$configs['control'][5]['id'],
+				$configs['control'][5]['args']
 			)
 		);
 	}
 }
 
-new Inspiro_Typo_Headings_Config();
+new Inspiro_Typo_Logo_Config();

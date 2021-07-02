@@ -12,10 +12,10 @@
 <div class="site-branding">
 	<div class="inner-wrap">
 		<?php
-			$site_title       = get_theme_mod( 'header_site_title', get_bloginfo( 'name' ) );
-			$description      = get_theme_mod( 'header_site_description', get_bloginfo( 'description' ) );
-			$button_url       = get_theme_mod( 'header_button_url', get_home_url() );
-			$button_link_open = get_theme_mod( 'header_button_link_open', true );
+			$site_title       = inspiro_get_theme_mod( 'header_site_title' );
+			$description      = inspiro_get_theme_mod( 'header_site_description' );
+			$button_url       = inspiro_get_theme_mod( 'header_button_url' );
+			$button_link_open = inspiro_get_theme_mod( 'header_button_link_open' );
 			$button_target    = $button_link_open ? '_blank' : '_self';
 		?>
 

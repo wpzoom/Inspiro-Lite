@@ -80,7 +80,7 @@ body.colors-dark {
         border-color: #555;
     }
 
-    .button,
+    .button:not(.custom-header-button),
     .btn,
     .more-link,
     .more_link,
@@ -88,10 +88,7 @@ body.colors-dark {
     div.wpforms-container-full .wpforms-form input[type=submit],
     div.wpforms-container-full .wpforms-form button[type=submit],
     div.wpforms-container-full .wpforms-form .wpforms-page-button,
-    button,
-    input[type=button],
-    input[type=reset],
-    input[type=submit] {
+	.form-submit #submit {
         color: #eee;
         border-color: #555;
     }

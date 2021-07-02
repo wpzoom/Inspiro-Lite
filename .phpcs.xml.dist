@@ -58,6 +58,8 @@
 		<properties>
 			<property name="customAutoEscapedFunctions" type="array">
 				<element value="inspiro_get_theme_svg"/>
+				<element value="inspiro_get_theme_mod"/>
+				<element value="maybe_hash_hex_color"/>
 			</property>
 		</properties>
 	</rule>

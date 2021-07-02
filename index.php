@@ -61,7 +61,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-	<?php if ( 'side-right' === get_theme_mod( 'layout_blog_page', 'full' ) && is_active_sidebar( 'blog-sidebar' ) ) : ?>
+	<?php if ( 'side-right' === inspiro_get_theme_mod( 'layout_blog_page' ) && is_active_sidebar( 'blog-sidebar' ) ) : ?>
 		<aside id="secondary" class="widget-area" role="complementary">
 			<?php dynamic_sidebar( 'blog-sidebar' ); ?>
 		</aside>

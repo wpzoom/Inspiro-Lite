@@ -76,56 +76,56 @@ if ( ! class_exists( 'Inspiro_Fonts_Manager' ) ) {
 			 * Body
 			 */
 
-			$body_font_family   = get_theme_mod( 'body-font-family', "'Inter', sans-serif" );
-			$body_font_variants = get_theme_mod( 'body-font-variant', '400' );
+			$body_font_family   = inspiro_get_theme_mod( 'body-font-family' );
+			$body_font_variants = inspiro_get_theme_mod( 'body-font-variant' );
 			self::add_font( $body_font_family, $body_font_variants );
 
 			/**
 			 * Headings
 			 */
 
-			$headings_font_family   = get_theme_mod( 'headings-font-family', "'Inter', sans-serif" );
-			$headings_font_variants = get_theme_mod( 'headings-font-variant', '700' );
+			$headings_font_family   = inspiro_get_theme_mod( 'headings-font-family' );
+			$headings_font_variants = inspiro_get_theme_mod( 'headings-font-variant' );
 			self::add_font( $headings_font_family, $headings_font_variants );
 
 			/**
 			 * Hero Header Title
 			 */
 
-			$hero_header_title_font_family   = get_theme_mod( 'slider-title-font-family', "'Inter', sans-serif" );
-			$hero_header_title_font_variants = get_theme_mod( 'slider-title-font-variant', '700' );
+			$hero_header_title_font_family   = inspiro_get_theme_mod( 'slider-title-font-family' );
+			$hero_header_title_font_variants = inspiro_get_theme_mod( 'slider-title-font-variant' );
 			self::add_font( $hero_header_title_font_family, $hero_header_title_font_variants );
 
 			/**
 			 * Hero Header Description
 			 */
 
-			$hero_header_desc_font_family   = get_theme_mod( 'slider-text-font-family', "'Inter', sans-serif" );
-			$hero_header_desc_font_variants = get_theme_mod( 'slider-text-font-variant', 'inherit' );
+			$hero_header_desc_font_family   = inspiro_get_theme_mod( 'slider-text-font-family' );
+			$hero_header_desc_font_variants = inspiro_get_theme_mod( 'slider-text-font-variant' );
 			self::add_font( $hero_header_desc_font_family, $hero_header_desc_font_variants );
 
 			/**
 			 * Hero Header Button
 			 */
 
-			$hero_header_button_font_family   = get_theme_mod( 'slider-button-font-family', "'Inter', sans-serif" );
-			$hero_header_button_font_variants = get_theme_mod( 'slider-button-font-variant', 'inherit' );
+			$hero_header_button_font_family   = inspiro_get_theme_mod( 'slider-button-font-family' );
+			$hero_header_button_font_variants = inspiro_get_theme_mod( 'slider-button-font-variant' );
 			self::add_font( $hero_header_button_font_family, $hero_header_button_font_variants );
 
 			/**
 			 * Main Menu
 			 */
 
-			$mainmenu_font_family   = get_theme_mod( 'mainmenu-font-family', "'Montserrat', sans-serif" );
-			$mainmenu_font_variants = get_theme_mod( 'mainmenu-font-variant', '500' );
+			$mainmenu_font_family   = inspiro_get_theme_mod( 'mainmenu-font-family' );
+			$mainmenu_font_variants = inspiro_get_theme_mod( 'mainmenu-font-variant' );
 			self::add_font( $mainmenu_font_family, $mainmenu_font_variants );
 
 			/**
 			 * Mobile Menu
 			 */
 
-			$mobilemenu_font_family   = get_theme_mod( 'mobilemenu-font-family', "'Montserrat', sans-serif" );
-			$mobilemenu_font_variants = get_theme_mod( 'mobilemenu-font-variant', '600' );
+			$mobilemenu_font_family   = inspiro_get_theme_mod( 'mobilemenu-font-family' );
+			$mobilemenu_font_variants = inspiro_get_theme_mod( 'mobilemenu-font-variant' );
 			self::add_font( $mobilemenu_font_family, $mobilemenu_font_variants );
 
 			/**

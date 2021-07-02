@@ -36,11 +36,11 @@ add_filter( 'inspiro/dynamic_theme_css', 'inspiro_dynamic_theme_css_mobilemenu' 
  * @return string Generated dynamic CSS for Mobile Menu.
  */
 function inspiro_dynamic_theme_css_mobilemenu( $dynamic_css ) {
-	$mobilemenu_font_family    = get_theme_mod( 'mobilemenu-font-family', "'Montserrat', sans-serif" );
-	$mobilemenu_font_size      = get_theme_mod( 'mobilemenu-font-size', '16' );
-	$mobilemenu_font_weight    = get_theme_mod( 'mobilemenu-font-weight', '600' );
-	$mobilemenu_text_transform = get_theme_mod( 'mobilemenu-text-transform', 'uppercase' );
-	$mobilemenu_line_height    = get_theme_mod( 'mobilemenu-line-height', '1.8' );
+	$mobilemenu_font_family    = inspiro_get_theme_mod( 'mobilemenu-font-family' );
+	$mobilemenu_font_size      = inspiro_get_theme_mod( 'mobilemenu-font-size' );
+	$mobilemenu_font_weight    = inspiro_get_theme_mod( 'mobilemenu-font-weight' );
+	$mobilemenu_text_transform = inspiro_get_theme_mod( 'mobilemenu-text-transform' );
+	$mobilemenu_line_height    = inspiro_get_theme_mod( 'mobilemenu-line-height' );
 
 	$selectors   = apply_filters( 'inspiro/dynamic_theme_css/selectors', array() );
 	$selector    = inspiro_get_prop( $selectors, 'typo-mobilemenu' );
@@ -51,7 +51,7 @@ function inspiro_dynamic_theme_css_mobilemenu( $dynamic_css ) {
 	if ( ! empty( $mobilemenu_font_family ) && 'inherit' !== $mobilemenu_font_family ) {
 		$dynamic_css .= "font-family: {$mobilemenu_font_family};\n";
 	}
-	if ( absint( $mobilemenu_font_size ) >= 12 && absint( $mobilemenu_font_size ) <= 20 ) {
+	if ( absint( $mobilemenu_font_size ) >= 12 && absint( $mobilemenu_font_size ) <= 22 ) {
 		$dynamic_css .= "font-size: {$mobilemenu_font_size}px;\n";
 	}
 	if ( ! empty( $mobilemenu_font_weight ) && 'inherit' !== $mobilemenu_font_weight ) {

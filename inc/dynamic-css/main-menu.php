@@ -36,11 +36,11 @@ add_filter( 'inspiro/dynamic_theme_css', 'inspiro_dynamic_theme_css_mainmenu' );
  * @return string Generated dynamic CSS for Main Menu.
  */
 function inspiro_dynamic_theme_css_mainmenu( $dynamic_css ) {
-	$mainmenu_font_family    = get_theme_mod( 'mainmenu-font-family', "'Montserrat', sans-serif" );
-	$mainmenu_font_size      = get_theme_mod( 'mainmenu-font-size', '16' );
-	$mainmenu_font_weight    = get_theme_mod( 'mainmenu-font-weight', '500' );
-	$mainmenu_text_transform = get_theme_mod( 'mainmenu-text-transform', '' );
-	$mainmenu_line_height    = get_theme_mod( 'mainmenu-line-height', '1.8' );
+	$mainmenu_font_family    = inspiro_get_theme_mod( 'mainmenu-font-family' );
+	$mainmenu_font_size      = inspiro_get_theme_mod( 'mainmenu-font-size' );
+	$mainmenu_font_weight    = inspiro_get_theme_mod( 'mainmenu-font-weight' );
+	$mainmenu_text_transform = inspiro_get_theme_mod( 'mainmenu-text-transform' );
+	$mainmenu_line_height    = inspiro_get_theme_mod( 'mainmenu-line-height' );
 
 	$selectors   = apply_filters( 'inspiro/dynamic_theme_css/selectors', array() );
 	$selector    = inspiro_get_prop( $selectors, 'typo-mainmenu' );
@@ -63,7 +63,7 @@ function inspiro_dynamic_theme_css_mainmenu( $dynamic_css ) {
 
 	$dynamic_css .= "{$media_query} {\n";
 	$dynamic_css .= "{$selector} {\n";
-	if ( absint( $mainmenu_font_size ) >= 12 && absint( $mainmenu_font_size ) <= 20 ) {
+	if ( absint( $mainmenu_font_size ) >= 12 && absint( $mainmenu_font_size ) <= 32 ) {
 		$dynamic_css .= "font-size: {$mainmenu_font_size}px;\n";
 	}
 	$dynamic_css .= "} }\n";

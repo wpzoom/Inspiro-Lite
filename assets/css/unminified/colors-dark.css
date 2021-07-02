@@ -83,7 +83,7 @@ body.colors-dark.page-layout-sidebar-right.has-sidebar #secondary {
     border-color: #555;
 }
 
-body.colors-dark .button,
+body.colors-dark .button:not(.custom-header-button),
 body.colors-dark .btn,
 body.colors-dark .more-link,
 body.colors-dark .more_link,
@@ -91,10 +91,7 @@ body.colors-dark .side-nav .search-form .search-submit,
 body.colors-dark div.wpforms-container-full .wpforms-form input[type=submit],
 body.colors-dark div.wpforms-container-full .wpforms-form button[type=submit],
 body.colors-dark div.wpforms-container-full .wpforms-form .wpforms-page-button,
-body.colors-dark button,
-body.colors-dark input[type=button],
-body.colors-dark input[type=reset],
-body.colors-dark input[type=submit] {
+body.colors-dark .form-submit #submit {
     color: #eee;
     border-color: #555;
 }

@@ -8,7 +8,7 @@
  * @version 1.0.0
  */
 
-$inspiro_widgets_columns = get_theme_mod( 'footer-widget-areas', 3 );
+$inspiro_widgets_columns = inspiro_get_theme_mod( 'footer-widget-areas' );
 
 if ( $inspiro_widgets_columns <= 0 ) {
 	return;

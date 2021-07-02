@@ -72,9 +72,9 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 	 */
 	function inspiro_header_style() {
 		$header_text_color              = get_header_textcolor();
-		$header_button_text_color       = get_theme_mod( 'header_button_textcolor', 'ffffff' );
-		$header_button_text_color_hover = get_theme_mod( 'header_button_textcolor_hover', 'ffffff' );
-		$header_button_bg_color_hover   = get_theme_mod( 'header_button_bgcolor_hover', '0bb4aa' );
+		$header_button_text_color       = inspiro_get_theme_mod( 'header_button_textcolor' );
+		$header_button_text_color_hover = inspiro_get_theme_mod( 'header_button_textcolor_hover' );
+		$header_button_bg_color_hover   = inspiro_get_theme_mod( 'header_button_bgcolor_hover' );
 		?>
 		<style id="inspiro-custom-header-styles" type="text/css">
 		<?php
@@ -108,27 +108,27 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 			body.has-header-video.colors-dark .site-description,
 			body.has-header-image.colors-custom .site-description,
 			body.has-header-video.colors-custom .site-description {
-				color: #<?php echo esc_attr( $header_text_color ); ?>;
+				color: <?php echo maybe_hash_hex_color( $header_text_color ); ?>;
 			}
 		<?php endif; ?>
 
 		<?php if ( 'blank' !== $header_button_text_color ) : ?>
 			.custom-header-button {
-				color: #<?php echo esc_attr( $header_button_text_color ); ?>;
-				border-color: #<?php echo esc_attr( $header_button_text_color ); ?>;
+				color: <?php echo maybe_hash_hex_color( $header_button_text_color ); ?>;
+				border-color: <?php echo maybe_hash_hex_color( $header_button_text_color ); ?>;
 			}
 		<?php endif; ?>
 
 		<?php if ( 'blank' !== $header_button_text_color_hover ) : ?>
 			.custom-header-button:hover {
-				color: #<?php echo esc_attr( $header_button_text_color_hover ); ?>;
+				color: <?php echo maybe_hash_hex_color( $header_button_text_color_hover ); ?>;
 			}
 		<?php endif; ?>
 
 		<?php if ( 'blank' !== $header_button_bg_color_hover ) : ?>
 			.custom-header-button:hover {
-				background-color: #<?php echo esc_attr( $header_button_bg_color_hover ); ?>;
-				border-color: #<?php echo esc_attr( $header_button_bg_color_hover ); ?>;
+				background-color: <?php echo maybe_hash_hex_color( $header_button_bg_color_hover ); ?>;
+				border-color: <?php echo maybe_hash_hex_color( $header_button_bg_color_hover ); ?>;
 			}
 		<?php endif; ?>
 		</style>

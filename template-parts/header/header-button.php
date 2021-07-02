@@ -11,9 +11,9 @@
 ?>
 <div class="custom-header-button-wrapper">
 	<?php
-		$button_title     = get_theme_mod( 'header_button_title', '' );
-		$button_url       = get_theme_mod( 'header_button_url', get_home_url() );
-		$button_link_open = get_theme_mod( 'header_button_link_open', true );
+		$button_title     = inspiro_get_theme_mod( 'header_button_title' );
+		$button_url       = inspiro_get_theme_mod( 'header_button_url' );
+		$button_link_open = inspiro_get_theme_mod( 'header_button_link_open' );
 		$button_target    = $button_link_open ? '_blank' : '_self';
 		$button_display   = 'none';
 

@@ -79,9 +79,9 @@ function inspiro_display_theme_page() {
 				printf( esc_html__( 'Get Started with %s', 'inspiro' ), 'Inspiro Lite' );
 				?>
 			</h3>
-			<div class="wpz-row wpz-clearfix">
-				<div class="wpz-col-1-2">
-					<div class="section">
+			<div class="wpz-grid-wrap">
+				<div class="section">
+					<div class="inner-section">
 						<h4>
 							<span class="dashicons dashicons-editor-help"></span>
 							<?php esc_html_e( 'Theme Documentation', 'inspiro' ); ?>
@@ -101,9 +101,25 @@ function inspiro_display_theme_page() {
 							</a>
 						</p>
 					</div>
-
-					<hr /><br/>
-					<div class="section">
+				</div>
+				<div class="section">
+					<div class="inner-section">
+						<h4>
+							<span class="dashicons dashicons-cart"></span>
+							<?php esc_html_e( 'Inspiro Premium (PRO)', 'inspiro' ); ?>
+						</h4>
+						<p class="about">
+							<?php esc_html_e( 'If you like the free version of this theme, you will LOVE the full version of Inspiro which includes numerous video features, portfolio integration, additional features and more useful options to customize your website.', 'inspiro' ); ?>
+						</p>
+						<p>
+							<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/', 'inspiro' ) ); ?>" target="_blank" class="button button-primary">
+								<?php esc_html_e( 'Upgrade to Inspiro PRO &rarr;', 'inspiro' ); ?>
+							</a>
+						</p>
+					</div>
+				</div>
+				<div class="section">
+					<div class="inner-section">
 						<h4>
 							<span class="dashicons dashicons-admin-plugins"></span>
 							<?php esc_html_e( 'Recommended Plugins', 'inspiro' ); ?>
@@ -118,22 +134,8 @@ function inspiro_display_theme_page() {
 						</p>
 					</div>
 				</div>
-				<div class="wpz-col-1-2">
-					<div class="section">
-						<h4>
-							<span class="dashicons dashicons-cart"></span>
-							<?php esc_html_e( 'Inspiro Premium (PRO)', 'inspiro' ); ?>
-						</h4>
-						<p class="about">
-							<?php esc_html_e( 'If you like the free version of this theme, you will LOVE the full version of Inspiro which includes numerous video features, portfolio integration, additional features and more useful options to customize your website.', 'inspiro' ); ?>
-						</p>
-						<p>
-							<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/', 'inspiro' ) ); ?>" target="_blank" class="button button-primary">
-								<?php esc_html_e( 'Upgrade to Inspiro PRO &rarr;', 'inspiro' ); ?>
-							</a>
-						</p>
-					</div><hr /><br/>
-					<div class="section">
+				<div class="section">
+					<div class="inner-section">
 						<h4>
 							<span class="dashicons dashicons-star-filled"></span>
 							<?php esc_html_e( 'Why Upgrade?', 'inspiro' ); ?>
@@ -148,6 +150,27 @@ function inspiro_display_theme_page() {
 						</p>
 					</div>
 				</div>
+				<?php if ( current_user_can( 'upload_themes' ) ) : ?>
+					<!-- <div class="section">
+						<div class="inner-section">
+							<h4>
+								<span class="dashicons dashicons-upload"></span>
+								<?php esc_html_e( 'Upload Inspiro Premium', 'inspiro' ); ?>
+							</h4>
+							<p class="about">
+								<?php esc_html_e( 'If you have a premium version of Inspiro theme in a .zip format, you may upgrade by uploading it here.', 'inspiro' ); ?>
+							</p>
+							<div class="upload-theme">
+								<form method="post" enctype="multipart/form-data" class="wp-upload-form" action="<?php echo self_admin_url( 'update.php?action=upload-theme&payload=about-inspiro' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>">
+									<?php wp_nonce_field( 'theme-upload' ); ?>
+									<label class="screen-reader-text" for="themezip"><?php esc_html_e( 'Theme zip file', 'inspiro' ); ?></label>
+									<input type="file" id="themezip" name="themezip" accept=".zip" />
+									<?php submit_button( __( 'Install Now', 'inspiro' ), '', 'install-theme-submit', false ); ?>
+								</form>
+							</div>
+						</div>
+					</div> -->
+				<?php endif; ?>
 			</div>
 		</div>
 		<hr>
@@ -242,17 +265,17 @@ function inspiro_display_theme_page() {
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e( '600+ Google Fonts', 'inspiro' ); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e( 'Typography Options', 'inspiro' ); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></span></td>
+						<td><span class="dashicons dashicons-yes"></span></td>
 						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e( 'Support', 'inspiro' ); ?></h3></td>
-						<td><?php esc_html_e( 'Support Forum', 'inspiro' ); ?></td>
+						<td><a href="https://wordpress.org/support/theme/inspiro/" target="_blank" title="<?php esc_attr_e( 'Open support forum in new tab', 'inspiro' ); ?>"><?php esc_html_e( 'Support Forum', 'inspiro' ); ?></a</td>
 						<td><?php esc_html_e( 'Fast & Friendly Email Support', 'inspiro' ); ?></td>
 					</tr>
 					<tr>
