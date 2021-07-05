@@ -36,7 +36,7 @@ if ( ! class_exists( 'Inspiro_Customizer_Control_Base' ) ) {
 		/**
 		 * Registered Panels.
 		 *
-		 * @since x.x.x
+		 * @since 1.4.0
 		 * @var Array
 		 */
 		private static $panels;
@@ -44,7 +44,7 @@ if ( ! class_exists( 'Inspiro_Customizer_Control_Base' ) ) {
 		/**
 		 * Registered Sections.
 		 *
-		 * @since x.x.x
+		 * @since 1.4.0
 		 * @var Array
 		 */
 		private static $sections;
@@ -52,7 +52,7 @@ if ( ! class_exists( 'Inspiro_Customizer_Control_Base' ) ) {
 		/**
 		 * Registered Settings.
 		 *
-		 * @since x.x.x
+		 * @since 1.4.0
 		 * @var Array
 		 */
 		private static $settings;
@@ -146,7 +146,7 @@ if ( ! class_exists( 'Inspiro_Customizer_Control_Base' ) ) {
 		/**
 		 * Returns setting and its attributes
 		 *
-		 * @since x.x.x
+		 * @since 1.4.0
 		 * @param  string $setting_id Setting id.
 		 * @return array
 		 */
@@ -191,7 +191,7 @@ if ( ! class_exists( 'Inspiro_Customizer_Control_Base' ) ) {
 		/**
 		 * Register panels, sections, settings, controls.
 		 *
-		 * @since x.x.x
+		 * @since 1.4.0
 		 *
 		 * @param WP_Customize_Manager $wp_customize instance of WP_Customize_Manager.
 		 * @param array                $configs All customize controls configs.
@@ -221,7 +221,7 @@ if ( ! class_exists( 'Inspiro_Customizer_Control_Base' ) ) {
 		/**
 		 * Register Customizer panel.
 		 *
-		 * @since x.x.x
+		 * @since 1.4.0
 		 *
 		 * @param WP_Customize_Manager $wp_customize instance of WP_Customize_Manager.
 		 * @param string               $panel_id Panel id.
@@ -245,7 +245,7 @@ if ( ! class_exists( 'Inspiro_Customizer_Control_Base' ) ) {
 		/**
 		 * Register Customizer section.
 		 *
-		 * @since x.x.x
+		 * @since 1.4.0
 		 *
 		 * @param WP_Customize_Manager $wp_customize instance of WP_Customize_Manager.
 		 * @param string               $section_id Section id.
