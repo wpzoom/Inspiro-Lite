@@ -191,45 +191,6 @@ function inspiro_sanitize_float( $value ) {
 }
 
 /**
- * Processes a json file and returns an array with its contents.
- *
- * @param string $file_path Path to file.
- * @see gutenberg_experimental_global_styles_get_from_file()
- * @see wp_filesystem()
- * @see get_parent_theme_file_path()
- */
-function inspiro_get_data_from_file( $file_path ) {
-	global $wp_filesystem;
-
-	require_once ABSPATH . '/wp-admin/includes/file.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
-	WP_Filesystem();
-
-	$local_file = get_parent_theme_file_path( $file_path );
-	$content    = '';
-	$config     = array();
-
-	if ( $wp_filesystem->exists( $local_file ) ) {
-		$content = json_decode( $wp_filesystem->get_contents( $local_file ) );
-
-		$decoded_file = json_decode(
-			$content,
-			true
-		);
-
-		$json_decoding_error = json_last_error(); // phpcs:ignore PHPCompatibility.FunctionUse.NewFunctions.json_last_errorFound
-		if ( JSON_ERROR_NONE !== $json_decoding_error ) { // phpcs:ignore PHPCompatibility.Constants.NewConstants.json_error_noneFound
-			return $config;
-		}
-
-		if ( is_array( $decoded_file ) ) {
-			$config = $decoded_file;
-		}
-	}
-
-	return $config;
-}
-
-/**
  * Retrieves theme modification value.
  *
  * @since 1.4.0
