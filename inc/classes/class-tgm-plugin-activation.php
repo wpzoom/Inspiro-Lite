@@ -259,6 +259,8 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			// Announce that the class is ready, and pass the object (for advanced use).
 			do_action_ref_array( 'tgmpa_init', array( $this ) );
 
+
+
 			// When the rest of WP has loaded, kick-start the rest of the class.
 			add_action( 'init', array( $this, 'init' ) );
 		}
@@ -715,7 +717,6 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 			// Was an install or upgrade action link clicked?
 			if ( ( isset( $_GET['tgmpa-install'] ) && 'install-plugin' === $_GET['tgmpa-install'] ) || ( isset( $_GET['tgmpa-update'] ) && 'update-plugin' === $_GET['tgmpa-update'] ) ) {
-
 				$install_type = 'install';
 				if ( isset( $_GET['tgmpa-update'] ) && 'update-plugin' === $_GET['tgmpa-update'] ) {
 					$install_type = 'update';
@@ -935,7 +936,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 							array(
 								'found'    => $subdir_name,
 								'expected' => $desired_slug,
-							)
+							) 
 						);
 					}
 				} elseif ( empty( $subdir_name ) ) {
@@ -945,7 +946,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 						array(
 							'found'    => $subdir_name,
 							'expected' => $desired_slug,
-						)
+						) 
 					);
 				}
 			}
@@ -1080,7 +1081,6 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 					}
 
 					if ( $this->does_plugin_require_update( $slug ) || false !== $this->does_plugin_have_update( $slug ) ) {
-
 						if ( current_user_can( 'update_plugins' ) ) {
 							$update_link_count++;
 
@@ -1140,7 +1140,6 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 								$count
 							)
 						);
-
 					}
 					unset( $type, $plugin_group, $linked_plugins, $count, $last_plugin, $imploded );
 
@@ -1572,7 +1571,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 					array(
 						'slug'   => $slug,
 						'fields' => array( 'sections' => false ),
-					)
+					) 
 				);
 
 				$api[ $slug ] = false;
@@ -2343,10 +2342,8 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
 			if ( $this->tgmpa->does_plugin_require_update( $slug ) && false === $this->tgmpa->does_plugin_have_update( $slug ) ) {
 				$update_status = __( 'Required Update not Available', 'inspiro' );
-
 			} elseif ( $this->tgmpa->does_plugin_require_update( $slug ) ) {
 				$update_status = __( 'Requires Update', 'inspiro' );
-
 			} elseif ( false !== $this->tgmpa->does_plugin_have_update( $slug ) ) {
 				$update_status = __( 'Update recommended', 'inspiro' );
 			}
@@ -2423,7 +2420,6 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				}
 
 				if ( ! empty( $text ) ) {
-
 					$status_links[ $type ] = sprintf(
 						'<a href="%s"%s>%s</a>',
 						esc_url( $this->tgmpa->get_tgmpa_status_url( $type ) ),
@@ -2727,7 +2723,6 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 * @return array $actions The bulk actions for the plugin install table.
 		 */
 		public function get_bulk_actions() {
-
 			$actions = array();
 
 			if ( 'update' !== $this->view_context && 'activate' !== $this->view_context ) {
@@ -2759,7 +2754,6 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		public function process_bulk_actions() {
 			// Bulk installation process.
 			if ( 'tgmpa-bulk-install' === $this->current_action() || 'tgmpa-bulk-update' === $this->current_action() ) {
-
 				check_admin_referer( 'bulk-' . $this->_args['plural'] );
 
 				$install_type = 'install';
@@ -2866,7 +2860,6 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 						$names[] = $name;
 
 						switch ( $install_type ) {
-
 							case 'install':
 								$sources[] = $source;
 								break;
@@ -3340,7 +3333,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 								'type'    => 'plugin',
 								'bulk'    => true,
 								'plugins' => $plugins,
-							)
+							) 
 						);
 
 						$this->skin->bulk_footer();
@@ -3371,7 +3364,6 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 					 * @return string|bool Install confirmation messages on success, false on failure.
 					 */
 					public function bulk_upgrade( $plugins, $args = array() ) {
-
 						add_filter( 'upgrader_post_install', array( $this, 'auto_activate' ), 10 );
 
 						$result = parent::bulk_upgrade( $plugins, $args );

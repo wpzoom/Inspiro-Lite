@@ -445,15 +445,17 @@ class Inspiro_Theme_Upgrader {
 	 * @return void
 	 */
 	public function set_slide_thumbnail( $image_url, $parent_post_id ) {
-		require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-base.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
-		require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-direct.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+		global $wp_filesystem;
 
-		if ( ! WP_Filesystem_Direct::exists( $image_url ) ) {
+		require_once ABSPATH . '/wp-admin/includes/file.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+		WP_Filesystem();
+
+		if ( ! $wp_filesystem->exists( $image_url ) ) {
 			return;
 		}
 
 		// Get image data.
-		$image_data = WP_Filesystem_Direct::get_contents( $image_url );
+		$image_data = $wp_filesystem->get_contents( $image_url );
 
 		$filename = basename( $image_url );
 
