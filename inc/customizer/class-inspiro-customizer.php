@@ -52,7 +52,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		 * Constructor
 		 */
 		public function __construct() {
-			add_action( 'inspiro/configuration-files-loaded', array( $this, 'store_customizer_data' ) );
+			add_action( 'admin_init', array( $this, 'store_customizer_data' ) );
 
 			add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
 
@@ -286,17 +286,22 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		 * Store customizer data to static class variable
 		 *
 		 * @since 1.4.0
-		 *
-		 * @param array $config_class_names All configuration class names.
 		 * @return array Array of customizer data.
 		 */
-		public function store_customizer_data( $config_class_names ) {
-			if ( ! is_array( $config_class_names ) || empty( $config_class_names ) ) {
+		public function store_customizer_data() {
+			global $wp_customize;
+
+			// Only the execution of the action 'inspiro/configuration-files-loaded' is not fired.
+			if ( 0 === did_action( 'inspiro/configuration-files-loaded' ) ) {
+				$this->autoload_configuration_files( $wp_customize );
+			}
+
+			if ( ! is_array( $this->config_class_names ) || empty( $this->config_class_names ) ) {
 				return;
 			}
 
-			foreach ( $config_class_names as $class_name => $configs ) {
-				$setting = inspiro_get_prop( $configs, 'setting' );
+			foreach ( $this->config_class_names as $class_name => $configs ) {
+				$setting = isset( $configs->setting ) ? $configs->setting : false;
 
 				if ( ! $setting ) {
 					continue;
@@ -305,13 +310,12 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 				$setting_id   = inspiro_get_prop( $setting, 'id' );
 				$setting_args = inspiro_get_prop( $setting, 'args' );
 
-				$this->set_customizer_data( $setting_id, $setting_args );
-
-				if ( ! $setting_id || ! $setting_args ) {
+				if ( $setting_id && $setting_args ) {
+					$this->set_customizer_data( $setting_id, $setting_args );
+				} else {
 					foreach ( $setting as $_setting ) {
 						$setting_id   = inspiro_get_prop( $_setting, 'id' );
 						$setting_args = inspiro_get_prop( $_setting, 'args' );
-
 						$this->set_customizer_data( $setting_id, $setting_args );
 					}
 				}
