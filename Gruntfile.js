@@ -322,12 +322,12 @@ module.exports = function ( grunt ) {
 					'!composer.lock',
 					'!phpcs.xml.dist',
 				],
-				dest: '<%= pkg.name %>/',
+				dest: '<%= pkg._project.slug %>/',
 			},
 		},
 
 		clean: {
-			main: [ '<%= pkg.name %>' ],
+			main: [ '<%= pkg._project.slug %>' ],
 			zip: [ '*.zip' ],
 			minifiedJS: [
 				'assets/js/minified/*',
@@ -347,7 +347,7 @@ module.exports = function ( grunt ) {
 				},
 				files: [
 					{
-						src: [ './<%= pkg.name %>/**' ],
+						src: [ './<%= pkg._project.slug %>/**' ],
 					},
 				],
 			},
