@@ -52,7 +52,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 		 * Constructor
 		 */
 		public function __construct() {
-			add_action( 'admin_init', array( $this, 'store_customizer_data' ) );
+			add_action( 'init', array( $this, 'store_customizer_data' ), 1 );
 
 			add_action( 'customize_preview_init', array( $this, 'customize_preview_js' ) );
 
