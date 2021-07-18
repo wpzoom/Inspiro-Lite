@@ -71,6 +71,7 @@ require INSPIRO_THEME_DIR . 'inc/template-functions.php';
 require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-font-family-manager.php';
 require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-fonts-manager.php';
 require INSPIRO_THEME_DIR . 'inc/customizer-functions.php';
+require INSPIRO_THEME_DIR . 'inc/customizer/class-inspiro-customizer-control-base.php';
 require INSPIRO_THEME_DIR . 'inc/customizer/class-inspiro-customizer.php';
 
 /**

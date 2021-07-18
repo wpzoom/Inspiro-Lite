@@ -18,13 +18,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class Inspiro_Color_Scheme_Config {
 	/**
-	 * Constructor
-	 */
-	public function __construct() {
-		add_action( 'inspiro/customize_register', array( $this, 'register_configuration' ) );
-	}
-
-	/**
 	 * Configurations
 	 *
 	 * @since 1.4.0 Store configurations to class method.
@@ -66,8 +59,9 @@ class Inspiro_Color_Scheme_Config {
 					),
 				),
 				array(
-					'id'   => 'colorscheme_hex',
-					'args' => array(
+					'id'           => 'colorscheme_hex',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
 						'section'  => 'colors',
 						'priority' => 6,
 					),
@@ -75,39 +69,4 @@ class Inspiro_Color_Scheme_Config {
 			),
 		);
 	}
-
-	/**
-	 * Register configurations
-	 *
-	 * @param WP_Customize_Manager $wp_customize instance of WP_Customize_Manager.
-	 * @return void
-	 */
-	public function register_configuration( $wp_customize ) {
-		$configs = self::config();
-
-		$wp_customize->add_setting(
-			$configs['setting'][0]['id'],
-			$configs['setting'][0]['args']
-		);
-
-		$wp_customize->add_setting(
-			$configs['setting'][1]['id'],
-			$configs['setting'][1]['args']
-		);
-
-		$wp_customize->add_control(
-			$configs['control'][0]['id'],
-			$configs['control'][0]['args']
-		);
-
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				$configs['control'][1]['id'],
-				$configs['control'][1]['args']
-			)
-		);
-	}
 }
-
-new Inspiro_Color_Scheme_Config();

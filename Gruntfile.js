@@ -322,12 +322,12 @@ module.exports = function ( grunt ) {
 					'!composer.lock',
 					'!phpcs.xml.dist',
 				],
-				dest: '<%= pkg.name %>/',
+				dest: '<%= pkg._project.slug %>/',
 			},
 		},
 
 		clean: {
-			main: [ '<%= pkg.name %>' ],
+			main: [ '<%= pkg._project.slug %>' ],
 			zip: [ '*.zip' ],
 			minifiedJS: [
 				'assets/js/minified/*',
@@ -347,7 +347,7 @@ module.exports = function ( grunt ) {
 				},
 				files: [
 					{
-						src: [ './<%= pkg.name %>/**' ],
+						src: [ './<%= pkg._project.slug %>/**' ],
 					},
 				],
 			},
@@ -595,9 +595,10 @@ module.exports = function ( grunt ) {
 		// eslint-disable-next-line import/no-extraneous-dependencies
 		const request = require( 'request' );
 		const fs = require( 'fs' );
+		const env = grunt.file.readJSON( '.env/google-api.json' );
 
 		request(
-			'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyCjpo9bj5Y08pYGwheAu8rubIWB8fP3ALQ',
+			`https://www.googleapis.com/webfonts/v1/webfonts?key=${ env.googleAPI.key }`,
 			function ( error, response, body ) {
 				if ( response && response.statusCode === 200 ) {
 					const fonts = JSON.parse( body ).items.map( function (

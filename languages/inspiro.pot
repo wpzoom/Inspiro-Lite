@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Inspiro 1.3.4\n"
+"Project-Id-Version: Inspiro 1.4.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/inspiro-lite\n"
-"POT-Creation-Date: 2021-07-02 09:00:42+00:00\n"
+"POT-Creation-Date: 2021-07-05 15:38:32+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -142,7 +142,7 @@ msgid ""
 msgstr ""
 
 #: inc/classes/class-inspiro-after-setup-theme.php:102
-#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:96
+#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:92
 #: inc/starter-content.php:178
 msgid "Main Menu"
 msgstr ""
@@ -219,8 +219,8 @@ msgstr ""
 msgid "900 Italic"
 msgstr ""
 
-#: inc/classes/class-inspiro-font-family-manager.php:191
-#: inc/customizer/class-inspiro-customizer.php:377
+#: inc/classes/class-inspiro-font-family-manager.php:186
+#: inc/customizer/class-inspiro-customizer.php:384
 #: inc/customizer/custom-controls/font-variant/class-inspiro-customize-font-variant-control.php:88
 #: inc/customizer/custom-controls/typography/class-inspiro-customize-typography-control.php:104
 msgid "Inherit"
@@ -674,7 +674,7 @@ msgid ""
 msgstr ""
 
 #: inc/common-functions.php:82
-#: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:39
+#: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:32
 msgid "Blog Sidebar"
 msgstr ""
 
@@ -785,398 +785,398 @@ msgstr ""
 msgid "View Inspiro PRO"
 msgstr ""
 
-#: inc/customizer/class-inspiro-customizer.php:396
+#: inc/customizer/class-inspiro-customizer.php:403
 msgid "Default System Font"
 msgstr ""
 
-#: inc/customizer/class-inspiro-customizer.php:397
+#: inc/customizer/class-inspiro-customizer.php:404
 msgid "System Fonts"
 msgstr ""
 
-#: inc/customizer/configs/blog-post/class-inspiro-blog-post-panel-config.php:40
+#: inc/customizer/configs/blog-post/class-inspiro-blog-post-panel-config.php:33
 msgid "Blog Post Options"
 msgstr ""
 
-#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:38
+#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:31
 msgid "Post Options"
 msgstr ""
 
-#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:54
-#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:38
+#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:47
+#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:31
 msgid "Content"
 msgstr ""
 
-#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:58
+#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:51
 msgid "Excerpt"
 msgstr ""
 
-#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:59
+#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:52
 msgid "Full Content"
 msgstr ""
 
-#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:60
+#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:53
 msgid "None"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:58
+#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:51
 msgid "Color Scheme"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:60
+#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:53
 msgid "Light"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:61
+#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:54
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:62
+#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:55
 msgid "Custom"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-header-button-color-config.php:71
+#: inc/customizer/configs/colors/class-inspiro-header-button-color-config.php:65
 msgid "Header Button Text Color"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-header-button-color-config.php:78
+#: inc/customizer/configs/colors/class-inspiro-header-button-color-config.php:73
 msgid "Header Button Text Color Hover"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-header-button-color-config.php:85
+#: inc/customizer/configs/colors/class-inspiro-header-button-color-config.php:81
 msgid "Header Button Background Color Hover"
 msgstr ""
 
-#: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:38
+#: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:31
 #: template-parts/footer/footer-widgets.php:22
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:53
+#: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:46
 msgid "Number of Widget Areas"
 msgstr ""
 
-#: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:57
+#: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:50
 msgid "Don't display Widgets"
 msgstr ""
 
-#: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:58
+#: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:51
 msgid "One Column"
 msgstr ""
 
-#: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:59
+#: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:52
 msgid "Two Columns"
 msgstr ""
 
-#: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:60
+#: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:53
 msgid "Three Columns"
 msgstr ""
 
-#: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:61
+#: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:54
 msgid "Four Columns"
 msgstr ""
 
-#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:94
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:96
+#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:87
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:92
 msgid "Header Title"
 msgstr ""
 
-#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:95
+#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:88
 msgid "Enter a site title which appears in the header on front-page"
 msgstr ""
 
-#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:106
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:89
+#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:99
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:85
 msgid "Header Description"
 msgstr ""
 
-#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:107
+#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:100
 msgid "Enter a site description which appears in the header on front-page"
 msgstr ""
 
-#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:118
+#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:111
 msgid "Header Button Title"
 msgstr ""
 
-#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:119
+#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:112
 msgid "Enter a title for Header Button"
 msgstr ""
 
-#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:129
+#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:122
 msgid "Header Button URL"
 msgstr ""
 
-#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:130
+#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:123
 msgid "Enter a Button URL:"
 msgstr ""
 
-#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:140
+#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:133
 msgid "Open link on new tab"
 msgstr ""
 
-#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-media-config.php:38
+#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-media-config.php:31
 msgid "Media"
 msgstr ""
 
-#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-media-config.php:60
+#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-media-config.php:53
 msgid "External Header Video"
 msgstr ""
 
-#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-media-config.php:61
+#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-media-config.php:54
 msgid "Enter a YouTube or Vimeo URL:"
 msgstr ""
 
-#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-media-config.php:72
+#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-media-config.php:65
 msgid "Full Height Responsive"
 msgstr ""
 
-#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-media-config.php:73
+#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-media-config.php:66
 msgid ""
 "Make video iframe full height responsive to remove black borders from the "
 "top and bootom."
 msgstr ""
 
-#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-panel-config.php:39
+#: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-panel-config.php:32
 msgid "Homepage Media"
 msgstr ""
 
-#: inc/customizer/configs/logo/class-inspiro-custom-logo-text-config.php:47
+#: inc/customizer/configs/logo/class-inspiro-custom-logo-text-config.php:40
 msgid "Custom Logo Text"
 msgstr ""
 
-#: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:38
+#: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:31
 msgid "Theme Layout"
 msgstr ""
 
-#: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:39
+#: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:32
 msgid ""
 "If you want to display \"Sidebar on the right\", please make sure you have "
 "added some widgets to %s"
 msgstr ""
 
-#: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:66
+#: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:59
 msgid "Blog Layout"
 msgstr ""
 
-#: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:70
-#: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:83
+#: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:63
+#: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:76
 #: inc/customizer-functions.php:16
 msgid "Full width"
 msgstr ""
 
-#: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:71
-#: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:84
+#: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:64
+#: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:77
 #: inc/customizer-functions.php:17
 msgid "Sidebar on the right"
 msgstr ""
 
-#: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:79
+#: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:72
 msgid "Single Post Layout"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:38
+#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:33
 msgid "Body"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:96
-#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:88
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:97
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:97
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:104
-#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:96
-#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:104
-#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:97
+#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:92
+#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:84
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:94
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:94
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:101
+#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:92
+#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:101
+#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:94
 msgid "Font Family"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:105
-#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:97
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:106
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:106
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:113
-#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:105
-#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:113
-#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:106
+#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:102
+#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:94
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:104
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:104
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:111
+#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:102
+#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:111
+#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:104
 msgid "Variants"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:106
-#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:98
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:107
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:107
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:114
-#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:106
-#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:114
-#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:107
+#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:103
+#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:95
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:105
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:105
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:112
+#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:103
+#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:112
+#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:105
 msgid "Only selected Font Variants will be loaded from Google Fonts."
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:114
-#: inc/customizer/configs/typography/class-inspiro-typo-h1-config.php:60
-#: inc/customizer/configs/typography/class-inspiro-typo-h2-config.php:60
-#: inc/customizer/configs/typography/class-inspiro-typo-h3-config.php:60
-#: inc/customizer/configs/typography/class-inspiro-typo-h4-config.php:60
-#: inc/customizer/configs/typography/class-inspiro-typo-h5-config.php:60
-#: inc/customizer/configs/typography/class-inspiro-typo-h6-config.php:60
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:115
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:115
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:122
-#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:114
-#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:122
-#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:115
+#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:112
+#: inc/customizer/configs/typography/class-inspiro-typo-h1-config.php:53
+#: inc/customizer/configs/typography/class-inspiro-typo-h2-config.php:53
+#: inc/customizer/configs/typography/class-inspiro-typo-h3-config.php:53
+#: inc/customizer/configs/typography/class-inspiro-typo-h4-config.php:53
+#: inc/customizer/configs/typography/class-inspiro-typo-h5-config.php:53
+#: inc/customizer/configs/typography/class-inspiro-typo-h6-config.php:53
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:114
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:114
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:121
+#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:112
+#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:121
+#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:114
 msgid "Font Size (px)"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:126
-#: inc/customizer/configs/typography/class-inspiro-typo-h1-config.php:83
-#: inc/customizer/configs/typography/class-inspiro-typo-h2-config.php:83
-#: inc/customizer/configs/typography/class-inspiro-typo-h3-config.php:83
-#: inc/customizer/configs/typography/class-inspiro-typo-h4-config.php:83
-#: inc/customizer/configs/typography/class-inspiro-typo-h5-config.php:83
-#: inc/customizer/configs/typography/class-inspiro-typo-h6-config.php:83
-#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:106
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:127
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:127
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:134
-#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:126
-#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:134
-#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:127
+#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:124
+#: inc/customizer/configs/typography/class-inspiro-typo-h1-config.php:76
+#: inc/customizer/configs/typography/class-inspiro-typo-h2-config.php:76
+#: inc/customizer/configs/typography/class-inspiro-typo-h3-config.php:76
+#: inc/customizer/configs/typography/class-inspiro-typo-h4-config.php:76
+#: inc/customizer/configs/typography/class-inspiro-typo-h5-config.php:76
+#: inc/customizer/configs/typography/class-inspiro-typo-h6-config.php:76
+#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:103
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:126
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:126
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:133
+#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:124
+#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:133
+#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:126
 msgid "Font Weight"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:135
+#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:137
+#: inc/customizer/configs/typography/class-inspiro-typo-h1-config.php:95
+#: inc/customizer/configs/typography/class-inspiro-typo-h2-config.php:95
+#: inc/customizer/configs/typography/class-inspiro-typo-h3-config.php:95
+#: inc/customizer/configs/typography/class-inspiro-typo-h4-config.php:95
+#: inc/customizer/configs/typography/class-inspiro-typo-h5-config.php:95
+#: inc/customizer/configs/typography/class-inspiro-typo-h6-config.php:95
+#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:116
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:139
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:139
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:146
+#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:137
+#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:146
+#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:139
+msgid "Text Transform"
+msgstr ""
+
+#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:143
+#: inc/customizer/configs/typography/class-inspiro-typo-h1-config.php:101
+#: inc/customizer/configs/typography/class-inspiro-typo-h2-config.php:101
+#: inc/customizer/configs/typography/class-inspiro-typo-h3-config.php:101
+#: inc/customizer/configs/typography/class-inspiro-typo-h4-config.php:101
+#: inc/customizer/configs/typography/class-inspiro-typo-h5-config.php:101
+#: inc/customizer/configs/typography/class-inspiro-typo-h6-config.php:101
+#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:122
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:145
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:145
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:152
+#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:143
+#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:152
+#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:145
+msgid "Capitalize"
+msgstr ""
+
+#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:144
 #: inc/customizer/configs/typography/class-inspiro-typo-h1-config.php:102
 #: inc/customizer/configs/typography/class-inspiro-typo-h2-config.php:102
 #: inc/customizer/configs/typography/class-inspiro-typo-h3-config.php:102
 #: inc/customizer/configs/typography/class-inspiro-typo-h4-config.php:102
 #: inc/customizer/configs/typography/class-inspiro-typo-h5-config.php:102
 #: inc/customizer/configs/typography/class-inspiro-typo-h6-config.php:102
-#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:115
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:136
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:136
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:143
-#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:135
-#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:143
-#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:136
-msgid "Text Transform"
-msgstr ""
-
-#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:141
-#: inc/customizer/configs/typography/class-inspiro-typo-h1-config.php:108
-#: inc/customizer/configs/typography/class-inspiro-typo-h2-config.php:108
-#: inc/customizer/configs/typography/class-inspiro-typo-h3-config.php:108
-#: inc/customizer/configs/typography/class-inspiro-typo-h4-config.php:108
-#: inc/customizer/configs/typography/class-inspiro-typo-h5-config.php:108
-#: inc/customizer/configs/typography/class-inspiro-typo-h6-config.php:108
-#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:121
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:142
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:142
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:149
-#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:141
-#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:149
-#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:142
-msgid "Capitalize"
-msgstr ""
-
-#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:142
-#: inc/customizer/configs/typography/class-inspiro-typo-h1-config.php:109
-#: inc/customizer/configs/typography/class-inspiro-typo-h2-config.php:109
-#: inc/customizer/configs/typography/class-inspiro-typo-h3-config.php:109
-#: inc/customizer/configs/typography/class-inspiro-typo-h4-config.php:109
-#: inc/customizer/configs/typography/class-inspiro-typo-h5-config.php:109
-#: inc/customizer/configs/typography/class-inspiro-typo-h6-config.php:109
-#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:122
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:143
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:143
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:150
-#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:142
-#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:150
-#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:143
+#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:123
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:146
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:146
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:153
+#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:144
+#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:153
+#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:146
 msgid "Uppercase"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:143
-#: inc/customizer/configs/typography/class-inspiro-typo-h1-config.php:110
-#: inc/customizer/configs/typography/class-inspiro-typo-h2-config.php:110
-#: inc/customizer/configs/typography/class-inspiro-typo-h3-config.php:110
-#: inc/customizer/configs/typography/class-inspiro-typo-h4-config.php:110
-#: inc/customizer/configs/typography/class-inspiro-typo-h5-config.php:110
-#: inc/customizer/configs/typography/class-inspiro-typo-h6-config.php:110
-#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:123
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:144
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:144
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:151
-#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:143
-#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:151
-#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:144
+#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:145
+#: inc/customizer/configs/typography/class-inspiro-typo-h1-config.php:103
+#: inc/customizer/configs/typography/class-inspiro-typo-h2-config.php:103
+#: inc/customizer/configs/typography/class-inspiro-typo-h3-config.php:103
+#: inc/customizer/configs/typography/class-inspiro-typo-h4-config.php:103
+#: inc/customizer/configs/typography/class-inspiro-typo-h5-config.php:103
+#: inc/customizer/configs/typography/class-inspiro-typo-h6-config.php:103
+#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:124
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:147
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:147
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:154
+#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:145
+#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:154
+#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:147
 msgid "Lowercase"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:150
-#: inc/customizer/configs/typography/class-inspiro-typo-h1-config.php:129
-#: inc/customizer/configs/typography/class-inspiro-typo-h2-config.php:129
-#: inc/customizer/configs/typography/class-inspiro-typo-h3-config.php:129
-#: inc/customizer/configs/typography/class-inspiro-typo-h4-config.php:129
-#: inc/customizer/configs/typography/class-inspiro-typo-h5-config.php:129
-#: inc/customizer/configs/typography/class-inspiro-typo-h6-config.php:129
-#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:130
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:151
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:151
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:158
-#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:150
-#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:158
-#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:151
+#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:153
+#: inc/customizer/configs/typography/class-inspiro-typo-h1-config.php:122
+#: inc/customizer/configs/typography/class-inspiro-typo-h2-config.php:122
+#: inc/customizer/configs/typography/class-inspiro-typo-h3-config.php:122
+#: inc/customizer/configs/typography/class-inspiro-typo-h4-config.php:122
+#: inc/customizer/configs/typography/class-inspiro-typo-h5-config.php:122
+#: inc/customizer/configs/typography/class-inspiro-typo-h6-config.php:122
+#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:132
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:155
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:155
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:162
+#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:153
+#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:162
+#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:155
 msgid "Line Height"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-h1-config.php:39
+#: inc/customizer/configs/typography/class-inspiro-typo-h1-config.php:32
 msgid "Heading 1"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-h2-config.php:39
+#: inc/customizer/configs/typography/class-inspiro-typo-h2-config.php:32
 msgid "Heading 2"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-h3-config.php:39
+#: inc/customizer/configs/typography/class-inspiro-typo-h3-config.php:32
 msgid "Heading 3"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-h4-config.php:39
+#: inc/customizer/configs/typography/class-inspiro-typo-h4-config.php:32
 msgid "Heading 4"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-h5-config.php:39
+#: inc/customizer/configs/typography/class-inspiro-typo-h5-config.php:32
 msgid "Heading 5"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-h6-config.php:39
+#: inc/customizer/configs/typography/class-inspiro-typo-h6-config.php:32
 msgid "Heading 6"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:38
+#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:33
 msgid "Headings"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:89
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:85
 msgid "Header Button"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:38
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:33
 msgid "Homepage Hero Header"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:38
+#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:33
 msgid "Logo"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:38
+#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:33
 msgid "Menu"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:89
+#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:85
 msgid "Mobile Menu"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-panel-config.php:40
+#: inc/customizer/configs/typography/class-inspiro-typo-panel-config.php:33
 msgid "Typography"
 msgstr ""
 
@@ -1631,38 +1631,38 @@ msgctxt "Block pattern description"
 msgid "A call to action with a beautiful two-column gallery below."
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:139
-#: inc/customizer/configs/typography/class-inspiro-typo-h1-config.php:106
-#: inc/customizer/configs/typography/class-inspiro-typo-h2-config.php:106
-#: inc/customizer/configs/typography/class-inspiro-typo-h3-config.php:106
-#: inc/customizer/configs/typography/class-inspiro-typo-h4-config.php:106
-#: inc/customizer/configs/typography/class-inspiro-typo-h5-config.php:106
-#: inc/customizer/configs/typography/class-inspiro-typo-h6-config.php:106
-#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:119
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:140
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:140
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:147
-#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:139
-#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:147
-#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:140
+#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:141
+#: inc/customizer/configs/typography/class-inspiro-typo-h1-config.php:99
+#: inc/customizer/configs/typography/class-inspiro-typo-h2-config.php:99
+#: inc/customizer/configs/typography/class-inspiro-typo-h3-config.php:99
+#: inc/customizer/configs/typography/class-inspiro-typo-h4-config.php:99
+#: inc/customizer/configs/typography/class-inspiro-typo-h5-config.php:99
+#: inc/customizer/configs/typography/class-inspiro-typo-h6-config.php:99
+#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:120
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:143
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:143
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:150
+#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:141
+#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:150
+#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:143
 msgctxt "text transform"
 msgid "Inherit"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:140
-#: inc/customizer/configs/typography/class-inspiro-typo-h1-config.php:107
-#: inc/customizer/configs/typography/class-inspiro-typo-h2-config.php:107
-#: inc/customizer/configs/typography/class-inspiro-typo-h3-config.php:107
-#: inc/customizer/configs/typography/class-inspiro-typo-h4-config.php:107
-#: inc/customizer/configs/typography/class-inspiro-typo-h5-config.php:107
-#: inc/customizer/configs/typography/class-inspiro-typo-h6-config.php:107
-#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:120
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:141
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:141
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:148
-#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:140
-#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:148
-#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:141
+#: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:142
+#: inc/customizer/configs/typography/class-inspiro-typo-h1-config.php:100
+#: inc/customizer/configs/typography/class-inspiro-typo-h2-config.php:100
+#: inc/customizer/configs/typography/class-inspiro-typo-h3-config.php:100
+#: inc/customizer/configs/typography/class-inspiro-typo-h4-config.php:100
+#: inc/customizer/configs/typography/class-inspiro-typo-h5-config.php:100
+#: inc/customizer/configs/typography/class-inspiro-typo-h6-config.php:100
+#: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:121
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:144
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-desc-config.php:144
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:151
+#: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:142
+#: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:151
+#: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:144
 msgctxt "text transform"
 msgid "None"
 msgstr ""

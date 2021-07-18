@@ -18,13 +18,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class Inspiro_Post_Options_Config {
 	/**
-	 * Constructor
-	 */
-	public function __construct() {
-		add_action( 'inspiro/customize_register', array( $this, 'register_configuration' ) );
-	}
-
-	/**
 	 * Configurations
 	 *
 	 * @since 1.4.0 Store configurations to class method.
@@ -63,31 +56,4 @@ class Inspiro_Post_Options_Config {
 			),
 		);
 	}
-
-	/**
-	 * Register configurations
-	 *
-	 * @param WP_Customize_Manager $wp_customize instance of WP_Customize_Manager.
-	 * @return void
-	 */
-	public function register_configuration( $wp_customize ) {
-		$configs = self::config();
-
-		$wp_customize->add_section(
-			$configs['section']['id'],
-			$configs['section']['args']
-		);
-
-		$wp_customize->add_setting(
-			$configs['setting']['id'],
-			$configs['setting']['args']
-		);
-
-		$wp_customize->add_control(
-			$configs['control']['id'],
-			$configs['control']['args']
-		);
-	}
 }
-
-new Inspiro_Post_Options_Config();

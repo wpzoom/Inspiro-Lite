@@ -178,18 +178,22 @@ if ( ! class_exists( 'Inspiro_Font_Family_Manager' ) ) {
 		 * Get font weight for selected Font Family passed by setting key
 		 *
 		 * @param string               $setting_key The setting key name for Font Family control.
-		 * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+		 * @param WP_Customize_Manager $wp_customize instance of WP_Customize_Manager.
 		 * @return array
 		 */
 		public static function get_font_family_weight( $setting_key, $wp_customize ) {
+			$font_family_weight = array(
+				'' => __( 'Inherit', 'inspiro' ),
+			);
+
+			if ( ! is_object( $wp_customize->get_setting( $setting_key ) ) ) {
+				return $font_family_weight;
+			}
+
 			$default            = $wp_customize->get_setting( $setting_key )->default;
 			$select_font_family = get_theme_mod( $setting_key, $default );
 			$font_family        = self::clean_google_fonts( $select_font_family );
 			$all_font_weight    = self::get_all_font_weight();
-
-			$font_family_weight = array(
-				'' => __( 'Inherit', 'inspiro' ),
-			);
 
 			if ( isset( self::$google_fonts[ $font_family ][0] ) && is_array( self::$google_fonts[ $font_family ][0] ) ) {
 				foreach ( self::$google_fonts[ $font_family ][0] as $font_weight ) {
