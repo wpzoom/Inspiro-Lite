@@ -1145,12 +1145,14 @@ if ( typeof define === 'function' && define.amd ) {
     function UISearch( el, options ) {
         this.el = el;
         this.inputEl = el.querySelector( 'form input.sb-search-input' );
+		this.inputSubmit = el.querySelector('form > input.sb-search-submit');
         this._initEvents();
     }
 
     UISearch.prototype = {
         _initEvents : function() {
             var self = this,
+				onEnterStop = false,
                 initSearchFn = function( ev ) {
                     ev.stopPropagation();
                     // trim its value
@@ -1160,20 +1162,42 @@ if ( typeof define === 'function' && define.amd ) {
                         ev.preventDefault();
                         self.open();
                     }
-                    else if( classie.has( self.el, 'sb-search-open' ) && /^\s*$/.test( self.inputEl.value ) ) { // close it
+                    else if( classie.has( self.el, 'sb-search-open' ) ) { // close it
                         ev.preventDefault();
                         self.close();
                     }
-                    else if (classie.has(self.el, 'sb-search-open') && (classie.has(ev.target, 'sb-icon-search') || ev.target.nodeName === 'use')) {
-                        ev.preventDefault();
+                },
+                initSearchFnPassive = function (ev) {
+
+                    self.inputEl.value = self.inputEl.value.trim();
+
+                    if (!classie.has(self.el, 'sb-search-open')) { // open it
+                        self.open();
+                    } else if (classie.has(self.el, 'sb-search-open' ) ) { // close it
                         self.close();
                     }
                 }
 
             this.el.addEventListener( 'click', initSearchFn );
-            this.el.addEventListener( 'touchstart', initSearchFn );
+			this.el.addEventListener( 'touchstart', initSearchFnPassive, {passive: true} );
             this.inputEl.addEventListener( 'click', function( ev ) { ev.stopPropagation(); });
-            this.inputEl.addEventListener( 'touchstart', function( ev ) { ev.stopPropagation(); } );
+            this.inputEl.addEventListener('keypress' , function(e) {
+                if(e.which == 13) {
+                    var form = self.el.querySelector('form');
+                    onEnterStop = true;
+                    form.submit();
+                }
+            });
+			if (this.inputSubmit) {
+                this.inputSubmit.addEventListener('click', function (ev) {
+                    ev.preventDefault();
+                    ev.stopPropagation();
+                    if (!onEnterStop) {
+                        self.close();
+                    }
+                });
+            }
+            this.inputEl.addEventListener( 'touchstart', function( ev ) { ev.stopPropagation(); }, {passive: true} );
         },
         open : function() {
             var self = this;
@@ -1182,11 +1206,11 @@ if ( typeof define === 'function' && define.amd ) {
             this.inputEl.focus();
             // close the search input if body is clicked
             var bodyFn = function( ev ) {
-                if (classie.has(self.el, 'sb-search-open') && /^\s*$/.test(self.inputEl.value)) { // close it
+                if (classie.has(self.el, 'sb-search-open')) { // close it
                     ev.preventDefault();
                     self.close();
                 }
-                else if (classie.has(self.el, 'sb-search-open') && (classie.has(ev.target, 'sb-icon-search') || ev.target.nodeName === 'use')) {
+                else if (classie.has(self.el, 'sb-search-open')) {
                     ev.preventDefault();
                     self.close();
                 }
@@ -1199,7 +1223,7 @@ if ( typeof define === 'function' && define.amd ) {
         close : function() {
             this.inputEl.blur();
             classie.remove( this.el, 'sb-search-open' );
-            this.el.querySelector('.sb-search-button-open').focus();
+			classie.add(this.el, 'sb-search-closed');
         }
     }
 
