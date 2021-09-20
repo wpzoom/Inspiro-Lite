@@ -17,6 +17,10 @@ body:not(.fl-builder) .entry-content a,
     text-decoration: underline;
 }
 
+body.elementor-page .entry-content a {
+    text-decoration: none;
+}
+
 
 /* Hover effects */
 

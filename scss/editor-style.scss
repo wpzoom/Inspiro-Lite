@@ -26,7 +26,6 @@ Description: Used to style the TinyMCE editor.
 .wp-block {
     margin-bottom: 30px;
     margin-top: 30px;
-    max-width: $content-width-small;
 
     &:not([data-type="core/paragraph"]):not([data-type="core/list"]):not([data-type="core/archives"]):not([data-type="core/categories"]):not([data-type="core/latest-posts"]):not([data-type="core/latest-comments"]) {
         margin-bottom: 42px;
@@ -85,4 +84,67 @@ Description: Used to style the TinyMCE editor.
     background-color: #0bb4aa;
     border-color: #0bb4aa;
     color: #fff;
+}
+
+
+
+.wp-block {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  max-width: 810px;
+
+  color: #444;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.8;
+}
+
+.wp-block:not([data-type="core/paragraph"]):not([data-type="core/list"]):not([data-type="core/archives"]):not([data-type="core/categories"]):not([data-type="core/latest-posts"]):not([data-type="core/latest-comments"]) {
+  margin-bottom: 42px;
+  margin-top: 42px;
+}
+
+.wp-block[data-align="wide"] {
+  max-width: 910px;
+}
+
+@media screen and (min-width: 719px) {
+  .wp-block[data-align="wide"] {
+    margin-bottom: 52px !important;
+    margin-top: 52px !important;
+  }
+}
+
+.wp-block[data-align="full"] {
+  margin-bottom: 40px !important;
+  margin-top: 40px !important;
+  max-width: none;
+}
+
+@media screen and (min-width: 719px) {
+  .wp-block[data-align="full"] {
+    margin-bottom: 60px !important;
+    margin-top: 60px !important;
+  }
+}
+
+.wp-block .wp-block {
+  width: 100%;
+}
+
+.editor-inner-blocks .wp-block {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+
+/** === Title === */
+
+.editor-post-title__block .editor-post-title__input {
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+    font-smoothing: antialiased;
+    color: #222;
 }
