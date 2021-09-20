@@ -1717,6 +1717,10 @@ a:hover .nav-title,
     transition: transform .18s ease;
 }
 
+.side-nav__scrollable-container h2, .side-nav__scrollable-container h3, .side-nav__scrollable-container h1, .side-nav__scrollable-container h4, .side-nav__scrollable-container h5, .side-nav__scrollable-container h6 {
+    color: #fff;
+}
+
 .side-nav__scrollable-container::-webkit-scrollbar {
     display: none;
 }

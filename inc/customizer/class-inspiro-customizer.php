@@ -225,9 +225,9 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 					$wp_customize,
 					'inspiro_upgrade_pro',
 					array(
-						'title'       => esc_html__( 'Upgrade to Inspiro PRO', 'inspiro' ),
+						'title'       => esc_html__( 'Upgrade to Inspiro Premium', 'inspiro' ),
 						'description' => esc_html__( 'Unlock premium features: 7 Style Kits, Video Backgrounds, Portfolio Integration, Premium Support and much more...', 'inspiro' ),
-						'pro_text'    => esc_html__( 'View Inspiro PRO', 'inspiro' ),
+						'pro_text'    => esc_html__( 'View Inspiro Premium', 'inspiro' ),
 						'pro_url'     => 'https://www.wpzoom.com/themes/inspiro/',
 						'priority'    => 5,
 					)

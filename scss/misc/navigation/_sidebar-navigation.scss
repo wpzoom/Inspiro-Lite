@@ -77,6 +77,10 @@
 
     -webkit-transition: -webkit-transform .18s ease;
     transition: transform .18s ease;
+
+    h2,h3,h1,h4,h5,h6 {
+        color: #fff;
+    }
 }
 .side-nav__scrollable-container::-webkit-scrollbar {
     display: none;

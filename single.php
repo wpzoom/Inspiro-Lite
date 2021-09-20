@@ -29,7 +29,7 @@ get_header(); ?>
 		$previous_post = get_previous_post();
 
 		if ( $previous_post ) {
-			$prev_image     = wp_get_attachment_image_src( get_post_thumbnail_id( $previous_post->ID ), 'inspiro-entry-cover' );
+			$prev_image     = wp_get_attachment_image_src( get_post_thumbnail_id( $previous_post->ID ), 'inspiro-featured-image' );
 			$previous_cover = '';
 
 			if ( $prev_image && isset( $prev_image[0] ) ) {

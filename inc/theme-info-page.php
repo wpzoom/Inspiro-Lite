@@ -106,14 +106,14 @@ function inspiro_display_theme_page() {
 					<div class="inner-section">
 						<h4>
 							<span class="dashicons dashicons-cart"></span>
-							<?php esc_html_e( 'Inspiro Premium (PRO)', 'inspiro' ); ?>
+							<?php esc_html_e( 'Inspiro Premium', 'inspiro' ); ?>
 						</h4>
 						<p class="about">
 							<?php esc_html_e( 'If you like the free version of this theme, you will LOVE the full version of Inspiro which includes numerous video features, portfolio integration, additional features and more useful options to customize your website.', 'inspiro' ); ?>
 						</p>
 						<p>
 							<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/', 'inspiro' ) ); ?>" target="_blank" class="button button-primary">
-								<?php esc_html_e( 'Upgrade to Inspiro PRO &rarr;', 'inspiro' ); ?>
+								<?php esc_html_e( 'Upgrade to Inspiro Premium &rarr;', 'inspiro' ); ?>
 							</a>
 						</p>
 					</div>
@@ -141,7 +141,7 @@ function inspiro_display_theme_page() {
 							<?php esc_html_e( 'Why Upgrade?', 'inspiro' ); ?>
 						</h4>
 						<p class="about">
-							<?php esc_html_e( 'Upgrading to Inspiro PRO you will unlock a dozen of unique features that will take your website to the next level. See in the table below just a few of the features included in the PRO version.', 'inspiro' ); ?>
+							<?php esc_html_e( 'Upgrading to Inspiro Premium you will unlock a dozen of unique features that will take your website to the next level. See in the table below just a few of the features included in the Premium version.', 'inspiro' ); ?>
 						</p>
 						<p>
 							<a href="<?php echo esc_url( __( 'https://demo.wpzoom.com/?theme=inspiro', 'inspiro' ) ); ?>" target="_blank" class="button button-primary">
@@ -208,9 +208,9 @@ function inspiro_display_theme_page() {
 						<td><span class="dashicons dashicons-yes"></span></td>
 					</tr>
 					<tr>
-						<td><h3><?php esc_html_e( 'Beaver Builder Integration', 'inspiro' ); ?></h3></td>
-						<td><span class="dashicons dashicons-no"></span></td>
-						<td><span class="dashicons dashicons-yes"></span></td>
+						<td><h3><?php esc_html_e( 'Elementor Integration', 'inspiro' ); ?></h3></td>
+						<td>Partial</td>
+						<td>Full</td>
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e( 'Demo Content Importer', 'inspiro' ); ?></h3></td>
@@ -283,7 +283,7 @@ function inspiro_display_theme_page() {
 						<td></td>
 						<td>
 							<a href="https://www.wpzoom.com/themes/inspiro/" target="_blank" class="upgrade-button">
-								<?php esc_html_e( 'Upgrade to Inspiro PRO', 'inspiro' ); ?>
+								<?php esc_html_e( 'Upgrade to Inspiro Premium', 'inspiro' ); ?>
 							</a>
 						</td>
 					</tr>

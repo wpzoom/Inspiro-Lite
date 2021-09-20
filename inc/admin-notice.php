@@ -89,7 +89,7 @@ if ( ! function_exists( 'inspiro_welcome_notice' ) ) {
 					?>
 				</a>
 				<a class="button-primary" href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/', 'inspiro' ) ); ?>" target="_blank">
-					<?php esc_html_e( 'Upgrade to Inspiro PRO', 'inspiro' ); ?>
+					<?php esc_html_e( 'Upgrade to Inspiro Premium', 'inspiro' ); ?>
 				</a>
 			</p>
 		</div>

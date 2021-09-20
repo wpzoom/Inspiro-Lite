@@ -88,9 +88,9 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 			 * Register image sizes.
 			 */
 			add_image_size( 'inspiro-featured-image', 2000 );
-			add_image_size( 'inspiro-recent-thumbnail', 345, 192, true );
-			add_image_size( 'inspiro-recent-thumbnail-retina', 690, 384, true );
-			add_image_size( 'inspiro-entry-cover', 1800 );
+			// add_image_size( 'inspiro-recent-thumbnail', 345, 192, true );
+			// add_image_size( 'inspiro-recent-thumbnail-retina', 690, 384, true );
+			// add_image_size( 'inspiro-entry-cover', 1800 );
 			add_image_size( 'inspiro-loop', 950, 320, true );
 
 			// Set the default content width.
@@ -256,29 +256,16 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 
 			$plugins = array(
 
-				// This is an example of the use of 'is_callable' functionality. A user could - for instance -
-				// have Beaver installed *or* Beaver Premium. The slug would in that last case be different, i.e.
-				// 'bb-plugin'.
-				// By setting 'is_callable' to either a function from that plugin or a class method
-				// `array( 'class', 'method' )` similar to how you hook in to actions and filters, TGMPA can still
-				// recognize the plugin as being installed.
 				array(
-					'name'        => 'Beaver Builder',
-					'slug'        => 'beaver-builder-lite-version',
-					'required'    => false,
-					'is_callable' => array( 'FLBuilderAdmin', 'activate' ),
+					'name'        => 'Elementor',
+					'slug'        => 'elementor',
+					'required'    => true,
 				),
 
 				array(
-					'name'     => 'WPZOOM Beaver Builder Templates',
-					'slug'     => 'wpzoom-beaver-builder-templates',
-					'required' => false,
-				),
-
-				array(
-					'name'     => 'WPZOOM Addons for Beaver Builder',
-					'slug'     => 'wpzoom-addons-for-beaver-builder',
-					'required' => false,
+					'name'     => 'Elementor Addons by WPZOOM',
+					'slug'     => 'wpzoom-elementor-addons',
+					'required' => true,
 				),
 
 				array(
