@@ -102,6 +102,10 @@ Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 
 ## Changelog ##
 
+### 1.5.0 ###
+* Added Elementor Integration. Thanks to Elementor Addons by WPZOOM plugin you can get access to a dozen of new templates & custom widgets
+* Multiple bug fixes
+
 ### 1.4.1 ###
 * Minor bug fix with the search form not closing
 
