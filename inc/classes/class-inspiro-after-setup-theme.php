@@ -46,6 +46,11 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 			add_action( 'after_setup_theme', array( $this, 'theme_setup' ) );
 			add_action( 'template_redirect', array( $this, 'theme_content_width' ), 0 );
 			add_action( 'tgmpa_register', array( $this, 'register_required_plugins' ) );
+            add_action( 'tgmpa_register', array( $this, 'register_required_plugins' ) );
+            add_filter( 'ocdi/register_plugins', array( $this,'ocdi_register_plugins' ) );
+            add_filter( 'ocdi/import_files', array( $this,'ocdi_import_files' ) );
+            add_action( 'ocdi/after_import', array( $this,'ocdi_after_import_setup' ));
+
 		}
 
 		/**
@@ -230,6 +235,91 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 			$GLOBALS['content_width'] = apply_filters( 'inspiro_content_width', $content_width );
 		}
 
+
+
+        public function ocdi_register_plugins( $plugins ) {
+          $theme_plugins = [
+            [
+                'name'     => 'Instagram Widget by WPZOOM',
+                'slug'     => 'instagram-widget-by-wpzoom',
+                'required' => false,
+            ],
+            [
+                'name'     => 'Social Icons Widget by WPZOOM',
+                'slug'     => 'social-icons-widget-by-wpzoom',
+                'required' => false,
+            ],
+          ];
+
+          // Check if user is on the theme recommeneded plugins step and a demo was selected.
+            if (
+              isset( $_GET['step'] ) &&
+              $_GET['step'] === 'import' &&
+              isset( $_GET['import'] )
+            ) {
+
+              // Adding one additional plugin for the first demo import ('import' number = 0).
+              if ( $_GET['import'] === '0' ) {
+                $theme_plugins[] =  [
+                    'name'     => 'Elementor',
+                    'slug'     => 'elementor',
+                    'required' => true,
+                ];
+
+                $theme_plugins[] = [
+                  'name'     => 'Elementor Addons by WPZOOM',
+                  'slug'     => 'wpzoom-elementor-addons',
+                  'required' => true,
+                ];
+              }
+            }
+
+          return array_merge( $plugins, $theme_plugins );
+        }
+
+
+        public function ocdi_import_files() {
+          return [
+            [
+              'import_file_name'           => 'Inspiro Lite - Elementor',
+              'import_file_url'            => 'https://www.wpzoom.com/downloads/xml/inspiro-lite.xml',
+              'import_widget_file_url'     => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-widgets.wie',
+              'import_customizer_file_url' => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-customizer.dat',
+              'import_preview_image_url'   => 'https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-elementor-1.png',
+              'preview_url'                => 'https://demo.wpzoom.com/inspiro-lite/',
+            ],
+            [
+              'import_file_name'           => 'Inspiro Lite - Gutenberg',
+              'import_file_url'            => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-blocks.xml',
+              'import_widget_file_url'     => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-widgets.wie',
+              'import_customizer_file_url' => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-customizer.dat',
+              'import_preview_image_url'   => 'https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-gutenberg-1.png',
+              'preview_url'                => 'https://demo.wpzoom.com/inspiro-lite-blocks/',
+            ],
+          ];
+        }
+
+
+        public function ocdi_after_import_setup() {
+            // Assign menus to their locations.
+            $main_menu = get_term_by( 'name', 'Main', 'nav_menu' );
+
+            set_theme_mod( 'nav_menu_locations', [
+                    'primary' => $main_menu->term_id, // replace 'main-menu' here with the menu location identifier from register_nav_menu() function in your theme.
+                ]
+            );
+
+            // Assign front page and posts page (blog page).
+            $front_page_id = get_page_by_title( 'Homepage' );
+            $blog_page_id  = get_page_by_title( 'Blog' );
+
+            update_option( 'show_on_front', 'page' );
+            update_option( 'page_on_front', $front_page_id->ID );
+            update_option( 'page_for_posts', $blog_page_id->ID );
+
+        }
+
+
 		/**
 		 * Register the required plugins for this theme.
 		 *
@@ -257,6 +347,12 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 			 */
 
 			$plugins = array(
+
+                array(
+                    'name'     => 'One Click Demo Import',
+                    'slug'     => 'one-click-demo-import',
+                    'required' => true,
+                ),
 
 				array(
 					'name'     => 'Elementor',
