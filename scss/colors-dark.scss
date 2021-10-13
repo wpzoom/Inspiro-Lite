@@ -93,6 +93,10 @@ body.colors-dark {
         border-color: #555;
     }
 
+    .search-form button, .search-form input {
+        color: #fff;
+    }
+
     input,
     textarea {
         background-color: transparent;
@@ -143,5 +147,102 @@ body.colors-dark {
     .navbar-toggle {
         background-color: transparent;
         border-color: transparent;
+    }
+
+    &.woocommerce a.button,
+    &.woocommerce button.button,
+    &.woocommerce input.button,
+    &.woocommerce #respond input#submit,
+    &.woocommerce #content input.button,
+    &.woocommerce-page a.button,
+    &.woocommerce-page button.button,
+    &.woocommerce-page input.button,
+    &.woocommerce-page #respond input#submit {
+        color: #fff;
+        border: 2px solid #555;
+        background: none;
+    }
+
+    &.woocommerce a.button:hover,
+    &.woocommerce button.button:hover,
+    &.woocommerce input.button:hover,
+    &.woocommerce #respond input#submit:hover,
+    &.woocommerce #content input.button:hover,
+    &.woocommerce-page a.button:hover,
+    &.woocommerce-page button.button:hover,
+    &.woocommerce-page input.button:hover,
+    &.woocommerce-page #respond input#submit:hover,
+    &.woocommerce-page #content input.button:hover {
+        color: $primary_color;
+        border: 2px solid $primary_color;
+        background: none;
+    }
+
+
+    &.woocommerce div.product form.cart .button,
+    &.woocommerce-page div.product form.cart .button,
+    &.woocommerce #content div.product form.cart .button,
+    &.woocommerce-page #content div.product form.cart .button,
+    &.woocommerce a.button.alt,
+    &.woocommerce-page a.button.alt,
+    &.woocommerce button.button.alt,
+    &.woocommerce-page button.button.alt,
+    &.woocommerce input.button.alt,
+    &.woocommerce-page input.button.alt,
+    &.woocommerce #respond input#submit.alt,
+    &.woocommerce-page #respond input#submit.alt,
+    &.woocommerce #content input.button.alt,
+    #main .woocommerce-page #content input.button.alt {
+        color: #fff;
+        border: 2px solid #555;
+        background: none;
+
+        &:hover {
+            color: $primary_color;
+            border: 2px solid $primary_color;
+            background: none;
+        }
+    }
+
+    &.woocommerce button.button.alt.disabled:hover {
+        background: #333;
+        color: #fff;
+    }
+
+    &.woocommerce div.product form.cart .button:hover,
+    &.woocommerce-page div.product form.cart .button:hover,
+    &.woocommerce-page #main a.button:hover,
+    &.woocommerce button.button:hover,
+    &.woocommerce input.button:hover,
+    &.woocommerce #respond input#submit:hover,
+    &.woocommerce #content input.button:hover,
+    &.woocommerce-page a.button:hover,
+    &.woocommerce-page button.button:hover,
+    &.woocommerce-page input.button:hover,
+    &.woocommerce-page #respond input#submit:hover,
+    &.woocommerce-page #main input.button:hover,
+    &.woocommerce button.button.alt:hover {
+        color: $primary_color;
+        border: 2px solid $primary_color;
+        background: none;
+    }
+
+    .woocommerce table.shop_table {
+        border: 1px solid rgba(255,255,255, .10);
+    }
+
+    #add_payment_method #payment,
+    .woocommerce-cart #payment,
+    .woocommerce-checkout #payment {
+        background: #343434;
+        border-radius: 5px;
+        border: 2px solid #525252;
+    }
+
+    &.woocommerce #content div.product .woocommerce-tabs ul.tabs li.active,
+    &.woocommerce div.product .woocommerce-tabs ul.tabs li.active,
+    &.woocommerce-page #content div.product .woocommerce-tabs ul.tabs li.active,
+    &.woocommerce-page div.product .woocommerce-tabs ul.tabs li.active {
+        background: none !important;
     }
 }

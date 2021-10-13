@@ -103,7 +103,20 @@ a:focus,
 .colors-custom input[type=button]:hover,
 .colors-custom input[type=reset]:hover,
 .colors-custom input[type=submit]:hover,
-.colors-custom #respond #submit:hover {
+.colors-custom #respond #submit:hover,
+.colors-custom.woocommerce #content input.button:hover,
+.colors-custom.woocommerce #respond input#submit:hover,
+.colors-custom.woocommerce button.button.alt:hover,
+.colors-custom.woocommerce button.button:hover,
+.colors-custom.woocommerce div.product form.cart .button:hover,
+.colors-custom.woocommerce input.button:hover,
+.colors-custom.woocommerce-page #main a.button:hover,
+.colors-custom.woocommerce-page #main input.button:hover,
+.colors-custom.woocommerce-page #respond input#submit:hover,
+.colors-custom.woocommerce-page a.button:hover,
+.colors-custom.woocommerce-page button.button:hover,
+.colors-custom.woocommerce-page div.product form.cart .button:hover,
+.colors-custom.woocommerce-page input.button:hover {
 	color: ' . $hex . ';
 	border-color: ' . $hex . ';
 }
@@ -125,10 +138,21 @@ a:focus,
     fill: ' . $hex . ';
 }
 
-.colors-custom .pagination .page-numbers&:not(.dots):hover,
-.colors-custom .pagination .page-numbers.current,
+
+.colors-custom.woocommerce #content div.product p.price,
+.colors-custom.woocommerce #content div.product span.price,
+.colors-custom.woocommerce div.product p.price,
+.colors-custom.woocommerce div.product span.price,
+.colors-custom.woocommerce-page #content div.product p.price,
+.colors-custom.woocommerce-page #content div.product span.price,
+.colors-custom.woocommerce-page div.product p.price,
+.colors-custom.woocommerce-page div.product span.price
+.colors-custom.woocommerce ul.products li.product .price,
+.colors-custom.woocommerce-page ul.products li.product .price
+.colors-custom .comments-pagination .page-numbers.current,
 .colors-custom .comments-pagination .page-numbers:not(.dots):hover,
-.colors-custom .comments-pagination .page-numbers.current {
+.colors-custom .pagination .page-numbers.current,
+.colors-custom .pagination .page-numbers:not(.dots):hover {
 	color: ' . $hex . ';
 }
 
@@ -146,6 +170,12 @@ a:focus,
 .colors-custom .section-footer .zoom-instagram-widget a.ig-b-v-24:hover {
     color: ' . $hex . ' !important;
 }
+
+.colors-custom .woocommerce-pagination .current,
+.colors-custom .woocommerce-pagination .page-numbers:hover {
+    color: ' . $hex . ' !important;
+}
+
 
 @media (min-width: 64em) {
 	.colors-custom .navbar-nav ul {

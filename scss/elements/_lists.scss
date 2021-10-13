@@ -25,3 +25,10 @@ dt {
 dd {
     margin: 0 1.5em 1.5em;
 }
+
+
+#add_payment_method #payment ul.payment_methods li,
+.woocommerce-cart #payment ul.payment_methods li,
+.woocommerce-checkout #payment ul.payment_methods li {
+    list-style-type: none;
+}

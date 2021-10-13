@@ -96,6 +96,10 @@ body.colors-dark .form-submit #submit {
     border-color: #555;
 }
 
+body.colors-dark .search-form button, body.colors-dark .search-form input {
+    color: #fff;
+}
+
 body.colors-dark input,
 body.colors-dark textarea {
     background-color: transparent;
@@ -146,4 +150,113 @@ body.colors-dark .side-nav .search-form .search-submit:hover {
 body.colors-dark .navbar-toggle {
     background-color: transparent;
     border-color: transparent;
+}
+
+body.colors-dark.woocommerce a.button,
+body.colors-dark.woocommerce button.button,
+body.colors-dark.woocommerce input.button,
+body.colors-dark.woocommerce #respond input#submit,
+body.colors-dark.woocommerce #content input.button,
+body.colors-dark.woocommerce-page a.button,
+body.colors-dark.woocommerce-page button.button,
+body.colors-dark.woocommerce-page input.button,
+body.colors-dark.woocommerce-page #respond input#submit {
+    color: #fff;
+    border: 2px solid #555;
+    background: none;
+}
+
+body.colors-dark.woocommerce a.button:hover,
+body.colors-dark.woocommerce button.button:hover,
+body.colors-dark.woocommerce input.button:hover,
+body.colors-dark.woocommerce #respond input#submit:hover,
+body.colors-dark.woocommerce #content input.button:hover,
+body.colors-dark.woocommerce-page a.button:hover,
+body.colors-dark.woocommerce-page button.button:hover,
+body.colors-dark.woocommerce-page input.button:hover,
+body.colors-dark.woocommerce-page #respond input#submit:hover,
+body.colors-dark.woocommerce-page #content input.button:hover {
+    color: #0bb4aa;
+    border: 2px solid #0bb4aa;
+    background: none;
+}
+
+body.colors-dark.woocommerce div.product form.cart .button,
+body.colors-dark.woocommerce-page div.product form.cart .button,
+body.colors-dark.woocommerce #content div.product form.cart .button,
+body.colors-dark.woocommerce-page #content div.product form.cart .button,
+body.colors-dark.woocommerce a.button.alt,
+body.colors-dark.woocommerce-page a.button.alt,
+body.colors-dark.woocommerce button.button.alt,
+body.colors-dark.woocommerce-page button.button.alt,
+body.colors-dark.woocommerce input.button.alt,
+body.colors-dark.woocommerce-page input.button.alt,
+body.colors-dark.woocommerce #respond input#submit.alt,
+body.colors-dark.woocommerce-page #respond input#submit.alt,
+body.colors-dark.woocommerce #content input.button.alt,
+body.colors-dark #main .woocommerce-page #content input.button.alt {
+    color: #fff;
+    border: 2px solid #555;
+    background: none;
+}
+
+body.colors-dark.woocommerce div.product form.cart .button:hover,
+body.colors-dark.woocommerce-page div.product form.cart .button:hover,
+body.colors-dark.woocommerce #content div.product form.cart .button:hover,
+body.colors-dark.woocommerce-page #content div.product form.cart .button:hover,
+body.colors-dark.woocommerce a.button.alt:hover,
+body.colors-dark.woocommerce-page a.button.alt:hover,
+body.colors-dark.woocommerce button.button.alt:hover,
+body.colors-dark.woocommerce-page button.button.alt:hover,
+body.colors-dark.woocommerce input.button.alt:hover,
+body.colors-dark.woocommerce-page input.button.alt:hover,
+body.colors-dark.woocommerce #respond input#submit.alt:hover,
+body.colors-dark.woocommerce-page #respond input#submit.alt:hover,
+body.colors-dark.woocommerce #content input.button.alt:hover,
+body.colors-dark #main .woocommerce-page #content input.button.alt:hover {
+    color: #0bb4aa;
+    border: 2px solid #0bb4aa;
+    background: none;
+}
+
+body.colors-dark.woocommerce button.button.alt.disabled:hover {
+    background: #333;
+    color: #fff;
+}
+
+body.colors-dark.woocommerce div.product form.cart .button:hover,
+body.colors-dark.woocommerce-page div.product form.cart .button:hover,
+body.colors-dark.woocommerce-page #main a.button:hover,
+body.colors-dark.woocommerce button.button:hover,
+body.colors-dark.woocommerce input.button:hover,
+body.colors-dark.woocommerce #respond input#submit:hover,
+body.colors-dark.woocommerce #content input.button:hover,
+body.colors-dark.woocommerce-page a.button:hover,
+body.colors-dark.woocommerce-page button.button:hover,
+body.colors-dark.woocommerce-page input.button:hover,
+body.colors-dark.woocommerce-page #respond input#submit:hover,
+body.colors-dark.woocommerce-page #main input.button:hover,
+body.colors-dark.woocommerce button.button.alt:hover {
+    color: #0bb4aa;
+    border: 2px solid #0bb4aa;
+    background: none;
+}
+
+body.colors-dark .woocommerce table.shop_table {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.colors-dark #add_payment_method #payment,
+body.colors-dark .woocommerce-cart #payment,
+body.colors-dark .woocommerce-checkout #payment {
+    background: #343434;
+    border-radius: 5px;
+    border: 2px solid #525252;
+}
+
+body.colors-dark.woocommerce #content div.product .woocommerce-tabs ul.tabs li.active,
+body.colors-dark.woocommerce div.product .woocommerce-tabs ul.tabs li.active,
+body.colors-dark.woocommerce-page #content div.product .woocommerce-tabs ul.tabs li.active,
+body.colors-dark.woocommerce-page div.product .woocommerce-tabs ul.tabs li.active {
+    background: none !important;
 }
