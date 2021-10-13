@@ -70,7 +70,7 @@ class Inspiro_Theme_Upgrader {
 	 * @param array       $hook_extra    Extra arguments passed to hooked filters.
 	 */
 	public function set_upgrader_instance( $source, $remote_source, $upgrader, $hook_extra ) {
-		if ( 'theme' === $hook_extra['type'] ) {
+		if ( isset( $hook_extra['type'] ) && 'theme' === $hook_extra['type'] ) {
 			$this->wp_upgrader = $upgrader;
 		}
 		return $source;
@@ -216,7 +216,7 @@ class Inspiro_Theme_Upgrader {
 	public function start_upgrader_process( $source, $remote_source, $upgrader, $hook_extra ) {
 		$overwrite = isset( $_GET['overwrite'] ) ? sanitize_text_field( wp_unslash( $_GET['overwrite'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
-		if ( 'theme' === $hook_extra['type'] && 'update-theme' === $overwrite ) {
+		if ( ( isset( $hook_extra['type'] ) && 'theme' === $hook_extra['type'] ) && 'update-theme' === $overwrite ) {
 			// Allow migration only if premium version is overwrite.
 			if ( $this->check_new_theme_version( $this->wp_upgrader->new_theme_data ) ) {
 				$this->migrate_customizer_settings();
