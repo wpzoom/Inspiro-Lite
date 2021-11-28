@@ -10,6 +10,10 @@
 
 ?>
 <div id="site-navigation" class="navbar">
+    <?php
+        $search_show        = inspiro_get_theme_mod( 'header_search_show' );
+        $search_display     = $search_show ? 'block' : 'none';
+    ?>
 	<div class="header-inner inner-wrap">
 
 		<div class="header-logo-wrapper">
@@ -37,7 +41,7 @@
 				</div>
 			<?php endif ?>
 
-			<div id="sb-search" class="sb-search">
+			<div id="sb-search" class="sb-search" style="display: <?php echo esc_attr( $search_display ); ?>;">
 				<?php get_template_part( 'template-parts/header/search', 'form' ); ?>
 			</div>
 

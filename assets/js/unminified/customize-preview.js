@@ -87,6 +87,16 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 		} );
 	} );
 
+    wp.customize( 'header_search_show', function ( value ) {
+        value.bind( function ( to ) {
+            if ( to === '' ) {
+                $( '.sb-search' ).css( 'display', 'block' );
+            } else {
+                $( '.sb-search' ).css( 'display', 'none' );
+            }
+        } );
+    } );
+
 	// Header text color.
 	wp.customize( 'header_textcolor', function ( value ) {
 		value.bind( function ( to ) {

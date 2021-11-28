@@ -132,7 +132,7 @@ function inspiro_display_theme_page() {
                             </p>
                             <p>
                                 <a href="<?php echo esc_url( admin_url( 'themes.php?page=one-click-demo-import' ) ); ?>" class="button button-primary">
-                                    <?php esc_html_e( 'Import the Demo Content', 'inspiro' ); ?>
+                                    <?php esc_html_e( 'Import the Demo Content &rarr;', 'inspiro' ); ?>
                                 </a>
                             </p>
                         </div>
@@ -142,16 +142,19 @@ function inspiro_display_theme_page() {
 
     				<div class="section">
     					<div class="inner-section">
-    						<h4>
-    							<span class="dashicons dashicons-admin-plugins"></span>
-    							<?php esc_html_e( 'Recommended Plugins', 'inspiro' ); ?>
-    						</h4>
+                            <h4>
+                                <span class="dashicons dashicons-cloud-upload"></span>
+                                <?php esc_html_e( 'Import the Demo Content', 'inspiro' ); ?>
+                            </h4>
+                            <p class="about">
+                                <?php esc_html_e( 'Importing demo data (post, pages, images, etc.) is the quickest and easiest way to set up your new theme. It allows you to simply edit everything instead of creating content and layouts from scratch.', 'inspiro' ); ?>
+                            </p>
     						<p class="about">
-    							<?php esc_html_e( 'In order to enable all theme features, it\'s necessary to install a few recommended plugins.', 'inspiro' ); ?>
+    							<em><?php esc_html_e( 'Please install and activate recommended plugins to enable this features.', 'inspiro' ); ?></em>
     						</p>
     						<p>
-    							<a href="<?php echo esc_url( admin_url( 'themes.php?page=tgmpa-install-plugins' ) ); ?>" class="button button-secondary">
-    								<?php esc_html_e( 'Recommended Plugins', 'inspiro' ); ?>
+    							<a href="<?php echo esc_url( admin_url( 'themes.php?page=tgmpa-install-plugins' ) ); ?>" class="button button-primary">
+    								<?php esc_html_e( 'Install Recommended Plugins &rarr;', 'inspiro' ); ?>
     							</a>
     						</p>
     					</div>
