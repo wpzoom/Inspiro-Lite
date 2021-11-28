@@ -89,9 +89,9 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 
     wp.customize( 'header_search_show', function ( value ) {
         value.bind( function ( to ) {
-            if ( to === '' ) {
+            if ( to === true ) {
                 $( '.sb-search' ).css( 'display', 'block' );
-            } else {
+            } else if ( to === false ) {
                 $( '.sb-search' ).css( 'display', 'none' );
             }
         } );
