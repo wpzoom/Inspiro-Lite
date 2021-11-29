@@ -2,7 +2,7 @@
 **Contributors:** [WPZOOM](https://profiles.wordpress.org/WPZOOM)  
 **Requires at least:** 5.2  
 **Tested up to:** 5.8  
-**Version:** 1.6.0  
+**Version:** 1.6.1  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 **Tags:** one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready  
@@ -101,6 +101,10 @@ License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 
 ## Changelog ##
+
+### 1.6.1 ###
+* Minor bug fixes
+* New option to hide the Search icon in the header (Customizer > Header Settings)
 
 ### 1.6.0 ###
 * Added Demo Content Importer with 2 Demos: Elementor & Gutenberg
