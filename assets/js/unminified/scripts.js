@@ -333,22 +333,6 @@ function inspiroResponsiveEmbeds() {
 
 				toggleNav();
 
-				if ( ! $( document.body ).hasClass( 'side-nav-open' ) ) {
-					$document
-						.find(
-							'.header-navigation-wrapper button.navbar-toggle'
-						)
-						.focus();
-				} else if ( $window.width() <= 640 ) {
-					$document
-						.find( '.side-nav__close-button > button' )
-						.focus();
-				} else {
-					$document
-						.find( 'nav.mobile-menu-wrapper ul li:first-child' )
-						.focus();
-				}
-
 				$.fn.keepFocusInMobileSidebar();
 			}
 		);
