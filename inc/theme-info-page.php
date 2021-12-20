@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function inspiro_theme_info_page() {
 	add_theme_page(
-		esc_html__( 'Welcome to Inspiro Theme', 'inspiro' ),
+		esc_html__( 'Welcome to Inspiro Lite', 'inspiro' ),
 		esc_html__( 'About Inspiro', 'inspiro' ),
 		'edit_theme_options',
 		'inspiro',
@@ -45,23 +45,18 @@ function inspiro_display_theme_page() {
 
 				<h1>
 					<?php
-					/* translators: %s: Inspiro Lite theme */
-					printf( esc_html__( 'Welcome to %s', 'inspiro' ), 'Inspiro Lite' );
+					esc_html_e( 'Welcome to Inspiro Lite', 'inspiro' );
 					?>
 				</h1>
 
 
-				<?php esc_html_e( 'Inspiro is a professional photo and video-focused theme with a modern design. Packed with features including a fullscreen area that supports Vimeo & self-hosted videos in the background, Page Builder integration, Inspiro is perfect for showing off your portfolio, images, and videos.', 'inspiro' ); ?>
-				<br />
-				<br />
-				<?php esc_html_e( 'Looking for more features, like portfolio integration and video background? Then you should definitely check the Premium version.', 'inspiro' ); ?>
+				<?php esc_html_e( 'Looking for more features, like portfolio integration and video background? Check out the Premium version!', 'inspiro' ); ?>
 
 				<div class="theme-links wpz-clearfix">
 					<p>
 						<a href="https://www.wpzoom.com/themes/inspiro/" class="button button-primary" target="_blank">
 							<?php esc_html_e( 'Get Inspiro Premium &rarr;', 'inspiro' ); ?>
 						</a>
-						<a href="https://www.wpzoom.com/documentation/inspiro-lite/" target="_blank"><?php esc_html_e( 'Documentation', 'inspiro' ); ?></a>
 						<a href="https://www.wpzoom.com/showcase/theme/inspiro/" target="_blank">
 							<?php esc_html_e( 'Inspiro Showcase', 'inspiro' ); ?>
 						</a>
@@ -71,14 +66,7 @@ function inspiro_display_theme_page() {
 			</div>
 
 		</div>
-		<hr>
 		<div id="getting-started">
-			<h3>
-				<?php
-				/* translators: %s: Inspiro Lite theme */
-				printf( esc_html__( 'Get Started with %s', 'inspiro' ), 'Inspiro Lite' );
-				?>
-			</h3>
 			<div class="wpz-grid-wrap">
 				<div class="section">
 					<div class="inner-section">
@@ -87,10 +75,7 @@ function inspiro_display_theme_page() {
 							<?php esc_html_e( 'Theme Documentation', 'inspiro' ); ?>
 						</h4>
 						<p class="about">
-							<?php
-							/* translators: %s: Inspiro theme */
-							printf( esc_html__( 'Need help configuring %s? Lite In the documentation you can find all theme related information that is needed to get your site up and running in no time.', 'inspiro' ), 'Inspiro' );
-							?>
+							<?php esc_html_e( 'In the documentation, you can find all theme-related information needed to get your site up and running in no time.', 'inspiro' ); ?>
 						</p>
 						<p>
 							<a href="https://www.wpzoom.com/documentation/inspiro-lite/" target="_blank" class="button button-primary">
@@ -109,11 +94,11 @@ function inspiro_display_theme_page() {
 							<?php esc_html_e( 'Inspiro Premium', 'inspiro' ); ?>
 						</h4>
 						<p class="about">
-							<?php esc_html_e( 'If you like the free version of this theme, you will LOVE the full version of Inspiro which includes numerous video features, portfolio integration, additional features and more useful options to customize your website.', 'inspiro' ); ?>
+							<?php esc_html_e( 'If you like the free version of this theme, you will LOVE the full version of Inspiro, which includes numerous video features, portfolio integration, additional features, and more options to customize your website.', 'inspiro' ); ?>
 						</p>
 						<p>
 							<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/', 'inspiro' ) ); ?>" target="_blank" class="button button-primary">
-								<?php esc_html_e( 'Upgrade to Inspiro Premium &rarr;', 'inspiro' ); ?>
+								<?php esc_html_e( 'Upgrade to Inspiro Premium', 'inspiro' ); ?>
 							</a>
 						</p>
 					</div>
@@ -128,11 +113,11 @@ function inspiro_display_theme_page() {
                                 <?php esc_html_e( 'Import the Demo Content', 'inspiro' ); ?>
                             </h4>
                             <p class="about">
-                                <?php esc_html_e( 'Importing demo data (post, pages, images, etc.) is the quickest and easiest way to set up your new theme. It allows you to simply edit everything instead of creating content and layouts from scratch.', 'inspiro' ); ?>
+                                <?php esc_html_e( 'Importing demo data (post, pages, images, etc.) is the quickest and easiest way to set up your new theme, and it allows you to simply edit everything instead of creating content and layouts from scratch.', 'inspiro' ); ?>
                             </p>
                             <p>
                                 <a href="<?php echo esc_url( admin_url( 'themes.php?page=one-click-demo-import' ) ); ?>" class="button button-primary">
-                                    <?php esc_html_e( 'Import the Demo Content &rarr;', 'inspiro' ); ?>
+                                    <?php esc_html_e( 'Import the Demo Content', 'inspiro' ); ?>
                                 </a>
                             </p>
                         </div>
@@ -150,7 +135,7 @@ function inspiro_display_theme_page() {
                                 <?php esc_html_e( 'Importing demo data (post, pages, images, etc.) is the quickest and easiest way to set up your new theme. It allows you to simply edit everything instead of creating content and layouts from scratch.', 'inspiro' ); ?>
                             </p>
     						<p class="about">
-    							<em><?php esc_html_e( 'Please install and activate recommended plugins to enable this features.', 'inspiro' ); ?></em>
+    							<em><?php esc_html_e( 'Please install and activate recommended plugins to enable this feature.', 'inspiro' ); ?></em>
     						</p>
     						<p>
     							<a href="<?php echo esc_url( admin_url( 'themes.php?page=tgmpa-install-plugins' ) ); ?>" class="button button-primary">
@@ -169,7 +154,7 @@ function inspiro_display_theme_page() {
 							<?php esc_html_e( 'Why Upgrade?', 'inspiro' ); ?>
 						</h4>
 						<p class="about">
-							<?php esc_html_e( 'Upgrading to Inspiro Premium you will unlock a dozen of unique features that will take your website to the next level. See in the table below just a few of the features included in the Premium version.', 'inspiro' ); ?>
+							<?php esc_html_e( 'Upgrading to Inspiro Premium, you will unlock a dozen unique features that will take your website to the next level. See in the table below just a few of the features included in the Premium version.', 'inspiro' ); ?>
 						</p>
 						<p>
 							<a href="<?php echo esc_url( __( 'https://demo.wpzoom.com/?theme=inspiro', 'inspiro' ) ); ?>" target="_blank" class="button button-primary">

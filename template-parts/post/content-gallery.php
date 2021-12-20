@@ -33,7 +33,7 @@
 			the_content(
 				sprintf(
 					/* translators: %s: Post title. */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'inspiro' ),
+					__( 'Read more<span class="screen-reader-text"> "%s"</span>', 'inspiro' ),
 					get_the_title()
 				)
 			);

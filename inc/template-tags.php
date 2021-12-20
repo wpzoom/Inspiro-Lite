@@ -131,9 +131,9 @@ if ( ! function_exists( 'inspiro_comments_link' ) ) {
 	function inspiro_comments_link() {
 		echo '<span class="entry-comments">';
 		comments_popup_link(
-			__( '0 comments', 'inspiro' ),
-			__( '1 comment', 'inspiro' ),
-			__( '% comments', 'inspiro' ),
+			__( 'No Comments', 'inspiro' ),
+			__( 'One Comment', 'inspiro' ),
+			__( '% Comments', 'inspiro' ),
 			'',
 			__( 'Comments are Disabled', 'inspiro' )
 		);

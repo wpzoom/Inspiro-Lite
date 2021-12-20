@@ -77,14 +77,12 @@ class Inspiro_Notice_Review extends Inspiro_Notices {
 						printf(
 							/* Translators: %1$s current user display name. */
 							esc_html__(
-								'Dear %1$s! We hope you are happy with everything that the %2$s has to offer. %3$sIf you can spare a moment, please consider adding a rating for %4$s on WordPress.org. %3$sIt helps us continue providing updates and support for this theme.',
+								'We hope you are happy with everything that the %1$s has to offer. %2$sIf you can spare a moment, please consider adding a rating on WordPress.org. %2$sIt helps us continue providing updates and support for this theme.',
 								'inspiro'
 							),
-							'<strong>' . esc_html( $current_user->display_name ) . '</strong>',
 							// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
-							'<a href="' . esc_url( admin_url( 'themes.php?page=inspiro' ) ) . '"><strong>' . esc_html( $theme_data->Name ) . ' Theme</strong></a>',
+							'<a href="' . esc_url( admin_url( 'themes.php?page=inspiro' ) ) . '"><strong>' . esc_html( $theme_data->Name ) . ' theme</strong></a>',
 							'<br>',
-							esc_html( $theme_data->Name ) // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 						);
 						?>
 					</p>
