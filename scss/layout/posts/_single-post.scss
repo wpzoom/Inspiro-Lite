@@ -125,12 +125,20 @@
     }
 }
 
-/* Gutenberg Images */
+/* Gutenberg */
 
 .entry-content {
     .alignfull {
         margin-left: calc( -100vw / 2 + 100% / 2);
         margin-right: calc( -100vw / 2 + 100% / 2);
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.25em;
+            padding-right: 1.25em;
+        }
     }
 
     .alignfull,
@@ -140,11 +148,11 @@
     }
 
     .wp-block-columns {
-        max-width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 1.25em;
-        padding-right: 1.25em;
+        // max-width: 1200px;
+        // margin-left: auto;
+        // margin-right: auto;
+        // padding-left: 1.25em;
+        // padding-right: 1.25em;
     }
 }
 
