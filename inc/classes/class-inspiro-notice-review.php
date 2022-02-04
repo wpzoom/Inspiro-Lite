@@ -82,7 +82,7 @@ class Inspiro_Notice_Review extends Inspiro_Notices {
 							),
 							// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 							'<a href="' . esc_url( admin_url( 'themes.php?page=inspiro' ) ) . '"><strong>' . esc_html( $theme_data->Name ) . ' theme</strong></a>',
-							'<br>',
+							'<br>'
 						);
 						?>
 					</p>
