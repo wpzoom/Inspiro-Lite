@@ -57,7 +57,7 @@ function inspiro_display_theme_page() {
 						<a href="https://www.wpzoom.com/themes/inspiro/" class="button button-primary" target="_blank">
 							<?php esc_html_e( 'Get Inspiro Premium &rarr;', 'inspiro' ); ?>
 						</a>
-                        <a class="button button-primary ilovewp-button wpz-button-youtube" href="https://www.youtube.com/watch?v=ZltZDp2z0N8" rel="noopener" target="_blank"><span class="dashicons dashicons-youtube"></span> <?php esc_html_e( 'Theme Video Overview &rarr;', 'inspiro' ); ?></a>
+                        <a class="button button-primary wpz-button-youtube" href="https://www.youtube.com/watch?v=ZltZDp2z0N8" rel="noopener" target="_blank"><span class="dashicons dashicons-youtube"></span> <?php esc_html_e( 'Theme Video Overview &rarr;', 'inspiro' ); ?></a>
 
 						<a href="https://www.wpzoom.com/showcase/theme/inspiro/" target="_blank">
 							<?php esc_html_e( 'Inspiro Showcase', 'inspiro' ); ?>

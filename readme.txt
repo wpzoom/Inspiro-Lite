@@ -110,7 +110,6 @@ Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 * Added new option to remove the hero area from the homepage
 * Improvements to the blocks styling (Query Loop, etc.)
 * Added a new page template that doesn't include the hero area on the homepage
-* Added new block pattern: Fullscreen Hero Area
 
 = 1.6.4 =
 * Fixed a bug happening on old PHP versions (7.2)
