@@ -13,3 +13,4 @@ node_modules/
 /vendor/
 /inspiro-lite
 /.env/
+.vscode/launch.json
