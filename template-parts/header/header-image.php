@@ -12,7 +12,11 @@
 <div class="custom-header">
 	<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
 
-	<div class="custom-header-media">
+    <?php
+        $overlay_show        = inspiro_get_theme_mod( 'overlay_show' );
+     ?>
+
+	<div class="custom-header-media<?php if (!$overlay_show) { echo ' hide_overlay'; } ?>">
 		<?php the_custom_header_markup(); ?>
 	</div>
 

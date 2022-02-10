@@ -48,6 +48,23 @@
 		width: 74.37%;
 	}
 
+    .wpz-button-youtube {
+        background: #cc0000 !important;
+        border-color: #cc0000 !important;
+
+        &:hover {
+            background: #aa0000 !important;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 1px #fff, 0 0 0 3px #aa0000;
+        }
+
+        .dashicons {
+            vertical-align: middle;
+        }
+    }
+
 	.theme-intro {
 		margin: 20px 0;
 		border: 1px solid #e2e9ec;

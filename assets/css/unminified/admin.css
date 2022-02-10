@@ -106,6 +106,23 @@
     width: 74.37%;
 }
 
+.theme-info-wrap .wpz-button-youtube {
+    background: #cc0000 !important;
+    border-color: #cc0000 !important;
+}
+
+.theme-info-wrap .wpz-button-youtube:hover {
+    background: #aa0000 !important;
+}
+
+.theme-info-wrap .wpz-button-youtube:focus {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 3px #aa0000;
+}
+
+.theme-info-wrap .wpz-button-youtube .dashicons {
+    vertical-align: middle;
+}
+
 .theme-info-wrap .theme-intro {
     margin: 20px 0;
     border: 1px solid #e2e9ec;

@@ -132,17 +132,18 @@
         margin-left: calc( -100vw / 2 + 100% / 2);
         margin-right: calc( -100vw / 2 + 100% / 2);
 
+        .wp-block-cover__inner-container,
         .wp-block-group__inner-container {
             max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
-            padding-left: 1.25em;
-            padding-right: 1.25em;
+            padding-left: 2em;
+            padding-right: 2em;
         }
     }
 
     .alignfull,
-    .alignfull:not(.wp-block-group) img {
+    .alignfull:not(.wp-block-group):not(.wp-block-post-featured-image):not(.wp-block-query):not(.wpzoom-blocks_portfolio-block):not(.wp-block-cover) img {
         width: 100vw;
         max-width: 100vw;
     }
@@ -184,4 +185,82 @@
             border-color: $primary-color;
         }
     }
+}
+
+.entry-content > {
+
+    .wp-block-gallery,
+    p,
+    p.has-text-align-center {
+    }
+
+}
+
+.builder-wrap > {
+
+    .wp-block-gallery,
+    p,
+    p.has-text-align-center {
+        margin: 2.8125em auto;
+        max-width: calc(950px + 20px);
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+}
+
+.wp-block-group > .wp-block-group__inner-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+
+.wp-block-group:where(.has-background) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+
+.wp-block-post {
+    list-style-type: none !important;
+
+    .wp-block-post-title {
+        font-size: 1.3em;
+
+        a {
+            text-decoration: none !important;
+            color: #000;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
+    .more-link{
+        font-weight: 700;
+        display: table;
+        text-align: left;
+        margin: 10px 0;
+        text-decoration: none;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .page .entry-cover-image,
+    .single .entry-cover-image,
+    .single-featured-image-header {
+        min-height: 400px;
+
+        img {
+            height: 400px;
+            object-fit: cover;
+        }
+    }
+
 }

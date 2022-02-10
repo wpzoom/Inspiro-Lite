@@ -55,7 +55,8 @@ body:not(.inspiro-front-page) .entry-header {
 body:not(.page-layout-sidebar-right) {
     #primary {
         max-width: calc( #{ $content-width-small } + 20px );
-        margin: 0 auto em(48);
+        margin: 0 auto;
+        // margin: 0 auto em(48);
         padding-left: 10px;
         padding-right: 10px;
 

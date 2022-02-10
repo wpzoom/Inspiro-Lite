@@ -10,11 +10,7 @@ a {
 
 }
 
-body:not(.fl-builder) .entry-content a,
-body:not(.woocommerce-page) .entry-content a,
-.entry-summary a:not(.more-link),
-.comment-body a,
-.textwidget a {
+.entry-content a {
     text-decoration: underline;
 }
 

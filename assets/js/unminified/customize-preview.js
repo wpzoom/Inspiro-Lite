@@ -97,6 +97,29 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
         } );
     } );
 
+    wp.customize( 'hero_enable', function ( value ) {
+        value.bind( function ( to ) {
+            if ( to === true ) {
+                $( '.custom-header' ).css( 'display', 'block' );
+                $( document.body ).addClass( 'has-header-image' );
+            } else if ( to === false ) {
+                $( '.custom-header' ).css( 'display', 'none' );
+                $( document.body ).removeClass( 'has-header-image' );
+            }
+        } );
+    } );
+
+
+    wp.customize( 'overlay_show', function ( value ) {
+        value.bind( function ( to ) {
+            if ( to === true ) {
+                $( '.has-header-image .custom-header-media, .has-header-video .custom-header-media' ).removeClass( 'hide_overlay' );
+            } else if ( to === false ) {
+                $( '.has-header-image .custom-header-media, .has-header-video .custom-header-media' ).addClass( 'hide_overlay' );
+            }
+        } );
+    } );
+
 	// Header text color.
 	wp.customize( 'header_textcolor', function ( value ) {
 		value.bind( function ( to ) {
@@ -171,6 +194,14 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 		return '' !== image && 'remove-header' !== image;
 	}
 
+    // Whether the hero area is enabled
+    function heroEnabled() {
+        const hero_enable = wp.customize( 'hero_enable' )();
+
+        return '' !== hero_enable && 'remove-header' !== hero_enable;
+
+    }
+
 	// Whether a header video is available.
 	function hasHeaderVideo() {
 		const externalVideo = wp.customize( 'external_header_video' )(),
@@ -181,7 +212,7 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 
 	// Toggle a body class if a custom header exists.
 	$.each(
-		[ 'external_header_video', 'header_image', 'header_video' ],
+		[ 'external_header_video', 'header_image', 'header_video'],
 		function ( index, settingId ) {
 			wp.customize( settingId, function ( setting ) {
 				setting.bind( function () {

@@ -432,10 +432,48 @@ function inspiro_register_block_patterns() {
 			array(
 				'title'       => __( 'Homepage', 'inspiro' ),
 				'description' => _x( 'A call to action with a beautiful two-column gallery below.', 'Block pattern description', 'inspiro' ),
-				'content'     => "<!-- wp:paragraph {\"align\":\"center\"} -->\n<p class=\"has-text-align-center\"><meta charset=\"utf-8\">This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual copy might look like if it were real content.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:spacer {\"height\":55} -->\n<div style=\"height:55px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:group {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#e5e9ec\"}}} -->\n<div class=\"wp-block-group alignfull has-background\" style=\"background-color:#e5e9ec\"><div class=\"wp-block-group__inner-container\"><!-- wp:columns -->\n<div class=\"wp-block-columns\"><!-- wp:column {\"verticalAlignment\":\"center\"} -->\n<div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:heading -->\n<h2>About us</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual copy might look like if it were real content.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons {\"contentJustification\":\"left\"} -->\n<div class=\"wp-block-buttons is-content-justification-left\"><!-- wp:button {\"borderRadius\":0,\"className\":\"is-style-outline\"} -->\n<div class=\"wp-block-button is-style-outline\"><a class=\"wp-block-button__link no-border-radius\" href=\"#\">About Us</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons -->\n\n<!-- wp:paragraph -->\n<p></p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:spacer {\"height\":48} -->\n<div style=\"height:48px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:image {\"id\":26,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_JKMGVEJMPU.jpg\" alt=\"\" class=\"wp-image-26\"/></figure>\n<!-- /wp:image --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns --></div></div>\n<!-- /wp:group -->\n\n<!-- wp:group {\"align\":\"full\"} -->\n<div class=\"wp-block-group alignfull\"><div class=\"wp-block-group__inner-container\"><!-- wp:columns {\"verticalAlignment\":\"center\"} -->\n<div class=\"wp-block-columns are-vertically-aligned-center\"><!-- wp:column {\"verticalAlignment\":\"center\"} -->\n<div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:spacer {\"height\":48} -->\n<div style=\"height:48px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:image {\"id\":27,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_M6D1GS9PSL.jpg\" alt=\"\" class=\"wp-image-27\"/></figure>\n<!-- /wp:image --></div>\n<!-- /wp:column -->\n\n<!-- wp:column {\"verticalAlignment\":\"center\"} -->\n<div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:heading -->\n<h2>Our Services</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual copy might look like if it were real content.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button {\"borderRadius\":0,\"className\":\"is-style-outline\"} -->\n<div class=\"wp-block-button is-style-outline\"><a class=\"wp-block-button__link no-border-radius\" href=\"#\">Services</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns --></div></div>\n<!-- /wp:group -->\n\n<!-- wp:group {\"align\":\"full\",\"backgroundColor\":\"black\"} -->\n<div class=\"wp-block-group alignfull has-black-background-color has-background\"><div class=\"wp-block-group__inner-container\"><!-- wp:heading {\"textAlign\":\"center\",\"textColor\":\"white\"} -->\n<h2 class=\"has-text-align-center has-white-color has-text-color\"><strong>Gallery</strong></h2>\n<!-- /wp:heading -->\n\n<!-- wp:gallery {\"ids\":[28,27,26,25,24,29],\"linkTo\":\"none\",\"align\":\"center\"} -->\n<figure class=\"wp-block-gallery aligncenter columns-3 is-cropped\"><ul class=\"blocks-gallery-grid\"><li class=\"blocks-gallery-item\"><figure><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_P9QYJ8AAL8.jpg\" alt=\"\" data-id=\"28\" data-full-url=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_P9QYJ8AAL8.jpg\" data-link=\"#\" class=\"wp-image-28\"/></figure></li><li class=\"blocks-gallery-item\"><figure><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_M6D1GS9PSL.jpg\" alt=\"\" data-id=\"27\" data-full-url=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_M6D1GS9PSL.jpg\" data-link=\"#\" class=\"wp-image-27\"/></figure></li><li class=\"blocks-gallery-item\"><figure><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_JKMGVEJMPU.jpg\" alt=\"\" data-id=\"26\" data-full-url=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_JKMGVEJMPU.jpg\" data-link=\"#\" class=\"wp-image-26\"/></figure></li><li class=\"blocks-gallery-item\"><figure><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_CXVCF2NNWJ.jpg\" alt=\"\" data-id=\"25\" data-full-url=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_CXVCF2NNWJ.jpg\" data-link=\"#\" class=\"wp-image-25\"/></figure></li><li class=\"blocks-gallery-item\"><figure><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_89BQZ89TLH.jpg\" alt=\"\" data-id=\"24\" data-full-url=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_89BQZ89TLH.jpg\" data-link=\"#\" class=\"wp-image-24\"/></figure></li><li class=\"blocks-gallery-item\"><figure><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_PGXCCTCLB5.jpg\" alt=\"\" data-id=\"29\" data-full-url=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_PGXCCTCLB5.jpg\" data-link=\"#\" class=\"wp-image-29\"/></figure></li></ul></figure>\n<!-- /wp:gallery --></div></div>\n<!-- /wp:group -->\n\n<!-- wp:cover {\"url\":\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_89BQZ89TLH.jpg\",\"id\":24,\"hasParallax\":true,\"dimRatio\":40,\"overlayColor\":\"black\",\"minHeight\":375,\"minHeightUnit\":\"px\",\"contentPosition\":\"center center\",\"align\":\"full\",\"className\":\"is-position-center-center\"} -->\n<div class=\"wp-block-cover alignfull has-background-dim-40 has-black-background-color has-background-dim has-parallax is-position-center-center\" style=\"background-image:url(https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_89BQZ89TLH.jpg);min-height:375px\"><div class=\"wp-block-cover__inner-container\"><!-- wp:paragraph {\"align\":\"center\",\"placeholder\":\"Write title…\",\"style\":{\"typography\":{\"lineHeight\":\"1.1\"},\"color\":{\"text\":\"#fffffa\"}},\"fontSize\":\"huge\"} -->\n<p class=\"has-text-align-center has-text-color has-huge-font-size\" style=\"color:#fffffa;line-height:1.1\"><strong>Unleash your creativity with Inspiro</strong></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph {\"align\":\"center\"} -->\n<p class=\"has-text-align-center\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:spacer {\"height\":39} -->\n<div style=\"height:39px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:buttons {\"contentJustification\":\"center\"} -->\n<div class=\"wp-block-buttons is-content-justification-center\"><!-- wp:button {\"borderRadius\":0,\"textColor\":\"white\",\"className\":\"is-style-outline\"} -->\n<div class=\"wp-block-button is-style-outline\"><a class=\"wp-block-button__link has-white-color has-text-color no-border-radius\" href=\"#\">Contact us</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div></div>\n<!-- /wp:cover -->",
+				'content'     => "<!-- wp:paragraph {\"align\":\"center\"} -->\n<p class=\"has-text-align-center\"><meta charset=\"utf-8\">This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual copy might look like if it were real content.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:spacer {\"height\":55} -->\n<div style=\"height:55px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:group {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#e5e9ec\"}}} -->\n<div class=\"wp-block-group alignfull has-background\" style=\"background-color:#e5e9ec\"><div class=\"wp-block-group__inner-container\"><!-- wp:columns -->\n<div class=\"wp-block-columns\"><!-- wp:column {\"verticalAlignment\":\"center\"} -->\n<div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:heading -->\n<h2>About us</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual copy might look like if it were real content.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons {\"contentJustification\":\"left\"} -->\n<div class=\"wp-block-buttons is-content-justification-left\"><!-- wp:button {\"borderRadius\":0,\"className\":\"is-style-outline\"} -->\n<div class=\"wp-block-button is-style-outline\"><a class=\"wp-block-button__link no-border-radius\" href=\"#\">About Us</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons -->\n\n<!-- wp:paragraph -->\n<p></p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:spacer {\"height\":48} -->\n<div style=\"height:48px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:image {\"id\":26,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_JKMGVEJMPU.jpg\" alt=\"\" class=\"wp-image-26\"/></figure>\n<!-- /wp:image --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns --></div></div>\n<!-- /wp:group -->\n\n<!-- wp:group {\"align\":\"full\"} -->\n<div class=\"wp-block-group alignfull\"><div class=\"wp-block-group__inner-container\"><!-- wp:columns {\"verticalAlignment\":\"center\"} -->\n<div class=\"wp-block-columns are-vertically-aligned-center\"><!-- wp:column {\"verticalAlignment\":\"center\"} -->\n<div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:spacer {\"height\":48} -->\n<div style=\"height:48px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:image {\"id\":27,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_M6D1GS9PSL.jpg\" alt=\"\" class=\"wp-image-27\"/></figure>\n<!-- /wp:image --></div>\n<!-- /wp:column -->\n\n<!-- wp:column {\"verticalAlignment\":\"center\"} -->\n<div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:heading -->\n<h2>Our Services</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual copy might look like if it were real content.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button {\"borderRadius\":0,\"className\":\"is-style-outline\"} -->\n<div class=\"wp-block-button is-style-outline\"><a class=\"wp-block-button__link no-border-radius\" href=\"#\">Services</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns --></div></div>\n<!-- /wp:group -->\n\n<!-- wp:group {\"align\":\"full\",\"backgroundColor\":\"black\"} -->\n<div class=\"wp-block-group alignfull has-black-background-color has-background\"><div class=\"wp-block-group__inner-container\"><!-- wp:heading {\"textAlign\":\"center\",\"textColor\":\"white\"} -->\n<h2 class=\"has-text-align-center has-white-color has-text-color\"><strong>Gallery</strong></h2>\n<!-- /wp:heading -->\n\n<!-- wp:gallery {\"ids\":[28,27,26,25,24,29],\"linkTo\":\"none\",\"align\":\"center\"} -->\n<figure class=\"wp-block-gallery aligncenter columns-3 is-cropped\"><ul class=\"blocks-gallery-grid\"><li class=\"blocks-gallery-item\"><figure><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_P9QYJ8AAL8.jpg\" alt=\"\" data-id=\"28\" data-full-url=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_P9QYJ8AAL8.jpg\" data-link=\"#\" class=\"wp-image-28\"/></figure></li><li class=\"blocks-gallery-item\"><figure><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_M6D1GS9PSL.jpg\" alt=\"\" data-id=\"27\" data-full-url=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_M6D1GS9PSL.jpg\" data-link=\"#\" class=\"wp-image-27\"/></figure></li><li class=\"blocks-gallery-item\"><figure><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_JKMGVEJMPU.jpg\" alt=\"\" data-id=\"26\" data-full-url=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_JKMGVEJMPU.jpg\" data-link=\"#\" class=\"wp-image-26\"/></figure></li><li class=\"blocks-gallery-item\"><figure><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_CXVCF2NNWJ.jpg\" alt=\"\" data-id=\"25\" data-full-url=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_CXVCF2NNWJ.jpg\" data-link=\"#\" class=\"wp-image-25\"/></figure></li><li class=\"blocks-gallery-item\"><figure><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_89BQZ89TLH.jpg\" alt=\"\" data-id=\"24\" data-full-url=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_89BQZ89TLH.jpg\" data-link=\"#\" class=\"wp-image-24\"/></figure></li><li class=\"blocks-gallery-item\"><figure><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_PGXCCTCLB5.jpg\" alt=\"\" data-id=\"29\" data-full-url=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_PGXCCTCLB5.jpg\" data-link=\"#\" class=\"wp-image-29\"/></figure></li></ul></figure>\n<!-- /wp:gallery --></div></div>\n<!-- /wp:group -->\n\n<!-- wp:cover {\"url\":\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_89BQZ89TLH.jpg\",\"id\":24,\"hasParallax\":true,\"dimRatio\":40,\"overlayColor\":\"black\",\"minHeight\":375,\"minHeightUnit\":\"px\",\"contentPosition\":\"center center\",\"align\":\"full\",\"className\":\"is-position-center-center\"} -->\n<div class=\"wp-block-cover alignfull has-background-dim-40 has-black-background-color has-background-dim has-parallax is-position-center-center\" style=\"background-image:url(https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_89BQZ89TLH.jpg);min-height:375px\"><div class=\"wp-block-cover__inner-container\"><!-- wp:paragraph {\"align\":\"center\",\"placeholder\":\"Write title…\",\"style\":{\"typography\":{\"lineHeight\":\"1.1\"},\"color\":{\"text\":\"#fffffa\"}},\"fontSize\":\"huge\"} -->\n<p class=\"has-text-align-center has-text-color has-huge-font-size\" style=\"color:#fffffa;line-height:1.1\"><strong>Unleash your creativity with Inspiro</strong></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph {\"align\":\"center\"} -->\n<p class=\"has-text-align-center\" style=\"color:#ffffff;\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:spacer {\"height\":39} -->\n<div style=\"height:39px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:buttons {\"contentJustification\":\"center\"} -->\n<div class=\"wp-block-buttons is-content-justification-center\"><!-- wp:button {\"borderRadius\":0,\"textColor\":\"white\",\"className\":\"is-style-outline\"} -->\n<div class=\"wp-block-button is-style-outline\"><a class=\"wp-block-button__link has-white-color has-text-color no-border-radius\" href=\"#\">Contact us</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div></div>\n<!-- /wp:cover -->",
 				'categories'  => array( 'inspiro' ),
 			)
 		);
+
+        register_block_pattern( // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_pattern
+            'inspiro/video-section',
+            array(
+                'title'       => __( 'Background video', 'inspiro' ),
+                'content'     => '<!-- wp:cover {"url":"' . get_stylesheet_directory_uri() . '/assets/videos/pacific.mp4","id":6672,"dimRatio":20,"backgroundType":"video","minHeight":700,"contentPosition":"center center","isDark":false,"align":"full"} -->
+                    <div class="wp-block-cover alignfull is-light" style="min-height:700px"><span aria-hidden="true" class="has-background-dim-20 wp-block-cover__gradient-background has-background-dim"></span><video class="wp-block-cover__video-background intrinsic-ignore" autoplay muted loop playsinline src="' . get_stylesheet_directory_uri() . '/assets/videos/pacific.mp4" data-object-fit="cover"></video><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","style":{"typography":{"fontSize":"70px","fontStyle":"normal","fontWeight":"900"}},"textColor":"white"} -->
+                    <p class="has-text-align-center has-white-color has-text-color" style="font-size:70px;font-style:normal;font-weight:900"><strong>Create. Amaze. Inspire.</strong></p>
+                    <!-- /wp:paragraph -->
+
+                    <!-- wp:paragraph {"align":"center","style":{"typography":{"letterSpacing":"1px"}},"textColor":"white","fontSize":"medium"} -->
+                    <p class="has-text-align-center has-white-color has-text-color has-medium-font-size" style="letter-spacing:1px">Inspiro is a Portfolio &amp; Photography WordPress Theme. This area supports self-hosted videos as well as videos from YouTube and Vimeo.</p>
+                    <!-- /wp:paragraph -->
+
+                    <!-- wp:spacer {"height":71} -->
+                    <div style="height:71px" aria-hidden="true" class="wp-block-spacer"></div>
+                    <!-- /wp:spacer -->
+
+                    <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+                    <div class="wp-block-buttons"><!-- wp:button {"textColor":"white","style":{"border":{"radius":"0px"}},"className":"is-style-outline"} -->
+                    <div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-white-color has-text-color" href="#" style="border-radius:0px">Learn More</a></div>
+                    <!-- /wp:button --></div>
+                    <!-- /wp:buttons --></div></div>
+                    <!-- /wp:cover -->',
+                'categories'  => array( 'inspiro' ),
+            )
+        );
+
+
+        register_block_pattern( // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_pattern
+            'inspiro/fullscreen-hero',
+            array(
+                'title'       => __( 'Fullscreen Hero Area', 'inspiro' ),
+                'description' => _x( 'A fullscreen area similar to the homepage hero.', 'Block pattern description', 'inspiro' ),
+                'content'     => "<!-- wp:cover {\"url\":\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_M6D1GS9PSL.jpg\",\"id\":5,\"hasParallax\":true,\"dimRatio\":50,\"minHeight\":100,\"minHeightUnit\":\"vh\",\"contentPosition\":\"center center\",\"align\":\"full\"} -->\n<div class=\"wp-block-cover alignfull has-parallax\" style=\"background-image:url(https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_M6D1GS9PSL.jpg);min-height:100vh\"><span aria-hidden=\"true\" class=\"wp-block-cover__gradient-background has-background-dim\"></span><div class=\"wp-block-cover__inner-container\"><!-- wp:paragraph {\"align\":\"center\",\"placeholder\":\"Write title…\",\"style\":{\"typography\":{\"fontSize\":\"70px\",\"fontStyle\":\"normal\",\"fontWeight\":\"900\"}},\"textColor\":\"white\"} -->\n<p class=\"has-text-align-center has-white-color has-text-color\" style=\"font-size:70px;font-style:normal;font-weight:900\"><strong>Create. Amaze. Inspire.</strong></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph {\"align\":\"center\",\"style\":{\"typography\":{\"letterSpacing\":\"1px\"}},\"textColor\":\"white\",\"fontSize\":\"medium\"} -->\n<p class=\"has-text-align-center has-white-color has-text-color has-medium-font-size\" style=\"letter-spacing:1px\">Inspiro is a Portfolio &amp; Photography WordPress Theme. This area supports self-hosted videos as well as videos from YouTube and Vimeo.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons {\"layout\":{\"type\":\"flex\",\"justifyContent\":\"center\"}} -->\n<div class=\"wp-block-buttons\"><!-- wp:button {\"textColor\":\"white\",\"style\":{\"border\":{\"radius\":\"0px\"}},\"className\":\"is-style-outline\"} -->\n<div class=\"wp-block-button is-style-outline\"><a class=\"wp-block-button__link has-white-color has-text-color\" href=\"#\" style=\"border-radius:0px\"><strong>Learn More</strong></a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div></div>\n<!-- /wp:cover -->",
+                'categories'  => array( 'inspiro' ),
+            )
+        );
 
 		register_block_pattern( // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_pattern
 			'inspiro/full-section',
@@ -446,6 +484,341 @@ function inspiro_register_block_patterns() {
 				'categories'  => array( 'inspiro' ),
 			)
 		);
+
+        register_block_pattern( // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_pattern
+            'inspiro/about',
+            array(
+                'title'       => __( 'About Us', 'inspiro' ),
+                'content'     => '<!-- wp:heading {"style":{"typography":{"fontStyle":"normal","fontWeight":"100"}},"fontSize":"large"} -->
+                    <h2 class="has-large-font-size" id="inspiro-is-a-digital-product-agency-that-focuses-on-strategy-and-design" style="font-style:normal;font-weight:100"><strong>Inspiro is a digital product agency that focuses on strategy and design.</strong></h2>
+                    <!-- /wp:heading -->
+
+                    <!-- wp:spacer -->
+                    <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+                    <!-- /wp:spacer -->
+
+                    <!-- wp:columns {"align":"wide"} -->
+                    <div class="wp-block-columns alignwide"><!-- wp:column -->
+                    <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-large"><img src="' . get_stylesheet_directory_uri() . '/assets/images/video-1.jpeg" alt=""/></figure>
+                    <!-- /wp:image -->
+
+                    <!-- wp:paragraph {"textColor":"black","fontSize":"medium"} -->
+                    <p class="has-black-color has-text-color has-medium-font-size"><a href="#">The Crew</a></p>
+                    <!-- /wp:paragraph -->
+
+                    <!-- wp:paragraph {"style":{"color":{"text":"#7a7a7a"}}} -->
+                    <p class="has-text-color" style="color:#7a7a7a">This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a place holder for people who need some type to visualize what the actual copy might look like if it were real content.</p>
+                    <!-- /wp:paragraph --></div>
+                    <!-- /wp:column -->
+
+                    <!-- wp:column -->
+                    <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-large"><img src="' . get_stylesheet_directory_uri() . '/assets/images/video-2.jpeg" alt=""/></figure>
+                    <!-- /wp:image -->
+
+                    <!-- wp:paragraph {"textColor":"black","fontSize":"medium"} -->
+                    <p class="has-black-color has-text-color has-medium-font-size"><a href="#">Our Philosophy</a></p>
+                    <!-- /wp:paragraph -->
+
+                    <!-- wp:paragraph {"style":{"color":{"text":"#7a7a7a"}}} -->
+                    <p class="has-text-color" style="color:#7a7a7a">This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a place holder for people who need some type to visualize what the actual copy might look like if it were real content.</p>
+                    <!-- /wp:paragraph --></div>
+                    <!-- /wp:column -->
+
+                    <!-- wp:column -->
+                    <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-large"><img src="' . get_stylesheet_directory_uri() . '/assets/images/video-3.jpeg" alt=""/></figure>
+                    <!-- /wp:image -->
+
+                    <!-- wp:paragraph {"textColor":"black","fontSize":"medium"} -->
+                    <p class="has-black-color has-text-color has-medium-font-size"><a href="#">Services</a></p>
+                    <!-- /wp:paragraph -->
+
+                    <!-- wp:paragraph {"style":{"color":{"text":"#7a7a7a"}}} -->
+                    <p class="has-text-color" style="color:#7a7a7a">This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a place holder for people who need some type to visualize what the actual copy might look like if it were real content.</p>
+                    <!-- /wp:paragraph --></div>
+                    <!-- /wp:column --></div>
+                    <!-- /wp:columns -->
+
+                    <!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"300"}},"fontSize":"large"} -->
+                    <h3 class="has-large-font-size" id="inspiro-is-a-digital-product-agency-that-focuses-on-strategy-and-desig" style="font-weight:300">Showreel</h3>
+                    <!-- /wp:heading -->
+
+                    <!-- wp:embed {"url":"https://videopress.com/v/bjvmxiQS","type":"video","providerNameSlug":"videopress","responsive":true,"align":"wide","className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
+                    <figure class="wp-block-embed alignwide is-type-video is-provider-videopress wp-block-embed-videopress wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+                    https://videopress.com/v/bjvmxiQS
+                    </div></figure>
+                    <!-- /wp:embed -->
+
+                    <!-- wp:spacer -->
+                    <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+                    <!-- /wp:spacer -->
+
+                    <!-- wp:cover {"overlayColor":"black","minHeight":316,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"50px","right":"50px","bottom":"50px","left":"50px"}}}} -->
+                    <div class="wp-block-cover alignfull" style="padding-top:50px;padding-right:50px;padding-bottom:50px;padding-left:50px;min-height:316px"><span aria-hidden="true" class="has-black-background-color has-background-dim-100 wp-block-cover__gradient-background has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:columns {"verticalAlignment":"center"} -->
+                    <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"top":"20px","right":"0px","bottom":"20px","left":"0px"}}}} -->
+                    <div class="wp-block-column is-vertically-aligned-center" style="padding-top:20px;padding-right:0px;padding-bottom:20px;padding-left:0px"><!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between","flexWrap":"nowrap"}} -->
+                    <div class="wp-block-group"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-full"><img src="' . get_stylesheet_directory_uri() . '/assets/images/laurel_left.png" alt=""/></figure>
+                    <!-- /wp:image -->
+
+                    <!-- wp:group -->
+                    <div class="wp-block-group"><!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1","fontSize":"18px"}},"textColor":"white"} -->
+                    <p class="has-text-align-center has-white-color has-text-color" style="font-size:18px;line-height:1"><strong>' . esc_html__( '"Best Film"', 'inspiro' ) . '<br></strong>' . esc_html__( 'Winner', 'inspiro' ) . '</p>
+                    <!-- /wp:paragraph --></div>
+                    <!-- /wp:group -->
+
+                    <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-full"><img src="' . get_stylesheet_directory_uri() . '/assets/images/laurel_right.png" alt=""/></figure>
+                    <!-- /wp:image --></div>
+                    <!-- /wp:group --></div>
+                    <!-- /wp:column -->
+
+                    <!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"top":"20px","right":"0px","bottom":"20px","left":"0px"}}}} -->
+                    <div class="wp-block-column is-vertically-aligned-center" style="padding-top:20px;padding-right:0px;padding-bottom:20px;padding-left:0px"><!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between","flexWrap":"nowrap"}} -->
+                    <div class="wp-block-group"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-full"><img src="' . get_stylesheet_directory_uri() . '/assets/images/laurel_left.png" alt=""/></figure>
+                    <!-- /wp:image -->
+
+                    <!-- wp:group -->
+                    <div class="wp-block-group"><!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1","fontSize":"18px"}},"textColor":"white"} -->
+                    <p class="has-text-align-center has-white-color has-text-color" style="font-size:18px;line-height:1"><strong>' . esc_html__( '"New Film Festival"', 'inspiro' ) . '</strong><br>' . esc_html__( 'Winner', 'inspiro' ) . '</p>
+                    <!-- /wp:paragraph --></div>
+                    <!-- /wp:group -->
+
+                    <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-full"><img src="' . get_stylesheet_directory_uri() . '/assets/images/laurel_right.png" alt=""/></figure>
+                    <!-- /wp:image --></div>
+                    <!-- /wp:group --></div>
+                    <!-- /wp:column -->
+
+                    <!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"top":"20px","right":"0px","bottom":"20px","left":"0px"}}}} -->
+                    <div class="wp-block-column is-vertically-aligned-center" style="padding-top:20px;padding-right:0px;padding-bottom:20px;padding-left:0px"><!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between","flexWrap":"nowrap"}} -->
+                    <div class="wp-block-group"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-full"><img src="' . get_stylesheet_directory_uri() . '/assets/images/laurel_left.png" alt=""/></figure>
+                    <!-- /wp:image -->
+
+                    <!-- wp:group -->
+                    <div class="wp-block-group"><!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1","fontSize":"18px"}},"textColor":"white"} -->
+                    <p class="has-text-align-center has-white-color has-text-color" style="font-size:18px;line-height:1"><strong>' . esc_html__( '"Best Short"', 'inspiro' ) . '</strong><br>' . esc_html__( 'Winner', 'inspiro' ) . '</p>
+                    <!-- /wp:paragraph --></div>
+                    <!-- /wp:group -->
+
+                    <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-full"><img src="' . get_stylesheet_directory_uri() . '/assets/images/laurel_right.png" alt=""/></figure>
+                    <!-- /wp:image --></div>
+                    <!-- /wp:group --></div>
+                    <!-- /wp:column --></div>
+                    <!-- /wp:columns --></div></div>
+                    <!-- /wp:cover -->',
+                'categories'  => array( 'inspiro' ),
+            )
+        );
+
+
+        register_block_pattern( // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_pattern
+            'inspiro/about-dark',
+            array(
+                'title'       => __( 'About Us (Dark)', 'inspiro' ),
+                'content'     => '<!-- wp:group {"align":"full","backgroundColor":"black","textColor":"white"} -->
+                    <div class="wp-block-group alignfull has-white-color has-black-background-color has-text-color has-background"><!-- wp:spacer {"height":167} -->
+                    <div style="height:167px" aria-hidden="true" class="wp-block-spacer"></div>
+                    <!-- /wp:spacer -->
+
+                    <!-- wp:heading {"style":{"typography":{"fontStyle":"normal","fontWeight":"100"}},"textColor":"white","fontSize":"large"} -->
+                    <h2 class="has-white-color has-text-color has-large-font-size" id="inspiro-is-a-digital-product-agency-that-focuses-on-strategy-and-design" style="font-style:normal;font-weight:100"><strong>Inspiro is a digital product agency that focuses on strategy and design.</strong></h2>
+                    <!-- /wp:heading -->
+
+                    <!-- wp:spacer -->
+                    <div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+                    <!-- /wp:spacer -->
+
+                    <!-- wp:columns {"align":"wide"} -->
+                    <div class="wp-block-columns alignwide"><!-- wp:column -->
+                    <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-large"><img src="' . get_stylesheet_directory_uri() . '/assets/images/video-1.jpeg" alt=""/></figure>
+                    <!-- /wp:image -->
+
+                    <!-- wp:paragraph {"textColor":"white","fontSize":"medium"} -->
+                    <p class="has-white-color has-text-color has-medium-font-size"><a href="#">The Crew</a></p>
+                    <!-- /wp:paragraph -->
+
+                    <!-- wp:paragraph {"style":{"color":{"text":"#7a7a7a"}}} -->
+                    <p class="has-text-color" style="color:#7a7a7a">This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a place holder for people who need some type to visualize what the actual copy might look like if it were real content.</p>
+                    <!-- /wp:paragraph --></div>
+                    <!-- /wp:column -->
+
+                    <!-- wp:column -->
+                    <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-large"><img src="' . get_stylesheet_directory_uri() . '/assets/images/video-2.jpeg" alt=""/></figure>
+                    <!-- /wp:image -->
+
+                    <!-- wp:paragraph {"textColor":"white","fontSize":"medium"} -->
+                    <p class="has-white-color has-text-color has-medium-font-size"><a href="#">Our Philosophy</a></p>
+                    <!-- /wp:paragraph -->
+
+                    <!-- wp:paragraph {"style":{"color":{"text":"#7a7a7a"}}} -->
+                    <p class="has-text-color" style="color:#7a7a7a">This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a place holder for people who need some type to visualize what the actual copy might look like if it were real content.</p>
+                    <!-- /wp:paragraph --></div>
+                    <!-- /wp:column -->
+
+                    <!-- wp:column -->
+                    <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-large"><img src="' . get_stylesheet_directory_uri() . '/assets/images/video-3.jpeg" alt=""/></figure>
+                    <!-- /wp:image -->
+
+                    <!-- wp:paragraph {"textColor":"white","fontSize":"medium"} -->
+                    <p class="has-white-color has-text-color has-medium-font-size"><a href="#">Services</a></p>
+                    <!-- /wp:paragraph -->
+
+                    <!-- wp:paragraph {"style":{"color":{"text":"#7a7a7a"}}} -->
+                    <p class="has-text-color" style="color:#7a7a7a">This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a place holder for people who need some type to visualize what the actual copy might look like if it were real content.</p>
+                    <!-- /wp:paragraph --></div>
+                    <!-- /wp:column --></div>
+                    <!-- /wp:columns -->
+
+                    <!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"300"}},"textColor":"white","fontSize":"large"} -->
+                    <h3 class="has-white-color has-text-color has-large-font-size" id="inspiro-is-a-digital-product-agency-that-focuses-on-strategy-and-desig" style="font-weight:300">Showreel</h3>
+                    <!-- /wp:heading -->
+
+                    <!-- wp:embed {"url":"https://videopress.com/v/bjvmxiQS","type":"video","providerNameSlug":"videopress","responsive":true,"align":"wide","className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
+                    <figure class="wp-block-embed alignwide is-type-video is-provider-videopress wp-block-embed-videopress wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+                    https://videopress.com/v/bjvmxiQS
+                    </div></figure>
+                    <!-- /wp:embed -->
+
+                    <!-- wp:spacer {"height":35} -->
+                    <div style="height:35px" aria-hidden="true" class="wp-block-spacer"></div>
+                    <!-- /wp:spacer -->
+
+                    <!-- wp:cover {"overlayColor":"black","minHeight":316,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"50px","right":"50px","bottom":"50px","left":"50px"}}}} -->
+                    <div class="wp-block-cover alignfull" style="padding-top:50px;padding-right:50px;padding-bottom:50px;padding-left:50px;min-height:316px"><span aria-hidden="true" class="has-black-background-color has-background-dim-100 wp-block-cover__gradient-background has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:columns {"verticalAlignment":"center"} -->
+                    <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"top":"20px","right":"0px","bottom":"20px","left":"0px"}}}} -->
+                    <div class="wp-block-column is-vertically-aligned-center" style="padding-top:20px;padding-right:0px;padding-bottom:20px;padding-left:0px"><!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between","flexWrap":"nowrap"}} -->
+                    <div class="wp-block-group"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-full"><img src="' . get_stylesheet_directory_uri() . '/assets/images/laurel_left.png" alt=""/></figure>
+                    <!-- /wp:image -->
+
+                    <!-- wp:group -->
+                    <div class="wp-block-group"><!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1","fontSize":"18px"}},"textColor":"white"} -->
+                    <p class="has-text-align-center has-white-color has-text-color" style="font-size:18px;line-height:1"><strong>' . esc_html__( '"Best Film"', 'inspiro' ) . '<br></strong>' . esc_html__( 'Winner', 'inspiro' ) . '</p>
+                    <!-- /wp:paragraph --></div>
+                    <!-- /wp:group -->
+
+                    <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-full"><img src="' . get_stylesheet_directory_uri() . '/assets/images/laurel_right.png" alt=""/></figure>
+                    <!-- /wp:image --></div>
+                    <!-- /wp:group --></div>
+                    <!-- /wp:column -->
+
+                    <!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"top":"20px","right":"0px","bottom":"20px","left":"0px"}}}} -->
+                    <div class="wp-block-column is-vertically-aligned-center" style="padding-top:20px;padding-right:0px;padding-bottom:20px;padding-left:0px"><!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between","flexWrap":"nowrap"}} -->
+                    <div class="wp-block-group"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-full"><img src="' . get_stylesheet_directory_uri() . '/assets/images/laurel_left.png" alt=""/></figure>
+                    <!-- /wp:image -->
+
+                    <!-- wp:group -->
+                    <div class="wp-block-group"><!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1","fontSize":"18px"}},"textColor":"white"} -->
+                    <p class="has-text-align-center has-white-color has-text-color" style="font-size:18px;line-height:1"><strong>' . esc_html__( '"New Film Festival"', 'inspiro' ) . '</strong><br>' . esc_html__( 'Winner', 'inspiro' ) . '</p>
+                    <!-- /wp:paragraph --></div>
+                    <!-- /wp:group -->
+
+                    <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-full"><img src="' . get_stylesheet_directory_uri() . '/assets/images/laurel_right.png" alt=""/></figure>
+                    <!-- /wp:image --></div>
+                    <!-- /wp:group --></div>
+                    <!-- /wp:column -->
+
+                    <!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"top":"20px","right":"0px","bottom":"20px","left":"0px"}}}} -->
+                    <div class="wp-block-column is-vertically-aligned-center" style="padding-top:20px;padding-right:0px;padding-bottom:20px;padding-left:0px"><!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between","flexWrap":"nowrap"}} -->
+                    <div class="wp-block-group"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-full"><img src="' . get_stylesheet_directory_uri() . '/assets/images/laurel_left.png" alt=""/></figure>
+                    <!-- /wp:image -->
+
+                    <!-- wp:group -->
+                    <div class="wp-block-group"><!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1","fontSize":"18px"}},"textColor":"white"} -->
+                    <p class="has-text-align-center has-white-color has-text-color" style="font-size:18px;line-height:1"><strong>' . esc_html__( '"Best Short"', 'inspiro' ) . '</strong><br>' . esc_html__( 'Winner', 'inspiro' ) . '</p>
+                    <!-- /wp:paragraph --></div>
+                    <!-- /wp:group -->
+
+                    <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-full"><img src="' . get_stylesheet_directory_uri() . '/assets/images/laurel_right.png" alt=""/></figure>
+                    <!-- /wp:image --></div>
+                    <!-- /wp:group --></div>
+                    <!-- /wp:column --></div>
+                    <!-- /wp:columns --></div></div>
+                    <!-- /wp:cover -->
+                 </div>
+                <!-- /wp:group -->',
+                'categories'  => array( 'inspiro' ),
+            )
+        );
+
+        register_block_pattern( // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.editor_blocks_register_block_pattern
+            'inspiro/awards',
+            array(
+                'title'       => __( 'Awards', 'inspiro' ),
+                'content'    => '<!-- wp:cover {"overlayColor":"black","minHeight":316,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"50px","right":"50px","bottom":"50px","left":"50px"}}}} -->
+                    <div class="wp-block-cover alignfull" style="padding-top:50px;padding-right:50px;padding-bottom:50px;padding-left:50px;min-height:316px"><span aria-hidden="true" class="has-black-background-color has-background-dim-100 wp-block-cover__gradient-background has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:columns {"verticalAlignment":"center"} -->
+                    <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"top":"20px","right":"0px","bottom":"20px","left":"0px"}}}} -->
+                    <div class="wp-block-column is-vertically-aligned-center" style="padding-top:20px;padding-right:0px;padding-bottom:20px;padding-left:0px"><!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between","flexWrap":"nowrap"}} -->
+                    <div class="wp-block-group"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-full"><img src="' . get_stylesheet_directory_uri() . '/assets/images/laurel_left.png" alt=""/></figure>
+                    <!-- /wp:image -->
+
+                    <!-- wp:group -->
+                    <div class="wp-block-group"><!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1","fontSize":"18px"}},"textColor":"white"} -->
+                    <p class="has-text-align-center has-white-color has-text-color" style="font-size:18px;line-height:1"><strong>' . esc_html__( '"Best Film"', 'inspiro' ) . '<br></strong>' . esc_html__( 'Winner', 'inspiro' ) . '</p>
+                    <!-- /wp:paragraph --></div>
+                    <!-- /wp:group -->
+
+                    <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-full"><img src="' . get_stylesheet_directory_uri() . '/assets/images/laurel_right.png" alt=""/></figure>
+                    <!-- /wp:image --></div>
+                    <!-- /wp:group --></div>
+                    <!-- /wp:column -->
+
+                    <!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"top":"20px","right":"0px","bottom":"20px","left":"0px"}}}} -->
+                    <div class="wp-block-column is-vertically-aligned-center" style="padding-top:20px;padding-right:0px;padding-bottom:20px;padding-left:0px"><!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between","flexWrap":"nowrap"}} -->
+                    <div class="wp-block-group"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-full"><img src="' . get_stylesheet_directory_uri() . '/assets/images/laurel_left.png" alt=""/></figure>
+                    <!-- /wp:image -->
+
+                    <!-- wp:group -->
+                    <div class="wp-block-group"><!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1","fontSize":"18px"}},"textColor":"white"} -->
+                    <p class="has-text-align-center has-white-color has-text-color" style="font-size:18px;line-height:1"><strong>' . esc_html__( '"New Film Festival"', 'inspiro' ) . '</strong><br>' . esc_html__( 'Winner', 'inspiro' ) . '</p>
+                    <!-- /wp:paragraph --></div>
+                    <!-- /wp:group -->
+
+                    <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-full"><img src="' . get_stylesheet_directory_uri() . '/assets/images/laurel_right.png" alt=""/></figure>
+                    <!-- /wp:image --></div>
+                    <!-- /wp:group --></div>
+                    <!-- /wp:column -->
+
+                    <!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"top":"20px","right":"0px","bottom":"20px","left":"0px"}}}} -->
+                    <div class="wp-block-column is-vertically-aligned-center" style="padding-top:20px;padding-right:0px;padding-bottom:20px;padding-left:0px"><!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"layout":{"type":"flex","allowOrientation":false,"justifyContent":"space-between","flexWrap":"nowrap"}} -->
+                    <div class="wp-block-group"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-full"><img src="' . get_stylesheet_directory_uri() . '/assets/images/laurel_left.png" alt=""/></figure>
+                    <!-- /wp:image -->
+
+                    <!-- wp:group -->
+                    <div class="wp-block-group"><!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1","fontSize":"18px"}},"textColor":"white"} -->
+                    <p class="has-text-align-center has-white-color has-text-color" style="font-size:18px;line-height:1"><strong>' . esc_html__( '"Best Short"', 'inspiro' ) . '</strong><br>' . esc_html__( 'Winner', 'inspiro' ) . '</p>
+                    <!-- /wp:paragraph --></div>
+                    <!-- /wp:group -->
+
+                    <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+                    <figure class="wp-block-image size-full"><img src="' . get_stylesheet_directory_uri() . '/assets/images/laurel_right.png" alt=""/></figure>
+                    <!-- /wp:image --></div>
+                    <!-- /wp:group --></div>
+                    <!-- /wp:column --></div>
+                    <!-- /wp:columns --></div></div>
+                    <!-- /wp:cover -->',
+                'categories'  => array( 'inspiro' ),
+            )
+        );
 	}
 }
 add_action( 'init', 'inspiro_register_block_patterns' );

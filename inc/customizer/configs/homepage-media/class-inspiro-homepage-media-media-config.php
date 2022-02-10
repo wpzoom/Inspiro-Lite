@@ -43,8 +43,33 @@ class Inspiro_Homepage_Media_Media_Config {
 						'sanitize_callback' => 'inspiro_sanitize_checkbox',
 					),
 				),
+                array(
+                    'id'   => 'hero_enable',
+                    'args' => array(
+                        'capability'        => 'edit_theme_options',
+                        'default'           => true,
+                        'sanitize_callback' => 'inspiro_sanitize_checkbox',
+                    ),
+                ),
+                array(
+                    'id'   => 'overlay_show',
+                    'args' => array(
+                        'capability'        => 'edit_theme_options',
+                        'default'           => true,
+                        'sanitize_callback' => 'inspiro_sanitize_checkbox',
+                    ),
+                ),
 			),
 			'control' => array(
+                array(
+                    'id'   => 'hero_enable',
+                    'args' => array(
+                        'type'    => 'checkbox',
+                        'section' => 'header_image',
+                        'label'   => esc_html__( 'Enable Hero Area on the Homepage', 'inspiro' ),
+                        'priority'        => 5,
+                    ),
+                ),
 				array(
 					'id'   => 'external_header_video',
 					'args' => array(
@@ -69,6 +94,15 @@ class Inspiro_Homepage_Media_Media_Config {
 						'active_callback' => 'inspiro_is_external_video_active',
 					),
 				),
+                array(
+                    'id'   => 'overlay_show',
+                    'args' => array(
+                        'type'    => 'checkbox',
+                        'section' => 'header_image',
+                        'label'   => esc_html__( 'Show Dark Overlay', 'inspiro' ),
+                        'priority'        => 6,
+                    ),
+                ),
 			),
 		);
 	}

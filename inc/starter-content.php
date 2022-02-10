@@ -137,7 +137,7 @@ function inspiro_get_starter_content() {
                     <!-- /wp:paragraph -->
 
                     <!-- wp:paragraph {"align":"center"} -->
-                    <p class="has-text-align-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                    <p class="has-text-align-center" style="color:#ffffff;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                     <!-- /wp:paragraph -->
 
                     <!-- wp:spacer {"height":39} -->

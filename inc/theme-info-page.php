@@ -57,6 +57,8 @@ function inspiro_display_theme_page() {
 						<a href="https://www.wpzoom.com/themes/inspiro/" class="button button-primary" target="_blank">
 							<?php esc_html_e( 'Get Inspiro Premium &rarr;', 'inspiro' ); ?>
 						</a>
+                        <a class="button button-primary ilovewp-button wpz-button-youtube" href="https://www.youtube.com/watch?v=ZltZDp2z0N8" rel="noopener" target="_blank"><span class="dashicons dashicons-youtube"></span> <?php esc_html_e( 'Theme Video Overview &rarr;', 'inspiro' ); ?></a>
+
 						<a href="https://www.wpzoom.com/showcase/theme/inspiro/" target="_blank">
 							<?php esc_html_e( 'Inspiro Showcase', 'inspiro' ); ?>
 						</a>
@@ -98,8 +100,11 @@ function inspiro_display_theme_page() {
 						</p>
 						<p>
 							<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/', 'inspiro' ) ); ?>" target="_blank" class="button button-primary">
-								<?php esc_html_e( 'Upgrade to Inspiro Premium', 'inspiro' ); ?>
+								<?php esc_html_e( 'Upgrade to Inspiro Premium &rarr;', 'inspiro' ); ?>
 							</a>
+                            <a href="<?php echo esc_url( __( 'https://demo.wpzoom.com/?theme=inspiro', 'inspiro' ) ); ?>" target="_blank" class="button button-secondary">
+                                <?php esc_html_e( 'View Demo &rarr;', 'inspiro' ); ?>
+                            </a>
 						</p>
 					</div>
 				</div>
@@ -149,41 +154,51 @@ function inspiro_display_theme_page() {
 
 				<div class="section">
 					<div class="inner-section">
+                        <?php
+                        $current_user = wp_get_current_user();
+
+                        ?>
+
 						<h4>
-							<span class="dashicons dashicons-star-filled"></span>
-							<?php esc_html_e( 'Why Upgrade?', 'inspiro' ); ?>
+							<span class="dashicons dashicons-email-alt"></span>
+							<?php esc_html_e( 'Subscribe to our Newsletter', 'inspiro' ); ?>
 						</h4>
 						<p class="about">
-							<?php esc_html_e( 'Upgrading to Inspiro Premium, you will unlock a dozen unique features that will take your website to the next level. See in the table below just a few of the features included in the Premium version.', 'inspiro' ); ?>
+							<?php esc_html_e( 'We send out the newsletter once every few months. It contains information about our new themes and important theme updates.', 'inspiro' ); ?>
 						</p>
 						<p>
-							<a href="<?php echo esc_url( __( 'https://demo.wpzoom.com/?theme=inspiro', 'inspiro' ) ); ?>" target="_blank" class="button button-primary">
-								<?php esc_html_e( 'View Inspiro Premium Demo &rarr;', 'inspiro' ); ?>
-							</a>
+							<div id="mlb2-5257292" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-5257292">
+                              <div class="ml-form-align-center">
+                                <div class="ml-form-embedWrapper embedForm">
+                                  <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                                    <form class="ml-block-form" action="https://static.mailerlite.com/webforms/submit/e0o6f5" data-code="e0o6f5" method="post" target="_blank">
+                                        <input aria-label="email" aria-required="true" type="email" value="<?php echo esc_attr($current_user->user_email); ?>" class="form-control" data-inputmask="" name="fields[email]" placeholder="Email" autocomplete="email">
+                                      <input type="hidden" name="ml-submit" value="1">
+                                      <span class="ml-form-embedSubmit">
+                                        <button type="submit" class="button button-primary">Subscribe</button>
+                                        <button disabled="disabled" style="display:none" type="button" class="loading button-primary"> <div class="ml-form-embedSubmitLoad"></div> <span class="sr-only">Loading...</span> </button>
+                                      </span>
+                                      <input type="hidden" name="anticsrf" value="true">
+                                    </form>
+                                  </div>
+                                  <div class="ml-form-successBody row-success" style="display:none">
+                                    <div class="ml-form-successContent">
+                                      <h3>Thank you!</h3>
+                                      <p>You have successfully joined our subscriber list.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <script>
+                              function ml_webform_success_5257292(){var r=ml_jQuery||jQuery;r(".ml-subscribe-form-5257292 .row-success").show(),r(".ml-subscribe-form-5257292 .row-form").hide()}
+                            </script>
+                            <img src="https://track.mailerlite.com/webforms/o/5257292/e0o6f5?v1641550241" width="1" height="1" style="max-width:1px;max-height:1px;visibility:hidden;padding:0;margin:0;display:block" alt="." border="0">
+                            <script src="https://static.mailerlite.com/js/w/webforms.min.js?v0c75f831c56857441820dcec3163967c" type="text/javascript"></script>
 						</p>
 					</div>
 				</div>
-				<?php if ( current_user_can( 'upload_themes' ) ) : ?>
-					<!-- <div class="section">
-						<div class="inner-section">
-							<h4>
-								<span class="dashicons dashicons-upload"></span>
-								<?php esc_html_e( 'Upload Inspiro Premium', 'inspiro' ); ?>
-							</h4>
-							<p class="about">
-								<?php esc_html_e( 'If you have a premium version of Inspiro theme in a .zip format, you may upgrade by uploading it here.', 'inspiro' ); ?>
-							</p>
-							<div class="upload-theme">
-								<form method="post" enctype="multipart/form-data" class="wp-upload-form" action="<?php echo self_admin_url( 'update.php?action=upload-theme&payload=about-inspiro' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>">
-									<?php wp_nonce_field( 'theme-upload' ); ?>
-									<label class="screen-reader-text" for="themezip"><?php esc_html_e( 'Theme zip file', 'inspiro' ); ?></label>
-									<input type="file" id="themezip" name="themezip" accept=".zip" />
-									<?php submit_button( __( 'Install Now', 'inspiro' ), '', 'install-theme-submit', false ); ?>
-								</form>
-							</div>
-						</div>
-					</div> -->
-				<?php endif; ?>
 			</div>
 		</div>
 		<hr>

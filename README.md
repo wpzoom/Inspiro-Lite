@@ -2,7 +2,7 @@
 **Contributors:** [WPZOOM](https://profiles.wordpress.org/WPZOOM)  
 **Requires at least:** 5.2  
 **Tested up to:** 5.9  
-**Version:** 1.6.4  
+**Version:** 1.7.0  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 **Tags:** one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready  
@@ -101,6 +101,17 @@ License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 
 ## Changelog ##
+
+### 1.7.0 ###
+* Multiple improvements & fixes
+* Added WPZOOM Portfolio plugin recommendation
+* Added new option to remove the dark overlay from the homepage
+* Added new option to remove the hero area from the homepage
+* Improvements to the blocks styling (Query Loop, etc.)
+* Added a new page template that doesn't include the hero area on the homepage
+
+### 1.6.4 ###
+* Fixed a bug happening on old PHP versions (7.2)
 
 ### 1.6.3 ###
 * Added support for multilingual plugins (WPML, Polylang)

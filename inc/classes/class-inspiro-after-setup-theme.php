@@ -366,6 +366,12 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 					'required' => true,
 				),
 
+                array(
+                    'name'     => 'WPZOOM Portfolio',
+                    'slug'     => 'wpzoom-portfolio',
+                    'required' => true,
+                ),
+
 				array(
 					'name'     => 'Instagram Widget by WPZOOM',
 					'slug'     => 'instagram-widget-by-wpzoom',

@@ -29,7 +29,7 @@ class Inspiro_Homepage_Media_Panel_Config {
 				'id'   => 'homepage_media_panel',
 				'args' => array(
 					'capability'      => 'edit_theme_options',
-					'title'           => esc_html__( 'Homepage Media', 'inspiro' ),
+					'title'           => esc_html__( 'Homepage Hero Area', 'inspiro' ),
 					'active_callback' => 'is_header_video_active',
 					'priority'        => 40,
 				),

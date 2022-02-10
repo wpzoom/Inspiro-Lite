@@ -241,6 +241,12 @@ body {
         right: 0;
         z-index: 2;
     }
+
+    &.hide_overlay {
+        &:after {
+            display: none;
+        }
+    }
 }
 
 .has-header-image,
@@ -263,6 +269,12 @@ body {
             bottom: 0;
             left: 0;
             z-index: 2;
+        }
+
+        &.hide_overlay {
+            &:before {
+                display: none;
+            }
         }
     }
 }
@@ -311,12 +323,12 @@ body {
 .wp-custom-header {
     .wp-custom-header-video-button {  /* Specificity prevents .color-dark button overrides */
         background-color: rgba(34, 34, 34, 0.5);
-        border: 1px solid rgba(255, 255, 255, 0.6);
         color: rgba(255, 255, 255, 0.6);
         width: 45px;
         height: 45px;
         overflow: hidden;
         padding: 0;
+        border: none;
         position: absolute;
         right: em(30);
         bottom: em(60);
@@ -326,7 +338,7 @@ body {
 
         &:hover,
         &:focus {
-            border-color: rgba(255, 255, 255, 0.8);
+            border: none;
             background-color: rgba(34, 34, 34, 0.8);
             color: #fff;
         }

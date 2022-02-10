@@ -44,7 +44,7 @@
 			}
 		} else {
 			$customHeader.css( 'padding-top', '0' );
-			$siteContent.css( 'padding-top', '2.5em' );
+			// $siteContent.css( 'padding-top', '2.5em' );
 		}
 	}
 

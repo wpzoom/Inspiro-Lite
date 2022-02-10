@@ -41,8 +41,8 @@ p > object:only-child {
     margin-bottom: 0;
 }
 
-.entry-content .aligncenter,
-div.aligncenter {
+.entry-content .aligncenter:not(.wp-block-gallery),
+div.aligncenter:not(.wp-block-gallery) {
     display: block;
     clear: both;
     margin-left: auto;

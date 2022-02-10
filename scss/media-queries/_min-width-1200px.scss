@@ -1,10 +1,11 @@
 @media (min-width: em(1200)) {
-    .single {
-        .entry-content .alignwide {
-            margin-left: -125px;
-            margin-right: -125px;
-            max-width: $content-width;
-            width: $content-width;
-        }
+
+    .wp-block-query.alignwide,
+    .single .entry-content .alignwide {
+        margin-left: -125px;
+        margin-right: -125px;
+        max-width: $content-width;
+        width: $content-width;
     }
+
 }
