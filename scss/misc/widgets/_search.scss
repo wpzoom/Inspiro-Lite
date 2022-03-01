@@ -1,5 +1,6 @@
 /* Search */
 
+.wp-block-search,
 .search-form {
     position: relative;
     input,
@@ -16,10 +17,14 @@
             border-color: $primary-color;
         }
     }
+
+    .wp-block-search__input,
     .search-field {
         width: 100%;
         padding: 0px 100px 0 10px;
     }
+
+    .wp-block-search__button,
     .search-submit {
         padding: 0 12px;
         position: absolute;
@@ -29,32 +34,59 @@
             display: none;
         }
     }
-}
 
-.site-footer .search-form .search-field,
-.side-nav .search-form .search-field {
-    color: #eee;
-}
-
-.side-nav .search-form .search-submit {
-    font-family: $font-headings;
-    font-weight: bold;
-    display: inline-block;
-    padding: em(10) em(25);
-    text-align: center;
-    white-space: nowrap;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    @include font-size(12);
-    color: $primary-color;
-    border: 2px solid $primary-color;
-    background-image: none;
-    user-select: none;
-    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
-
-    &:hover {
-        text-decoration: none;
-        color: $primary-color;
-        border-color: $primary-color;
+    .wp-block-search__label {
+        display: block;
     }
+
+}
+
+.site-footer,
+.side-nav {
+    .wp-block-search__input,
+    .search-form .search-field {
+        color: #eee;
+    }
+}
+
+.site-footer,
+.side-nav {
+
+    .wp-block-search__button,
+    .search-form .search-submit {
+        font-family: $font-headings;
+        font-weight: bold;
+        display: inline-block;
+        padding: em(10) em(25);
+        text-align: center;
+        white-space: nowrap;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        @include font-size(12);
+        color: $primary-color;
+        border: 2px solid $primary-color;
+        background-image: none;
+        user-select: none;
+        transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+
+        &:hover {
+            text-decoration: none;
+            color: $primary-color;
+            border-color: $primary-color;
+        }
+
+    }
+
+
+    .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper {
+        border: 2px solid #565555;
+
+          .wp-block-search__button {
+            bottom: 6px;
+            right: 5px;
+        }
+
+    }
+
+
 }

@@ -2,8 +2,12 @@
     padding: 1em 0 2em;
 }
 
+.widget_block,
 .widget {
     margin-bottom: 40px;
+
+    .wp-block-group__inner-container > h2,
+    .wp-block-search__label,
     .title {
         margin: 0 0 20px;
         font-size: 20px;
@@ -27,6 +31,11 @@
             }
         }
     }
+
+    .wp-block-group>.wp-block-group__inner-container {
+        padding: 0;
+    }
+
 }
 .textwidget img {
     max-width: 100%;

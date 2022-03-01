@@ -63,7 +63,7 @@
             }
             .svg-icon {
                 width: 18px;
-                height: 45px;
+                height: 30px;
                 margin: 0;
                 padding: 0;
                 cursor: pointer;
@@ -91,6 +91,7 @@
             height: 100%;
             height: 100vh;
             text-align: center;
+            outline: none;
         }
         .sb-search-button-open {
             display: none;

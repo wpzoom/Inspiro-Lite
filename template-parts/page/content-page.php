@@ -33,14 +33,10 @@
 		if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) && has_post_thumbnail( get_the_ID() ) ) {
 			echo '<div class="inner-wrap">';
 			the_title( '<h1 class="entry-title">', '</h1>' );
-			echo '<div class="entry-meta">';
-			inspiro_edit_link( get_the_ID() );
-			echo '</div><!-- .entry-meta -->';
 			echo '</div><!-- .inner-wrap -->';
 		} else {
 			echo '<div class="inner-wrap">';
 			the_title( '<h1 class="entry-title">', '</h1>' );
-			inspiro_edit_link( get_the_ID() );
 			echo '</div><!-- .inner-wrap -->';
 		}
 

@@ -11,8 +11,7 @@
                 border-top: 1px solid rgba(255,255,255, 0.07);
                 &.current-menu-item a,
                 &.current_page_item a,
-                &.current-menu-parent a,
-                &.current_page_parent a {
+                &.current-menu-parent a {
                     border-bottom: none;
                     color: #fff;
                 }

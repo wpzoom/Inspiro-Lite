@@ -159,8 +159,7 @@
 
         &.current-menu-item > a,
         &.current_page_item > a,
-        &.current-menu-parent > a,
-        &.current_page_parent > a {
+        &.current-menu-parent > a {
             border-bottom: 1px solid rgba(255,255,255,.3);
         }
 

@@ -58,7 +58,7 @@ function inspiro_body_classes( $classes ) {
 	}
 
 	// Add class if is single page and has post thumbnail.
-	if ( ( ( is_single() && 'post' === get_post_type() ) || is_page() ) && has_post_thumbnail() ) {
+	if ( ( ( is_single() && 'post' === get_post_type() ) || ( is_single() && 'portfolio_item' === get_post_type() ) || is_page() ) && has_post_thumbnail() ) {
 		$classes[] = 'has-header-image';
 	}
 

@@ -99,6 +99,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 			// add_image_size( 'inspiro-entry-cover', 1800 );
 			// phpcs:enable
 			add_image_size( 'inspiro-loop', 950, 320, true );
+            add_image_size( 'inspiro-loop@2x', 1900, 640, true );
 
 			// Set the default content width.
 			$GLOBALS['content_width'] = 950;

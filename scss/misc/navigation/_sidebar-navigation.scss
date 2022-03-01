@@ -21,20 +21,36 @@
 
     .navbar-nav {
         display: none;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
         padding: 0;
     }
+
+    .widget_block,
     .widget {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
         max-width: 100%;
         &:last-child {
             margin-bottom: 0;
         }
+
+        .wp-block-group__inner-container > h2,
+        .wp-block-search__label,
         .title {
             @include font-size(18);
             color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-family: $font-headings;
         }
     }
+
+
+    .wp-block-group>.wp-block-group__inner-container {
+        padding: 0;
+    }
+
+
+
 }
 .side-nav-transitioning .side-nav {
     visibility: visible;
