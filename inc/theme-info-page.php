@@ -161,17 +161,17 @@ function inspiro_display_theme_page() {
 
 						<h4>
 							<span class="dashicons dashicons-email-alt"></span>
-							<?php esc_html_e( 'Subscribe to our Newsletter', 'inspiro' ); ?>
+							<?php esc_html_e( 'Subscribe for Tips & Tricks', 'inspiro' ); ?>
 						</h4>
 						<p class="about">
-							<?php esc_html_e( 'We send out the newsletter once every few months. It contains information about our new themes and important theme updates.', 'inspiro' ); ?>
+							<?php esc_html_e( 'To ease up the journey you’re starting with Inspiro, we’re sending you some useful tips & tricks to have the best experience building your website.', 'inspiro' ); ?>
 						</p>
 						<p>
-							<div id="mlb2-5257292" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-5257292">
+							<div id="mlb2-5543648" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-5543648">
                               <div class="ml-form-align-center">
                                 <div class="ml-form-embedWrapper embedForm">
                                   <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-                                    <form class="ml-block-form" action="https://static.mailerlite.com/webforms/submit/e0o6f5" data-code="e0o6f5" method="post" target="_blank">
+                                    <form class="ml-block-form" action="https://static.mailerlite.com/webforms/submit/f1v8a3" data-code="f1v8a3" method="post" target="_blank">
                                         <input aria-label="email" aria-required="true" type="email" value="<?php echo esc_attr($current_user->user_email); ?>" class="form-control" data-inputmask="" name="fields[email]" placeholder="Email" autocomplete="email">
                                       <input type="hidden" name="ml-submit" value="1">
                                       <span class="ml-form-embedSubmit">
@@ -192,11 +192,10 @@ function inspiro_display_theme_page() {
                             </div>
 
                             <script>
-                              function ml_webform_success_5257292(){var r=ml_jQuery||jQuery;r(".ml-subscribe-form-5257292 .row-success").show(),r(".ml-subscribe-form-5257292 .row-form").hide()}
+                              function ml_webform_success_5543648(){var r=ml_jQuery||jQuery;r(".ml-subscribe-form-5543648 .row-success").show(),r(".ml-subscribe-form-5543648 .row-form").hide()}
                             </script>
-                            <img src="https://track.mailerlite.com/webforms/o/5257292/e0o6f5?v1641550241" width="1" height="1" style="max-width:1px;max-height:1px;visibility:hidden;padding:0;margin:0;display:block" alt="." border="0">
-                            <script src="https://static.mailerlite.com/js/w/webforms.min.js?v0c75f831c56857441820dcec3163967c" type="text/javascript"></script>
-						</p>
+                            <img src="https://track.mailerlite.com/webforms/o/5543648/f1v8a3?v1646129865" width="1" height="1" style="max-width:1px;max-height:1px;visibility:hidden;padding:0;margin:0;display:block" alt="." border="0">
+                            <script src="https://static.mailerlite.com/js/w/webforms.min.js?v0c75f831c56857441820dcec3163967c" type="text/javascript"></script>						</p>
 					</div>
 				</div>
 			</div>
