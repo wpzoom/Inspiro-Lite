@@ -31,12 +31,9 @@
         height: 100%;
         z-index: 1;
         opacity: .6;
-        -webkit-background-size: cover;
         background-size: cover;
         background-position: center center;
         background-color: #000;
-        -webkit-transition: .2s ease all;
-        -o-transition: .2s ease all;
         transition: .2s ease all;
     }
 

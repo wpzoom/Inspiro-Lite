@@ -39,7 +39,6 @@
 .widget-area .gallery-item a,
 .widget-area .gallery-item a:hover,
 .widget-area .gallery-item a:focus {
-    -webkit-box-shadow: none;
     box-shadow: none;
     background: none;
     display: inline-block;
@@ -48,17 +47,13 @@
 
 .gallery-item a img {
     display: block;
-    -webkit-transition: -webkit-filter 0.2s ease-in;
-    transition: -webkit-filter 0.2s ease-in;
     transition: filter 0.2s ease-in;
     transition: filter 0.2s ease-in, -webkit-filter 0.2s ease-in;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 
 .gallery-item a:hover img,
 .gallery-item a:focus img {
-    -webkit-filter: opacity(60%);
     filter: opacity(60%);
 }
 

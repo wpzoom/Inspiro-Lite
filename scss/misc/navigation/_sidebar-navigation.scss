@@ -1,7 +1,6 @@
 /* Sidebar */
 .site {
     position: relative;
-    -webkit-transition: -webkit-transform .18s ease;
     transition: transform .18s ease;
 }
 .side-nav {
@@ -14,8 +13,6 @@
     z-index: -1;
     visibility: hidden;
 
-    -moz-transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     -webkit-overflow-scrolling: touch;
 
@@ -87,11 +84,8 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 
-    -webkit-transform: translateX($sidebar-nav-width);
-    -ms-transform: translateX($sidebar-nav-width);
     transform: translateX($sidebar-nav-width);
 
-    -webkit-transition: -webkit-transform .18s ease;
     transition: transform .18s ease;
 
     h2,h3,h1,h4,h5,h6 {
@@ -128,8 +122,6 @@ body.side-nav-open {
     height: 100%;
     .site {
         z-index: 300;
-        -webkit-transform: translateX(-$sidebar-nav-width);
-        -ms-transform: translateX(-$sidebar-nav-width);
         transform: translateX(-$sidebar-nav-width);
     }
     .side-nav {
@@ -137,8 +129,6 @@ body.side-nav-open {
         z-index: 600;
     }
     .side-nav__scrollable-container {
-        -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
         transform: translateX(0);
     }
 	&.has-header-image {

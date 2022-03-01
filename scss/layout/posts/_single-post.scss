@@ -52,12 +52,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, .5) 100%);
-            background-image: -o-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, .5) 100%);
-            background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .1)), to(rgba(0, 0, 0, .5)));
             background-image: linear-gradient(to bottom, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, .5) 100%);
             background-repeat: repeat-x;
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1A000000', endColorstr='#80000000', GradientType=0)
         }
 
         .entry-header {

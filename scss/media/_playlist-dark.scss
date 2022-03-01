@@ -19,7 +19,6 @@
     }
     .wp-playlist-item {
         border-bottom: 1px dotted #555;
-        -webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
         transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
 
         &:hover,

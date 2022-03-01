@@ -2243,13 +2243,8 @@ body:not(.title-tagline-hidden) .site-branding-text {
 }
 
 .custom-header-media:after {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.3+75 */
-    /* FF3.6-15 */
-    /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 75%, rgba(0, 0, 0, 0.3) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#4d000000", GradientType=0);
-    /* IE6-9 */
     bottom: 0;
     content: "";
     display: block;
@@ -2272,7 +2267,6 @@ body:not(.title-tagline-hidden) .site-branding-text {
     position: absolute;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
     background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1A000000', endColorstr='#80000000', GradientType=0);
     opacity: 1;
     top: 0;
     right: 0;
@@ -2859,7 +2853,6 @@ body.has-archive-description:not(.has-header-image) .taxonomy-description:after 
     height: 100%;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 100%);
     background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1A000000', endColorstr='#80000000', GradientType=0);
 }
 
 .page .entry-cover-image .entry-header,
@@ -3754,7 +3747,6 @@ h4.jp-relatedposts-post-title {
     background: transparent;
     border: 2px solid #565555;
     box-sizing: border-box;
-    -webkit-appearance: none;
     border-radius: 0;
     transition: 0.2s ease all;
 }
