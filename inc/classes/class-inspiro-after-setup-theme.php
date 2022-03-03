@@ -241,6 +241,11 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
         public function ocdi_register_plugins( $plugins ) {
           $theme_plugins = [
             [
+                'name'     => 'WPZOOM Portfolio',
+                'slug'     => 'wpzoom-portfolio',
+                'required' => true,
+            ],
+            [
                 'name'     => 'Instagram Widget by WPZOOM',
                 'slug'     => 'instagram-widget-by-wpzoom',
                 'required' => false,

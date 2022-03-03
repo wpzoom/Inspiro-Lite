@@ -2,7 +2,7 @@
 **Contributors:** [WPZOOM](https://profiles.wordpress.org/WPZOOM)  
 **Requires at least:** 5.2  
 **Tested up to:** 5.9  
-**Version:** 1.7.0  
+**Version:** 1.7.1  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 **Tags:** one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready  
@@ -102,8 +102,14 @@ Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 
 ## Changelog ##
 
+### 1.7.1 ###
+* Multiple improvements to the demo content
+* Added some styling for WPZOOM Portfolio
+* Improvements to the blocks and widgets styles
+
 ### 1.7.0 ###
 * Multiple improvements & fixes
+* Added new Patterns in the block editor
 * Added WPZOOM Portfolio plugin recommendation
 * Added new option to remove the dark overlay from the homepage
 * Added new option to remove the hero area from the homepage
