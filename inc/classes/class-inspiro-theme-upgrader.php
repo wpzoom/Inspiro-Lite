@@ -88,7 +88,7 @@ class Inspiro_Theme_Upgrader {
 			$this->uploaded_premium = false;
 			return $this->uploaded_premium;
 		}
-		if ( version_compare( $data['Version'], '6.8.0', '>=' ) ) {
+		if ( version_compare( $data['Version'], '1.4.4', '>=' ) ) {
 			$this->uploaded_premium = true;
 		}
 		return $this->uploaded_premium;

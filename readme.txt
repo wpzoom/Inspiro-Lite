@@ -105,7 +105,7 @@ Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 = 1.7.1 =
 * Multiple improvements to the demo content
 * Added some styling for WPZOOM Portfolio
-* Improvements to the blocks and widgets styles
+* Block and widget style enhancements
 
 = 1.7.0 =
 * Multiple improvements & fixes
