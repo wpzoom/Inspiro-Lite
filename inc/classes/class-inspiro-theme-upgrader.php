@@ -59,6 +59,24 @@ class Inspiro_Theme_Upgrader {
 		add_filter( 'install_theme_overwrite_comparison', array( $this, 'theme_overwrite_table' ), 10, 3 );
 		add_filter( 'install_theme_overwrite_comparison', array( $this, 'multisite_overwrite' ), 11, 3 );
 		add_filter( 'install_theme_overwrite_actions', array( $this, 'theme_overwrite_actions' ), 10, 3 );
+
+		add_filter( 'install_theme_complete_actions', array( $this, 'set_inspiro_pro_theme' ), 10, 4 );
+	
+	}
+
+	/**
+	 * Check if the uploaded theme is Inspiro PRO.
+	 *
+	 */
+	public function set_inspiro_pro_theme( $install_actions, $api, $stylesheet, $theme_info ) {
+		
+		if( 'wpzoom-inspiro-pro' === $theme_info->template ) {
+			$this->migrate_customizer_settings();
+			$this->setup_slider_item();
+			$this->set_upgrader_option();
+		}
+
+		return $install_actions;
 	}
 
 	/**
