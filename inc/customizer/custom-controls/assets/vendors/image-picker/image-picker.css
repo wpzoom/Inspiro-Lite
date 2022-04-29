@@ -1,0 +1,40 @@
+/* Hides the radio button */
+.customize-control-image-select input[type="radio"] {
+    visibility: hidden;
+    position: absolute;
+}
+
+/* Makes images look clickable */
+.customize-control-image-select img {
+    box-sizing: border-box;
+    cursor: pointer;
+    height: auto;
+    max-width: 100%;
+    padding: 1px;
+	border: 1px solid #E0E0E0;
+	border-radius:4px;
+	margin-bottom:5px;
+}
+
+/* Adds blue border around currently selected image */
+.customize-control-image-select input:checked + img {
+	border: 1px solid #2196F3;
+}
+.customize-control-image-select input:disabled + img {
+	cursor:default !important;
+}
+.wpzoom-image-select-container {
+	position:relative;
+	
+}
+.wpzoom-badge-pro {
+	display:block;
+	position:absolute;
+	top:1px;
+	right:1px;
+	padding:5px;
+	background:#F57C00;
+	color:#fff;
+	font-size:10px;
+	border-top-right-radius:4px;
+}

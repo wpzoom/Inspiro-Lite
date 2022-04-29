@@ -8,20 +8,22 @@
  * @version 1.0.0
  */
 
+$search_show        = inspiro_get_theme_mod( 'header_search_show' );
+$search_display     = $search_show ? 'block' : 'none';
+
+$header_layout_type = inspiro_get_theme_mod( 'header-layout-type' );
+$header_menu_style  = inspiro_get_theme_mod( 'header-menu-style' );
+
 ?>
 <div id="site-navigation" class="navbar">
-    <?php
-        $search_show        = inspiro_get_theme_mod( 'header_search_show' );
-        $search_display     = $search_show ? 'block' : 'none';
-    ?>
-	<div class="header-inner inner-wrap">
+	<div class="header-inner inner-wrap <?php echo sanitize_html_class( $header_layout_type ); ?> <?php echo sanitize_html_class( $header_menu_style ); ?>">
 
 		<div class="header-logo-wrapper">
 			<?php inspiro_custom_logo(); ?>
 		</div>
-
-		<div class="header-navigation-wrapper">
-			<?php if ( has_nav_menu( 'primary' ) ) : ?>
+		
+		<?php if ( has_nav_menu( 'primary' ) ) : ?>
+			<div class="header-navigation-wrapper">
 				<nav class="primary-menu-wrapper navbar-collapse collapse" aria-label="<?php echo esc_attr_x( 'Top Horizontal Menu', 'menu', 'inspiro' ); ?>" role="navigation">
 					<?php
 						wp_nav_menu(
@@ -33,8 +35,10 @@
 						);
 					?>
 				</nav>
-			<?php endif ?>
-
+			</div>
+		<?php endif ?>
+		
+		<div class="header-widgets-wrapper">
 			<?php if ( is_active_sidebar( 'header_social' ) ) : ?>
 				<div class="header_social">
 					<?php dynamic_sidebar( 'header_social' ); ?>

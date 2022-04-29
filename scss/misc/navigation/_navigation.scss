@@ -30,6 +30,9 @@
         .navbar-secondary {
             display: none;
         }
+		&.wpz_layout_full {
+			max-width:96%;
+		}
     }
     .header-logo-wrapper {
         margin-right: em(10);
@@ -42,10 +45,30 @@
         padding: 0;
         text-align: left;
     }
-    .header-navigation-wrapper {
+	.header-navigation-wrapper {
+		flex:1;
+		justify-content:flex-end;
+	}
+    .header-navigation-wrapper,
+	.header-widgets-wrapper {
         align-items: center;
         display: flex;
     }
+	.wpz_menu_left {
+		.header-navigation-wrapper {
+			justify-content:flex-start;
+		}
+	}
+	.wpz_menu_center {
+		.header-navigation-wrapper {
+			justify-content:center;
+		}
+	}
+	.wpz_menu_hamburger {
+		.header-navigation-wrapper {
+			display:none;
+		}
+	}
 }
 .has-header-image,
 .has-header-video {

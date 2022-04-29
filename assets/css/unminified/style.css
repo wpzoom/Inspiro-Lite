@@ -1481,6 +1481,10 @@ a:hover .nav-title,
     display: none;
 }
 
+.navbar .header-inner.wpz_layout_full {
+    max-width: 96%;
+}
+
 .navbar .header-logo-wrapper {
     margin-right: 0.625em;
     max-width: 50%;
@@ -1496,9 +1500,27 @@ a:hover .nav-title,
 }
 
 .navbar .header-navigation-wrapper {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.navbar .header-navigation-wrapper,
+.navbar .header-widgets-wrapper {
     align-items: center;
     -js-display: flex;
     display: flex;
+}
+
+.navbar .wpz_menu_left .header-navigation-wrapper {
+    justify-content: flex-start;
+}
+
+.navbar .wpz_menu_center .header-navigation-wrapper {
+    justify-content: center;
+}
+
+.navbar .wpz_menu_hamburger .header-navigation-wrapper {
+    display: none;
 }
 
 .has-header-image .navbar,

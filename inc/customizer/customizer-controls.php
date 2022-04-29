@@ -19,4 +19,5 @@ require $control_dir . '/title/class-inspiro-customize-title-control.php';
 require $control_dir . '/range/class-inspiro-customize-range-control.php';
 require $control_dir . '/typography/class-inspiro-customize-typography-control.php';
 require $control_dir . '/font-variant/class-inspiro-customize-font-variant-control.php';
+require $control_dir . '/image-select/class-inspiro-customize-image-select-control.php';
 // phpcs:enable WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
