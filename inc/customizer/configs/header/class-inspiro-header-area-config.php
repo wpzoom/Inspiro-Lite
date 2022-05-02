@@ -74,15 +74,33 @@ class Inspiro_Header_Area_Config {
 							'label' => esc_html__( 'Hidden menu', 'inspiro' ),
 							'url'   => '%sheader-hidden-menu.png'
 						),
+					)
+				),
+			)
+		);
+
+		$wp_customize->add_setting(
+			'header-menu-pro-style',
+			array(
+				'default' => null,
+			)
+		);
+
+		$wp_customize->add_control(
+			new Inspiro_Customize_Promo_Pro_Control(
+				$wp_customize,
+				'header-menu-pro-style',
+				array(
+					'label'           => esc_html__( 'PRO', 'inspiro' ),
+					'section'         => 'header-area',
+					'choices'     => array(
 						'wpz_menu_left_logo_center'    => array(
 							'label' => esc_html__( 'Left menu with Logo Center', 'inspiro' ),
 							'url'   => '%sheader-pro.png',
-							'pro'   => true,
 						),
 						'wpz_menu_center_logo_center'    => array(
 							'label' => esc_html__( 'Center menu with Logo Center', 'inspiro' ),
 							'url'   => '%sheader-pro-2.png',
-							'pro'   => true,
 						),
 					)
 				),

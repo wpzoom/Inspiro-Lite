@@ -1,11 +1,13 @@
 /* Hides the radio button */
-.customize-control-image-select input[type="radio"] {
+.customize-control-image-select input[type="radio"],
+.customize-control-promo-pro input[type="radio"] {
     visibility: hidden;
     position: absolute;
 }
 
 /* Makes images look clickable */
-.customize-control-image-select img {
+.customize-control-image-select img,
+.customize-control-promo-pro img {
     box-sizing: border-box;
     cursor: pointer;
     height: auto;
@@ -20,13 +22,34 @@
 .customize-control-image-select input:checked + img {
 	border: 1px solid #2196F3;
 }
-.customize-control-image-select input:disabled + img {
+.customize-control-image-select input:disabled + img,
+.customize-control-promo-pro input:disabled + img {
 	cursor:default !important;
 }
 .wpzoom-image-select-container {
 	position:relative;
 	
 }
+.wpzoom-promo-container {
+	border:2px solid #F57C00;
+	border-radius: 4px;
+	padding:0 5px;
+	text-align: center;
+	position: relative;
+	padding-bottom: 10px;
+}
+.wpzoom-promo-container .customize-control-title {
+	display: inline-block;
+	color:#fff;
+	font-size: 13px;
+	background-color: #F57C00;
+	border-radius: 2px;
+	padding:3px 4px;
+	position: relative;
+	top:-10px;
+}
+
+/* Promo PRO settings */
 .wpzoom-badge-pro {
 	display:block;
 	position:absolute;

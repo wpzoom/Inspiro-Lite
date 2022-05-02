@@ -205,6 +205,13 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 			);
 
 			Inspiro_Customizer_Control_Base::register_custom_control(
+				'promo-pro',
+				array(
+					'callback' => 'Inspiro_Customize_Promo_Pro_Control',
+				)
+			);
+
+			Inspiro_Customizer_Control_Base::register_custom_control(
 				'inspiro-typography',
 				array(
 					'callback'          => 'Inspiro_Customize_Typography_Control',
