@@ -80,9 +80,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 				<label for="{{ data.id }}-{{ key }}">
 					<div class="wpzoom-image-select-container">
 						<span class="screen-reader-text">{{ data.choices[ key ]['label'] }}</span>
-						<input type="radio" value="{{ key }}" name="_customize-{{ data.type }}-{{ data.id }}" id="{{ data.id }}-{{ key }}" {{{ data.link }}} <# if ( data.choices[ key ]['is_pro'] ) { #> disabled="disabled" <# } #> <# if ( key === data.value ) { #> checked="checked" <# } #> />
+						<input type="radio" value="{{ key }}" name="_customize-{{ data.type }}-{{ data.id }}" id="{{ data.id }}-{{ key }}" {{{ data.link }}} <# if ( key == data.value ) { #> checked="checked" <# } #> />
 						<img src="{{ data.choices[ key ]['url'] }}" alt="{{ data.choices[ key ]['label'] }}" title="{{ data.choices[ key ]['label'] }}" />
-						<# if ( data.choices[ key ]['is_pro'] ) { #> <span class="wpzoom-badge-pro">PRO</span> <# } #>
 					</div>
 				</label>
 			<# } #>
