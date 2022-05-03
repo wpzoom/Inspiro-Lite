@@ -87,6 +87,7 @@ class Inspiro_Footer_Widget_Areas_Config {
 			'footer-pro-styles',
 			array(
 				'default' => null,
+				'sanitize_callback' => 'sanitize_key',
 			)
 		);
 

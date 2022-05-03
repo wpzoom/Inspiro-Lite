@@ -83,6 +83,7 @@ class Inspiro_Header_Area_Config {
 			'header-menu-pro-style',
 			array(
 				'default' => null,
+				'sanitize_callback' => 'sanitize_key'
 			)
 		);
 
@@ -130,7 +131,10 @@ class Inspiro_Header_Area_Config {
 
 		$wp_customize->add_setting(
 			'header_title_subsection',
-			array()
+			array(
+				'default' => null,
+				'sanitize_callback' => 'sanitize_text_field',
+			)
 		);
 		$wp_customize->add_control(
 			new Inspiro_Customize_Title_Control(
