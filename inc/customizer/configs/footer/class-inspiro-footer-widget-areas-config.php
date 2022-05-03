@@ -115,7 +115,7 @@ class Inspiro_Footer_Widget_Areas_Config {
 							'url'   => '%sfooter-pro-4.png',
 						),
 					)
-				),
+				)
 			)
 		);
 

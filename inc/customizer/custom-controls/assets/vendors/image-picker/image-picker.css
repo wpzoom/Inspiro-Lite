@@ -12,7 +12,6 @@
     cursor: pointer;
     height: auto;
     max-width: 100%;
-    padding: 1px;
 	border: 1px solid #E0E0E0;
 	border-radius:4px;
 	margin-bottom:5px;
@@ -20,7 +19,7 @@
 
 /* Adds blue border around currently selected image */
 .customize-control-image-select input:checked + img {
-	border: 1px solid #2196F3;
+	border: 2px solid #2196F3;
 }
 .customize-control-image-select input:disabled + img,
 .customize-control-promo-pro input:disabled + img {
@@ -36,7 +35,7 @@
 	padding:0 5px;
 	text-align: center;
 	position: relative;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 }
 .wpzoom-promo-container .customize-control-title {
 	display: inline-block;

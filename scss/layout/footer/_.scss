@@ -5,8 +5,12 @@
     &.has-footer-widgets {
         .inner-wrap {
             padding-bottom: 0;
-            padding-top: em(48);
+
         }
+    }
+
+    .footer-widgets {
+        padding-top: 30px;
     }
 }
 

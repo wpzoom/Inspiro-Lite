@@ -37,7 +37,7 @@ class Inspiro_Header_Area_Config {
 		$wp_customize->add_section( 
 			'header-area', 
 			array(
-				'title'    => esc_html__( 'Header Settings', 'inspiro' ),
+				'title'    => esc_html__( 'Header', 'inspiro' ),
 				'priority' => 70,
 			) 
 		);
@@ -54,8 +54,8 @@ class Inspiro_Header_Area_Config {
 				$wp_customize,
 				'header-menu-style',
 				array(
-					'label'           => esc_html__( 'Header Menu Style', 'inspiro' ),
-					'description'     => esc_html__( 'Please, select a desired menu style', 'inspiro' ), 
+					'label'           => esc_html__( 'Header Layout', 'inspiro' ),
+					'description'     => esc_html__( 'Select the header layout. The hamburger icon appears on the desktop if the Sidebar has at least one widget. On mobile devices, the main menu is displayed in the sidebar.', 'inspiro' ),
 					'section'         => 'header-area',
 					'choices'     => array(
 						'wpz_menu_normal' => array(
@@ -75,7 +75,7 @@ class Inspiro_Header_Area_Config {
 							'url'   => '%sheader-hidden-menu.png'
 						),
 					)
-				),
+				)
 			)
 		);
 
@@ -103,7 +103,7 @@ class Inspiro_Header_Area_Config {
 							'url'   => '%sheader-pro-2.png',
 						),
 					)
-				),
+				)
 			)
 		);
 
@@ -139,7 +139,7 @@ class Inspiro_Header_Area_Config {
 				array(
 					'label'   => esc_html__( 'Elements', 'inspiro' ),
 					'section' => 'header-area',
-				),
+				)
 			)
 		);
 

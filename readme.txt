@@ -2,7 +2,7 @@
 Contributors: WPZOOM
 Requires at least: 5.2
 Tested up to: 5.9
-Version: 1.7.2
+Version: 1.7.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
@@ -101,6 +101,9 @@ License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 
 == Changelog ==
+
+= 1.7.3 =
+* Added new styles for Header and Footer layouts in the Customizer
 
 = 1.7.2 =
 * Improved the migration process to Inspiro PRO theme

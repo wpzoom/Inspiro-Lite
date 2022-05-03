@@ -1482,7 +1482,10 @@ a:hover .nav-title,
 }
 
 .navbar .header-inner.wpz_layout_full {
-    max-width: 96%;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
 }
 
 .navbar .header-logo-wrapper {
@@ -3345,7 +3348,10 @@ h4.jp-relatedposts-post-title {
 
 .site-footer.has-footer-widgets .inner-wrap {
     padding-bottom: 0;
-    padding-top: 3em;
+}
+
+.site-footer .footer-widgets {
+    padding-top: 30px;
 }
 
 .home .site-footer {
@@ -5305,6 +5311,7 @@ div.aligncenter:not(.wp-block-gallery) {
     .single .entry-footer {
         padding: 0 4%;
     }
+    .navbar .header-inner.wpz_layout_full,
     .wrap,
     .inner-wrap {
         padding-right: 4%;
