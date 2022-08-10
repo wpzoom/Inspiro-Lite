@@ -182,6 +182,12 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 			/**
 			 * Add controls
 			 */
+			Inspiro_Customizer_Control_Base::register_custom_control(
+				'inspiro-alpha-color-picker',
+				array(
+					'callback' => 'Inspiro_Customize_Alpha_Color_Picker_Control',
+				)
+			);
 
 			Inspiro_Customizer_Control_Base::register_custom_control(
 				'inspiro-range',

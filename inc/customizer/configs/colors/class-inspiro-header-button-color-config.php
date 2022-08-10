@@ -56,6 +56,15 @@ class Inspiro_Header_Button_Color_Config {
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
 				),
+				array(
+					'id'   => 'color-menu-background-scroll',
+					'args' => array(
+						'theme_supports'       => array( 'custom-header', 'header-text' ),
+						'default'              => 'rgba(17, 17, 17, 0.9)',
+						'transport'            => 'postMessage',
+						'sanitize_callback'    => 'maybe_hash_hex_color',
+					),
+				),
 			),
 			'control' => array(
 				array(
@@ -79,6 +88,14 @@ class Inspiro_Header_Button_Color_Config {
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
 						'label'   => esc_html__( 'Header Button Background Color Hover', 'inspiro' ),
+						'section' => 'colors',
+					),
+				),
+				array(
+					'id'           => 'color-menu-background-scroll',
+					'control_type' => 'Inspiro_Customize_Alpha_Color_Picker_Control',
+					'args'         => array(
+						'label'   => esc_html__( 'Menu Background on Scroll', 'inspiro' ),
 						'section' => 'colors',
 					),
 				),

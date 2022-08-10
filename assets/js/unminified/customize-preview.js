@@ -167,6 +167,20 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 			}
 		} );
 	} );
+	// Sticky Menu Backrground Color.
+	wp.customize( 'color-menu-background-scroll', function ( value ) {
+		value.bind( function ( to ) {
+			if ( 'blank' === to ) {
+				$( '.headroom--not-top .navbar' ).css( {
+					background: 'rgba(0,0,0,.9)',
+				} );
+			} else {
+				$( '.headroom--not-top .navbar' ).css( {
+					background: to,
+				} );
+			}
+		} );
+	} );
 
 	// Color scheme.
 	wp.customize( 'colorscheme', function ( value ) {

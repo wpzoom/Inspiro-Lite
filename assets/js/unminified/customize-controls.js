@@ -114,4 +114,15 @@
 			} );
 		},
 	} );
+
+	api.controlConstructor[ 'inspiro-alpha-color-picker' ] = api.Control.extend({
+		ready: function() {
+			var control = this,
+				$container = control.container.find('.zoom-color-picker-container'),
+				$input = $('input.zoom-alpha-color-picker', $container);
+
+			$input.alphaColorPicker();
+		}
+	});
+
 } )( wp.customize, jQuery );
