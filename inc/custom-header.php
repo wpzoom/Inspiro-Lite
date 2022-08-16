@@ -75,7 +75,10 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$header_button_text_color       = inspiro_get_theme_mod( 'header_button_textcolor' );
 		$header_button_text_color_hover = inspiro_get_theme_mod( 'header_button_textcolor_hover' );
 		$header_button_bg_color_hover   = inspiro_get_theme_mod( 'header_button_bgcolor_hover' );
-		$color_menu_background_scroll   = inspiro_get_theme_mod( 'color-menu-background-scroll' );
+		$color_menu_background          = inspiro_get_theme_mod( 'color_menu_background' );
+        $color_menu_background_scroll   = inspiro_get_theme_mod( 'color-menu-background-scroll' );
+        $color_footer_background        = inspiro_get_theme_mod( 'color_footer_background' );
+        $color_footer_text              = inspiro_get_theme_mod( 'color_footer_text' );
 		?>
 		<style id="inspiro-custom-header-styles" type="text/css">
 		<?php
@@ -126,13 +129,33 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 			}
 		<?php endif; ?>
 
-		<?php if ( 'blank' !== $header_button_bg_color_hover ) : ?>
+		<?php if ( '#0bb4aa' !== $header_button_bg_color_hover ) : ?>
 			.custom-header-button:hover {
-				background-color: <?php echo maybe_hash_hex_color( $header_button_bg_color_hover ); ?>;
-				border-color: <?php echo maybe_hash_hex_color( $header_button_bg_color_hover ); ?>;
+				background-color: <?php echo maybe_hash_hex_color( $header_button_bg_color_hover ); ?> !important;
+				border-color: <?php echo maybe_hash_hex_color( $header_button_bg_color_hover ); ?> !important;
 			}
 		<?php endif; ?>
+
+        <?php if ( '#101010' !== $color_menu_background ) : ?>
+            .navbar {
+                background-color: <?php echo maybe_hash_hex_color( $color_menu_background ); ?>;
+            }
+        <?php endif; ?>
+
+        <?php if ( '#101010' !== $color_footer_background ) : ?>
+            .site-footer {
+                background-color: <?php echo maybe_hash_hex_color( $color_footer_background ); ?>;
+            }
+        <?php endif; ?>
+
+        <?php if ( '#78787f' !== $color_footer_text ) : ?>
+            .site-footer {
+                color: <?php echo maybe_hash_hex_color( $color_footer_text ); ?>;
+            }
+        <?php endif; ?>
+
 		<?php if ( 'blank' !== $color_menu_background_scroll ) : ?>
+            .headroom--not-top .navbar,
 			.has-header-image.home.blog .headroom--not-top .navbar, 
 			.has-header-image.inspiro-front-page .headroom--not-top .navbar, 
 			.has-header-video.home.blog .headroom--not-top .navbar, 

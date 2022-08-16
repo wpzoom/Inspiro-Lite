@@ -56,22 +56,71 @@ class Inspiro_Header_Button_Color_Config {
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
 				),
-				array(
+                array(
+                    'id'   => 'menu_color_subtitle',
+                    'args' => array(
+                        'default' => null,
+                        'sanitize_callback' => 'sanitize_text_field',
+                    ),
+                ),
+
+                array(
+                    'id'   => 'color_menu_background',
+                    'args' => array(
+                        'theme_supports'       => array( 'custom-header', 'header-text' ),
+                        'default'              => '#101010',
+                        'transport'            => 'refresh',
+                        'sanitize_callback'    => 'sanitize_hex_color',
+                        'sanitize_js_callback' => 'maybe_hash_hex_color',
+                    ),
+                ),
+
+    			array(
 					'id'   => 'color-menu-background-scroll',
 					'args' => array(
 						'theme_supports'       => array( 'custom-header', 'header-text' ),
-						'default'              => 'rgba(17, 17, 17, 0.9)',
+						'default'              => 'rgba(0,0,0,0.9)',
 						'transport'            => 'postMessage',
 						'sanitize_callback'    => 'maybe_hash_hex_color',
 					),
 				),
-			),
+
+                array(
+                    'id'   => 'footer_color_subtitle',
+                    'args' => array(
+                        'default' => null,
+                        'sanitize_callback' => 'sanitize_text_field',
+                    ),
+                ),
+
+                array(
+                    'id'   => 'color_footer_background',
+                    'args' => array(
+                        'theme_supports'       => array( 'custom-header', 'header-text' ),
+                        'default'              => '#101010',
+                        'transport'            => 'refresh',
+                        'sanitize_callback'    => 'sanitize_hex_color',
+                        'sanitize_js_callback' => 'maybe_hash_hex_color',
+                    ),
+                ),
+
+                array(
+                    'id'   => 'color_footer_text',
+                    'args' => array(
+                        'theme_supports'       => array( 'custom-header', 'header-text' ),
+                        'default'              => '#78787f',
+                        'transport'            => 'refresh',
+                        'sanitize_callback'    => 'sanitize_hex_color',
+                        'sanitize_js_callback' => 'maybe_hash_hex_color',
+                    ),
+                ),
+ 			),
 			'control' => array(
 				array(
 					'id'           => 'header_button_textcolor',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
-						'label'   => esc_html__( 'Header Button Text Color', 'inspiro' ),
+						'label'   => esc_html__( 'Hero Button Text Color', 'inspiro' ),
 						'section' => 'colors',
 					),
 				),
@@ -79,7 +128,7 @@ class Inspiro_Header_Button_Color_Config {
 					'id'           => 'header_button_textcolor_hover',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
-						'label'   => esc_html__( 'Header Button Text Color Hover', 'inspiro' ),
+						'label'   => esc_html__( 'Hero Button Text Color Hover', 'inspiro' ),
 						'section' => 'colors',
 					),
 				),
@@ -87,18 +136,66 @@ class Inspiro_Header_Button_Color_Config {
 					'id'           => 'header_button_bgcolor_hover',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
-						'label'   => esc_html__( 'Header Button Background Color Hover', 'inspiro' ),
+						'label'   => esc_html__( 'Hero Button Background Color Hover', 'inspiro' ),
 						'section' => 'colors',
 					),
 				),
-				array(
-					'id'           => 'color-menu-background-scroll',
-					'control_type' => 'Inspiro_Customize_Alpha_Color_Picker_Control',
-					'args'         => array(
-						'label'   => esc_html__( 'Menu Background on Scroll', 'inspiro' ),
-						'section' => 'colors',
-					),
-				),
+
+                array(
+                    'id'           => 'menu_color_subtitle',
+                    'control_type' => 'Inspiro_Customize_Title_Control',
+                    'args'         => array(
+                        'label'   => esc_html__( 'Top Menu', 'inspiro' ),
+                        'section' => 'colors',
+                    ),
+                ),
+
+                array(
+                    'id'           => 'color_menu_background',
+                    'control_type' => 'WP_Customize_Color_Control',
+                    'args'         => array(
+                        'label'   => esc_html__( 'Menu Background', 'inspiro' ),
+                        'section' => 'colors',
+                    ),
+                ),
+
+                array(
+                    'id'           => 'color-menu-background-scroll',
+                    'control_type' => 'Inspiro_Customize_Alpha_Color_Picker_Control',
+                    'args'         => array(
+                        'label'   => esc_html__( 'Menu Background on Scroll', 'inspiro' ),
+                        'section' => 'colors',
+                    ),
+                ),
+
+                array(
+                    'id'           => 'footer_color_subtitle',
+                    'control_type' => 'Inspiro_Customize_Title_Control',
+                    'args'         => array(
+                        'label'   => esc_html__( 'Footer', 'inspiro' ),
+                        'section' => 'colors',
+                    ),
+                ),
+
+                array(
+                    'id'           => 'color_footer_background',
+                    'control_type' => 'WP_Customize_Color_Control',
+                    'args'         => array(
+                        'label'   => esc_html__( 'Footer Background', 'inspiro' ),
+                        'section' => 'colors',
+                    ),
+                ),
+
+                array(
+                    'id'           => 'color_footer_text',
+                    'control_type' => 'WP_Customize_Color_Control',
+                    'args'         => array(
+                        'label'   => esc_html__( 'Text Color', 'inspiro' ),
+                        'section' => 'colors',
+                    ),
+                ),
+
+
 			),
 		);
 	}
