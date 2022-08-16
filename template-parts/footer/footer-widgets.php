@@ -10,7 +10,7 @@
 
 $inspiro_widgets_columns = inspiro_get_theme_mod( 'footer-widget-areas' );
 
-if( empty( $inspiro_widgets_columns ) ) {
+if( 0 !== $inspiro_widgets_columns && empty( $inspiro_widgets_columns ) ) {
 	$inspiro_widgets_columns = 3;
 }
 
