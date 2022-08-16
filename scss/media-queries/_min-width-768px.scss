@@ -5,49 +5,6 @@
         }
     }
 
-    .headroom--not-top {
-        box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
-        .navbar {
-            background: rgba(0,0,0,.9);
-            padding: 12px 0;
-        }
-    }
-    body.wp-custom-logo .headroom--not-top .custom-logo-link img {
-        transition: all .2s ease-in-out;
-        max-height: 70px;
-        width: auto;
-    }
-    .site-header {
-        &.headroom {
-            width: 100%;
-            z-index: 1000;
-            position: fixed;
-            top: 0;
-        }
-        &.headroom--not-top {
-            position: fixed;
-            top: 0;
-            border: none;
-        }
-    }
-    .has-header-image,
-    .has-header-video {
-        &.inspiro-front-page,
-        &.home.blog {
-            .headroom--not-top {
-                .navbar {
-                    background: rgba(0,0,0,.9);
-                    padding: 12px 0;
-                }
-            }
-        }
-    }
-
-    /* Compatibility with WP admin bar */
-
-    .admin-bar:not(.side-nav-open) .headroom {
-        top: 32px;
-    }
 
     /* Layout */
 

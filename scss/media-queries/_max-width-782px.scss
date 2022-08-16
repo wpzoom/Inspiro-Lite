@@ -1,4 +1,11 @@
 @media screen and (max-width: em(782)) {
+
+    /* Compatibility with WP admin bar */
+    .admin-bar:not(.side-nav-open) .headroom {
+        top: 46px;
+    }
+
+
 	.admin-bar {
 		#header {
 			margin-top: 46px;

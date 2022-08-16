@@ -1,4 +1,22 @@
+@media screen and (max-width: 600px) {
+
+    /* Compatibility with WP admin bar */
+    .admin-bar:not(.side-nav-open) .headroom {
+        top: 46px;
+    }
+
+    .admin-bar:not(.side-nav-open) .site-header.headroom--not-top {
+        top: 0;
+    }
+
+}
+
 @media screen and (max-width: em(480)) {
+
+    .site-header.headroom--not-top {
+        top: 0;
+    }
+
     .side-nav {
         width: $sidebar-nav-width-mobile;
     }

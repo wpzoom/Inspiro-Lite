@@ -1,4 +1,5 @@
 /* Upgrade to Inspiro Premium */
+.customize-control-section-title,
 #customize-controls .control-section-upgrade-pro {
 	.accordion-section-title {
 		background-color: #eff4f7;
@@ -32,6 +33,7 @@
 			display: block;
 			opacity: 0.8;
 			font-weight: 400;
+            color: #50575e;
 		}
 	}
 }
@@ -57,10 +59,14 @@
 }
 
 .customize-control-section-title {
-	margin: 20px 0;
-	margin-left: -12px;
-	padding: 10px 12px;
-	background-color: #fff;
+	// margin: 20px 0;
+	// margin-left: -12px;
+	// padding: 10px 12px;
+	// background-color: #fff;
+    font-size: 16px;
+    background-color: #eff4f7;
+    border-left-color: #2497d4;
+    color: #50575e;
 
 	.inspiro-customize-section-title {
 		font-size: 15px;

@@ -52,6 +52,7 @@ html {
  */
 body {
     margin: 0;
+    height: 100%;
 }
 
 /**
@@ -2063,6 +2064,46 @@ body {
     width: 100%;
 }
 
+/* Compatibility with WP admin bar */
+.admin-bar:not(.side-nav-open) .headroom {
+    top: 32px;
+}
+
+.headroom--not-top {
+    box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
+}
+
+.headroom--not-top .navbar {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 12px 0;
+}
+
+body.wp-custom-logo .headroom--not-top .custom-logo-link img {
+    transition: all .2s ease-in-out;
+    max-height: 70px;
+    width: auto;
+}
+
+.site-header.headroom {
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+}
+
+.site-header.headroom--not-top {
+    position: fixed;
+    top: 0;
+    border: none;
+}
+
+.has-header-image.inspiro-front-page .headroom--not-top .navbar, .has-header-image.home.blog .headroom--not-top .navbar,
+.has-header-video.inspiro-front-page .headroom--not-top .navbar,
+.has-header-video.home.blog .headroom--not-top .navbar {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 12px 0;
+}
+
 /* Site branding */
 .site-branding {
     padding: 1em 0;
@@ -2265,6 +2306,10 @@ body:not(.title-tagline-hidden) .site-branding-text {
     right: 0;
     top: 0;
     width: 100%;
+    min-height: 100vh;
+    /* fall-back */
+    min-height: -webkit-fill-available;
+    min-height: fill-available;
 }
 
 .custom-header-media:after {
@@ -2306,9 +2351,9 @@ body:not(.title-tagline-hidden) .site-branding-text {
 }
 
 .has-header-image .custom-header-media img {
-    position: fixed;
     height: auto;
     left: 50%;
+    height: 100%;
     max-width: 1000%;
     min-height: 100%;
     min-width: 100%;
@@ -2323,9 +2368,9 @@ body:not(.title-tagline-hidden) .site-branding-text {
 
 .has-header-video .custom-header-media video,
 .has-header-video .custom-header-media iframe {
-    position: fixed;
     left: 50%;
     max-width: none;
+    height: 100%;
     min-height: 100%;
     min-width: 100%;
     min-width: 100vw;
@@ -2334,6 +2379,18 @@ body:not(.title-tagline-hidden) .site-branding-text {
     padding-bottom: 1px;
     /* Prevent header from extending beyond the footer */
     transform: translateX(-50%) translateY(-50%);
+}
+
+.has-header-video .custom-header-media video {
+    height: 100%;
+}
+
+.has-header-video .custom-header-media iframe {
+    position: fixed;
+}
+
+.wp-custom-header {
+    height: 100%;
 }
 
 .wp-custom-header .wp-custom-header-video-button {
@@ -4992,39 +5049,6 @@ div.aligncenter:not(.wp-block-gallery) {
         font-size: 42px;
         font-size: 2.625rem;
     }
-    .headroom--not-top {
-        box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
-    }
-    .headroom--not-top .navbar {
-        background: rgba(0, 0, 0, 0.9);
-        padding: 12px 0;
-    }
-    body.wp-custom-logo .headroom--not-top .custom-logo-link img {
-        transition: all .2s ease-in-out;
-        max-height: 70px;
-        width: auto;
-    }
-    .site-header.headroom {
-        width: 100%;
-        z-index: 1000;
-        position: fixed;
-        top: 0;
-    }
-    .site-header.headroom--not-top {
-        position: fixed;
-        top: 0;
-        border: none;
-    }
-    .has-header-image.inspiro-front-page .headroom--not-top .navbar, .has-header-image.home.blog .headroom--not-top .navbar,
-    .has-header-video.inspiro-front-page .headroom--not-top .navbar,
-    .has-header-video.home.blog .headroom--not-top .navbar {
-        background: rgba(0, 0, 0, 0.9);
-        padding: 12px 0;
-    }
-    /* Compatibility with WP admin bar */
-    .admin-bar:not(.side-nav-open) .headroom {
-        top: 32px;
-    }
     /* Layout */
     .inner-wrap {
         max-width: 1200px;
@@ -5180,6 +5204,10 @@ div.aligncenter:not(.wp-block-gallery) {
 }
 
 @media screen and (max-width: 30em) {
+    /* Compatibility with WP admin bar */
+    .admin-bar:not(.side-nav-open) .headroom {
+        top: 32px;
+    }
     /* Footer */
     .site-footer {
         font-size: 14px;
@@ -5324,6 +5352,10 @@ div.aligncenter:not(.wp-block-gallery) {
 }
 
 @media screen and (max-width: 48.875em) {
+    /* Compatibility with WP admin bar */
+    .admin-bar:not(.side-nav-open) .headroom {
+        top: 46px;
+    }
     .admin-bar #header {
         margin-top: 46px;
     }
@@ -5454,7 +5486,20 @@ div.aligncenter:not(.wp-block-gallery) {
     }
 }
 
+@media screen and (max-width: 600px) {
+    /* Compatibility with WP admin bar */
+    .admin-bar:not(.side-nav-open) .headroom {
+        top: 46px;
+    }
+    .admin-bar:not(.side-nav-open) .site-header.headroom--not-top {
+        top: 0;
+    }
+}
+
 @media screen and (max-width: 30em) {
+    .site-header.headroom--not-top {
+        top: 0;
+    }
     .side-nav {
         width: 320px;
     }

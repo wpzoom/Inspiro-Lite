@@ -1,15 +1,19 @@
 /* Upgrade to Inspiro Premium */
+.customize-control-section-title .accordion-section-title,
 #customize-controls .control-section-upgrade-pro .accordion-section-title {
     background-color: #eff4f7;
     font-size: 16px;
     border-left-color: #2497d4;
 }
 
-#customize-controls .control-section-upgrade-pro .accordion-section-title:hover, #customize-controls .control-section-upgrade-pro .accordion-section-title:focus {
+.customize-control-section-title .accordion-section-title:hover, .customize-control-section-title .accordion-section-title:focus,
+#customize-controls .control-section-upgrade-pro .accordion-section-title:hover,
+#customize-controls .control-section-upgrade-pro .accordion-section-title:focus {
     background-color: #eff4f7;
     border-left-color: #2497d4;
 }
 
+.customize-control-section-title .accordion-section-title .button,
 #customize-controls .control-section-upgrade-pro .accordion-section-title .button {
     font-weight: 500;
     font-size: 14px;
@@ -21,15 +25,18 @@
     box-shadow: none;
 }
 
+.customize-control-section-title .accordion-section-title .button:hover,
 #customize-controls .control-section-upgrade-pro .accordion-section-title .button:hover {
     background: #363940;
 }
 
+.customize-control-section-title .accordion-section-title .customize-action,
 #customize-controls .control-section-upgrade-pro .accordion-section-title .customize-action {
     font-size: 13px;
     display: block;
     opacity: 0.8;
     font-weight: 400;
+    color: #50575e;
 }
 
 /* Typography Control Style */
@@ -51,10 +58,10 @@
 }
 
 .customize-control-section-title {
-    margin: 20px 0;
-    margin-left: -12px;
-    padding: 10px 12px;
-    background-color: #fff;
+    font-size: 16px;
+    background-color: #eff4f7;
+    border-left-color: #2497d4;
+    color: #50575e;
 }
 
 .customize-control-section-title .inspiro-customize-section-title {

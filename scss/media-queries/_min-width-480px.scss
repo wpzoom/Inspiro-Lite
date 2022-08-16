@@ -1,4 +1,12 @@
 @media screen and (max-width: em(480)) {
+
+    /* Compatibility with WP admin bar */
+
+    .admin-bar:not(.side-nav-open) .headroom {
+        top: 32px;
+    }
+
+
     /* Footer */
 
     .site-footer {

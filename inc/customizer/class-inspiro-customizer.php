@@ -189,6 +189,13 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 				)
 			);
 
+            Inspiro_Customizer_Control_Base::register_custom_control(
+                'inspiro-pro-upsell',
+                array(
+                    // 'callback' => 'Inspiro_Customize_Pro_Upsell',
+                )
+            );
+
 			Inspiro_Customizer_Control_Base::register_custom_control(
 				'inspiro-range',
 				array(
@@ -256,6 +263,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 					)
 				)
 			);
+
 
 			// Change transport type for Header Text color.
 			$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';

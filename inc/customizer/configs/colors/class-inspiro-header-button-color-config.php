@@ -25,6 +25,18 @@ class Inspiro_Header_Button_Color_Config {
 	 */
 	public static function config() {
 		return array(
+
+            'section' => array(
+                'id'   => 'colors',
+                'args' => array(
+                    'title'       => esc_html__( 'Colors', 'inspiro' ),
+                    'description' => sprintf( __( 'If you want to display "Sidebar on the right", please make sure you have added some widgets to %s', 'inspiro' ), '<a href="javascript:wp.customize.panel( \'widgets\' ).focus();" title="Open Widgets Panel">' . __( 'Blog Sidebar', 'inspiro' ) . '</a>' ), // phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
+                    'priority'    => 50,
+                    'capability'  => 'edit_theme_options',
+                ),
+            ),
+
+
 			'setting' => array(
 				array(
 					'id'   => 'header_button_textcolor',
@@ -58,6 +70,14 @@ class Inspiro_Header_Button_Color_Config {
 				),
                 array(
                     'id'   => 'menu_color_subtitle',
+                    'args' => array(
+                        'default' => null,
+                        'sanitize_callback' => 'sanitize_text_field',
+                    ),
+                ),
+
+                array(
+                    'id'   => 'colors_premium',
                     'args' => array(
                         'default' => null,
                         'sanitize_callback' => 'sanitize_text_field',
@@ -150,6 +170,7 @@ class Inspiro_Header_Button_Color_Config {
                     ),
                 ),
 
+
                 array(
                     'id'           => 'color_menu_background',
                     'control_type' => 'WP_Customize_Color_Control',
@@ -191,6 +212,19 @@ class Inspiro_Header_Button_Color_Config {
                     'control_type' => 'WP_Customize_Color_Control',
                     'args'         => array(
                         'label'   => esc_html__( 'Text Color', 'inspiro' ),
+                        'section' => 'colors',
+                    ),
+                ),
+
+
+                array(
+                    'id'           => 'colors_premium',
+                    'control_type' => 'Inspiro_Customize_Title_Control',
+                    'args'         => array(
+                        'label' => esc_html__( '🎨 There are 68 more color & font options in Inspiro Premium!', 'inspiro' ),
+                        'description' => esc_html__( 'Unlock all customization options by upgrading to the Premium version of the theme. Customize colors, fonts, header, footer & much more!', 'inspiro' ),
+                        'pro_text'    => esc_html__( '👉 Unlock all customizations', 'inspiro' ),
+                        'pro_url'     => 'https://www.wpzoom.com/themes/inspiro/',
                         'section' => 'colors',
                     ),
                 ),
