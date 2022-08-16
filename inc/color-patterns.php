@@ -91,7 +91,6 @@ a:focus,
 .colors-custom .btn-primary,
 .colors-custom .side-nav .search-form .search-submit,
 .colors-custom .site-footer .search-form .search-submit,
-.colors-custom .button:hover,
 .colors-custom .btn:hover,
 .colors-custom .side-nav .search-form .search-submit:hover,
 .colors-custom .site-footer .search-form .search-submit:hover,
@@ -138,7 +137,10 @@ a:focus,
     fill: ' . $hex . ';
 }
 
-
+.colors-custom .side-nav .search-form .search-submit,
+.colors-custom .side-nav .wp-block-search__button,
+.colors-custom .site-footer .search-form .search-submit,
+.colors-custom .site-footer .wp-block-search__button,
 .colors-custom.woocommerce #content div.product p.price,
 .colors-custom.woocommerce #content div.product span.price,
 .colors-custom.woocommerce div.product p.price,
@@ -156,6 +158,11 @@ a:focus,
 	color: ' . $hex . ';
 }
 
+
+.colors-custom .side-nav .search-form .search-submit,
+.colors-custom .side-nav .wp-block-search__button,
+.colors-custom .site-footer .search-form .search-submit,
+.colors-custom .site-footer .wp-block-search__button,
 .colors-custom .search-form input:focus,
 .colors-custom .search-form button:focus {
     border-color: ' . $hex . ';
@@ -176,6 +183,11 @@ a:focus,
     color: ' . $hex . ' !important;
 }
 
+.colors-custom .custom-header-button:hover,
+.colors-custom .button:hover {
+    background-color: ' . $hex . ';
+    border-color: ' . $hex . ';
+}
 
 @media (min-width: 64em) {
 	.colors-custom .navbar-nav ul {

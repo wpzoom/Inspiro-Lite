@@ -3359,7 +3359,7 @@ h4.jp-relatedposts-post-title {
 }
 
 .site-footer-separator {
-    background: #232323;
+    background: rgba(255, 255, 255, 0.1);
     height: 1px;
     width: 100%;
     border: none;
