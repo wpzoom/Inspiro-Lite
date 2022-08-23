@@ -129,6 +129,27 @@ class Inspiro_Header_Area_Config {
 			)
 		);
 
+        $wp_customize->add_setting(
+            'cover-size',
+            array(
+                'sanitize_callback' => 'sanitize_key',
+                'default'           => 'cover_fixed_height'
+            )
+        );
+
+        $wp_customize->add_control(
+            'cover-size',
+            array(
+                'label'   => esc_html__( 'Featured Image Height in Posts and Pages', 'inspiro' ),
+                'type'    => 'radio',
+                'section' => 'header-area',
+                'choices' => array(
+                    'cover_fixed_height' => esc_html__( 'Fixed height', 'inspiro' ),
+                    'cover_fullscreen'   => esc_html__( 'Fullscreen', 'inspiro' )
+                ),
+            )
+        );
+
 		$wp_customize->add_setting(
 			'header_title_subsection',
 			array(

@@ -255,9 +255,11 @@ body {
         }
         .custom-header {
             display: table;
-            height: 300px;
             height: 100vh;
+            max-height: 100vh;
+            max-height: -webkit-fill-available;
             width: 100%;
+            overflow: hidden;
         }
     }
 }
@@ -353,6 +355,7 @@ body {
             top: 50%;
             padding-bottom: 1px; /* Prevent header from extending beyond the footer */
             transform: translateX(-50%) translateY(-50%);
+            margin-bottom: 0;
         }
 
         video {

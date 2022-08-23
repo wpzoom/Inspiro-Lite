@@ -10,6 +10,8 @@
  * @version 1.0.0
  */
 
+$cover_height = inspiro_get_theme_mod( 'cover-size' );
+
 ?>
 
 <?php
@@ -25,7 +27,7 @@ if ( is_sticky() && is_home() ) {
  * If a regular post or page, and not the front page, show the featured image as header cover image.
  */
 if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) && has_post_thumbnail( get_the_ID() ) ) {
-	echo '<div class="entry-cover-image">';
+	echo '<div class="entry-cover-image '.$cover_height.'">';
 	echo '<div class="single-featured-image-header">';
 	echo get_the_post_thumbnail( get_the_ID(), 'inspiro-featured-image' );
 	echo '</div><!-- .single-featured-image-header -->';

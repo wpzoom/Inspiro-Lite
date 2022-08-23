@@ -37,13 +37,14 @@
 
 	// Set margins of custom header.
 	function adjustHeaderSpacing() {
-		if ( $( window ).outerWidth() >= 768 ) {
+		if ( $( window ).outerWidth() >= 1 ) {
 			if ( ! hasCustomHeaderMedia ) {
 				$customHeader.css( 'padding-top', navigationOuterHeight );
 				$siteContent.css( 'padding-top', navigationOuterHeight );
 			}
 		} else {
 			$customHeader.css( 'padding-top', '0' );
+            $siteContent.css( 'padding-top', navigationOuterHeight );
 			// $siteContent.css( 'padding-top', '2.5em' );
 		}
 	}
