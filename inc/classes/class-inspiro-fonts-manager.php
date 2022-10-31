@@ -209,6 +209,11 @@ if ( ! class_exists( 'Inspiro_Fonts_Manager' ) ) {
 		 * @return void
 		 */
 		public static function render_fonts() {
+
+			global $wp_customizer;
+
+			$enable_local_google_fonts = apply_filters( 'inspiro/local_google_fonts', true );
+
 			$font_list = apply_filters( 'inspiro/render_fonts', self::get_fonts() );
 
 			$google_fonts = array();
@@ -230,8 +235,20 @@ if ( ! class_exists( 'Inspiro_Fonts_Manager' ) ) {
 				}
 			}
 
+			require_once get_theme_file_path( 'inc/classes/class-inspiro-wptt-webfont-loader.php' );
+
 			self::$google_font_url = self::google_fonts_url( $google_fonts, $font_subset );
-			wp_enqueue_style( 'inspiro-google-fonts', self::$google_font_url, array(), INSPIRO_THEME_VERSION, 'all' );
+
+			$local_google_fonts_url = wptt_get_webfont_url( self::$google_font_url );
+
+			if( $enable_local_google_fonts && ! $wp_customizer ) {
+				wp_enqueue_style( 'inspiro-google-fonts', $local_google_fonts_url, array(), INSPIRO_THEME_VERSION, 'all' );
+			}
+			else {
+				wp_enqueue_style( 'inspiro-google-fonts', self::$google_font_url, array(), INSPIRO_THEME_VERSION, 'all' );
+			}
+
+			
 		}
 
 		/**
@@ -247,7 +264,7 @@ if ( ! class_exists( 'Inspiro_Fonts_Manager' ) ) {
 		public static function google_fonts_url( $fonts, $subsets = array() ) {
 
 			/* URL */
-			$base_url  = '//fonts.googleapis.com/css';
+			$base_url  = 'https://fonts.googleapis.com/css';
 			$font_args = array();
 			$family    = array();
 
@@ -290,7 +307,9 @@ if ( ! class_exists( 'Inspiro_Fonts_Manager' ) ) {
 
 				$font_args['display'] = 'swap';
 
-				return add_query_arg( $font_args, $base_url );
+				$args = add_query_arg( $font_args, $base_url );
+
+				return $args;
 			}
 
 			return '';
