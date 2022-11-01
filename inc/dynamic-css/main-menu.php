@@ -36,7 +36,7 @@ add_filter( 'inspiro/dynamic_theme_css', 'inspiro_dynamic_theme_css_mainmenu' );
  * @return string Generated dynamic CSS for Main Menu.
  */
 function inspiro_dynamic_theme_css_mainmenu( $dynamic_css ) {
-	$mainmenu_font_family    = inspiro_get_theme_mod( 'mainmenu-font-family' );
+	$mainmenu_font_family    = inspiro_get_font_stacks( inspiro_get_theme_mod( 'mainmenu-font-family' ) );
 	$mainmenu_font_size      = inspiro_get_theme_mod( 'mainmenu-font-size' );
 	$mainmenu_font_weight    = inspiro_get_theme_mod( 'mainmenu-font-weight' );
 	$mainmenu_text_transform = inspiro_get_theme_mod( 'mainmenu-text-transform' );

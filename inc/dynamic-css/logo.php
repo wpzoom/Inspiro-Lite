@@ -36,7 +36,7 @@ add_filter( 'inspiro/dynamic_theme_css', 'inspiro_dynamic_theme_css_logo' );
  * @return string Generated dynamic CSS for Logo.
  */
 function inspiro_dynamic_theme_css_logo( $dynamic_css ) {
-	$logo_font_family    = inspiro_get_theme_mod( 'logo-font-family' );
+	$logo_font_family    = inspiro_get_font_stacks( inspiro_get_theme_mod( 'logo-font-family' ) );
 	$logo_font_size      = inspiro_get_theme_mod( 'logo-font-size' );
 	$logo_font_weight    = inspiro_get_theme_mod( 'logo-font-weight' );
 	$logo_text_transform = inspiro_get_theme_mod( 'logo-text-transform' );

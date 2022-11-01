@@ -35,7 +35,7 @@ add_filter( 'inspiro/dynamic_theme_css', 'inspiro_dynamic_theme_css_headings' );
  * @return string Generated dynamic CSS for Headings.
  */
 function inspiro_dynamic_theme_css_headings( $dynamic_css ) {
-	$headings_font_family    = inspiro_get_theme_mod( 'headings-font-family' );
+	$headings_font_family    = inspiro_get_font_stacks( inspiro_get_theme_mod( 'headings-font-family' ) );
 	$headings_font_weight    = inspiro_get_theme_mod( 'headings-font-weight' );
 	$headings_text_transform = inspiro_get_theme_mod( 'headings-text-transform' );
 	$headings_line_height    = inspiro_get_theme_mod( 'headings-line-height' );

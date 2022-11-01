@@ -202,3 +202,24 @@ function inspiro_get_theme_mod( $name ) {
 	$default = Inspiro_Customizer::get_theme_mod_default_value( $name );
 	return get_theme_mod( $name, $default );
 }
+
+/**
+ * Add stacks fonts to the select system font.
+ *
+ * @since 1.7.6
+ *
+ * @param string $font font family.
+ * @return mixed
+ */
+function inspiro_get_font_stacks( $font ) {
+
+	$system_fonts = Inspiro_Font_Family_Manager::get_system_fonts();
+	if( array_key_exists( $font, $system_fonts ) ) {
+		if( isset( $system_fonts[ $font ]['fallback'] ) ) {
+			$font = $font . ', ' . $system_fonts[ $font ]['fallback'];
+		};
+	}
+
+	return $font;
+
+}

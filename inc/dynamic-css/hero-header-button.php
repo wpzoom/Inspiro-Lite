@@ -36,7 +36,7 @@ add_filter( 'inspiro/dynamic_theme_css', 'inspiro_dynamic_theme_css_hero_header_
  * @return string Generated dynamic CSS for Header Button.
  */
 function inspiro_dynamic_theme_css_hero_header_button( $dynamic_css ) {
-	$hero_header_button_font_family    = inspiro_get_theme_mod( 'slider-button-font-family' );
+	$hero_header_button_font_family    = inspiro_get_font_stacks( inspiro_get_theme_mod( 'slider-button-font-family' ) );
 	$hero_header_button_font_size      = inspiro_get_theme_mod( 'slider-button-font-size' );
 	$hero_header_button_font_weight    = inspiro_get_theme_mod( 'slider-button-font-weight' );
 	$hero_header_button_text_transform = inspiro_get_theme_mod( 'slider-button-text-transform' );

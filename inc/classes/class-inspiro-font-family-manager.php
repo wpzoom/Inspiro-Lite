@@ -53,6 +53,22 @@ if ( ! class_exists( 'Inspiro_Font_Family_Manager' ) ) {
 		public static function get_system_fonts() {
 			if ( empty( self::$system_fonts ) ) {
 				self::$system_fonts = array(
+					'Arial'     => array(
+						'fallback' => '"Helvetica Neue", Helvetica, sans-serif',
+						'weights'  => array(
+							'300',
+							'400',
+							'700',
+						),
+					),
+					'Arial Black'     => array(
+						'fallback' => '"Arial Bold", Gadget, sans-serif',
+						'weights'  => array(
+							'300',
+							'400',
+							'700',
+						),
+					),
 					'Helvetica' => array(
 						'fallback' => 'Verdana, Arial, sans-serif',
 						'weights'  => array(
@@ -69,18 +85,30 @@ if ( ! class_exists( 'Inspiro_Font_Family_Manager' ) ) {
 							'700',
 						),
 					),
-					'Arial'     => array(
-						'fallback' => 'Helvetica, Verdana, sans-serif',
+					'Times'     => array(
+						'fallback' => 'TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif',
 						'weights'  => array(
 							'300',
 							'400',
 							'700',
 						),
 					),
-					'Times'     => array(
-						'fallback' => 'Georgia, serif',
+					'Impact'          => array(
+						'fallback' => 'Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif',
 						'weights'  => array(
-							'300',
+							'700',
+						),
+					),
+					'Tahoma'          => array(
+						'fallback' => 'Verdana, Segoe, sans-serif',
+						'weights'  => array(
+							'400',
+							'700',
+						),
+					),
+					'Trebuchet MS'    => array(
+						'fallback' => '"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif',
+						'weights'  => array(
 							'400',
 							'700',
 						),
@@ -101,6 +129,48 @@ if ( ! class_exists( 'Inspiro_Font_Family_Manager' ) ) {
 							'700',
 						),
 					),
+					'Lucida Console'  => array(
+						'fallback' => '"Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace',
+						'weights'  => array(
+							'400',
+							'700',
+						),
+					),
+					'Courier New'     => array(
+						'fallback' => 'Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace',
+						'weights'  => array(
+							'400',
+							'700',
+						),
+					),
+					'Palatino'        => array(
+						'fallback' => '"Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif',
+						'weights'  => array(
+							'400',
+							'700',
+						),
+					),
+					'Serif'           => array(
+						'fallback' => '"Georgia", Times, "Times New Roman", serif',
+						'weights'  => array(
+							'400',
+							'700',
+						),
+					),
+					'Sans Serif'      => array(
+						'fallback' => '"Helvetica Neue", Helvetica,Arial, sans-serif',
+						'weights'  => array(
+							'400',
+							'700',
+						),
+					),
+					'Monospaced'      => array(
+						'fallback' => '"Monaco", "Lucida Sans Typewriter", "Lucida Typewriter", "Courier New", Courier, monospace',
+						'weights'  => array(
+							'400',
+							'700',
+						),
+					)
 				);
 			}
 

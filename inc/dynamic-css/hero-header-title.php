@@ -36,7 +36,7 @@ add_filter( 'inspiro/dynamic_theme_css', 'inspiro_dynamic_theme_css_hero_header_
  * @return string Generated dynamic CSS for Header Title.
  */
 function inspiro_dynamic_theme_css_hero_header_title( $dynamic_css ) {
-	$hero_header_title_font_family    = inspiro_get_theme_mod( 'slider-title-font-family' );
+	$hero_header_title_font_family    = inspiro_get_font_stacks( inspiro_get_theme_mod( 'slider-title-font-family' ) );
 	$hero_header_title_font_size      = inspiro_get_theme_mod( 'slider-title-font-size' );
 	$hero_header_title_font_weight    = inspiro_get_theme_mod( 'slider-title-font-weight' );
 	$hero_header_title_text_transform = inspiro_get_theme_mod( 'slider-title-text-transform' );
