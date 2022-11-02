@@ -2,7 +2,7 @@
 Contributors: WPZOOM
 Requires at least: 5.2
 Tested up to: 6.1
-Version: 1.7.5
+Version: 1.7.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
@@ -40,6 +40,10 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 Inspiro bundles the following third-party resources:
+
+WPTT Webfont Loader - https://github.com/WPTT/webfont-loader
+License: Distributed under the terms of the MIT License (https://github.com/WPTT/webfont-loader/blob/master/LICENSE)
+Copyright: 2020 Ari Stathopoulos, WordPress Themes Team
 
 jQuery scrollTo, Copyright 2007-2015 Ariel Flesler
 License: MIT
@@ -101,6 +105,10 @@ License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 
 == Changelog ==
+
+= 1.7.6 =
+* Improvements to the Typography section. Added a new stack with system fonts.
+* Google Fonts are not downloaded and hosted locally automatically using WPTT Webfont Loader (GDPR-compliant, as fonts are not loaded from Google's servers)
 
 = 1.7.5 =
 * Added new option to make the Featured Image fullscreen in posts and pages (Customizer > Header)
