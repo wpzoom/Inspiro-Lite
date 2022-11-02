@@ -372,6 +372,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 			$selectors      = apply_filters( 'inspiro/dynamic_theme_css/selectors', array() );
 			$localize_array = array(
 				'googleFonts' => Inspiro_Font_Family_Manager::get_google_fonts(),
+				'systemFonts' => Inspiro_Font_Family_Manager::get_system_fonts(),
 				'selectors'   => $selectors,
 			);
 

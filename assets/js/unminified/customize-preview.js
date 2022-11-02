@@ -305,6 +305,9 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 			 */
 			wp.customize( control, function ( value ) {
 				value.bind( function ( newValue ) {
+					if( newValue in inspiroCustomizePreview.systemFonts ) {
+						newValue = inspiroCustomizePreview.systemFonts[newValue].stack;
+					}
 					const cssProperty = 'font-family';
 					const style = inspiroBuildStyleTag(
 						control,
