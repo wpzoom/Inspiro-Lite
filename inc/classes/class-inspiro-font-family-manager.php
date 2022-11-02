@@ -53,8 +53,32 @@ if ( ! class_exists( 'Inspiro_Font_Family_Manager' ) ) {
 		public static function get_system_fonts() {
 			if ( empty( self::$system_fonts ) ) {
 				self::$system_fonts = array(
+                    'System Font Stack (sans-serif)'      => array(
+                        'stack' => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
+                        'weights'  => array(
+                            '100',
+                            '200',
+                            '300',
+                            '400',
+                            '500',
+                            '600',
+                            '700',
+                            '800',
+                            '900',
+                        ),
+                    ),
+                    'Serif'           => array(
+                        'stack' => '"Georgia", Times, "Times New Roman", serif',
+                        'weights'  => array(
+                            '400',
+                            '500',
+                            '600',
+                            '700',
+                            '800',
+                        ),
+                    ),
 					'Arial'     => array(
-						'stack' => '"Helvetica Neue", Helvetica, sans-serif',
+						'stack' => 'Arial, Helvetica, sans-serif  ',
 						'weights'  => array(
 							'300',
 							'400',
@@ -62,115 +86,86 @@ if ( ! class_exists( 'Inspiro_Font_Family_Manager' ) ) {
 						),
 					),
 					'Arial Black'     => array(
-						'stack' => '"Arial Bold", Gadget, sans-serif',
+						'stack' => '"Arial Black", Arial, sans-serif',
 						'weights'  => array(
 							'300',
 							'400',
 							'700',
 						),
 					),
-					'Helvetica' => array(
-						'stack' => 'Verdana, Arial, sans-serif',
+                    'Courier'   => array(
+                        'stack' => 'Courier, monospace',
+                        'weights'  => array(
+                            '300',
+                            '400',
+                            '700',
+                        ),
+                    ),
+                    'Courier New'     => array(
+                        'stack' => '"Courier New", Courier, monospace',
+                        'weights'  => array(
+                            '400',
+                            '700',
+                        ),
+                    ),
+                    'Georgia'   => array(
+                        'stack' => 'Georgia, serif',
+                        'weights'  => array(
+                            '300',
+                            '400',
+                            '700',
+                        ),
+                    ),
+                    'Impact'          => array(
+                        'stack' => 'Impact, Charcoal, sans-serif',
+                        'weights'  => array(
+                            '700',
+                        ),
+                    ),
+					'Lucida Console'  => array(
+                        'stack' => '"Lucida Console", Monaco, monospace',
+                        'weights'  => array(
+                            '400',
+                            '700',
+                        ),
+                    ),
+                    'Palatino Linotype'        => array(
+                        'stack' => '"Palatino Linotype", Palatino, "Book Antiqua", serif',
+                        'weights'  => array(
+                            '400',
+                            '700',
+                        ),
+                    ),
+					'Times New Roman'     => array(
+						'stack' => '"Times New Roman", Times, serif',
 						'weights'  => array(
 							'300',
 							'400',
-							'700',
-						),
-					),
-					'Verdana'   => array(
-						'stack' => 'Helvetica, Arial, sans-serif',
-						'weights'  => array(
-							'300',
-							'400',
-							'700',
-						),
-					),
-					'Times'     => array(
-						'stack' => 'TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif',
-						'weights'  => array(
-							'300',
-							'400',
-							'700',
-						),
-					),
-					'Impact'          => array(
-						'stack' => 'Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif',
-						'weights'  => array(
 							'700',
 						),
 					),
 					'Tahoma'          => array(
-						'stack' => 'Verdana, Segoe, sans-serif',
+						'stack' => 'Tahoma, Geneva, sans-serif',
 						'weights'  => array(
 							'400',
 							'700',
 						),
 					),
 					'Trebuchet MS'    => array(
-						'stack' => '"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif',
+						'stack' => '"Trebuchet MS", Helvetica, sans-serif',
 						'weights'  => array(
 							'400',
 							'700',
 						),
 					),
-					'Georgia'   => array(
-						'stack' => 'Times, serif',
-						'weights'  => array(
-							'300',
-							'400',
-							'700',
-						),
-					),
-					'Courier'   => array(
-						'stack' => 'monospace',
-						'weights'  => array(
-							'300',
-							'400',
-							'700',
-						),
-					),
-					'Lucida Console'  => array(
-						'stack' => '"Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace',
-						'weights'  => array(
-							'400',
-							'700',
-						),
-					),
-					'Courier New'     => array(
-						'stack' => 'Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace',
-						'weights'  => array(
-							'400',
-							'700',
-						),
-					),
-					'Palatino'        => array(
-						'stack' => '"Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif',
-						'weights'  => array(
-							'400',
-							'700',
-						),
-					),
-					'Serif'           => array(
-						'stack' => '"Georgia", Times, "Times New Roman", serif',
-						'weights'  => array(
-							'400',
-							'700',
-						),
-					),
-					'Sans Serif'      => array(
-						'stack' => '"Helvetica Neue", Helvetica,Arial, sans-serif',
-						'weights'  => array(
-							'400',
-							'700',
-						),
-					),
-					'Monospaced'      => array(
-						'stack' => '"Monaco", "Lucida Sans Typewriter", "Lucida Typewriter", "Courier New", Courier, monospace',
-						'weights'  => array(
-							'400',
-							'700',
-						),
-					)
+                    'Verdana'   => array(
+                        'stack' => 'Verdana, Arial, sans-serif',
+                        'weights'  => array(
+                            '300',
+                            '400',
+                            '700',
+                        ),
+                    )
 				);
 			}
 

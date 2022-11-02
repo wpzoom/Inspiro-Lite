@@ -21,7 +21,7 @@ if ( ! function_exists( 'inspiro_selector_headings' ) ) {
 	 * @return array The array with HTML selectors.
 	 */
 	function inspiro_selector_headings( $selectors ) {
-		$selectors['typo-headings'] = 'h1, h2, h3, h4, h5, h6';
+		$selectors['typo-headings'] = 'h1, h2, h3, h4, h5, h6, .home.blog .entry-title, .page .entry-title, .page-title, #comments>h3, #respond>h3, .entry-footer';
 		return $selectors;
 	}
 }
