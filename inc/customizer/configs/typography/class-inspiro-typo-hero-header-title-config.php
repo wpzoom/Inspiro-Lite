@@ -38,7 +38,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 				array(
 					'id'   => 'slider-title-font-family',
 					'args' => array(
-						'transport'         => 'postMessage',
+						'transport'         => 'refresh',
 						'sanitize_callback' => 'sanitize_text_field',
 						'default'           => "'Inter', sans-serif",
 					),

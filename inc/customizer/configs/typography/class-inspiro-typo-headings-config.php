@@ -38,7 +38,7 @@ class Inspiro_Typo_Headings_Config {
 				array(
 					'id'   => 'headings-font-family',
 					'args' => array(
-						'transport'         => 'postMessage',
+						'transport'         => 'refresh',
 						'sanitize_callback' => 'sanitize_text_field',
 						'default'           => 'inherit',
 					),

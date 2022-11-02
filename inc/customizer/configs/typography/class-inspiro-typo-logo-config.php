@@ -38,7 +38,7 @@ class Inspiro_Typo_Logo_Config {
 				array(
 					'id'   => 'logo-font-family',
 					'args' => array(
-						'transport'         => 'postMessage',
+						'transport'         => 'refresh',
 						'sanitize_callback' => 'sanitize_text_field',
 						'default'           => "'Montserrat', sans-serif",
 					),

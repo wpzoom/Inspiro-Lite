@@ -38,7 +38,7 @@ class Inspiro_Typo_Body_Config {
 				array(
 					'id'   => 'body-font-family',
 					'args' => array(
-						'transport'         => 'postMessage',
+						'transport'         => 'refresh',
 						'sanitize_callback' => 'sanitize_text_field',
 						'default'           => "'Inter', sans-serif",
 					),
