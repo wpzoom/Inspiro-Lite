@@ -38,7 +38,7 @@ class Inspiro_Typo_Main_Menu_Config {
 				array(
 					'id'   => 'mainmenu-font-family',
 					'args' => array(
-						'transport'         => 'refresh',
+						'transport'         => 'postMessage',
 						'sanitize_callback' => 'sanitize_text_field',
 						'default'           => "'Montserrat', sans-serif",
 					),
