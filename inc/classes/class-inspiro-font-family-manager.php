@@ -54,7 +54,7 @@ if ( ! class_exists( 'Inspiro_Font_Family_Manager' ) ) {
 			if ( empty( self::$system_fonts ) ) {
 				self::$system_fonts = array(
 					'Arial'     => array(
-						'fallback' => '"Helvetica Neue", Helvetica, sans-serif',
+						'stack' => '"Helvetica Neue", Helvetica, sans-serif',
 						'weights'  => array(
 							'300',
 							'400',
@@ -62,7 +62,7 @@ if ( ! class_exists( 'Inspiro_Font_Family_Manager' ) ) {
 						),
 					),
 					'Arial Black'     => array(
-						'fallback' => '"Arial Bold", Gadget, sans-serif',
+						'stack' => '"Arial Bold", Gadget, sans-serif',
 						'weights'  => array(
 							'300',
 							'400',
@@ -70,7 +70,7 @@ if ( ! class_exists( 'Inspiro_Font_Family_Manager' ) ) {
 						),
 					),
 					'Helvetica' => array(
-						'fallback' => 'Verdana, Arial, sans-serif',
+						'stack' => 'Verdana, Arial, sans-serif',
 						'weights'  => array(
 							'300',
 							'400',
@@ -78,7 +78,7 @@ if ( ! class_exists( 'Inspiro_Font_Family_Manager' ) ) {
 						),
 					),
 					'Verdana'   => array(
-						'fallback' => 'Helvetica, Arial, sans-serif',
+						'stack' => 'Helvetica, Arial, sans-serif',
 						'weights'  => array(
 							'300',
 							'400',
@@ -86,7 +86,7 @@ if ( ! class_exists( 'Inspiro_Font_Family_Manager' ) ) {
 						),
 					),
 					'Times'     => array(
-						'fallback' => 'TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif',
+						'stack' => 'TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif',
 						'weights'  => array(
 							'300',
 							'400',
@@ -94,27 +94,27 @@ if ( ! class_exists( 'Inspiro_Font_Family_Manager' ) ) {
 						),
 					),
 					'Impact'          => array(
-						'fallback' => 'Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif',
+						'stack' => 'Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif',
 						'weights'  => array(
 							'700',
 						),
 					),
 					'Tahoma'          => array(
-						'fallback' => 'Verdana, Segoe, sans-serif',
+						'stack' => 'Verdana, Segoe, sans-serif',
 						'weights'  => array(
 							'400',
 							'700',
 						),
 					),
 					'Trebuchet MS'    => array(
-						'fallback' => '"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif',
+						'stack' => '"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif',
 						'weights'  => array(
 							'400',
 							'700',
 						),
 					),
 					'Georgia'   => array(
-						'fallback' => 'Times, serif',
+						'stack' => 'Times, serif',
 						'weights'  => array(
 							'300',
 							'400',
@@ -122,7 +122,7 @@ if ( ! class_exists( 'Inspiro_Font_Family_Manager' ) ) {
 						),
 					),
 					'Courier'   => array(
-						'fallback' => 'monospace',
+						'stack' => 'monospace',
 						'weights'  => array(
 							'300',
 							'400',
@@ -130,42 +130,42 @@ if ( ! class_exists( 'Inspiro_Font_Family_Manager' ) ) {
 						),
 					),
 					'Lucida Console'  => array(
-						'fallback' => '"Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace',
+						'stack' => '"Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace',
 						'weights'  => array(
 							'400',
 							'700',
 						),
 					),
 					'Courier New'     => array(
-						'fallback' => 'Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace',
+						'stack' => 'Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace',
 						'weights'  => array(
 							'400',
 							'700',
 						),
 					),
 					'Palatino'        => array(
-						'fallback' => '"Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif',
+						'stack' => '"Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif',
 						'weights'  => array(
 							'400',
 							'700',
 						),
 					),
 					'Serif'           => array(
-						'fallback' => '"Georgia", Times, "Times New Roman", serif',
+						'stack' => '"Georgia", Times, "Times New Roman", serif',
 						'weights'  => array(
 							'400',
 							'700',
 						),
 					),
 					'Sans Serif'      => array(
-						'fallback' => '"Helvetica Neue", Helvetica,Arial, sans-serif',
+						'stack' => '"Helvetica Neue", Helvetica,Arial, sans-serif',
 						'weights'  => array(
 							'400',
 							'700',
 						),
 					),
 					'Monospaced'      => array(
-						'fallback' => '"Monaco", "Lucida Sans Typewriter", "Lucida Typewriter", "Courier New", Courier, monospace',
+						'stack' => '"Monaco", "Lucida Sans Typewriter", "Lucida Typewriter", "Courier New", Courier, monospace',
 						'weights'  => array(
 							'400',
 							'700',

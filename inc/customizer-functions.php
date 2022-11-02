@@ -215,8 +215,8 @@ function inspiro_get_font_stacks( $font ) {
 
 	$system_fonts = Inspiro_Font_Family_Manager::get_system_fonts();
 	if( array_key_exists( $font, $system_fonts ) ) {
-		if( isset( $system_fonts[ $font ]['fallback'] ) ) {
-			$font = $font . ', ' . $system_fonts[ $font ]['fallback'];
+		if( isset( $system_fonts[ $font ]['stack'] ) ) {
+			$font = $system_fonts[ $font ]['stack'];
 		};
 	}
 
