@@ -108,7 +108,7 @@ Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 
 = 1.7.6 =
 * Improvements to the Typography section. Added a new stack with system fonts.
-* Google Fonts are not downloaded and hosted locally automatically using WPTT Webfont Loader (GDPR-compliant, as fonts are not loaded from Google's servers)
+* Google Fonts are now downloaded and hosted locally automatically using WPTT Webfont Loader (GDPR-compliant, as fonts are not loaded from Google's servers)
 
 = 1.7.5 =
 * Added new option to make the Featured Image fullscreen in posts and pages (Customizer > Header)
