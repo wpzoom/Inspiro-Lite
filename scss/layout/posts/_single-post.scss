@@ -168,6 +168,7 @@
 }
 
 .wp-block-button {
+
     a {
         text-transform: uppercase;
         font-weight: 400;
@@ -175,21 +176,22 @@
         font-family: $font-headings;
         text-decoration: none !important;
         transition: background-color .3s ease;
-
-        &:hover {
-            background-color: $primary-color;
-            color: #fff;
-            border-color: $primary-color;
-        }
     }
 
-    &.is-style-outline {
+    &:not(.is-style-outline) {
         a:hover {
             background-color: $primary-color;
-            color: #fff;
+            color: #fff !important;
             border-color: $primary-color;
         }
     }
+}
+
+.wp-block-button.is-style-outline > .wp-block-button__link:not(.has-background):not(.has-text-color):hover,
+.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background):not(.has-text-color):hover {
+    background-color: $primary-color;
+    color: #fff !important;
+    border-color: $primary-color;
 }
 
 .entry-content > {
