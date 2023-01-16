@@ -80,6 +80,14 @@ if ( ! class_exists( 'Inspiro_Fonts_Manager' ) ) {
 			$body_font_variants = inspiro_get_theme_mod( 'body-font-variant' );
 			self::add_font( $body_font_family, $body_font_variants );
 
+            /**
+             * Logo
+             */
+
+            $body_font_family   = inspiro_get_theme_mod( 'logo-font-family' );
+            $body_font_variants = inspiro_get_theme_mod( 'logo-font-variant' );
+            self::add_font( $body_font_family, $body_font_variants );
+
 			/**
 			 * Headings
 			 */
