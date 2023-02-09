@@ -287,20 +287,20 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
         public function ocdi_import_files() {
           return [
             [
+              'import_file_name'           => 'Inspiro Lite - Gutenberg Blocks',
+              'import_file_url'            => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-blocks.xml',
+              'import_widget_file_url'     => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-widgets.wie',
+              'import_customizer_file_url' => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-customizer.dat',
+              'import_preview_image_url'   => 'https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-gutenberg-1.png',
+              'preview_url'                => 'https://demo.wpzoom.com/inspiro-lite-blocks/',
+            ],
+            [
               'import_file_name'           => 'Inspiro Lite - Elementor',
               'import_file_url'            => 'https://www.wpzoom.com/downloads/xml/inspiro-lite.xml',
               'import_widget_file_url'     => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-widgets.wie',
               'import_customizer_file_url' => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-customizer.dat',
               'import_preview_image_url'   => 'https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-elementor-1.png',
               'preview_url'                => 'https://demo.wpzoom.com/inspiro-lite/',
-            ],
-            [
-              'import_file_name'           => 'Inspiro Lite - Gutenberg',
-              'import_file_url'            => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-blocks.xml',
-              'import_widget_file_url'     => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-widgets.wie',
-              'import_customizer_file_url' => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-customizer.dat',
-              'import_preview_image_url'   => 'https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-gutenberg-1.png',
-              'preview_url'                => 'https://demo.wpzoom.com/inspiro-lite-blocks/',
             ],
           ];
         }
@@ -357,25 +357,19 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
                 array(
                     'name'     => 'One Click Demo Import',
                     'slug'     => 'one-click-demo-import',
-                    'required' => true,
+                    'required' => false,
                 ),
 
-				array(
-					'name'     => 'Elementor',
-					'slug'     => 'elementor',
-					'required' => true,
-				),
-
-				array(
-					'name'     => 'Elementor Addons by WPZOOM',
-					'slug'     => 'wpzoom-elementor-addons',
-					'required' => true,
-				),
+				// array(
+				// 	'name'     => 'Elementor Addons by WPZOOM',
+				// 	'slug'     => 'wpzoom-elementor-addons',
+				// 	'required' => false,
+				// ),
 
                 array(
                     'name'     => 'WPZOOM Portfolio',
                     'slug'     => 'wpzoom-portfolio',
-                    'required' => true,
+                    'required' => false,
                 ),
 
 				array(
