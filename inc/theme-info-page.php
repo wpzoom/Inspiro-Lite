@@ -96,7 +96,7 @@ function inspiro_display_theme_page() {
 
                                     <div class="theme-info-wrap">
 
-                                        <h3 class="wpz-onboard_content-main-title"><?php esc_html_e( 'Customize & Configure'); ?></h3>
+                                        <h3 class="wpz-onboard_content-main-title"><?php esc_html_e( 'Customize & Configure', 'inspiro' ); ?></h3>
 
                                             <div class="wpz-grid-wrap">
 
