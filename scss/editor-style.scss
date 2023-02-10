@@ -82,10 +82,11 @@ Description: Used to style the TinyMCE editor.
     font-family: "Montserrat", sans-serif;
 }
 
-.wp-block-button .wp-block-button__link:hover {
-    background-color: #0bb4aa;
-    border-color: #0bb4aa;
-    color: #fff;
+.wp-block-button.is-style-outline > .wp-block-button__link:not(.has-background):not(.has-text-color):hover,
+.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background):not(.has-text-color):hover {
+    background-color: $primary-color;
+    color: #fff !important;
+    border-color: $primary-color;
 }
 
 .wp-block {

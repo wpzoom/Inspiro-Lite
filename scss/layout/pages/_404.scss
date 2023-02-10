@@ -1,5 +1,12 @@
 /* 404 page */
 
+
+.error404 .content-area,
+.search .content-area {
+    padding-top: em(48);
+    padding-bottom: em(48);
+}
+
 .error404 .page-content .search-form,
 .search .page-content .search-form {
     margin-bottom: em(48);

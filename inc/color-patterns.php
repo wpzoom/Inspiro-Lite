@@ -20,7 +20,6 @@ function inspiro_custom_colors_css() {
  */
 
 a,
-a:focus,
 .colors-custom .entry-content a:focus,
 .colors-custom .entry-content a:hover,
 .colors-custom .entry-summary a:focus,
@@ -51,8 +50,6 @@ a:focus,
 .colors-custom .entry-footer .tags-links a:hover,
 .colors-custom .logged-in-as a:focus,
 .colors-custom .logged-in-as a:hover,
-.colors-custom a:focus .nav-title,
-.colors-custom a:hover .nav-title,
 .colors-custom .edit-link a:focus,
 .colors-custom .edit-link a:hover,
 .colors-custom .site-info a:focus,
@@ -120,6 +117,14 @@ a:focus,
 	border-color: ' . $hex . ';
 }
 
+.colors-custom .wp-block-button:not(.is-style-outline) a:hover,
+.colors-custom .wp-block-button.is-style-outline > .wp-block-button__link:not(.has-background):not(.has-text-color):hover,
+.colors-custom .wp-block-button .wp-block-button__link.is-style-outline:not(.has-background):not(.has-text-color):hover {
+    background-color: ' . $hex . ';
+}
+.colors-custom .wp-block-button:not(.is-style-outline) a:hover,
+.colors-custom .wp-block-button.is-style-outline > .wp-block-button__link:not(.has-background):not(.has-text-color):hover,
+.colors-custom .wp-block-button .wp-block-button__link.is-style-outline:not(.has-background):not(.has-text-color):hover,
 .colors-custom input:focus,
 .colors-custom textarea:focus {
 	border-color: ' . $hex . ';
@@ -193,6 +198,14 @@ a:focus,
 	.colors-custom .navbar-nav ul {
 	    border-top: 2px solid ' . $hex . ';
 	}
+}
+
+@media screen and (max-width: 64em){
+    .colors-custom .navbar-nav>li.current-menu-item>a,
+    .colors-custom .navbar-nav>li.current-menu-parent>a,
+    .colors-custom .navbar-nav>li.current_page_item>a {
+        color: ' . $hex . ';
+    }
 }';
 
 	/**

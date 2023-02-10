@@ -1052,6 +1052,13 @@ input:focus, textarea:focus {
     border-color: #0bb4aa;
 }
 
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
 .wpzabb-post-grid-more,
 .button,
 .btn,
@@ -1690,6 +1697,10 @@ a:hover .nav-title,
     visibility: hidden;
     transform-style: preserve-3d;
     -webkit-overflow-scrolling: touch;
+}
+
+.side-nav a {
+    color: #fff;
 }
 
 .side-nav .navbar-nav {
@@ -3050,15 +3061,16 @@ body.has-archive-description:not(.has-header-image) .taxonomy-description:after 
     transition: background-color .3s ease;
 }
 
-.wp-block-button a:hover {
+.wp-block-button:not(.is-style-outline) a:hover {
     background-color: #0bb4aa;
-    color: #fff;
+    color: #fff !important;
     border-color: #0bb4aa;
 }
 
-.wp-block-button.is-style-outline a:hover {
+.wp-block-button.is-style-outline > .wp-block-button__link:not(.has-background):not(.has-text-color):hover,
+.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background):not(.has-text-color):hover {
     background-color: #0bb4aa;
-    color: #fff;
+    color: #fff !important;
     border-color: #0bb4aa;
 }
 
@@ -3373,6 +3385,12 @@ h4.jp-relatedposts-post-title {
 }
 
 /* 404 page */
+.error404 .content-area,
+.search .content-area {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
 .error404 .page-content .search-form,
 .search .page-content .search-form {
     margin-bottom: 3em;
