@@ -26,17 +26,6 @@ class Inspiro_Header_Button_Color_Config {
 	public static function config() {
 		return array(
 
-            'section' => array(
-                'id'   => 'colors',
-                'args' => array(
-                    'title'       => esc_html__( 'Colors', 'inspiro' ),
-                    'description' => sprintf( __( 'If you want to display "Sidebar on the right", please make sure you have added some widgets to %s', 'inspiro' ), '<a href="javascript:wp.customize.panel( \'widgets\' ).focus();" title="Open Widgets Panel">' . __( 'Blog Sidebar', 'inspiro' ) . '</a>' ), // phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
-                    'priority'    => 50,
-                    'capability'  => 'edit_theme_options',
-                ),
-            ),
-
-
 			'setting' => array(
 				array(
 					'id'   => 'header_button_textcolor',

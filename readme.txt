@@ -2,7 +2,7 @@
 Contributors: WPZOOM
 Requires at least: 5.2
 Tested up to: 6.1
-Version: 1.7.8
+Version: 1.7.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
@@ -105,6 +105,9 @@ License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 
 == Changelog ==
+
+= 1.7.9 =
+* The Welcome page was re-designed and completed with useful information to set up the theme
 
 = 1.7.8 =
 * Bug fix with font family for logo not saving after change

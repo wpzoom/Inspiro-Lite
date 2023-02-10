@@ -69,29 +69,38 @@ if ( ! function_exists( 'inspiro_welcome_notice' ) ) {
 	 */
 	function inspiro_welcome_notice() {
 		?>
-		<div class="notice notice-success wpz-welcome-notice">
+		<div class="notice wpz-welcome-notice">
 			<a class="notice-dismiss wpz-welcome-notice-hide" href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'activated' ), add_query_arg( 'inspiro-hide-notice', 'welcome' ) ), 'inspiro_hide_notices_nonce', '_inspiro_notice_nonce' ) ); ?>">
 				<span class="screen-reader-text">
 					<?php echo esc_html__( 'Dismiss this notice.', 'inspiro' ); ?>
 				</span>
 			</a>
-			<p>
-			<?php
-			/* translators: %1$s: Inspiro theme %2$s: anchor tag open %3$s: anchor tag close */
-			printf( esc_html__( 'Thank you for using %1$s! To get started please make sure you visit our %2$swelcome page%3$s.', 'inspiro' ), 'Inspiro', '<a href="' . esc_url( admin_url( 'themes.php?page=inspiro' ) ) . '">', '</a>' );
-			?>
-			</p>
-			<p class="wpz-welcome-notice-button">
-				<a class="button-secondary" href="<?php echo esc_url( admin_url( 'themes.php?page=inspiro' ) ); ?>">
-					<?php
-					/* translators: %s: Inspiro theme */
-					printf( esc_html__( 'Get Started with %s', 'inspiro' ), 'Inspiro' );
-					?>
-				</a>
-				<a class="button-primary" href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/', 'inspiro' ) ); ?>" target="_blank">
-					<?php esc_html_e( 'Upgrade to Inspiro Premium', 'inspiro' ); ?>
-				</a>
-			</p>
+
+            <div class="wpz-notice-image">
+                <a href="https://www.wpzoom.com/themes/inspiro/" title="Inspiro Premium" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-top.png' ); ?>" width="233" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>" /></a>
+            </div>
+
+            <div class="wpz-notice-text">
+
+                <h3><?php echo esc_html__( 'Discover Inspiro Lite', 'inspiro' ); ?></h3>
+    			<p>
+    			<?php
+    			/* translators: %1$s: Inspiro theme %2$s: anchor tag open %3$s: anchor tag close */
+    			printf( esc_html__( 'Thank you for installing %1$s Lite theme! To get started please make sure you visit the new %2$swelcome page%3$s.', 'inspiro' ), 'Inspiro', '<a href="' . esc_url( admin_url( 'themes.php?page=inspiro' ) ) . '">', '</a>' );
+    			?>
+    			</p>
+    			<div class="wpz-welcome-notice-button">
+    				<a class="button button-primary" href="<?php echo esc_url( admin_url( 'themes.php?page=inspiro' ) ); ?>">
+    					<?php
+    					/* translators: %s: Inspiro theme */
+    					printf( esc_html__( '%s Lite Dashboard &rarr;', 'inspiro' ), 'Inspiro' );
+    					?>
+    				</a>
+    				<a class="button button-secondary" href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/', 'inspiro' ) ); ?>" target="_blank">
+    					<?php esc_html_e( 'Discover Inspiro Premium &rarr;', 'inspiro' ); ?>
+    				</a>
+    			</div>
+            </div>
 		</div>
 		<?php
 	}

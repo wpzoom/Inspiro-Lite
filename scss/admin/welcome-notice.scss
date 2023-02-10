@@ -1,11 +1,101 @@
+$primary-color: #3496ff;
+$secondary-color: scale-color($primary-color, $lightness: 25%);
+$light-color: #fff;
+
 .wpz-welcome-notice {
     position: relative;
-    
+    background-image: url("data:image/svg+xml,%3Csvg width='240' height='94' viewBox='0 0 56 164' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.1' d='M0 0H540V164H81.5C36.4888 164 0 127.511 0 82.5V0Z' fill='%233496FF'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    border-left-width: 1px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px 25px 0 15px;
+
     a {
         font-weight: 600;
     }
+
+
+    .wpz-notice-image {
+        margin: 0 5px 0 0;
+        max-width: 250px;
+        display: flex;
+        align-items: flex-end;
+
+        img {
+            vertical-align: bottom;
+        }
+    }
+
+    .wpz-notice-text {
+
+        p {
+            a {
+                color: $primary-color;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+        }
+
+    }
+
+    h3 {
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+
+    .button {
+        display: inline-flex;
+        align-items: center;
+        font-weight: 600;
+        color: $light-color;
+        background-color: $primary-color;
+        padding: 3px 13px;
+        border: none;
+        transition: all 0.3s ease;
+        margin-right: 5px;
+
+        &:hover,
+        &:active {
+            color: $light-color;
+            background-color: $secondary-color;
+        }
+
+        &.button-secondary {
+            color: $primary-color;
+            border: 1px solid $primary-color;
+            background-color: transparent;
+
+            &:hover,
+            &:active {
+                background-color: rgba($primary-color, 0.1);
+            }
+        }
+    }
+
+    .wpz-welcome-notice-button {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
 }
+
 
 .wpz-welcome-notice-hide {
     text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+
+    .wpz-welcome-notice {
+        background: #fff;
+        flex-direction: column;
+    }
 }

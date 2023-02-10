@@ -1,25 +1,18 @@
 @import "../mixins/";
 @import "./review-notice";
 
-
 /* NEW */
-
 $prefix: wpz-onboard_;
 $primary-color: #3496ff;
 $secondary-color: scale-color($primary-color, $lightness: 25%);
 $light-color: #fff;
-$dark-color: #000;
+$dark-color: #242628;
 $medium-color: #1d2327;
 $grey-color: #ddd;
 $dark-grey-color: #666;
 $bluish-grey-color: #81909c;
 $dark-blue-color: #2271b1;
 $green-color: #22bb66;
-$yellow-color: #f0c33c;
-$orange-color: #f57c00;
-$danger-color: #d84b4b;
-
-
 
 iframe {
     max-width: 100%;
@@ -37,13 +30,11 @@ iframe {
         font-size: 20px;
         color: $primary-color;
         font-weight: 600;
-        margin: 30px 0 0;
+        margin: 30px 0;
         display: block;
     }
 
     &.welcome-section {
-
-        // background-image: url("data:image/svg+xml,%3Csvg width='303' height='270' viewBox='0 0 303 270' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.1' fill-rule='evenodd' clip-rule='evenodd' d='M209.5 351C325.204 351 419 257.204 419 141.5C419 25.7964 325.204 -68 209.5 -68C93.7964 -68 0 25.7964 0 141.5C0 257.204 93.7964 351 209.5 351ZM176.742 25.9576C176.742 7.72548 191.522 -7.05455 209.754 -7.05455H239.465C241.288 -7.05455 242.766 -5.57654 242.766 -3.75333V54.99C242.766 56.0787 242.185 57.0847 241.242 57.629L181.313 92.2295C179.281 93.4024 176.742 91.9362 176.742 89.5905V25.9576ZM178.265 151.167L238.195 116.567C240.227 115.394 242.766 116.86 242.766 119.206V257.042C242.766 275.275 227.986 290.055 209.754 290.055H180.043C178.22 290.055 176.742 288.577 176.742 286.753V153.806C176.742 152.718 177.323 151.712 178.265 151.167Z' fill='%233496FF'/%3E%3C/svg%3E%0A");
 
         background-image: url("data:image/svg+xml,%3Csvg width='303' height='419' viewBox='0 0 303 419' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.1' fill-rule='evenodd' clip-rule='evenodd' d='M209.5 419C325.204 419 419 325.204 419 209.5C419 93.7964 325.204 0 209.5 0C93.7964 0 0 93.7964 0 209.5C0 325.204 93.7964 419 209.5 419ZM176.742 93.9576C176.742 75.7255 191.522 60.9455 209.754 60.9455H239.465C241.288 60.9455 242.766 62.4235 242.766 64.2467V122.99C242.766 124.079 242.185 125.085 241.242 125.629L181.313 160.229C179.281 161.402 176.742 159.936 176.742 157.59V93.9576ZM178.265 219.167L238.195 184.567C240.227 183.394 242.766 184.86 242.766 187.206V325.042C242.766 343.275 227.986 358.055 209.754 358.055H180.043C178.22 358.055 176.742 356.577 176.742 354.753V221.806C176.742 220.718 177.323 219.712 178.265 219.167Z' fill='%233496FF'/%3E%3C/svg%3E%0A");
 
@@ -64,41 +55,6 @@ iframe {
 		max-width: 100%;
 		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 		border: 1px solid #eee;
-	}
-
-	.wpz-clearfix:before,
-	.wpz-clearfix:after {
-		@include clearfix();
-	}
-	.wpz-clearfix:after {
-		@include clearfix-after();
-	}
-	.wpz-row [class*="wpz-col-"]:nth-child(2n + 1) {
-		margin: 0;
-	}
-	[class*="wpz-col-"] {
-		float: left;
-		margin-left: 2.5%;
-	}
-
-	.wpz-col-1-2 {
-		width: 48.75%;
-	}
-
-	.wpz-col-1-3 {
-		width: 31.66%;
-	}
-
-	.wpz-col-2-3 {
-		width: 65.83%;
-	}
-
-	.wpz-col-1-4 {
-		width: 23.12%;
-	}
-
-	.wpz-col-3-4 {
-		width: 74.37%;
 	}
 
 	.theme-intro {
@@ -200,9 +156,6 @@ iframe {
             &.premium-feature {
                 background-color: #F8F9FD;
                 background-image: url("data:image/svg+xml,%3Csvg width='53' height='25' viewBox='0 0 53 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='53' height='25' rx='12.5' fill='%233496FF'/%3E%3Cpath opacity='0.9' d='M13.0043 18V7.81818H16.8224C17.6046 7.81818 18.2609 7.96401 18.7912 8.25568C19.3248 8.54735 19.7275 8.94839 19.9993 9.45881C20.2744 9.96591 20.4119 10.5426 20.4119 11.1889C20.4119 11.8419 20.2744 12.4219 19.9993 12.929C19.7242 13.4361 19.3182 13.8355 18.7812 14.1271C18.2443 14.4155 17.5831 14.5597 16.7976 14.5597H14.267V13.0433H16.549C17.0064 13.0433 17.3809 12.9638 17.6726 12.8047C17.9643 12.6456 18.1797 12.4268 18.3189 12.1484C18.4614 11.87 18.5327 11.5502 18.5327 11.1889C18.5327 10.8277 18.4614 10.5095 18.3189 10.2344C18.1797 9.95928 17.9626 9.7455 17.6676 9.59304C17.3759 9.43726 16.9998 9.35938 16.5391 9.35938H14.8487V18H13.0043ZM22.014 18V7.81818H25.8322C26.6144 7.81818 27.2707 7.95407 27.801 8.22585C28.3346 8.49763 28.7373 8.87879 29.0091 9.36932C29.2842 9.85653 29.4217 10.425 29.4217 11.0746C29.4217 11.7275 29.2825 12.2943 29.0041 12.7749C28.729 13.2521 28.323 13.6217 27.786 13.8835C27.2491 14.142 26.5895 14.2713 25.8074 14.2713H23.0879V12.7401H25.5588C26.0162 12.7401 26.3907 12.6771 26.6824 12.5511C26.974 12.4219 27.1895 12.2346 27.3287 11.9893C27.4712 11.7408 27.5424 11.4358 27.5424 11.0746C27.5424 10.7133 27.4712 10.4051 27.3287 10.1499C27.1861 9.89134 26.969 9.69579 26.6774 9.56321C26.3857 9.42732 26.0095 9.35938 25.5488 9.35938H23.8585V18H22.014ZM27.274 13.3864L29.7946 18H27.7363L25.2605 13.3864H27.274ZM40.2175 12.9091C40.2175 14.0062 40.012 14.9458 39.601 15.728C39.1934 16.5069 38.6365 17.1035 37.9306 17.5178C37.2279 17.9321 36.4308 18.1392 35.5392 18.1392C34.6477 18.1392 33.8489 17.9321 33.1429 17.5178C32.4403 17.1001 31.8835 16.5019 31.4725 15.723C31.0648 14.9408 30.861 14.0028 30.861 12.9091C30.861 11.812 31.0648 10.8741 31.4725 10.0952C31.8835 9.31297 32.4403 8.71473 33.1429 8.30043C33.8489 7.88613 34.6477 7.67898 35.5392 7.67898C36.4308 7.67898 37.2279 7.88613 37.9306 8.30043C38.6365 8.71473 39.1934 9.31297 39.601 10.0952C40.012 10.8741 40.2175 11.812 40.2175 12.9091ZM38.3631 12.9091C38.3631 12.1368 38.2421 11.4856 38.0002 10.9553C37.7615 10.4216 37.4301 10.0189 37.0059 9.74716C36.5816 9.47206 36.0927 9.33452 35.5392 9.33452C34.9857 9.33452 34.4969 9.47206 34.0726 9.74716C33.6484 10.0189 33.3153 10.4216 33.0733 10.9553C32.8347 11.4856 32.7154 12.1368 32.7154 12.9091C32.7154 13.6813 32.8347 14.3343 33.0733 14.8679C33.3153 15.3982 33.6484 15.8009 34.0726 16.076C34.4969 16.3478 34.9857 16.4837 35.5392 16.4837C36.0927 16.4837 36.5816 16.3478 37.0059 16.076C37.4301 15.8009 37.7615 15.3982 38.0002 14.8679C38.2421 14.3343 38.3631 13.6813 38.3631 12.9091Z' fill='white'/%3E%3C/svg%3E%0A");
-
-
-                // background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' %3F%3E%3Csvg height='32px' version='1.1' viewBox='0 0 32 32' width='32px' xmlns='http://www.w3.org/2000/svg' xmlns:sketch='http://www.bohemiancoding.com/sketch/ns' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle/%3E%3Cdesc/%3E%3Cdefs/%3E%3Cg fill='none' fill-rule='evenodd' id='Page-1' stroke='none' stroke-width='1'%3E%3Cg fill='%23929292' id='icon-118-lock-rounded'%3E%3Cpath d='M16,21.9146472 L16,24.5089948 C16,24.7801695 16.2319336,25 16.5,25 C16.7761424,25 17,24.7721195 17,24.5089948 L17,21.9146472 C17.5825962,21.708729 18,21.1531095 18,20.5 C18,19.6715728 17.3284272,19 16.5,19 C15.6715728,19 15,19.6715728 15,20.5 C15,21.1531095 15.4174038,21.708729 16,21.9146472 L16,21.9146472 Z M15,22.5001831 L15,24.4983244 C15,25.3276769 15.6657972,26 16.5,26 C17.3284271,26 18,25.3288106 18,24.4983244 L18,22.5001831 C18.6072234,22.04408 19,21.317909 19,20.5 C19,19.1192881 17.8807119,18 16.5,18 C15.1192881,18 14,19.1192881 14,20.5 C14,21.317909 14.3927766,22.04408 15,22.5001831 L15,22.5001831 L15,22.5001831 Z M9,14.0000125 L9,10.499235 C9,6.35670485 12.3578644,3 16.5,3 C20.6337072,3 24,6.35752188 24,10.499235 L24,14.0000125 C25.6591471,14.0047488 27,15.3503174 27,17.0094776 L27,22 C27,26.4092877 23.4186782,30 19.0008939,30 L13.9991061,30 C9.58616771,30 6,26.418278 6,22 L6,17.0094776 C6,15.339581 7.34233349,14.0047152 9,14.0000125 L9,14.0000125 L9,14.0000125 Z M10,14 L10,10.4934269 C10,6.90817171 12.9101491,4 16.5,4 C20.0825462,4 23,6.90720623 23,10.4934269 L23,14 L22,14 L22,10.5090731 C22,7.46649603 19.5313853,5 16.5,5 C13.4624339,5 11,7.46140289 11,10.5090731 L11,14 L10,14 L10,14 Z M12,14 L12,10.5008537 C12,8.0092478 14.0147186,6 16.5,6 C18.9802243,6 21,8.01510082 21,10.5008537 L21,14 L12,14 L12,14 L12,14 Z M8.99742191,15 C7.89427625,15 7,15.8970601 7,17.0058587 L7,22 C7,25.8659932 10.1374636,29 13.9939542,29 L19.0060458,29 C22.8687,29 26,25.8581267 26,22 L26,17.0058587 C26,15.8980535 25.1090746,15 24.0025781,15 L8.99742191,15 L8.99742191,15 Z' id='lock-rounded'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
                 background-repeat: no-repeat;
                 background-position: 98% 15px;
             }
@@ -243,6 +196,19 @@ iframe {
 		border-collapse: collapse;
 	}
 
+    .table-new-promo {
+        background: #3496FF;
+        color: #fff;
+        font-style: normal;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0;
+        padding: 3px 8px;
+        margin: 0 0 0 7px;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 15px;
+    }
 
     tbody {
         tr {
@@ -270,10 +236,10 @@ iframe {
 	.dashicons {
 		font-size: 25px;
 	}
-	.dashicons-no {
+	.dashicons-no-alt {
 		color: #e64946;
 	}
-	.dashicons-yes {
+	.dashicons-saved {
 		color: $green-color;
 	}
 
@@ -290,6 +256,8 @@ iframe {
  	}
 
     &:first-child {
+
+        width: 43%;
 
         h3 {
             text-align: left;
@@ -335,11 +303,11 @@ iframe {
     }
 }
 
-// Hide uneeded notices.
-.wpzoom_page_wpzoom-license div#setting-error-tgmpa,
-.wpzoom_page_wpzoom-license .update-nag,
-.wpzoom_page_wpzoom-license .notice,
-.wpzoom_page_wpzoom-license div.error {
+// Hide unneeded notices.
+.appearance_page_inspiro div#setting-error-tgmpa,
+.appearance_page_inspiro .update-nag,
+.appearance_page_inspiro .notice,
+.appearance_page_inspiro div.error {
     display: none;
 }
 
@@ -355,49 +323,6 @@ iframe {
         &:hover {
             border-color: $primary-color;
             box-shadow: none;
-        }
-    }
-
-
-    input[type="checkbox"] {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        color: inherit;
-        background-color: $light-color;
-        height: 1.25rem;
-        width: 1.25rem;
-        border: 1px solid $dark-color;
-        border-radius: 2px;
-        transition: all 0.3s ease;
-
-        &:hover {
-            background-color: $secondary-color;
-            border-color: $dark-blue-color;
-        }
-
-        &::before {
-            transition: all 0.3s ease;
-        }
-
-        &:checked {
-            color: $light-color;
-            background-color: $primary-color;
-            border-color: transparent;
-        }
-
-        &:checked::before {
-            content: url("data:image/svg+xml;utf8,%3Csvg%20width%3D%2214%22%20height%3D%2212%22%20viewBox%3D%220%200%2014%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12.779%201.00004L5.3618%2010.9753L1.06089%207.77735%22%20stroke%3D%22white%22%20stroke-width%3D%221.2%22%2F%3E%3C%2Fsvg%3E%0A");
-            display: block;
-            float: none;
-            height: auto;
-            width: auto;
-            margin: 0;
-        }
-
-        &:disabled {
-            pointer-events: none;
-            background-color: rgba($dark-color, 0.2);
         }
     }
 
@@ -441,15 +366,9 @@ iframe {
             padding-right: 6px;
         }
 
-        &.button-danger {
-            color: $light-color;
-            background-color: $danger-color;
-
-            &:hover,
-            &:active {
-                color: $light-color;
-                background-color: rgba($danger-color, 0.8);
-            }
+        &.button-large {
+            font-size: 16px;
+            font-weight: 500;
         }
 
         > .icon-text {
@@ -470,7 +389,6 @@ iframe {
     }
 
     .#{$prefix}header,
-    // .#{$prefix}content .#{$prefix}content-main,
     .theme-info-wrap,
     .#{$prefix}content .#{$prefix}content-side .#{$prefix}content-side-section,
     .#{$prefix}content-container,
@@ -479,18 +397,6 @@ iframe {
         border: 1px solid $grey-color;
         border-radius: 3px;
         box-shadow: 0 3px 2px -2px rgba($dark-color, 0.08);
-    }
-
-    .#{$prefix}notice {
-        background-color: rgba($yellow-color, 0.1);
-        padding: 16px 20px;
-        border: 1px solid $yellow-color;
-        border-radius: 4px;
-        margin: 0;
-
-        > * {
-            margin: 0;
-        }
     }
 
     .#{$prefix}header {
@@ -550,6 +456,7 @@ iframe {
             padding: 0;
             margin: 0;
             overflow: hidden;
+            flex-wrap: wrap;
 
             li {
                 position: relative;
@@ -601,15 +508,6 @@ iframe {
                         margin-right: 5px;
                     }
 
-                    span[class^="license-status-"]:not(.license-status-valid-badge) {
-                        position: absolute;
-                        top: 10px;
-                        right: -12px;
-                        width: 10px;
-                        height: 10px;
-                        border-radius: 10px;
-                        background-color: $orange-color;
-                    }
                 }
 
                 &.active a {
@@ -623,13 +521,10 @@ iframe {
     .#{$prefix}content-wrapper {
         > div {
             position: relative;
-            // pointer-events: none;
-            // opacity: 0;
             transition: all 0.3s ease;
 
             &.active {
                 z-index: 2;
-                // pointer-events: all;
                 opacity: 1;
             }
         }
@@ -638,13 +533,11 @@ iframe {
             .#{$prefix}content-main {
                 display: grid;
                 flex-grow: 3;
-                // padding: 35px 30px;
                 margin: 0;
 
                 .#{$prefix}content-main-tab {
                     grid-column: 1;
                     grid-row: 1;
-                    // opacity: 0;
                     transition: all 0.3s ease;
 
                     &.active {
@@ -655,19 +548,12 @@ iframe {
                 .#{$prefix}content-main-title {
                     font-size: 24px;
                     padding: 0;
-                    margin: 0 0 15px;
+                    margin: 0 0 25px;
 
                     svg {
                         display: inline-block;
                         vertical-align: middle;
                         margin-right: 5px;
-                    }
-                }
-
-                .#{$prefix}content-main-quickstart {
-                    // This is used for onboarding pointer.
-                    .#{$prefix}content-main-title {
-                        padding-right: 20px;
                     }
                 }
 
@@ -691,37 +577,6 @@ iframe {
                             padding-bottom: 0;
                             border-bottom: none;
                             margin-bottom: 0;
-                        }
-
-                        .#{$prefix}content-main-step-title {
-                            display: flex;
-                            align-items: center;
-                            font-size: 20px;
-                            font-weight: 600;
-                            padding: 0;
-                            margin: 0 0 15px;
-
-                            &::before {
-                                counter-increment: steps;
-                                content: counter(steps);
-                                display: inline-flex;
-                                align-items: center;
-                                justify-content: center;
-                                font-size: 20px;
-                                font-weight: 600;
-                                line-height: 1;
-                                height: 30px;
-                                width: 30px;
-                                padding: 0;
-                                border: 1px solid $dark-color;
-                                border-radius: 100%;
-                                margin: 0 15px 0 0;
-                            }
-                        }
-
-                        .#{$prefix}content-main-step-intro {
-                            padding: 0;
-                            margin: 0 0 25px;
                         }
 
                         .#{$prefix}content-main-step-content ul {
@@ -757,167 +612,6 @@ iframe {
                                 p {
                                     padding: 0;
                                     margin: 0;
-                                }
-                            }
-                        }
-
-                        &.step-install-plugins {
-                            form {
-                                position: relative;
-
-                                .plugins-list > li {
-                                    .plugin-name {
-                                        .plugin-badge {
-                                            font-size: 11px;
-                                            font-weight: 600;
-                                            font-style: normal;
-                                            text-transform: uppercase;
-                                            line-height: 1;
-                                            color: $dark-grey-color;
-                                            background-color: rgba(
-                                                $dark-color,
-                                                0.05
-                                            );
-                                            padding: 2px 10px;
-                                            border: 1px solid
-                                                rgba($dark-color, 0.2);
-                                            border-radius: 50px;
-                                            margin: 0 0 0 1em;
-                                        }
-                                    }
-
-                                    &.plugin-status_active {
-                                        input[type="checkbox"] {
-                                            background-color: $green-color;
-                                            border-radius: 100%;
-                                            opacity: 1;
-
-                                            &::before {
-                                                content: url("data:image/svg+xml;utf8,%3Csvg%20width%3D%2212%22%20height%3D%2210%22%20viewBox%3D%220%200%2014%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12.779%201.00004L5.3618%2010.9753L1.06089%207.77735%22%20stroke%3D%22white%22%20stroke-width%3D%221.5%22%2F%3E%3C%2Fsvg%3E%0A");
-                                                opacity: 1;
-                                            }
-                                        }
-
-                                        .plugin-name {
-                                            .plugin-badge {
-                                                color: $green-color;
-                                                background-color: rgba(
-                                                    $green-color,
-                                                    0.1
-                                                );
-                                                border-color: $green-color;
-                                            }
-                                        }
-                                    }
-
-                                    &.plugin-status_not-installed {
-                                        .plugin-name {
-                                            .plugin-badge {
-                                                color: $dark-grey-color;
-                                                background-color: rgba(
-                                                    $dark-color,
-                                                    0.05
-                                                );
-                                                border: 1px solid
-                                                    rgba($dark-color, 0.2);
-                                            }
-                                        }
-                                    }
-
-                                    &.plugin-status_installed-not-activated {
-                                        .plugin-name {
-                                            .plugin-badge {
-                                                color: $yellow-color;
-                                                background-color: rgba(
-                                                    $yellow-color,
-                                                    0.1
-                                                );
-                                                border-color: $yellow-color;
-                                            }
-                                        }
-                                    }
-
-                                    &.plugin-level_recommended {
-                                        .plugin-name {
-                                            .plugin-badge:last-child {
-                                                color: $bluish-grey-color;
-                                                background-color: transparent;
-                                                border-color: transparent;
-                                                text-transform: initial;
-                                                font-size: 13px;
-                                                font-weight: 400;
-                                                padding-left: 0;
-
-                                                &::before {
-                                                    content: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.49991 3.75001C7.17633 3.75001 6.91403 4.0123 6.91403 4.33589C6.91403 4.65947 7.17633 4.92177 7.49991 4.92177L7.50021 4.92177C7.82379 4.92177 8.08594 4.65947 8.08594 4.33589C8.08594 4.0123 7.8235 3.75001 7.49991 3.75001Z' fill='%2381909C'/%3E%3Cpath d='M6.91442 6.38649L6.91442 10.6927C6.91442 11.0163 7.17672 11.2786 7.5003 11.2786C7.82389 11.2786 8.08618 11.0163 8.08618 10.6927L8.08618 6.38649C8.08618 6.0629 7.82389 5.80061 7.5003 5.80061C7.17672 5.80061 6.91442 6.0629 6.91442 6.38649Z' fill='%2381909C'/%3E%3Cpath d='M14.375 7.5C14.375 11.297 11.297 14.375 7.5 14.375C3.70304 14.375 0.625 11.297 0.625 7.5C0.625 3.70304 3.70304 0.625 7.5 0.625C11.297 0.625 14.375 3.70304 14.375 7.5Z' stroke='%2381909C' stroke-width='1.25'/%3E%3C/svg%3E%0A");
-                                                    display: inline-block;
-                                                    vertical-align: middle;
-                                                    float: none;
-                                                    height: auto;
-                                                    width: auto;
-                                                    margin: 0;
-                                                    margin-right: 5px;
-                                                }
-                                            }
-                                        }
-                                    }
-
-                                    &.plugin-level_required {
-                                        .plugin-name {
-                                            .plugin-badge:last-child {
-                                                color: $orange-color;
-                                                background-color: transparent;
-                                                border-color: transparent;
-                                                text-transform: initial;
-                                                font-size: 13px;
-                                                font-weight: 400;
-                                                padding-left: 0;
-
-                                                &::before {
-                                                    content: url("data:image/svg+xml,%3Csvg width='18' height='15' viewBox='0 0 18 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.32837 11.9881C9.32837 12.3492 9.03564 12.642 8.6745 12.642C8.31336 12.642 8.02047 12.3492 8.02047 11.9881C8.02047 11.6269 8.31304 11.3342 8.67417 11.3342H8.6745C9.03564 11.3342 9.32837 11.627 9.32837 11.9881Z' fill='%23F57C00' stroke='%2381909C' stroke-width='0.0404494'/%3E%3Cpath d='M9.32795 4.67409V9.62871C9.32795 9.98984 9.03522 10.2826 8.67409 10.2826C8.31296 10.2826 8.02022 9.98984 8.02022 9.62871V4.67409C8.02022 4.31296 8.31296 4.02022 8.67409 4.02022C9.03522 4.02022 9.32795 4.31296 9.32795 4.67409Z' fill='%23F57C00' stroke='%2381909C' stroke-width='0.0404494'/%3E%3Cpath d='M10.4158 1.60686L16.3599 11.4699C17.1164 12.7251 16.199 14.375 14.5733 14.375H2.68511C1.05945 14.375 0.142021 12.7251 0.898504 11.4699L6.8426 1.60685C7.63158 0.297715 9.62685 0.297715 10.4158 1.60686Z' stroke='%23F57C00' stroke-width='1.25'/%3E%3C/svg%3E%0A");
-                                                    display: inline-block;
-                                                    vertical-align: middle;
-                                                    float: none;
-                                                    height: auto;
-                                                    width: auto;
-                                                    margin: 0;
-                                                    margin-right: 5px;
-                                                }
-                                            }
-                                        }
-                                    }
-
-                                    &.plugin-is-installing {
-                                        input[type="checkbox"] {
-                                            background: none;
-                                            border-radius: 100%;
-                                            box-shadow: inset 0 0 0 4px
-                                                rgba($green-color, 0.2);
-                                            opacity: 1;
-
-                                            &::before {
-                                                content: "";
-                                                height: 100%;
-                                                width: 100%;
-                                                border-radius: 100%;
-                                                box-shadow: inset 0 0 0 4px
-                                                    $green-color;
-                                                clip-path: inset(0 50% 0 0);
-                                                animation: rotation 2s infinite
-                                                    linear;
-                                                opacity: 1;
-                                            }
-                                        }
-                                    }
-
-                                    &.no-required-plugins {
-                                        padding-left: 0;
-                                        opacity: 0.7;
-                                    }
-                                }
-
-                                .button {
-                                    margin-top: 20px;
                                 }
                             }
                         }
@@ -996,19 +690,6 @@ iframe {
                                                     transition: all 0.2s ease;
                                                 }
 
-                                                .#{$prefix}dot-elastic {
-                                                    position: absolute;
-                                                    bottom: 15px;
-                                                    left: 50%;
-                                                    margin-left: -5px;
-                                                    z-index: 5;
-                                                }
-                                                .#{$prefix}dot-elastic,
-                                                .#{$prefix}dot-elastic::before,
-                                                .#{$prefix}dot-elastic::after {
-                                                    width: 8px;
-                                                    height: 8px;
-                                                }
                                             }
 
                                             &:hover {
@@ -1034,17 +715,6 @@ iframe {
                                                     font-weight: 600;
                                                     white-space: nowrap;
                                                     margin: 0 0 10px;
-                                                }
-
-                                                .delete-imported-demo-content {
-                                                    position: absolute;
-                                                    right: 0;
-                                                    top: -3px;
-                                                    width: 24px;
-                                                    height: 24px;
-                                                    &::before {
-                                                        content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 22H7C5.89543 22 5 21.1046 5 20V7H3V5H7V4C7 2.89543 7.89543 2 9 2H15C16.1046 2 17 2.89543 17 4V5H21V7H19V20C19 21.1046 18.1046 22 17 22ZM7 7V20H17V7H7ZM9 4V5H15V4H9ZM15 18H13V9H15V18ZM11 18H9V9H11V18Z' fill='%2381909c'/%3E%3C/svg%3E%0A");
-                                                    }
                                                 }
 
                                                 p {
@@ -1095,212 +765,18 @@ iframe {
                                                     cursor: initial;
                                                 }
 
-                                                .#{$prefix}dot-elastic,
-                                                .#{$prefix}dot-elastic::before,
-                                                .#{$prefix}dot-elastic::after {
-                                                    background-color: $light-color;
-                                                    color: $light-color;
-                                                }
                                             }
                                         }
 
-                                        &.imported-demo-content {
-                                            .preview-thumbnail {
-                                                &::before {
-                                                    background-color: rgba(
-                                                        $dark-color,
-                                                        0.5
-                                                    );
-                                                    opacity: 1;
-                                                }
-
-                                                .button-select-template {
-                                                    color: $light-color;
-                                                    background-color: $green-color;
-                                                }
-                                            }
-                                        }
                                     }
                                 }
                             }
                         }
 
-                        &.step-import-demo {
-                            .#{$prefix}notice {
-                                margin: 0 0 20px;
 
-                                > ul {
-                                    list-style: none;
-                                    margin: 5px 0 10px;
-
-                                    > li {
-                                        padding: 0;
-                                        margin-bottom: 15px;
-
-                                        &:last-child {
-                                            margin-bottom: 0;
-                                        }
-
-                                        h3 {
-                                            font-size: 14px;
-                                            font-weight: 600;
-                                            margin-top: 0;
-                                            margin-bottom: 5px;
-
-                                            .plugin-badge {
-                                                background-color: transparent;
-                                                border-color: transparent;
-                                                text-transform: initial;
-                                                font-size: 13px;
-                                                font-weight: 400;
-                                                padding-left: 0;
-                                                margin-left: 15px;
-
-                                                &::before {
-                                                    display: inline-block;
-                                                    vertical-align: middle;
-                                                    float: none;
-                                                    height: auto;
-                                                    width: auto;
-                                                    margin: 0;
-                                                    margin-right: 5px;
-                                                }
-                                            }
-                                        }
-
-                                        &.plugin-level_recommended {
-                                            h3 .plugin-badge {
-                                                color: $bluish-grey-color;
-
-                                                &::before {
-                                                    content: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.49991 3.75001C7.17633 3.75001 6.91403 4.0123 6.91403 4.33589C6.91403 4.65947 7.17633 4.92177 7.49991 4.92177L7.50021 4.92177C7.82379 4.92177 8.08594 4.65947 8.08594 4.33589C8.08594 4.0123 7.8235 3.75001 7.49991 3.75001Z' fill='%2381909C'/%3E%3Cpath d='M6.91442 6.38649L6.91442 10.6927C6.91442 11.0163 7.17672 11.2786 7.5003 11.2786C7.82389 11.2786 8.08618 11.0163 8.08618 10.6927L8.08618 6.38649C8.08618 6.0629 7.82389 5.80061 7.5003 5.80061C7.17672 5.80061 6.91442 6.0629 6.91442 6.38649Z' fill='%2381909C'/%3E%3Cpath d='M14.375 7.5C14.375 11.297 11.297 14.375 7.5 14.375C3.70304 14.375 0.625 11.297 0.625 7.5C0.625 3.70304 3.70304 0.625 7.5 0.625C11.297 0.625 14.375 3.70304 14.375 7.5Z' stroke='%2381909C' stroke-width='1.25'/%3E%3C/svg%3E%0A");
-                                                }
-                                            }
-                                        }
-
-                                        &.plugin-level_required {
-                                            h3 .plugin-badge {
-                                                color: $orange-color;
-
-                                                &::before {
-                                                    content: url("data:image/svg+xml,%3Csvg width='18' height='15' viewBox='0 0 18 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.32837 11.9881C9.32837 12.3492 9.03564 12.642 8.6745 12.642C8.31336 12.642 8.02047 12.3492 8.02047 11.9881C8.02047 11.6269 8.31304 11.3342 8.67417 11.3342H8.6745C9.03564 11.3342 9.32837 11.627 9.32837 11.9881Z' fill='%23F57C00' stroke='%2381909C' stroke-width='0.0404494'/%3E%3Cpath d='M9.32795 4.67409V9.62871C9.32795 9.98984 9.03522 10.2826 8.67409 10.2826C8.31296 10.2826 8.02022 9.98984 8.02022 9.62871V4.67409C8.02022 4.31296 8.31296 4.02022 8.67409 4.02022C9.03522 4.02022 9.32795 4.31296 9.32795 4.67409Z' fill='%23F57C00' stroke='%2381909C' stroke-width='0.0404494'/%3E%3Cpath d='M10.4158 1.60686L16.3599 11.4699C17.1164 12.7251 16.199 14.375 14.5733 14.375H2.68511C1.05945 14.375 0.142021 12.7251 0.898504 11.4699L6.8426 1.60685C7.63158 0.297715 9.62685 0.297715 10.4158 1.60686Z' stroke='%23F57C00' stroke-width='1.25'/%3E%3C/svg%3E%0A");
-                                                }
-                                            }
-                                        }
-                                    }
-
-                                    ul {
-                                        > li {
-                                            display: flex;
-                                            align-items: center;
-                                            gap: 5px;
-                                            font-weight: 600;
-                                            line-height: 1.5;
-                                            list-style: none;
-                                            padding: 0;
-                                            padding-left: 10px;
-                                            margin: 0;
-
-                                            &::before {
-                                                content: "\2023";
-                                                font-size: 16px;
-                                                color: darken(
-                                                    $yellow-color,
-                                                    15%
-                                                );
-                                            }
-                                        }
-                                    }
-                                }
-
-                                #wpz-onboard-skip-notice {
-                                    display: inline-block;
-                                }
-
-                                .go-up-link {
-                                    font-weight: 600;
-                                    text-decoration: none;
-                                    color: $primary-color;
-                                    transition: all 0.2s ease;
-
-                                    &:hover {
-                                        color: $secondary-color;
-                                    }
-                                }
-                            }
-
-                            .#{$prefix}selected-template {
-                                font-size: 18px;
-                                padding: 0;
-                                margin: 0 0 20px;
-                                font-weight: 400;
-                            }
-
-                            .#{$prefix}import-button-wrap {
-                                padding: 0;
-                                margin: 0;
-
-                                .#{$prefix}import-button {
-                                    &.disabled {
-                                        pointer-events: none;
-                                    }
-                                }
-                            }
-                        }
                     }
                 }
 
-                .#{$prefix}content-main-license {
-                    .#{$prefix}content-main-license-label {
-                        font-size: 14px;
-                        font-weight: 600;
-                        padding: 0;
-                        margin: 0;
-
-                        + .label-badge {
-                            font-size: 11px;
-                            font-weight: 600;
-                            font-style: normal;
-                            text-transform: uppercase;
-                            line-height: 1;
-                            color: $dark-grey-color;
-                            background-color: rgba($dark-color, 0.05);
-                            padding: 2px 10px;
-                            border: 1px solid rgba($dark-color, 0.2);
-                            border-radius: 50px;
-                            margin: 0 0 0 1em;
-
-                            &[data-license-status="valid"] {
-                                color: $green-color;
-                                background-color: rgba($green-color, 0.1);
-                                border-color: $green-color;
-                            }
-                        }
-                    }
-
-                    .#{$prefix}content-main-license-key {
-                        display: block;
-                        width: 430px;
-                        margin: 10px 0;
-                    }
-
-                    .#{$prefix}content-main-license-note {
-                        display: block;
-                        font-size: 14px;
-                        font-weight: 400;
-                        color: rgba($dark-color, 0.5);
-                        padding: 0;
-                        margin: 0;
-                    }
-
-                    .#{$prefix}content-main-license-submit {
-                        margin: 30px 0 0;
-
-                        &.button-secondary {
-                            margin-left: 1em;
-                        }
-                    }
-                }
             }
 
             .#{$prefix}content-side {
@@ -1309,9 +785,34 @@ iframe {
                 .#{$prefix}content-side-section {
                     padding: 30px 25px;
                     margin: 0 0 30px;
+                    border: none;
+                    box-shadow: none;
 
                     &:last-child {
                         margin-bottom: 0;
+                    }
+
+                    &.discover-premium {
+                        background-color: #1CBBB4;
+
+                        h3,p {
+                            color: #fff;
+                        }
+
+                        .button {
+                            background-color: $dark-color;
+                            color: #fff;
+                            font-size: 16px;
+                            font-weight: 500;
+                            width: 100%;
+                            text-align: center;
+                            justify-content: center;
+
+                            &:hover {
+                                background-color: #fff;
+                                color: $dark-color;
+                            }
+                        }
                     }
 
                     .#{$prefix}content-side-section-title {
@@ -1379,89 +880,6 @@ iframe {
                 margin: 0 0 20px;
             }
 
-            .#{$prefix}content-overlay-design-pages-preview-link {
-                margin: 0 0 40px;
-
-                &::after {
-                    content: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.4444 12.4444H1.55556V1.55556H7V0H1.55556C0.692222 0 0 0.7 0 1.55556V12.4444C0 13.3 0.692222 14 1.55556 14H12.4444C13.3 14 14 13.3 14 12.4444V7H12.4444V12.4444ZM8.55556 0V1.55556H11.3478L3.70222 9.20111L4.79889 10.2978L12.4444 2.65222V5.44444H14V0H8.55556Z' fill='%233496ff'/%3E%3C/svg%3E%0A");
-                    display: inline-block;
-                    float: none;
-                    height: auto;
-                    width: auto;
-                    margin: 0;
-                    margin-left: 10px;
-                    font-size: 0;
-                }
-            }
-
-            .#{$prefix}content-overlay-design-pages-subhead {
-                font-size: 18px;
-                font-weight: 400;
-                padding: 0;
-                margin: 0 0 25px;
-            }
-
-            .#{$prefix}content-overlay-design-pages-thumbs {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 30px;
-                padding: 0;
-                margin: 0;
-
-                li {
-                    cursor: pointer;
-                    background-color: rgba($dark-color, 0.05);
-                    background-position: top center;
-                    background-repeat: no-repeat;
-                    background-size: 100%;
-                    padding: 97.5% 0 0;
-                    border-radius: 4px;
-                    margin: 0;
-                    overflow: hidden;
-                    box-shadow: inset 0 0 0 2px transparent,
-                        0 4px 4px rgba($dark-color, 0.15);
-                    transition: all 0.2s ease;
-
-                    &:hover {
-                        box-shadow: inset 0 0 0 2px $medium-color,
-                            0 4px 4px rgba($dark-color, 0.15);
-                    }
-
-                    &.selected {
-                        cursor: auto;
-                        box-shadow: inset 0 0 0 2px $primary-color,
-                            0 4px 4px rgba($dark-color, 0.15);
-
-                        strong {
-                            background-color: $primary-color;
-                        }
-                    }
-
-                    strong {
-                        display: block;
-                        font-size: 14px;
-                        font-weight: 600;
-                        color: $light-color;
-                        background-color: $medium-color;
-                        padding: 6px 10px;
-                        transition: all 0.2s ease;
-                    }
-                }
-            }
-
-            .#{$prefix}content-overlay-design-pages-right-pane {
-                padding: 0;
-                margin: 0;
-
-                > img {
-                    background: rgba($dark-color, 0.05);
-                    object-fit: contain;
-                    width: 100%;
-                    height: auto;
-                    border-radius: 4px;
-                    box-shadow: 0 4px 4px rgba($dark-color, 0.15);
-                }
-            }
         }
     }
 
@@ -1489,6 +907,7 @@ iframe {
 
         .#{$prefix}footer-links {
             display: flex;
+            flex-wrap: wrap;
             padding: 0;
             margin: 0;
 
@@ -1526,9 +945,22 @@ iframe {
     .#{$prefix}wrapper {
         padding-right: 10px;
     }
+
+    .theme-info-wrap.welcome-section p {
+        max-width: 100%;
+    }
 }
 
+
+@media screen and (max-width: 600px) {
+    .wpz-grid-wrap {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
 @media screen and (min-width: 600px) {
+
     .#{$prefix}wrapper {
         .#{$prefix}content-wrapper {
             display: grid;
@@ -1546,100 +978,5 @@ iframe {
                 }
             }
         }
-    }
-}
-
-/**
- * ==============================================
- * Dot Elastic
- * ==============================================
- */
-.#{$prefix}dot-elastic {
-    position: relative;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background-color: $primary-color;
-    color: $primary-color;
-    animation: dotElastic 1s infinite linear;
-
-    &::before,
-    &::after {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        top: 0;
-    }
-    &::before {
-        left: -15px;
-        width: 10px;
-        height: 10px;
-        border-radius: 5px;
-        background-color: $primary-color;
-        color: $primary-color;
-        animation: dotElasticBefore 1s infinite linear;
-    }
-    &::after {
-        left: 15px;
-        width: 10px;
-        height: 10px;
-        border-radius: 5px;
-        background-color: $primary-color;
-        color: $primary-color;
-        animation: dotElasticAfter 1s infinite linear;
-    }
-}
-
-@keyframes dotElasticBefore {
-    0% {
-        transform: scale(1, 1);
-    }
-    25% {
-        transform: scale(1, 1.5);
-    }
-    50% {
-        transform: scale(1, 0.67);
-    }
-    75% {
-        transform: scale(1, 1);
-    }
-    100% {
-        transform: scale(1, 1);
-    }
-}
-
-@keyframes dotElastic {
-    0% {
-        transform: scale(1, 1);
-    }
-    25% {
-        transform: scale(1, 1);
-    }
-    50% {
-        transform: scale(1, 1.5);
-    }
-    75% {
-        transform: scale(1, 1);
-    }
-    100% {
-        transform: scale(1, 1);
-    }
-}
-
-@keyframes dotElasticAfter {
-    0% {
-        transform: scale(1, 1);
-    }
-    25% {
-        transform: scale(1, 1);
-    }
-    50% {
-        transform: scale(1, 0.67);
-    }
-    75% {
-        transform: scale(1, 1.5);
-    }
-    100% {
-        transform: scale(1, 1);
     }
 }
