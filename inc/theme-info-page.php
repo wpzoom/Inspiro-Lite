@@ -788,7 +788,7 @@ function inspiro_display_theme_page() {
 
                                     <br />
                                     <br />
-                                    <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/', 'inspiro' ) ); ?>" target="_blank" class="button button-large button-primary">
+                                    <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro-pro/', 'inspiro' ) ); ?>" target="_blank" class="button button-large button-primary">
                                         <?php esc_html_e( 'Get Inspiro PRO Today &rarr;', 'inspiro' ); ?>
                                     </a>
 
