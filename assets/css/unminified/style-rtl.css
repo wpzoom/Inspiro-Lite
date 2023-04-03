@@ -2924,6 +2924,10 @@ body.has-archive-description:not(.has-header-image) .taxonomy-description:after 
     margin-bottom: 0;
 }
 
+.page-template-no-title .entry-content {
+    margin: 0 auto;
+}
+
 .page .full-width .entry-content,
 .single .full-width .entry-content {
     max-width: 100%;

@@ -432,7 +432,125 @@ function inspiro_register_block_patterns() {
 			array(
 				'title'       => __( 'Homepage', 'inspiro' ),
 				'description' => _x( 'A call to action with a beautiful two-column gallery below.', 'Block pattern description', 'inspiro' ),
-				'content'     => "<!-- wp:paragraph {\"align\":\"center\"} -->\n<p class=\"has-text-align-center\"><meta charset=\"utf-8\">This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual copy might look like if it were real content.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:spacer {\"height\":55} -->\n<div style=\"height:55px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:group {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#e5e9ec\"}}} -->\n<div class=\"wp-block-group alignfull has-background\" style=\"background-color:#e5e9ec\"><div class=\"wp-block-group__inner-container\"><!-- wp:columns -->\n<div class=\"wp-block-columns\"><!-- wp:column {\"verticalAlignment\":\"center\"} -->\n<div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:heading -->\n<h2>About us</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual copy might look like if it were real content.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons {\"contentJustification\":\"left\"} -->\n<div class=\"wp-block-buttons is-content-justification-left\"><!-- wp:button {\"borderRadius\":0,\"className\":\"is-style-outline\"} -->\n<div class=\"wp-block-button is-style-outline\"><a class=\"wp-block-button__link no-border-radius\" href=\"#\">About Us</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons -->\n\n<!-- wp:paragraph -->\n<p></p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:spacer {\"height\":48} -->\n<div style=\"height:48px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:image {\"id\":26,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_JKMGVEJMPU.jpg\" alt=\"\" class=\"wp-image-26\"/></figure>\n<!-- /wp:image --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns --></div></div>\n<!-- /wp:group -->\n\n<!-- wp:group {\"align\":\"full\"} -->\n<div class=\"wp-block-group alignfull\"><div class=\"wp-block-group__inner-container\"><!-- wp:columns {\"verticalAlignment\":\"center\"} -->\n<div class=\"wp-block-columns are-vertically-aligned-center\"><!-- wp:column {\"verticalAlignment\":\"center\"} -->\n<div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:spacer {\"height\":48} -->\n<div style=\"height:48px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:image {\"id\":27,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_M6D1GS9PSL.jpg\" alt=\"\" class=\"wp-image-27\"/></figure>\n<!-- /wp:image --></div>\n<!-- /wp:column -->\n\n<!-- wp:column {\"verticalAlignment\":\"center\"} -->\n<div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:heading -->\n<h2>Our Services</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual copy might look like if it were real content.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button {\"borderRadius\":0,\"className\":\"is-style-outline\"} -->\n<div class=\"wp-block-button is-style-outline\"><a class=\"wp-block-button__link no-border-radius\" href=\"#\">Services</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns --></div></div>\n<!-- /wp:group -->\n\n<!-- wp:group {\"align\":\"full\",\"backgroundColor\":\"black\"} -->\n<div class=\"wp-block-group alignfull has-black-background-color has-background\"><div class=\"wp-block-group__inner-container\"><!-- wp:heading {\"textAlign\":\"center\",\"textColor\":\"white\"} -->\n<h2 class=\"has-text-align-center has-white-color has-text-color\"><strong>Gallery</strong></h2>\n<!-- /wp:heading -->\n\n<!-- wp:gallery {\"ids\":[28,27,26,25,24,29],\"linkTo\":\"none\",\"align\":\"center\"} -->\n<figure class=\"wp-block-gallery aligncenter columns-3 is-cropped\"><ul class=\"blocks-gallery-grid\"><li class=\"blocks-gallery-item\"><figure><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_P9QYJ8AAL8.jpg\" alt=\"\" data-id=\"28\" data-full-url=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_P9QYJ8AAL8.jpg\" data-link=\"#\" class=\"wp-image-28\"/></figure></li><li class=\"blocks-gallery-item\"><figure><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_M6D1GS9PSL.jpg\" alt=\"\" data-id=\"27\" data-full-url=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_M6D1GS9PSL.jpg\" data-link=\"#\" class=\"wp-image-27\"/></figure></li><li class=\"blocks-gallery-item\"><figure><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_JKMGVEJMPU.jpg\" alt=\"\" data-id=\"26\" data-full-url=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_JKMGVEJMPU.jpg\" data-link=\"#\" class=\"wp-image-26\"/></figure></li><li class=\"blocks-gallery-item\"><figure><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_CXVCF2NNWJ.jpg\" alt=\"\" data-id=\"25\" data-full-url=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_CXVCF2NNWJ.jpg\" data-link=\"#\" class=\"wp-image-25\"/></figure></li><li class=\"blocks-gallery-item\"><figure><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_89BQZ89TLH.jpg\" alt=\"\" data-id=\"24\" data-full-url=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_89BQZ89TLH.jpg\" data-link=\"#\" class=\"wp-image-24\"/></figure></li><li class=\"blocks-gallery-item\"><figure><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_PGXCCTCLB5.jpg\" alt=\"\" data-id=\"29\" data-full-url=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_PGXCCTCLB5.jpg\" data-link=\"#\" class=\"wp-image-29\"/></figure></li></ul></figure>\n<!-- /wp:gallery --></div></div>\n<!-- /wp:group -->\n\n<!-- wp:cover {\"url\":\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_89BQZ89TLH.jpg\",\"id\":24,\"hasParallax\":true,\"dimRatio\":40,\"overlayColor\":\"black\",\"minHeight\":375,\"minHeightUnit\":\"px\",\"contentPosition\":\"center center\",\"align\":\"full\",\"className\":\"is-position-center-center\"} -->\n<div class=\"wp-block-cover alignfull has-background-dim-40 has-black-background-color has-background-dim has-parallax is-position-center-center\" style=\"background-image:url(https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_89BQZ89TLH.jpg);min-height:375px\"><div class=\"wp-block-cover__inner-container\"><!-- wp:paragraph {\"align\":\"center\",\"placeholder\":\"Write title…\",\"style\":{\"typography\":{\"lineHeight\":\"1.1\"},\"color\":{\"text\":\"#fffffa\"}},\"fontSize\":\"huge\"} -->\n<p class=\"has-text-align-center has-text-color has-huge-font-size\" style=\"color:#fffffa;line-height:1.1\"><strong>Unleash your creativity with Inspiro</strong></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph {\"align\":\"center\"} -->\n<p class=\"has-text-align-center\" style=\"color:#ffffff;\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:spacer {\"height\":39} -->\n<div style=\"height:39px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:buttons {\"contentJustification\":\"center\"} -->\n<div class=\"wp-block-buttons is-content-justification-center\"><!-- wp:button {\"borderRadius\":0,\"textColor\":\"white\",\"className\":\"is-style-outline\"} -->\n<div class=\"wp-block-button is-style-outline\"><a class=\"wp-block-button__link has-white-color has-text-color no-border-radius\" href=\"#\">Contact us</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div></div>\n<!-- /wp:cover -->",
+				'content'     => '<!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"width":"100%"} -->
+<div class="wp-block-column" style="flex-basis:100%"><!-- wp:group -->
+<div class="wp-block-group"><!-- wp:spacer {"height":"57px"} -->
+<div style="height:57px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"letterSpacing":"1px"}},"fontSize":"medium"} -->
+<h3 class="wp-block-heading has-text-align-center has-medium-font-size" style="letter-spacing:1px">WE ARE A CREATIVE AGENCY LOCATED IN LONDON</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center"><meta charset="utf-8">This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual copy might look like if it were real content.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center","orientation":"horizontal"}} -->
+<div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"0px"}},"className":"is-style-outline","fontSize":"small"} -->
+<div class="wp-block-button has-custom-font-size is-style-outline has-small-font-size"><a class="wp-block-button__link wp-element-button" href="https://demo.wpzoom.com/inspiro-lite-blocks/about/" style="border-radius:0px"><strong>About Us</strong></a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+
+<!-- wp:spacer {"height":"55px"} -->
+<div style="height:55px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:group {"align":"full","style":{"color":{"background":"#e5e9ec"}}} -->
+<div class="wp-block-group alignfull has-background" style="background-color:#e5e9ec"><!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:heading {"level":3,"style":{"typography":{"letterSpacing":"1px"}},"fontSize":"medium"} -->
+<h3 class="wp-block-heading has-medium-font-size" style="letter-spacing:1px">ABOUT</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual copy might look like if it were real content.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left","orientation":"horizontal"}} -->
+<div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"0px"}},"className":"is-style-outline","fontSize":"small"} -->
+<div class="wp-block-button has-custom-font-size is-style-outline has-small-font-size"><a class="wp-block-button__link wp-element-button" href="#" style="border-radius:0px"><strong>About Us</strong></a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:spacer {"height":"48px"} -->
+<div style="height:48px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:image {"id":26,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="' . get_stylesheet_directory_uri() . '/assets/images/StockSnap_JKMGVEJMPU.jpg" alt="" class="wp-image-26"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"align":"full"} -->
+<div class="wp-block-group alignfull"><!-- wp:columns {"verticalAlignment":"center"} -->
+<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:spacer {"height":"48px"} -->
+<div style="height:48px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:image {"id":27,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="' . get_stylesheet_directory_uri() . '/assets/images/StockSnap_M6D1GS9PSL.jpg" alt="" class="wp-image-27"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:heading {"level":3,"style":{"typography":{"letterSpacing":"1px"}},"fontSize":"medium"} -->
+<h3 class="wp-block-heading has-medium-font-size" style="letter-spacing:1px">SERVICES</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual copy might look like if it were real content.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"0px"}},"className":"is-style-outline","fontSize":"small"} -->
+<div class="wp-block-button has-custom-font-size is-style-outline has-small-font-size"><a class="wp-block-button__link wp-element-button" href="#" style="border-radius:0px"><strong>Services</strong></a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"align":"full","backgroundColor":"black"} -->
+<div class="wp-block-group alignfull has-black-background-color has-background"><!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"letterSpacing":"1px"}},"textColor":"white","fontSize":"medium"} -->
+<h3 class="wp-block-heading has-text-align-center has-white-color has-text-color has-medium-font-size" style="letter-spacing:1px">PORTFOLIO</h3>
+<!-- /wp:heading -->
+
+<!-- wp:wpzoom-blocks/portfolio {"align":"full","secondaryColor":"#ffffff","className":"portfolio-dark"} /--></div>
+<!-- /wp:group -->
+
+<!-- wp:cover {"url":"' . get_stylesheet_directory_uri() . '/assets/images/StockSnap_89BQZ89TLH.jpg","id":24,"hasParallax":true,"dimRatio":40,"overlayColor":"black","minHeight":375,"minHeightUnit":"px","contentPosition":"center center","isDark":false,"align":"full","className":"is-position-center-center"} -->
+<div class="wp-block-cover alignfull is-light has-parallax is-position-center-center" style="min-height:375px"><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-40 has-background-dim"></span><div role="img" class="wp-block-cover__image-background wp-image-24 has-parallax" style="background-position:50% 50%;background-image:url(' . get_stylesheet_directory_uri() . '/assets/images/StockSnap_89BQZ89TLH.jpg)"></div><div class="wp-block-cover__inner-container"><!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"textTransform":"uppercase","letterSpacing":"1px","fontSize":"26px"}},"textColor":"white"} -->
+<h3 class="wp-block-heading has-text-align-center has-white-color has-text-color" style="font-size:26px;letter-spacing:1px;text-transform:uppercase"><strong>Unleash your creativity with Inspiro</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center","textColor":"white"} -->
+<p class="has-text-align-center has-white-color has-text-color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:spacer {"height":"39px"} -->
+<div style="height:39px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center","orientation":"horizontal"}} -->
+<div class="wp-block-buttons"><!-- wp:button {"textColor":"white","style":{"border":{"radius":"0px"}},"className":"is-style-outline","fontSize":"small"} -->
+<div class="wp-block-button has-custom-font-size is-style-outline has-small-font-size"><a class="wp-block-button__link has-white-color has-text-color wp-element-button" href="#" style="border-radius:0px"><strong>Contact us</strong></a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div></div>
+<!-- /wp:cover -->',
 				'categories'  => array( 'inspiro' ),
 			)
 		);
@@ -470,7 +588,21 @@ function inspiro_register_block_patterns() {
             array(
                 'title'       => __( 'Fullscreen Hero Area', 'inspiro' ),
                 'description' => _x( 'A fullscreen area similar to the homepage hero.', 'Block pattern description', 'inspiro' ),
-                'content'     => "<!-- wp:cover {\"url\":\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_M6D1GS9PSL.jpg\",\"id\":5,\"hasParallax\":true,\"dimRatio\":50,\"minHeight\":100,\"minHeightUnit\":\"vh\",\"contentPosition\":\"center center\",\"align\":\"full\"} -->\n<div class=\"wp-block-cover alignfull has-parallax\" style=\"background-image:url(https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_M6D1GS9PSL.jpg);min-height:100vh\"><span aria-hidden=\"true\" class=\"wp-block-cover__gradient-background has-background-dim\"></span><div class=\"wp-block-cover__inner-container\"><!-- wp:paragraph {\"align\":\"center\",\"placeholder\":\"Write title…\",\"style\":{\"typography\":{\"fontSize\":\"70px\",\"fontStyle\":\"normal\",\"fontWeight\":\"900\"}},\"textColor\":\"white\"} -->\n<p class=\"has-text-align-center has-white-color has-text-color\" style=\"font-size:70px;font-style:normal;font-weight:900\"><strong>Create. Amaze. Inspire.</strong></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph {\"align\":\"center\",\"style\":{\"typography\":{\"letterSpacing\":\"1px\"}},\"textColor\":\"white\",\"fontSize\":\"medium\"} -->\n<p class=\"has-text-align-center has-white-color has-text-color has-medium-font-size\" style=\"letter-spacing:1px\">Inspiro is a Portfolio &amp; Photography WordPress Theme. This area supports self-hosted videos as well as videos from YouTube and Vimeo.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons {\"layout\":{\"type\":\"flex\",\"justifyContent\":\"center\"}} -->\n<div class=\"wp-block-buttons\"><!-- wp:button {\"textColor\":\"white\",\"style\":{\"border\":{\"radius\":\"0px\"}},\"className\":\"is-style-outline\"} -->\n<div class=\"wp-block-button is-style-outline\"><a class=\"wp-block-button__link has-white-color has-text-color\" href=\"#\" style=\"border-radius:0px\"><strong>Learn More</strong></a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div></div>\n<!-- /wp:cover -->",
+                'content'     => '<!-- wp:cover {"url":"' . get_stylesheet_directory_uri() . '/assets/images/StockSnap_M6D1GS9PSL.jpg","id":5,"hasParallax":true,"dimRatio":50,"minHeight":100,"minHeightUnit":"vh","contentPosition":"center center","isDark":false,"align":"full"} -->
+<div class="wp-block-cover alignfull is-light has-parallax" style="min-height:100vh"><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><div role="img" class="wp-block-cover__image-background wp-image-5 has-parallax" style="background-position:50% 50%;background-image:url(' . get_stylesheet_directory_uri() . '/assets/images/StockSnap_M6D1GS9PSL.jpg)"></div><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","style":{"typography":{"fontSize":"70px","fontStyle":"normal","fontWeight":"900"}},"textColor":"white"} -->
+<p class="has-text-align-center has-white-color has-text-color" style="font-size:70px;font-style:normal;font-weight:900"><strong>Create. Amaze. Inspire.</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"align":"center","style":{"typography":{"letterSpacing":"1px"}},"textColor":"white","fontSize":"medium"} -->
+<p class="has-text-align-center has-white-color has-text-color has-medium-font-size" style="letter-spacing:1px">Inspiro is a Portfolio &amp; Photography WordPress Theme. This area supports self-hosted videos as well as videos from YouTube and Vimeo.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons"><!-- wp:button {"textColor":"white","style":{"border":{"radius":"0px"}},"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-white-color has-text-color wp-element-button" href="#" style="border-radius:0px"><strong>Learn More</strong></a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div></div>
+<!-- /wp:cover -->',
                 'categories'  => array( 'inspiro' ),
             )
         );
@@ -479,8 +611,40 @@ function inspiro_register_block_patterns() {
 			'inspiro/full-section',
 			array(
 				'title'       => __( 'Full-width section', 'inspiro' ),
-				'description' => _x( 'A call to action with a beautiful two-column gallery below.', 'Block pattern description', 'inspiro' ),
-				'content'     => "<!-- wp:group {\"align\":\"full\",\"style\":{\"color\":{\"background\":\"#e5e9ec\"}}} -->\n<div class=\"wp-block-group alignfull has-background\" style=\"background-color:#e5e9ec\"><div class=\"wp-block-group__inner-container\"><!-- wp:columns -->\n<div class=\"wp-block-columns\"><!-- wp:column {\"verticalAlignment\":\"center\"} -->\n<div class=\"wp-block-column is-vertically-aligned-center\"><!-- wp:heading -->\n<h2>About us</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual copy might look like if it were real content.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons {\"contentJustification\":\"left\"} -->\n<div class=\"wp-block-buttons is-content-justification-left\"><!-- wp:button {\"borderRadius\":0,\"className\":\"is-style-outline\"} -->\n<div class=\"wp-block-button is-style-outline\"><a class=\"wp-block-button__link no-border-radius\" href=\"#\">About Us</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons -->\n\n<!-- wp:paragraph -->\n<p></p>\n<!-- /wp:paragraph --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:spacer {\"height\":48} -->\n<div style=\"height:48px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:image {\"id\":26,\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"https://demo.wpzoom.com/wp-content/themes/inspiro-lite/assets/images/StockSnap_JKMGVEJMPU.jpg\" alt=\"\" class=\"wp-image-26\"/></figure>\n<!-- /wp:image --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns --></div></div>\n<!-- /wp:group -->",
+				'description' => _x( 'A section with 2 columns.', 'Block pattern description', 'inspiro' ),
+				'content'     => '<!-- wp:group {"align":"full","style":{"color":{"background":"#e5e9ec"}}} -->
+<div class="wp-block-group alignfull has-background" style="background-color:#e5e9ec"><!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"center"} -->
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:heading -->
+<h2 class="wp-block-heading">About us</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual copy might look like if it were real content.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left","orientation":"horizontal"}} -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#">About Us</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:spacer {"height":"48px"} -->
+<div style="height:48px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:image {"id":26,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="' . get_stylesheet_directory_uri() . '/assets/images/StockSnap_JKMGVEJMPU.jpg" alt="" class="wp-image-26"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group -->',
 				'categories'  => array( 'inspiro' ),
 			)
 		);

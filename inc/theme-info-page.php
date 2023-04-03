@@ -820,6 +820,22 @@ function inspiro_display_theme_page() {
 
                             </div>
 
+                            <div class="wpz-onboard_content-side-section discover-premium inspiro-block-version">
+                                <h3 class="wpz-onboard_content-side-section-title icon-docs">
+                                    <svg id="Icons" width="24" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">.st20{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}</style><line class="st20" x1="3" x2="29" y1="11" y2="11"></line><g><path d="M7,9C6.7,9,6.5,8.9,6.3,8.7C6.1,8.5,6,8.3,6,8c0-0.3,0.1-0.5,0.3-0.7c0,0,0.1-0.1,0.1-0.1c0.1,0,0.1-0.1,0.2-0.1   C6.7,7,6.7,7,6.8,7c0.1,0,0.3,0,0.4,0c0.1,0,0.1,0,0.2,0.1c0.1,0,0.1,0.1,0.2,0.1c0,0,0.1,0.1,0.1,0.1c0.1,0.1,0.2,0.2,0.2,0.3   C8,7.7,8,7.9,8,8c0,0.1,0,0.3-0.1,0.4C7.9,8.5,7.8,8.6,7.7,8.7C7.5,8.9,7.3,9,7,9z"></path></g><g><path d="M10,9C9.7,9,9.5,8.9,9.3,8.7C9.1,8.5,9,8.3,9,8c0-0.1,0-0.3,0.1-0.4c0.1-0.1,0.1-0.2,0.2-0.3c0.1-0.1,0.2-0.2,0.3-0.2   C10,6.9,10.4,7,10.7,7.3c0.1,0.1,0.2,0.2,0.2,0.3C11,7.7,11,7.9,11,8c0,0.3-0.1,0.5-0.3,0.7C10.5,8.9,10.3,9,10,9z"></path></g><g><path d="M13,9c-0.1,0-0.3,0-0.4-0.1c-0.1-0.1-0.2-0.1-0.3-0.2c-0.1-0.1-0.2-0.2-0.2-0.3C12,8.3,12,8.1,12,8c0-0.1,0-0.3,0.1-0.4   c0.1-0.1,0.1-0.2,0.2-0.3c0.4-0.4,1-0.4,1.4,0c0.1,0.1,0.2,0.2,0.2,0.3C14,7.7,14,7.9,14,8c0,0.1,0,0.3-0.1,0.4   c-0.1,0.1-0.1,0.2-0.2,0.3C13.5,8.9,13.3,9,13,9z"></path></g><path class="st20" d="M27,5H5C3.9,5,3,5.9,3,7v18c0,1.1,0.9,2,2,2h22c1.1,0,2-0.9,2-2V7C29,5.9,28.1,5,27,5z"></path><line class="st20" x1="3" x2="19" y1="19" y2="19"></line><line class="st20" x1="19" x2="19" y1="11" y2="27"></line></svg>  <?php esc_html_e( 'Inspiro Blocks Theme', 'inspiro' ); ?> &nbsp;&nbsp;<svg width="57" height="25" viewBox="0 0 57 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="57" height="25" rx="12.5" fill="white"/>
+<path opacity="0.9" d="M21.3714 7.81818V18H19.7308L14.9332 11.0646H14.8487V18H13.0043V7.81818H14.6548L19.4474 14.7585H19.5369V7.81818H21.3714ZM23.3812 18V7.81818H30.0034V9.36435H25.2257V12.1286H29.6603V13.6747H25.2257V16.4538H30.0431V18H23.3812ZM34.0279 18L31.1543 7.81818H33.138L34.9725 15.3004H35.0669L37.0257 7.81818H38.8304L40.7942 15.3054H40.8837L42.7182 7.81818H44.7019L41.8283 18H40.0087L37.9703 10.8558H37.8908L35.8475 18H34.0279Z" fill="#3496FF"/>
+</svg></h3>
+                                <p class="wpz-onboard_content-side-section-content"><?php esc_html_e( 'We have launched a new version of the Inspiro theme that is compatible with the new Site Editor. Experience the future of WordPress with our new block theme!', 'inspiro' ); ?></p>
+
+                                <a href="https://www.wpzoom.com/themes/inspiro-blocks/" title="Inspiro Premium" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-blocks.png' ); ?>" width="300" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>" /></a>
+
+                                <div class="wpz-onboard_content-side-section-button">
+                                    <a href="<?php echo esc_url( admin_url( 'theme-install.php?search=inspiro%2Bblocks' ) ); ?>" title="Inspiro Blocks" target="_blank" class="button"><?php esc_html_e( 'Install Now', 'inspiro' ); ?> &nbsp;<?xml version="1.0" ?><svg class="feather feather-download" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg></a>
+                                </div>
+
+                            </div>
+
 
                             <div class="wpz-onboard_content-side-section">
                                 <h3 class="wpz-onboard_content-side-section-title icon-docs">

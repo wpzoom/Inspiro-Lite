@@ -14,10 +14,6 @@ $bluish-grey-color: #81909c;
 $dark-blue-color: #2271b1;
 $green-color: #22bb66;
 
-iframe {
-    max-width: 100%;
-    height: auto;
-}
 
 /* Theme Info Page */
 .theme-info-wrap {
@@ -151,6 +147,7 @@ iframe {
 
             p.section_footer {
                 margin-top: auto;
+                margin-bottom: 0;
             }
 
             &.premium-feature {
@@ -341,6 +338,7 @@ iframe {
         border: none;
         transition: all 0.3s ease;
         margin-right: 5px;
+        margin-bottom: 8px;
 
         &:hover,
         &:active {
@@ -788,14 +786,24 @@ iframe {
                     border: none;
                     box-shadow: none;
 
+                    iframe {
+                        max-width: 100%;
+                        height: auto;
+                        min-height: 170px;
+                    }
+
                     &:last-child {
                         margin-bottom: 0;
                     }
 
                     &.discover-premium {
-                        background-color: #1CBBB4;
+                        background-color: #0bb4aa;
 
-                        h3,p {
+                        &.inspiro-block-version {
+                            background-color: #0B69B4;
+                        }
+
+                        h3, p {
                             color: #fff;
                         }
 
@@ -830,6 +838,7 @@ iframe {
                     .#{$prefix}content-side-section-content {
                         padding: 0;
                         margin: 0 0 20px;
+
                     }
                 }
             }
