@@ -68,7 +68,7 @@ class Inspiro_Notice_Review extends Inspiro_Notices {
 			<div class="inspiro-message-content">
 
 				<div class="inspiro-message-image">
-					<a href="<?php echo esc_url( admin_url( 'themes.php?page=inspiro-doc' ) ); ?>"><img class="inspiro-screenshot" src="<?php echo esc_url( get_template_directory_uri() ); ?>/screenshot.png" alt="<?php esc_attr_e( 'inspiro', 'inspiro' ); ?>" /></a>
+					<img class="inspiro-screenshot" src="<?php echo esc_url( get_template_directory_uri() ); ?>/screenshot.png" alt="<?php esc_attr_e( 'inspiro', 'inspiro' ); ?>" />
 				</div>
 				<div class="inspiro-message-text">
 
