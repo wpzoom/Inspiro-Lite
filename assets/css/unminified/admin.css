@@ -362,7 +362,7 @@
     color: #fff;
     background-color: #3496ff;
     padding: 3px 13px;
-    border: none;
+    border: 1px solid #3496ff;
     transition: all 0.3s ease;
     margin-right: 5px;
     margin-bottom: 8px;
@@ -375,7 +375,6 @@
 
 .wp-core-ui .wpz-onboard_wrapper .button.button-secondary {
     color: #3496ff;
-    border: 1px solid #3496ff;
     background-color: transparent;
 }
 

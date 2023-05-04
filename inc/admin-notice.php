@@ -82,7 +82,7 @@ if ( ! function_exists( 'inspiro_welcome_notice' ) ) {
 
             <div class="wpz-notice-text">
 
-                <h3><?php echo esc_html__( 'Discover Inspiro Lite', 'inspiro' ); ?></h3>
+                <h3><?php echo esc_html__( 'Discover Inspiro Lite!', 'inspiro' ); ?></h3>
     			<p>
     			<?php
     			/* translators: %1$s: Inspiro theme %2$s: anchor tag open %3$s: anchor tag close */

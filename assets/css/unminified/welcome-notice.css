@@ -50,9 +50,9 @@
     color: #fff;
     background-color: #3496ff;
     padding: 3px 13px;
-    border: none;
     transition: all 0.3s ease;
     margin-right: 5px;
+    border: 1px solid #3496ff;
 }
 
 .wpz-welcome-notice .button:hover, .wpz-welcome-notice .button:active {
@@ -62,7 +62,6 @@
 
 .wpz-welcome-notice .button.button-secondary {
     color: #3496ff;
-    border: 1px solid #3496ff;
     background-color: transparent;
 }
 
@@ -73,6 +72,12 @@
 .wpz-welcome-notice .wpz-welcome-notice-button {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.wpz-welcome-notice .wpz-welcome-notice-button .dashicons {
+    margin-right: 3px;
+    margin-top: 3px;
+    font-size: 16px;
 }
 
 .wpz-welcome-notice-hide {
