@@ -58,9 +58,16 @@ function inspiro_body_classes( $classes ) {
 	}
 
 	// Add class if is single page and has post thumbnail.
-	if ( ( ( is_single() && 'post' === get_post_type() ) || ( is_single() && 'portfolio_item' === get_post_type() ) || is_page() ) && has_post_thumbnail() ) {
+	if ( is_page()  && has_post_thumbnail() ) {
 		$classes[] = 'has-header-image';
 	}
+
+    $featured_image_show = inspiro_get_theme_mod( 'display_featured_image' );
+
+    // Add class if is single post and has post thumbnail.
+    if ( ( ( is_single() && 'post' === get_post_type() ) || ( is_single() && 'portfolio_item' === get_post_type() ) ) && has_post_thumbnail() && $featured_image_show ) {
+        $classes[] = 'has-header-image';
+    }
 
 	// Add class if sidebar is used.
 	if ( is_active_sidebar( 'blog-sidebar' ) && ! is_page() ) {

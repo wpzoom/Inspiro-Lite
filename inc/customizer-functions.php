@@ -89,7 +89,7 @@ function inspiro_is_static_front_page() {
  * Return whether we're previewing the blog page.
  */
 function inspiro_is_view_is_blog() {
-	return is_home();
+	return is_home() || is_single();
 }
 
 /**

@@ -12,6 +12,8 @@
 
 $cover_height = inspiro_get_theme_mod( 'cover-size' );
 
+$featured_image_show = inspiro_get_theme_mod( 'display_featured_image' );
+
 ?>
 
 <?php
@@ -26,7 +28,7 @@ if ( is_sticky() && is_home() ) {
 /*
  * If a regular post or page, and not the front page, show the featured image as header cover image.
  */
-if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) && has_post_thumbnail( get_the_ID() ) ) {
+if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) && has_post_thumbnail( get_the_ID() ) && $featured_image_show ) {
 	echo '<div class="entry-cover-image '.$cover_height.'">';
 	echo '<div class="single-featured-image-header">';
 	echo get_the_post_thumbnail( get_the_ID(), 'inspiro-featured-image' );
@@ -66,7 +68,7 @@ if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) && has_post_th
 </header><!-- .entry-header -->
 
 <?php
-if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) && has_post_thumbnail( get_the_ID() ) ) {
+if ( ( is_single() || ( is_page() && ! inspiro_is_frontpage() ) ) && has_post_thumbnail( get_the_ID() ) && $featured_image_show ) {
 	echo '</div><!-- .entry-cover-image -->';
 }
 ?>
