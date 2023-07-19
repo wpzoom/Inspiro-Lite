@@ -11,7 +11,7 @@
  * Inserter: true
  * Custom Categories: Inspiro
  */
-register_block_pattern_category( 'inspiro', [ 'label' => __( 'Inspiro', 'wpzoom' ), 'pm_custom' => true ] );
+register_block_pattern_category( 'inspiro', [ 'label' => __( 'Inspiro', 'inspiro' ), 'pm_custom' => true ] );
 ?>
 <!-- wp:group {"align":"full","style":{"color":{"background":"#e5e9ec"},"spacing":{"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-background" style="background-color:#e5e9ec;padding-top:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--small)"><!-- wp:columns -->

@@ -11,7 +11,7 @@
  * Inserter: true
  * Custom Categories: Inspiro Pages
  */
-register_block_pattern_category( 'inspiro-pages', [ 'label' => __( 'Inspiro Pages', 'wpzoom' ), 'pm_custom' => true ] );
+register_block_pattern_category( 'inspiro-pages', [ 'label' => __( 'Inspiro Pages', 'inspiro' ), 'pm_custom' => true ] );
 ?>
 <!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull"><!-- wp:spacer {"height":"60px"} -->

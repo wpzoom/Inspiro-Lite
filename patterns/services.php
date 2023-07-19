@@ -11,7 +11,7 @@
  * Inserter: true
  * Custom Categories: Inspiro
  */
-register_block_pattern_category( 'inspiro', [ 'label' => __( 'Inspiro', 'wpzoom' ), 'pm_custom' => true ] );
+register_block_pattern_category( 'inspiro', [ 'label' => __( 'Inspiro', 'inspiro' ), 'pm_custom' => true ] );
 ?>
 <!-- wp:group {"style":{"color":{"text":"#000000"},"elements":{"link":{"color":{"text":"#000000"}}}}} -->
 <div class="wp-block-group has-text-color has-link-color" style="color:#000000"><!-- wp:columns -->
