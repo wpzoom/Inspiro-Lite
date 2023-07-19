@@ -3412,7 +3412,7 @@ h4.jp-relatedposts-post-title {
 
 .portfolio-dark.wpzoom-blocks_portfolio-block .wpz-portfolio-button__link {
     background: none;
-    border: 2px solid #fff;
+    border: 2px solid #fff !important;
 }
 
 .portfolio-dark.wpzoom-blocks_portfolio-block .wpz-portfolio-button__link:focus, .portfolio-dark.wpzoom-blocks_portfolio-block .wpz-portfolio-button__link:hover {
