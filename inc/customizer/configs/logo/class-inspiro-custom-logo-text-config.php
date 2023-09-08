@@ -38,6 +38,7 @@ class Inspiro_Custom_Logo_Text_Config {
 				'args' => array(
 					'type'     => 'text',
 					'label'    => esc_html__( 'Custom Logo Text', 'inspiro' ),
+                    'description'    => esc_html__( 'You can enter a different title without changing the Site Title', 'inspiro' ),
 					'section'  => 'title_tagline',
 					'priority' => 5,
 				),

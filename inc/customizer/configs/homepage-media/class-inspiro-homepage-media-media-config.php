@@ -87,8 +87,8 @@ class Inspiro_Homepage_Media_Media_Config {
 					'args' => array(
 						'theme_supports'  => array( 'custom-header', 'video' ),
 						'type'            => 'checkbox',
-						'label'           => esc_html__( 'Full Height Responsive', 'inspiro' ),
-						'description'     => esc_html__( 'Make video iframe full height responsive to remove black borders from the top and bootom.', 'inspiro' ),
+						'label'           => esc_html__( 'Full Height on Mobile Devices', 'inspiro' ),
+						'description'     => esc_html__( 'Make the video full height to remove the black borders at the top and bottom (experimental option).', 'inspiro' ),
 						'section'         => 'header_image',
 						'priority'        => 6,
 						'active_callback' => 'inspiro_is_external_video_active',
