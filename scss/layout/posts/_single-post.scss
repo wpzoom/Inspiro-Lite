@@ -15,7 +15,13 @@
 
 .page .entry-header .inner-wrap,
 .page .entry-content,
-.page:not(.inspiro-front-page) .entry-footer,
+.page:not(.inspiro-front-page) .entry-footer {
+    margin: em(45) auto;
+    max-width: calc( #{ $content-width } + 20px );
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .single .entry-header .inner-wrap,
 .single .entry-content,
 .single .entry-footer {
@@ -152,7 +158,7 @@
     }
 
     .alignfull,
-    .alignfull:not(.wp-block-group):not(.wp-block-post-featured-image):not(.wp-block-query):not(.wpzoom-blocks_portfolio-block):not(.wp-block-cover) img {
+    .alignfull:not(.wp-block-group):not(.wp-block-columns):not(.wp-block-post-featured-image):not(.wp-block-query):not(.wpzoom-blocks_portfolio-block):not(.wp-block-cover) img {
         width: 100vw;
         max-width: 100vw;
     }
@@ -167,29 +173,36 @@
 .wp-block-button {
 
     a {
-        text-transform: uppercase;
-        font-weight: 400;
-        letter-spacing: 1px;
-        font-family: $font-headings;
-        text-decoration: none !important;
         transition: background-color .3s ease;
-    }
+        text-decoration: none;
 
-    &:not(.is-style-outline) {
-        a:hover {
-            background-color: $primary-color;
-            color: #fff !important;
-            border-color: $primary-color;
+        font-family: $font-headings;
+        transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+
+        &:hover {
+            color: #fff;
+            background-color: #333;
+            border-color: #333;
         }
     }
+
 }
 
 .wp-block-button.is-style-outline > .wp-block-button__link:not(.has-background):not(.has-text-color):hover,
 .wp-block-button .wp-block-button__link.is-style-outline:not(.has-background):not(.has-text-color):hover {
-    background-color: $primary-color;
-    color: #fff !important;
-    border-color: $primary-color;
 }
+
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover,
+.wp-block-buttons .wp-block-button.is-style-outline .wp-block-button__link:focus,
+.wp-block-buttons .wp-block-button.is-style-outline>.wp-block-button__link:not(.has-text-color):hover,
+.wp-block-buttons .wp-block-button.wp-block-button__link.is-style-outline:not(.has-text-color):hover {
+    color: #ffffff;
+    background-color: $dark-color;
+    border-color: $dark-color;
+}
+
+
 
 .entry-content > {
 
@@ -222,10 +235,10 @@
 }
 
 
-.wp-block-group:where(.has-background) {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
+// .wp-block-group:where(.has-background) {
+//     padding-left: 0 !important;
+//     padding-right: 0 !important;
+// }
 
 
 .wp-block-post {

@@ -13,9 +13,8 @@
  */
 register_block_pattern_category( 'inspiro', [ 'label' => __( 'Inspiro', 'inspiro' ), 'pm_custom' => true ] );
 ?>
-<!-- wp:group {"align":"full","backgroundColor":"black","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-black-background-color has-background"><!-- wp:group {"layout":{"type":"default"}} -->
-<div class="wp-block-group"><!-- wp:spacer {"height":"151px"} -->
+<!-- wp:group {"align":"full","backgroundColor":"black","layout":{"type":"constrained","contentSize":"1200px"}} -->
+<div class="wp-block-group alignfull has-black-background-color has-background"><!-- wp:spacer {"height":"151px"} -->
 <div style="height:151px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
@@ -38,5 +37,4 @@ register_block_pattern_category( 'inspiro', [ 'label' => __( 'Inspiro', 'inspiro
 <!-- wp:spacer {"height":"152px"} -->
 <div style="height:152px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer --></div>
-<!-- /wp:group --></div>
 <!-- /wp:group -->

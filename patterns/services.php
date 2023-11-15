@@ -13,7 +13,7 @@
  */
 register_block_pattern_category( 'inspiro', [ 'label' => __( 'Inspiro', 'inspiro' ), 'pm_custom' => true ] );
 ?>
-<!-- wp:group {"style":{"color":{"text":"#000000"},"elements":{"link":{"color":{"text":"#000000"}}}}} -->
+<!-- wp:group {"style":{"color":{"text":"#000000"},"elements":{"link":{"color":{"text":"#000000"}}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-text-color has-link-color" style="color:#000000"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:spacer {"height":"155px"} -->

@@ -125,7 +125,7 @@ abbr[title] {
  */
 b,
 strong {
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 /**
@@ -1032,6 +1032,7 @@ textarea {
 
 label {
     margin-bottom: 5px;
+    display: block;
 }
 
 input, textarea {
@@ -1044,8 +1045,13 @@ input, textarea {
     border-radius: 0;
 }
 
-input[type=text], textarea {
-    -webkit-appearance: none;
+input[type=text],
+input[type=phone],
+textarea {
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
 }
 
 input:focus, textarea:focus {
@@ -2830,7 +2836,7 @@ body:not(.inspiro-front-page) .entry-header {
 }
 
 body:not(.page-layout-sidebar-right) #primary {
-    max-width: calc( 950px + 20px);
+    max-width: calc( 1200px + 20px);
     margin: 0 auto;
     padding-right: 10px;
     padding-left: 10px;
@@ -2887,6 +2893,47 @@ body.has-archive-description:not(.has-header-image) .taxonomy-description:after 
     margin: 40px auto 48px;
 }
 
+/*
+ * Alignment Styles - Originally from TT2.
+ * These rules are temporary, and should not
+ * be relied on or modified too heavily by
+ * themes or plugins that build on foodie-blocks.
+ * These are meant to be a precursor to a
+ * global solution provided by the Block Editor.
+ *
+ * Relevant issues:
+ * https://github.com/WordPress/gutenberg/issues/35607
+ * https://github.com/WordPress/gutenberg/issues/35884
+---------------------------------------------*/
+body {
+    --wp--custom--spacing--outer: 30px;
+}
+
+body > .is-root-container,
+.edit-post-visual-editor__post-title-wrapper,
+.wp-block-cover.alignfull,
+.wp-block-group.alignfull,
+.wp-block-group.has-background,
+.wp-site-blocks {
+    padding-right: var(--wp--custom--spacing--outer);
+    padding-left: var(--wp--custom--spacing--outer);
+}
+
+.block-editor-block-list__layout.is-root-container > .alignfull,
+.is-root-container > .wp-block-cover,
+.is-root-container > .wp-block-group.has-background,
+.is-root-container > .wp-block-template-part > .wp-block-cover,
+.is-root-container > .wp-block-template-part > .wp-block-group.has-background,
+.wp-site-blocks .alignfull,
+.wp-site-blocks > .wp-block-cover,
+.wp-site-blocks > .wp-block-group.has-background,
+.wp-site-blocks > .wp-block-template-part > .wp-block-cover,
+.wp-site-blocks > .wp-block-template-part > .wp-block-group.has-background {
+    margin-right: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+    margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
+    width: unset;
+}
+
 /* More tag */
 .entry-content .more-link,
 .entry-content .more_link {
@@ -2916,7 +2963,13 @@ body.has-archive-description:not(.has-header-image) .taxonomy-description:after 
 
 .page .entry-header .inner-wrap,
 .page .entry-content,
-.page:not(.inspiro-front-page) .entry-footer,
+.page:not(.inspiro-front-page) .entry-footer {
+    margin: 2.8125em auto;
+    max-width: calc( 1200px + 20px);
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
 .single .entry-header .inner-wrap,
 .single .entry-content,
 .single .entry-footer {
@@ -3053,7 +3106,7 @@ body.has-archive-description:not(.has-header-image) .taxonomy-description:after 
 }
 
 .entry-content .alignfull,
-.entry-content .alignfull:not(.wp-block-group):not(.wp-block-post-featured-image):not(.wp-block-query):not(.wpzoom-blocks_portfolio-block):not(.wp-block-cover) img {
+.entry-content .alignfull:not(.wp-block-group):not(.wp-block-columns):not(.wp-block-post-featured-image):not(.wp-block-query):not(.wpzoom-blocks_portfolio-block):not(.wp-block-cover) img {
     width: 100vw;
     max-width: 100vw;
 }
@@ -3064,25 +3117,25 @@ body.has-archive-description:not(.has-header-image) .taxonomy-description:after 
 }
 
 .wp-block-button a {
-    text-transform: uppercase;
-    font-weight: 400;
-    letter-spacing: 1px;
-    font-family: "Montserrat", sans-serif;
-    text-decoration: none !important;
     transition: background-color .3s ease;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
-.wp-block-button:not(.is-style-outline) a:hover {
-    background-color: #0bb4aa;
-    color: #fff !important;
-    border-color: #0bb4aa;
+.wp-block-button a:hover {
+    color: #fff;
+    background-color: #333;
+    border-color: #333;
 }
 
-.wp-block-button.is-style-outline > .wp-block-button__link:not(.has-background):not(.has-text-color):hover,
-.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background):not(.has-text-color):hover {
-    background-color: #0bb4aa;
-    color: #fff !important;
-    border-color: #0bb4aa;
+.wp-block-button.is-style-outline .wp-block-button__link:hover,
+.wp-block-buttons .wp-block-button.is-style-outline .wp-block-button__link:focus,
+.wp-block-buttons .wp-block-button.is-style-outline > .wp-block-button__link:not(.has-text-color):hover,
+.wp-block-buttons .wp-block-button.wp-block-button__link.is-style-outline:not(.has-text-color):hover {
+    color: #ffffff;
+    background-color: #101010;
+    border-color: #101010;
 }
 
 .builder-wrap > .wp-block-gallery,
@@ -3100,11 +3153,6 @@ body.has-archive-description:not(.has-header-image) .taxonomy-description:after 
     margin-left: auto;
     padding-right: 2em;
     padding-left: 2em;
-}
-
-.wp-block-group:where(.has-background) {
-    padding-right: 0 !important;
-    padding-left: 0 !important;
 }
 
 .wp-block-post {

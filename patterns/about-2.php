@@ -13,8 +13,8 @@
  */
 register_block_pattern_category( 'inspiro-pages', [ 'label' => __( 'Inspiro Pages', 'inspiro' ), 'pm_custom' => true ] );
 ?>
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"60px","left":"0","bottom":"60px"}}},"backgroundColor":"light-background","className":"is-style-default","layout":{"inherit":false}} -->
-<div class="wp-block-group alignfull is-style-default has-light-background-background-color has-background" style="padding-top:60px;padding-bottom:60px;padding-left:0"><!-- wp:group {"layout":{"type":"constrained"}} -->
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"60px","left":"0","bottom":"60px"}}},"backgroundColor":"light-background","className":"is-style-default","layout":{"type":"constrained"}} -->
+<div class="wp-block-group is-style-default has-light-background-background-color has-background" style="padding-top:60px;padding-bottom:60px;padding-left:0"><!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:columns {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}}} -->
 <div class="wp-block-columns" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:column {"verticalAlignment":"top","width":"50%","layout":{"type":"default"}} -->
 <div class="wp-block-column is-vertically-aligned-top" style="flex-basis:50%"><!-- wp:image {"align":"right","id":5631,"sizeSlug":"large","linkDestination":"none"} -->
@@ -24,11 +24,11 @@ register_block_pattern_category( 'inspiro-pages', [ 'label' => __( 'Inspiro Page
 
 <!-- wp:column {"verticalAlignment":"center","width":"50%","style":{"spacing":{"padding":{"left":"var:preset|spacing|80"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-column is-vertically-aligned-center" style="padding-left:var(--wp--preset--spacing--80);flex-basis:50%"><!-- wp:paragraph {"style":{"color":{"text":"#0bb4aa"}}} -->
-<p class="has-text-color" style="color:#0bb4aa">OUR EXPERTISE</p>
+<p class="has-text-color" style="color:#0bb4aa"><strong>OUR EXPERTISE</strong></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"fontSize":"max-48"} -->
-<h2 class="wp-block-heading has-max-48-font-size">Duis aute irure dolor reprehenderit</h2>
+<!-- wp:heading {"fontSize":"large"} -->
+<h2 class="wp-block-heading has-large-font-size">Duis aute irure dolor reprehenderit</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -46,11 +46,11 @@ register_block_pattern_category( 'inspiro-pages', [ 'label' => __( 'Inspiro Page
 <!-- /wp:spacer -->
 
 <!-- wp:paragraph {"align":"center","style":{"color":{"text":"#0bb4aa"}}} -->
-<p class="has-text-align-center has-text-color" style="color:#0bb4aa">WHAT WE DO</p>
+<p class="has-text-align-center has-text-color" style="color:#0bb4aa"><strong>WHAT WE DO</strong></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"textAlign":"center","fontSize":"large"} -->
-<h2 class="wp-block-heading has-text-align-center has-large-font-size">Bring the world to <br>your solutions</h2>
+<!-- wp:heading {"textAlign":"center","level":3,"fontSize":"large"} -->
+<h3 class="wp-block-heading has-text-align-center has-large-font-size">Bring the world to <br>your solutions</h3>
 <!-- /wp:heading -->
 
 <!-- wp:spacer -->
@@ -121,8 +121,8 @@ register_block_pattern_category( 'inspiro-pages', [ 'label' => __( 'Inspiro Page
 <div style="height:74px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
-<!-- wp:heading {"fontSize":"max-48"} -->
-<h2 class="wp-block-heading has-max-48-font-size">Our Team</h2>
+<!-- wp:heading {"fontSize":"large"} -->
+<h2 class="wp-block-heading has-large-font-size">Our Team</h2>
 <!-- /wp:heading -->
 
 <!-- wp:spacer {"height":"47px"} -->
@@ -139,8 +139,8 @@ register_block_pattern_category( 'inspiro-pages', [ 'label' => __( 'Inspiro Page
 <figure class="wp-block-image size-full is-style-default"><img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/team1.png" alt="" class="wp-image-7403"/></figure>
 <!-- /wp:image -->
 
-<!-- wp:heading -->
-<h2 class="wp-block-heading">Cynthia Howery</h2>
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Cynthia Howery</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -163,8 +163,8 @@ register_block_pattern_category( 'inspiro-pages', [ 'label' => __( 'Inspiro Page
 <figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/team2.png" alt="" class="wp-image-7404"/></figure>
 <!-- /wp:image -->
 
-<!-- wp:heading -->
-<h2 class="wp-block-heading">Jimmy Banh</h2>
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Jimmy Banh</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -187,8 +187,8 @@ register_block_pattern_category( 'inspiro-pages', [ 'label' => __( 'Inspiro Page
 <figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/team3.png" alt="" class="wp-image-7405"/></figure>
 <!-- /wp:image -->
 
-<!-- wp:heading -->
-<h2 class="wp-block-heading">Leah Palmieri</h2>
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Leah Palmieri</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -217,8 +217,8 @@ register_block_pattern_category( 'inspiro-pages', [ 'label' => __( 'Inspiro Page
 <figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/team4.png" alt="" class="wp-image-7485"/></figure>
 <!-- /wp:image -->
 
-<!-- wp:heading -->
-<h2 class="wp-block-heading">Randy Phillips</h2>
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Randy Phillips</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -239,8 +239,8 @@ register_block_pattern_category( 'inspiro-pages', [ 'label' => __( 'Inspiro Page
 <figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/team5.png" alt="" class="wp-image-7487"/></figure>
 <!-- /wp:image -->
 
-<!-- wp:heading -->
-<h2 class="wp-block-heading">Jennie Thompson</h2>
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Jennie Thompson</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -261,8 +261,8 @@ register_block_pattern_category( 'inspiro-pages', [ 'label' => __( 'Inspiro Page
 <figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/team6.png" alt="" class="wp-image-7489"/></figure>
 <!-- /wp:image -->
 
-<!-- wp:heading -->
-<h2 class="wp-block-heading">Sharon Austin</h2>
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Sharon Austin</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -294,11 +294,11 @@ register_block_pattern_category( 'inspiro-pages', [ 'label' => __( 'Inspiro Page
 <!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:paragraph {"align":"left","style":{"color":{"text":"#0bb4aa"}}} -->
-<p class="has-text-align-left has-text-color" style="color:#0bb4aa">WHERE ARE WE LOCATED</p>
+<p class="has-text-align-left has-text-color" style="color:#0bb4aa"><strong>WHERE ARE WE LOCATED</strong></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"textAlign":"left","fontSize":"max-48"} -->
-<h2 class="wp-block-heading has-text-align-left has-max-48-font-size">Our Location</h2>
+<!-- wp:heading {"textAlign":"left","fontSize":"large"} -->
+<h2 class="wp-block-heading has-text-align-left has-large-font-size">Our Location</h2>
 <!-- /wp:heading -->
 
 <!-- wp:columns -->
@@ -331,8 +331,8 @@ register_block_pattern_category( 'inspiro-pages', [ 'label' => __( 'Inspiro Page
 <hr class="wp-block-separator has-text-color has-lightgrey-color has-alpha-channel-opacity has-lightgrey-background-color has-background is-style-wide"/>
 <!-- /wp:separator -->
 
-<!-- wp:columns {"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","left":"0","bottom":"var:preset|spacing|60"}}}} -->
-<div class="wp-block-columns" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60);padding-left:0"><!-- wp:column {"verticalAlignment":"center","width":"66.66%","layout":{"type":"constrained","justifyContent":"left"}} -->
+<!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","left":"0","bottom":"var:preset|spacing|60"}}}} -->
+<div class="wp-block-columns are-vertically-aligned-center" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60);padding-left:0"><!-- wp:column {"verticalAlignment":"center","width":"66.66%","layout":{"type":"constrained","justifyContent":"left"}} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:66.66%"><!-- wp:heading -->
 <h2 class="wp-block-heading">Thinking about joining our team?</h2>
 <!-- /wp:heading -->
@@ -342,8 +342,8 @@ register_block_pattern_category( 'inspiro-pages', [ 'label' => __( 'Inspiro Page
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"width":"33.33%"} -->
-<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
+<!-- wp:column {"verticalAlignment":"center","width":"33.33%"} -->
+<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:33.33%"><!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary"} -->
 <div class="wp-block-button"><a class="wp-block-button__link has-primary-background-color has-background wp-element-button">View Job Openings</a></div>
 <!-- /wp:button --></div>
