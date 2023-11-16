@@ -3,7 +3,7 @@
  * Title: Testimonials
  * Slug: wpzoom/testimonials
  * Description: 
- * Categories: inspiro
+ * Categories: inspiro, testimonials
  * Keywords: 
  * Viewport Width: 1280
  * Block Types: 

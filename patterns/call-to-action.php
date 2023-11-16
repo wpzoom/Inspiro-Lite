@@ -3,15 +3,13 @@
  * Title: Call to action
  * Slug: wpzoom/call-to-action
  * Description: 
- * Categories: inspiro
+ * Categories: buttons, call-to-action, banner
  * Keywords: 
  * Viewport Width: 1280
  * Block Types: 
  * Post Types: 
  * Inserter: true
- * Custom Categories: Inspiro
  */
-register_block_pattern_category( 'inspiro', [ 'label' => __( 'Inspiro', 'inspiro' ), 'pm_custom' => true ] );
 ?>
 <!-- wp:group {"align":"full","backgroundColor":"black","layout":{"type":"constrained","contentSize":"1200px"}} -->
 <div class="wp-block-group alignfull has-black-background-color has-background"><!-- wp:spacer {"height":"151px"} -->

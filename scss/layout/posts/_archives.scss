@@ -67,6 +67,18 @@ body:not(.page-layout-sidebar-right) {
         }
     }
 
+
+    &.blog,
+    &.archive,
+    &.search {
+
+        #primary {
+            max-width: calc( #{ $content-width-small } + 20px );
+        }
+
+    }
+
+
     &.blog .site-main article,
     &.archive .site-main article,
     &.search .site-main article {

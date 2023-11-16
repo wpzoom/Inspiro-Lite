@@ -3,7 +3,7 @@
  * Title: Team
  * Slug: wpzoom/team
  * Description: 
- * Categories: inspiro
+ * Categories: inspiro, team
  * Keywords: 
  * Viewport Width: 1280
  * Block Types: 

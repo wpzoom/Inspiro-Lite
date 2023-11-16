@@ -3,7 +3,7 @@
  * Title: Services
  * Slug: wpzoom/services
  * Description: 
- * Categories: inspiro
+ * Categories: inspiro, services
  * Keywords: 
  * Viewport Width: 1280
  * Block Types: 

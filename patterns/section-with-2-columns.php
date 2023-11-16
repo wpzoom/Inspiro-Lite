@@ -3,15 +3,13 @@
  * Title: Section with 2 columns
  * Slug: wpzoom/section-with-2-columns
  * Description: 
- * Categories: inspiro
+ * Categories: featured, columns
  * Keywords: 
  * Viewport Width: 1280
  * Block Types: 
  * Post Types: 
  * Inserter: true
- * Custom Categories: Inspiro
  */
-register_block_pattern_category( 'inspiro', [ 'label' => __( 'Inspiro', 'inspiro' ), 'pm_custom' => true ] );
 ?>
 <!-- wp:group {"align":"full","style":{"color":{"background":"#e5e9ec"},"spacing":{"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-background" style="background-color:#e5e9ec;padding-top:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--small)"><!-- wp:columns {"style":{"spacing":{"padding":{"right":"0","left":"0"},"blockGap":{"left":"var:preset|spacing|small"}}}} -->

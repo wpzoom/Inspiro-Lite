@@ -3,7 +3,7 @@
  * Title: Fullscreen Hero
  * Slug: wpzoom/fullscreen-hero
  * Description: 
- * Categories: inspiro
+ * Categories: inspiro, featured, header
  * Keywords: 
  * Viewport Width: 1280
  * Block Types: 

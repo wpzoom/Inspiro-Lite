@@ -2033,7 +2033,6 @@ html {
 html, body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 
 *,
@@ -2846,6 +2845,10 @@ body:not(.page-layout-sidebar-right) #primary .entry-header .inner-wrap,
 body:not(.page-layout-sidebar-right) #primary .entry-content {
     padding-right: 0;
     padding-left: 0;
+}
+
+body:not(.page-layout-sidebar-right).blog #primary, body:not(.page-layout-sidebar-right).archive #primary, body:not(.page-layout-sidebar-right).search #primary {
+    max-width: calc( 950px + 20px);
 }
 
 body:not(.page-layout-sidebar-right).blog .site-main article,
@@ -5504,7 +5507,6 @@ div.aligncenter:not(.wp-block-gallery) {
     .page .entry-content,
     .single .entry-content {
         margin-top: 20px;
-        margin-bottom: 20px;
     }
     .page .entry-cover-image .entry-header .entry-title,
     .single .entry-cover-image .entry-header .entry-title {

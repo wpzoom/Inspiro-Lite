@@ -3,7 +3,7 @@
  * Title: Section with Video Background
  * Slug: wpzoom/section-with-video-background
  * Description: 
- * Categories: inspiro
+ * Categories: inspiro, header, featured
  * Keywords: 
  * Viewport Width: 1280
  * Block Types: 
