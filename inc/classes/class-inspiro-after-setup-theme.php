@@ -268,7 +268,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
             ) {
 
               // Adding one additional plugin for the first demo import ('import' number = 0).
-              if ( $_GET['import'] === '0' ) {
+              if ( $_GET['import'] === '1' ) {
                 $theme_plugins[] =  [
                     'name'     => 'Elementor',
                     'slug'     => 'elementor',
@@ -363,17 +363,17 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
                     'required' => false,
                 ),
 
-                array(
-                    'name'     => 'Elementor',
-                    'slug'     => 'elementor',
-                    'required' => false,
-                ),
+                // array(
+                //     'name'     => 'Elementor',
+                //     'slug'     => 'elementor',
+                //     'required' => false,
+                // ),
 
-                array(
-                    'name'     => 'Elementor Addons by WPZOOM',
-                    'slug'     => 'wpzoom-elementor-addons',
-                    'required' => false,
-                ),
+                // array(
+                //     'name'     => 'Elementor Addons by WPZOOM',
+                //     'slug'     => 'wpzoom-elementor-addons',
+                //     'required' => false,
+                // ),
 
                 array(
                     'name'     => 'WPZOOM Portfolio',

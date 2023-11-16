@@ -54,15 +54,7 @@ function inspiro_get_starter_content() {
 				'post_title'   => esc_html_x( 'Beautiful portfolios for exceptional creatives', 'Theme starter content', 'inspiro' ),
 				'post_content' => '
                     <!-- wp:group {"layout":{"type":"constrained"}} -->
-                    <div class="wp-block-group"><!-- wp:spacer {"height":"57px"} -->
-                    <div style="height:57px" aria-hidden="true" class="wp-block-spacer"></div>
-                    <!-- /wp:spacer -->
-
-                    <!-- wp:heading {"textAlign":"center","style":{"typography":{"letterSpacing":"1px"}},"fontSize":"medium"} -->
-                    <h2 class="wp-block-heading has-text-align-center has-medium-font-size" style="letter-spacing:1px">WE ARE A CREATIVE AGENCY LOCATED IN LONDON</h2>
-                    <!-- /wp:heading -->
-
-                    <!-- wp:paragraph {"align":"center"} -->
+                    <div class="wp-block-group"><!-- wp:paragraph {"align":"center"} -->
                     <p class="has-text-align-center">This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual copy might look like if it were real content.</p>
                     <!-- /wp:paragraph -->
 
@@ -209,55 +201,35 @@ function inspiro_get_starter_content() {
                     <!-- /wp:button --></div>
                     <!-- /wp:buttons --></div>
                     <!-- /wp:column --></div>
-                    <!-- /wp:columns --></div>
+                    <!-- /wp:columns -->
+
+                    <!-- wp:spacer {"height":"30px"} -->
+                    <div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+                    <!-- /wp:spacer --></div>
                     <!-- /wp:group --></div>
                     <!-- /wp:group -->
 
-                    <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|medium","bottom":"var:preset|spacing|medium"}}},"backgroundColor":"black","layout":{"type":"constrained"}} -->
-                    <div class="wp-block-group alignfull has-black-background-color has-background" style="padding-top:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium)"><!-- wp:spacer {"height":"57px"} -->
-                    <div style="height:57px" aria-hidden="true" class="wp-block-spacer"></div>
+                    <!-- wp:group {"align":"full","style":{"spacing":{"margin":{"top":"0px"}}},"backgroundColor":"black","className":"portfolio-dark","layout":{"type":"constrained"}} -->
+                    <div class="wp-block-group alignfull portfolio-dark has-black-background-color has-background" id="portfolio" style="margin-top:0px"><!-- wp:spacer {"height":"122px"} -->
+                    <div style="height:122px" aria-hidden="true" class="wp-block-spacer"></div>
                     <!-- /wp:spacer -->
 
-                    <!-- wp:heading {"textAlign":"center","style":{"typography":{"textTransform":"uppercase"}},"textColor":"white","fontSize":"medium"} -->
-                    <h2 class="wp-block-heading has-text-align-center has-white-color has-text-color has-medium-font-size" style="text-transform:uppercase">PORTFOLIO</h2>
-                    <!-- /wp:heading -->
-
-                    <!-- wp:paragraph {"align":"center","style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}}},"textColor":"white"} -->
-                    <p class="has-text-align-center has-white-color has-text-color has-link-color"><em>You can replace the section below with the <strong>Portfolio block</strong> from the <a href="https://wordpress.org/plugins/wpzoom-portfolio/">WPZOOM Portfolio</a> plugin. View more <a href="https://www.wpzoom.com/documentation/wpzoom-portfolio-grid/wpzoom-portfolio-how-to-create-a-portfolio-section/">instructions</a>.</em></p>
+                    <!-- wp:paragraph {"align":"left","style":{"typography":{"letterSpacing":"1px"},"color":{"text":"#0bb4aa"}}} -->
+                    <p class="has-text-align-left has-text-color" style="color:#0bb4aa;letter-spacing:1px">FROM THE PORTFOLIO</p>
                     <!-- /wp:paragraph -->
 
-                    <!-- wp:spacer {"height":"57px"} -->
-                    <div style="height:57px" aria-hidden="true" class="wp-block-spacer"></div>
+                    <!-- wp:heading {"textAlign":"left","textColor":"white","fontSize":"large"} -->
+                    <h2 class="wp-block-heading has-text-align-left has-white-color has-text-color has-large-font-size">Our Work</h2>
+                    <!-- /wp:heading -->
+
+                    <!-- wp:spacer {"height":"44px"} -->
+                    <div style="height:44px" aria-hidden="true" class="wp-block-spacer"></div>
                     <!-- /wp:spacer -->
 
-                    <!-- wp:gallery {"linkTo":"none"} -->
-                    <figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":28,"sizeSlug":"large","linkDestination":"none"} -->
-                    <figure class="wp-block-image size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_P9QYJ8AAL8.jpg" alt="" class="wp-image-28"/></figure>
-                    <!-- /wp:image -->
+                    <!-- wp:wpzoom-blocks/portfolio {"align":"full","showCategoryFilter":false,"textColor":"white","btnHoverTextColor":"#101010","btnBgColor":"#0bb4aa","btnHoverBgColor":"#ffffff"} /-->
 
-                    <!-- wp:image {"id":27,"sizeSlug":"large","linkDestination":"none"} -->
-                    <figure class="wp-block-image size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_M6D1GS9PSL.jpg" alt="" class="wp-image-27"/></figure>
-                    <!-- /wp:image -->
-
-                    <!-- wp:image {"id":26,"sizeSlug":"large","linkDestination":"none"} -->
-                    <figure class="wp-block-image size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_JKMGVEJMPU.jpg" alt="" class="wp-image-26"/></figure>
-                    <!-- /wp:image -->
-
-                    <!-- wp:image {"id":25,"sizeSlug":"large","linkDestination":"none"} -->
-                    <figure class="wp-block-image size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_CXVCF2NNWJ.jpg" alt="" class="wp-image-25"/></figure>
-                    <!-- /wp:image -->
-
-                    <!-- wp:image {"id":24,"sizeSlug":"large","linkDestination":"none"} -->
-                    <figure class="wp-block-image size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_89BQZ89TLH.jpg" alt="" class="wp-image-24"/></figure>
-                    <!-- /wp:image -->
-
-                    <!-- wp:image {"id":29,"sizeSlug":"large","linkDestination":"none"} -->
-                    <figure class="wp-block-image size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_PGXCCTCLB5.jpg" alt="" class="wp-image-29"/></figure>
-                    <!-- /wp:image --></figure>
-                    <!-- /wp:gallery -->
-
-                    <!-- wp:spacer {"height":"64px"} -->
-                    <div style="height:64px" aria-hidden="true" class="wp-block-spacer"></div>
+                    <!-- wp:spacer {"height":"50px"} -->
+                    <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
                     <!-- /wp:spacer --></div>
                     <!-- /wp:group -->
 
