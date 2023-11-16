@@ -140,7 +140,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 
 		>
 			<?php
-			$values = explode( ',', $this->value() );
+			$values = isset( $this->value ) ? explode( ',', $this->value() ) : array();
 			foreach ( $values as $key => $value ) {
 				echo '<option value="' . esc_attr( $value ) . '" selected="selected" >' . esc_html( $value ) . '</option>';
 			}
