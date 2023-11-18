@@ -39,7 +39,7 @@ get_header(); ?>
 
 				the_post_navigation(
 					array(
-						'prev_text' => '<div class="previous-info">' . $previous_cover . '<div class="previous-content"><span class="screen-reader-text">' . __( 'Previous Post', 'inspiro' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous Post', 'inspiro' ) . '</span> <span class="nav-title">%title</span></div></div>',
+						'prev_text' => '<div class="previous-info">' . $previous_cover . '<div class="previous-content"><span class="screen-reader-text">' . __( 'Previous', 'inspiro' ) . '</span><span aria-hidden="true" class="nav-subtitle">' . __( 'Previous', 'inspiro' ) . '</span> <span class="nav-title">%title</span></div></div>',
 						'next_text' => '',
 					)
 				);

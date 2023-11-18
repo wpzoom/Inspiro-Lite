@@ -942,7 +942,7 @@ msgid "Presets"
 msgstr ""
 
 #: single.php:42
-msgid "Previous Post"
+msgid "Previous"
 msgstr ""
 
 #: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:99

@@ -73,6 +73,15 @@ Description: Used to style the TinyMCE editor.
     border-color: #fff;
 }
 
+.wp-element-button, .wp-block-button__link {
+    padding: calc(0.667em + 2px) calc(1.333em + 2px);
+}
+
+.wp-block-button .wp-block-button__link.is-style-outline,
+.wp-block-button.is-style-outline > .wp-block-button__link {
+    padding: 0.667em 1.333em;
+}
+
 /*
  * Alignment styles.
  * These rules are temporary, and should not be relied on or

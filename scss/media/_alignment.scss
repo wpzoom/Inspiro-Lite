@@ -43,7 +43,6 @@ p > object:only-child {
 
 .entry-content .aligncenter:not(.wp-block-gallery),
 div.aligncenter:not(.wp-block-gallery) {
-    display: block;
     clear: both;
     margin-left: auto;
     margin-right: auto;
@@ -52,13 +51,13 @@ div.aligncenter:not(.wp-block-gallery) {
 .alignleft,
 .entry-content .alignleft {
     float: left;
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 .alignright,
 .entry-content .alignright {
     float: right;
-    margin-left: 15px;
+    margin-left: 20px;
 }
 
 .fullimg,

@@ -415,25 +415,6 @@ template {
 /*--------------------------------------------------------------
 3.0 Alignments
 --------------------------------------------------------------*/
-.alignleft {
-    display: inline;
-    float: left;
-    margin-right: 1.5em;
-}
-
-.alignright {
-    display: inline;
-    float: right;
-    margin-left: 1.5em;
-}
-
-.aligncenter {
-    clear: both;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .wp-block-image .aligncenter > figcaption,
 .wp-block-image .alignleft > figcaption,
 .wp-block-image .alignright > figcaption,
@@ -449,7 +430,6 @@ template {
 .entry-content img.alignleft,
 .entry-content img.alignright,
 .entry-content img.attachment-fullsize {
-    margin-bottom: 20px;
     max-width: 100%;
     height: auto;
 }
@@ -3132,6 +3112,15 @@ body > .is-root-container,
     border-color: #333;
 }
 
+.wp-element-button, .wp-block-button__link {
+    padding: calc(0.667em + 2px) calc(1.333em + 2px);
+}
+
+.wp-block-button .wp-block-button__link.is-style-outline,
+.wp-block-button.is-style-outline > .wp-block-button__link {
+    padding: 0.667em 1.333em;
+}
+
 .wp-block-button.is-style-outline .wp-block-button__link:hover,
 .wp-block-buttons .wp-block-button.is-style-outline .wp-block-button__link:focus,
 .wp-block-buttons .wp-block-button.is-style-outline > .wp-block-button__link:not(.has-text-color):hover,
@@ -4300,7 +4289,6 @@ p > object:only-child {
 
 .entry-content .aligncenter:not(.wp-block-gallery),
 div.aligncenter:not(.wp-block-gallery) {
-    display: block;
     clear: both;
     margin-left: auto;
     margin-right: auto;
@@ -4309,13 +4297,13 @@ div.aligncenter:not(.wp-block-gallery) {
 .alignleft,
 .entry-content .alignleft {
     float: left;
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 .alignright,
 .entry-content .alignright {
     float: right;
-    margin-left: 15px;
+    margin-left: 20px;
 }
 
 .fullimg,

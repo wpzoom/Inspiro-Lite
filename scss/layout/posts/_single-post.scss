@@ -193,6 +193,16 @@
 }
 
 
+.wp-element-button, .wp-block-button__link {
+    padding: calc(0.667em + 2px) calc(1.333em + 2px);
+}
+
+.wp-block-button .wp-block-button__link.is-style-outline,
+.wp-block-button.is-style-outline>.wp-block-button__link {
+    padding: 0.667em 1.333em;
+}
+
+
 .wp-block-button.is-style-outline .wp-block-button__link:hover,
 .wp-block-buttons .wp-block-button.is-style-outline .wp-block-button__link:focus,
 .wp-block-buttons .wp-block-button.is-style-outline>.wp-block-button__link:not(.has-text-color):hover,
