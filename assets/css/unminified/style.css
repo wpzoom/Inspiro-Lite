@@ -1534,7 +1534,7 @@ a:hover .nav-title,
     display: none;
     position: relative;
     margin: 0;
-    margin-left: 0.625em;
+    margin-left: 0.9375em;
     padding-left: 0;
     padding-right: 0;
     width: 40px;
@@ -3704,7 +3704,7 @@ h4.jp-relatedposts-post-title {
     font-size: 20px;
     font-size: 1.25rem;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .comment-author .fn a:hover {

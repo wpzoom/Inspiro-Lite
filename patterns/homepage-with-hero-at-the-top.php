@@ -1,7 +1,7 @@
 <?php
 /**
- * Title: Homepage
- * Slug: homepage
+ * Title: Homepage (with hero at the top)
+ * Slug: inspiro/homepage-with-hero-at-the-top
  * Description: 
  * Categories: inspiro-pages
  * Keywords: 
@@ -13,6 +13,26 @@
  */
 register_block_pattern_category( 'inspiro-pages', [ 'label' => __( 'Inspiro Pages', 'inspiro' ), 'pm_custom' => true ] );
 ?>
+<!-- wp:cover {"url":"http://demo.wpzoom.com/inspiro-lite/files/2022/03/Pexels-Videos-1409899-1.mp4","id":6672,"dimRatio":20,"backgroundType":"video","minHeight":100,"minHeightUnit":"vh","contentPosition":"center center","isDark":false,"align":"full","layout":{"type":"constrained"}} -->
+<div class="wp-block-cover alignfull is-light" style="min-height:100vh"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-20 has-background-dim"></span><video class="wp-block-cover__video-background intrinsic-ignore" autoplay muted loop playsinline src="http://demo.wpzoom.com/inspiro-lite/files/2022/03/Pexels-Videos-1409899-1.mp4" data-object-fit="cover"></video><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","style":{"typography":{"fontStyle":"normal","fontWeight":"900","lineHeight":"1.2"}},"textColor":"white","fontSize":"max-60"} -->
+<p class="has-text-align-center has-white-color has-text-color has-max-60-font-size" style="font-style:normal;font-weight:900;line-height:1.2"><strong>Create. Amaze. Inspire.</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"align":"center","textColor":"white","fontSize":"medium"} -->
+<p class="has-text-align-center has-white-color has-text-color has-medium-font-size">Inspiro is a Portfolio &amp; Photography WordPress Theme. This area supports self-hosted videos as well as videos from YouTube and Vimeo.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:spacer {"height":"55px"} -->
+<div style="height:55px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons"><!-- wp:button {"textColor":"white","style":{"border":{"radius":"0px"}},"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-white-color has-text-color wp-element-button" href="#" style="border-radius:0px">Learn More</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div></div>
+<!-- /wp:cover -->
+
 <!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:spacer {"height":"57px"} -->
 <div style="height:57px" aria-hidden="true" class="wp-block-spacer"></div>

@@ -49,12 +49,40 @@ function inspiro_get_starter_content() {
 		// Specify the core-defined pages to create and add custom thumbnails to some of them.
 		'posts'       => array(
 			'front' => array(
-				'thumbnail'    => '{{image-aerial-land}}',
 				'post_type'    => 'page',
-				'post_title'   => esc_html_x( 'Beautiful portfolios for exceptional creatives', 'Theme starter content', 'inspiro' ),
+                'template' => 'page-templates/homepage-no-hero.php',
+				'post_title'   => esc_html_x( 'Homepage', 'Theme starter content', 'inspiro' ),
 				'post_content' => '
+                    <!-- wp:cover {"url":"http://demo.wpzoom.com/inspiro-lite/files/2022/03/Pexels-Videos-1409899-1.mp4","id":6672,"dimRatio":20,"backgroundType":"video","minHeight":100,"minHeightUnit":"vh","contentPosition":"center center","isDark":false,"align":"full","layout":{"type":"constrained"}} -->
+                    <div class="wp-block-cover alignfull is-light" style="min-height:100vh"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-20 has-background-dim"></span><video class="wp-block-cover__video-background intrinsic-ignore" autoplay muted loop playsinline src="http://demo.wpzoom.com/inspiro-lite/files/2022/03/Pexels-Videos-1409899-1.mp4" data-object-fit="cover"></video><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","style":{"typography":{"fontStyle":"normal","fontWeight":"900","lineHeight":"1.2"}},"textColor":"white","fontSize":"max-60"} -->
+                    <p class="has-text-align-center has-white-color has-text-color has-max-60-font-size" style="font-style:normal;font-weight:900;line-height:1.2"><strong>Create. Amaze. Inspire.</strong></p>
+                    <!-- /wp:paragraph -->
+
+                    <!-- wp:paragraph {"align":"center","textColor":"white","fontSize":"medium"} -->
+                    <p class="has-text-align-center has-white-color has-text-color has-medium-font-size">Inspiro is a Portfolio &amp; Photography WordPress Theme. This area supports self-hosted videos as well as videos from YouTube and Vimeo.</p>
+                    <!-- /wp:paragraph -->
+
+                    <!-- wp:spacer {"height":"55px"} -->
+                    <div style="height:55px" aria-hidden="true" class="wp-block-spacer"></div>
+                    <!-- /wp:spacer -->
+
+                    <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+                    <div class="wp-block-buttons"><!-- wp:button {"textColor":"white","style":{"border":{"radius":"0px"}},"className":"is-style-outline"} -->
+                    <div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-white-color has-text-color wp-element-button" href="#" style="border-radius:0px">Learn More</a></div>
+                    <!-- /wp:button --></div>
+                    <!-- /wp:buttons --></div></div>
+                    <!-- /wp:cover -->
+
                     <!-- wp:group {"layout":{"type":"constrained"}} -->
-                    <div class="wp-block-group"><!-- wp:paragraph {"align":"center"} -->
+                    <div class="wp-block-group"><!-- wp:spacer {"height":"57px"} -->
+                    <div style="height:57px" aria-hidden="true" class="wp-block-spacer"></div>
+                    <!-- /wp:spacer -->
+
+                    <!-- wp:heading {"textAlign":"center","style":{"typography":{"letterSpacing":"1px"}},"fontSize":"medium"} -->
+                    <h2 class="wp-block-heading has-text-align-center has-medium-font-size" style="letter-spacing:1px">WE ARE A CREATIVE AGENCY LOCATED IN LONDON</h2>
+                    <!-- /wp:heading -->
+
+                    <!-- wp:paragraph {"align":"center"} -->
                     <p class="has-text-align-center">This is some dummy copy. You’re not really supposed to read this dummy copy, it is just a placeholder for people who need some type to visualize what the actual copy might look like if it were real content.</p>
                     <!-- /wp:paragraph -->
 
@@ -226,7 +254,7 @@ function inspiro_get_starter_content() {
                     <div style="height:44px" aria-hidden="true" class="wp-block-spacer"></div>
                     <!-- /wp:spacer -->
 
-                    <!-- wp:wpzoom-blocks/portfolio {"align":"full","showCategoryFilter":false,"textColor":"white","btnHoverTextColor":"#101010","btnBgColor":"#0bb4aa","btnHoverBgColor":"#ffffff"} /-->
+                    <!-- wp:wpzoom-blocks/portfolio {"align":"full","textColor":"white","btnHoverTextColor":"#101010","btnBgColor":"#0bb4aa","btnHoverBgColor":"#ffffff"} /-->
 
                     <!-- wp:spacer {"height":"50px"} -->
                     <div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>

@@ -10,22 +10,28 @@
 
 get_header(); ?>
 
-<main id="content" class="clearfix" role="main">
+<main id="main" class="site-main" role="main">
 
-	<div class="builder-wrap">
+    <?php
+    while ( have_posts() ) :
+        the_post();
+        ?>
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-			?>
+        <div class="builder-wrap full-width">
 
-			<?php the_content(); ?>
+            <article id="post-<?php the_ID(); ?>">
 
-		<?php endwhile; // end of the loop. ?>
+                <div class="entry-content">
+                    <?php the_content(); ?>
+                </div><!-- .entry-content -->
 
-	</div>
+            </article><!-- #post-## -->
 
-</main><!-- #content -->
+        </div><!-- .full-width -->
+
+    <?php endwhile; // end of the loop. ?>
+
+</main><!-- #main -->
 
 <?php
 get_footer();

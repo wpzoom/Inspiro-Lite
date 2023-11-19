@@ -387,6 +387,12 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
                     'required' => false,
                 ),
 
+                array(
+                    'name'     => 'Video Popup Block by WPZOOM',
+                    'slug'     => 'wpzoom-video-popup-block',
+                    'required' => false,
+                ),
+
 				array(
 					'name'     => 'Instagram Widget by WPZOOM',
 					'slug'     => 'instagram-widget-by-wpzoom',

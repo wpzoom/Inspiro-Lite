@@ -116,10 +116,10 @@ class Inspiro_Theme_Upgrader {
 	 * Add the generic strings.
 	 */
 	public function generic_strings() {
-		$this->strings['migrate_customizer_settings'] = __( 'Migrate Customizer Settings to Inspiro Premium', 'inspiro' ) . '&hellip;';
+		$this->strings['migrate_customizer_settings'] = __( 'Migrate the Customizer settings to Inspiro Premium', 'inspiro' ) . '&hellip;';
 		/* translators: %s: New slide title */
-		$this->strings['setup_slider_item']           = __( 'Setup new slider item with title: <strong>%s</strong>', 'inspiro' ) . '&hellip;';
-		$this->strings['setup_slider_item_error']     = __( 'Something went wrong to create new slider item!', 'inspiro' );
+		$this->strings['setup_slider_item']           = __( 'Setup a new slider item with title: <strong>%s</strong>', 'inspiro' ) . '&hellip;';
+		$this->strings['setup_slider_item_error']     = __( 'Something went wrong to create a new slider item!', 'inspiro' );
 		$this->strings['create_temporary_slider_cpt'] = __( 'Create temporary custom post type Slider', 'inspiro' ) . '&hellip;';
 	}
 
@@ -151,10 +151,9 @@ class Inspiro_Theme_Upgrader {
 			return $table;
 		}
 
-		$table     .= '<h2 class="update-from-upload-heading">' . esc_html__( 'It seems you want to upgrade to premium version of the Inspiro WordPress Theme.', 'inspiro' ) . '</h2>';
-			$table .= '<p class="update-from-upload-notice">' . esc_html__( 'After the upgrade all the settings will be kept but we still recommend that you make a backup of the database and files before proceeding to the replace process.', 'inspiro' ) . '</p>';
+		$table     .= '<h2 class="update-from-upload-heading">' . esc_html__( 'Click the "Replace active with uploaded" button below to complete the installation', 'inspiro' ) . '</h2>';
 			/* translators: %1$s: Documentation URL. %2$s: Link title. */
-			$table .= '<p class="update-from-upload-notice"><strong>' . esc_html__( 'Note:', 'inspiro' ) . '</strong> ' . sprintf( __( 'If you don\'t see the header slider on your front page, please follow <a href="%1$s" target="_blank" title="%2$s">documentation link</a> to see how to set up slideshow on front page.', 'inspiro' ), 'https://www.wpzoom.com/documentation/inspiro/inspiro-homepage-slideshow/', esc_attr__( 'Open documentation link in new tab', 'inspiro' ) ) . '</p>';
+			$table .= '<p class="update-from-upload-notice"><strong>' . esc_html__( 'Note:', 'inspiro' ) . '</strong> ' . sprintf( __( 'If you\'re having issues with your front page or the hero area after the upgrade, make sure to check the theme <a href="%1$s" target="_blank" title="%2$s">documentation</a> for setup instructions.', 'inspiro' ), 'https://www.wpzoom.com/documentation/inspiro/', esc_attr__( 'Open the Documentation', 'inspiro' ) ) . '</p>';
 
 		return $table;
 	}

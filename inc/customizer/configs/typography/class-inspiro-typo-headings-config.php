@@ -54,7 +54,7 @@ class Inspiro_Typo_Headings_Config {
 				array(
 					'id'   => 'headings-font-weight',
 					'args' => array(
-						'default'           => '600',
+						'default'           => '700',
 						'transport'         => 'postMessage',
 						'sanitize_callback' => 'inspiro_sanitize_font_weight',
 					),

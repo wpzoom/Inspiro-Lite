@@ -811,6 +811,7 @@
     width: 100%;
     text-align: center;
     justify-content: center;
+    border: none;
 }
 
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side .wpz-onboard_content-side-section.discover-premium .button:hover {
