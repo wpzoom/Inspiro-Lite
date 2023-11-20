@@ -36,6 +36,11 @@ require INSPIRO_THEME_DIR . 'inc/classes/class-tgm-plugin-activation.php';
 require INSPIRO_THEME_DIR . 'inc/common-functions.php';
 
 /**
+ * Setup theme media.
+ */
+require INSPIRO_THEME_DIR . 'inc/theme-media.php';
+
+/**
  * Enqueues scripts and styles
  */
 require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-enqueue-scripts.php';

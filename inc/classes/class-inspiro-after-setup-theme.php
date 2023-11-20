@@ -319,8 +319,8 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
             );
 
             // Assign front page and posts page (blog page).
-            $front_page_id = get_page_by_title( 'Homepage' );
-            $blog_page_id  = get_page_by_title( 'Blog' );
+			$front_page_id = inspiro_get_page_by_title( 'Homepage' );
+			$blog_page_id  = inspiro_get_page_by_title( 'Blog' );
 
             update_option( 'show_on_front', 'page' );
             update_option( 'page_on_front', $front_page_id->ID );
