@@ -1,4 +1,10 @@
-# Inspiro #
+# Inspiro Lite #
+### Inspiro is a professional & lightweight photo and video-focused WordPress theme with a modern design. Packed with features including a fullscreen area that supports Vimeo, YouTube & self-hosted video background, Page Builder integration, Inspiro is perfect for showing off your photography and video portfolio. Moreover, the theme is compatible with WooCommerce and popular Page Builders such as Elementor, Beaver Builder.
+
+[View Demo](https://demo.wpzoom.com/inspiro-lite/) &nbsp;·&nbsp; [Documentation](https://www.wpzoom.com/documentation/inspiro-lite/) &nbsp;·&nbsp; [Download for Free](https://downloads.wordpress.org/theme/inspiro.latest-stable.zip) &nbsp;·&nbsp; [View Pro Version](https://wpzoom.com/themes/inspiro/)
+
+[![](https://www.wpzoom.com/wp-content/uploads/2022/05/inspiro-lite-1.png)](https://wpzoom.com/themes/inspiro-lite/)
+
 **Contributors:** [WPZOOM](https://profiles.wordpress.org/WPZOOM)  
 **Requires at least:** 5.2  
 **Tested up to:** 6.4  
