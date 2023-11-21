@@ -1,14 +1,8 @@
-# Inspiro Lite #
-### Inspiro is a professional & lightweight photo and video-focused WordPress theme with a modern design. Packed with features including a fullscreen area that supports Vimeo, YouTube & self-hosted video background, Page Builder integration, Inspiro is perfect for showing off your photography and video portfolio. Moreover, the theme is compatible with WooCommerce and popular Page Builders such as Elementor, Beaver Builder.
-
-[View Demo](https://demo.wpzoom.com/inspiro-lite/) &nbsp;·&nbsp; [Documentation](https://www.wpzoom.com/documentation/inspiro-lite/) &nbsp;·&nbsp; [Download for Free](https://downloads.wordpress.org/theme/inspiro.latest-stable.zip) &nbsp;·&nbsp; [View Pro Version](https://wpzoom.com/themes/inspiro/)
-
-[![](https://www.wpzoom.com/wp-content/uploads/2022/05/inspiro-lite-1.png)](https://wpzoom.com/themes/inspiro-lite/)
-
+# Inspiro #
 **Contributors:** [WPZOOM](https://profiles.wordpress.org/WPZOOM)  
 **Requires at least:** 5.2  
-**Tested up to:** 6.2  
-**Version:** 1.7.12
+**Tested up to:** 6.4  
+**Version:** 1.8.0  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 **Tags:** one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready  
@@ -111,6 +105,14 @@ License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 
 ## Changelog ##
+
+### 1.8.0 ###
+* Major update with numerous improvements and fixes
+* Added new block patterns
+* Improved the demo content
+
+### 1.7.13 ###
+* Minor fixes and improvements
 
 ### 1.7.12 ###
 * Improvements to the block patterns
