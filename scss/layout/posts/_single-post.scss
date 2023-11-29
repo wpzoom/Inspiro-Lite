@@ -4,8 +4,8 @@
 .single .entry-wrapper {
     max-width: $content-width;
     margin: em(60) auto;
-    padding-left: em(20);
-    padding-right: em(20);
+    padding-left: em(30);
+    padding-right: em(30);
 }
 
 .single.has-sidebar.page-layout-sidebar-right .entry-header .inner-wrap {
@@ -13,13 +13,12 @@
     margin-bottom: 0;
 }
 
-.page .entry-header .inner-wrap,
 .page .entry-content,
 .page:not(.inspiro-front-page) .entry-footer {
     margin: em(45) auto;
-    max-width: calc( #{ $content-width } + 20px );
-    padding-left: 10px;
-    padding-right: 10px;
+    max-width: $content-width;
+    padding-left: em(30);
+    padding-right: em(30);
 }
 
 .single .entry-header .inner-wrap,
@@ -27,8 +26,8 @@
 .single .entry-footer {
     margin: em(45) auto;
     max-width: calc( #{ $content-width-small } + 20px );
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: em(30);
+    padding-right: em(30);
 }
 
 .page .entry-content,
@@ -165,13 +164,20 @@
         }
     }
 
-     > .wp-block-group,
-     >.wp-block-cover,
-     > .wp-block-columns {
+    > .wp-block-group,
+    > .wp-block-cover,
+    > .wp-block-columns {
         padding-top: 30px;
         padding-bottom: 30px;
         padding-right: 30px;
         padding-left: 30px;
+    }
+
+    > .wp-block-group.alignfull.is-layout-flow,
+    > .wp-block-cover.alignfull.is-layout-flow,
+    > .wp-block-columns.alignfull.is-layout-flow {
+        padding-right: 0;
+        padding-left: 0;
     }
 
 

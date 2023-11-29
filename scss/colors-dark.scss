@@ -11,6 +11,8 @@ body.colors-dark {
     background-color: #222;
     color: #eee;
 
+    --inspiro-color-link-hover: #fff;
+
     .site-content-contain {
         background: #222;
         color: #eee;
@@ -33,6 +35,12 @@ body.colors-dark {
     .entry-meta,
     .entry-footer {
         color: #777;
+    }
+
+    .entry-content a {
+        &:hover {
+            color: #fff;
+        }
     }
 
     .entry-meta a,

@@ -143,8 +143,8 @@ body {
     &:hover {
         opacity: 1;
         color: #fff;
-        background-color: $color-background-button-hover;
-        border-color: $color-background-button-hover;
+        background-color: var(--inspiro-primary-color);
+        border-color: var(--inspiro-primary-color);
     }
 }
 

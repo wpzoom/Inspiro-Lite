@@ -16,6 +16,10 @@ Description: Used to style the TinyMCE editor.
  */
 :root {
     --inspiro-primary-color: #0bb4aa;
+    --inspiro-dark-color: #101010;
+    --inspiro-light-grey-color: #f2f4f6;
+    --inspiro-color-background-body: #fff;
+    --inspiro-color-link-hover: #000;
 }
 
 .wp-block[data-align="full"] {

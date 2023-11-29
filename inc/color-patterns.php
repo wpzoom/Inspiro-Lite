@@ -20,7 +20,12 @@ function inspiro_custom_colors_css() {
 
 :root {
     --inspiro-primary-color: ' . $hex . ';
-}';
+}
+
+body {
+    --wp--preset--color--secondary: ' . $hex . ';
+}
+';
 
 	/**
 	 * Filters Inspiro Lite custom colors CSS.

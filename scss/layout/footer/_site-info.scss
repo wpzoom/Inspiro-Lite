@@ -7,15 +7,15 @@
 
     a {
         color: $color-link-footer;
-        &:hover,
-        &:focus {
-            color: $color-link-footer-hover;
+        &:hover {
+            color: var(--inspiro-primary-color);
         }
     }
     .copyright {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
+
         span {
             &:nth-child(1) {
                 flex: 0 0 50%;

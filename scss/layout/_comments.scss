@@ -122,8 +122,12 @@
 
     .comment-meta,
     .comment-meta a {
-        color: #bbbbbb;
+        color: $color-text-footer;
         @include font-size(16);
+    }
+
+    .comment-meta a:hover {
+        color: var(--inspiro-primary-color);
     }
 }
 

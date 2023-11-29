@@ -79,3 +79,16 @@ button:hover, input[type=button]:hover, input[type=reset]:hover, input[type=subm
     color: var(--inspiro-primary-color);
     border-color: var(--inspiro-primary-color);
 }
+
+
+/* Read More button */
+.wp-block-read-more {
+    font-family: $font-headings;
+    font-weight: 600;
+}
+
+.wp-block-read-more:hover {
+    color: #fff !important;
+    border-color: var(--inspiro-dark-color);
+    background-color: var(--inspiro-dark-color);
+}

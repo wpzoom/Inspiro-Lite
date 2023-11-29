@@ -30,6 +30,10 @@
 --------------------------------------------------------------*/
 :root {
     --inspiro-primary-color: #0bb4aa;
+    --inspiro-dark-color: #101010;
+    --inspiro-light-grey-color: #f2f4f6;
+    --inspiro-color-background-body: #fff;
+    --inspiro-color-link-hover: #000;
 }
 
 /*--------------------------------------------------------------
@@ -1133,6 +1137,18 @@ button:hover, input[type=button]:hover, input[type=reset]:hover, input[type=subm
     border-color: var(--inspiro-primary-color);
 }
 
+/* Read More button */
+.wp-block-read-more {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+.wp-block-read-more:hover {
+    color: #fff !important;
+    border-color: var(--inspiro-dark-color);
+    background-color: var(--inspiro-dark-color);
+}
+
 /*--------------------------------------------------------------
 7.0 Formatting
 --------------------------------------------------------------*/
@@ -1225,16 +1241,21 @@ td:last-child {
 a {
     transition: all 0.1s ease-in;
     text-decoration: none;
-    color: #0bb4aa;
+    color: var(--inspiro-primary-color);
 }
 
 a:hover {
     text-decoration: none;
-    color: #076c65;
+    color: var(--inspiro-color-link-hover);
 }
 
 .entry-content a {
     text-decoration: underline;
+    text-underline-offset: 0.125em;
+}
+
+.entry-content a:hover {
+    text-decoration: none;
 }
 
 body.elementor-page .entry-content a,
@@ -1254,7 +1275,7 @@ body.woocommerce-page .entry-content a {
     transition: color .1s ease-in;
 }
 
-.entry-title a,
+a.wp-block-latest-posts__post-title,
 .entry-meta a,
 .page-links a,
 .page-links a .page-number,
@@ -1291,15 +1312,14 @@ a .nav-title,
 .entry-title a:hover,
 .page-links a:hover .page-number,
 .entry-footer a:hover,
-.entry-footer .tags-links a:hover,
-.logged-in-as a:hover,
 a:hover .nav-title,
-.edit-link a:hover,
-.site-info a:hover,
-.widget .widget-title a:hover,
-.widget ul li a:hover,
 .entry-meta a:hover {
-    color: var(--inspiro-primary-color);
+    color: var(--inspiro-color-link-hover);
+}
+
+.side-nav a:hover,
+.site-footer .footer-widgets a:hover {
+    color: #fff;
 }
 
 .components-button:hover {
@@ -1359,7 +1379,15 @@ a:hover .nav-title,
 }
 
 .post-navigation a:hover .icon {
-    color: #076c65;
+    color: #000;
+}
+
+.wp-block-cover p a {
+    text-decoration: none;
+}
+
+.wp-block-cover p a:hover {
+    opacity: .8;
 }
 
 /*--------------------------------------------------------------
@@ -1666,10 +1694,6 @@ a:hover .nav-title,
     visibility: hidden;
     transform-style: preserve-3d;
     -webkit-overflow-scrolling: touch;
-}
-
-.side-nav a {
-    color: #fff;
 }
 
 .side-nav .navbar-nav {
@@ -2020,8 +2044,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
-    padding-left: 1.25em;
-    padding-right: 1.25em;
+    padding-left: 1.875em;
+    padding-right: 1.875em;
 }
 
 .wrap:before, .wrap:after,
@@ -2173,8 +2197,8 @@ body.has-header-image .site-description, body.has-header-video .site-description
 .custom-header-button:hover {
     opacity: 1;
     color: #fff;
-    background-color: #0bb4aa;
-    border-color: #0bb4aa;
+    background-color: var(--inspiro-primary-color);
+    border-color: var(--inspiro-primary-color);
 }
 
 body.has-header-image .custom-header-button, body.has-header-video .custom-header-button {
@@ -2586,7 +2610,7 @@ body:not(.has-header-image):not(.has-header-video) #scroll-to-content {
 }
 
 .entry-title a:hover {
-    color: #0bb4aa;
+    color: var(--inspiro-primary-color);
     text-decoration: none;
 }
 
@@ -2918,8 +2942,8 @@ body > .is-root-container,
 .single .entry-wrapper {
     max-width: 1200px;
     margin: 3.75em auto;
-    padding-left: 1.25em;
-    padding-right: 1.25em;
+    padding-left: 1.875em;
+    padding-right: 1.875em;
 }
 
 .single.has-sidebar.page-layout-sidebar-right .entry-header .inner-wrap {
@@ -2927,13 +2951,12 @@ body > .is-root-container,
     margin-bottom: 0;
 }
 
-.page .entry-header .inner-wrap,
 .page .entry-content,
 .page:not(.inspiro-front-page) .entry-footer {
     margin: 2.8125em auto;
-    max-width: calc( 1200px + 20px);
-    padding-left: 10px;
-    padding-right: 10px;
+    max-width: 1200px;
+    padding-left: 1.875em;
+    padding-right: 1.875em;
 }
 
 .single .entry-header .inner-wrap,
@@ -2941,8 +2964,8 @@ body > .is-root-container,
 .single .entry-footer {
     margin: 2.8125em auto;
     max-width: calc( 950px + 20px);
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1.875em;
+    padding-right: 1.875em;
 }
 
 .page .entry-content,
@@ -3082,6 +3105,13 @@ body > .is-root-container,
     padding-left: 30px;
 }
 
+.entry-content > .wp-block-group.alignfull.is-layout-flow,
+.entry-content > .wp-block-cover.alignfull.is-layout-flow,
+.entry-content > .wp-block-columns.alignfull.is-layout-flow {
+    padding-right: 0;
+    padding-left: 0;
+}
+
 .single-featured-image-header img {
     display: block;
     margin: auto;
@@ -3217,7 +3247,7 @@ body > .is-root-container,
 
 .entry-footer .post-author a:hover {
     text-decoration: none;
-    color: #0bb4aa;
+    color: var(--inspiro-primary-color);
 }
 
 .entry-footer .tags-links,
@@ -3501,8 +3531,8 @@ h4.jp-relatedposts-post-title {
     color: #fff;
 }
 
-.site-info a:hover, .site-info a:focus {
-    color: #0bb4aa;
+.site-info a:hover {
+    color: var(--inspiro-primary-color);
 }
 
 .site-info .copyright {
@@ -3707,9 +3737,13 @@ h4.jp-relatedposts-post-title {
 
 .comment-author .comment-meta,
 .comment-author .comment-meta a {
-    color: #bbbbbb;
+    color: #78787f;
     font-size: 16px;
     font-size: 1rem;
+}
+
+.comment-author .comment-meta a:hover {
+    color: var(--inspiro-primary-color);
 }
 
 .comment-body {
@@ -4856,7 +4890,7 @@ div.aligncenter:not(.wp-block-gallery) {
     border: 2px solid #E2E2E2 !important;
     box-shadow: none !important;
     border-radius: 0 !important;
-    height: 36px !important;
+    height: 38px !important;
 }
 
 .woocommerce .quantity .plus:hover,
@@ -5437,6 +5471,11 @@ div.aligncenter:not(.wp-block-gallery) {
     .single .entry-content,
     .single .entry-footer {
         padding: 0 4%;
+    }
+    .single .entry-wrapper .entry-content {
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 0;
     }
     .navbar .header-inner.wpz_layout_full,
     .wrap,

@@ -7,11 +7,16 @@
  */
 :root {
     --inspiro-primary-color: #0bb4aa;
+    --inspiro-dark-color: #101010;
+    --inspiro-light-grey-color: #f2f4f6;
+    --inspiro-color-background-body: #fff;
+    --inspiro-color-link-hover: #000;
 }
 
 body.colors-dark {
     background-color: #222;
     color: #eee;
+    --inspiro-color-link-hover: #fff;
 }
 
 body.colors-dark .site-content-contain {
@@ -36,6 +41,10 @@ body.colors-dark .entry-title {
 body.colors-dark .entry-meta,
 body.colors-dark .entry-footer {
     color: #777;
+}
+
+body.colors-dark .entry-content a:hover {
+    color: #fff;
 }
 
 body.colors-dark .entry-meta a,

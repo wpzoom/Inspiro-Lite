@@ -1,28 +1,19 @@
-// Color themes
-
+// Default color scheme
 $primary-color: #0bb4aa !default;
 $dark-color: #101010 !default;
 $light-grey-color: #f2f4f6 !default;
 $color-background-body: #fff !default;
 
-// Footer Background
-$color-background-footer: $dark-color !default;
+// Footer
 $color-text-footer: #78787f !default;
 $color-link-footer: #fff !default;
 $color-widget-title-footer: #fff !default;
-$color-link-footer-hover: $primary-color !default;
-
-// Buttons
-$color-background-button: #000 !default;
-$color-background-button-hover: $primary-color !default;
 
 // Misc.
 $color-text-screen: #444444;
-$color-link: $primary-color !default;
-$color-link-hover: #076c65;
+$color-link-hover: #000;
 
 $color-link-title: #000;
-$color-link-title-hover: $primary-color;
 
 $color-border: #e6e6e6 !default;
 
@@ -34,4 +25,8 @@ $color-background-ins: #fff9c0;
 
 :root {
     --inspiro-primary-color: #{$primary-color};
+    --inspiro-dark-color: #{$dark-color};
+    --inspiro-light-grey-color: #{$light-grey-color};
+    --inspiro-color-background-body: #{$color-background-body};
+    --inspiro-color-link-hover: #{$color-link-hover};
 }
