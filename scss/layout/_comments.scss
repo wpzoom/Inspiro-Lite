@@ -47,8 +47,8 @@
         width: auto;
 
         &:hover {
-            color: $primary-color;
-            border-color: $primary-color;
+            color: var(--inspiro-primary-color);
+            border-color: var(--inspiro-primary-color);
         }
     }
 
@@ -117,7 +117,7 @@
 
     .fn a:hover {
         text-decoration: none;
-        color: $primary-color;
+        color: var(--inspiro-primary-color);
     }
 
     .comment-meta,

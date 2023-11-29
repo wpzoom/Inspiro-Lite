@@ -26,15 +26,15 @@
 .site-footer .search-form .search-submit:hover,
 .infinite-scroll #infinite-handle span:hover {
     text-decoration: none;
-    color: $primary-color;
-    border-color: $primary-color;
+    color: var(--inspiro-primary-color);
+    border-color: var(--inspiro-primary-color);
 }
 
 .btn-primary,
 .side-nav .search-form .search-submit,
 .site-footer .search-form .search-submit {
-    color: $primary-color;
-    border-color: $primary-color;
+    color: var(--inspiro-primary-color);
+    border-color: var(--inspiro-primary-color);
 }
 
 div.wpforms-container-full .wpforms-form input[type=submit],
@@ -76,6 +76,6 @@ div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,
 button:hover, input[type=button]:hover, input[type=reset]:hover, input[type=submit]:hover {
     cursor: pointer;
     text-decoration: none;
-    color: $primary-color;
-    border-color: $primary-color;
+    color: var(--inspiro-primary-color);
+    border-color: var(--inspiro-primary-color);
 }

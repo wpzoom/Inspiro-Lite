@@ -1,13 +1,8 @@
 // Color themes
 
 $primary-color: #0bb4aa !default;
-$blue-color: #4176FB !default;
-$brown-color: #d19731 !default;
-$red-color: #e1051e !default;
-$black-color: #101010 !default;
-$gray-color: #727477 !default;
 $dark-color: #101010 !default;
-
+$light-grey-color: #f2f4f6 !default;
 $color-background-body: #fff !default;
 
 // Footer Background
@@ -21,38 +16,22 @@ $color-link-footer-hover: $primary-color !default;
 $color-background-button: #000 !default;
 $color-background-button-hover: $primary-color !default;
 
-// Buttons in Footer
-$color-background-button-footer: #61656e !default;
-$color-background-button-footer-hover: #61656e !default;
-
-$color-button: #fff;
-$color-button-hover: #fff;
-
 // Misc.
 $color-text-screen: #444444;
-$color-text-input: #000;
 $color-link: $primary-color !default;
-
-$color-link-visited: $primary-color;
 $color-link-hover: #076c65;
-
-$color-link-header: #222;
-$color-link-header-hover: #fff;
-
 
 $color-link-title: #000;
 $color-link-title-hover: $primary-color;
 
-$color-border-button: #000;
-$color-border-button-hover: transparent;
-$color-border-input: #e2e2e2;
-$color-border-input-focus: #676c71;
-$color-border-abbr: #666;
 $color-border: #e6e6e6 !default;
-
-$color-background-button-infinite-hover: $primary-color !default;
 
 $color-background-screen: #f1f1f1;
 $color-background-hr: #eee;
 $color-background-pre: #eee;
 $color-background-ins: #fff9c0;
+
+
+:root {
+    --inspiro-primary-color: #{$primary-color};
+}

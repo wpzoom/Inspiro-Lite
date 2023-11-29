@@ -2,9 +2,13 @@ $primary-color: #3496ff;
 $secondary-color: scale-color($primary-color, $lightness: 25%);
 $light-color: #fff;
 
+:root {
+    --inspiro-primary-color: #{$primary-color};
+}
+
 .wpz-welcome-notice {
     position: relative;
-    background-image: url("data:image/svg+xml,%3Csvg width='240' height='94' viewBox='0 0 56 164' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.1' d='M0 0H540V164H81.5C36.4888 164 0 127.511 0 82.5V0Z' fill='%233496FF'/%3E%3C/svg%3E%0A");
+    background-image: url("data:image/svg+xml,%3Csvg width='240' height='94' viewBox='0 0 56 164' fill='none' xmlns='https://www.w3.org/2000/svg'%3E%3Cpath opacity='0.1' d='M0 0H540V164H81.5C36.4888 164 0 127.511 0 82.5V0Z' fill='%233496FF'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     background-position: center right;
     background-size: contain;
@@ -35,7 +39,7 @@ $light-color: #fff;
 
         p {
             a {
-                color: $primary-color;
+                color: var(--inspiro-primary-color);
 
                 &:hover {
                     text-decoration: none;
@@ -56,11 +60,11 @@ $light-color: #fff;
         align-items: center;
         font-weight: 600;
         color: $light-color;
-        background-color: $primary-color;
+        background-color: var(--inspiro-primary-color);
         padding: 3px 13px;
         transition: all 0.3s ease;
         margin-right: 5px;
-        border: 1px solid $primary-color;
+        border: 1px solid var(--inspiro-primary-color);
 
         &:hover,
         &:active {
@@ -69,12 +73,12 @@ $light-color: #fff;
         }
 
         &.button-secondary {
-            color: $primary-color;
+            color: var(--inspiro-primary-color);
             background-color: transparent;
 
             &:hover,
             &:active {
-                background-color: rgba($primary-color, 0.1);
+                background-color: rgba(var(--inspiro-primary-color), 0.1);
             }
         }
     }

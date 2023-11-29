@@ -68,7 +68,7 @@
             letter-spacing: 2px !important;
 
             &:hover {
-                color: $primary-color !important;
+                color: var(--inspiro-primary-color) !important;
             }
         }
     }

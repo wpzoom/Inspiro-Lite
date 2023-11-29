@@ -54,7 +54,7 @@
             &.current-menu-item > a,
             &.current_page_item > a,
             &.current-menu-parent > a {
-                color: $primary-color;
+                color: var(--inspiro-primary-color);
             }
 
         }

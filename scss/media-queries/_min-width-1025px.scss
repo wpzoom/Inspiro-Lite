@@ -4,7 +4,7 @@
             left: 50%;
             width: 220px;
             margin-top: 15px;
-            border-top: 2px solid $primary-color;
+            border-top: 2px solid var(--inspiro-primary-color);
             background: $dark-color;
             transform: translate(-50%, 0);
             li {

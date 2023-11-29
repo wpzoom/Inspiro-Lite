@@ -5,6 +5,10 @@
  *
  * Colors are ordered from light to dark.
  */
+:root {
+    --inspiro-primary-color: #0bb4aa;
+}
+
 body.colors-dark {
     background-color: #222;
     color: #eee;
@@ -47,7 +51,7 @@ body.colors-dark .entry-title a:hover,
 body.colors-dark .entry-footer .post-author a:hover,
 body.colors-dark .comment-author .fn:hover,
 body.colors-dark .comment-author .fn a:hover {
-    color: #0bb4aa;
+    color: var(--inspiro-primary-color);
 }
 
 body.colors-dark .pagination .page-numbers,
@@ -59,7 +63,7 @@ body.colors-dark .pagination .page-numbers:not(.dots):hover,
 body.colors-dark .pagination .page-numbers.current,
 body.colors-dark .comments-pagination .page-numbers:not(.dots):hover,
 body.colors-dark .comments-pagination .page-numbers.current {
-    color: #0bb4aa;
+    color: var(--inspiro-primary-color);
 }
 
 body.colors-dark.blog .entry-meta a,
@@ -143,8 +147,8 @@ body.colors-dark .sb-search.sb-search-open .sb-search-input {
 }
 
 body.colors-dark .side-nav .search-form .search-submit:hover {
-    color: #0bb4aa;
-    border-color: #0bb4aa;
+    color: var(--inspiro-primary-color);
+    border-color: var(--inspiro-primary-color);
 }
 
 body.colors-dark .navbar-toggle {
@@ -176,8 +180,8 @@ body.colors-dark.woocommerce-page button.button:hover,
 body.colors-dark.woocommerce-page input.button:hover,
 body.colors-dark.woocommerce-page #respond input#submit:hover,
 body.colors-dark.woocommerce-page #content input.button:hover {
-    color: #0bb4aa;
-    border: 2px solid #0bb4aa;
+    color: var(--inspiro-primary-color);
+    border: 2px solid var(--inspiro-primary-color);
     background: none;
 }
 
@@ -214,8 +218,8 @@ body.colors-dark.woocommerce #respond input#submit.alt:hover,
 body.colors-dark.woocommerce-page #respond input#submit.alt:hover,
 body.colors-dark.woocommerce #content input.button.alt:hover,
 body.colors-dark #main .woocommerce-page #content input.button.alt:hover {
-    color: #0bb4aa;
-    border: 2px solid #0bb4aa;
+    color: var(--inspiro-primary-color);
+    border: 2px solid var(--inspiro-primary-color);
     background: none;
 }
 
@@ -237,8 +241,8 @@ body.colors-dark.woocommerce-page input.button:hover,
 body.colors-dark.woocommerce-page #respond input#submit:hover,
 body.colors-dark.woocommerce-page #main input.button:hover,
 body.colors-dark.woocommerce button.button.alt:hover {
-    color: #0bb4aa;
-    border: 2px solid #0bb4aa;
+    color: var(--inspiro-primary-color);
+    border: 2px solid var(--inspiro-primary-color);
     background: none;
 }
 
@@ -259,4 +263,21 @@ body.colors-dark.woocommerce div.product .woocommerce-tabs ul.tabs li.active,
 body.colors-dark.woocommerce-page #content div.product .woocommerce-tabs ul.tabs li.active,
 body.colors-dark.woocommerce-page div.product .woocommerce-tabs ul.tabs li.active {
     background: none !important;
+}
+
+body.colors-dark.woocommerce-account .woocommerce-MyAccount-navigation {
+    background: #101010;
+}
+
+body.colors-dark.woocommerce-account .woocommerce-MyAccount-navigation ul li {
+    border-bottom: 1px solid #333;
+}
+
+body.colors-dark.woocommerce-account .woocommerce-MyAccount-navigation ul li a {
+    color: #fff;
+}
+
+body.colors-dark.woocommerce-account .woocommerce-MyAccount-navigation ul li.is-active a,
+body.colors-dark.woocommerce-account .woocommerce-MyAccount-navigation ul li a:hover {
+    color: var(--inspiro-primary-color);
 }

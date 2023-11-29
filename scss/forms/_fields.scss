@@ -28,7 +28,7 @@ textarea {
 }
 
 input:focus, textarea:focus {
-    border-color: $primary-color;
+    border-color: var(--inspiro-primary-color);
 }
 
 input[type="search"]::-webkit-search-decoration,

@@ -23,7 +23,7 @@ h4.jp-relatedposts-post-title {
 
         .jp-relatedposts-items-visual h4.jp-relatedposts-post-title a:hover {
             text-decoration: none;
-            color: $primary-color;
+            color: var(--inspiro-primary-color);
         }
 
         .jp-relatedposts-items .jp-relatedposts-post:hover .jp-relatedposts-post-title a {

@@ -20,7 +20,7 @@
     top: -16px;
     padding: 5px;
     transform: translateX(-50%);
-    fill: $primary-color;
+    fill: var(--inspiro-primary-color);
     background-color: $color-background-body;
 }
 

@@ -96,22 +96,22 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 				?>
 			.site-title a,
 			.colors-dark .site-title a,
-			.colors-custom .site-title a,
+			 .site-title a,
 			body.has-header-image .site-title a,
 			body.has-header-video .site-title a,
 			body.has-header-image.colors-dark .site-title a,
 			body.has-header-video.colors-dark .site-title a,
-			body.has-header-image.colors-custom .site-title a,
-			body.has-header-video.colors-custom .site-title a,
+			body.has-header-image .site-title a,
+			body.has-header-video .site-title a,
 			.site-description,
 			.colors-dark .site-description,
-			.colors-custom .site-description,
+			 .site-description,
 			body.has-header-image .site-description,
 			body.has-header-video .site-description,
 			body.has-header-image.colors-dark .site-description,
 			body.has-header-video.colors-dark .site-description,
-			body.has-header-image.colors-custom .site-description,
-			body.has-header-video.colors-custom .site-description {
+			body.has-header-image .site-description,
+			body.has-header-video .site-description {
 				color: <?php echo maybe_hash_hex_color( $header_text_color ); ?>;
 			}
 		<?php endif; ?>

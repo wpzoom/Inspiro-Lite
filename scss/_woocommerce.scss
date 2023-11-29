@@ -78,8 +78,8 @@
 .woocommerce-page input.button:hover,
 .woocommerce-page #respond input#submit:hover,
 .woocommerce-page #content input.button:hover {
-    color: $primary_color;
-    border-color: $primary_color;
+    color: var(--inspiro-primary-color);
+    border-color: var(--inspiro-primary-color);
     background: rgba(11, 180, 170, 0.05);
 }
 
@@ -94,7 +94,7 @@
 .woocommerce ul.products li.product .price,
 .woocommerce-page ul.products li.product .price {
     font-family: $font-headings;
-    color: $primary_color;
+    color: var(--inspiro-primary-color);
 }
 
 .woocommerce #content div.product p.price,
@@ -106,7 +106,7 @@
 .woocommerce-page div.product p.price,
 .woocommerce-page div.product span.price {
     font-family: $font-headings;
-    color: $primary_color;
+    color: var(--inspiro-primary-color);
 }
 
 .woocommerce #content div.product form.cart,
@@ -154,9 +154,9 @@
 .woocommerce-page #respond input#submit:hover,
 .woocommerce-page #main input.button:hover,
 .woocommerce button.button.alt:hover {
-    border-color: $primary_color;
+    border-color: var(--inspiro-primary-color);
     background-color: transparent;
-    color: $primary_color;
+    color: var(--inspiro-primary-color);
 }
 
 .woocommerce ul.products li.product a img,
@@ -218,7 +218,7 @@
 
 .woocommerce .quantity .plus:hover,
 .woocommerce .quantity .minus:hover {
-    background: $primary_color !important;
+    background: var(--inspiro-primary-color) !important;
     color: #fff !important;
 }
 
@@ -281,7 +281,7 @@
 
 .woocommerce-pagination .current,
 .woocommerce-pagination .page-numbers:hover {
-    color: $primary_color !important
+    color: var(--inspiro-primary-color) !important
 }
 
 .single-product .summary table.variations .label {
@@ -314,7 +314,7 @@
 
 .woocommerce .widget_price_filter .ui-slider .ui-slider-handle,
 .woocommerce .widget_price_filter .ui-slider .ui-slider-range {
-    background-color: $primary_color;
+    background-color: var(--inspiro-primary-color);
 }
 
 .woocommerce-cart table.cart td.actions .coupon .input-text {
@@ -325,7 +325,7 @@
 }
 
 .woocommerce-cart table.cart td.actions .coupon .input-text:focus {
-    border-color: $primary_color;
+    border-color: var(--inspiro-primary-color);
 }
 
 .woocommerce-cart .cart-collaterals .cart_totals table {
@@ -387,7 +387,7 @@
 }
 
 .woocommerce-message::before {
-    color: $primary_color;
+    color: var(--inspiro-primary-color);
 }
 
 #add_payment_method #payment,
@@ -411,4 +411,47 @@
     border-right-color: transparent;
     border-left-color: transparent;
     border-top-color: transparent;
+}
+
+
+
+.woocommerce-account .woocommerce-MyAccount-navigation {
+
+    padding: 32px 30px 10px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    background: $light-grey-color;
+
+    ul {
+
+        margin: 0;
+
+        li {
+            list-style-type: none;
+            border-bottom: 1px solid #eee;
+            padding: 0 0 10px;
+            margin: 0 0 10px;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            a {
+                color: #000;
+                font-weight: 600;
+
+                &:hover {
+                    color: var(--inspiro-primary-color);
+                }
+
+            }
+
+            &.is-active {
+                a {
+                    color: var(--inspiro-primary-color);
+                }
+            }
+        }
+    }
+
 }

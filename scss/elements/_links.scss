@@ -58,52 +58,32 @@ a .nav-title,
     transition: color .1s ease-in;
 }
 
-.entry-content a:focus,
-.entry-content a:hover,
-.entry-summary a:focus,
 .entry-summary a:hover,
-.comment-content a:focus,
 .comment-content a:hover,
-.widget a:focus,
 .widget a:hover,
-.site-footer .widget-area a:focus,
 .site-footer .widget-area a:hover,
-.posts-navigation a:focus,
 .posts-navigation a:hover,
-.comment-metadata a:focus,
 .comment-metadata a:hover,
-.comment-metadata a.comment-edit-link:focus,
 .comment-metadata a.comment-edit-link:hover,
-.comment-reply-link:focus,
 .comment-reply-link:hover,
-.widget_authors a:focus strong,
 .widget_authors a:hover strong,
-.entry-title a:focus,
 .entry-title a:hover,
-.page-links a:focus .page-number,
 .page-links a:hover .page-number,
-.entry-footer a:focus,
 .entry-footer a:hover,
-.entry-footer .tags-links a:focus,
 .entry-footer .tags-links a:hover,
-.logged-in-as a:focus,
 .logged-in-as a:hover,
-a:focus .nav-title,
 a:hover .nav-title,
-.edit-link a:focus,
 .edit-link a:hover,
-.site-info a:focus,
 .site-info a:hover,
-.widget .widget-title a:focus,
 .widget .widget-title a:hover,
-.widget ul li a:focus,
-.widget ul li a:hover {
-    color: $color-link-hover;
+.widget ul li a:hover,
+.entry-meta a:hover {
+    color: var(--inspiro-primary-color);
 }
 
-.entry-meta a:focus,
-.entry-meta a:hover {
-    color: $primary-color;
+.components-button:hover {
+    color: $color-background-body;
+    background: var(--inspiro-primary-color);
 }
 
 .entry-content .more-link,
@@ -114,8 +94,8 @@ a:hover .nav-title,
 
     &:hover {
         text-decoration: none;
-        color: $primary-color;
-        border-color: $primary-color;
+        color: var(--inspiro-primary-color);
+        border-color: var(--inspiro-primary-color);
     }
 }
 
@@ -152,7 +132,6 @@ a:hover .nav-title,
     box-shadow: none;
 }
 
-.post-navigation a:focus .icon,
 .post-navigation a:hover .icon {
     color: $color-link-hover;
 }

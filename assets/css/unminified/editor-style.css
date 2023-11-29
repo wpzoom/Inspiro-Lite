@@ -14,6 +14,10 @@ Description: Used to style the TinyMCE editor.
  * 7.0 - Media Elements
  * 8.0 - RTL
  */
+:root {
+    --inspiro-primary-color: #0bb4aa;
+}
+
 .wp-block[data-align="full"] {
     max-width: none;
 }
