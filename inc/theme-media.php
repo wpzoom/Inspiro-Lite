@@ -58,15 +58,21 @@ function inspiro_media_downsize( $out, $id, $size ) {
  */
 function inspiro_media_prevent_resize_on_upload( $sizes ) {
 	// Removing these defaults might cause problems, so we don't
-	return array(
+
+	$default_sizes = array(
 		'inspiro-featured-image'        => $sizes[ 'inspiro-featured-image' ],
-        'inspiro-loop'                  => $sizes[ 'inspiro-loop' ],
-        'inspiro-loop@2x'               => $sizes[ 'inspiro-loop@2x' ],
-        'portfolio_item-thumbnail'      => $sizes[ 'portfolio_item-thumbnail' ],
-        'portfolio_item-thumbnail@2x'   => $sizes[ 'portfolio_item-thumbnail@2x' ],
-        'thumbnail'                     => $sizes[ 'thumbnail' ],
+		'inspiro-loop'                  => $sizes[ 'inspiro-loop' ],
+		'inspiro-loop@2x'               => $sizes[ 'inspiro-loop@2x' ],
+		'thumbnail'                     => $sizes[ 'thumbnail' ],
 		'medium'                        => $sizes[ 'medium' ],
 		'large'                         => $sizes[ 'large' ]
 	);
+	
+	if( has_image_size( 'portfolio_item-thumbnail' ) && has_image_size( 'portfolio_item-thumbnail@2x' ) ) {
+		$default_sizes['portfolio_item-thumbnail'] = $sizes[ 'portfolio_item-thumbnail' ];
+		$default_sizes['portfolio_item-thumbnail@2x'] = $sizes[ 'portfolio_item-thumbnail@2x' ];
+	};
+
+	return $default_sizes;
 }
 add_filter( 'intermediate_image_sizes_advanced', 'inspiro_media_prevent_resize_on_upload' );
