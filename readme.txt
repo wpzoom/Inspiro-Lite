@@ -106,6 +106,9 @@ Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 
 == Changelog ==
 
+= 1.8.4 =
+* Minor bug fixes
+
 = 1.8.3 =
 * Bug fix with images
 
