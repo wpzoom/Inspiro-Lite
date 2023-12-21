@@ -4315,7 +4315,8 @@ p > object:only-child {
 }
 
 .entry-content .aligncenter:not(.wp-block-gallery),
-div.aligncenter:not(.wp-block-gallery) {
+div.aligncenter:not(.wp-block-gallery),
+figure.aligncenter:not(.wp-block-gallery) {
     clear: both;
     margin-left: auto;
     margin-right: auto;
@@ -5260,6 +5261,9 @@ div.aligncenter:not(.wp-block-gallery) {
     .inspiro-front-page.has-header-image .site-branding,
     .inspiro-front-page.has-header-video .site-branding {
         margin-bottom: 70px;
+    }
+    .page-template-default.home .entry-title {
+        margin-top: 40px;
     }
     .home.blog.has-header-image .site-branding,
     .home.blog.has-header-video .site-branding {
