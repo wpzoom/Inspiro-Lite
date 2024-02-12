@@ -42,17 +42,17 @@ function inspiro_body_classes( $classes ) {
 
 
 		// Add a class if there is a custom header.
-		if ( is_front_page() && is_home() && has_header_image() && $hero_show ) { // Default homepage.
+		if ( is_front_page() && is_home() && $hero_show ) { // Default homepage.
 			$classes[] = 'has-header-image';
-		} elseif ( is_front_page() && has_header_image() && $hero_show ) { // static homepage.
+		} elseif ( is_front_page() && $hero_show ) { // static homepage.
 			$classes[] = 'has-header-image';
-		} elseif ( is_page() && inspiro_is_frontpage() && has_header_image() && $hero_show ) {
+		} elseif ( is_page() && inspiro_is_frontpage() && $hero_show ) {
 			$classes[] = 'has-header-image';
 		}
 		if ( is_page_template( 'page-templates/full-width-transparent.php' ) ) {
 			$classes[] = 'has-header-image';
 		}
-		if ( is_page_template( 'page-templates/homepage-builder-bb.php' ) && has_header_image() ) {
+		if ( is_page_template( 'page-templates/homepage-builder-bb.php' )  ) {
 			$classes[] = 'has-header-image';
 		}
 	}

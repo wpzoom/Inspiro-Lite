@@ -31,7 +31,7 @@
 	</header><!-- #masthead -->
 
     <?php
-        $hero_show        = inspiro_get_theme_mod( 'hero_enable' );
+        $hero_show = inspiro_get_theme_mod( 'hero_enable' );
     ?>
 
 	<?php
@@ -39,13 +39,13 @@
 
     if (!is_page_template( 'page-templates/homepage-no-hero.php' )) {
     	if ( isset( $paged ) && $paged < 2 && $hero_show ) {
-    		if ( is_front_page() && is_home() && has_header_image() ) { // Default homepage.
+    		if ( is_front_page() && is_home() ) { // Default homepage.
     			get_template_part( 'template-parts/header/header', 'image' );
-    		} elseif ( is_front_page() && has_header_image() ) { // static homepage.
+    		} elseif ( is_front_page() ) { // static homepage.
     			get_template_part( 'template-parts/header/header', 'image' );
-    		} elseif ( is_page() && inspiro_is_frontpage() && has_header_image() ) {
+    		} elseif ( is_page() && inspiro_is_frontpage()) {
     			get_template_part( 'template-parts/header/header', 'image' );
-    		} elseif ( is_page_template( 'page-templates/homepage-builder-bb.php' ) && has_header_image() ) {
+    		} elseif ( is_page_template( 'page-templates/homepage-builder-bb.php' ) ) {
     			get_template_part( 'template-parts/header/header', 'image' );
     		}
     	}

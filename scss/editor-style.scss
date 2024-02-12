@@ -50,7 +50,6 @@ Description: Used to style the TinyMCE editor.
 }
 
 
-
 /** === Title === */
 
 .editor-post-title__block .editor-post-title__input {
@@ -146,4 +145,9 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
 .alignfull {
     margin-right: -30px;
     margin-left: -30px;
+}
+
+.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link {
+    background: none;
+    border: 2px solid;
 }

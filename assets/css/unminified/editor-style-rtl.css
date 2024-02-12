@@ -141,3 +141,8 @@ body > .is-root-container > .wp-block-template-part > .wp-block-cover,
     margin-left: -30px;
     margin-right: -30px;
 }
+
+.editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link {
+    background: none;
+    border: 2px solid;
+}
