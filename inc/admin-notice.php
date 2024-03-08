@@ -77,7 +77,7 @@ if ( ! function_exists( 'inspiro_welcome_notice' ) ) {
 			</a>
 
             <div class="wpz-notice-image">
-                <a href="https://www.wpzoom.com/themes/inspiro/" title="Inspiro Premium" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-top.png' ); ?>" width="233" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>" /></a>
+                <a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=adminnotice&utm_campaign=welcome-banner" title="Inspiro Premium" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-top.png' ); ?>" width="233" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>" /></a>
             </div>
 
             <div class="wpz-notice-text">
@@ -96,7 +96,7 @@ if ( ! function_exists( 'inspiro_welcome_notice' ) ) {
     					printf( esc_html__( '%s Lite Dashboard &rarr;', 'inspiro' ), 'Inspiro' );
     					?>
     				</a>
-    				<a class="button button-secondary" href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/', 'inspiro' ) ); ?>" target="_blank">
+    				<a class="button button-secondary" href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=adminnotice&utm_campaign=welcome-banner', 'inspiro' ) ); ?>" target="_blank">
     					<?php esc_html_e( 'Discover Inspiro Premium &rarr;', 'inspiro' ); ?>
     				</a>
     			</div>

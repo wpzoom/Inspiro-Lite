@@ -86,7 +86,7 @@ function inspiro_display_theme_page() {
                                             <?php esc_html_e( 'Customize Inspiro &rarr;', 'inspiro' ); ?>
                                         </a>
 
-                                        <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/', 'inspiro' ) ); ?>" target="_blank" class="button button-secondary">
+                                        <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium', 'inspiro' ) ); ?>" target="_blank" class="button button-secondary">
                                             <?php esc_html_e( 'Get Inspiro Premium &rarr;', 'inspiro' ); ?>
                                         </a>
 
@@ -275,7 +275,7 @@ function inspiro_display_theme_page() {
                                                         <?php esc_html_e( 'In the free version, you can have just a static hero on the homepage, while in the Premium version, you can create a fully working slideshow with multiple videos and images. The Slideshow of the Premium version provides more options and features, such as displaying a different video on mobile devices, adding a video popup, and more.', 'inspiro' ); ?>
                                                     </p>
                                                     <p class="section_footer">
-                                                        <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/', 'inspiro' ) ); ?>" target="_blank" class="button button-primary">
+                                                        <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium', 'inspiro' ) ); ?>" target="_blank" class="button button-primary">
                                                             <?php esc_html_e( 'Get Inspiro Premium &rarr;', 'inspiro' ); ?>
                                                         </a>
                                                         <a href="<?php echo esc_url( __( 'https://demo.wpzoom.com/?theme=inspiro-demo', 'inspiro' ) ); ?>" target="_blank" class="button button-secondary">
@@ -368,7 +368,7 @@ function inspiro_display_theme_page() {
 
                                             <span class="many-more"><?php esc_html_e( 'And many other premium features...', 'inspiro' ); ?></span>
 
-                                            <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/', 'inspiro' ) ); ?>" target="_blank" class="button button-large button-primary">
+                                            <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-table', 'inspiro' ) ); ?>" target="_blank" class="button button-large button-primary">
                                                 <?php esc_html_e( 'Get Inspiro Premium Today &rarr;', 'inspiro' ); ?>
                                             </a>
 
@@ -432,7 +432,7 @@ function inspiro_display_theme_page() {
                                                     <tr>
                                                         <td><h3><?php esc_html_e( 'Starter Sites', 'inspiro' ); ?></h3></td>
                                                         <td>2</td>
-                                                        <td>11</td>
+                                                        <td>15</td>
                                                     </tr>
                                                     <tr>
                                                         <td><h3><strong><?php esc_html_e( 'Portfolio with Video Integration', 'inspiro' ); ?></strong> <span class="table-new-promo">POPULAR FEATURE</span></h3></td>
@@ -498,7 +498,7 @@ function inspiro_display_theme_page() {
                                                         <td></td>
                                                         <td></td>
                                                         <td>
-                                                            <a href="https://www.wpzoom.com/themes/inspiro/" target="_blank" class="button button-primary">
+                                                            <a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium" target="_blank" class="button button-primary">
                                                                 <?php esc_html_e( 'Get Inspiro Premium Today!', 'inspiro' ); ?>
                                                             </a>
                                                         </td>
@@ -663,12 +663,38 @@ function inspiro_display_theme_page() {
 
                                                         <li class="design_magazine" data-design-id="inspiro-auto">
                                                             <figure title="Magazine">
-                                                                <div class="preview-thumbnail" style="background-image:url('https://demo.wpzoom.com/inspiro-demo/wp-content/themes/inspiro-select/images/inspiro-rent.png')"><a href="https://demo.wpzoom.com/inspiro-auto/" target="_blank" class="button-select-template">COMING SOON</a></div>
+                                                                <div class="preview-thumbnail" style="background-image:url('https://demo.wpzoom.com/inspiro-demo/wp-content/themes/inspiro-select/images/inspiro-rent.png')"><a href="https://demo.wpzoom.com/inspiro-auto/" target="_blank" class="button-select-template">View Demo</a></div>
                                                                 <figcaption>
                                                                     <h5>Car Rental / Dealer</h5>
 
                                                                     <p>
-                                                                        <em><a href="https://demo.wpzoom.com/inspiro-auto/" target="_blank" rel="noopener" title="Live preview">Coming Soon!</a></em>
+                                                                        <a href="https://demo.wpzoom.com/inspiro-auto/" target="_blank" rel="noopener" title="Live preview">Live Preview</a>
+                                                                    </p>
+                                                                </figcaption>
+                                                            </figure>
+                                                        </li>
+
+                                                        <li class="design_magazine" data-design-id="inspiro-coach">
+                                                            <figure title="Author">
+                                                                <div class="preview-thumbnail" style="background-image:url('https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/inspiro-author/home-thumb.png')"><a href="https://demo.wpzoom.com/inspiro-author/" target="_blank" class="button-select-template">View Demo</a></div>
+                                                                <figcaption>
+                                                                    <h5>Author / Coach</h5>
+
+                                                                    <p>
+                                                                        <a href="https://demo.wpzoom.com/inspiro-author/" target="_blank" rel="noopener" title="Live preview">Live Preview</a>
+                                                                    </p>
+                                                                </figcaption>
+                                                            </figure>
+                                                        </li>
+
+                                                        <li class="design_magazine" data-design-id="inspiro-church">
+                                                            <figure title="Church">
+                                                                <div class="preview-thumbnail" style="background-image:url('https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/inspiro-church/home-thumb.png')"><a href="https://demo.wpzoom.com/inspiro-church/" target="_blank" class="button-select-template">View Demo</a></div>
+                                                                <figcaption>
+                                                                    <h5>Author / Coach</h5>
+
+                                                                    <p>
+                                                                        <a href="https://demo.wpzoom.com/inspiro-church/" target="_blank" rel="noopener" title="Live preview">Live Preview</a>
                                                                     </p>
                                                                 </figcaption>
                                                             </figure>
@@ -684,7 +710,7 @@ function inspiro_display_theme_page() {
 
                                     <br />
                                     <br />
-                                    <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/', 'inspiro' ) ); ?>" target="_blank" class="button button-large button-primary">
+                                    <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium', 'inspiro' ) ); ?>" target="_blank" class="button button-large button-primary">
                                         <?php esc_html_e( 'Get Inspiro Premium Today &rarr;', 'inspiro' ); ?>
                                     </a>
 
@@ -852,7 +878,7 @@ function inspiro_display_theme_page() {
 
                                     <br />
                                     <br />
-                                    <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro-pro/', 'inspiro' ) ); ?>" target="_blank" class="button button-large button-primary">
+                                    <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro-pro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-pro', 'inspiro' ) ); ?>" target="_blank" class="button button-large button-primary">
                                         <?php esc_html_e( 'Get Inspiro PRO Today &rarr;', 'inspiro' ); ?>
                                     </a>
 
@@ -876,10 +902,10 @@ function inspiro_display_theme_page() {
                                     </svg> <?php esc_html_e( 'Inspiro Premium', 'inspiro' ); ?></h3>
                                 <p class="wpz-onboard_content-side-section-content"><?php esc_html_e( 'Upgrade to the Premium version to get instant access to unique features and dozen of pre-built demos!', 'inspiro' ); ?></p>
 
-                                <a href="https://www.wpzoom.com/themes/inspiro/" title="Inspiro Premium" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-premium.png' ); ?>" width="300" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>" /></a>
+                                <a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium" title="Inspiro Premium" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-premium.png' ); ?>" width="300" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>" /></a>
 
                                 <div class="wpz-onboard_content-side-section-button">
-                                    <a href="https://www.wpzoom.com/themes/inspiro/" title="Inspiro Premium" target="_blank" class="button"><?php esc_html_e( 'Discover the Premium Version &rarr;', 'inspiro' ); ?></a>
+                                    <a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium" title="Inspiro Premium" target="_blank" class="button"><?php esc_html_e( 'Discover the Premium Version &rarr;', 'inspiro' ); ?></a>
                                 </div>
 
                             </div>
@@ -892,7 +918,7 @@ function inspiro_display_theme_page() {
 </svg></h3>
                                 <p class="wpz-onboard_content-side-section-content"><?php esc_html_e( 'We have launched a new version of the Inspiro theme that is compatible with the new Site Editor. Experience the future of WordPress with our new block theme!', 'inspiro' ); ?></p>
 
-                                <a href="https://www.wpzoom.com/themes/inspiro-blocks/" title="Inspiro Premium" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-blocks.png' ); ?>" width="300" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>" /></a>
+                                <a href="https://www.wpzoom.com/themes/inspiro-blocks/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-blocks" title="Inspiro Premium" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-blocks.png' ); ?>" width="300" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>" /></a>
 
                                 <div class="wpz-onboard_content-side-section-button">
                                     <a href="<?php echo esc_url( admin_url( 'theme-install.php?search=inspiro%2Bblocks' ) ); ?>" title="Inspiro Blocks" target="_blank" class="button"><?php esc_html_e( 'Install Now', 'inspiro' ); ?> &nbsp;<svg class="feather feather-download" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="https://www.w3.org/2000/svg"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg></a>

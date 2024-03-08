@@ -258,7 +258,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 						'title'       => esc_html__( 'Upgrade to Inspiro Premium', 'inspiro' ),
 						'description' => esc_html__( 'Unlock premium features: 7 Style Kits, Video Backgrounds, Portfolio Integration, Premium Support and much more...', 'inspiro' ),
 						'pro_text'    => esc_html__( 'View Inspiro Premium', 'inspiro' ),
-						'pro_url'     => 'https://www.wpzoom.com/themes/inspiro/',
+						'pro_url'     => 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=customizer&utm_campaign=bluebutton',
 						'priority'    => 5,
 					)
 				)
