@@ -1,8 +1,8 @@
 === Inspiro ===
 Contributors: WPZOOM
 Requires at least: 6.0
-Tested up to: 6.5
-Version: 1.8.7
+Tested up to: 6.6
+Version: 1.8.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
@@ -105,6 +105,9 @@ License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 
 == Changelog ==
+
+= 1.8.8 =
+* Minor bug fixes
 
 = 1.8.7 =
 * Update WooCommerce templates

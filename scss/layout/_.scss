@@ -43,3 +43,8 @@ body {
         @include clearfix-after();
     }
 }
+
+:root :where(a:where(:not(.wp-element-button))) {
+    color: var(--wp--preset--color--secondary);
+    text-decoration: none;
+}

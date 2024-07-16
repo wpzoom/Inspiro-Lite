@@ -1077,6 +1077,11 @@ input[type="search"]::-webkit-search-results-decoration {
     transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
+.more-link,
+.more_link {
+    color: #444 !important;
+}
+
 .button:hover,
 .btn:hover,
 .side-nav .search-form .search-submit:hover,
@@ -2058,6 +2063,11 @@ body {
 .wrap:after,
 .inner-wrap:after {
     clear: both;
+}
+
+:root :where(a:where(:not(.wp-element-button))) {
+    color: var(--wp--preset--color--secondary);
+    text-decoration: none;
 }
 
 /*--------------------------------------------------------------
