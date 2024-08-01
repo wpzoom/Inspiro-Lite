@@ -34,12 +34,12 @@ class Inspiro_Header_Area_Config {
 	public function register_configuration( $wp_customize ) {
 
 		// Create sections
-		$wp_customize->add_section( 
-			'header-area', 
+		$wp_customize->add_section(
+			'header-area',
 			array(
 				'title'    => esc_html__( 'Header', 'inspiro' ),
 				'priority' => 70,
-			) 
+			)
 		);
 
 		$wp_customize->add_setting(
@@ -182,7 +182,7 @@ class Inspiro_Header_Area_Config {
 			array(
 				'type'    => 'checkbox',
 				'section' => 'header-area',
-				'label'   => esc_html__( 'Show Seach Icon', 'inspiro' ),
+				'label'   => esc_html__( 'Show Search Icon', 'inspiro' ),
 				'description' => esc_html__( 'Show search icon and search form in the header', 'inspiro' ),
 			)
 		);
