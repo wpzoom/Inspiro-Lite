@@ -1,5 +1,3 @@
-const flexibility = require("postcss-flexibility");
-const autoprefixer = require("autoprefixer");
 module.exports = function (grunt) {
 	'use strict';
 
