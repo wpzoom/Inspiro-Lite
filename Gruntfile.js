@@ -148,6 +148,41 @@ module.exports = function (grunt) {
 			},
 		},
 
+		cssmin: {
+			options: {
+				specialComments: 0,
+			},
+			css: {
+				files: [
+					// Generated '.min.css' files from '.css' files.
+					{
+						expand: true,
+						src: [ '**/*.css' ],
+						dest: 'assets/css/minified',
+						cwd: 'assets/css/unminified',
+						ext: '.min.css',
+					},
+					{
+						expand: true,
+						src: [ '**/*.css' ],
+						dest:
+							'inc/customizer/custom-controls/assets/css/minified',
+						cwd:
+							'inc/customizer/custom-controls/assets/css/unminified',
+						ext: '.min.css',
+					},
+					{
+						src: [
+							'inc/customizer/custom-controls/assets/css/unminified/*.css',
+							'!inc/customizer/custom-controls/assets/css/unminified/*-rtl.css',
+						],
+						dest:
+							'inc/customizer/custom-controls/assets/css/minified/custom-controls.min.css',
+					},
+				],
+			},
+		},
+
 		clean: {
 			main: [ '<%= pkg._project.slug %>' ],
 			zip: [ '*.zip' ],
@@ -174,7 +209,7 @@ module.exports = function (grunt) {
 	grunt.registerTask( 'scss', [ 'sass' ] );
 
 	// Style
-	grunt.registerTask( 'style', [ 'scss', 'postcss:style' ] );
+	grunt.registerTask( 'style', [ 'scss' ] );
 
 	// min all
 	grunt.registerTask( 'minify', [

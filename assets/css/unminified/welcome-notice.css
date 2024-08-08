@@ -11,43 +11,33 @@
     border-left-width: 1px;
     overflow: hidden;
     border-radius: 10px;
-    -js-display: flex;
     display: flex;
     justify-content: flex-start;
     padding: 5px 25px 0 15px;
 }
-
 .wpz-welcome-notice a {
     font-weight: 600;
 }
-
 .wpz-welcome-notice .wpz-notice-image {
     margin: 0 5px 0 0;
     max-width: 250px;
-    -js-display: flex;
     display: flex;
     align-items: flex-end;
 }
-
 .wpz-welcome-notice .wpz-notice-image img {
     vertical-align: bottom;
 }
-
 .wpz-welcome-notice .wpz-notice-text p a {
     color: var(--inspiro-primary-color);
 }
-
 .wpz-welcome-notice .wpz-notice-text p a:hover {
     text-decoration: none;
 }
-
 .wpz-welcome-notice h3 {
     margin-top: 25px;
     margin-bottom: 10px;
 }
-
 .wpz-welcome-notice .button {
-    -js-display: inline-flex;
     display: inline-flex;
     align-items: center;
     font-weight: 600;
@@ -58,21 +48,17 @@
     margin-right: 5px;
     border: 1px solid var(--inspiro-primary-color);
 }
-
 .wpz-welcome-notice .button:hover, .wpz-welcome-notice .button:active {
     color: #fff;
     background-color: #67b0ff;
 }
-
 .wpz-welcome-notice .button.button-secondary {
     color: var(--inspiro-primary-color);
     background-color: transparent;
 }
-
 .wpz-welcome-notice .button.button-secondary:hover, .wpz-welcome-notice .button.button-secondary:active {
     background-color: rgba(var(--inspiro-primary-color), 0.1);
 }
-
 .wpz-welcome-notice .wpz-welcome-notice-button {
     margin-top: 20px;
     margin-bottom: 20px;
