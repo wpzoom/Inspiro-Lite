@@ -177,4 +177,15 @@ module.exports = function (grunt) {
 
 	// Style
 	grunt.registerTask( 'style', [ 'scss', 'postcss:style' ] );
+
+	// min all
+	grunt.registerTask( 'minify', [
+		'style',
+		'cssmin:css',
+	] );
+
+	// Default task.
+	grunt.registerTask( 'default', [
+		'minify',
+	] );
 }
