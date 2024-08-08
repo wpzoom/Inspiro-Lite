@@ -277,147 +277,147 @@ $background-color_1: $icon_color_1;
 
 /* icons setup */
 #accordion-panel-general {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "\f319";
 		}
 	}
 }
 #accordion-section-title_tagline {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "\f319";
 		}
 	}
 }
 #accordion-panel-homepage_media_panel {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "\f180";
 		}
 	}
 }
 #accordion-panel-inspiro_typography_panel {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "\f201";
 		}
 	}
 }
 #accordion-section-colors {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "\f309";
 		}
 	}
 }
 #accordion-panel-layout {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "\f175";
 		}
 	}
 }
 #accordion-section-theme_layout {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "\f489";
 		}
 	}
 }
 #accordion-section-header-area {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "\f538";
 		}
 	}
 }
 #accordion-section-footer-area {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "\f538";
 		}
 	}
 }
 #accordion-section-background_image {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "\f128";
 		}
 	}
 }
 #accordion-panel-nav_menus {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "\f333";
 		}
 	}
 }
 #accordion-panel-widgets {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "\f116";
 		}
 	}
 }
 #accordion-section-static_front_page {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "\f102";
 		}
 	}
 }
 #accordion-section-custom_css {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "\f475";
 		}
 	}
 }
 #accordion-section-woocommerce_layout {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "\f174";
 		}
 	}
 }
 #accordion-section-color-palettes-container {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "\f100";
 		}
 	}
 }
 #accordion-panel-slider-container {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "\f181";
 		}
 	}
 }
 #accordion-section-slider-container {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "\f181";
 		}
 	}
 }
 #accordion-panel-post-options {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "\f109";
 		}
 	}
 }
 #accordion-section-style-kits {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "\f180";
 		}
 	}
 }
 .control-section.control-section-wpzoom.wpzoom-section-with-icon {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			content: "";
 			display: inline-block;
@@ -429,7 +429,7 @@ $background-color_1: $icon_color_1;
 	}
 }
 .control-section.control-section-wpzoom.wpzoom-section-icon_moon {
-	>h3.accordion-section-title {
+	>.accordion-section-title {
 		&:before {
 			-webkit-mask: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='black' d='M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z'%3E%3C/path%3E%3C/svg%3E") no-repeat 50% 50%;
 			mask: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='black' d='M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z'%3E%3C/path%3E%3C/svg%3E") no-repeat 50% 50%;
