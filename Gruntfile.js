@@ -264,9 +264,21 @@ module.exports = function (grunt) {
 				},
 			},
 		},
+
+		bumpup: {
+			options: {
+				updateProps: {
+					pkg: 'package.json',
+				},
+			},
+			file: 'package.json',
+		},
+
+
 	});
 
-	// Load grunt tasks.
+
+	// --- Load tasks --- //
 	grunt.loadNpmTasks( 'grunt-rtlcss' );
 	grunt.loadNpmTasks( 'grunt-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
@@ -275,6 +287,29 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 	grunt.loadNpmTasks( 'grunt-wp-readme-to-markdown' );
+	grunt.loadNpmTasks( 'grunt-bumpup' );
+
+
+	// --- Register tasks --- //
+	// Bump Version - `grunt version-bump --ver=<version-number>`
+	// eslint-disable-next-line no-unused-vars
+	grunt.registerTask( 'version-bump', function ( ver ) {
+		let newVersion = grunt.option( 'ver' );
+
+		if ( newVersion ) {
+			newVersion = newVersion ? newVersion : 'patch';
+
+			grunt.task.run( 'bumpup:' + newVersion );
+			grunt.task.run(
+				'replace:theme_main',
+				'replace:theme_const',
+				'replace:theme_function_comment',
+				'replace:changelog',
+				'replace:scripts',
+				'readme'
+			);
+		}
+	} );
 
 	// rtlcss, you will still need to install ruby and sass on your system manually to run this
 	grunt.registerTask( 'rtl', [ 'rtlcss' ] );
@@ -302,6 +337,6 @@ module.exports = function (grunt) {
 		'minify',
 	] );
 
-	// Generate Read me file
+	// Generate Readme file
 	grunt.registerTask( 'readme', [ 'wp_readme_to_markdown' ] );
 }
