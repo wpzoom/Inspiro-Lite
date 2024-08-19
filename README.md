@@ -1,17 +1,11 @@
-# Inspiro Lite #
-### Inspiro is a professional & lightweight photo and video-focused WordPress theme with a modern design. Packed with features including a fullscreen area that supports Vimeo, YouTube & self-hosted video background, Page Builder integration, Inspiro is perfect for showing off your photography and video portfolio. Moreover, the theme is compatible with WooCommerce and popular Page Builders such as Elementor, Beaver Builder.
-
-[View Demo](https://demo.wpzoom.com/inspiro-lite/) &nbsp;·&nbsp; [Documentation](https://www.wpzoom.com/documentation/inspiro-lite/) &nbsp;·&nbsp; [Download for Free](https://downloads.wordpress.org/theme/inspiro.latest-stable.zip) &nbsp;·&nbsp; [View Pro Version](https://wpzoom.com/themes/inspiro/)
-
-[![](https://www.wpzoom.com/wp-content/uploads/2022/05/inspiro-lite-1.png)](https://wpzoom.com/themes/inspiro-lite/)
-
-**Contributors:** [WPZOOM](https://profiles.wordpress.org/WPZOOM)
-**Requires at least:** 6.0
-**Tested up to:** 6.6
-**Version:** 1.8.8
-**License:** GPLv2 or later
-**License URI:** http://www.gnu.org/licenses/gpl-2.0.html
-**Tags:** one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+# Inspiro #
+**Contributors:** [wpzoom](https://profiles.wordpress.org/wpzoom/)  
+**Requires at least:** 6.0  
+**Tested up to:** 6.6  
+**Version:** 1.8.8  
+**License:** GPLv2 or later  
+**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
+**Tags:** one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready  
 
 ## Description ##
 
@@ -117,6 +111,7 @@ Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
   * Eliminate annoying stuff
   * Add icons
   * Minor code improvements
+  * Update npm packages
 
 ### 1.8.8 ###
 * Minor bug fixes

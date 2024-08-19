@@ -179,36 +179,6 @@ module.exports = function (grunt) {
 			},
 		},
 
-		watch: {
-			gruntfile: {
-				files: 'Gruntfile.js',
-				tasks: [ 'jshint' ],
-				options: {
-					reload: true,
-				},
-			},
-			scripts: {
-				files: [
-					'assets/js/unminified/*.js',
-					'inc/customizer/custom-controls/**/*.js',
-				],
-				tasks: [ 'jshint:uses_defaults', 'concat', 'minify' ],
-				options: {
-					livereload: true,
-				},
-			},
-			sassStyles: {
-				files: [ 'scss/**/*.scss' ],
-				tasks: [ 'style', 'clean:minifiedCSS', 'cssmin:css' ],
-			},
-			livereload: {
-				files: [ 'style.css' ],
-				options: {
-					livereload: true,
-				},
-			},
-		},
-
 		cssmin: {
 			options: {
 				specialComments: 0,
@@ -244,6 +214,36 @@ module.exports = function (grunt) {
 			},
 		},
 
+		watch: {
+			gruntfile: {
+				files: 'Gruntfile.js',
+				tasks: [ 'jshint' ],
+				options: {
+					reload: true,
+				},
+			},
+			scripts: {
+				files: [
+					'assets/js/unminified/*.js',
+					'inc/customizer/custom-controls/**/*.js',
+				],
+				tasks: [ 'jshint:uses_defaults', 'concat', 'minify' ],
+				options: {
+					livereload: true,
+				},
+			},
+			sassStyles: {
+				files: [ 'scss/**/*.scss' ],
+				tasks: [ 'style', 'clean:minifiedCSS', 'cssmin:css' ],
+			},
+			livereload: {
+				files: [ 'style.css' ],
+				options: {
+					livereload: true,
+				},
+			},
+		},
+
 		clean: {
 			main: [ '<%= pkg._project.slug %>' ],
 			zip: [ '*.zip' ],
@@ -256,6 +256,14 @@ module.exports = function (grunt) {
 				'inc/customizer/custom-controls/assets/css/minified/*',
 			],
 		},
+
+		wp_readme_to_markdown: {
+			your_target: {
+				files: {
+					'README.md': 'readme.txt',
+				},
+			},
+		},
 	});
 
 	// Load grunt tasks.
@@ -266,6 +274,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
 	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
+	grunt.loadNpmTasks( 'grunt-wp-readme-to-markdown' );
 
 	// rtlcss, you will still need to install ruby and sass on your system manually to run this
 	grunt.registerTask( 'rtl', [ 'rtlcss' ] );
@@ -292,4 +301,7 @@ module.exports = function (grunt) {
 	grunt.registerTask( 'default', [
 		'minify',
 	] );
+
+	// Generate Read me file
+	grunt.registerTask( 'readme', [ 'wp_readme_to_markdown' ] );
 }

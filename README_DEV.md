@@ -1,10 +1,7 @@
-
-
 # Project specs
 ### CSS
 * Use dev versions of core JS and CSS files (only needed if you are modifying these core files)
 	* define( 'SCRIPT_DEBUG', true );
-
 
 
 # Development tools updates
@@ -28,5 +25,6 @@ v. 1.9.0
 # TODO
 * Test/ask if *.css styles are ok after new updates and minor changes in files.
 * Fix all Grunt sass warnings
+* Delete commented deactivated packages in Grunt file after all tests.
 
 
