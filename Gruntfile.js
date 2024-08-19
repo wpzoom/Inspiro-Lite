@@ -56,6 +56,44 @@ module.exports = function (grunt) {
 			// },
 		},
 
+		rtlcss: {
+			options: {
+				// rtlcss options
+				config: {
+					preserveComments: true,
+					greedy: true,
+				},
+				// generate source maps
+				map: false,
+			},
+			dist: {
+				files: [
+					{
+						expand: true,
+						cwd: 'assets/css/unminified/',
+						src: [
+							'*.css',
+							'!*-rtl.css',
+							'!colors-dark.css',
+							'!customize-controls.css',
+							'!welcome-notice.css',
+						],
+						dest: 'assets/css/unminified',
+						ext: '-rtl.css',
+					},
+					{
+						expand: true,
+						cwd:
+							'inc/customizer/custom-controls/assets/css/unminified/',
+						src: [ '*.css', '!*-rtl.css' ],
+						dest:
+							'inc/customizer/custom-controls/assets/css/unminified/',
+						ext: '-rtl.css',
+					},
+				],
+			},
+		},
+
 		sass: {
 			options: {
 				implementation: sass,
@@ -115,6 +153,29 @@ module.exports = function (grunt) {
 			style: {
 				expand: true,
 				src: ['style.css', 'assets/css/unminified/*.css'],
+			},
+		},
+
+		uglify: {
+			js: {
+				files: [
+					{
+						expand: true,
+						src: [ '**.js' ],
+						dest: 'assets/js/minified',
+						cwd: 'assets/js/unminified',
+						ext: '.min.js',
+					},
+					{
+						expand: true,
+						src: [ '**.js' ],
+						dest:
+							'inc/customizer/custom-controls/assets/js/minified',
+						cwd:
+							'inc/customizer/custom-controls/assets/js/unminified',
+						ext: '.min.js',
+					},
+				],
 			},
 		},
 
@@ -198,6 +259,7 @@ module.exports = function (grunt) {
 	});
 
 	// Load grunt tasks.
+	grunt.loadNpmTasks( 'grunt-rtlcss' );
 	grunt.loadNpmTasks( 'grunt-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( '@lodder/grunt-postcss' );
@@ -205,11 +267,21 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 
+
+	// rtlcss, you will still need to install ruby and sass on your system manually to run this
+	grunt.registerTask( 'rtl', [ 'rtlcss' ] );
+
 	// SASS compile
 	grunt.registerTask( 'scss', [ 'sass' ] );
 
 	// Style
-	grunt.registerTask( 'style', [ 'scss' ] );
+	grunt.registerTask( 'style', [ 'scss', 'rtl' ] );
+
+	// Lint the "beforeminify" files first, then minify
+	grunt.registerTask( 'jshint-before-minify', [
+		'jshint:beforeminify',
+		'uglify:js',
+	] );
 
 	// min all
 	grunt.registerTask( 'minify', [

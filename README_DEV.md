@@ -1,9 +1,10 @@
-# CSS
-* Use dev versions of core JS and CSS files (only needed if you are modifying these core files)
-  * define( 'SCRIPT_DEBUG', true );
 
 
 # Project specs
+### CSS
+* Use dev versions of core JS and CSS files (only needed if you are modifying these core files)
+	* define( 'SCRIPT_DEBUG', true );
+
 
 
 # Development tools updates
@@ -14,11 +15,13 @@
 # Upgrade details
 
 v. 1.9.0
-### CSS
+### Design
 * Implement icons in main scss file
+
+### CSS improvements
 * Eliminate overqualified elements like li and h3
 
-# Fixes
+### Fixes
 * Update to last npm packages
 
 # TODO
