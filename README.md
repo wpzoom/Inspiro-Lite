@@ -1,11 +1,11 @@
 # Inspiro #
-**Contributors:** [wpzoom](https://profiles.wordpress.org/wpzoom/)  
-**Requires at least:** 6.0  
-**Tested up to:** 6.6  
-**Version:** 1.8.8  
-**License:** GPLv2 or later  
-**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
-**Tags:** one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready  
+**Contributors:** [wpzoom](https://profiles.wordpress.org/wpzoom/)
+**Requires at least:** 6.0
+**Tested up to:** 6.6
+**Version:** 1.8.8
+**License:** GPLv2 or later
+**License URI:** http://www.gnu.org/licenses/gpl-2.0.html
+**Tags:** one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 
 ## Description ##
 
@@ -111,6 +111,7 @@ Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
   * Eliminate annoying stuff
   * Add icons
   * Minor code improvements
+  * Text issue fix
   * Update npm packages
 
 ### 1.8.8 ###
