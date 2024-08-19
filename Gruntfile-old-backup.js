@@ -552,21 +552,21 @@ module.exports = function ( grunt ) {
 
 	// Load grunt tasks.
 	grunt.loadNpmTasks( 'grunt-rtlcss' );
-	+grunt.loadNpmTasks( 'grunt-sass' );
-	+grunt.loadNpmTasks( '@lodder/grunt-postcss' );
-	grunt.loadNpmTasks( 'grunt-contrib-uglify-es' );
-	+grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
-	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
-	grunt.loadNpmTasks( 'grunt-contrib-copy' );
-	+grunt.loadNpmTasks( 'grunt-contrib-clean' );
-	grunt.loadNpmTasks( 'grunt-contrib-compress' );
-	+grunt.loadNpmTasks( 'grunt-contrib-concat' );
+	grunt.loadNpmTasks( 'grunt-sass' );
+	grunt.loadNpmTasks( '@lodder/grunt-postcss' );
+	// grunt.loadNpmTasks( 'grunt-contrib-uglify-es' ); // ???
+	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
+	// grunt.loadNpmTasks( 'grunt-contrib-watch' );
+	// grunt.loadNpmTasks( 'grunt-contrib-jshint' );
+	// grunt.loadNpmTasks( 'grunt-contrib-copy' );
+	grunt.loadNpmTasks( 'grunt-contrib-clean' );
+	// grunt.loadNpmTasks( 'grunt-contrib-compress' );
+	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 	grunt.loadNpmTasks( 'grunt-wp-readme-to-markdown' );
-	grunt.loadNpmTasks( 'grunt-wp-i18n' );
-	grunt.loadNpmTasks( 'grunt-bumpup' );
-	grunt.loadNpmTasks( 'grunt-text-replace' );
-	grunt.loadNpmTasks( 'grunt-json2php' );
+	// grunt.loadNpmTasks( 'grunt-wp-i18n' );
+	// grunt.loadNpmTasks( 'grunt-bumpup' );
+	// grunt.loadNpmTasks( 'grunt-text-replace' );
+	// grunt.loadNpmTasks( 'grunt-json2php' );
 
 	// Register Tasks.
 

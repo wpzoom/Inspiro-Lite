@@ -2,7 +2,7 @@ module.exports = function (grunt) {
 	'use strict';
 
 	const autoprefixer = require('autoprefixer');
-	const flexibility = require('postcss-flexibility');
+	// const flexibility = require('postcss-flexibility');
 	const sass = require('sass');
 
 	// Project configuration.
@@ -56,6 +56,44 @@ module.exports = function (grunt) {
 			// },
 		},
 
+		rtlcss: {
+			options: {
+				// rtlcss options
+				config: {
+					preserveComments: true,
+					greedy: true,
+				},
+				// generate source maps
+				map: false,
+			},
+			dist: {
+				files: [
+					{
+						expand: true,
+						cwd: 'assets/css/unminified/',
+						src: [
+							'*.css',
+							'!*-rtl.css',
+							'!colors-dark.css',
+							'!customize-controls.css',
+							'!welcome-notice.css',
+						],
+						dest: 'assets/css/unminified',
+						ext: '-rtl.css',
+					},
+					{
+						expand: true,
+						cwd:
+							'inc/customizer/custom-controls/assets/css/unminified/',
+						src: [ '*.css', '!*-rtl.css' ],
+						dest:
+							'inc/customizer/custom-controls/assets/css/unminified/',
+						ext: '-rtl.css',
+					},
+				],
+			},
+		},
+
 		sass: {
 			options: {
 				implementation: sass,
@@ -94,7 +132,7 @@ module.exports = function (grunt) {
 			options: {
 				map: false,
 				processors: [
-					flexibility,
+					// flexibility,
 					autoprefixer({
 						overrideBrowserslist: [
 							'> 1%',
@@ -118,33 +156,26 @@ module.exports = function (grunt) {
 			},
 		},
 
-		watch: {
-			gruntfile: {
-				files: 'Gruntfile.js',
-				tasks: [ 'jshint' ],
-				options: {
-					reload: true,
-				},
-			},
-			scripts: {
+		uglify: {
+			js: {
 				files: [
-					'assets/js/unminified/*.js',
-					'inc/customizer/custom-controls/**/*.js',
+					{
+						expand: true,
+						src: [ '**.js' ],
+						dest: 'assets/js/minified',
+						cwd: 'assets/js/unminified',
+						ext: '.min.js',
+					},
+					{
+						expand: true,
+						src: [ '**.js' ],
+						dest:
+							'inc/customizer/custom-controls/assets/js/minified',
+						cwd:
+							'inc/customizer/custom-controls/assets/js/unminified',
+						ext: '.min.js',
+					},
 				],
-				tasks: [ 'jshint:uses_defaults', 'concat', 'minify' ],
-				options: {
-					livereload: true,
-				},
-			},
-			sassStyles: {
-				files: [ 'scss/**/*.scss' ],
-				tasks: [ 'style', 'clean:minifiedCSS', 'cssmin:css' ],
-			},
-			livereload: {
-				files: [ 'style.css' ],
-				options: {
-					livereload: true,
-				},
 			},
 		},
 
@@ -183,6 +214,36 @@ module.exports = function (grunt) {
 			},
 		},
 
+		watch: {
+			gruntfile: {
+				files: 'Gruntfile.js',
+				tasks: [ 'jshint' ],
+				options: {
+					reload: true,
+				},
+			},
+			scripts: {
+				files: [
+					'assets/js/unminified/*.js',
+					'inc/customizer/custom-controls/**/*.js',
+				],
+				tasks: [ 'jshint:uses_defaults', 'concat', 'minify' ],
+				options: {
+					livereload: true,
+				},
+			},
+			sassStyles: {
+				files: [ 'scss/**/*.scss' ],
+				tasks: [ 'style', 'clean:minifiedCSS', 'cssmin:css' ],
+			},
+			livereload: {
+				files: [ 'style.css' ],
+				options: {
+					livereload: true,
+				},
+			},
+		},
+
 		clean: {
 			main: [ '<%= pkg._project.slug %>' ],
 			zip: [ '*.zip' ],
@@ -195,21 +256,75 @@ module.exports = function (grunt) {
 				'inc/customizer/custom-controls/assets/css/minified/*',
 			],
 		},
+
+		wp_readme_to_markdown: {
+			your_target: {
+				files: {
+					'README.md': 'readme.txt',
+				},
+			},
+		},
+
+		bumpup: {
+			options: {
+				updateProps: {
+					pkg: 'package.json',
+				},
+			},
+			file: 'package.json',
+		},
+
+
 	});
 
-	// Load grunt tasks.
+
+	// --- Load tasks --- //
+	grunt.loadNpmTasks( 'grunt-rtlcss' );
 	grunt.loadNpmTasks( 'grunt-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( '@lodder/grunt-postcss' );
 	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
 	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
+	grunt.loadNpmTasks( 'grunt-wp-readme-to-markdown' );
+	grunt.loadNpmTasks( 'grunt-bumpup' );
+
+
+	// --- Register tasks --- //
+	// Bump Version - `grunt version-bump --ver=<version-number>`
+	// eslint-disable-next-line no-unused-vars
+	grunt.registerTask( 'version-bump', function ( ver ) {
+		let newVersion = grunt.option( 'ver' );
+
+		if ( newVersion ) {
+			newVersion = newVersion ? newVersion : 'patch';
+
+			grunt.task.run( 'bumpup:' + newVersion );
+			grunt.task.run(
+				'replace:theme_main',
+				'replace:theme_const',
+				'replace:theme_function_comment',
+				'replace:changelog',
+				'replace:scripts',
+				'readme'
+			);
+		}
+	} );
+
+	// rtlcss, you will still need to install ruby and sass on your system manually to run this
+	grunt.registerTask( 'rtl', [ 'rtlcss' ] );
 
 	// SASS compile
 	grunt.registerTask( 'scss', [ 'sass' ] );
 
 	// Style
-	grunt.registerTask( 'style', [ 'scss' ] );
+	grunt.registerTask( 'style', [ 'scss', 'postcss:style', 'rtl' ] );
+
+	// Lint the "beforeminify" files first, then minify
+	grunt.registerTask( 'jshint-before-minify', [
+		'jshint:beforeminify',
+		'uglify:js',
+	] );
 
 	// min all
 	grunt.registerTask( 'minify', [
@@ -221,4 +336,7 @@ module.exports = function (grunt) {
 	grunt.registerTask( 'default', [
 		'minify',
 	] );
+
+	// Generate Readme file
+	grunt.registerTask( 'readme', [ 'wp_readme_to_markdown' ] );
 }
