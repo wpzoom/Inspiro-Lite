@@ -1,6 +1,6 @@
 {
   "name": "inspiro-lite",
-  "version": "1.8.9",
+  "version": "1.9.0",
   "description": "A free version of Inspiro WordPress Theme developed by WPZOOM",
   "main": "Gruntfile.js",
   "repository": {
@@ -17,7 +17,7 @@
     "author_site": "https://wpzoom.com/"
   },
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "@lodder/grunt-postcss": "^3.1.1",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.8.0",
@@ -29,7 +29,6 @@
     "grunt-rtlcss": "^2.0.2",
     "grunt-sass": "^3.1.0",
     "postcss": "^8.4.41",
-    "postcss-flexibility": "^3.0.0",
     "sass": "^1.77.8"
   }
 }

@@ -23,9 +23,9 @@ v. 1.9.0
 
 ### Fixes
 * Update to last npm packages
+* Uninstall 'postcss-flexibility' package because no need support for IE 9 & 8 versions.
 
 # TODO
-* Include POSTCSS
 * Test/ask if *.css styles are ok after new updates and minor changes in files.
 * Fix all Grunt sass warnings
 

@@ -2,7 +2,7 @@ module.exports = function (grunt) {
 	'use strict';
 
 	const autoprefixer = require('autoprefixer');
-	const flexibility = require('postcss-flexibility');
+	// const flexibility = require('postcss-flexibility');
 	const sass = require('sass');
 
 	// Project configuration.
@@ -132,7 +132,7 @@ module.exports = function (grunt) {
 			options: {
 				map: false,
 				processors: [
-					flexibility,
+					// flexibility,
 					autoprefixer({
 						overrideBrowserslist: [
 							'> 1%',
@@ -267,7 +267,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 
-
 	// rtlcss, you will still need to install ruby and sass on your system manually to run this
 	grunt.registerTask( 'rtl', [ 'rtlcss' ] );
 
@@ -275,7 +274,7 @@ module.exports = function (grunt) {
 	grunt.registerTask( 'scss', [ 'sass' ] );
 
 	// Style
-	grunt.registerTask( 'style', [ 'scss', 'rtl' ] );
+	grunt.registerTask( 'style', [ 'scss', 'postcss:style', 'rtl' ] );
 
 	// Lint the "beforeminify" files first, then minify
 	grunt.registerTask( 'jshint-before-minify', [
