@@ -133,7 +133,7 @@
 			this.handleToggle();
 		},
 		handleToggle: function () {
-			$('.customize-control-customizer-heading.accordion .neve-customizer-heading').on('click', function () {
+			$('.customize-control-accordion-section-ui-wrapper.accordion .inspiro-accordion-section-ui-wrapper').on('click', function () {
 				console.log('clicked');
 				var accordion = $(this).closest('.accordion');
 				$(accordion).toggleClass('expanded');

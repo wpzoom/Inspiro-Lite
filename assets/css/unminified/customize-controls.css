@@ -338,13 +338,13 @@
 	letter-spacing: .5px;
 }
 
-.customize-control.accordion .inspiro-accordion-section-ui-wrapper {
+.customize-control-accordion-section-ui-wrapper.accordion .inspiro-accordion-section-ui-wrapper {
 	cursor: pointer;
 	text-transform: uppercase;
 	font-size: 13px;
 }
 
-.customize-control.accordion .inspiro-accordion-section-ui-wrapper:hover {
+.customize-control-accordion-section-ui-wrapper.accordion .inspiro-accordion-section-ui-wrapper:hover {
 	color: #0073aa;
 	background: #f3f3f5;
 	border-left-color: #0073aa;
@@ -365,7 +365,7 @@
 	border-left: 1px solid #ddd;
 }
 
-.customize-control.expanded .accordion-expand-button:after {
+.customize-control-accordion-section-ui-wrapper.expanded .accordion-expand-button:after {
 	transform: rotate(180deg);
 }
 

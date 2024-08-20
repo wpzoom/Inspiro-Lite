@@ -63,7 +63,7 @@ class Inspiro_Header_Area_Config {
 				'accordion_section_ui_wrapper',
 				array(
 					'type'             => 'accordion-section-ui-wrapper',
-					'label'            => __( 'Test' ),
+					'label'            =>  esc_html__( 'Header Layout', 'inspiro' ),
 					'settings'         => 'accordion_ui_wrapper',
 					'section'          => 'header-area',
 					'description'      => __( 'This is another test.' ),
@@ -79,7 +79,7 @@ class Inspiro_Header_Area_Config {
 				$wp_customize,
 				'header-menu-style',
 				array(
-					'label'           => esc_html__( 'Header Layout', 'inspiro' ),
+//					'label'           => esc_html__( 'Header Layout', 'inspiro' ),
 					'description'     => esc_html__( 'Select the header layout. The hamburger icon appears on the desktop if the Sidebar has at least one widget. On mobile devices, the main menu is displayed in the sidebar.', 'inspiro' ),
 					'section'         => 'header-area',
 					'choices'     => array(

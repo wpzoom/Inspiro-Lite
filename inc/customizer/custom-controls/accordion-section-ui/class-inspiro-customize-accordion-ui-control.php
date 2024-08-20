@@ -69,18 +69,18 @@ if (class_exists('WP_Customize_Control')) {
 		 * @return array
 		 * @see WP_Customize_Control::to_json()
 		 */
-		public function to_json()
-		{
-			parent::to_json();
-
-			$json['classes'] = $this->class;
-			$json['accordion'] = $this->accordion;
+		public function json() {
+			$json                   = parent::json();
+			$json['classes']        = $this->class;
+			$json['accordion']      = $this->accordion;
 			$json['category_label'] = $this->category_label;
-			$json['style'] = $this->print_style();
+			$json['style']          = $this->print_style();
 
-			if ($this->accordion === true) {
+			if ( $this->accordion === true ) {
 				$json['classes'] .= ' accordion';
 			}
+
+			return $json;
 		}
 
 		/**
@@ -101,6 +101,21 @@ if (class_exists('WP_Customize_Control')) {
 
 			echo '<li id="' . esc_attr($id) . '" class="' . esc_attr($class) . '">';
 			echo '</li>';
+		}
+
+		/**
+		 * Render the control's content.
+		 *
+		 * Allows the content to be overridden without having to rewrite the wrapper in `$this::render()`.
+		 *
+		 * Supports basic input types `text`, `checkbox`, `textarea`, `radio`, `select` and `dropdown-pages`.
+		 * Additional input types such as `email`, `url`, `number`, `hidden` and `date` are supported implicitly.
+		 *
+		 * Control content can alternately be rendered in JS. See WP_Customize_Control::print_template().
+		 *
+		 * @since 3.4.0
+		 */
+		protected function render_content() {
 		}
 
 
