@@ -26,7 +26,7 @@ if (class_exists('WP_Customize_Control')) {
 		 * @since 1.9.0
 		 * @var string $type
 		 */
-		public $type = 'customizer-accordion-section-ui-wrapper';
+		public $type = 'accordion-section-ui-wrapper';
 
 		/**
 		 * Should be accordion?
@@ -120,7 +120,7 @@ if (class_exists('WP_Customize_Control')) {
 			<# if(data.category_label) {#>
 			<span class="customize-control-title">{{data.category_label}}</span>
 			<# }#>
-			<div class="neve-customizer-heading">
+			<div class="inspiro-accordion-section-ui-wrapper">
 				<span class="accordion-heading">{{ data.label }}</span>
 				<# if(data.accordion) { #>
 				<span class="accordion-expand-button"></span>
