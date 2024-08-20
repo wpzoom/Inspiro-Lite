@@ -1,3 +1,5 @@
+const sass = require("sass");
+const autoprefixer = require("autoprefixer");
 module.exports = function (grunt) {
 	'use strict';
 
@@ -25,10 +27,10 @@ module.exports = function (grunt) {
 				jquery: true,
 				module: false,
 			},
-			uses_defaults: [ 'Gruntfile.js' ],
+			uses_defaults: ['Gruntfile.js'],
 			beforeminify: {
 				files: {
-					src: [ 'assets/js/unminified/navigation.js' ],
+					src: ['assets/js/unminified/navigation.js'],
 				},
 				options: {
 					curly: true,
@@ -85,7 +87,7 @@ module.exports = function (grunt) {
 						expand: true,
 						cwd:
 							'inc/customizer/custom-controls/assets/css/unminified/',
-						src: [ '*.css', '!*-rtl.css' ],
+						src: ['*.css', '!*-rtl.css'],
 						dest:
 							'inc/customizer/custom-controls/assets/css/unminified/',
 						ext: '-rtl.css',
@@ -161,14 +163,14 @@ module.exports = function (grunt) {
 				files: [
 					{
 						expand: true,
-						src: [ '**.js' ],
+						src: ['**.js'],
 						dest: 'assets/js/minified',
 						cwd: 'assets/js/unminified',
 						ext: '.min.js',
 					},
 					{
 						expand: true,
-						src: [ '**.js' ],
+						src: ['**.js'],
 						dest:
 							'inc/customizer/custom-controls/assets/js/minified',
 						cwd:
@@ -188,14 +190,14 @@ module.exports = function (grunt) {
 					// Generated '.min.css' files from '.css' files.
 					{
 						expand: true,
-						src: [ '**/*.css' ],
+						src: ['**/*.css'],
 						dest: 'assets/css/minified',
 						cwd: 'assets/css/unminified',
 						ext: '.min.css',
 					},
 					{
 						expand: true,
-						src: [ '**/*.css' ],
+						src: ['**/*.css'],
 						dest:
 							'inc/customizer/custom-controls/assets/css/minified',
 						cwd:
@@ -217,7 +219,7 @@ module.exports = function (grunt) {
 		watch: {
 			gruntfile: {
 				files: 'Gruntfile.js',
-				tasks: [ 'jshint' ],
+				tasks: ['jshint'],
 				options: {
 					reload: true,
 				},
@@ -227,17 +229,17 @@ module.exports = function (grunt) {
 					'assets/js/unminified/*.js',
 					'inc/customizer/custom-controls/**/*.js',
 				],
-				tasks: [ 'jshint:uses_defaults', 'concat', 'minify' ],
+				tasks: ['jshint:uses_defaults', 'concat', 'minify'],
 				options: {
 					livereload: true,
 				},
 			},
 			sassStyles: {
-				files: [ 'scss/**/*.scss' ],
-				tasks: [ 'style', 'clean:minifiedCSS', 'cssmin:css' ],
+				files: ['scss/**/*.scss'],
+				tasks: ['style', 'clean:minifiedCSS', 'cssmin:css'],
 			},
 			livereload: {
-				files: [ 'style.css' ],
+				files: ['style.css'],
 				options: {
 					livereload: true,
 				},
@@ -245,8 +247,8 @@ module.exports = function (grunt) {
 		},
 
 		clean: {
-			main: [ '<%= pkg._project.slug %>' ],
-			zip: [ '*.zip' ],
+			main: ['<%= pkg._project.slug %>'],
+			zip: ['*.zip'],
 			minifiedJS: [
 				'assets/js/minified/*',
 				'inc/customizer/custom-controls/assets/js/minified/*',
@@ -265,6 +267,40 @@ module.exports = function (grunt) {
 			},
 		},
 
+		makepot: {
+			target: {
+				options: {
+					domainPath: '/languages',
+					potFilename: '<%= pkg._project.textdomain %>.pot',
+					potHeaders: {
+						poedit: true,
+						'x-poedit-keywordslist': true,
+					},
+					type: 'wp-theme',
+					updateTimestamp: true,
+				},
+			},
+		},
+
+		addtextdomain: {
+			options: {
+				textdomain: '<%= pkg._project.textdomain %>',
+				updateDomains: ['twentyseventeen', 'inspiro-lite', 'wpzoom'],
+			},
+			target: {
+				files: {
+					src: [
+						'*.php',
+						'**/*.php',
+						'!node_modules/**',
+						'!tests/**',
+						'!docs/**',
+						'!vendor/**',
+					],
+				},
+			},
+		},
+
 		bumpup: {
 			options: {
 				updateProps: {
@@ -273,33 +309,33 @@ module.exports = function (grunt) {
 			},
 			file: 'package.json',
 		},
-
-
 	});
 
 
 	// --- Load tasks --- //
-	grunt.loadNpmTasks( 'grunt-rtlcss' );
-	grunt.loadNpmTasks( 'grunt-sass' );
-	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	grunt.loadNpmTasks( '@lodder/grunt-postcss' );
-	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
-	grunt.loadNpmTasks( 'grunt-contrib-clean' );
-	grunt.loadNpmTasks( 'grunt-contrib-concat' );
-	grunt.loadNpmTasks( 'grunt-wp-readme-to-markdown' );
-	grunt.loadNpmTasks( 'grunt-bumpup' );
-
+	grunt.loadNpmTasks('grunt-rtlcss');
+	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('@lodder/grunt-postcss');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-wp-readme-to-markdown');
+	grunt.loadNpmTasks('grunt-bumpup');
+	grunt.loadNpmTasks('grunt-wp-i18n');
 
 	// --- Register tasks --- //
 	// Bump Version - `grunt version-bump --ver=<version-number>`
 	// eslint-disable-next-line no-unused-vars
-	grunt.registerTask( 'version-bump', function ( ver ) {
-		let newVersion = grunt.option( 'ver' );
+	grunt.registerTask('version-bump', function (ver) {
+		let newVersion = grunt.option('ver');
 
-		if ( newVersion ) {
+		if (newVersion) {
 			newVersion = newVersion ? newVersion : 'patch';
 
-			grunt.task.run( 'bumpup:' + newVersion );
+			grunt.task.run('bumpup:' + newVersion);
 			grunt.task.run(
 				'replace:theme_main',
 				'replace:theme_const',
@@ -309,34 +345,40 @@ module.exports = function (grunt) {
 				'readme'
 			);
 		}
-	} );
+	});
 
 	// rtlcss, you will still need to install ruby and sass on your system manually to run this
-	grunt.registerTask( 'rtl', [ 'rtlcss' ] );
+	grunt.registerTask('rtl', ['rtlcss']);
 
 	// SASS compile
-	grunt.registerTask( 'scss', [ 'sass' ] );
+	grunt.registerTask('scss', ['sass']);
 
 	// Style
-	grunt.registerTask( 'style', [ 'scss', 'postcss:style', 'rtl' ] );
+	grunt.registerTask('style', ['scss', 'postcss:style', 'rtl']);
 
 	// Lint the "beforeminify" files first, then minify
-	grunt.registerTask( 'jshint-before-minify', [
+	grunt.registerTask('jshint-before-minify', [
 		'jshint:beforeminify',
 		'uglify:js',
-	] );
+	]);
 
 	// min all
-	grunt.registerTask( 'minify', [
+	grunt.registerTask('minify', [
+		'jshint-before-minify',
 		'style',
 		'cssmin:css',
-	] );
+	]);
 
 	// Default task.
-	grunt.registerTask( 'default', [
+	grunt.registerTask('default', [
 		'minify',
-	] );
+	]);
 
 	// Generate Readme file
-	grunt.registerTask( 'readme', [ 'wp_readme_to_markdown' ] );
+	grunt.registerTask('readme', ['wp_readme_to_markdown']);
+
+	// i18n
+	grunt.registerTask('i18n', ['addtextdomain', 'makepot']);
+
+	grunt.util.linefeed = '\n';
 }

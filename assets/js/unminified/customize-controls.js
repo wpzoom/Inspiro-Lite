@@ -125,4 +125,26 @@
 		}
 	});
 
+
+	// Accordion UI Control class
+	// todo: script changes, improvements
+	api.neveHeadingAccordion = {
+		init: function () {
+			this.handleToggle();
+		},
+		handleToggle: function () {
+			$('.customize-control-accordion-section-ui-wrapper.accordion .inspiro-accordion-section-ui-wrapper').on('click', function () {
+				var accordion = $(this).closest('.accordion');
+				$(accordion).toggleClass('expanded');
+				return false;
+			});
+		},
+	};
+
+	$(document).ready(
+		function () {
+			api.neveHeadingAccordion.init();
+		}
+	);
+
 } )( wp.customize, jQuery );

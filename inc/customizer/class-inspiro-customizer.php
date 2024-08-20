@@ -239,6 +239,13 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 					'sanitize_callback' => 'sanitize_text_field',
 				)
 			);
+
+			Inspiro_Customizer_Control_Base::register_custom_control(
+				'accordion-section-ui-wrapper',
+				array(
+					'callback'          => 'Inspiro_Customize_Accordion_UI_Control',
+				)
+			);
 		}
 
 		/**

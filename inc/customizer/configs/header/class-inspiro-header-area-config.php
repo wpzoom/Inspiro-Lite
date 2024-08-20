@@ -43,18 +43,43 @@ class Inspiro_Header_Area_Config {
 		);
 
 		$wp_customize->add_setting(
+			'accordion_ui_wrapper',
+			array(
+				'default' => 'accordion-ui-wrapper',
+			)
+		);
+
+		$wp_customize->add_setting(
 			'header-menu-style',
 			array(
 				'default'           => 'wpz_menu_normal',
 				'sanitize_callback' => 'sanitize_key'
 			)
 		);
+
+		$wp_customize->add_control(
+			new Inspiro_Customize_Accordion_UI_Control(
+				$wp_customize,
+				'accordion_section_ui_wrapper',
+				array(
+					'type'             => 'accordion-section-ui-wrapper',
+					'label'            =>  esc_html__( 'Header Layout', 'inspiro' ),
+					'settings'         => 'accordion_ui_wrapper',
+					'section'          => 'header-area',
+					'description'      => __( 'This is another test.' ),
+					'accordion'        => true,
+					'expanded'         => false,
+					'controls_to_wrap' => 2,
+				)
+			)
+		);
+
 		$wp_customize->add_control(
 			new Inspiro_Customize_Image_Select_Control(
 				$wp_customize,
 				'header-menu-style',
 				array(
-					'label'           => esc_html__( 'Header Layout', 'inspiro' ),
+//					'label'           => esc_html__( 'Header Layout', 'inspiro' ),
 					'description'     => esc_html__( 'Select the header layout. The hamburger icon appears on the desktop if the Sidebar has at least one widget. On mobile devices, the main menu is displayed in the sidebar.', 'inspiro' ),
 					'section'         => 'header-area',
 					'choices'     => array(
@@ -187,6 +212,5 @@ class Inspiro_Header_Area_Config {
 			)
 		);
 	}
-
 }
 new Inspiro_Header_Area_Config();
