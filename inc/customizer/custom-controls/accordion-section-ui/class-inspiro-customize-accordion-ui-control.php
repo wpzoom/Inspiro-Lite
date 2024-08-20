@@ -21,12 +21,12 @@ if (class_exists('WP_Customize_Control')) {
 	{
 
 		/**
-		 * The control type.
+		 * Control type.
 		 *
-		 * @access public
-		 * @var string
+		 * @since 1.9.0
+		 * @var string $type
 		 */
-		public $type = 'customizer-heading';
+		public $type = 'customizer-accordion-section-ui-wrapper';
 
 		/**
 		 * Should be accordion?
