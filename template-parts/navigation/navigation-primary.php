@@ -21,7 +21,7 @@ $header_menu_style  = inspiro_get_theme_mod( 'header-menu-style' );
 		<div class="header-logo-wrapper">
 			<?php inspiro_custom_logo(); ?>
 		</div>
-		
+
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
 			<div class="header-navigation-wrapper">
 				<nav class="primary-menu-wrapper navbar-collapse collapse" aria-label="<?php echo esc_attr_x( 'Top Horizontal Menu', 'menu', 'inspiro' ); ?>" role="navigation">
@@ -37,7 +37,7 @@ $header_menu_style  = inspiro_get_theme_mod( 'header-menu-style' );
 				</nav>
 			</div>
 		<?php endif ?>
-		
+
 		<div class="header-widgets-wrapper">
 			<?php if ( is_active_sidebar( 'header_social' ) ) : ?>
 				<div class="header_social">
@@ -51,7 +51,9 @@ $header_menu_style  = inspiro_get_theme_mod( 'header-menu-style' );
 
 			<?php if ( has_nav_menu( 'primary' ) || is_active_sidebar( 'sidebar' ) ) : ?>
 				<button type="button" class="navbar-toggle">
-					<span class="screen-reader-text"><?php esc_html_e( 'Toggle sidebar &amp; navigation', 'inspiro' ); ?></span>
+					<span class="screen-reader-text">
+						<?php esc_html_e( 'Toggle sidebar &amp; navigation', 'inspiro' ); ?>
+					</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
