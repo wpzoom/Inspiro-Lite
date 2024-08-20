@@ -45,8 +45,9 @@ class Inspiro_Header_Area_Config
 			)
 		);
 
+		// Add settings
 		$wp_customize->add_setting(
-			'accordion_ui_wrapper',
+			'header_area_accordion_ui_wrapper',
 			array(
 				'default' => 'accordion-ui-wrapper',
 			)
@@ -60,6 +61,55 @@ class Inspiro_Header_Area_Config
 			)
 		);
 
+		$wp_customize->add_setting(
+			'header-menu-pro-style',
+			array(
+				'default' => null,
+				'sanitize_callback' => 'sanitize_key'
+			)
+		);
+
+		$wp_customize->add_setting(
+			'header-layout-type',
+			array(
+				'sanitize_callback' => 'sanitize_key',
+				'default' => 'wpz_layout_narrow'
+			)
+		);
+
+		$wp_customize->add_setting(
+			'cover-size',
+			array(
+				'sanitize_callback' => 'sanitize_key',
+				'default' => 'cover_fixed_height'
+			)
+		);
+
+		$wp_customize->add_setting(
+			'header_title_subsection',
+			array(
+				'default' => null,
+				'sanitize_callback' => 'sanitize_text_field',
+			)
+		);
+
+		$wp_customize->add_setting(
+			'header_search_show',
+			array(
+				'capability' => 'edit_theme_options',
+				'default' => true,
+				'sanitize_callback' => 'inspiro_sanitize_checkbox',
+			)
+		);
+
+		$wp_customize->add_setting(
+			'header_hamburger_icon_color',
+			array(
+				'default' => '#000000',
+				'sanitize_callback' => 'sanitize_hex_color',
+			));
+
+		// Add Controls
 		$wp_customize->add_control(
 			new Inspiro_Customize_Accordion_UI_Control(
 				$wp_customize,
@@ -67,7 +117,7 @@ class Inspiro_Header_Area_Config
 				array(
 					'type' => 'accordion-section-ui-wrapper',
 					'label' => esc_html__('Header Layout', 'inspiro'),
-					'settings' => 'accordion_ui_wrapper',
+					'settings' => 'header_area_accordion_ui_wrapper',
 					'section' => 'header-area',
 					'description' => __('This is another test.'),
 					'accordion' => true,
@@ -107,14 +157,6 @@ class Inspiro_Header_Area_Config
 			)
 		);
 
-		$wp_customize->add_setting(
-			'header-menu-pro-style',
-			array(
-				'default' => null,
-				'sanitize_callback' => 'sanitize_key'
-			)
-		);
-
 		$wp_customize->add_control(
 			new Inspiro_Customize_Promo_Pro_Control(
 				$wp_customize,
@@ -136,14 +178,6 @@ class Inspiro_Header_Area_Config
 			)
 		);
 
-		$wp_customize->add_setting(
-			'header-layout-type',
-			array(
-				'sanitize_callback' => 'sanitize_key',
-				'default' => 'wpz_layout_narrow'
-			)
-		);
-
 		$wp_customize->add_control(
 			'header-layout-type',
 			array(
@@ -154,14 +188,6 @@ class Inspiro_Header_Area_Config
 					'wpz_layout_narrow' => esc_html__('Narrow', 'inspiro'),
 					'wpz_layout_full' => esc_html__('Full-width', 'inspiro')
 				),
-			)
-		);
-
-		$wp_customize->add_setting(
-			'cover-size',
-			array(
-				'sanitize_callback' => 'sanitize_key',
-				'default' => 'cover_fixed_height'
 			)
 		);
 
@@ -178,14 +204,6 @@ class Inspiro_Header_Area_Config
 			)
 		);
 
-		$wp_customize->add_setting(
-			'header_title_subsection',
-			array(
-				'default' => null,
-				'sanitize_callback' => 'sanitize_text_field',
-			)
-		);
-
 		$wp_customize->add_control(
 			new Inspiro_Customize_Title_Control(
 				$wp_customize,
@@ -197,12 +215,16 @@ class Inspiro_Header_Area_Config
 			)
 		);
 
-		$wp_customize->add_setting(
-			'header_search_show',
-			array(
-				'capability' => 'edit_theme_options',
-				'default' => true,
-				'sanitize_callback' => 'inspiro_sanitize_checkbox',
+		// Add a color control.
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'header_hamburger_icon_color',
+				array(
+					'label' => esc_html__('Hamburger Icon Color', 'inspiro'),
+					'section' => 'header-area',
+					'settings' => 'header_hamburger_icon_color',
+				)
 			)
 		);
 
