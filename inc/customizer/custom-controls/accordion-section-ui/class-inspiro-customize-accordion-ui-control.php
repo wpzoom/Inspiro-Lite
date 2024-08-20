@@ -140,7 +140,6 @@ if (class_exists('WP_Customize_Control')) {
 				<# if(data.accordion) { #>
 				<span class="accordion-expand-button"></span>
 				<# } #>
-				{{ console.log(data) }}
 			</div>
 			{{{data.style}}} <?php // phpcs:ignore WordPressVIPMinimum.Security.Mustache.OutputNotation ?>
 			<?php
