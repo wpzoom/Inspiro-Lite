@@ -109,6 +109,14 @@ class Inspiro_Header_Area_Config
 				'sanitize_callback' => 'sanitize_hex_color',
 			));
 
+		$wp_customize->add_setting(
+			'header_hide_main_menu',
+			array(
+				'default' => false,
+				'sanitize_callback' => 'inspiro_sanitize_checkbox',
+			));
+
+
 		// Add Controls
 		$wp_customize->add_control(
 			new Inspiro_Customize_Accordion_UI_Control(
@@ -116,7 +124,7 @@ class Inspiro_Header_Area_Config
 				'accordion_section_ui_wrapper',
 				array(
 					'type' => 'accordion-section-ui-wrapper',
-					'label' => esc_html__('Header Layout', 'inspiro'),
+					'label' => esc_html__('Header Predefined Layout', 'inspiro'),
 					'settings' => 'header_area_accordion_ui_wrapper',
 					'section' => 'header-area',
 					'description' => __('This is another test.'),
@@ -235,6 +243,17 @@ class Inspiro_Header_Area_Config
 				'section' => 'header-area',
 				'label' => esc_html__('Show Search Icon', 'inspiro'),
 				'description' => esc_html__('Show search icon and search form in the header', 'inspiro'),
+			)
+		);
+
+		$wp_customize->add_control(
+			'header_hide_main_menu',
+			array(
+				'type' => 'checkbox',
+				'section' => 'header-area',
+				'label' => esc_html__('Hide the top main menu', 'inspiro'),
+				'description' => esc_html__('Hide the top main menu in desktop mode, displaying only the Hamburger icon', 'inspiro'),
+				'settings' => 'header_hide_main_menu',
 			)
 		);
 	}

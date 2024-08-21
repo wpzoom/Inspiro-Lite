@@ -13,6 +13,7 @@ $search_display     = $search_show ? 'block' : 'none';
 
 $header_layout_type = inspiro_get_theme_mod( 'header-layout-type' );
 $header_menu_style  = inspiro_get_theme_mod( 'header-menu-style' );
+$header_hide_menu_option  = inspiro_get_theme_mod( 'header_hide_main_menu' );
 
 ?>
 <div id="site-navigation" class="navbar">
@@ -24,6 +25,7 @@ $header_menu_style  = inspiro_get_theme_mod( 'header-menu-style' );
 
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
 			<div class="header-navigation-wrapper">
+				<?php if ( !$header_hide_menu_option ) : ?>
 				<nav class="primary-menu-wrapper navbar-collapse collapse" aria-label="<?php echo esc_attr_x( 'Top Horizontal Menu', 'menu', 'inspiro' ); ?>" role="navigation">
 					<?php
 						wp_nav_menu(
@@ -35,6 +37,7 @@ $header_menu_style  = inspiro_get_theme_mod( 'header-menu-style' );
 						);
 					?>
 				</nav>
+				<?php endif ?>
 			</div>
 		<?php endif ?>
 

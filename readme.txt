@@ -113,7 +113,8 @@ Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
   * Minor code improvements
   * Update npm packages
   * Implement Accordion Control Types for better UX
-  * Add Header hamburger icon color option.
+  * Add Header hamburger icon color option
+  * Hide the top main menu additional option
 
 = 1.8.8 =
 * Minor bug fixes
