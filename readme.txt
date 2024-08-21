@@ -112,6 +112,8 @@ Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
   * Add icons
   * Minor code improvements
   * Update npm packages
+  * Implement Accordion Control Types for better UX
+  * Add Header hamburger icon color option.
 
 = 1.8.8 =
 * Minor bug fixes
