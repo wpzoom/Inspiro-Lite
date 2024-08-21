@@ -200,7 +200,7 @@ class Inspiro_Header_Area_Config
 				'for-design-options',
 				array(
 					'type' => 'accordion-section-ui-wrapper',
-					'label' => esc_html__('Header Design Options', 'inspiro'),
+					'label' => esc_html__('Header layout options', 'inspiro'),
 					'settings' => 'header_area_accordion_ui_wrapper_options',
 					'section' => 'header-area',
 					'description' => __('This is another test.'),

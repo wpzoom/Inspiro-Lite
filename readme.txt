@@ -110,9 +110,11 @@ Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 * Customizer UX Improved
   * Eliminate annoying stuff
   * Add icons
+  * Implement Accordion Control Types for better UX
+  	* Header Customizer Section
   * Minor code improvements
   * Update npm packages
-  * Implement Accordion Control Types for better UX
+
   * Add Header hamburger icon color option
   * Hide the top main menu additional option
 
