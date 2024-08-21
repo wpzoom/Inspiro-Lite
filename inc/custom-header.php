@@ -78,7 +78,8 @@ if (!function_exists('inspiro_header_style')) :
 		$header_button_text_color = inspiro_get_theme_mod('header_button_textcolor');
 		$header_button_text_color_hover = inspiro_get_theme_mod('header_button_textcolor_hover');
 		$header_button_bg_color_hover = inspiro_get_theme_mod('header_button_bgcolor_hover');
-		$header_menu_hamburger_icon_color = inspiro_get_theme_mod('header_hamburger_icon_color');
+//		$header_menu_hamburger_icon_color = inspiro_get_theme_mod('header_hamburger_icon_color');
+		$color_menu_hamburger_icon_color = inspiro_get_theme_mod('menu_hamburger_btn_color');
 		$color_menu_background = inspiro_get_theme_mod('color_menu_background');
 		$color_menu_background_scroll = inspiro_get_theme_mod('color-menu-background-scroll');
 		$color_footer_background = inspiro_get_theme_mod('color_footer_background');
@@ -173,9 +174,9 @@ if (!function_exists('inspiro_header_style')) :
 
 			<?php endif; ?>
 
-			<?php if ( '#000000' !== $header_menu_hamburger_icon_color ) : ?>
+			<?php if ( '#ffffff' !== $color_menu_hamburger_icon_color ) : ?>
 			.navbar-toggle .icon-bar {
-				background: <?php echo $header_menu_hamburger_icon_color; ?> !important;
+				background: <?php echo $color_menu_hamburger_icon_color; ?> !important;
 			}
 
 			<?php endif; ?>

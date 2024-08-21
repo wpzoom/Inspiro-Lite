@@ -109,12 +109,13 @@ class Inspiro_Header_Area_Config
 			)
 		);
 
-		$wp_customize->add_setting(
-			'header_hamburger_icon_color',
-			array(
-				'default' => '#000000',
-				'sanitize_callback' => 'sanitize_hex_color',
-			));
+		// was moved in Color Panel
+//		$wp_customize->add_setting(
+//			'header_hamburger_icon_color',
+//			array(
+//				'default' => '#ffffff',
+//				'sanitize_callback' => 'sanitize_hex_color',
+//			));
 
 		$wp_customize->add_setting(
 			'header_hide_main_menu',
@@ -206,7 +207,7 @@ class Inspiro_Header_Area_Config
 					'description' => __('This is another test.'),
 					'accordion' => true,
 					'expanded' => false,
-					'controls_to_wrap' => 4,
+					'controls_to_wrap' => 3,
 				)
 			)
 		);
@@ -258,18 +259,18 @@ class Inspiro_Header_Area_Config
 			)
 		);
 
-		// Add a color control.
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'header_hamburger_icon_color',
-				array(
-					'label' => esc_html__('Hamburger Icon Color', 'inspiro'),
-					'section' => 'header-area',
-					'settings' => 'header_hamburger_icon_color',
-				)
-			)
-		);
+		// was moved in Color Panel
+//		$wp_customize->add_control(
+//			new WP_Customize_Color_Control(
+//				$wp_customize,
+//				'header_hamburger_icon_color',
+//				array(
+//					'label' => esc_html__('Hamburger Icon Color', 'inspiro'),
+//					'section' => 'header-area',
+//					'settings' => 'header_hamburger_icon_color',
+//				)
+//			)
+//		);
 
 //		$wp_customize->add_control(
 //			new Inspiro_Customize_Title_Control(
