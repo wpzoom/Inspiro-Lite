@@ -206,7 +206,6 @@ class Inspiro_Header_Area_Config
 					'section' => 'header-area',
 					'description' => __('This is another test.'),
 					'accordion' => true,
-					'expanded' => false,
 					'controls_to_wrap' => 3,
 				)
 			)

@@ -33,14 +33,14 @@ if (class_exists('WP_Customize_Control')) {
 		 *
 		 * @var bool
 		 */
-		public $accordion = false;
+		public $accordion = true;
 
 		/**
 		 * Initial state.
 		 *
 		 * @var bool
 		 */
-		public $expanded = true;
+		public $expanded = false;
 
 		/**
 		 * The number of controls to group (wrap) together.

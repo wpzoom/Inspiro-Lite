@@ -31,6 +31,14 @@ class Inspiro_Header_Button_Color_Config
 			'setting' => array(
 				// header
 				array(
+					'id' => 'for_hero_section_color_options',
+//					'id' => 'menu_color_subtitle',
+					'args' => array(
+						'default' => null,
+						'sanitize_callback' => 'sanitize_text_field',
+					),
+				),
+				array(
 					'id' => 'header_button_textcolor',
 					'args' => array(
 						'theme_supports' => array('custom-header', 'header-text'),
@@ -52,6 +60,14 @@ class Inspiro_Header_Button_Color_Config
 				),
 				// menu
 				array(
+					'id' => 'for_menu_color_options',
+//					'id' => 'menu_color_subtitle',
+					'args' => array(
+						'default' => null,
+						'sanitize_callback' => 'sanitize_text_field',
+					),
+				),
+				array(
 					'id' => 'menu_hamburger_btn_color',
 					'args' => array(
 						'theme_supports' => array('custom-header'),
@@ -61,15 +77,6 @@ class Inspiro_Header_Button_Color_Config
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
 				),
-
-				array(
-					'id' => 'menu_color_subtitle',
-					'args' => array(
-						'default' => null,
-						'sanitize_callback' => 'sanitize_text_field',
-					),
-				),
-
 				array(
 					'id' => 'color_menu_background',
 					'args' => array(
@@ -80,7 +87,6 @@ class Inspiro_Header_Button_Color_Config
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
 				),
-
 				array(
 					'id' => 'color-menu-background-scroll',
 					'args' => array(
@@ -90,7 +96,6 @@ class Inspiro_Header_Button_Color_Config
 						'sanitize_callback' => 'maybe_hash_hex_color',
 					),
 				),
-
 				array(
 					'id' => 'colors_premium',
 					'args' => array(
@@ -98,24 +103,15 @@ class Inspiro_Header_Button_Color_Config
 						'sanitize_callback' => 'sanitize_text_field',
 					),
 				),
-
 				// footer
 				array(
-					'id' => 'footer_color_subtitle',
+					'id' => 'for_footer_color_options',
+//					'id' => 'footer_color_subtitle',
 					'args' => array(
 						'default' => null,
 						'sanitize_callback' => 'sanitize_text_field',
 					),
 				),
-
-				array(
-					'id' => 'footer_color_subtitle',
-					'args' => array(
-						'default' => null,
-						'sanitize_callback' => 'sanitize_text_field',
-					),
-				),
-
 				array(
 					'id' => 'color_footer_background',
 					'args' => array(
@@ -126,7 +122,6 @@ class Inspiro_Header_Button_Color_Config
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
 				),
-
 				array(
 					'id' => 'color_footer_text',
 					'args' => array(
@@ -140,6 +135,15 @@ class Inspiro_Header_Button_Color_Config
 			),
 			'control' => array(
 				// hero section
+				array(
+					'id' => 'for_hero_section_color_options',
+					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
+					'args' => array(
+						'label' => esc_html__('Hero section', 'inspiro'),
+						'section' => 'colors',
+						'controls_to_wrap' => 2,
+					),
+				),
 				array(
 					'id' => 'header_button_textcolor',
 					'control_type' => 'WP_Customize_Color_Control',
@@ -164,16 +168,25 @@ class Inspiro_Header_Button_Color_Config
 						'section' => 'colors',
 					),
 				),
-
+				// because was added Accordion UI
+//				array(
+//					'id' => 'menu_color_subtitle',
+//					'control_type' => 'Inspiro_Customize_Title_Control',
+//					'args' => array(
+//						'label' => esc_html__('Top Menu', 'inspiro'),
+//						'section' => 'colors',
+//					),
+//				),
 				array(
-					'id' => 'menu_color_subtitle',
-					'control_type' => 'Inspiro_Customize_Title_Control',
+					'id' => 'for_menu_color_options',
+					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
 					'args' => array(
 						'label' => esc_html__('Top Menu', 'inspiro'),
 						'section' => 'colors',
+						'controls_to_wrap' => 3,
 					),
 				),
-				// top menu
+				// top menu section
 				array(
 					'id' => 'menu_hamburger_btn_color',
 					'control_type' => 'WP_Customize_Color_Control',
@@ -182,7 +195,6 @@ class Inspiro_Header_Button_Color_Config
 						'section' => 'colors',
 					),
 				),
-
 				array(
 					'id' => 'color_menu_background',
 					'control_type' => 'WP_Customize_Color_Control',
@@ -191,7 +203,6 @@ class Inspiro_Header_Button_Color_Config
 						'section' => 'colors',
 					),
 				),
-
 				array(
 					'id' => 'color-menu-background-scroll',
 					'control_type' => 'Inspiro_Customize_Alpha_Color_Picker_Control',
@@ -200,16 +211,25 @@ class Inspiro_Header_Button_Color_Config
 						'section' => 'colors',
 					),
 				),
-				// footer
+				// footer section
+				// because was added Accordion UI
+//				array(
+//					'id' => 'footer_color_subtitle',
+//					'control_type' => 'Inspiro_Customize_Title_Control',
+//					'args' => array(
+//						'label' => esc_html__('Footer', 'inspiro'),
+//						'section' => 'colors',
+//					),
+//				),
 				array(
-					'id' => 'footer_color_subtitle',
-					'control_type' => 'Inspiro_Customize_Title_Control',
+					'id' => 'for_footer_color_options',
+					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
 					'args' => array(
 						'label' => esc_html__('Footer', 'inspiro'),
 						'section' => 'colors',
+						'controls_to_wrap' => 2,
 					),
 				),
-
 				array(
 					'id' => 'color_footer_background',
 					'control_type' => 'WP_Customize_Color_Control',
@@ -218,7 +238,6 @@ class Inspiro_Header_Button_Color_Config
 						'section' => 'colors',
 					),
 				),
-
 				array(
 					'id' => 'color_footer_text',
 					'control_type' => 'WP_Customize_Color_Control',
@@ -227,7 +246,6 @@ class Inspiro_Header_Button_Color_Config
 						'section' => 'colors',
 					),
 				),
-
 				array(
 					'id' => 'colors_premium',
 					'control_type' => 'Inspiro_Customize_Title_Control',
