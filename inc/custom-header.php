@@ -78,11 +78,11 @@ if (!function_exists('inspiro_header_style')) :
 		$header_button_text_color = inspiro_get_theme_mod('header_button_textcolor');
 		$header_button_text_color_hover = inspiro_get_theme_mod('header_button_textcolor_hover');
 		$header_button_bg_color_hover = inspiro_get_theme_mod('header_button_bgcolor_hover');
+		$header_menu_hamburger_icon_color = inspiro_get_theme_mod('header_hamburger_icon_color');
 		$color_menu_background = inspiro_get_theme_mod('color_menu_background');
 		$color_menu_background_scroll = inspiro_get_theme_mod('color-menu-background-scroll');
 		$color_footer_background = inspiro_get_theme_mod('color_footer_background');
 		$color_footer_text = inspiro_get_theme_mod('color_footer_text');
-		$header_menu_hamburger_icon_color = inspiro_get_theme_mod('header_hamburger_icon_color');
 		?>
 		<style id="inspiro-custom-header-styles" type="text/css">
 			<?php

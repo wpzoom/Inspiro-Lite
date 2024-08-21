@@ -47,7 +47,14 @@ class Inspiro_Header_Area_Config
 
 		// Add settings
 		$wp_customize->add_setting(
-			'header_area_accordion_ui_wrapper',
+			'header_area_accordion_ui_wrapper_layout',
+			array(
+				'default' => 'accordion-ui-wrapper',
+			)
+		);
+
+		$wp_customize->add_setting(
+			'header_area_accordion_ui_wrapper_options',
 			array(
 				'default' => 'accordion-ui-wrapper',
 			)
@@ -109,15 +116,23 @@ class Inspiro_Header_Area_Config
 				'sanitize_callback' => 'sanitize_hex_color',
 			));
 
+		$wp_customize->add_setting(
+			'header_hide_main_menu',
+			array(
+				'default' => false,
+				'sanitize_callback' => 'inspiro_sanitize_checkbox',
+			));
+
+
 		// Add Controls
 		$wp_customize->add_control(
 			new Inspiro_Customize_Accordion_UI_Control(
 				$wp_customize,
-				'accordion_section_ui_wrapper',
+				'for-predefined-layout',
 				array(
 					'type' => 'accordion-section-ui-wrapper',
-					'label' => esc_html__('Header Layout', 'inspiro'),
-					'settings' => 'header_area_accordion_ui_wrapper',
+					'label' => esc_html__('Header Predefined Layout', 'inspiro'),
+					'settings' => 'header_area_accordion_ui_wrapper_layout',
 					'section' => 'header-area',
 					'description' => __('This is another test.'),
 					'accordion' => true,
@@ -178,6 +193,24 @@ class Inspiro_Header_Area_Config
 			)
 		);
 
+		// Add Controls
+		$wp_customize->add_control(
+			new Inspiro_Customize_Accordion_UI_Control(
+				$wp_customize,
+				'for-design-options',
+				array(
+					'type' => 'accordion-section-ui-wrapper',
+					'label' => esc_html__('Header layout options', 'inspiro'),
+					'settings' => 'header_area_accordion_ui_wrapper_options',
+					'section' => 'header-area',
+					'description' => __('This is another test.'),
+					'accordion' => true,
+					'expanded' => false,
+					'controls_to_wrap' => 4,
+				)
+			)
+		);
+
 		$wp_customize->add_control(
 			'header-layout-type',
 			array(
@@ -205,13 +238,23 @@ class Inspiro_Header_Area_Config
 		);
 
 		$wp_customize->add_control(
-			new Inspiro_Customize_Title_Control(
-				$wp_customize,
-				'header_title_subsection',
-				array(
-					'label' => esc_html__('Elements', 'inspiro'),
-					'section' => 'header-area',
-				)
+			'header_search_show',
+			array(
+				'type' => 'checkbox',
+				'section' => 'header-area',
+				'label' => esc_html__('Show Search Icon', 'inspiro'),
+				'description' => esc_html__('Show search icon and search form in the header', 'inspiro'),
+			)
+		);
+
+		$wp_customize->add_control(
+			'header_hide_main_menu',
+			array(
+				'type' => 'checkbox',
+				'section' => 'header-area',
+				'label' => esc_html__('Hide the top main menu', 'inspiro'),
+				'description' => esc_html__('Hide the top main menu in desktop mode, displaying only the Hamburger icon', 'inspiro'),
+				'settings' => 'header_hide_main_menu',
 			)
 		);
 
@@ -228,13 +271,27 @@ class Inspiro_Header_Area_Config
 			)
 		);
 
+//		$wp_customize->add_control(
+//			new Inspiro_Customize_Title_Control(
+//				$wp_customize,
+//				'header_title_subsection',
+//				array(
+//					'label' => esc_html__('Elements', 'inspiro'),
+//					'section' => 'header-area',
+//				)
+//			)
+//		);
+
 		$wp_customize->add_control(
-			'header_search_show',
+			'cover-size',
 			array(
-				'type' => 'checkbox',
+				'label' => esc_html__('Featured Image Height in Posts and Pages', 'inspiro'),
+				'type' => 'radio',
 				'section' => 'header-area',
-				'label' => esc_html__('Show Search Icon', 'inspiro'),
-				'description' => esc_html__('Show search icon and search form in the header', 'inspiro'),
+				'choices' => array(
+					'cover_fixed_height' => esc_html__('Fixed height', 'inspiro'),
+					'cover_fullscreen' => esc_html__('Fullscreen', 'inspiro')
+				),
 			)
 		);
 	}
