@@ -89,7 +89,7 @@ if (class_exists('WP_Customize_Control')) {
 		protected function render()
 		{
 			$id = 'customize-control-' . str_replace(array('[', ']'), array('-', ''), $this->id);
-			$class = 'render-test customize-control customize-control-' . $this->type;
+			$class = 'customize-control header-accordion-section-ui-wrapper accordion-section-' . $this->id;
 			$class .= ' ' . $this->class;
 			if ($this->accordion) {
 				$class .= ' accordion';
@@ -135,7 +135,7 @@ if (class_exists('WP_Customize_Control')) {
 			<# if(data.category_label) {#>
 			<span class="customize-control-title">{{data.category_label}}</span>
 			<# }#>
-			<div class="inspiro-accordion-section-ui-wrapper">
+			<div class="inspiro-accordion-header-ui">
 				<span class="accordion-heading">{{ data.label }}</span>
 				<# if(data.accordion) { #>
 				<span class="accordion-expand-button"></span>
@@ -155,7 +155,7 @@ if (class_exists('WP_Customize_Control')) {
 			$style .= '<style>';
 
 			for ($i = 1; $i <= $this->controls_to_wrap; $i++) {
-				$style .= '.accordion.' . 'customize-control-' . $this->type . ':not(.expanded)';
+				$style .= '.accordion.' . 'accordion-section-' . $this->id . ':not(.expanded)';
 				for ($j = 1; $j <= $i; $j++) {
 					$style .= ' + li';
 				}

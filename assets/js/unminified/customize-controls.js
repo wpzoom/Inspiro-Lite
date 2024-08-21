@@ -133,7 +133,7 @@
 			this.handleToggle();
 		},
 		handleToggle: function () {
-			$('.customize-control-accordion-section-ui-wrapper.accordion .inspiro-accordion-section-ui-wrapper').on('click', function () {
+			$('.header-accordion-section-ui-wrapper.accordion .inspiro-accordion-header-ui').on('click', function () {
 				var accordion = $(this).closest('.accordion');
 				$(accordion).toggleClass('expanded');
 				return false;
