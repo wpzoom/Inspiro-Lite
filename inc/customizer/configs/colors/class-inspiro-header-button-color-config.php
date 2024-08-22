@@ -31,14 +31,6 @@ class Inspiro_Header_Button_Color_Config
 			'setting' => array(
 				// header
 				array(
-					'id' => 'for_hero_section_color_options',
-//					'id' => 'menu_color_subtitle',
-					'args' => array(
-						'default' => null,
-						'sanitize_callback' => 'sanitize_text_field',
-					),
-				),
-				array(
 					'id' => 'header_button_textcolor',
 					'args' => array(
 						'theme_supports' => array('custom-header', 'header-text'),
@@ -59,14 +51,6 @@ class Inspiro_Header_Button_Color_Config
 					),
 				),
 				// menu
-				array(
-					'id' => 'for_menu_color_options',
-//					'id' => 'menu_color_subtitle',
-					'args' => array(
-						'default' => null,
-						'sanitize_callback' => 'sanitize_text_field',
-					),
-				),
 				array(
 					'id' => 'menu_hamburger_btn_color',
 					'args' => array(
@@ -105,14 +89,6 @@ class Inspiro_Header_Button_Color_Config
 				),
 				// footer
 				array(
-					'id' => 'for_footer_color_options',
-//					'id' => 'footer_color_subtitle',
-					'args' => array(
-						'default' => null,
-						'sanitize_callback' => 'sanitize_text_field',
-					),
-				),
-				array(
 					'id' => 'color_footer_background',
 					'args' => array(
 						'theme_supports' => array('custom-header', 'header-text'),
@@ -141,6 +117,7 @@ class Inspiro_Header_Button_Color_Config
 					'args' => array(
 						'label' => esc_html__('Hero section', 'inspiro'),
 						'section' => 'colors',
+						'settings' => array(),
 						'controls_to_wrap' => 2,
 					),
 				),
@@ -169,6 +146,7 @@ class Inspiro_Header_Button_Color_Config
 					),
 				),
 				// because was added Accordion UI
+				// todo:clean
 //				array(
 //					'id' => 'menu_color_subtitle',
 //					'control_type' => 'Inspiro_Customize_Title_Control',
@@ -183,6 +161,7 @@ class Inspiro_Header_Button_Color_Config
 					'args' => array(
 						'label' => esc_html__('Top Menu', 'inspiro'),
 						'section' => 'colors',
+						'settings' => array(),
 						'controls_to_wrap' => 3,
 					),
 				),
@@ -213,6 +192,7 @@ class Inspiro_Header_Button_Color_Config
 				),
 				// footer section
 				// because was added Accordion UI
+				// todo:clean
 //				array(
 //					'id' => 'footer_color_subtitle',
 //					'control_type' => 'Inspiro_Customize_Title_Control',
@@ -227,6 +207,7 @@ class Inspiro_Header_Button_Color_Config
 					'args' => array(
 						'label' => esc_html__('Footer', 'inspiro'),
 						'section' => 'colors',
+						'settings' => array(),
 						'controls_to_wrap' => 2,
 					),
 				),

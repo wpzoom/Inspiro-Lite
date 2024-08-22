@@ -78,13 +78,25 @@ class Inspiro_Typo_Mobile_Menu_Config {
 				),
 			),
 			'control' => array(
+				// because was added Accordion UI
+				// todo:clean
+//				array(
+//					'id'           => 'inspiro_typography_section_title_mobile_menu',
+//					'control_type' => 'Inspiro_Customize_Title_Control',
+//					'args'         => array(
+//						'label'    => __( 'Mobile Menu', 'inspiro' ),
+//						'section'  => 'inspiro_typography_section_menu',
+//						'settings' => array(),
+//					),
+//				),
 				array(
-					'id'           => 'inspiro_typography_section_title_mobile_menu',
-					'control_type' => 'Inspiro_Customize_Title_Control',
-					'args'         => array(
+					'id' => 'for_typography_mobile_menu_section',
+					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
+					'args' => array(
 						'label'    => __( 'Mobile Menu', 'inspiro' ),
-						'section'  => 'inspiro_typography_section_menu',
+						'section' => 'inspiro_typography_section_menu',
 						'settings' => array(),
+						'controls_to_wrap' => 6,
 					),
 				),
 				array(

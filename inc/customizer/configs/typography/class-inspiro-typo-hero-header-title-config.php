@@ -85,13 +85,24 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 				),
 			),
 			'control' => array(
+				// todo:clean
+//				array(
+//					'id'           => 'for_typography_header_section',
+//					'control_type' => 'Inspiro_Customize_Title_Control',
+//					'args'         => array(
+//						'label'    => __( 'Header Title', 'inspiro' ),
+//						'section'  => 'inspiro_typography_section_hero_header',
+//						'settings' => array(),
+//					),
+//				),
 				array(
-					'id'           => 'inspiro_typography_section_title_header_title',
-					'control_type' => 'Inspiro_Customize_Title_Control',
-					'args'         => array(
-						'label'    => __( 'Header Title', 'inspiro' ),
-						'section'  => 'inspiro_typography_section_hero_header',
-						'settings' => array(),
+					'id' => 'for_typography_hero_header_title_section',
+					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
+					'args' => array(
+						'label'    	=> __( 'Header Title', 'inspiro' ),
+						'section' 	=> 'inspiro_typography_section_hero_header',
+						'settings'	=> array(),
+						'controls_to_wrap' => 6,
 					),
 				),
 				array(
