@@ -86,6 +86,7 @@ class Inspiro_Typo_Main_Menu_Config {
 			),
 			'control' => array(
 				// because was added Accordion UI
+				// todo:clean
 //				array(
 //					'id'           => 'inspiro_typography_section_title_main_menu',
 //					'control_type' => 'Inspiro_Customize_Title_Control',

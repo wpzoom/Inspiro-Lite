@@ -46,19 +46,20 @@ class Inspiro_Header_Area_Config
 		);
 
 		// Add settings
-		$wp_customize->add_setting(
-			'header_area_accordion_ui_wrapper_layout',
-			array(
-				'default' => 'accordion-ui-wrapper',
-			)
-		);
-
-		$wp_customize->add_setting(
-			'header_area_accordion_ui_wrapper_options',
-			array(
-				'default' => 'accordion-ui-wrapper',
-			)
-		);
+		// todo:clean
+//		$wp_customize->add_setting(
+//			'header_area_accordion_ui_wrapper_layout',
+//			array(
+//				'default' => 'accordion-ui-wrapper',
+//			)
+//		);
+//
+//		$wp_customize->add_setting(
+//			'header_area_accordion_ui_wrapper_options',
+//			array(
+//				'default' => 'accordion-ui-wrapper',
+//			)
+//		);
 
 		$wp_customize->add_setting(
 			'header-menu-style',
@@ -110,6 +111,7 @@ class Inspiro_Header_Area_Config
 		);
 
 		// was moved in Color Panel
+		// todo:clean
 //		$wp_customize->add_setting(
 //			'header_hamburger_icon_color',
 //			array(
@@ -133,7 +135,7 @@ class Inspiro_Header_Area_Config
 				array(
 					'type' => 'accordion-section-ui-wrapper',
 					'label' => esc_html__('Header Predefined Layout', 'inspiro'),
-					'settings' => 'header_area_accordion_ui_wrapper_layout',
+					'settings' => array(),
 					'section' => 'header-area',
 					'description' => __('This is another test.'),
 					'accordion' => true,
@@ -202,7 +204,7 @@ class Inspiro_Header_Area_Config
 				array(
 					'type' => 'accordion-section-ui-wrapper',
 					'label' => esc_html__('Header layout options', 'inspiro'),
-					'settings' => 'header_area_accordion_ui_wrapper_options',
+					'settings' => array(),
 					'section' => 'header-area',
 					'description' => __('This is another test.'),
 					'accordion' => true,
@@ -259,6 +261,7 @@ class Inspiro_Header_Area_Config
 		);
 
 		// was moved in Color Panel
+		// todo:clean
 //		$wp_customize->add_control(
 //			new WP_Customize_Color_Control(
 //				$wp_customize,
