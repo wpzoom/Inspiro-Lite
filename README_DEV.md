@@ -1,4 +1,17 @@
 # Project specs
+
+### Setup Accordion UI Settings API
+array(
+    'id' => 'for_utilities_wrapper_name_section',
+    'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
+    'args' => array(
+    'label'    	=> __( 'Header name', 'inspiro' ),
+    'section' 	=> 'inspiro_section_name',
+    'settings'	=> array(), // empty array() for not using settings setup and trigger rendering
+    'controls_to_wrap' => 6, // how many to wrapp after this tag
+    ),
+),
+
 ### CSS
 * Use dev versions of core JS and CSS files (only needed if you are modifying these core files)
 	* define( 'SCRIPT_DEBUG', true );

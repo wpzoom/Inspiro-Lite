@@ -90,7 +90,7 @@ class Inspiro_Typo_Main_Menu_Config {
 //					'id'           => 'inspiro_typography_section_title_main_menu',
 //					'control_type' => 'Inspiro_Customize_Title_Control',
 //					'args'         => array(
-//						'label'    => esc_html__( 'Main Menu', 'inspiro' ),
+//						'label'    => __( 'Main Menu', 'inspiro' ),
 //						'section'  => 'inspiro_typography_section_menu',
 //						'settings' => array(),
 //					),
@@ -99,9 +99,9 @@ class Inspiro_Typo_Main_Menu_Config {
 					'id' => 'for_typography_main_menu_section',
 					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
 					'args' => array(
-						'label'    => esc_html__( 'Main Menu', 'inspiro' ),
-						'section' => 'inspiro_typography_section_menu',
-						'settings' => array(),
+						'label'    	=> __( 'Main Menu', 'inspiro' ),
+						'section' 	=> 'inspiro_typography_section_menu',
+						'settings'	=> array(),
 						'controls_to_wrap' => 6,
 					),
 				),
