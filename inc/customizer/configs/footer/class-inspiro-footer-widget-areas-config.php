@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * PHP Class for Registering Customizer Confugration
+ * PHP Class for Registering Customizer Configuration
  *
  * @since 1.3.0
  */
@@ -34,13 +34,14 @@ class Inspiro_Footer_Widget_Areas_Config {
 	public function register_configuration( $wp_customize ) {
 
 		// Create sections
-		$wp_customize->add_section( 
-			'footer-area', 
+		$wp_customize->add_section(
+			'footer-area',
 			array(
 				'title'    => esc_html__( 'Footer', 'inspiro' ),
 				'priority' => 130, // Before Additional CSS.
 			)
 		);
+
 		$wp_customize->add_setting(
 			'footer-widget-areas',
 			array(
@@ -51,12 +52,28 @@ class Inspiro_Footer_Widget_Areas_Config {
 		);
 
 		$wp_customize->add_control(
+			new Inspiro_Customize_Accordion_UI_Control(
+				$wp_customize,
+				'for_footer_widget_areas',
+				array(
+					'type' => 'accordion-section-ui-wrapper',
+					'label' => __('Footer Predefined Layout', 'inspiro'),
+					'settings' => array(),
+					'section' => 'footer-area',
+					'expanded' => true,
+					'controls_to_wrap' => 2,
+				)
+			)
+		);
+
+		$wp_customize->add_control(
 			new Inspiro_Customize_Image_Select_Control(
 				$wp_customize,
 				'footer-widget-areas',
 				array(
 					'label'   => esc_html__( 'Footer Layout', 'inspiro' ),
 					'section' => 'footer-area',
+					'description' => __('Select the Footer layout.'),
 					'choices'     => array(
 						array(
 							'label' => __( 'Don\'t display Widgets', 'inspiro' ),
@@ -119,9 +136,6 @@ class Inspiro_Footer_Widget_Areas_Config {
 				)
 			)
 		);
-
-
 	}
-
 }
 new Inspiro_Footer_Widget_Areas_Config();
