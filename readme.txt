@@ -113,6 +113,10 @@ Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
   * Implement Accordion Control Types for better UX
   	* Header Customizer Section
   * Minor code improvements
+  * Add 'Hide top main menu' option in Header section
+  * Move Color functionality from Header to Color Panel
+  * Added Accordion UI in Color Panel
+  * Reorganize Colors section
   * Update npm packages
 
   * Add Header hamburger icon color option
