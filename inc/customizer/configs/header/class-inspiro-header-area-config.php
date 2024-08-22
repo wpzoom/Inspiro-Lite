@@ -137,7 +137,6 @@ class Inspiro_Header_Area_Config
 					'label' => esc_html__('Header Predefined Layout', 'inspiro'),
 					'settings' => array(),
 					'section' => 'header-area',
-					'description' => __('This is another test.'),
 					'accordion' => true,
 					'expanded' => false,
 					'controls_to_wrap' => 2,
