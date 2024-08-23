@@ -116,9 +116,9 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 					'post-options',
 				),
 				'colors'         => array(
-					'header-textcolor',
-					'header-button-color',
+//					'header-textcolor',
 					'color-scheme',
+					'header-button-color',
 				),
                 'header'         => array(
                     'header-area',
@@ -279,6 +279,10 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 
 			// Change transport type for Header Text color.
 			$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+			// Change label of 'header_textcolor' was Header Text Color
+			$wp_customize->get_control( 'header_textcolor' )->label = 'Hero Text Color';
+
 
 			/**
 			 * Fires to register all customizer custom panels, settings and controls

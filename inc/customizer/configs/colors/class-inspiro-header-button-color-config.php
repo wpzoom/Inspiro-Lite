@@ -52,16 +52,6 @@ class Inspiro_Header_Button_Color_Config
 				),
 				// menu
 				array(
-					'id' => 'menu_hamburger_btn_color',
-					'args' => array(
-						'theme_supports' => array('custom-header'),
-						'default' => '#ffffff',
-						'transport' => 'refresh',
-						'sanitize_callback' => 'sanitize_hex_color',
-						'sanitize_js_callback' => 'maybe_hash_hex_color',
-					),
-				),
-				array(
 					'id' => 'color_menu_background',
 					'args' => array(
 						'theme_supports' => array('custom-header', 'header-text'),
@@ -81,10 +71,13 @@ class Inspiro_Header_Button_Color_Config
 					),
 				),
 				array(
-					'id' => 'colors_premium',
+					'id' => 'menu_hamburger_btn_color',
 					'args' => array(
-						'default' => null,
-						'sanitize_callback' => 'sanitize_text_field',
+						'theme_supports' => array('custom-header'),
+						'default' => '#ffffff',
+						'transport' => 'refresh',
+						'sanitize_callback' => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
 				),
 				// footer
@@ -108,6 +101,14 @@ class Inspiro_Header_Button_Color_Config
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
 				),
+				// Premium single section
+				array(
+					'id' => 'colors_premium',
+					'args' => array(
+						'default' => null,
+						'sanitize_callback' => 'sanitize_text_field',
+					),
+				),
 			),
 			'control' => array(
 				// hero section
@@ -118,7 +119,8 @@ class Inspiro_Header_Button_Color_Config
 						'label' => esc_html__('Hero section', 'inspiro'),
 						'section' => 'colors',
 						'settings' => array(),
-						'controls_to_wrap' => 2,
+						'priority' => 6,
+						'controls_to_wrap' => 3,
 					),
 				),
 				array(
@@ -137,6 +139,7 @@ class Inspiro_Header_Button_Color_Config
 						'section' => 'colors',
 					),
 				),
+				//todo:check where it's?
 				array(
 					'id' => 'header_button_bgcolor_hover',
 					'control_type' => 'WP_Customize_Color_Control',
