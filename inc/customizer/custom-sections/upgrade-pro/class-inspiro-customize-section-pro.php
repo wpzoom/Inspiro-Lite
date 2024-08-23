@@ -86,26 +86,24 @@ class Inspiro_Customize_Section_Pro extends WP_Customize_Section
 		<li id="accordion-section-{{ data.id }}"
 			class="accordion-section control-section control-section-{{ data.type }} cannot-expand">
 
-			<div class="accordion-section-title">
-			<h3>
+			<h3 class="accordion-section-title">
 				{{ data.title }}
 
 				<# if ( data.description ) { #>
 				<span class="customize-action">{{ data.description }}</span>
 				<# } #>
-			</h3>
 
-			<# if ( data.pro_text && data.pro_url ) { #>
-			<div>
+				<# if ( data.pro_text && data.pro_url ) { #>
 				<a href="{{ data.pro_url }}" class="button button-primary" target="_blank">{{ data.pro_text }}</a>
+				<# } #>
 
 				<# if ( data.demo_link_text && data.demo_link_url ) { #>
 				<a href="{{ data.demo_link_url }}" class="button view-demo-btn-link" target="_blank">
 					{{ data.demo_link_text }}
 				</a>
 				<# } #>
-			</div>
-			<# } #>
+			</h3>
+
 		</li>
 		<?php
 	}
