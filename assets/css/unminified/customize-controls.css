@@ -1,30 +1,23 @@
 /* Upgrade to Inspiro Premium */
 .customize-control-section-title .accordion-section-title,
 #customize-controls .control-section-upgrade-pro .accordion-section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #eff4f7;
     font-size: 16px;
     border-left-color: #2497d4;
+}
+.customize-control-section-title .accordion-section-title h3,
+#customize-controls .control-section-upgrade-pro .accordion-section-title h3 {
+    display: inline-block;
+    margin: 0.5em;
 }
 .customize-control-section-title .accordion-section-title:hover, .customize-control-section-title .accordion-section-title:focus,
 #customize-controls .control-section-upgrade-pro .accordion-section-title:hover,
 #customize-controls .control-section-upgrade-pro .accordion-section-title:focus {
     background-color: #eff4f7;
     border-left-color: #2497d4;
-}
-.customize-control-section-title .accordion-section-title .button,
-#customize-controls .control-section-upgrade-pro .accordion-section-title .button {
-    font-weight: 500;
-    font-size: 14px;
-    margin-top: 8px;
-    border: none;
-    background: #2497d4;
-    color: #fff;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    box-shadow: none;
-}
-.customize-control-section-title .accordion-section-title .button:hover,
-#customize-controls .control-section-upgrade-pro .accordion-section-title .button:hover {
-    background: #363940;
 }
 .customize-control-section-title .accordion-section-title .customize-action,
 #customize-controls .control-section-upgrade-pro .accordion-section-title .customize-action {
