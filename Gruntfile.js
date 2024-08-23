@@ -362,8 +362,8 @@ module.exports = function (grunt) {
 		'uglify:js',
 	]);
 
-	// mi
-	grunt.registerTask('minify:css', [
+	// prepare css for tests
+	grunt.registerTask('prepare:css', [
 		'style',
 		'cssmin:css',
 	]);
