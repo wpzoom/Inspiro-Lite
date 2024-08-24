@@ -177,7 +177,6 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 			/**
 			 * Register sections
 			 */
-
 			$wp_customize->register_section_type( 'Inspiro_Customize_Section_Pro' );
 
 			/**
@@ -277,11 +276,20 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 			);
 
 
+			/**
+			 * Custom changes of Core Settings
+			 *
+			 * @since 1.9.0
+			 */
 			// Change transport type for Header Text color.
 			$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-			// Change label of 'header_textcolor' was Header Text Color
+			// Change label text, was 'Header Text Color'
 			$wp_customize->get_control( 'header_textcolor' )->label = 'Hero Text Color';
+
+			// Change order priority
+			$wp_customize->get_control( 'header_textcolor' )->priority = 16;
+			$wp_customize->get_section( 'static_front_page' )->priority = 20;
 
 
 			/**
