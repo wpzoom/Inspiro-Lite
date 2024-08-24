@@ -51,6 +51,15 @@ class Inspiro_Footer_Widget_Areas_Config {
 			)
 		);
 
+		$wp_customize->add_setting(
+			'footer_design_copyright_text',
+				array(
+					'default' => '',
+					'sanitize_callback' => 'sanitize_textarea_field',
+					'capability'        => 'edit_theme_options',
+				),
+		);
+
 		$wp_customize->add_control(
 			new Inspiro_Customize_Accordion_UI_Control(
 				$wp_customize,
@@ -60,7 +69,7 @@ class Inspiro_Footer_Widget_Areas_Config {
 					'label' => __('Footer Predefined Layout', 'inspiro'),
 					'settings' => array(),
 					'section' => 'footer-area',
-					'expanded' => true,
+					'expanded' => false,
 					'controls_to_wrap' => 2,
 				)
 			)
@@ -134,6 +143,32 @@ class Inspiro_Footer_Widget_Areas_Config {
 						),
 					)
 				)
+			)
+		);
+
+		$wp_customize->add_control(
+			new Inspiro_Customize_Accordion_UI_Control(
+				$wp_customize,
+				'for_design_copyright_option',
+				array(
+					'type' => 'accordion-section-ui-wrapper',
+					'label' => __('Design', 'inspiro'),
+					'settings' => array(),
+					'section' => 'footer-area',
+					'expanded' => true,
+					'controls_to_wrap' => 1,
+				)
+			)
+		);
+
+		$wp_customize->add_control(
+			'footer_design_copyright_option',
+			array(
+				'type' => 'textarea',
+				'label' => __( 'Copyright Text', 'inspiro'),
+				'description' => __( 'This is a custom textarea.' ),
+				'settings' => 'footer_design_copyright_text',
+				'section' => 'footer-area',
 			)
 		);
 	}

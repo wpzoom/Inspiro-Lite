@@ -126,6 +126,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 					'header_hamburger_icon_color'
                 ),
 				'footer'         => array(
+//					'footer-design',
 					'footer-widget-areas',
 				),
 				'homepage-media' => array(
