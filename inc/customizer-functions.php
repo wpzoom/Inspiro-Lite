@@ -221,19 +221,4 @@ function inspiro_get_font_stacks( $font ) {
 	}
 
 	return $font;
-
 }
-
-/**
- * Customizer core customization, work with core sections.
- *
- * @since 1.9.0
- *
- * @param object $wp_customize Customizer API.
- */
-function inspiro_customizer_sections_load_priority_changes( $wp_customize ) {
-	// Change the priority of the 'static_front_page' section
-	$wp_customize->get_section( 'static_front_page' )->priority = 20;
-}
-
-add_action( 'customize_register', 'inspiro_customizer_sections_load_priority_changes', 11 );

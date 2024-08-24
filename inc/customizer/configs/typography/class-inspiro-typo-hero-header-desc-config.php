@@ -92,7 +92,7 @@ class Inspiro_Typo_Hero_Header_Desc_Config {
 					'id' => 'for_typography_header_section_description',
 					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
 					'args' => array(
-						'label'    	=> __( 'Header Description', 'inspiro' ),
+						'label'    	=> __( 'Hero Description', 'inspiro' ),
 						'section' 	=> 'inspiro_typography_section_hero_header',
 						'settings'	=> array(),
 						'controls_to_wrap' => 6,

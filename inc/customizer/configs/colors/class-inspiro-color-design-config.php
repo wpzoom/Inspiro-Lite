@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
  *
  * @since 1.3.0
  */
-class Inspiro_Header_Button_Color_Config
+class Inspiro_Color_Design_Config
 {
 	/**
 	 * Configurations
@@ -29,7 +29,7 @@ class Inspiro_Header_Button_Color_Config
 		return array(
 
 			'setting' => array(
-				// header
+				// hero section
 				array(
 					'id' => 'header_button_textcolor',
 					'args' => array(
@@ -50,17 +50,7 @@ class Inspiro_Header_Button_Color_Config
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
 				),
-				// menu
-				array(
-					'id' => 'menu_hamburger_btn_color',
-					'args' => array(
-						'theme_supports' => array('custom-header'),
-						'default' => '#ffffff',
-						'transport' => 'refresh',
-						'sanitize_callback' => 'sanitize_hex_color',
-						'sanitize_js_callback' => 'maybe_hash_hex_color',
-					),
-				),
+				// header section
 				array(
 					'id' => 'color_menu_background',
 					'args' => array(
@@ -81,10 +71,13 @@ class Inspiro_Header_Button_Color_Config
 					),
 				),
 				array(
-					'id' => 'colors_premium',
+					'id' => 'menu_hamburger_btn_color',
 					'args' => array(
-						'default' => null,
-						'sanitize_callback' => 'sanitize_text_field',
+						'theme_supports' => array('custom-header'),
+						'default' => '#ffffff',
+						'transport' => 'refresh',
+						'sanitize_callback' => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
 				),
 				// footer
@@ -108,8 +101,55 @@ class Inspiro_Header_Button_Color_Config
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
 				),
+				// Premium single section
+				array(
+					'id' => 'colors_premium',
+					'args' => array(
+						'default' => null,
+						'sanitize_callback' => 'sanitize_text_field',
+					),
+				),
 			),
 			'control' => array(
+				// top menu section
+				array(
+					'id' => 'for_menu_color_options',
+					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
+					'args' => array(
+						'label' => esc_html__('Header', 'inspiro'),
+						'section' => 'colors',
+						'settings' => array(),
+						'priority' => 11,
+						'controls_to_wrap' => 3,
+					),
+				),
+				array(
+					'id' => 'color_menu_background',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args' => array(
+						'label' => esc_html__('Menu Background', 'inspiro'),
+						'section' => 'colors',
+						'priority' => 12,
+					),
+				),
+				array(
+					'id' => 'color-menu-background-scroll',
+					'control_type' => 'Inspiro_Customize_Alpha_Color_Picker_Control',
+					'args' => array(
+						'label' => esc_html__('Menu Background on Scroll', 'inspiro'),
+						'section' => 'colors',
+						'priority' => 13,
+					),
+				),
+				array(
+					'id' => 'menu_hamburger_btn_color',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args' => array(
+						'label' => esc_html__('Hamburger Icon Color', 'inspiro'),
+						'section' => 'colors',
+						'priority' => 14,
+					),
+				),
 				// hero section
 				array(
 					'id' => 'for_hero_section_color_options',
@@ -118,7 +158,8 @@ class Inspiro_Header_Button_Color_Config
 						'label' => esc_html__('Hero section', 'inspiro'),
 						'section' => 'colors',
 						'settings' => array(),
-						'controls_to_wrap' => 2,
+						'priority' => 15,
+						'controls_to_wrap' => 3,
 					),
 				),
 				array(
@@ -127,6 +168,7 @@ class Inspiro_Header_Button_Color_Config
 					'args' => array(
 						'label' => esc_html__('Hero Button Text Color', 'inspiro'),
 						'section' => 'colors',
+						'priority' => 17,
 					),
 				),
 				array(
@@ -135,14 +177,17 @@ class Inspiro_Header_Button_Color_Config
 					'args' => array(
 						'label' => esc_html__('Hero Button Text Color Hover', 'inspiro'),
 						'section' => 'colors',
+						'priority' => 18,
 					),
 				),
+				//todo:check where it's?
 				array(
 					'id' => 'header_button_bgcolor_hover',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args' => array(
 						'label' => esc_html__('Hero Button Background Color Hover', 'inspiro'),
 						'section' => 'colors',
+						'priority' => 19,
 					),
 				),
 				// because was added Accordion UI
@@ -155,41 +200,6 @@ class Inspiro_Header_Button_Color_Config
 //						'section' => 'colors',
 //					),
 //				),
-				array(
-					'id' => 'for_menu_color_options',
-					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
-					'args' => array(
-						'label' => esc_html__('Top Menu', 'inspiro'),
-						'section' => 'colors',
-						'settings' => array(),
-						'controls_to_wrap' => 3,
-					),
-				),
-				// top menu section
-				array(
-					'id' => 'menu_hamburger_btn_color',
-					'control_type' => 'WP_Customize_Color_Control',
-					'args' => array(
-						'label' => esc_html__('Hamburger Icon Color', 'inspiro'),
-						'section' => 'colors',
-					),
-				),
-				array(
-					'id' => 'color_menu_background',
-					'control_type' => 'WP_Customize_Color_Control',
-					'args' => array(
-						'label' => esc_html__('Menu Background', 'inspiro'),
-						'section' => 'colors',
-					),
-				),
-				array(
-					'id' => 'color-menu-background-scroll',
-					'control_type' => 'Inspiro_Customize_Alpha_Color_Picker_Control',
-					'args' => array(
-						'label' => esc_html__('Menu Background on Scroll', 'inspiro'),
-						'section' => 'colors',
-					),
-				),
 				// footer section
 				// because was added Accordion UI
 				// todo:clean
@@ -208,6 +218,7 @@ class Inspiro_Header_Button_Color_Config
 						'label' => esc_html__('Footer', 'inspiro'),
 						'section' => 'colors',
 						'settings' => array(),
+						'priority' => 20,
 						'controls_to_wrap' => 2,
 					),
 				),
@@ -217,6 +228,7 @@ class Inspiro_Header_Button_Color_Config
 					'args' => array(
 						'label' => esc_html__('Footer Background', 'inspiro'),
 						'section' => 'colors',
+						'priority' => 21,
 					),
 				),
 				array(
@@ -225,6 +237,7 @@ class Inspiro_Header_Button_Color_Config
 					'args' => array(
 						'label' => esc_html__('Text Color', 'inspiro'),
 						'section' => 'colors',
+						'priority' => 22,
 					),
 				),
 				array(
@@ -236,6 +249,7 @@ class Inspiro_Header_Button_Color_Config
 						'pro_text' => esc_html__('👉 Unlock all customizations', 'inspiro'),
 						'pro_url' => 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=customizer&utm_campaign=colorsbutton',
 						'section' => 'colors',
+						'priority' => 40,
 					),
 				),
 			),
