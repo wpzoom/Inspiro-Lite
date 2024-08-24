@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
  *
  * @since 1.3.0
  */
-class Inspiro_Header_Button_Color_Config
+class Inspiro_Color_Design_Config
 {
 	/**
 	 * Configurations

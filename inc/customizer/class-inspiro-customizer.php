@@ -118,7 +118,8 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 				'colors'         => array(
 //					'header-textcolor',
 					'color-scheme',
-					'header-button-color',
+					'color-design',
+//					'header-button-color',
 				),
                 'header'         => array(
                     'header-area',
