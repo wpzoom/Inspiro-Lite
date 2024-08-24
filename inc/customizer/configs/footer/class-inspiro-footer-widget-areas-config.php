@@ -53,11 +53,11 @@ class Inspiro_Footer_Widget_Areas_Config {
 
 		$wp_customize->add_setting(
 			'footer_design_copyright_text',
-				array(
-					'default' => '',
-					'sanitize_callback' => 'sanitize_textarea_field',
-					'capability'        => 'edit_theme_options',
-				),
+			array(
+				'default' 			=> 'Powered by WordPress',
+				'sanitize_callback' => 'sanitize_textarea_field',
+				'capability'        => 'edit_theme_options',
+			),
 		);
 
 		$wp_customize->add_control(
@@ -152,7 +152,7 @@ class Inspiro_Footer_Widget_Areas_Config {
 				'for_design_copyright_option',
 				array(
 					'type' => 'accordion-section-ui-wrapper',
-					'label' => __('Design', 'inspiro'),
+					'label' => __('Elements', 'inspiro'),
 					'settings' => array(),
 					'section' => 'footer-area',
 					'expanded' => true,
