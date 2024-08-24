@@ -54,7 +54,7 @@ class Inspiro_Footer_Widget_Areas_Config {
 		$wp_customize->add_setting(
 			'footer_design_copyright_text',
 			array(
-				'default' 			=> 'Powered by WordPress',
+				'default' 			=> 'Copyright [copyright] [current_year] [site_title]',
 				'sanitize_callback' => 'sanitize_textarea_field',
 				'capability'        => 'edit_theme_options',
 			),
@@ -166,7 +166,7 @@ class Inspiro_Footer_Widget_Areas_Config {
 			array(
 				'type' => 'textarea',
 				'label' => __( 'Copyright Text', 'inspiro'),
-				'description' => __( 'This is a custom textarea.' ),
+				'description' => __( 'You can insert some available Shortcode tags: {copyright}, {current_year}, {site_title}, {theme_credit}' ),
 				'settings' => 'footer_design_copyright_text',
 				'section' => 'footer-area',
 			)
