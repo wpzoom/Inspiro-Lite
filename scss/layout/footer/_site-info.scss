@@ -11,6 +11,11 @@
             color: var(--inspiro-primary-color);
         }
     }
+
+	p {
+		margin: 0;
+	}
+
     .copyright {
         display: flex;
         flex-wrap: wrap;

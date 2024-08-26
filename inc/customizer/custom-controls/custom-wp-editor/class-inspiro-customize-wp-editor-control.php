@@ -63,7 +63,7 @@ if (class_exists('WP_Customize_Control')) {
 				'tinymce' => array(
 					'toolbar1' => 'bold,italic,underline,|,bullist,numlist,|,link,unlink', // Customize the toolbar
 					'toolbar2' => '', // Leave empty to remove the second toolbar
-					'wpautop' => false, // Enable auto-paragraphs, don't had effect
+					'wpautop' => false, // Disable auto-paragraphs, don't had effect
 				),
 			);
 			return wp_editor(inspiro_get_theme_mod('footer_copyright_text_setting'), 'footer_copyright_editor', $settings);
@@ -88,9 +88,9 @@ if (class_exists('WP_Customize_Control')) {
 			</label>
 
 			<?php $this->prepare_and_return_wp_editor_content(); ?>
-			<div class="inspiro-copyright-option-description">
+			<p class="description customize-control-description">
 				{{ data.description }}
-			</div>
+			</p>
 			<?php
 		}
 	}
