@@ -60,7 +60,7 @@ class Inspiro_Footer_Widget_Areas_Config {
 					'label' => __('Footer Predefined Layout', 'inspiro'),
 					'settings' => array(),
 					'section' => 'footer-area',
-					'expanded' => true,
+					'expanded' => false,
 					'controls_to_wrap' => 2,
 				)
 			)

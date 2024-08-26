@@ -1,4 +1,6 @@
 # Project specs
+### IDE Live Templates
+* configclass - PHP Class for Registering Customizer Configuration
 
 ### Setup Accordion UI Settings API
 array(

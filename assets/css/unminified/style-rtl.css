@@ -3298,6 +3298,9 @@ h4.jp-relatedposts-post-title {
 .site-info a:hover {
     color: var(--inspiro-primary-color);
 }
+.site-info p {
+    margin: 0;
+}
 .site-info .copyright {
     display: flex;
     flex-wrap: wrap;
