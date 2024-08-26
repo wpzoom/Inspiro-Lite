@@ -128,6 +128,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 				'footer'         => array(
 //					'footer-design',
 					'footer-widget-areas',
+					'footer-copyright',
 				),
 				'homepage-media' => array(
 					'homepage-media-panel',
@@ -246,6 +247,13 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 				'accordion-section-ui-wrapper',
 				array(
 					'callback'          => 'Inspiro_Customize_Accordion_UI_Control',
+				)
+			);
+
+			Inspiro_Customizer_Control_Base::register_custom_control(
+				'custom-wp-editor',
+				array(
+					'callback' => 'Inspiro_Customize_Copyright_WP_Editor_Control',
 				)
 			);
 		}

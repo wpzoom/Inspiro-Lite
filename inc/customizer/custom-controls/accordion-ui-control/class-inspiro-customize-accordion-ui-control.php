@@ -65,22 +65,22 @@ if (class_exists('WP_Customize_Control')) {
 
 		/**
 		 * Send data to _s
+		 * Refresh the parameters passed to the JavaScript via JSON.
 		 *
-		 * @return array
+		 * @since 1.9.0
 		 * @see WP_Customize_Control::to_json()
 		 */
-		public function json() {
-			$json                   = parent::json();
-			$json['classes']        = $this->class;
-			$json['accordion']      = $this->accordion;
-			$json['category_label'] = $this->category_label;
-			$json['style']          = $this->print_style();
+		public function to_json() {
+			parent::to_json();
+
+			$this->json['classes']        = $this->class;
+			$this->json['accordion']      = $this->accordion;
+			$this->json['category_label'] = $this->category_label;
+			$this->json['style']          = $this->print_style();
 
 			if ( $this->accordion === true ) {
-				$json['classes'] .= ' accordion';
+				$this->json['classes'] .= ' accordion';
 			}
-
-			return $json;
 		}
 
 		/**
@@ -91,6 +91,7 @@ if (class_exists('WP_Customize_Control')) {
 			$id = 'customize-control-' . str_replace(array('[', ']'), array('-', ''), $this->id);
 			$class = 'customize-control header-accordion-section-ui-wrapper accordion-section-' . $this->id;
 			$class .= ' ' . $this->class;
+
 			if ($this->accordion) {
 				$class .= ' accordion';
 			}
@@ -116,6 +117,7 @@ if (class_exists('WP_Customize_Control')) {
 		 * @since 3.4.0
 		 */
 		protected function render_content() {
+
 		}
 
 
@@ -132,6 +134,7 @@ if (class_exists('WP_Customize_Control')) {
 		protected function content_template()
 		{
 			?>
+
 			<# if(data.category_label) {#>
 			<span class="customize-control-title">{{data.category_label}}</span>
 			<# }#>

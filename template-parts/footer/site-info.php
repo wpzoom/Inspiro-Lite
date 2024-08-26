@@ -10,8 +10,10 @@
 
 // todo: fix
 // check content on first load and after deletet it.
-$customizer_copyright_text = inspiro_get_theme_mod( 'footer_design_copyright_text' );
+$customizer_copyright_text = inspiro_get_theme_mod( 'footer_copyright_text_setting' );
+
 ?>
+
 <div class="site-info">
 	<?php
 	if ( function_exists( 'the_privacy_policy_link' ) ) {
@@ -20,20 +22,23 @@ $customizer_copyright_text = inspiro_get_theme_mod( 'footer_design_copyright_tex
 	?>
 	<span class="copyright">
 		<span>
-			<?php if ($customizer_copyright_text) : ?>
-				<?php echo $customizer_copyright_text; ?>
+			<?php if ( $customizer_copyright_text ) : ?>
+				<?php echo do_shortcode( $customizer_copyright_text ); ?>
 			<?php else : ?>
 
- 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'inspiro' ) ); ?>" target="_blank">
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'inspiro' ) ); ?>" target="_blank">
 				<?php
 				/* translators: %s: WordPress trademark */
 				printf( esc_html__( 'Powered by %s', 'inspiro' ), 'WordPress' );
 				?>
 			</a>
-			<?php endif;  ?>
+			<?php endif; ?>
 		</span>
 		<span>
-			<?php esc_html_e( 'Inspiro WordPress Theme by', 'inspiro' ); ?> <a href="<?php echo 'https://www.wpzoom.com/'; ?>" target="_blank" rel="nofollow">WPZOOM</a>
+			<?php esc_html_e( 'Inspiro WordPress Theme by', 'inspiro' ); ?>
+			<a href="<?php echo 'https://www.wpzoom.com/'; ?>" target="_blank" rel="nofollow">
+				WPZOOM
+			</a>
 		</span>
 	</span>
 </div><!-- .site-info -->
