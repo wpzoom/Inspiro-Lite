@@ -27,7 +27,7 @@ class Inspiro_Color_Design_Config
 	public static function config()
 	{
 		return array(
-
+			// Settings init
 			'setting' => array(
 				// hero section
 				array(
@@ -47,6 +47,16 @@ class Inspiro_Color_Design_Config
 						'default' => '#ffffff',
 						'transport' => 'refresh',
 						'sanitize_callback' => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
+				array(
+					'id'   => 'header_button_bgcolor_hover',
+					'args' => array(
+						'theme_supports'       => array( 'custom-header', 'header-text' ),
+						'default'              => '#0bb4aa',
+						'transport'            => 'refresh',
+						'sanitize_callback'    => 'sanitize_hex_color',
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
 				),
@@ -110,6 +120,7 @@ class Inspiro_Color_Design_Config
 					),
 				),
 			),
+			// Controls init
 			'control' => array(
 				// top menu section
 				array(
@@ -159,7 +170,7 @@ class Inspiro_Color_Design_Config
 						'section' => 'colors',
 						'settings' => array(),
 						'priority' => 15,
-						'controls_to_wrap' => 3,
+						'controls_to_wrap' => 4,
 					),
 				),
 				array(
@@ -190,7 +201,7 @@ class Inspiro_Color_Design_Config
 						'priority' => 19,
 					),
 				),
-				// because was added Accordion UI
+				// hide because was added Accordion UI
 				// todo:clean
 //				array(
 //					'id' => 'menu_color_subtitle',
@@ -201,7 +212,7 @@ class Inspiro_Color_Design_Config
 //					),
 //				),
 				// footer section
-				// because was added Accordion UI
+				// hide because was added Accordion UI
 				// todo:clean
 //				array(
 //					'id' => 'footer_color_subtitle',
