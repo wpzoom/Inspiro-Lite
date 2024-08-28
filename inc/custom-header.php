@@ -82,8 +82,13 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$color_menu_background        = inspiro_get_theme_mod( 'color_menu_background' );
 		$color_menu_background_scroll = inspiro_get_theme_mod( 'color-menu-background-scroll' );
 		$color_navbar_menu_background = inspiro_get_theme_mod( 'color_navbar_menu_background' );
-		$color_footer_background      = inspiro_get_theme_mod( 'color_footer_background' );
-		$color_footer_text            = inspiro_get_theme_mod( 'color_footer_text' );
+
+		$color_sidebar_widgets_background  = inspiro_get_theme_mod( 'color_sidebar_widgets_background' );
+		$color_sidebar_widgets_title = inspiro_get_theme_mod( 'color_sidebar_widgets_title' );
+		$color_sidebar_widgets_text  = inspiro_get_theme_mod( 'color_sidebar_widgets_text' );
+
+		$color_footer_background = inspiro_get_theme_mod( 'color_footer_background' );
+		$color_footer_text       = inspiro_get_theme_mod( 'color_footer_text' );
 
 		?>
 		<style id="inspiro-custom-header-styles" type="text/css">
@@ -192,6 +197,13 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 			<?php if ( '' !== $color_navbar_menu_background ) : ?>
 			.primary-menu-wrapper {
 				background: <?php echo $color_navbar_menu_background; ?> !important;
+			}
+
+			<?php endif; ?>
+
+			<?php if ( '#101010' !== $color_sidebar_widgets_background ) : ?>
+			.side-nav__scrollable-container {
+				background-color: <?php echo $color_sidebar_widgets_background; ?> !important;
 			}
 
 			<?php endif; ?>
