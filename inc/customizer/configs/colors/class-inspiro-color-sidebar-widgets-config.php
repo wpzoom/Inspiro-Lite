@@ -29,6 +29,7 @@ class Inspiro_Color_Sidebar_Widgets_Config {
 	 * 3. hero section
 	 * 4. sidebar widget section
 	 * 5. footer
+	 * 6. premium single section
 	 */
 	public static function config() {
 		return array(
@@ -37,6 +38,22 @@ class Inspiro_Color_Sidebar_Widgets_Config {
 				// 4. sidebar widget section
 				array(
 					'id'   => 'color_sidebar_widgets_background',
+					'args' => array(
+						'default'           => '#101010',
+						'transport'         => 'postMessage',
+						'sanitize_callback' => 'inspiro_sanitize_colorscheme',
+					),
+				),
+				array(
+					'id'   => 'color_sidebar_widgets_title_color',
+					'args' => array(
+						'default'           => '#101010',
+						'transport'         => 'postMessage',
+						'sanitize_callback' => 'inspiro_sanitize_colorscheme',
+					),
+				),
+				array(
+					'id'   => 'color_sidebar_widgets_text_color',
 					'args' => array(
 						'default'           => '#101010',
 						'transport'         => 'postMessage',
@@ -55,7 +72,7 @@ class Inspiro_Color_Sidebar_Widgets_Config {
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 20,
-						'controls_to_wrap' => 1,
+						'controls_to_wrap' => 3,
 					),
 				),
 				array(
@@ -67,6 +84,25 @@ class Inspiro_Color_Sidebar_Widgets_Config {
 						'priority' => 21,
 					),
 				),
+				array(
+					'id'           => 'color_sidebar_widgets_title_color',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Widget Title', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 21,
+					),
+				),
+				array(
+					'id'           => 'color_sidebar_widgets_text_color',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Widget Text', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 21,
+					),
+				),
+
 			),
 		);
 	}

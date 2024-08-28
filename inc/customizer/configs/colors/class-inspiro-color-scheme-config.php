@@ -15,6 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) {
  * PHP Class for Registering Customizer Configuration
  *
  * @since 1.3.0
+ *
+ * Sections Loading Order
+ * 1. header settings
+ * 2. top menu settings
+ * 3. hero section
+ * 4. sidebar widget section
+ * 5. footer
+ * 6. premium single section
  */
 class Inspiro_Color_Scheme_Config {
 	/**
