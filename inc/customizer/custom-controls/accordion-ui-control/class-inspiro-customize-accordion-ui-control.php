@@ -8,17 +8,16 @@
  */
 
 // Exit if accessed directly.
-if (!defined('ABSPATH')) {
+if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if (class_exists('WP_Customize_Control')) {
+if ( class_exists( 'WP_Customize_Control' ) ) {
 
 	/**
 	 * Accordion UI Control.
 	 */
-	class Inspiro_Customize_Accordion_UI_Control extends WP_Customize_Control
-	{
+	class Inspiro_Customize_Accordion_UI_Control extends WP_Customize_Control {
 
 		/**
 		 * Control type.
@@ -86,21 +85,20 @@ if (class_exists('WP_Customize_Control')) {
 		/**
 		 * Render the control.
 		 */
-		protected function render()
-		{
-			$id = 'customize-control-' . str_replace(array('[', ']'), array('-', ''), $this->id);
+		protected function render() {
+			$id    = 'customize-control-' . str_replace( array( '[', ']' ), array( '-', '' ), $this->id );
 			$class = 'customize-control header-accordion-section-ui-wrapper accordion-section-' . $this->id;
 			$class .= ' ' . $this->class;
 
-			if ($this->accordion) {
+			if ( $this->accordion ) {
 				$class .= ' accordion';
 			}
 
-			if ($this->expanded) {
+			if ( $this->expanded ) {
 				$class .= ' expanded';
 			}
 
-			echo '<li id="' . esc_attr($id) . '" class="' . esc_attr($class) . '">';
+			echo '<li id="' . esc_attr( $id ) . '" class="' . esc_attr( $class ) . '">';
 			echo '</li>';
 		}
 
@@ -131,8 +129,7 @@ if (class_exists('WP_Customize_Control')) {
 		 *
 		 * @access protected
 		 */
-		protected function content_template()
-		{
+		protected function content_template() {
 			?>
 
 			<# if(data.category_label) {#>
@@ -144,7 +141,8 @@ if (class_exists('WP_Customize_Control')) {
 				<span class="accordion-expand-button"></span>
 				<# } #>
 			</div>
-			{{{data.style}}} <?php // phpcs:ignore WordPressVIPMinimum.Security.Mustache.OutputNotation ?>
+			{{{data.style}}} <?php // phpcs:ignore WordPressVIPMinimum.Security.Mustache.OutputNotation
+			?>
 			<?php
 		}
 
@@ -152,17 +150,16 @@ if (class_exists('WP_Customize_Control')) {
 		 * Print inline styles.
 		 * Helps with wrap functionality.
 		 */
-		protected function print_style()
-		{
+		protected function print_style() {
 			$style = '';
 			$style .= '<style>';
 
-			for ($i = 1; $i <= $this->controls_to_wrap; $i++) {
+			for ( $i = 1; $i <= $this->controls_to_wrap; $i ++ ) {
 				$style .= '.accordion.' . 'accordion-section-' . $this->id . ':not(.expanded)';
-				for ($j = 1; $j <= $i; $j++) {
+				for ( $j = 1; $j <= $i; $j ++ ) {
 					$style .= ' + li';
 				}
-				if ($i !== $this->controls_to_wrap) {
+				if ( $i !== $this->controls_to_wrap ) {
 					$style .= ',';
 				}
 			}
