@@ -120,6 +120,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 					'color-scheme',
 					'color-header',
 					'color-design',
+					'color-sidebar-widgets'
 //					'header-button-color',
 				),
                 'header'         => array(

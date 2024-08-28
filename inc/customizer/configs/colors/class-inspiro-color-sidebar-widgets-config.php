@@ -54,7 +54,7 @@ class Inspiro_Color_Sidebar_Widgets_Config {
 						'label'            => esc_html__( 'Sidebar Widgets', 'inspiro' ),
 						'section'          => 'colors',
 						'settings'         => array(),
-						'priority'         => 11,
+						'priority'         => 20,
 						'controls_to_wrap' => 1,
 					),
 				),
@@ -64,7 +64,7 @@ class Inspiro_Color_Sidebar_Widgets_Config {
 					'args'         => array(
 						'label'    => esc_html__( 'Sidebar Background', 'inspiro' ),
 						'section'  => 'colors',
-						'priority' => 5,
+						'priority' => 21,
 					),
 				),
 			),

@@ -167,7 +167,7 @@ class Inspiro_Color_Design_Config {
 						'label'            => esc_html__( 'Footer', 'inspiro' ),
 						'section'          => 'colors',
 						'settings'         => array(),
-						'priority'         => 20,
+						'priority'         => 22,
 						'controls_to_wrap' => 2,
 					),
 				),
@@ -177,7 +177,7 @@ class Inspiro_Color_Design_Config {
 					'args'         => array(
 						'label'    => esc_html__( 'Footer Background', 'inspiro' ),
 						'section'  => 'colors',
-						'priority' => 21,
+						'priority' => 22,
 					),
 				),
 				array(
@@ -186,7 +186,7 @@ class Inspiro_Color_Design_Config {
 					'args'         => array(
 						'label'    => esc_html__( 'Text Color', 'inspiro' ),
 						'section'  => 'colors',
-						'priority' => 22,
+						'priority' => 23,
 					),
 				),
 				// 5. premium single section
