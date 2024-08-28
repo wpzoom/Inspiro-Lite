@@ -14,8 +14,7 @@
  *
  * @uses inspiro_header_style()
  */
-function inspiro_custom_header_setup()
-{
+function inspiro_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		/**
@@ -38,11 +37,11 @@ function inspiro_custom_header_setup()
 		apply_filters(
 			'inspiro_custom_header_args',
 			array(
-				'default-image' => get_parent_theme_file_uri('/assets/images/StockSnap_M6D1GS9PSL.jpg'),
-				'width' => 2000,
-				'height' => 1200,
-				'flex-height' => true,
-				'video' => true,
+				'default-image'    => get_parent_theme_file_uri( '/assets/images/StockSnap_M6D1GS9PSL.jpg' ),
+				'width'            => 2000,
+				'height'           => 1200,
+				'flex-height'      => true,
+				'video'            => true,
 				'wp-head-callback' => 'inspiro_header_style',
 			)
 		)
@@ -51,39 +50,41 @@ function inspiro_custom_header_setup()
 	register_default_headers(
 		array(
 			'default-image' => array(
-				'url' => '%s/assets/images/StockSnap_M6D1GS9PSL.jpg',
+				'url'           => '%s/assets/images/StockSnap_M6D1GS9PSL.jpg',
 				'thumbnail_url' => '%s/assets/images/StockSnap_M6D1GS9PSL.jpg',
-				'description' => __('Default Header Image', 'inspiro'),
+				'description'   => __( 'Default Header Image', 'inspiro' ),
 			),
-			'forest-image' => array(
-				'url' => '%s/assets/images/StockSnap_89BQZ89TLH.jpg',
+			'forest-image'  => array(
+				'url'           => '%s/assets/images/StockSnap_89BQZ89TLH.jpg',
 				'thumbnail_url' => '%s/assets/images/StockSnap_89BQZ89TLH.jpg',
-				'description' => __('Forest', 'inspiro'),
+				'description'   => __( 'Forest', 'inspiro' ),
 			),
 		)
 	);
 }
 
-add_action('after_setup_theme', 'inspiro_custom_header_setup');
+add_action( 'after_setup_theme', 'inspiro_custom_header_setup' );
 
-if (!function_exists('inspiro_header_style')) :
+if ( ! function_exists( 'inspiro_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
 	 * @see inspiro_custom_header_setup().
 	 */
-	function inspiro_header_style()
-	{
-		$header_text_color = get_header_textcolor();
-		$header_button_text_color = inspiro_get_theme_mod('header_button_textcolor');
-		$header_button_text_color_hover = inspiro_get_theme_mod('header_button_textcolor_hover');
-		$header_button_bg_color_hover = inspiro_get_theme_mod('header_button_bgcolor_hover');
-//		$header_menu_hamburger_icon_color = inspiro_get_theme_mod('header_hamburger_icon_color');
-		$color_menu_hamburger_icon_color = inspiro_get_theme_mod('menu_hamburger_btn_color');
-		$color_menu_background = inspiro_get_theme_mod('color_menu_background');
-		$color_menu_background_scroll = inspiro_get_theme_mod('color-menu-background-scroll');
-		$color_footer_background = inspiro_get_theme_mod('color_footer_background');
-		$color_footer_text = inspiro_get_theme_mod('color_footer_text');
+	function inspiro_header_style() {
+		$header_text_color               = get_header_textcolor();
+		$header_button_text_color        = inspiro_get_theme_mod( 'header_button_textcolor' );
+		$header_button_text_color_hover  = inspiro_get_theme_mod( 'header_button_textcolor_hover' );
+		$header_button_bg_color_hover    = inspiro_get_theme_mod( 'header_button_bgcolor_hover' );
+		$color_menu_hamburger_icon_color = inspiro_get_theme_mod( 'menu_hamburger_btn_color' );
+
+		$color_header_site_title      = inspiro_get_theme_mod( 'color_header_site_title' );
+		$color_menu_background        = inspiro_get_theme_mod( 'color_menu_background' );
+		$color_menu_background_scroll = inspiro_get_theme_mod( 'color-menu-background-scroll' );
+		$color_navbar_menu_background = inspiro_get_theme_mod( 'color_navbar_menu_background' );
+		$color_footer_background      = inspiro_get_theme_mod( 'color_footer_background' );
+		$color_footer_text            = inspiro_get_theme_mod( 'color_footer_text' );
+
 		?>
 		<style id="inspiro-custom-header-styles" type="text/css">
 			<?php
@@ -180,6 +181,21 @@ if (!function_exists('inspiro_header_style')) :
 			}
 
 			<?php endif; ?>
+
+			<?php if ( '#ffffff' !== $color_header_site_title && inspiro_get_theme_mod( 'custom_logo_text' ) !== '' ) : ?>
+			.custom-logo-text {
+				color: <?php echo $color_header_site_title; ?> !important;
+			}
+
+			<?php endif; ?>
+
+			<?php if ( '' !== $color_navbar_menu_background ) : ?>
+			.primary-menu-wrapper {
+				background: <?php echo $color_navbar_menu_background; ?> !important;
+			}
+
+			<?php endif; ?>
+
 		</style>
 		<?php
 	}
@@ -189,19 +205,19 @@ endif; // End of inspiro_header_style().
  * Customize video play/pause button in the custom header.
  *
  * @param array $settings Video settings.
+ *
  * @return array The filtered video settings.
  */
-function inspiro_video_controls($settings)
-{
-	$settings['l10n']['play'] = '<span class="screen-reader-text">' . __('Play background video', 'inspiro') . '</span>' . inspiro_get_theme_svg('play');
-	$settings['l10n']['pause'] = '<span class="screen-reader-text">' . __('Pause background video', 'inspiro') . '</span>' . inspiro_get_theme_svg('pause');
+function inspiro_video_controls( $settings ) {
+	$settings['l10n']['play']  = '<span class="screen-reader-text">' . __( 'Play background video', 'inspiro' ) . '</span>' . inspiro_get_theme_svg( 'play' );
+	$settings['l10n']['pause'] = '<span class="screen-reader-text">' . __( 'Pause background video', 'inspiro' ) . '</span>' . inspiro_get_theme_svg( 'pause' );
 
 	/**
 	 * Change the minimum screen size to use the video header.
 	 *
 	 * @since 1.3.1
 	 */
-	$settings['minWidth'] = 100;
+	$settings['minWidth']  = 100;
 	$settings['minHeight'] = 100;
 
 	/**
@@ -209,48 +225,47 @@ function inspiro_video_controls($settings)
 	 *
 	 * @see https://github.com/bradyvercher/custom-header-vimeo
 	 */
-	if (preg_match('#^https?://(.+\.)?vimeo\.com/.*#', $settings['videoUrl'])) {
+	if ( preg_match( '#^https?://(.+\.)?vimeo\.com/.*#', $settings['videoUrl'] ) ) {
 		$settings['mimeType'] = 'video/x-vimeo';
 	}
 
 	return $settings;
 }
 
-add_filter('header_video_settings', 'inspiro_video_controls');
+add_filter( 'header_video_settings', 'inspiro_video_controls' );
 
 /**
  * Maybe enqueue custom header vimeo scripts
  */
-function inspiro_maybe_enqueue_vimeo_handler()
-{
-	if (wp_script_is('wp-custom-header')) {
+function inspiro_maybe_enqueue_vimeo_handler() {
+	if ( wp_script_is( 'wp-custom-header' ) ) {
 		wp_enqueue_script(
 			'wp-custom-header-vimeo',
-			inspiro_get_assets_uri('custom-header-vimeo', 'js'),
-			array('wp-custom-header'),
+			inspiro_get_assets_uri( 'custom-header-vimeo', 'js' ),
+			array( 'wp-custom-header' ),
 			INSPIRO_THEME_VERSION,
 			true
 		);
 	}
 }
 
-add_action('wp_footer', 'inspiro_maybe_enqueue_vimeo_handler');
+add_action( 'wp_footer', 'inspiro_maybe_enqueue_vimeo_handler' );
 
 /**
  * Filter extenal header video settting validity
  *
  * @param boolean $validity Validity.
  * @param string $value Video setting value.
+ *
  * @return boolean
  */
-function inspiro_filter_external_header_video_setting_validity($validity, $value)
-{
-	if (preg_match('#^https?://(.+\.)?vimeo\.com/.*#', $value)) {
+function inspiro_filter_external_header_video_setting_validity( $validity, $value ) {
+	if ( preg_match( '#^https?://(.+\.)?vimeo\.com/.*#', $value ) ) {
 		return true;
 	}
 
 	return $validity;
 }
 
-add_filter('customize_validate_external_header_video', 'inspiro_filter_external_header_video_setting_validity', 11, 2);
+add_filter( 'customize_validate_external_header_video', 'inspiro_filter_external_header_video_setting_validity', 11, 2 );
 

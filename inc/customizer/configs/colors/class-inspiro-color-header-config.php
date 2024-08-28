@@ -48,6 +48,17 @@ class Inspiro_Color_Header_Config {
 				),
 				// 2. top menu settings
 				array(
+					'id'   => 'color_navbar_menu_background',
+					'args' => array(
+						'theme_supports'       => array( 'custom-header', 'header-text' ),
+						'default'              => '',
+						'transport'            => 'refresh',
+						'sanitize_callback'    => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
+				array(
+					// all header navbar but not navigation properly
 					'id'   => 'color_menu_background',
 					'args' => array(
 						'theme_supports'       => array( 'custom-header', 'header-text' ),
@@ -79,17 +90,6 @@ class Inspiro_Color_Header_Config {
 			),
 			// Controls init
 			'control' => array(
-				// 1. header settings
-				array(
-					'id'           => 'color_header_site_title',
-					'control_type' => 'WP_Customize_Color_Control',
-					'args'         => array(
-						'label'    => esc_html__( 'Site title', 'inspiro' ),
-						'section'  => 'colors',
-						'priority' => 12,
-					),
-				),
-				// 2. top menu section
 				array(
 					'id'           => 'for_menu_color_options',
 					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
@@ -98,7 +98,29 @@ class Inspiro_Color_Header_Config {
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 11,
-						'controls_to_wrap' => 4,
+						'controls_to_wrap' => 5,
+					),
+				),
+				// 1. header settings
+				array(
+					'id'           => 'color_header_site_title',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Custom Logo Text', 'inspiro' ),
+//						'label'    => esc_html__( 'Site Title Color', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 12,
+					),
+				),
+				// 2. top menu section
+				array(
+					'id'           => 'color_navbar_menu_background',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Navigation Background Color', 'inspiro' ),
+//						'label'    => esc_html__( 'Primary Navigation Background Color', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 12,
 					),
 				),
 				array(
