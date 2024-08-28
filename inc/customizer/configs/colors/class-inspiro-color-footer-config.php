@@ -16,58 +16,26 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.3.0
  */
-class Inspiro_Color_Design_Config {
+class Inspiro_Color_Footer_Config {
 	/**
 	 * Configurations
 	 *
 	 * @return array
 	 * @since 1.4.0 Store configurations to class method.
 	 *
-	 *  Sections Loading Order
-	 *  1. header settings
-	 *  2. top menu settings
-	 *  3. hero section
-	 *  4. sidebar widget section
-	 *  5. footer
+	 * Sections Loading Order
+	 * 1. header settings
+	 * 2. top menu settings
+	 * 3. hero section
+	 * 4. sidebar widget section
+	 * 5. footer
+	 * 6. premium single section
 	 */
 	public static function config() {
 		return array(
 			// Settings init
 			'setting' => array(
-				// 1. header settings
-				// 2. top menu settings
-				// hero section
-				array(
-					'id'   => 'header_button_textcolor',
-					'args' => array(
-						'theme_supports'       => array( 'custom-header', 'header-text' ),
-						'default'              => '#ffffff',
-						'transport'            => 'postMessage',
-						'sanitize_callback'    => 'sanitize_hex_color',
-						'sanitize_js_callback' => 'maybe_hash_hex_color',
-					),
-				),
-				array(
-					'id'   => 'header_button_textcolor_hover',
-					'args' => array(
-						'theme_supports'       => array( 'custom-header', 'header-text' ),
-						'default'              => '#ffffff',
-						'transport'            => 'refresh',
-						'sanitize_callback'    => 'sanitize_hex_color',
-						'sanitize_js_callback' => 'maybe_hash_hex_color',
-					),
-				),
-				array(
-					'id'   => 'header_button_bgcolor_hover',
-					'args' => array(
-						'theme_supports'       => array( 'custom-header', 'header-text' ),
-						'default'              => '#0bb4aa',
-						'transport'            => 'refresh',
-						'sanitize_callback'    => 'sanitize_hex_color',
-						'sanitize_js_callback' => 'maybe_hash_hex_color',
-					),
-				),
-				// 4. footer
+				// 5. footer
 				array(
 					'id'   => 'color_footer_background',
 					'args' => array(
@@ -99,56 +67,6 @@ class Inspiro_Color_Design_Config {
 			),
 			// Controls init
 			'control' => array(
-				// 3. hero section
-				array(
-					'id'           => 'for_hero_section_color_options',
-					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
-					'args'         => array(
-						'label'            => esc_html__( 'Hero section', 'inspiro' ),
-						'section'          => 'colors',
-						'settings'         => array(),
-						'priority'         => 15,
-						'controls_to_wrap' => 4,
-					),
-				),
-				array(
-					'id'           => 'header_button_textcolor',
-					'control_type' => 'WP_Customize_Color_Control',
-					'args'         => array(
-						'label'    => esc_html__( 'Hero Button Text Color', 'inspiro' ),
-						'section'  => 'colors',
-						'priority' => 17,
-					),
-				),
-				array(
-					'id'           => 'header_button_textcolor_hover',
-					'control_type' => 'WP_Customize_Color_Control',
-					'args'         => array(
-						'label'    => esc_html__( 'Hero Button Text Color Hover', 'inspiro' ),
-						'section'  => 'colors',
-						'priority' => 18,
-					),
-				),
-				array(
-					'id'           => 'header_button_bgcolor_hover',
-					'control_type' => 'WP_Customize_Color_Control',
-					'args'         => array(
-						'label'    => esc_html__( 'Hero Button Background Color Hover', 'inspiro' ),
-						'section'  => 'colors',
-						'priority' => 19,
-					),
-				),
-				// hide because was added Accordion UI
-				// todo:clean
-//				array(
-//					'id' => 'menu_color_subtitle',
-//					'control_type' => 'Inspiro_Customize_Title_Control',
-//					'args' => array(
-//						'label' => esc_html__('Top Menu', 'inspiro'),
-//						'section' => 'colors',
-//					),
-//				),
-
 				// 4. footer section
 				// hide because was added Accordion UI
 				// todo:clean
@@ -189,7 +107,7 @@ class Inspiro_Color_Design_Config {
 						'priority' => 23,
 					),
 				),
-				// 5. premium single section
+				// 6. premium single section
 				array(
 					'id'           => 'colors_premium',
 					'control_type' => 'Inspiro_Customize_Title_Control',
