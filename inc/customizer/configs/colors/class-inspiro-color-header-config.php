@@ -91,14 +91,14 @@ class Inspiro_Color_Header_Config {
 			// Controls init
 			'control' => array(
 				array(
-					'id'           => 'for_menu_color_options',
+					'id'           => 'for_color_header_options',
 					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
 					'args'         => array(
 						'label'            => esc_html__( 'Header', 'inspiro' ),
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 11,
-						'controls_to_wrap' => 5,
+						'controls_to_wrap' => 2,
 					),
 				),
 				// 1. header settings
@@ -109,10 +109,31 @@ class Inspiro_Color_Header_Config {
 						'label'    => esc_html__( 'Custom Logo Text', 'inspiro' ),
 //						'label'    => esc_html__( 'Site Title Color', 'inspiro' ),
 						'section'  => 'colors',
-						'priority' => 12,
+						'priority' => 11,
+					),
+				),
+				array(
+					'id'           => 'color_menu_hamburger_btn',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Hamburger Icon Color', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
 					),
 				),
 				// 2. top menu section
+				array(
+					'id'           => 'for_color_header_navbar_menu_options',
+					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
+					'args'         => array(
+						'label'            => esc_html__( 'Navigation', 'inspiro' ),
+//						'label'            => esc_html__( 'Primary Navigation', 'inspiro' ),
+						'section'          => 'colors',
+						'settings'         => array(),
+						'priority'         => 12,
+						'controls_to_wrap' => 3,
+					),
+				),
 				array(
 					'id'           => 'color_navbar_menu_background',
 					'control_type' => 'WP_Customize_Color_Control',
@@ -138,16 +159,7 @@ class Inspiro_Color_Header_Config {
 					'args'         => array(
 						'label'    => esc_html__( 'Menu Background on Scroll', 'inspiro' ),
 						'section'  => 'colors',
-						'priority' => 13,
-					),
-				),
-				array(
-					'id'           => 'color_menu_hamburger_btn',
-					'control_type' => 'WP_Customize_Color_Control',
-					'args'         => array(
-						'label'    => esc_html__( 'Hamburger Icon Color', 'inspiro' ),
-						'section'  => 'colors',
-						'priority' => 14,
+						'priority' => 12,
 					),
 				),
 			),

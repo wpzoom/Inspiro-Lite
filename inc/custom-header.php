@@ -72,13 +72,13 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 	 * @see inspiro_custom_header_setup().
 	 */
 	function inspiro_header_style() {
-		$header_text_color               = get_header_textcolor();
-		$header_button_text_color        = inspiro_get_theme_mod( 'header_button_textcolor' );
-		$header_button_text_color_hover  = inspiro_get_theme_mod( 'header_button_textcolor_hover' );
-		$header_button_bg_color_hover    = inspiro_get_theme_mod( 'header_button_bgcolor_hover' );
-		$color_menu_hamburger_icon_color = inspiro_get_theme_mod( 'menu_hamburger_btn_color' );
+		$header_text_color              = get_header_textcolor();
+		$header_button_text_color       = inspiro_get_theme_mod( 'header_button_textcolor' );
+		$header_button_text_color_hover = inspiro_get_theme_mod( 'header_button_textcolor_hover' );
+		$header_button_bg_color_hover   = inspiro_get_theme_mod( 'header_button_bgcolor_hover' );
 
 		$color_header_site_title      = inspiro_get_theme_mod( 'color_header_site_title' );
+		$color_menu_hamburger_btn     = inspiro_get_theme_mod( 'color_menu_hamburger_btn' ); // todo check id name in Premium version
 		$color_menu_background        = inspiro_get_theme_mod( 'color_menu_background' );
 		$color_menu_background_scroll = inspiro_get_theme_mod( 'color-menu-background-scroll' );
 		$color_navbar_menu_background = inspiro_get_theme_mod( 'color_navbar_menu_background' );
@@ -175,9 +175,9 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 
 			<?php endif; ?>
 
-			<?php if ( '#ffffff' !== $color_menu_hamburger_icon_color ) : ?>
+			<?php if ( '#ffffff' !== $color_menu_hamburger_btn ) : ?>
 			.navbar-toggle .icon-bar {
-				background: <?php echo $color_menu_hamburger_icon_color; ?> !important;
+				background: <?php echo $color_menu_hamburger_btn; ?> !important;
 			}
 
 			<?php endif; ?>
