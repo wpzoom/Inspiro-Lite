@@ -30,6 +30,16 @@ class Inspiro_Color_Header_Config
 			// Settings init
 			'setting' => array(
 				// 1. header settings
+				array(
+					'id' => 'color_header_site_title',
+					'args' => array(
+						'theme_supports' => array('custom-header', 'header-text'),
+						'default' => '#ffffff',
+						'transport' => 'refresh',
+						'sanitize_callback' => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
 				// 2. top menu settings
 				array(
 					'id' => 'color_menu_background',
@@ -51,7 +61,7 @@ class Inspiro_Color_Header_Config
 					),
 				),
 				array(
-					'id' => 'menu_hamburger_btn_color',
+					'id' => 'color_menu_hamburger_btn',
 					'args' => array(
 						'theme_supports' => array('custom-header'),
 						'default' => '#ffffff',
@@ -64,6 +74,15 @@ class Inspiro_Color_Header_Config
 			// Controls init
 			'control' => array(
 				// 1. header settings
+				array(
+					'id' => 'color_header_site_title',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args' => array(
+						'label' => esc_html__('Site title', 'inspiro'),
+						'section' => 'colors',
+						'priority' => 12,
+					),
+				),
 				// 2. top menu section
 				array(
 					'id' => 'for_menu_color_options',
@@ -73,7 +92,7 @@ class Inspiro_Color_Header_Config
 						'section' => 'colors',
 						'settings' => array(),
 						'priority' => 11,
-						'controls_to_wrap' => 3,
+						'controls_to_wrap' => 4,
 					),
 				),
 				array(
@@ -95,7 +114,7 @@ class Inspiro_Color_Header_Config
 					),
 				),
 				array(
-					'id' => 'menu_hamburger_btn_color',
+					'id' => 'color_menu_hamburger_btn',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args' => array(
 						'label' => esc_html__('Hamburger Icon Color', 'inspiro'),
