@@ -58,7 +58,7 @@ class Inspiro_Color_Sidebar_Widgets_Config {
 				array(
 					'id'   => 'color_sidebar_widgets_text',
 					'args' => array(
-						'default'           => '#101010',
+						'default'           => '#ffffff',
 						'transport'         => 'postMessage',
 						'sanitize_callback' => 'sanitize_hex_color',
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
