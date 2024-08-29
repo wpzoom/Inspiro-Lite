@@ -2,11 +2,11 @@
 /**
  * Custom header implementation
  *
- * @link https://codex.wordpress.org/Custom_Headers
+ * @link       https://codex.wordpress.org/Custom_Headers
  *
- * @package Inspiro
+ * @package    Inspiro
  * @subpackage Inspiro_Lite
- * @since Inspiro 1.0.0
+ * @since      Inspiro 1.0.0
  */
 
 /**
@@ -20,17 +20,17 @@ function inspiro_custom_header_setup() {
 		/**
 		 * Filters Inspiro Lite custom-header support arguments.
 		 *
-		 * @param array $args {
-		 *     An array of custom-header support arguments.
+		 * @param   array  $args              {
+		 *                                    An array of custom-header support arguments.
 		 *
-		 * @type string $default -image    Default image of the header.
-		 * @type int $width Width in pixels of the custom header image. Default 954.
-		 * @type int $height Height in pixels of the custom header image. Default 1300.
-		 * @type string $flex -height      Flex support for height of header.
-		 * @type string $video Video support for header.
-		 * @type string $wp -head-callback Callback function used to styles the header image and text
+		 * @type string    $default           -image    Default image of the header.
+		 * @type int       $width             Width in pixels of the custom header image. Default 954.
+		 * @type int       $height            Height in pixels of the custom header image. Default 1300.
+		 * @type string    $flex              -height      Flex support for height of header.
+		 * @type string    $video             Video support for header.
+		 * @type string    $wp                -head-callback Callback function used to styles the header image and text
 		 *                                    displayed on the blog.
-		 * }
+		 *                                    }
 		 * @since Inspiro 1.0.0
 		 *
 		 */
@@ -83,12 +83,15 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$color_menu_background_scroll = inspiro_get_theme_mod( 'color-menu-background-scroll' );
 		$color_navbar_menu_background = inspiro_get_theme_mod( 'color_navbar_menu_background' );
 
-		$color_sidebar_widgets_background  = inspiro_get_theme_mod( 'color_sidebar_widgets_background' );
-		$color_sidebar_widgets_title = inspiro_get_theme_mod( 'color_sidebar_widgets_title' );
-		$color_sidebar_widgets_text  = inspiro_get_theme_mod( 'color_sidebar_widgets_text' );
+		$color_sidebar_widgets_background = inspiro_get_theme_mod( 'color_sidebar_widgets_background' );
+		$color_sidebar_widgets_title      = inspiro_get_theme_mod( 'color_sidebar_widgets_title' );
+		$color_sidebar_widgets_text       = inspiro_get_theme_mod( 'color_sidebar_widgets_text' );
+		$color_sidebar_widgets_link       = inspiro_get_theme_mod( 'color_sidebar_widgets_link' );
 
 		$color_footer_background = inspiro_get_theme_mod( 'color_footer_background' );
 		$color_footer_text       = inspiro_get_theme_mod( 'color_footer_text' );
+
+//		var_dump($color_sidebar_widgets_title);
 
 		?>
 		<style id="inspiro-custom-header-styles" type="text/css">
@@ -182,32 +185,53 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 
 			<?php if ( '#ffffff' !== $color_menu_hamburger_btn ) : ?>
 			.navbar-toggle .icon-bar {
-				background: <?php echo $color_menu_hamburger_btn; ?> !important;
+				background: <?php echo $color_menu_hamburger_btn; ?>;
 			}
 
 			<?php endif; ?>
 
 			<?php if ( '#ffffff' !== $color_header_site_title && inspiro_get_theme_mod( 'custom_logo_text' ) !== '' ) : ?>
 			.custom-logo-text {
-				color: <?php echo $color_header_site_title; ?> !important;
+				color: <?php echo $color_header_site_title; ?>;
 			}
 
 			<?php endif; ?>
 
 			<?php if ( '' !== $color_navbar_menu_background ) : ?>
 			.primary-menu-wrapper {
-				background: <?php echo $color_navbar_menu_background; ?> !important;
+				background: <?php echo $color_navbar_menu_background; ?>;
 			}
 
 			<?php endif; ?>
 
 			<?php if ( '#101010' !== $color_sidebar_widgets_background ) : ?>
 			.side-nav__scrollable-container {
-				background-color: <?php echo $color_sidebar_widgets_background; ?> !important;
+				background-color: <?php echo $color_sidebar_widgets_background; ?>;
 			}
 
 			<?php endif; ?>
 
+			<?php if ( '#ffffff' !== $color_sidebar_widgets_title  ) : ?>
+			.side-nav h2.wp-block-heading,
+			.side-nav .widget .title {
+				color: <?php echo $color_sidebar_widgets_title; ?>;
+			}
+
+			<?php endif; ?>
+
+			<?php if ( '#ffffff' !== $color_sidebar_widgets_text  ) : ?>
+			.side-nav__scrollable-container {
+				color: <?php echo $color_sidebar_widgets_text; ?>;
+			}
+
+			<?php endif; ?>
+
+			<?php if ( '#0bb4aa' !== $color_sidebar_widgets_link  ) : ?>
+			:root :where(.side-nav__wrap a:where(:not(.wp-element-button))) {
+				color: <?php echo $color_sidebar_widgets_link; ?>;
+			}
+
+			<?php endif; ?>
 		</style>
 		<?php
 	}
@@ -216,7 +240,7 @@ endif; // End of inspiro_header_style().
 /**
  * Customize video play/pause button in the custom header.
  *
- * @param array $settings Video settings.
+ * @param   array  $settings  Video settings.
  *
  * @return array The filtered video settings.
  */
@@ -266,8 +290,8 @@ add_action( 'wp_footer', 'inspiro_maybe_enqueue_vimeo_handler' );
 /**
  * Filter extenal header video settting validity
  *
- * @param boolean $validity Validity.
- * @param string $value Video setting value.
+ * @param   boolean  $validity  Validity.
+ * @param   string   $value     Video setting value.
  *
  * @return boolean
  */

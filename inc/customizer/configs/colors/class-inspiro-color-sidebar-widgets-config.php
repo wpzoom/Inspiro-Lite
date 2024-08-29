@@ -49,7 +49,7 @@ class Inspiro_Color_Sidebar_Widgets_Config {
 				array(
 					'id'   => 'color_sidebar_widgets_title',
 					'args' => array(
-						'default'           => '#101010',
+						'default'           => '#ffffff',
 						'transport'         => 'postMessage',
 						'sanitize_callback' => 'sanitize_hex_color',
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
@@ -59,6 +59,15 @@ class Inspiro_Color_Sidebar_Widgets_Config {
 					'id'   => 'color_sidebar_widgets_text',
 					'args' => array(
 						'default'           => '#101010',
+						'transport'         => 'postMessage',
+						'sanitize_callback' => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
+				array(
+					'id'   => 'color_sidebar_widgets_link',
+					'args' => array(
+						'default'           => '#0bb4aa',
 						'transport'         => 'postMessage',
 						'sanitize_callback' => 'sanitize_hex_color',
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
@@ -76,7 +85,7 @@ class Inspiro_Color_Sidebar_Widgets_Config {
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 20,
-						'controls_to_wrap' => 3,
+						'controls_to_wrap' => 4,
 					),
 				),
 				array(
@@ -106,7 +115,15 @@ class Inspiro_Color_Sidebar_Widgets_Config {
 						'priority' => 21,
 					),
 				),
-
+				array(
+					'id'           => 'color_sidebar_widgets_link',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Widget Link', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 21,
+					),
+				),
 			),
 		);
 	}
