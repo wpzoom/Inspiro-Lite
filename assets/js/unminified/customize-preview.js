@@ -59,15 +59,19 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 }
 
 ( function ( $ ) {
-	// Site title and description.
-	wp.customize( 'header_site_title', function ( value ) {
+	// Header section
+	// sticky header background color
+	wp.customize( 'color-menu-background-scroll', function ( value ) {
 		value.bind( function ( to ) {
-			$( '.site-title a' ).text( to );
-		} );
-	} );
-	wp.customize( 'header_site_description', function ( value ) {
-		value.bind( function ( to ) {
-			$( '.site-description' ).text( to );
+			if ( 'blank' === to ) {
+				$( '.headroom--not-top .navbar' ).css( {
+					background: 'rgba(0,0,0,.9)',
+				} );
+			} else {
+				$( '.headroom--not-top .navbar' ).css( {
+					background: to,
+				} );
+			}
 		} );
 	} );
 	wp.customize( 'custom_logo_text', function ( value ) {
@@ -77,24 +81,24 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 	} );
 	// custom logo text color
 	wp.customize('color_header_custom_logo_text', function (value) {
-		value.bind(function (newValue) {
-			console.log('New value:', newValue); // Debugging statement
-			// $('.custom-logo-text').css('color', newValue);
+		value.bind(function (to) {
+			$('.custom-logo-text').css('color', to);
 		});
 	});
-
-	wp.customize( 'header_button_title', function ( value ) {
+	// menu background
+	wp.customize( 'color_menu_background', function ( value ) {
 		value.bind( function ( to ) {
-			if ( to === '' ) {
-				$( '.custom-header-button' ).css( 'display', 'none' );
+			if ( 'blank' === to ) {
+				$( '.navbar' ).css( {
+					color: '#101010',
+				} );
 			} else {
-				$( '.custom-header-button' )
-					.css( 'display', 'inline-block' )
-					.text( to );
+				$( '.navbar' ).css( {
+					color: to,
+				} );
 			}
 		} );
 	} );
-
 	wp.customize( 'header_search_show', function ( value ) {
 		value.bind( function ( to ) {
 			if ( to === true ) {
@@ -105,6 +109,7 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 		} );
 	} );
 
+	// Hero section - Site title and description
 	wp.customize( 'hero_enable', function ( value ) {
 		value.bind( function ( to ) {
 			if ( to === true ) {
@@ -116,7 +121,27 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 			}
 		} );
 	} );
-
+	wp.customize( 'header_site_title', function ( value ) {
+		value.bind( function ( to ) {
+			$( '.site-title a' ).text( to );
+		} );
+	} );
+	wp.customize( 'header_site_description', function ( value ) {
+		value.bind( function ( to ) {
+			$( '.site-description' ).text( to );
+		} );
+	} );
+	wp.customize( 'header_button_title', function ( value ) {
+		value.bind( function ( to ) {
+			if ( to === '' ) {
+				$( '.custom-header-button' ).css( 'display', 'none' );
+			} else {
+				$( '.custom-header-button' )
+					.css( 'display', 'inline-block' )
+					.text( to );
+			}
+		} );
+	} );
 	wp.customize( 'overlay_show', function ( value ) {
 		value.bind( function ( to ) {
 			if ( to === true ) {
@@ -130,8 +155,7 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 			}
 		} );
 	} );
-
-	// Header text color.
+	// hero text color.
 	wp.customize( 'header_textcolor', function ( value ) {
 		value.bind( function ( to ) {
 			if ( 'blank' === to ) {
@@ -160,8 +184,7 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 			}
 		} );
 	} );
-
-	// Header button text color
+	// hero button text color
 	wp.customize( 'header_button_textcolor', function ( value ) {
 		value.bind( function ( to ) {
 			if ( 'blank' === to ) {
@@ -175,21 +198,6 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 			}
 		} );
 	} );
-
-    // Menu background
-    wp.customize( 'color_menu_background', function ( value ) {
-        value.bind( function ( to ) {
-            if ( 'blank' === to ) {
-                $( '.navbar' ).css( {
-                    color: '#101010',
-                } );
-            } else {
-                $( '.navbar' ).css( {
-                    color: to,
-                } );
-            }
-        } );
-    } );
 
     // Footer background
     wp.customize( 'color_footer_background', function ( value ) {
@@ -205,8 +213,7 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
             }
         } );
     } );
-
-    // Footer text color
+    // footer text color
     wp.customize( 'color_footer_text', function ( value ) {
         value.bind( function ( to ) {
             if ( 'blank' === to ) {
@@ -220,21 +227,6 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
             }
         } );
     } );
-
-	// Sticky Menu background Color
-	wp.customize( 'color-menu-background-scroll', function ( value ) {
-		value.bind( function ( to ) {
-			if ( 'blank' === to ) {
-				$( '.headroom--not-top .navbar' ).css( {
-					background: 'rgba(0,0,0,.9)',
-				} );
-			} else {
-				$( '.headroom--not-top .navbar' ).css( {
-					background: to,
-				} );
-			}
-		} );
-	} );
 
 	// Color scheme
 	wp.customize( 'colorscheme', function ( value ) {
@@ -521,7 +513,6 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 					);
 					// Remove old.
 					$( 'style#' + control + '-' + cssProperty ).remove();
-
 					$( 'head' ).append( style );
 				} );
 			} );
