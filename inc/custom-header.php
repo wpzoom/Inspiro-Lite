@@ -72,22 +72,26 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 	 * @see inspiro_custom_header_setup().
 	 */
 	function inspiro_header_style() {
-		$header_text_color              = get_header_textcolor();
+		// header
+		$color_header_custom_logo_text = inspiro_get_theme_mod( 'color_header_custom_logo_text' );
+		$color_menu_hamburger_btn      = inspiro_get_theme_mod( 'color_menu_hamburger_btn' ); // todo check id name in Premium version
+		$color_menu_background         = inspiro_get_theme_mod( 'color_menu_background' );
+		$color_menu_background_scroll  = inspiro_get_theme_mod( 'color-menu-background-scroll' );
+		$color_navbar_menu_background  = inspiro_get_theme_mod( 'color_navbar_menu_background' );
+
+		// hero section
+		$header_text_color              = get_header_textcolor(); //todo: ?
 		$header_button_text_color       = inspiro_get_theme_mod( 'header_button_textcolor' );
 		$header_button_text_color_hover = inspiro_get_theme_mod( 'header_button_textcolor_hover' );
 		$header_button_bg_color_hover   = inspiro_get_theme_mod( 'header_button_bgcolor_hover' );
 
-		$color_header_site_title      = inspiro_get_theme_mod( 'color_header_site_title' );
-		$color_menu_hamburger_btn     = inspiro_get_theme_mod( 'color_menu_hamburger_btn' ); // todo check id name in Premium version
-		$color_menu_background        = inspiro_get_theme_mod( 'color_menu_background' );
-		$color_menu_background_scroll = inspiro_get_theme_mod( 'color-menu-background-scroll' );
-		$color_navbar_menu_background = inspiro_get_theme_mod( 'color_navbar_menu_background' );
-
+		// sidebar
 		$color_sidebar_widgets_background = inspiro_get_theme_mod( 'color_sidebar_widgets_background' );
 		$color_sidebar_widgets_title      = inspiro_get_theme_mod( 'color_sidebar_widgets_title' );
 		$color_sidebar_widgets_text       = inspiro_get_theme_mod( 'color_sidebar_widgets_text' );
 		$color_sidebar_widgets_link       = inspiro_get_theme_mod( 'color_sidebar_widgets_link' );
 
+		// footer
 		$color_footer_background = inspiro_get_theme_mod( 'color_footer_background' );
 		$color_footer_text       = inspiro_get_theme_mod( 'color_footer_text' );
 
@@ -188,9 +192,9 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 
 			<?php endif; ?>
 
-			<?php if ( '#ffffff' !== $color_header_site_title && inspiro_get_theme_mod( 'custom_logo_text' ) !== '' ) : ?>
+			<?php if ( '#ffffff' !== $color_header_custom_logo_text && inspiro_get_theme_mod( 'custom_logo_text' ) !== '' ) : ?>
 			a.custom-logo-text {
-				color: <?php echo $color_header_site_title; ?>;
+				color: <?php echo $color_header_custom_logo_text; ?>;
 			}
 
 			<?php endif; ?>
