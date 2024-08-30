@@ -40,7 +40,7 @@ class Inspiro_Color_Sidebar_Widgets_Config {
 					'id'   => 'color_sidebar_widgets_background',
 					'args' => array(
 						'default'           => '#101010',
-						'transport'         => 'postMessage',
+						'transport'         => 'refresh',
 						'sanitize_callback' => 'sanitize_hex_color',
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 
@@ -50,7 +50,7 @@ class Inspiro_Color_Sidebar_Widgets_Config {
 					'id'   => 'color_sidebar_widgets_title',
 					'args' => array(
 						'default'           => '#ffffff',
-						'transport'         => 'postMessage',
+						'transport'         => 'refresh',
 						'sanitize_callback' => 'sanitize_hex_color',
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
@@ -59,7 +59,7 @@ class Inspiro_Color_Sidebar_Widgets_Config {
 					'id'   => 'color_sidebar_widgets_text',
 					'args' => array(
 						'default'           => '#ffffff',
-						'transport'         => 'postMessage',
+						'transport'         => 'refresh',
 						'sanitize_callback' => 'sanitize_hex_color',
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
@@ -68,7 +68,7 @@ class Inspiro_Color_Sidebar_Widgets_Config {
 					'id'   => 'color_sidebar_widgets_link',
 					'args' => array(
 						'default'           => '#0bb4aa',
-						'transport'         => 'postMessage',
+						'transport'         => 'refresh',
 						'sanitize_callback' => 'sanitize_hex_color',
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),

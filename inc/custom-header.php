@@ -91,8 +91,6 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$color_footer_background = inspiro_get_theme_mod( 'color_footer_background' );
 		$color_footer_text       = inspiro_get_theme_mod( 'color_footer_text' );
 
-		var_dump($color_sidebar_widgets_text);
-
 		?>
 		<style id="inspiro-custom-header-styles" type="text/css">
 			<?php
@@ -191,7 +189,7 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 			<?php endif; ?>
 
 			<?php if ( '#ffffff' !== $color_header_site_title && inspiro_get_theme_mod( 'custom_logo_text' ) !== '' ) : ?>
-			.custom-logo-text {
+			a.custom-logo-text {
 				color: <?php echo $color_header_site_title; ?>;
 			}
 

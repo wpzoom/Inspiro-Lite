@@ -39,6 +39,16 @@ class Inspiro_Color_Hero_Config {
 				// 2. top menu settings
 				// hero section
 				array(
+					'id'   => 'color_hero_site_title',
+					'args' => array(
+						'theme_supports'       => array( 'custom-header', 'header-text' ),
+						'default'              => '#ffffff',
+						'transport'            => 'postMessage',
+						'sanitize_callback'    => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
+				array(
 					'id'   => 'header_button_textcolor',
 					'args' => array(
 						'theme_supports'       => array( 'custom-header', 'header-text' ),
@@ -80,7 +90,16 @@ class Inspiro_Color_Hero_Config {
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 15,
-						'controls_to_wrap' => 4,
+						'controls_to_wrap' => 5,
+					),
+				),
+				array(
+					'id'           => 'color_hero_site_title',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Hero Title Text Color', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 17,
 					),
 				),
 				array(

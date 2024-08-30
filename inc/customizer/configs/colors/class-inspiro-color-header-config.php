@@ -37,11 +37,11 @@ class Inspiro_Color_Header_Config {
 			'setting' => array(
 				// 1. header settings
 				array(
-					'id'   => 'color_header_site_title',
+					'id'   => 'color_header_custom_logo_text',
 					'args' => array(
 						'theme_supports'       => array( 'custom-header', 'header-text' ),
 						'default'              => '#ffffff',
-						'transport'            => 'refresh',
+						'transport'            => 'postMessage',
 						'sanitize_callback'    => 'sanitize_hex_color',
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
@@ -103,7 +103,7 @@ class Inspiro_Color_Header_Config {
 				),
 				// 1. header settings
 				array(
-					'id'           => 'color_header_site_title',
+					'id'           => 'color_header_custom_logo_text',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
 						'label'    => esc_html__( 'Custom Logo Text', 'inspiro' ),
