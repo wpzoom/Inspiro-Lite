@@ -204,7 +204,30 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 		} );
 	} );
 
-    // Footer background
+	// Sidebar widgets section
+	wp.customize('color_sidebar_widgets_background', function (value) {
+		value.bind(function (to) {
+			$('.side-nav__scrollable-container').css('background', to);
+		});
+	});
+	wp.customize('color_sidebar_widgets_text', function (value) {
+		value.bind(function (to) {
+			$('.side-nav__scrollable-container').css('color', to);
+		});
+	});
+	wp.customize('color_sidebar_widgets_title', function (value) {
+		value.bind(function (to) {
+			$('.side-nav h2.wp-block-heading, .side-nav .widget .title').css('color', to);
+		});
+	});
+	wp.customize('color_sidebar_widgets_link', function (value) {
+		value.bind(function (to) {
+			$(':root :where(.side-nav__wrap a:where(:not(.wp-element-button)))').css('color', to);
+		});
+	});
+
+
+	// Footer background
     wp.customize( 'color_footer_background', function ( value ) {
         value.bind( function ( to ) {
             if ( 'blank' === to ) {

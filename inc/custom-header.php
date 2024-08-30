@@ -208,7 +208,7 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 
 			<?php if ( '#101010' !== $color_sidebar_widgets_background ) : ?>
 			.side-nav__scrollable-container {
-				background-color: <?php echo $color_sidebar_widgets_background; ?>;
+				background: <?php echo $color_sidebar_widgets_background; ?>;
 			}
 
 			<?php endif; ?>
