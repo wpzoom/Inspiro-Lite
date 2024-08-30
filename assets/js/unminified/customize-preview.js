@@ -108,6 +108,11 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 			}
 		} );
 	} );
+	wp.customize('color_menu_hamburger_btn', function (value) {
+		value.bind(function (to) {
+			$('.navbar-toggle .icon-bar').css('background', to);
+		});
+	});
 
 	// Hero section - Site title and description
 	wp.customize( 'hero_enable', function ( value ) {
