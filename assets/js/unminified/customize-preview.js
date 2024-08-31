@@ -260,6 +260,12 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
             }
         } );
     } );
+	wp.customize( 'color_footer_copyright_text', function ( value ) {
+		value.bind(function (to) {
+			console.log('Este: ' + to);
+			$('.site-footer .copyright').css('color', to);
+		});
+	} );
 
 	// Color scheme
 	wp.customize( 'colorscheme', function ( value ) {

@@ -94,7 +94,8 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		// footer
 		$color_footer_background = inspiro_get_theme_mod( 'color_footer_background' );
 		$color_footer_text       = inspiro_get_theme_mod( 'color_footer_text' );
-		
+		$color_footer_copyright_text       = inspiro_get_theme_mod( 'color_footer_copyright_text' );
+
 		?>
 		<style id="inspiro-custom-header-styles" type="text/css">
 			<?php
@@ -231,6 +232,14 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 			<?php if ( '#0bb4aa' !== $color_sidebar_widgets_link  ) : ?>
 			:root :where(.side-nav__wrap a:where(:not(.wp-element-button))) {
 				color: <?php echo $color_sidebar_widgets_link; ?>;
+			}
+
+			<?php endif; ?>
+
+
+			<?php if ( '#ffffff' !== $color_footer_copyright_text  ) : ?>
+			.site-footer .copyright {
+				color: <?php echo $color_footer_copyright_text; ?>;
 			}
 
 			<?php endif; ?>

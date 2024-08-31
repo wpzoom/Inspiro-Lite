@@ -56,6 +56,16 @@ class Inspiro_Color_Footer_Config {
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
 				),
+				array(
+					'id'   => 'color_footer_copyright_text',
+					'args' => array(
+						'theme_supports'       => array( 'custom-header', 'header-text' ),
+						'default'              => '#ffffff',
+						'transport'            => 'postMessage',
+						'sanitize_callback'    => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
 				// 5. premium single section
 				array(
 					'id'   => 'colors_premium',
@@ -86,7 +96,7 @@ class Inspiro_Color_Footer_Config {
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 22,
-						'controls_to_wrap' => 2,
+						'controls_to_wrap' => 3,
 					),
 				),
 				array(
@@ -102,9 +112,18 @@ class Inspiro_Color_Footer_Config {
 					'id'           => 'color_footer_text',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
-						'label'    => esc_html__( 'Text Color', 'inspiro' ),
+						'label'    => esc_html__( 'Footer Text Color', 'inspiro' ),
 						'section'  => 'colors',
-						'priority' => 23,
+						'priority' => 22,
+					),
+				),
+				array(
+					'id'           => 'color_footer_copyright_text',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Copyright Text Color', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 22,
 					),
 				),
 				// 6. premium single section
