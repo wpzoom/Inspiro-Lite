@@ -41,7 +41,7 @@ class Inspiro_Color_Footer_Config {
 					'args' => array(
 						'theme_supports'       => array( 'custom-header', 'header-text' ),
 						'default'              => '#101010',
-						'transport'            => 'refresh',
+						'transport'            => 'postMessage',
 						'sanitize_callback'    => 'sanitize_hex_color',
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
@@ -51,7 +51,7 @@ class Inspiro_Color_Footer_Config {
 					'args' => array(
 						'theme_supports'       => array( 'custom-header', 'header-text' ),
 						'default'              => '#78787f',
-						'transport'            => 'refresh',
+						'transport'            => 'postMessage',
 						'sanitize_callback'    => 'sanitize_hex_color',
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
