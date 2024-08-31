@@ -94,7 +94,7 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		// footer
 		$color_footer_background = inspiro_get_theme_mod( 'color_footer_background' );
 		$color_footer_text       = inspiro_get_theme_mod( 'color_footer_text' );
-
+		
 		?>
 		<style id="inspiro-custom-header-styles" type="text/css">
 			<?php

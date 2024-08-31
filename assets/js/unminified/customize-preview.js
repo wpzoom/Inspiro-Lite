@@ -85,20 +85,25 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 			$('.custom-logo-text').css('color', to);
 		});
 	});
-	// menu background
-	wp.customize( 'color_menu_background', function ( value ) {
-		value.bind( function ( to ) {
-			if ( 'blank' === to ) {
-				$( '.navbar' ).css( {
-					color: '#101010',
-				} );
-			} else {
-				$( '.navbar' ).css( {
-					color: to,
-				} );
-			}
-		} );
-	} );
+	// header background
+	// wp.customize( 'color_menu_background', function ( value ) {
+	// 	// value.bind(function (to) {
+	// 	// 	$('.navbar').css('background-color', to);
+	// 	// });
+	//
+	// 	// seems this option to change header text color was for another option
+	// 	value.bind( function ( to ) {
+	// 		if ( 'blank' === to ) {
+	// 			$( '.navbar' ).css( {
+	// 				color: '#101010',
+	// 			} );
+	// 		} else {
+	// 			$( '.navbar' ).css( {
+	// 				color: to,
+	// 			} );
+	// 		}
+	// 	} );
+	// } );
 	wp.customize( 'header_search_show', function ( value ) {
 		value.bind( function ( to ) {
 			if ( to === true ) {
