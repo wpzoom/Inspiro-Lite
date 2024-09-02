@@ -62,11 +62,10 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 	// General section
 	wp.customize('color_general_h_tags', function (value) {
 		value.bind(function (to) {
-			// todo check if it's ok to make this type of verify
-			if ('' !== to)
+			if (to !== '')
 				$('h1, h2, h3, h4, h5, h6').css({
-				color: to,
-			});
+					color: to,
+				});
 		});
 	});
 
@@ -74,7 +73,7 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 	// sticky header background color
 	wp.customize('color-menu-background-scroll', function (value) {
 		value.bind(function (to) {
-			if ('blank' === to) { // restore to default
+			if (to === 'blank') { // restore to default
 				$('.headroom--not-top .navbar').css({
 					background: 'rgba(0,0,0,.9)',
 				});
@@ -179,7 +178,7 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 	// hero text color.
 	wp.customize('header_textcolor', function (value) {
 		value.bind(function (to) {
-			if ('blank' === to) {
+			if (to === 'blank') {
 				$('.site-title, .site-description').css({
 					clip: 'rect(1px, 1px, 1px, 1px)',
 					position: 'absolute',
@@ -208,7 +207,7 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 	// hero button text color
 	wp.customize('header_button_textcolor', function (value) {
 		value.bind(function (to) {
-			if ('blank' === to) {
+			if (to === 'blank') {
 				$('.custom-header-button').css({
 					color: '#ffffff',
 				});
@@ -246,7 +245,7 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 	// Footer background
 	wp.customize('color_footer_background', function (value) {
 		value.bind(function (to) {
-			if ('blank' === to) {
+			if (to === 'blank') {
 				$('.site-footer').css({
 					background: '#101010',
 				});
@@ -260,7 +259,7 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 	// footer text color
 	wp.customize('color_footer_text', function (value) {
 		value.bind(function (to) {
-			if ('blank' === to) {
+			if (to === 'blank') {
 				$('.site-footer').css({
 					color: '#78787f',
 				});
@@ -273,7 +272,6 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 	});
 	wp.customize('color_footer_copyright_text', function (value) {
 		value.bind(function (to) {
-			console.log('Este: ' + to);
 			$('.site-footer .copyright').css('color', to);
 		});
 	});
