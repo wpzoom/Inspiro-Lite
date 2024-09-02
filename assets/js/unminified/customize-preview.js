@@ -90,16 +90,31 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 			}
 		});
 	});
-	wp.customize('color_general_entry_title', function (value) {
+	wp.customize('color_general_entry_summary_text', function (value) {
 		value.bind(function (to) {
 			if (to !== '') {
 				// Apply the selected color to heading tags
-				$('.entry-title').css({
+				$('.entry-summary > p').css({
 					color: to,
 				});
 			} else {
 				// Clear the color to revert to the default
-				$('.entry-title').css({
+				$('.entry-summary > p').css({
+					color: to,
+				});
+			}
+		});
+	});
+	wp.customize('color_general_entry_content_text', function (value) {
+		value.bind(function (to) {
+			if (to !== '') {
+				// Apply the selected color to heading tags
+				$('.entry-content > p').css({
+					color: to,
+				});
+			} else {
+				// Clear the color to revert to the default
+				$('.entry-content > p').css({
 					color: to,
 				});
 			}

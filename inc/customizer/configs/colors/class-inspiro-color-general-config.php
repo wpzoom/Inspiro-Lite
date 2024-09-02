@@ -54,6 +54,24 @@ class Inspiro_Color_General_Config {
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
 				),
+				array(
+					'id'   => 'color_general_entry_summary_text',
+					'args' => array(
+						'default'              => '',
+						'transport'            => 'postMessage',
+						'sanitize_callback'    => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
+				array(
+					'id'   => 'color_general_entry_content_text',
+					'args' => array(
+						'default'              => '',
+						'transport'            => 'postMessage',
+						'sanitize_callback'    => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
 			),
 			// Controls init
 			'control' => array(
@@ -65,7 +83,7 @@ class Inspiro_Color_General_Config {
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 11,
-						'controls_to_wrap' => 3,
+						'controls_to_wrap' => 5,
 					),
 				),
 				array(
@@ -92,6 +110,24 @@ class Inspiro_Color_General_Config {
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
 						'label'       => esc_html__( 'Entry title', 'inspiro' ),
+						'section'     => 'colors',
+						'priority'    => 11,
+					),
+				),
+				array(
+					'id'           => 'color_general_entry_summary_text',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'       => esc_html__( 'Summary text content', 'inspiro' ),
+						'section'     => 'colors',
+						'priority'    => 11,
+					),
+				),
+				array(
+					'id'           => 'color_general_entry_content_text',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'       => esc_html__( 'Entry text content', 'inspiro' ),
 						'section'     => 'colors',
 						'priority'    => 11,
 					),

@@ -73,9 +73,11 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 	 */
 	function inspiro_header_style() {
 		// general
-		$color_general_h_tags = inspiro_get_theme_mod( 'color_general_h_tags' );
-		$color_general_page_title = inspiro_get_theme_mod( 'color_general_page_title' );
-		$color_general_entry_title = inspiro_get_theme_mod( 'color_general_entry_title' );
+		$color_general_h_tags             = inspiro_get_theme_mod( 'color_general_h_tags' );
+		$color_general_page_title         = inspiro_get_theme_mod( 'color_general_page_title' );
+		$color_general_entry_title        = inspiro_get_theme_mod( 'color_general_entry_title' );
+		$color_general_entry_summary_text = inspiro_get_theme_mod( 'color_general_entry_summary_text' );
+		$color_general_entry_content_text = inspiro_get_theme_mod( 'color_general_entry_content_text' );
 
 		// header
 		$color_header_custom_logo_text = inspiro_get_theme_mod( 'color_header_custom_logo_text' );
@@ -97,9 +99,9 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$color_sidebar_widgets_link       = inspiro_get_theme_mod( 'color_sidebar_widgets_link' );
 
 		// footer
-		$color_footer_background = inspiro_get_theme_mod( 'color_footer_background' );
-		$color_footer_text       = inspiro_get_theme_mod( 'color_footer_text' );
-		$color_footer_copyright_text       = inspiro_get_theme_mod( 'color_footer_copyright_text' );
+		$color_footer_background     = inspiro_get_theme_mod( 'color_footer_background' );
+		$color_footer_text           = inspiro_get_theme_mod( 'color_footer_text' );
+		$color_footer_copyright_text = inspiro_get_theme_mod( 'color_footer_copyright_text' );
 
 		?>
 		<style id="inspiro-custom-header-styles" type="text/css">
@@ -259,6 +261,7 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 			.page-title {
 				color: <?php echo $color_general_page_title; ?>;
 			}
+
 			<?php endif; ?>
 
 			<?php if ( '' !== $color_general_entry_title  ) : ?>
@@ -267,6 +270,22 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 			body.colors-dark .entry-title {
 				color: <?php echo $color_general_entry_title; ?>;
 			}
+
+			<?php endif; ?>
+
+
+			<?php if ( '' !== $color_general_entry_summary_text  ) : ?>
+			.entry-summary > p {
+				color: <?php echo $color_general_entry_summary_text; ?>;
+			}
+
+			<?php endif; ?>
+
+			<?php if ( '' !== $color_general_entry_content_text  ) : ?>
+			.entry-content > p {
+				color: <?php echo $color_general_entry_content_text; ?>;
+			}
+
 			<?php endif; ?>
 
 		</style>
