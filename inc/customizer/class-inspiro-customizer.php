@@ -116,9 +116,9 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 					'post-options',
 				),
 				'colors'         => array(
+					'color-general',
 					'color-scheme',
 					'color-header',
-//					'header-textcolor',
 //					'header-button-color',
 					'color-hero',
 					'color-footer',

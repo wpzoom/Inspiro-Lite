@@ -32,6 +32,7 @@ class Inspiro_Color_Header_Config {
 	 * 6. premium single section
  */
 	public static function config() {
+		// todo: check if array( 'custom-header', 'header-text' ) is needed
 		return array(
 			// Settings init
 			'setting' => array(

@@ -72,6 +72,9 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 	 * @see inspiro_custom_header_setup().
 	 */
 	function inspiro_header_style() {
+		// general
+		$color_general_h_tags = inspiro_get_theme_mod( 'color_general_h_tags' );
+
 		// header
 		$color_header_custom_logo_text = inspiro_get_theme_mod( 'color_header_custom_logo_text' );
 		$color_menu_hamburger_btn      = inspiro_get_theme_mod( 'color_menu_hamburger_btn' ); // todo check id name in Premium version
@@ -96,6 +99,7 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$color_footer_text       = inspiro_get_theme_mod( 'color_footer_text' );
 		$color_footer_copyright_text       = inspiro_get_theme_mod( 'color_footer_copyright_text' );
 
+		var_dump($color_general_h_tags);
 		?>
 		<style id="inspiro-custom-header-styles" type="text/css">
 			<?php
@@ -236,10 +240,16 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 
 			<?php endif; ?>
 
-
 			<?php if ( '#ffffff' !== $color_footer_copyright_text  ) : ?>
 			.site-footer .copyright {
 				color: <?php echo $color_footer_copyright_text; ?>;
+			}
+
+			<?php endif; ?>
+
+			<?php if ( '' !== $color_general_h_tags  ) : ?>
+			h1, h2, h3, h4, h5, h6 {
+				color: <?php echo $color_general_h_tags; ?>;
 			}
 
 			<?php endif; ?>
