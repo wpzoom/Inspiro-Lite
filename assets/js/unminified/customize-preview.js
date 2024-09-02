@@ -75,6 +75,36 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 			}
 		});
 	});
+	wp.customize('color_general_page_title', function (value) {
+		value.bind(function (to) {
+			if (to !== '') {
+				// Apply the selected color to heading tags
+				$('.page-title').css({
+					color: to,
+				});
+			} else {
+				// Clear the color to revert to the default
+				$('.page-title').css({
+					color: to,
+				});
+			}
+		});
+	});
+	wp.customize('color_general_entry_title', function (value) {
+		value.bind(function (to) {
+			if (to !== '') {
+				// Apply the selected color to heading tags
+				$('.entry-title').css({
+					color: to,
+				});
+			} else {
+				// Clear the color to revert to the default
+				$('.entry-title').css({
+					color: to,
+				});
+			}
+		});
+	});
 
 	// Header section
 	// sticky header background color
@@ -169,6 +199,7 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 			}
 		});
 	});
+	// work with overlay option
 	wp.customize('overlay_show', function (value) {
 		value.bind(function (to) {
 			if (to === true) {
