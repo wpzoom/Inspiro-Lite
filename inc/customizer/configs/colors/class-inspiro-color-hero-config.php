@@ -78,6 +78,16 @@ class Inspiro_Color_Hero_Config {
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
 				),
+				array(
+					'id'   => 'color_scroll_to_content_arrow',
+					'args' => array(
+						'theme_supports'       => array( 'custom-header', 'header-text' ),
+						'default'              => '',
+						'transport'            => 'refresh',
+						'sanitize_callback'    => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
 			),
 			// Controls init
 			'control' => array(
@@ -90,7 +100,7 @@ class Inspiro_Color_Hero_Config {
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 15,
-						'controls_to_wrap' => 5,
+						'controls_to_wrap' => 6,
 					),
 				),
 				array(
@@ -117,7 +127,7 @@ class Inspiro_Color_Hero_Config {
 					'args'         => array(
 						'label'    => esc_html__( 'Hero Button Text Color Hover', 'inspiro' ),
 						'section'  => 'colors',
-						'priority' => 18,
+						'priority' => 17,
 					),
 				),
 				array(
@@ -126,7 +136,16 @@ class Inspiro_Color_Hero_Config {
 					'args'         => array(
 						'label'    => esc_html__( 'Hero Button Background Color Hover', 'inspiro' ),
 						'section'  => 'colors',
-						'priority' => 19,
+						'priority' => 17,
+					),
+				),
+				array(
+					'id'           => 'color_scroll_to_content_arrow',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Scroll to Content Arrow', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 17,
 					),
 				),
 			),

@@ -80,18 +80,19 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$color_general_entry_content_text = inspiro_get_theme_mod( 'color_general_entry_content_text' );
 
 		// header
-		$color_header_custom_logo_text = inspiro_get_theme_mod( 'color_header_custom_logo_text' );
+		$color_header_custom_logo_text       = inspiro_get_theme_mod( 'color_header_custom_logo_text' );
 		$color_header_custom_logo_hover_text = inspiro_get_theme_mod( 'color_header_custom_logo_hover_text' );
-		$color_menu_hamburger_btn      = inspiro_get_theme_mod( 'color_menu_hamburger_btn' ); // todo check id name in Premium version
-		$color_menu_background         = inspiro_get_theme_mod( 'color_menu_background' );
-		$color_menu_background_scroll  = inspiro_get_theme_mod( 'color-menu-background-scroll' );
-		$color_navbar_menu_background  = inspiro_get_theme_mod( 'color_navbar_menu_background' );
+		$color_menu_hamburger_btn            = inspiro_get_theme_mod( 'color_menu_hamburger_btn' ); // todo check id name in Premium version
+		$color_menu_background               = inspiro_get_theme_mod( 'color_menu_background' );
+		$color_menu_background_scroll        = inspiro_get_theme_mod( 'color-menu-background-scroll' );
+		$color_navbar_menu_background        = inspiro_get_theme_mod( 'color_navbar_menu_background' );
 
 		// hero section
 		$header_text_color              = get_header_textcolor(); //todo: ?
 		$header_button_text_color       = inspiro_get_theme_mod( 'header_button_textcolor' );
 		$header_button_text_color_hover = inspiro_get_theme_mod( 'header_button_textcolor_hover' );
 		$header_button_bg_color_hover   = inspiro_get_theme_mod( 'header_button_bgcolor_hover' );
+		$color_scroll_to_content_arrow  = inspiro_get_theme_mod( 'color_scroll_to_content_arrow' );
 
 		// sidebar
 		$color_sidebar_widgets_background = inspiro_get_theme_mod( 'color_sidebar_widgets_background' );
@@ -169,20 +170,6 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 
 			<?php endif; ?>
 
-			<?php if ( '#101010' !== $color_footer_background ) : ?>
-			.site-footer {
-				background-color: <?php echo maybe_hash_hex_color( $color_footer_background ); ?>;
-			}
-
-			<?php endif; ?>
-
-			<?php if ( '#78787f' !== $color_footer_text ) : ?>
-			.site-footer {
-				color: <?php echo maybe_hash_hex_color( $color_footer_text ); ?>;
-			}
-
-			<?php endif; ?>
-
 			<?php if ( 'blank' !== $color_menu_background_scroll ) : ?>
 			.headroom--not-top .navbar,
 			.has-header-image.home.blog .headroom--not-top .navbar,
@@ -222,9 +209,27 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 
 			<?php endif; ?>
 
+
+			/* hero section */
+			<?php if ( '' !== $color_scroll_to_content_arrow ) : ?>
+			#scroll-to-content:before {
+				border-color: <?php echo $color_scroll_to_content_arrow; ?>;
+			}
+
+			<?php endif; ?>
+
+
+			/* sidebar */
 			<?php if ( '#101010' !== $color_sidebar_widgets_background ) : ?>
 			.side-nav__scrollable-container {
 				background: <?php echo $color_sidebar_widgets_background; ?>;
+			}
+
+			<?php endif; ?>
+
+			<?php if ( '#ffffff' !== $color_sidebar_widgets_text  ) : ?>
+			.side-nav__scrollable-container {
+				color: <?php echo $color_sidebar_widgets_text; ?>;
 			}
 
 			<?php endif; ?>
@@ -237,16 +242,25 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 
 			<?php endif; ?>
 
-			<?php if ( '#ffffff' !== $color_sidebar_widgets_text  ) : ?>
-			.side-nav__scrollable-container {
-				color: <?php echo $color_sidebar_widgets_text; ?>;
+			<?php if ( '#0bb4aa' !== $color_sidebar_widgets_link  ) : ?>
+			:root :where(.side-nav__wrap a:where(:not(.wp-element-button))) {
+				color: <?php echo $color_sidebar_widgets_link; ?>;
 			}
 
 			<?php endif; ?>
 
-			<?php if ( '#0bb4aa' !== $color_sidebar_widgets_link  ) : ?>
-			:root :where(.side-nav__wrap a:where(:not(.wp-element-button))) {
-				color: <?php echo $color_sidebar_widgets_link; ?>;
+
+			/* footer */
+			<?php if ( '#101010' !== $color_footer_background ) : ?>
+			.site-footer {
+				background-color: <?php echo maybe_hash_hex_color( $color_footer_background ); ?>;
+			}
+
+			<?php endif; ?>
+
+			<?php if ( '#78787f' !== $color_footer_text ) : ?>
+			.site-footer {
+				color: <?php echo maybe_hash_hex_color( $color_footer_text ); ?>;
 			}
 
 			<?php endif; ?>
@@ -258,6 +272,8 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 
 			<?php endif; ?>
 
+
+			/* general */
 			<?php if ( '' !== $color_general_h_tags  ) : ?>
 			h1, h2, h3, h4, h5, h6 {
 				color: <?php echo $color_general_h_tags; ?>;
@@ -280,7 +296,6 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 			}
 
 			<?php endif; ?>
-
 
 			<?php if ( '' !== $color_general_entry_summary_text  ) : ?>
 			.entry-summary > p {
