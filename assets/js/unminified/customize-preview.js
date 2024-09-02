@@ -62,10 +62,17 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 	// General section
 	wp.customize('color_general_h_tags', function (value) {
 		value.bind(function (to) {
-			if (to !== '')
+			if (to !== '') {
+				// Apply the selected color to heading tags
 				$('h1, h2, h3, h4, h5, h6').css({
 					color: to,
 				});
+			} else {
+				// Clear the color to revert to the default
+				$('h1, h2, h3, h4, h5, h6').css({
+					color: '', // This resets the color to default
+				});
+			}
 		});
 	});
 
