@@ -144,9 +144,14 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 	// custom logo text color
 	wp.customize('color_header_custom_logo_text', function (value) {
 		value.bind(function (to) {
-			$('.custom-logo-text').css('color', to);
+			$('a.custom-logo-text').css('color', to);
 		});
 	});
+	// wp.customize('color_header_custom_logo_text', function (value) {
+	// 	value.bind(function (tocolor_header_custom_logo_hover_text {
+	// 		$('a.custom-logo-text').css('color', to);
+	// 	});
+	// });
 	// header background
 	// wp.customize( 'color_menu_background', function ( value ) {
 	// 	// value.bind(function (to) {

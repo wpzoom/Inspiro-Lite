@@ -47,6 +47,16 @@ class Inspiro_Color_Header_Config {
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
 				),
+				array(
+					'id'   => 'color_header_custom_logo_hover_text',
+					'args' => array(
+						'theme_supports'       => array( 'custom-header', 'header-text' ),
+						'default'              => '#ffffff',
+						'transport'            => 'refresh',
+						'sanitize_callback'    => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
 				// 2. top menu settings
 				array(
 					'id'   => 'color_navbar_menu_background',
@@ -99,7 +109,7 @@ class Inspiro_Color_Header_Config {
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 11,
-						'controls_to_wrap' => 2,
+						'controls_to_wrap' => 3,
 					),
 				),
 				// 1. header settings
@@ -108,6 +118,16 @@ class Inspiro_Color_Header_Config {
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
 						'label'    => esc_html__( 'Custom Logo Text', 'inspiro' ),
+//						'label'    => esc_html__( 'Site Title Color', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
+					),
+				),
+				array(
+					'id'           => 'color_header_custom_logo_hover_text',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Custom Logo Hover Text', 'inspiro' ),
 //						'label'    => esc_html__( 'Site Title Color', 'inspiro' ),
 						'section'  => 'colors',
 						'priority' => 11,
