@@ -76,6 +76,9 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$color_general_h_tags             = inspiro_get_theme_mod( 'color_general_h_tags' );
 		$color_general_page_title         = inspiro_get_theme_mod( 'color_general_page_title' );
 		$color_general_entry_title        = inspiro_get_theme_mod( 'color_general_entry_title' );
+		$color_general_underline_text       = inspiro_get_theme_mod( 'color_general_underline_text' );
+		$color_general_link_content       = inspiro_get_theme_mod( 'color_general_link_content' );
+		$color_general_link_hover_content = inspiro_get_theme_mod( 'color_general_link_hover_content' );
 		$color_general_entry_summary_text = inspiro_get_theme_mod( 'color_general_entry_summary_text' );
 		$color_general_entry_content_text = inspiro_get_theme_mod( 'color_general_entry_content_text' );
 
@@ -214,6 +217,32 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 			<?php if ( '' !== $color_scroll_to_content_arrow ) : ?>
 			#scroll-to-content:before {
 				border-color: <?php echo $color_scroll_to_content_arrow; ?>;
+			}
+
+			<?php endif; ?>
+
+
+			/* content */
+			<?php if ( '' !== $color_general_link_content ) : ?>
+			.entry-content a:not(.wp-element-button),
+			.entry-summary a, .comment-content a, .posts-navigation a {
+				color: <?php echo $color_general_link_content; ?>;
+			}
+
+			<?php endif; ?>
+
+			<?php if ( '' !== $color_general_link_hover_content ) : ?>
+			.entry-content a:not(.wp-element-button):hover,
+			.entry-summary a:hover, .comment-content a:hover, .posts-navigation a:hover {
+				color: <?php echo $color_general_link_hover_content; ?>;
+			}
+
+			<?php endif; ?>
+
+			<?php if ( '' !== $color_general_underline_text ) : ?>
+			.entry-content a:not(.wp-element-button),
+			.entry-summary a, .comment-content a, .posts-navigation a {
+				text-decoration-color: <?php echo $color_general_underline_text; ?>;
 			}
 
 			<?php endif; ?>

@@ -72,6 +72,33 @@ class Inspiro_Color_General_Config {
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
 				),
+				array(
+					'id'   => 'color_general_underline_text',
+					'args' => array(
+						'default'              => '',
+						'transport'            => 'refresh',
+						'sanitize_callback'    => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
+				array(
+					'id'   => 'color_general_link_content',
+					'args' => array(
+						'default'              => '',
+						'transport'            => 'refresh',
+						'sanitize_callback'    => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
+				array(
+					'id'   => 'color_general_link_hover_content',
+					'args' => array(
+						'default'              => '',
+						'transport'            => 'refresh',
+						'sanitize_callback'    => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
 			),
 			// Controls init
 			'control' => array(
@@ -83,7 +110,7 @@ class Inspiro_Color_General_Config {
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 11,
-						'controls_to_wrap' => 5,
+						'controls_to_wrap' => 8,
 					),
 				),
 				array(
@@ -91,7 +118,7 @@ class Inspiro_Color_General_Config {
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
 						'label'       => esc_html__( 'Headings', 'inspiro' ),
-						'description' => esc_html__('For raw header tags only. To return to the default option, please publish the changes first.', 'inspiro'),
+						'description' => esc_html__( 'For raw header tags only. To return to the default option, please publish the changes first.', 'inspiro' ),
 						'section'     => 'colors',
 						'priority'    => 11,
 					),
@@ -100,36 +127,63 @@ class Inspiro_Color_General_Config {
 					'id'           => 'color_general_page_title',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
-						'label'       => esc_html__( 'Page title', 'inspiro' ),
-						'section'     => 'colors',
-						'priority'    => 11,
+						'label'    => esc_html__( 'Page title', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
 					),
 				),
 				array(
 					'id'           => 'color_general_entry_title',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
-						'label'       => esc_html__( 'Entry title', 'inspiro' ),
-						'section'     => 'colors',
-						'priority'    => 11,
+						'label'    => esc_html__( 'Entry title', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
 					),
 				),
 				array(
 					'id'           => 'color_general_entry_summary_text',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
-						'label'       => esc_html__( 'Summary text content', 'inspiro' ),
-						'section'     => 'colors',
-						'priority'    => 11,
+						'label'    => esc_html__( 'Summary text content', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
 					),
 				),
 				array(
 					'id'           => 'color_general_entry_content_text',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
-						'label'       => esc_html__( 'Entry text content', 'inspiro' ),
-						'section'     => 'colors',
-						'priority'    => 11,
+						'label'    => esc_html__( 'Entry text content', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
+					),
+				),
+				array(
+					'id'           => 'color_general_underline_text',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Underline color', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
+					),
+				),
+				array(
+					'id'           => 'color_general_link_content',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Content Link color', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
+					),
+				),
+				array(
+					'id'           => 'color_general_link_hover_content',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Link color on hover', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
 					),
 				),
 			)
