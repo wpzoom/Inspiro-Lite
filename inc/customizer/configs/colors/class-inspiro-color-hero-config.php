@@ -2,9 +2,9 @@
 /**
  * Inspiro Lite: Adds settings, sections, controls to Customizer
  *
- * @package Inspiro
+ * @package    Inspiro
  * @subpackage Inspiro_Lite
- * @since Inspiro 1.3.0
+ * @since      Inspiro 1.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -88,6 +88,13 @@ class Inspiro_Color_Hero_Config {
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
 				),
+				array(
+					'id'   => 'hero_gradient_opacity_control',
+					'args' => array(
+						'default'   => '0.3',
+						'transport' => 'refresh',
+					),
+				),
 			),
 			// Controls init
 			'control' => array(
@@ -100,7 +107,7 @@ class Inspiro_Color_Hero_Config {
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 15,
-						'controls_to_wrap' => 6,
+						'controls_to_wrap' => 7,
 					),
 				),
 				array(
@@ -146,6 +153,21 @@ class Inspiro_Color_Hero_Config {
 						'label'    => esc_html__( 'Scroll to Content Arrow', 'inspiro' ),
 						'section'  => 'colors',
 						'priority' => 17,
+					),
+				),
+				array(
+					'id'   => 'hero_gradient_opacity_control',
+					'args' => array(
+						'type'        => 'range',
+						'label'       => esc_html__( 'Adjust gradient opacity', 'inspiro' ),
+//						'label'    => esc_html__( 'Set Hero Section Gradient Transparency', 'inspiro' ),
+						'input_attrs' => array(
+							'min'  => 0,
+							'max'  => 1,
+							'step' => 0.1,
+						),
+						'section'     => 'colors',
+						'priority'    => 17,
 					),
 				),
 			),

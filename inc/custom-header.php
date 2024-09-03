@@ -76,7 +76,7 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$color_general_h_tags             = inspiro_get_theme_mod( 'color_general_h_tags' );
 		$color_general_page_title         = inspiro_get_theme_mod( 'color_general_page_title' );
 		$color_general_entry_title        = inspiro_get_theme_mod( 'color_general_entry_title' );
-		$color_general_underline_text       = inspiro_get_theme_mod( 'color_general_underline_text' );
+		$color_general_underline_text     = inspiro_get_theme_mod( 'color_general_underline_text' );
 		$color_general_link_content       = inspiro_get_theme_mod( 'color_general_link_content' );
 		$color_general_link_hover_content = inspiro_get_theme_mod( 'color_general_link_hover_content' );
 		$color_general_entry_summary_text = inspiro_get_theme_mod( 'color_general_entry_summary_text' );
@@ -95,6 +95,7 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$header_button_text_color       = inspiro_get_theme_mod( 'header_button_textcolor' );
 		$header_button_text_color_hover = inspiro_get_theme_mod( 'header_button_textcolor_hover' );
 		$header_button_bg_color_hover   = inspiro_get_theme_mod( 'header_button_bgcolor_hover' );
+		$hero_gradient_opacity_control  = inspiro_get_theme_mod( 'hero_gradient_opacity_control' );
 		$color_scroll_to_content_arrow  = inspiro_get_theme_mod( 'color_scroll_to_content_arrow' );
 
 		// sidebar
@@ -108,6 +109,7 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$color_footer_text           = inspiro_get_theme_mod( 'color_footer_text' );
 		$color_footer_copyright_text = inspiro_get_theme_mod( 'color_footer_copyright_text' );
 
+//		var_dump($hero_gradient_opacity_control);
 		?>
 		<style id="inspiro-custom-header-styles" type="text/css">
 			<?php
@@ -218,6 +220,18 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 			#scroll-to-content:before {
 				border-color: <?php echo $color_scroll_to_content_arrow; ?>;
 			}
+
+			<?php endif; ?>
+
+			<?php if ( '' !== $hero_gradient_opacity_control ) : ?>
+			.has-header-image .custom-header-media:before {
+				background-image: linear-gradient(to bottom,
+				rgba(0, 0, 0, <?php echo $hero_gradient_opacity_control ?>) 0%,
+				rgba(0, 0, 0, 0.5) 100%);
+
+				/*background-image: linear-gradient(to bottom, rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, 0.5) 100%)*/
+			}
+
 
 			<?php endif; ?>
 
