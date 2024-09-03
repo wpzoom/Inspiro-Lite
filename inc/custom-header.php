@@ -82,7 +82,7 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		// header
 		$color_header_custom_logo_text       = inspiro_get_theme_mod( 'color_header_custom_logo_text' );
 		$color_header_custom_logo_hover_text = inspiro_get_theme_mod( 'color_header_custom_logo_hover_text' );
-		$color_menu_hamburger_btn            = inspiro_get_theme_mod( 'color_menu_hamburger_btn' ); // todo check id name in Premium version
+		$color_menu_hamburger_btn            = inspiro_get_theme_mod( 'color_menu_hamburger_btn' );
 		$color_menu_background               = inspiro_get_theme_mod( 'color_menu_background' );
 		$color_menu_background_scroll        = inspiro_get_theme_mod( 'color-menu-background-scroll' );
 		$color_navbar_menu_background        = inspiro_get_theme_mod( 'color_navbar_menu_background' );
