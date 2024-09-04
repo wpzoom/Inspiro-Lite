@@ -31,7 +31,61 @@ class Inspiro_Color_General_Config {
 					'id'   => 'color_general_h_tags',
 					'args' => array(
 						'default'              => '',
-						'transport'            => 'postMessage',
+						'transport'            => 'refresh',
+						'sanitize_callback'    => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
+				array(
+					'id'   => 'color_general_h1_tag',
+					'args' => array(
+						'default'              => '',
+						'transport'            => 'refresh',
+						'sanitize_callback'    => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
+				array(
+					'id'   => 'color_general_h2_tag',
+					'args' => array(
+						'default'              => '',
+						'transport'            => 'refresh',
+						'sanitize_callback'    => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
+				array(
+					'id'   => 'color_general_h3_tag',
+					'args' => array(
+						'default'              => '',
+						'transport'            => 'refresh',
+						'sanitize_callback'    => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
+				array(
+					'id'   => 'color_general_h4_tag',
+					'args' => array(
+						'default'              => '',
+						'transport'            => 'refresh',
+						'sanitize_callback'    => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
+				array(
+					'id'   => 'color_general_h5_tag',
+					'args' => array(
+						'default'              => '',
+						'transport'            => 'refresh',
+						'sanitize_callback'    => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
+				array(
+					'id'   => 'color_general_h6_tag',
+					'args' => array(
+						'default'              => '',
+						'transport'            => 'refresh',
 						'sanitize_callback'    => 'sanitize_hex_color',
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
@@ -110,7 +164,7 @@ class Inspiro_Color_General_Config {
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 11,
-						'controls_to_wrap' => 9,
+						'controls_to_wrap' => 15,
 					),
 				),
 				array(
@@ -121,7 +175,7 @@ class Inspiro_Color_General_Config {
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 11,
-						'controls_to_wrap' => 1,
+						'controls_to_wrap' => 7,
 					),
 				),
 				array(
@@ -132,6 +186,60 @@ class Inspiro_Color_General_Config {
 						'description' => esc_html__( 'For raw header tags only. To return to the default option, please publish the changes first.', 'inspiro' ),
 						'section'     => 'colors',
 						'priority'    => 11,
+					),
+				),
+				array(
+					'id'           => 'color_general_h1_tag',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Heading H1', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
+					),
+				),
+				array(
+					'id'           => 'color_general_h2_tag',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Heading H2', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
+					),
+				),
+				array(
+					'id'           => 'color_general_h3_tag',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Heading H3', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
+					),
+				),
+				array(
+					'id'           => 'color_general_h4_tag',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Heading H4', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
+					),
+				),
+				array(
+					'id'           => 'color_general_h5_tag',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Heading H5', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
+					),
+				),
+				array(
+					'id'           => 'color_general_h6_tag',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Heading H6', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
 					),
 				),
 				array(
