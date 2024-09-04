@@ -81,7 +81,7 @@ class Inspiro_Color_Sidebar_Widgets_Config {
 					'id'           => 'for_sidebar_widgets_options',
 					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
 					'args'         => array(
-						'label'            => esc_html__( 'Sidebar Widgets', 'inspiro' ),
+						'label'            => esc_html__( 'Sidebar and Widgets', 'inspiro' ),
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 20,

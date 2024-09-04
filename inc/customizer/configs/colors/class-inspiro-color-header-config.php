@@ -147,8 +147,8 @@ class Inspiro_Color_Header_Config {
 					'id'           => 'for_color_header_navbar_menu_options',
 					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
 					'args'         => array(
-						'label'            => esc_html__( 'Navigation', 'inspiro' ),
-//						'label'            => esc_html__( 'Primary Navigation', 'inspiro' ),
+						'label'            => esc_html__( 'Primary Navigation Menu', 'inspiro' ),
+//						'label'            => esc_html__( 'Top Navigation Menu', 'inspiro' ),
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 12,

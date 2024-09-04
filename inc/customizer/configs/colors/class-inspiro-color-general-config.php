@@ -128,7 +128,7 @@ class Inspiro_Color_General_Config {
 					'id'           => 'color_general_h_tags',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
-						'label'       => esc_html__( 'Headings', 'inspiro' ),
+						'label'       => esc_html__( 'All Headings (H1-H6)', 'inspiro' ),
 						'description' => esc_html__( 'For raw header tags only. To return to the default option, please publish the changes first.', 'inspiro' ),
 						'section'     => 'colors',
 						'priority'    => 11,
