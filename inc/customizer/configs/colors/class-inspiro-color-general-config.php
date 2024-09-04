@@ -110,7 +110,18 @@ class Inspiro_Color_General_Config {
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 11,
-						'controls_to_wrap' => 8,
+						'controls_to_wrap' => 9,
+					),
+				),
+				array(
+					'id'           => 'for_test_purposes',
+					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
+					'args'         => array(
+						'label'            => esc_html__( 'Headings ', 'inspiro' ),
+						'section'          => 'colors',
+						'settings'         => array(),
+						'priority'         => 11,
+						'controls_to_wrap' => 1,
 					),
 				),
 				array(
