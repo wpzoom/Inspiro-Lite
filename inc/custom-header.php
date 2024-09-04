@@ -74,6 +74,12 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 	function inspiro_header_style() {
 		// general
 		$color_general_h_tags             = inspiro_get_theme_mod( 'color_general_h_tags' );
+		$color_general_h1_tag             = inspiro_get_theme_mod( 'color_general_h1_tag' );
+		$color_general_h2_tag             = inspiro_get_theme_mod( 'color_general_h2_tag' );
+		$color_general_h3_tag             = inspiro_get_theme_mod( 'color_general_h3_tag' );
+		$color_general_h4_tag             = inspiro_get_theme_mod( 'color_general_h4_tag' );
+		$color_general_h5_tag             = inspiro_get_theme_mod( 'color_general_h5_tag' );
+		$color_general_h6_tag             = inspiro_get_theme_mod( 'color_general_h6_tag' );
 		$color_general_page_title         = inspiro_get_theme_mod( 'color_general_page_title' );
 		$color_general_entry_title        = inspiro_get_theme_mod( 'color_general_entry_title' );
 		$color_general_underline_text     = inspiro_get_theme_mod( 'color_general_underline_text' );
@@ -320,6 +326,48 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 			<?php if ( '' !== $color_general_h_tags  ) : ?>
 			h1, h2, h3, h4, h5, h6 {
 				color: <?php echo $color_general_h_tags; ?>;
+			}
+
+			<?php endif; ?>
+
+			<?php if ( '' !== $color_general_h1_tag  ) : ?>
+			h1 {
+				color: <?php echo $color_general_h1_tag; ?>;
+			}
+
+			<?php endif; ?>
+
+			<?php if ( '' !== $color_general_h2_tag  ) : ?>
+			h2 {
+				color: <?php echo $color_general_h2_tag; ?>;
+			}
+
+			<?php endif; ?>
+
+			<?php if ( '' !== $color_general_h3_tag  ) : ?>
+			h3 {
+				color: <?php echo $color_general_h3_tag; ?>;
+			}
+
+			<?php endif; ?>
+
+			<?php if ( '' !== $color_general_h4_tag  ) : ?>
+			h4 {
+				color: <?php echo $color_general_h4_tag; ?>;
+			}
+
+			<?php endif; ?>
+
+			<?php if ( '' !== $color_general_h5_tag  ) : ?>
+			h5 {
+				color: <?php echo $color_general_h5_tag; ?>;
+			}
+
+			<?php endif; ?>
+
+			<?php if ( '' !== $color_general_h6_tag  ) : ?>
+			h6 {
+				color: <?php echo $color_general_h6_tag; ?>;
 			}
 
 			<?php endif; ?>
