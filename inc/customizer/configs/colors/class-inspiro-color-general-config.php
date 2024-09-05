@@ -168,7 +168,7 @@ class Inspiro_Color_General_Config {
 					),
 				),
 				array(
-					'id'           => 'for_test_purposes',
+					'id'           => 'sub_menu_for_color_h_tags',
 					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
 					'args'         => array(
 						'label'            => esc_html__( 'Headings ', 'inspiro' ),
@@ -176,6 +176,7 @@ class Inspiro_Color_General_Config {
 						'settings'         => array(),
 						'priority'         => 11,
 						'controls_to_wrap' => 7,
+						'apply_child_item_class' => true,
 					),
 				),
 				array(

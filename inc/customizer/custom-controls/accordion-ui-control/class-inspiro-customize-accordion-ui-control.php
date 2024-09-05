@@ -2,9 +2,9 @@
 /**
  * Customize Accordion UI Control class.
  *
- * @package Inspiro
+ * @package    Inspiro
  * @subpackage Inspiro_Lite
- * @since Inspiro 1.9.0
+ * @since      Inspiro 1.9.0
  */
 
 // Exit if accessed directly.
@@ -63,19 +63,29 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		public $category_label = '';
 
 		/**
+		 * Sub Accordion Option
+		 * just include 'apply_child_item_class' => true in args
+		 *
+		 * @var string
+		 */
+		public $apply_child_item_class = false;
+
+
+		/**
 		 * Send data to _s
 		 * Refresh the parameters passed to the JavaScript via JSON.
 		 *
 		 * @since 1.9.0
-		 * @see WP_Customize_Control::to_json()
+		 * @see   WP_Customize_Control::to_json()
 		 */
 		public function to_json() {
 			parent::to_json();
 
-			$this->json['classes']        = $this->class;
-			$this->json['accordion']      = $this->accordion;
-			$this->json['category_label'] = $this->category_label;
-			$this->json['style']          = $this->print_style();
+			$this->json['classes']                = $this->class;
+			$this->json['accordion']              = $this->accordion;
+			$this->json['category_label']         = $this->category_label;
+			$this->json['apply_child_item_class'] = $this->apply_child_item_class;
+			$this->json['style']                  = $this->print_style();
 
 			if ( $this->accordion === true ) {
 				$this->json['classes'] .= ' accordion';
@@ -125,22 +135,24 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Class variables for this control class are available in the `data` JS object;
 		 * export custom variables by overriding {@see WP_Customize_Control::to_json()}.
 		 *
-		 * @see WP_Customize_Control::print_template()
+		 * @see    WP_Customize_Control::print_template()
 		 *
 		 * @access protected
 		 */
 		protected function content_template() {
 			?>
 
-			<# if(data.category_label) {#>
+			<# if(data.category_label) { #>
 			<span class="customize-control-title">{{data.category_label}}</span>
 			<# }#>
-			<div class="inspiro-accordion-header-ui">
+
+			<div class="inspiro-accordion-header-ui<# if (data.apply_child_item_class) { #> child-item-style<# } #>">
 				<span class="accordion-heading">{{ data.label }}</span>
 				<# if(data.accordion) { #>
 				<span class="accordion-expand-button"></span>
 				<# } #>
 			</div>
+
 			{{{data.style}}} <?php // phpcs:ignore WordPressVIPMinimum.Security.Mustache.OutputNotation
 			?>
 			<?php
