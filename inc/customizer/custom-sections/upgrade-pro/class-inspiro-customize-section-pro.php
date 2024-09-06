@@ -12,7 +12,8 @@
  * @since  1.2.2
  * @access public
  */
-class Inspiro_Customize_Section_Pro extends WP_Customize_Section {
+class Inspiro_Customize_Section_Pro extends WP_Customize_Section
+{
 
 	/**
 	 * The type of customize section being rendered.
@@ -33,36 +34,41 @@ class Inspiro_Customize_Section_Pro extends WP_Customize_Section {
 	public $description = '';
 
 	/**
-	 * Custom button text to output.
+	 * Custom buttons text to output.
 	 *
 	 * @since  1.2.2
 	 * @access public
 	 * @var    string
 	 */
 	public $pro_text = '';
+	public $demo_link_text = '';
 
 	/**
-	 * Custom pro button URL.
+	 * Custom buttons URL.
 	 *
 	 * @since  1.2.2
 	 * @access public
 	 * @var    string
 	 */
 	public $pro_url = '';
+	public $demo_link_url = '';
 
 	/**
 	 * Add custom parameters to pass to the JS via JSON.
 	 *
+	 * @return array
 	 * @since  1.2.2
 	 * @access public
-	 * @return array
 	 */
-	public function json() {
+	public function json()
+	{
 		$json = parent::json();
 
 		$json['desription'] = $this->description;
-		$json['pro_text']   = $this->pro_text;
-		$json['pro_url']    = esc_url( $this->pro_url );
+		$json['pro_text'] = $this->pro_text;
+		$json['pro_url'] = esc_url($this->pro_url);
+		$json['demo_link_text'] = $this->demo_link_text;
+		$json['demo_link_url'] = $this->demo_link_url;
 
 		return $json;
 	}
@@ -70,26 +76,33 @@ class Inspiro_Customize_Section_Pro extends WP_Customize_Section {
 	/**
 	 * Outputs the Underscore.js template.
 	 *
+	 * @return void
 	 * @since  1.2.2
 	 * @access public
-	 * @return void
 	 */
-	protected function render_template() { ?>
+	protected function render_template()
+	{ ?>
 
-		<li id="accordion-section-{{ data.id }}" class="accordion-section control-section control-section-{{ data.type }} cannot-expand">
+		<li id="accordion-section-{{ data.id }}"
+			class="accordion-section control-section control-section-{{ data.type }} cannot-expand">
 
 			<h3 class="accordion-section-title">
 				{{ data.title }}
 
+				<# if ( data.description ) { #>
 				<span class="customize-action">{{ data.description }}</span>
-
-
-				<# if ( data.pro_text && data.pro_url ) { #>
-					<a href="{{ data.pro_url }}" class="button button-secondary" target="_blank">{{ data.pro_text }}</a>
 				<# } #>
 
-			</h3>
+				<# if ( data.pro_text && data.pro_url ) { #>
+				<a href="{{ data.pro_url }}" class="button button-primary" target="_blank">{{ data.pro_text }}</a>
+				<# } #>
 
+				<# if ( data.demo_link_text && data.demo_link_url ) { #>
+				<a href="{{ data.demo_link_url }}" class="button view-demo-btn-link" target="_blank">
+					{{ data.demo_link_text }}
+				</a>
+				<# } #>
+			</h3>
 
 		</li>
 		<?php

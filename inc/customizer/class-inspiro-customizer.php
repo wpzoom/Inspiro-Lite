@@ -116,15 +116,19 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 					'post-options',
 				),
 				'colors'         => array(
-					'header-textcolor',
-					'header-button-color',
+//					'header-textcolor',
 					'color-scheme',
+					'color-design',
+//					'header-button-color',
 				),
                 'header'         => array(
                     'header-area',
+					'header_hamburger_icon_color'
                 ),
 				'footer'         => array(
+//					'footer-design',
 					'footer-widget-areas',
+					'footer-copyright',
 				),
 				'homepage-media' => array(
 					'homepage-media-panel',
@@ -176,7 +180,6 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 			/**
 			 * Register sections
 			 */
-
 			$wp_customize->register_section_type( 'Inspiro_Customize_Section_Pro' );
 
 			/**
@@ -239,6 +242,20 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 					'sanitize_callback' => 'sanitize_text_field',
 				)
 			);
+
+			Inspiro_Customizer_Control_Base::register_custom_control(
+				'accordion-section-ui-wrapper',
+				array(
+					'callback'          => 'Inspiro_Customize_Accordion_UI_Control',
+				)
+			);
+
+			Inspiro_Customizer_Control_Base::register_custom_control(
+				'custom-wp-editor',
+				array(
+					'callback' => 'Inspiro_Customize_Copyright_WP_Editor_Control',
+				)
+			);
 		}
 
 		/**
@@ -255,18 +272,35 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 					$wp_customize,
 					'inspiro_upgrade_pro',
 					array(
+//						'title'       => esc_html__( 'Inspiro PRO Features', 'inspiro' ),
 						'title'       => esc_html__( 'Upgrade to Inspiro Premium', 'inspiro' ),
-						'description' => esc_html__( 'Unlock premium features: 7 Style Kits, Video Backgrounds, Portfolio Integration, Premium Support and much more...', 'inspiro' ),
+						 'description' => esc_html__( 'Unlock premium features: 7 Style Kits, Video Backgrounds, Portfolio Integration, Premium Support and much more...', 'inspiro' ),
 						'pro_text'    => esc_html__( 'View Inspiro Premium', 'inspiro' ),
+//						'pro_text'    => esc_html__( 'Learn More', 'inspiro' ),
 						'pro_url'     => 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=customizer&utm_campaign=bluebutton',
-						'priority'    => 5,
+//						'demo_link_text'    => esc_html__( 'View Demos', 'inspiro' ),
+//						'demo_link_url'     => '/wp-admin/themes.php?page=inspiro#demos',
+						'priority'    => 10,
 					)
 				)
 			);
 
 
+			/**
+			 * Custom changes of Core Settings
+			 *
+			 * @since 1.9.0
+			 */
 			// Change transport type for Header Text color.
 			$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+			// Change label text, was 'Header Text Color'
+			$wp_customize->get_control( 'header_textcolor' )->label = 'Hero Text Color';
+
+			// Change order priority
+			$wp_customize->get_control( 'header_textcolor' )->priority = 16;
+			$wp_customize->get_section( 'static_front_page' )->priority = 20;
+
 
 			/**
 			 * Fires to register all customizer custom panels, settings and controls

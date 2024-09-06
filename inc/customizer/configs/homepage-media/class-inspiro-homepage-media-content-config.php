@@ -84,7 +84,7 @@ class Inspiro_Homepage_Media_Content_Config {
 					'args' => array(
 						'theme_supports'  => array( 'custom-header' ),
 						'type'            => 'text',
-						'label'           => esc_html__( 'Header Title', 'inspiro' ),
+						'label'           => esc_html__( 'Hero Title', 'inspiro' ),
 						'section'         => 'header_content',
 						'priority'        => 1,
 						'active_callback' => 'is_header_video_active',
@@ -95,7 +95,7 @@ class Inspiro_Homepage_Media_Content_Config {
 					'args' => array(
 						'theme_supports'  => array( 'custom-header' ),
 						'type'            => 'textarea',
-						'label'           => esc_html__( 'Header Description', 'inspiro' ),
+						'label'           => esc_html__( 'Hero Description', 'inspiro' ),
 						'section'         => 'header_content',
 						'priority'        => 1,
 						'active_callback' => 'is_header_video_active',
@@ -106,7 +106,7 @@ class Inspiro_Homepage_Media_Content_Config {
 					'args' => array(
 						'theme_supports'  => 'custom-header',
 						'type'            => 'text',
-						'label'           => esc_html__( 'Header Button Title', 'inspiro' ),
+						'label'           => esc_html__( 'Hero Button Text', 'inspiro' ),
 						'section'         => 'header_content',
 						'active_callback' => 'is_header_video_active',
 					),
@@ -116,7 +116,7 @@ class Inspiro_Homepage_Media_Content_Config {
 					'args' => array(
 						'theme_supports'  => 'custom-header',
 						'type'            => 'url',
-						'label'           => esc_html__( 'Header Button URL', 'inspiro' ),
+						'label'           => esc_html__( 'Hero Button URL', 'inspiro' ),
 						'section'         => 'header_content',
 						'active_callback' => 'is_header_video_active',
 					),

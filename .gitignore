@@ -9,8 +9,18 @@ node_modules/
 *.zip
 *.map
 .sass-cache
+package-lock.json
 
 /vendor/
 /inspiro-lite
 /.env/
 .vscode/launch.json
+
+
+# temporary
+assets/css/unminified/customize-controls-backupt-temp.css
+# package and Grunt files
+package-old-backup.json
+/package-old-backup.json
+Gruntfile-old-backup.js
+

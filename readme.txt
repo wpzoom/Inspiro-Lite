@@ -2,7 +2,7 @@
 Contributors: WPZOOM
 Requires at least: 6.0
 Tested up to: 6.6
-Version: 1.8.8
+Version: 1.9.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
@@ -105,6 +105,22 @@ License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 
 == Changelog ==
+
+= 1.9.0 =
+* Customizer UX Improved
+  * Eliminate annoying stuff
+  * Add icons
+  * Implement Accordion Control Types for better UX
+  	* Header Customizer Section
+  * Minor code improvements
+  * Add 'Hide top main menu' option in Header section
+  * Move Color functionality from Header to Color Panel
+  * Added Accordion UI in Color Panel
+  * Reorganize Colors section
+  * Update npm packages
+
+  * Add Header hamburger icon color option
+  * Hide the top main menu additional option
 
 = 1.8.8 =
 * Minor bug fixes

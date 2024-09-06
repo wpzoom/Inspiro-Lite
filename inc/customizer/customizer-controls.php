@@ -22,4 +22,6 @@ require $control_dir . '/font-variant/class-inspiro-customize-font-variant-contr
 require $control_dir . '/image-select/class-inspiro-customize-image-select-control.php';
 require $control_dir . '/promo-pro/class-inspiro-customize-promo-pro-control.php';
 require $control_dir . '/alpha-color-picker/class-inspiro-customize-alpha-color-picker-control.php';
+require $control_dir . '/accordion-ui-control/class-inspiro-customize-accordion-ui-control.php';
+require $control_dir . '/custom-wp-editor/class-inspiro-customize-wp-editor-control.php';
 // phpcs:enable WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound

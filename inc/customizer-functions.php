@@ -221,5 +221,4 @@ function inspiro_get_font_stacks( $font ) {
 	}
 
 	return $font;
-
 }

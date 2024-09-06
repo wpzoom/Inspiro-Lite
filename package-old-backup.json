@@ -1,0 +1,59 @@
+{
+  "name": "inspiro-lite",
+  "version": "1.8.8",
+  "description": "A free version of Inspiro WordPress Theme developed by WPZOOM",
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wpzoom/inspiro-lite.git"
+  },
+  "author": "WPZOOM",
+  "_project": {
+    "name": "Inspiro Lite",
+    "textdomain": "inspiro",
+    "slug": "inspiro",
+    "package": "Inspiro",
+    "subpackage": "Inspiro_Lite",
+    "author_site": "https://wpzoom.com/"
+  },
+  "_forkProject": {
+    "name": "Twenty Seventeen",
+    "textdomain": "twentyseventeen",
+    "slug": "twentyseventeen",
+    "package": "WordPress",
+    "subpackage": "Twenty_Seventeen"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    +"@lodder/grunt-postcss": "^3.0.0",
+    "@wordpress/eslint-plugin": "^9.0.4",
+    +"autoprefixer": "^10.0.1",
+    +"eslint": "^7.32.0",
+    +"grunt": "^1.3.0",
+    "grunt-bumpup": "^0.6.3",
+    +"grunt-contrib-clean": "^2.0.0", -  deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+    "grunt-contrib-compress": "^1.6.0",
+    +"grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    +"grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-jshint": "^3.0.0",
+    "grunt-contrib-uglify-es": "^3.3.0",
+    +"grunt-contrib-watch": "^1.1.0",
+    "grunt-json2php": "^0.1.4",
+    "grunt-replace": "^2.0.1",
+    +"grunt-rtlcss": "^2.0.2",
+    +"grunt-sass": "^3.1.0",
+    "grunt-text-replace": "^0.4.0",
+    "grunt-wp-i18n": "^1.0.3",
+    "grunt-wp-readme-to-markdown": "^2.0.1",
+    +, -> sass"node-sass": "^4.14.1", -  node-sass@9.0.0: Node Sass is no longer supported. Please use `sass` or `sass-embedded` instead.
+    +"postcss": "^8.1.3",
+    +"postcss-flexibility": "^2.0.0"
+  },
+  "scripts": {
+    "lint": "eslint --fix --ext .js,.jsx ./assets/js/unminified ./inc/customizer/custom-controls"
+  },
+  "dependencies": {
+    "composer": "^4.1.0"
+  }
+}

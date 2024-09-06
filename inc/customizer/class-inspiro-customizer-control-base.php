@@ -267,7 +267,7 @@ if ( ! class_exists( 'Inspiro_Customizer_Control_Base' ) ) {
 		}
 
 		/**
-		 * Register Customizer setttings.
+		 * Register Customizer settings.
 		 *
 		 * @param WP_Customize_Manager $wp_customize instance of WP_Customize_Manager.
 		 * @param array                $settings Settings array.
