@@ -205,7 +205,7 @@ class Inspiro_Header_Area_Config
 					'label' => esc_html__('Header layout options', 'inspiro'),
 					'settings' => array(),
 					'section' => 'header-area',
-					'description' => __('This is another test.'),
+					// 'description' => __('This is another test.', 'inspiro'),
 					'accordion' => true,
 					'controls_to_wrap' => 4,
 				)
