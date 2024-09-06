@@ -207,7 +207,7 @@ class Inspiro_Header_Area_Config
 					'section' => 'header-area',
 					'description' => __('This is another test.'),
 					'accordion' => true,
-					'controls_to_wrap' => 3,
+					'controls_to_wrap' => 4,
 				)
 			)
 		);
@@ -284,18 +284,6 @@ class Inspiro_Header_Area_Config
 //			)
 //		);
 
-		$wp_customize->add_control(
-			'cover-size',
-			array(
-				'label' => esc_html__('Featured Image Height in Posts and Pages', 'inspiro'),
-				'type' => 'radio',
-				'section' => 'header-area',
-				'choices' => array(
-					'cover_fixed_height' => esc_html__('Fixed height', 'inspiro'),
-					'cover_fullscreen' => esc_html__('Fullscreen', 'inspiro')
-				),
-			)
-		);
 	}
 }
 
