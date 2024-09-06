@@ -107,20 +107,10 @@ Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 == Changelog ==
 
 = 1.9.0 =
-* Customizer UX Improved
-  * Eliminate annoying stuff
-  * Add icons
-  * Implement Accordion Control Types for better UX
-  	* Header Customizer Section
-  * Minor code improvements
-  * Add 'Hide top main menu' option in Header section
-  * Move Color functionality from Header to Color Panel
-  * Added Accordion UI in Color Panel
-  * Reorganize Colors section
-  * Update npm packages
-
-  * Add Header hamburger icon color option
-  * Hide the top main menu additional option
+* Multiple Improvements to the Customizer
+* New Footer option to edit the Copyright text
+* Minor code improvements
+* Add Header hamburger icon color option
 
 = 1.8.8 =
 * Minor bug fixes
