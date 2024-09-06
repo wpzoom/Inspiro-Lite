@@ -256,7 +256,7 @@ class Inspiro_Color_General_Config {
 					'id'           => 'color_general_entry_title',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
-						'label'    => esc_html__( 'Entry title', 'inspiro' ),
+						'label'    => esc_html__( 'Post title', 'inspiro' ),
 						'section'  => 'colors',
 						'priority' => 11,
 					),
