@@ -73,7 +73,7 @@ require INSPIRO_THEME_DIR . 'inc/template-functions.php';
 /**
  * Custom template shortcode tags for this theme
  */
-require INSPIRO_THEME_DIR . 'inc/shortcodes.php';
+// require INSPIRO_THEME_DIR . 'inc/shortcodes.php';
 
 /**
  * Customizer additions.

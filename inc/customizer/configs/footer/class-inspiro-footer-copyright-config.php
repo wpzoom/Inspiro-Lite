@@ -38,7 +38,7 @@ class Inspiro_Footer_Copyright_Config {
 		$wp_customize->add_setting(
 			'footer_copyright_text_setting',
 			array(
-				'default'           => 'Copyright [copyright] [current_year] [site_title]',
+				'default'           => 'Copyright {copyright} {current_year} {site_title}',
 				'sanitize_callback' => 'wp_kses_post', // Sanitize HTML content
 				'transport'         => 'postMessage', // Enable live preview
 			),
@@ -67,7 +67,7 @@ class Inspiro_Footer_Copyright_Config {
 				array(
 					'type'        => 'copyright-wp-editor',
 					'label'       => __( 'Copyright text', 'inspiro' ),
-					'description' => __( 'You can insert some available Shortcode tags: [copyright], [current_year] and [site_title]' ),
+					'description' => __( 'You can insert some available HTML code tags: {copyright}, {year}, {site-title}' ),
 					'section'     => 'footer-area', // Link to the section
 					'settings'    => 'footer_copyright_text_setting', // Link to the setting
 				)

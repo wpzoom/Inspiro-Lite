@@ -23,7 +23,7 @@ $customizer_copyright_text = inspiro_get_theme_mod( 'footer_copyright_text_setti
 	<span class="copyright">
 		<span>
 			<?php if ( $customizer_copyright_text ) : ?>
-				<?php echo do_shortcode( $customizer_copyright_text ); ?>
+				<?php echo get_footer_copyright_text() ?>
 			<?php else : ?>
 
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'inspiro' ) ); ?>" target="_blank">
