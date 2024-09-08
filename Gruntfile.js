@@ -308,7 +308,7 @@ module.exports = function (grunt) {
 				},
 				files: [
 					{
-						src: [ './<%= pkg._project.slug %>/**' ],
+						src: ['./<%= pkg._project.slug %>/**'],
 					},
 				],
 			},
@@ -367,7 +367,7 @@ module.exports = function (grunt) {
 
 		replace: {
 			theme_main: {
-				src: [ 'style.css', 'readme.txt' ],
+				src: ['style.css', 'readme.txt'],
 				overwrite: true,
 				replacements: [
 					{
@@ -378,7 +378,7 @@ module.exports = function (grunt) {
 			},
 
 			theme_const: {
-				src: [ 'functions.php' ],
+				src: ['functions.php'],
 				overwrite: true,
 				replacements: [
 					{
@@ -423,7 +423,7 @@ module.exports = function (grunt) {
 			},
 
 			changelog: {
-				src: [ 'readme.txt' ],
+				src: ['readme.txt'],
 				overwrite: true,
 				replacements: [
 					{
@@ -510,19 +510,20 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-wp-readme-to-markdown');
 	grunt.loadNpmTasks('grunt-bumpup');
+	grunt.loadNpmTasks('grunt-text-replace');
 	grunt.loadNpmTasks('grunt-wp-i18n');
 
 
 	// --- Register tasks --- //
 	// Bump Version - `grunt version-bump --ver=<version-number>`
 	// eslint-disable-next-line no-unused-vars
-	grunt.registerTask('version-bump', function ( ver ) {
-		let newVersion = grunt.option( 'ver' );
+	grunt.registerTask('version-bump', function (ver) {
+		let newVersion = grunt.option('ver');
 
-		if ( newVersion ) {
+		if (newVersion) {
 			newVersion = newVersion ? newVersion : 'patch';
 
-			grunt.task.run( 'bumpup:' + newVersion );
+			grunt.task.run('bumpup:' + newVersion);
 			grunt.task.run(
 				'replace:theme_main',
 				'replace:theme_const',
@@ -532,7 +533,7 @@ module.exports = function (grunt) {
 				'readme'
 			);
 		}
-	} );
+	});
 
 
 	// rtlcss, you will still need to install ruby and sass on your system manually to run this
@@ -565,16 +566,18 @@ module.exports = function (grunt) {
 
 	// Default task.
 	grunt.registerTask('default', [
+		'jshint:uses_defaults',
+		'concat',
 		'minify',
 	]);
 
 	// Grunt release - Create installable package of the local files
-	grunt.registerTask( 'release', [
+	grunt.registerTask('release', [
 		'clean:zip',
 		'copy:main',
 		'compress:main',
 		'clean:main',
-	] );
+	]);
 
 	// Generate Readme file
 	grunt.registerTask('readme', ['wp_readme_to_markdown']);
@@ -583,9 +586,9 @@ module.exports = function (grunt) {
 	grunt.registerTask('i18n', ['addtextdomain', 'makepot']);
 
 	// Find and replace 'twentyseventeen' to the name of our theme in all the template files
-	grunt.registerTask( 'theme-based-replace', [
+	grunt.registerTask('theme-based-replace', [
 		'replace:theme_based_replace',
-	] );
+	]);
 
 	grunt.util.linefeed = '\n';
-}
+};
