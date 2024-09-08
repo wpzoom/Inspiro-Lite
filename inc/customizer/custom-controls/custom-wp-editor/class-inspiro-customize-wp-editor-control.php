@@ -61,7 +61,7 @@ if (class_exists('WP_Customize_Control')) {
 				'teeny' => true, // Output the minimal editor config
 				'quicktags' => true, // Show Quicktags (Text Mode),
 				'tinymce' => array(
-					'toolbar1' => 'bold,italic,underline,|,bullist,numlist,|,link,unlink', // Customize the toolbar
+					'toolbar1' => 'bold,italic,underline,|,link,unlink', // Customize the toolbar
 					'toolbar2' => '', // Leave empty to remove the second toolbar
 					'wpautop' => false, // Disable auto-paragraphs, don't had effect
 				),
