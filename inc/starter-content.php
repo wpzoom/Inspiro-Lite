@@ -210,7 +210,7 @@ function inspiro_get_starter_content() {
                     <!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|small"}}}} -->
                     <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
                     <div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"id":27,"sizeSlug":"large","linkDestination":"none"} -->
-                    <figure class="wp-block-image size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_M6D1GS9PSL.jpg" alt="" class="wp-image-27"/></figure>
+                    <figure class="wp-block-image size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/StockSnap_ECZV5RZKSZ.jpg" alt="" class="wp-image-27"/></figure>
                     <!-- /wp:image --></div>
                     <!-- /wp:column -->
 
@@ -801,7 +801,7 @@ function inspiro_get_starter_content() {
 		'attachments' => array(
 			'image-aerial-land' => array(
 				'post_title' => _x( 'Aerial Land', 'Theme starter content', 'inspiro' ),
-				'file'       => 'assets/images/StockSnap_M6D1GS9PSL.jpg', // URL relative to the template directory.
+				'file'       => 'assets/images/StockSnap_ECZV5RZKSZ.jpg', // URL relative to the template directory.
 			),
             'image-contact' => array(
                 'post_title' => _x( 'Contact', 'Theme starter content', 'inspiro' ),
