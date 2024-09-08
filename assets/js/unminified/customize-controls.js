@@ -88,13 +88,12 @@
 			// check id
 			if (editor.id === controlId) {
 				// console.log('TinyMCE editor initialized: ', editor.id);
-				// console.dir(editor);
 
 				// Add a listener for the 'input' event for real-time changes
 				// logic for Visual edit type
 				editor.on('change', function (e) {
 					let content = editor.getContent();
-					// console.log('Current content:', content);
+					console.log('Current content:', content);
 
 					// Set the value of the setting in the Customizer
 					api(settingId).set(content);
@@ -105,16 +104,15 @@
 
 				// logic for Text type
 				document.getElementById(controlId).addEventListener('input', function () {
-					// console.log('Textarea content changed' + content);
 
-					let content = editor.getContent();
+					let content = document.getElementById('footer_copyright_editor').value
+					// console.log('Textarea content changed' + content);
 
 					// Set the value of the setting in the Customizer
 					api(settingId).set(content);
 
 					// Trigger a live preview update with the new content
 					api.previewer.refresh();
-
 				});
 			}
 		});

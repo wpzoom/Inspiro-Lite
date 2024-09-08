@@ -196,7 +196,6 @@ function get_footer_copyright_text() {
 	$raw_content = str_replace( '{current-year}', $current_year, $raw_content );
 	$prepared_content = str_replace( '{site-title}', $site_title, $raw_content );
 
-
 	return $prepared_content;
 }
 

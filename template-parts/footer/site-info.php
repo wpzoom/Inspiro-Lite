@@ -2,10 +2,10 @@
 /**
  * Displays footer site info
  *
- * @package Inspiro
+ * @package    Inspiro
  * @subpackage Inspiro_Lite
- * @since Inspiro 1.0.0
- * @version 1.0.0
+ * @since      Inspiro 1.0.0
+ * @version    1.0.0
  */
 
 // todo: fix
@@ -23,15 +23,7 @@ $customizer_copyright_text = inspiro_get_theme_mod( 'footer_copyright_text_setti
 	<span class="copyright">
 		<span>
 			<?php if ( $customizer_copyright_text ) : ?>
-				<?php echo get_footer_copyright_text(); ?>
-			<?php else : ?>
-
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'inspiro' ) ); ?>" target="_blank">
-				<?php
-				/* translators: %s: WordPress trademark */
-				printf( esc_html__( 'Powered by %s', 'inspiro' ), 'WordPress' );
-				?>
-			</a>
+				<?php echo get_footer_copyright_text() ; ?>
 			<?php endif; ?>
 		</span>
 		<span>
