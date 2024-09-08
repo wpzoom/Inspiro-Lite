@@ -73,7 +73,7 @@ class Inspiro_Footer_Widget_Areas_Config {
 				array(
 					'label'   => esc_html__( 'Footer Layout', 'inspiro' ),
 					'section' => 'footer-area',
-					'description' => __('Select the Footer layout.'),
+					'description' => __('Select the Footer layout.', 'inspiro'),
 					'choices'     => array(
 						array(
 							'label' => __( 'Don\'t display Widgets', 'inspiro' ),

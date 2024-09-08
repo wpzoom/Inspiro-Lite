@@ -57,7 +57,7 @@ if (class_exists('WP_Customize_Control')) {
 			$settings = array(
 				//	'textarea_name' => $this->id,
 				'media_buttons' => false, // Show media upload buttons
-				'textarea_rows' => 1,
+				'textarea_rows' => 4,
 				'teeny' => true, // Output the minimal editor config
 				'quicktags' => true, // Show Quicktags (Text Mode),
 				'tinymce' => array(

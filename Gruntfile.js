@@ -259,6 +259,61 @@ module.exports = function (grunt) {
 			],
 		},
 
+		copy: {
+			main: {
+				options: {
+					mode: true,
+				},
+				src: [
+					'**',
+					'!node_modules/**',
+					'!build/**',
+					'!css/sourcemap/**',
+					'!.git/**',
+					'!.github/**',
+					'!bin/**',
+					'!.gitlab-ci.yml',
+					'!cghooks.lock',
+					'!tests/**',
+					'!phpunit.xml.dist',
+					'!*.sh',
+					'!*.map',
+					'!Gruntfile.js',
+					'!Gruntfile-old-backup.js',
+					'!package.json',
+					'!package-lock.json',
+					'!.gitignore',
+					'!.distignore',
+					'!.eslintrc',
+					'!.gitattributes',
+					'!.phpstan.neon.dist',
+					'!phpunit.xml',
+					'!README.md',
+					'!sass/**',
+					'!scss/**',
+					'!vendor/**',
+					'!composer.json',
+					'!composer.lock',
+					'!phpcs.xml.dist',
+				],
+				dest: '<%= pkg._project.slug %>/',
+			},
+		},
+
+		compress: {
+			main: {
+				options: {
+					archive: '<%= pkg.name %>-<%= pkg.version %>.zip',
+					mode: 'zip',
+				},
+				files: [
+					{
+						src: [ './<%= pkg._project.slug %>/**' ],
+					},
+				],
+			},
+		},
+
 		wp_readme_to_markdown: {
 			your_target: {
 				files: {
@@ -309,6 +364,137 @@ module.exports = function (grunt) {
 			},
 			file: 'package.json',
 		},
+
+		replace: {
+			theme_main: {
+				src: [ 'style.css', 'readme.txt' ],
+				overwrite: true,
+				replacements: [
+					{
+						from: /Version: \bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z-A-Z-]+(?:\.[\da-z-A-Z-]+)*)?(?:\+[\da-z-A-Z-]+(?:\.[\da-z-A-Z-]+)*)?\b/g,
+						to: 'Version: <%= pkg.version %>',
+					},
+				],
+			},
+
+			theme_const: {
+				src: [ 'functions.php' ],
+				overwrite: true,
+				replacements: [
+					{
+						from: /INSPIRO_THEME_VERSION', '.*?'/g,
+						to: "INSPIRO_THEME_VERSION', '<%= pkg.version %>'",
+					},
+				],
+			},
+
+			theme_function_comment: {
+				src: [
+					'*.php',
+					'**/*.php',
+					'!node_modules/**',
+					'!php-tests/**',
+					'!bin/**',
+				],
+				overwrite: true,
+				replacements: [
+					{
+						from: 'x.x.x',
+						to: '<%= pkg.version %>',
+					},
+				],
+			},
+
+			scripts: {
+				src: [
+					'*.js',
+					'**/*.js',
+					'!Gruntfile.js',
+					'!node_modules/**',
+					'!bin/**',
+				],
+				overwrite: true,
+				replacements: [
+					{
+						from: 'x.x.x',
+						to: '<%= pkg.version %>',
+					},
+				],
+			},
+
+			changelog: {
+				src: [ 'readme.txt' ],
+				overwrite: true,
+				replacements: [
+					{
+						from: 'x.x.x',
+						to: '<%= pkg.version %>',
+					},
+				],
+			},
+
+			theme_based_replace: {
+				src: [
+					'**',
+					'!node_modules/**',
+					'!build/**',
+					'!css/sourcemap/**',
+					'!.git/**',
+					'!.github/**',
+					'!bin/**',
+					'!.gitlab-ci.yml',
+					'!cghooks.lock',
+					'!tests/**',
+					'!phpunit.xml.dist',
+					'!*.sh',
+					'!*.map',
+					'!Gruntfile.js',
+					'!package.json',
+					'!package-lock.json',
+					'!.gitignore',
+					'!phpunit.xml',
+					'!README.md',
+					'!sass/**',
+					'!vendor/**',
+					'!composer.json',
+					'!composer.lock',
+					'!phpcs.xml.dist',
+					'!assets/images/**',
+					'!style.css',
+				],
+				overwrite: true,
+				replacements: [
+					{
+						from: '<%= pkg._forkProject.subpackage =>',
+						to: '<%= pkg._project.subpackage %>',
+					},
+					{
+						from: '<%= pkg._forkProject.name %=>',
+						to: '<%= pkg._project.name %>',
+					},
+					{
+						from: '<%= pkg._forkProject.slug %=>',
+						to: '<%= pkg._project.slug %>',
+					},
+					{
+						from: '@package <%= pkg._forkProject.package %=>',
+						to: '@package <%= pkg._project.package %>',
+					},
+					{
+						from: '@subpackage <%= pkg._forkProject.subpackage %=>',
+						to: '@subpackage <%= pkg._project.subpackage %>',
+					},
+					{
+						from: /@since <%= pkg._forkProject.name %=> \bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z-A-Z-]+(?:\.[\da-z-A-Z-]+)*)?(?:\+[\da-z-A-Z-]+(?:\.[\da-z-A-Z-]+)*)?\b/g,
+						to: '@since <%= pkg._project.name %> x.x.x',
+					},
+					{
+						from: /@version \bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z-A-Z-]+(?:\.[\da-z-A-Z-]+)*)?(?:\+[\da-z-A-Z-]+(?:\.[\da-z-A-Z-]+)*)?\b/g,
+						to: '@version x.x.x',
+					},
+				],
+			},
+		},
 	});
 
 
@@ -326,16 +512,17 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-bumpup');
 	grunt.loadNpmTasks('grunt-wp-i18n');
 
+
 	// --- Register tasks --- //
 	// Bump Version - `grunt version-bump --ver=<version-number>`
 	// eslint-disable-next-line no-unused-vars
-	grunt.registerTask('version-bump', function (ver) {
-		let newVersion = grunt.option('ver');
+	grunt.registerTask('version-bump', function ( ver ) {
+		let newVersion = grunt.option( 'ver' );
 
-		if (newVersion) {
+		if ( newVersion ) {
 			newVersion = newVersion ? newVersion : 'patch';
 
-			grunt.task.run('bumpup:' + newVersion);
+			grunt.task.run( 'bumpup:' + newVersion );
 			grunt.task.run(
 				'replace:theme_main',
 				'replace:theme_const',
@@ -345,7 +532,8 @@ module.exports = function (grunt) {
 				'readme'
 			);
 		}
-	});
+	} );
+
 
 	// rtlcss, you will still need to install ruby and sass on your system manually to run this
 	grunt.registerTask('rtl', ['rtlcss']);
@@ -380,11 +568,24 @@ module.exports = function (grunt) {
 		'minify',
 	]);
 
+	// Grunt release - Create installable package of the local files
+	grunt.registerTask( 'release', [
+		'clean:zip',
+		'copy:main',
+		'compress:main',
+		'clean:main',
+	] );
+
 	// Generate Readme file
 	grunt.registerTask('readme', ['wp_readme_to_markdown']);
 
 	// i18n
 	grunt.registerTask('i18n', ['addtextdomain', 'makepot']);
+
+	// Find and replace 'twentyseventeen' to the name of our theme in all the template files
+	grunt.registerTask( 'theme-based-replace', [
+		'replace:theme_based_replace',
+	] );
 
 	grunt.util.linefeed = '\n';
 }

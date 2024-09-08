@@ -184,6 +184,23 @@ function inspiro_get_footer_class( $class = '' ) {
 }
 
 /**
+ * Render Footer Copyright Markup!
+ */
+function get_footer_copyright_text() {
+
+	$site_title = get_bloginfo( 'name' );
+	$current_year = date( 'Y' );
+	$raw_content = inspiro_get_theme_mod( 'footer_copyright_text_setting' );
+
+	$raw_content = str_replace( '{copyright}', '&copy;', $raw_content );
+	$raw_content = str_replace( '{current-year}', $current_year, $raw_content );
+	$prepared_content = str_replace( '{site-title}', $site_title, $raw_content );
+
+
+	return $prepared_content;
+}
+
+/**
  * Checks to see if we're on the front page or not.
  */
 function inspiro_is_frontpage() {

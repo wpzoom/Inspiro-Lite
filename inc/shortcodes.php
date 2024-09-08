@@ -11,7 +11,7 @@
 function inspiro_register_custom_shortcodes() {
 
 	// show sitename
-	add_shortcode( 'site_title', 'inspiro_show_sitename_shortcode' );
+//	add_shortcode( 'site_title', 'inspiro_show_sitename_shortcode' );
 
 	function inspiro_show_sitename_shortcode() {
 		// Start output buffering
@@ -19,7 +19,7 @@ function inspiro_register_custom_shortcodes() {
 	}
 
 	// show copyright sign
-	add_shortcode( 'copyright', 'inspiro_show_copyright_sign_shortcode' );
+//	add_shortcode( 'copyright', 'inspiro_show_copyright_sign_shortcode' );
 
 	function inspiro_show_copyright_sign_shortcode() {
 		// Start output buffering
@@ -27,7 +27,7 @@ function inspiro_register_custom_shortcodes() {
 	}
 
 	// show current year text
-	add_shortcode( 'current_year', 'inspiro_show_current_year_shortcode' );
+//	add_shortcode( 'current_year', 'inspiro_show_current_year_shortcode' );
 
 	function inspiro_show_current_year_shortcode() {
 		// Start output buffering
