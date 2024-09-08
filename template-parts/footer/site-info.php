@@ -36,9 +36,7 @@ $customizer_copyright_text = inspiro_get_theme_mod( 'footer_copyright_text_setti
 		</span>
 		<span>
 			<?php esc_html_e( 'Inspiro WordPress Theme by', 'inspiro' ); ?>
-			<a href="<?php echo 'https://www.wpzoom.com/'; ?>" target="_blank" rel="nofollow">
-				WPZOOM
-			</a>
+			<a href="<?php echo 'https://www.wpzoom.com/'; ?>" target="_blank" rel="nofollow">WPZOOM</a>
 		</span>
 	</span>
 </div><!-- .site-info -->

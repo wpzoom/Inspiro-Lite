@@ -134,7 +134,7 @@ class Inspiro_Header_Area_Config
 				'for-predefined-layout',
 				array(
 					'type' => 'accordion-section-ui-wrapper',
-					'label' => esc_html__('Header Predefined Layout', 'inspiro'),
+					'label' => esc_html__('Header Layout', 'inspiro'),
 					'settings' => array(),
 					'section' => 'header-area',
 					'accordion' => true,
@@ -202,7 +202,7 @@ class Inspiro_Header_Area_Config
 				'for-design-options',
 				array(
 					'type' => 'accordion-section-ui-wrapper',
-					'label' => esc_html__('Header layout options', 'inspiro'),
+					'label' => esc_html__('Header options', 'inspiro'),
 					'settings' => array(),
 					'section' => 'header-area',
 					'accordion' => true,

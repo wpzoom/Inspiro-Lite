@@ -57,7 +57,7 @@ class Inspiro_Footer_Widget_Areas_Config {
 				'for_footer_widget_areas',
 				array(
 					'type' => 'accordion-section-ui-wrapper',
-					'label' => __('Footer Predefined Layout', 'inspiro'),
+					'label' => __('Footer Layout', 'inspiro'),
 					'settings' => array(),
 					'section' => 'footer-area',
 					'expanded' => false,
@@ -71,9 +71,8 @@ class Inspiro_Footer_Widget_Areas_Config {
 				$wp_customize,
 				'footer-widget-areas',
 				array(
-					'label'   => esc_html__( 'Footer Layout', 'inspiro' ),
 					'section' => 'footer-area',
-					'description' => __('Select the Footer layout.', 'inspiro'),
+					'description' => __('Select a layout', 'inspiro'),
 					'choices'     => array(
 						array(
 							'label' => __( 'Don\'t display Widgets', 'inspiro' ),

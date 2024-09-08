@@ -50,7 +50,7 @@ class Inspiro_Footer_Copyright_Config {
 				'for_design_copyright_option',
 				array(
 					'type'             => 'accordion-section-ui-wrapper',
-					'label'            => __( 'Elements', 'inspiro' ),
+					'label'            => __( 'Copyright Text', 'inspiro' ),
 					'settings'         => array(),
 					'section'          => 'footer-area',
 					'expanded'         => true,
@@ -66,7 +66,6 @@ class Inspiro_Footer_Copyright_Config {
 				'footer_copyright_editor',
 				array(
 					'type'        => 'copyright-wp-editor',
-					'label'       => __( 'Copyright text', 'inspiro' ),
 					'description' => __( 'You can insert the following tags: {copyright}, {current-year}, {site-title}', 'inspiro' ),
 					'section'     => 'footer-area', // Link to the section
 					'settings'    => 'footer_copyright_text_setting', // Link to the setting
