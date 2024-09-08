@@ -10,8 +10,7 @@
 
 // todo: fix
 // check content on first load and after deletet it.
-$customizer_copyright_text = inspiro_get_theme_mod( 'footer_copyright_text_setting' );
-
+$customizer_copyright_text = get_theme_mod( 'footer_copyright_text_setting', 'Copyright {copyright} {current-year} {site-title}' );
 ?>
 
 <div class="site-info">

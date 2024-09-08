@@ -190,7 +190,7 @@ function get_footer_copyright_text() {
 
 	$site_title = get_bloginfo( 'name' );
 	$current_year = date( 'Y' );
-	$raw_content = inspiro_get_theme_mod( 'footer_copyright_text_setting' );
+	$raw_content = get_theme_mod( 'footer_copyright_text_setting', 'Copyright {copyright} {current-year} {site-title}' );
 
 	$raw_content = str_replace( '{copyright}', '&copy;', $raw_content );
 	$raw_content = str_replace( '{current-year}', $current_year, $raw_content );
