@@ -396,7 +396,7 @@ module.exports = function ( grunt ) {
 				overwrite: true,
 				replacements: [
 					{
-						from: 'x.x.x',
+						from: '1.9.0',
 						to: '<%= pkg.version %>',
 					},
 				],
@@ -413,7 +413,7 @@ module.exports = function ( grunt ) {
 				overwrite: true,
 				replacements: [
 					{
-						from: 'x.x.x',
+						from: '1.9.0',
 						to: '<%= pkg.version %>',
 					},
 				],
@@ -424,7 +424,7 @@ module.exports = function ( grunt ) {
 				overwrite: true,
 				replacements: [
 					{
-						from: 'x.x.x',
+						from: '1.9.0',
 						to: '<%= pkg.version %>',
 					},
 				],
@@ -483,11 +483,11 @@ module.exports = function ( grunt ) {
 					},
 					{
 						from: /@since <%= pkg._forkProject.name %=> \bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z-A-Z-]+(?:\.[\da-z-A-Z-]+)*)?(?:\+[\da-z-A-Z-]+(?:\.[\da-z-A-Z-]+)*)?\b/g,
-						to: '@since <%= pkg._project.name %> x.x.x',
+						to: '@since <%= pkg._project.name %> 1.9.0',
 					},
 					{
 						from: /@version \bv?(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[\da-z-A-Z-]+(?:\.[\da-z-A-Z-]+)*)?(?:\+[\da-z-A-Z-]+(?:\.[\da-z-A-Z-]+)*)?\b/g,
-						to: '@version x.x.x',
+						to: '@version 1.9.0',
 					},
 				],
 			},
@@ -536,7 +536,7 @@ module.exports = function ( grunt ) {
 				// eslint-disable-next-line no-unused-vars
 				cover( phpArrayString, destFilePath ) {
 					return (
-						'<?php\n/**\n * Google fonts array file.\n *\n * @package     Inspiro\n * @author      WPZOOM\n * @copyright   Copyright (c) 2021, WPZOOM\n * @link        https://wpzoom.com\n * @since       Inspiro_Lite x.x.x\n */\n\n/**\n * Returns google fonts array\n *\n * @since x.x.x\n */\nreturn ' +
+						'<?php\n/**\n * Google fonts array file.\n *\n * @package     Inspiro\n * @author      WPZOOM\n * @copyright   Copyright (c) 2021, WPZOOM\n * @link        https://wpzoom.com\n * @since       Inspiro_Lite 1.9.0\n */\n\n/**\n * Returns google fonts array\n *\n * @since 1.9.0\n */\nreturn ' +
 						phpArrayString +
 						';\n'
 					);
@@ -554,23 +554,23 @@ module.exports = function ( grunt ) {
 	grunt.loadNpmTasks( 'grunt-rtlcss' );
 	grunt.loadNpmTasks( 'grunt-sass' );
 	grunt.loadNpmTasks( '@lodder/grunt-postcss' );
-	// grunt.loadNpmTasks( 'grunt-contrib-uglify-es' ); // ???
+	// grunt.loadNpmTasks( 'grunt-contrib-uglify-es' ); grunt-contrib-uglify// ???
 	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
-	// grunt.loadNpmTasks( 'grunt-contrib-watch' );
+	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	// grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	// grunt.loadNpmTasks( 'grunt-contrib-copy' );
 	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 	// grunt.loadNpmTasks( 'grunt-contrib-compress' );
 	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 	grunt.loadNpmTasks( 'grunt-wp-readme-to-markdown' );
-	// grunt.loadNpmTasks( 'grunt-wp-i18n' );
-	// grunt.loadNpmTasks( 'grunt-bumpup' );
-	// grunt.loadNpmTasks( 'grunt-text-replace' );
+	grunt.loadNpmTasks( 'grunt-wp-i18n' );
+	grunt.loadNpmTasks( 'grunt-bumpup' );
+	grunt.loadNpmTasks( 'grunt-text-replace' );
 	// grunt.loadNpmTasks( 'grunt-json2php' );
 
 	// Register Tasks.
 
-	// Bump Version - `grunt version-bump --ver=<version-number>`
+	// Bump Version - execute `grunt version-bump --ver=<version-number>`
 	// eslint-disable-next-line no-unused-vars
 	grunt.registerTask( 'version-bump', function ( ver ) {
 		let newVersion = grunt.option( 'ver' );
