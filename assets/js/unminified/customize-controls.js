@@ -92,7 +92,6 @@
 				// logic for Visual edit type
 				editor.on('change', function (e) {
 					let content = editor.getContent();
-					console.log('Current content:', content);
 
 					// Set the value of the setting in the Customizer
 					api(settingId).set(content);
@@ -105,7 +104,6 @@
 				document.getElementById(controlId).addEventListener('input', function () {
 
 					let content = document.getElementById('footer_copyright_editor').value
-					// console.log('Textarea content changed' + content);
 
 					// Set the value of the setting in the Customizer
 					api(settingId).set(content);
