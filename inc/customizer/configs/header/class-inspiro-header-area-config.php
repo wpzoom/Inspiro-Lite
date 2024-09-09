@@ -106,6 +106,7 @@ class Inspiro_Header_Area_Config
 			array(
 				'capability' => 'edit_theme_options',
 				'default' => true,
+				'transport' => 'refresh',
 				'sanitize_callback' => 'inspiro_sanitize_checkbox',
 			)
 		);
@@ -244,6 +245,7 @@ class Inspiro_Header_Area_Config
 				'section' => 'header-area',
 				'label' => esc_html__('Show Search Icon', 'inspiro'),
 				'description' => esc_html__('Show search icon and search form in the header', 'inspiro'),
+				'settings' => 'header_search_show',
 			)
 		);
 

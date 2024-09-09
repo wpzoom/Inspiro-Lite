@@ -8,7 +8,7 @@
  * @version 1.0.0
  */
 
-$search_show        = inspiro_get_theme_mod( 'header_search_show' );
+$search_show        = get_theme_mod( 'header_search_show', true ); // here must have default true value
 $search_display     = $search_show ? 'block' : 'none';
 
 $header_layout_type = inspiro_get_theme_mod( 'header-layout-type' );
