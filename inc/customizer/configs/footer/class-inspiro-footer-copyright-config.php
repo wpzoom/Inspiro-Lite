@@ -40,7 +40,7 @@ class Inspiro_Footer_Copyright_Config {
 			array(
 				'default'           => 'Copyright {copyright} {current-year} {site-title}',
 				'sanitize_callback' => 'wp_kses_post', // Sanitize HTML content
-				'transport'         => 'postMessage', // Enable live preview
+				'transport'         => 'refresh', // Enable live preview
 			),
 		);
 
@@ -50,7 +50,7 @@ class Inspiro_Footer_Copyright_Config {
 				'for_design_copyright_option',
 				array(
 					'type'             => 'accordion-section-ui-wrapper',
-					'label'            => __( 'Copyright Text', 'inspiro' ),
+					'label'            => esc_html__( 'Copyright Text', 'inspiro' ),
 					'settings'         => array(),
 					'section'          => 'footer-area',
 					'expanded'         => true,
@@ -66,7 +66,7 @@ class Inspiro_Footer_Copyright_Config {
 				'footer_copyright_editor',
 				array(
 					'type'        => 'copyright-wp-editor',
-					'description' => __( 'You can insert the following tags: {copyright}, {current-year}, {site-title}', 'inspiro' ),
+					'description' => esc_html__( 'You can insert the following tags: {copyright}, {current-year}, {site-title}', 'inspiro' ),
 					'section'     => 'footer-area', // Link to the section
 					'settings'    => 'footer_copyright_text_setting', // Link to the setting
 				)
