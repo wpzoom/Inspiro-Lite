@@ -163,6 +163,7 @@ function inspiroBuildStyleTag( control, value, cssProperty ) {
 			} else {
 				$( '.custom-header-button' ).css( {
 					color: to,
+					borderColor: to,
 				} );
 			}
 		} );
