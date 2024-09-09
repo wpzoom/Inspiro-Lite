@@ -3,7 +3,7 @@
  * Title: Awards
  * Slug: wpzoom/awards
  * Description: 
- * Categories: inspiro
+ * Categories: inspiro, banners
  * Keywords: 
  * Viewport Width: 1280
  * Block Types: 

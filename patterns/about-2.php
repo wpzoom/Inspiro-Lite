@@ -3,7 +3,7 @@
  * Title: About #2
  * Slug: wpzoom/about-2
  * Description: 
- * Categories: inspiro-pages
+ * Categories: pages, about
  * Keywords: 
  * Viewport Width: 1280
  * Block Types: 

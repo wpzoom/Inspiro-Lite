@@ -3,7 +3,7 @@
  * Title: Services #2
  * Slug: inspiro/services-2
  * Description: 
- * Categories: inspiro-pages
+ * Categories: pages, services
  * Keywords: 
  * Viewport Width: 1280
  * Block Types: 

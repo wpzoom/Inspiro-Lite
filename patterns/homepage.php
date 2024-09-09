@@ -3,7 +3,7 @@
  * Title: Homepage
  * Slug: homepage
  * Description: 
- * Categories: inspiro-pages
+ * Categories: pages
  * Keywords: 
  * Viewport Width: 1280
  * Block Types: 

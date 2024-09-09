@@ -3,7 +3,7 @@
  * Title: Pricing Table
  * Slug: inspiro/pricing-table
  * Description: 
- * Categories: inspiro, columns
+ * Categories: inspiro, columns, pricing
  * Keywords: 
  * Viewport Width: 1280
  * Block Types: 

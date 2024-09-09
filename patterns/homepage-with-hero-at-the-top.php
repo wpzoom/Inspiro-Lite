@@ -3,7 +3,7 @@
  * Title: Homepage (with hero at the top)
  * Slug: inspiro/homepage-with-hero-at-the-top
  * Description: 
- * Categories: inspiro-pages
+ * Categories: pages
  * Keywords: 
  * Viewport Width: 1280
  * Block Types: 
