@@ -80,14 +80,13 @@
 		 */
 		// Use the TinyMCE editor initialization event
 		$(document).on('tinymce-editor-init', function (event, editor) {
-			// TODO: needs improvements with error checking
+			// TODO: needs improvements with error checking, different methods for Text and Visual content editor
 			// setup data
 			const controlId = 'footer_copyright_editor';
 			const settingId = 'footer_copyright_text_setting';
 
 			// check id
 			if (editor.id === controlId) {
-				// console.log('TinyMCE editor initialized: ', editor.id);
 
 				// Add a listener for the 'input' event for real-time changes
 				// logic for Visual edit type
@@ -102,7 +101,7 @@
 					api.previewer.refresh();
 				});
 
-				// logic for Text type
+				// logic for Text edit type
 				document.getElementById(controlId).addEventListener('input', function () {
 
 					let content = document.getElementById('footer_copyright_editor').value
