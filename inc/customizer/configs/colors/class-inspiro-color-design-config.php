@@ -81,7 +81,7 @@ class Inspiro_Color_Design_Config
 					),
 				),
 				array(
-					'id' => 'menu_hamburger_btn_color',
+					'id' => 'color_menu_hamburger_btn',
 					'args' => array(
 						'theme_supports' => array('custom-header'),
 						'default' => '#ffffff',
@@ -153,7 +153,7 @@ class Inspiro_Color_Design_Config
 					),
 				),
 				array(
-					'id' => 'menu_hamburger_btn_color',
+					'id' => 'color_menu_hamburger_btn',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args' => array(
 						'label' => esc_html__('Hamburger Icon Color', 'inspiro'),
