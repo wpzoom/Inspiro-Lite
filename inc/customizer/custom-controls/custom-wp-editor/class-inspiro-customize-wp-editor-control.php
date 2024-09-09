@@ -66,7 +66,7 @@ if (class_exists('WP_Customize_Control')) {
 					'wpautop' => false, // Disable auto-paragraphs, don't had effect
 				),
 			);
-			return wp_editor(inspiro_get_theme_mod('footer_copyright_text_setting'), 'footer_copyright_editor', $settings);
+			return wp_editor(get_theme_mod('footer_copyright_text_setting'), 'footer_copyright_editor', $settings);
 		}
 
 		/**
