@@ -38,7 +38,7 @@ function inspiro_custom_header_setup()
 		apply_filters(
 			'inspiro_custom_header_args',
 			array(
-				'default-image' => get_parent_theme_file_uri('/assets/images/StockSnap_ECZV5RZKSZ.jpg'),
+				'default-image' => get_parent_theme_file_uri('/assets/images/StockSnap_M6D1GS9PSL.jpg'),
 				'width' => 2000,
 				'height' => 1200,
 				'flex-height' => true,
