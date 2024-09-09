@@ -1,11 +1,9 @@
-const sass = require("sass");
-const autoprefixer = require("autoprefixer");
+// const flexibility = require('postcss-flexibility');
+const autoprefixer = require('autoprefixer');
+const sass = require('sass');
+
 module.exports = function (grunt) {
 	'use strict';
-
-	const autoprefixer = require('autoprefixer');
-	// const flexibility = require('postcss-flexibility');
-	const sass = require('sass');
 
 	// Project configuration.
 	grunt.initConfig({
@@ -279,7 +277,6 @@ module.exports = function (grunt) {
 					'!*.sh',
 					'!*.map',
 					'!Gruntfile.js',
-					'!Gruntfile-old-backup.js',
 					'!package.json',
 					'!package-lock.json',
 					'!.gitignore',
