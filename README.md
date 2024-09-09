@@ -1,4 +1,10 @@
-# Inspiro #
+# Inspiro Lite #
+### Inspiro is a professional & lightweight photo and video-focused WordPress theme with a modern design. Packed with features including a fullscreen area that supports Vimeo, YouTube & self-hosted video background, Page Builder integration, Inspiro is perfect for showing off your photography and video portfolio. Moreover, the theme is compatible with WooCommerce and popular Page Builders such as Elementor, Beaver Builder.
+
+[View Demo](https://demo.wpzoom.com/inspiro-lite/) &nbsp;·&nbsp; [Documentation](https://www.wpzoom.com/documentation/inspiro-lite/) &nbsp;·&nbsp; [Download for Free](https://downloads.wordpress.org/theme/inspiro.latest-stable.zip) &nbsp;·&nbsp; [View Pro Version](https://wpzoom.com/themes/inspiro/)
+
+[![](https://www.wpzoom.com/wp-content/uploads/2022/05/inspiro-lite-1.png)](https://wpzoom.com/themes/inspiro-lite/)
+
 **Contributors:** [wpzoom](https://profiles.wordpress.org/wpzoom/)
 **Requires at least:** 6.0
 **Tested up to:** 6.6
@@ -92,6 +98,10 @@ Included as part of the following classes and functions:
 - inspiro_get_theme_svg()
 - inspiro_dropdown_icon_to_menu_link()
 
+Bundled header image, Jeremy Bishop
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://stocksnap.io/photo/sea-ocean-ECZV5RZKSZ
+
 Bundled header image, Enrapture Media
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/sea-ocean-M6D1GS9PSL
@@ -107,20 +117,10 @@ Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 ## Changelog ##
 
 ### 1.9.0 ###
-* Starting Customizer UX Enhancements
- * Remove unnecessary elements for a cleaner experience
- * Introduce icons for easier item identification
- * Implement Accordion Controls to streamline UX, including:
- 	* Enhanced Header Customizer Section
- * Optimize code with minor improvements
- * Add ‘Hide Top Main Menu’ option to the Header section
- * Move Color Settings from Header to the Color Panel
- * Add Accordion UI within the Color Panel for easier navigation
- * Reorganize Colors Section for better clarity
- * Update npm packages to latest versions
- * Add hamburger icon color settings for the header
- * Include additional options to hide the top main menu
- * Bug fixes
+* Multiple Improvements to the Customizer
+* New Footer option to edit the Copyright text
+* Minor code improvements
+* Add Header hamburger icon color option
 
 ### 1.8.8 ###
 * Minor bug fixes
