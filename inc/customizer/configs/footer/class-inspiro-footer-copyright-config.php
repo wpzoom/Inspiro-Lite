@@ -15,6 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * PHP Class for Registering Customizer Configuration
  *
  * @since 1.3.0
+ * todo: refactor this to a be included with framework load
+ *
  */
 class Inspiro_Footer_Copyright_Config {
 

@@ -190,6 +190,9 @@ function get_footer_copyright_text() {
 
 	$site_title = get_bloginfo( 'name' );
 	$current_year = date( 'Y' );
+
+	// It’s essential to include a default value here,
+	// which should match the one defined in class-inspiro-footer-copyright-config.php for consistency.
 	$raw_content = get_theme_mod( 'footer_copyright_text_setting', 'Copyright {copyright} {current-year} {site-title}' );
 
 	$raw_content = str_replace( '{copyright}', '&copy;', $raw_content );
