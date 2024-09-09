@@ -3,7 +3,7 @@
  * Title: About Us (Dark)
  * Slug: wpzoom/about-us-dark
  * Description: 
- * Categories: inspiro-pages
+ * Categories: pages, about
  * Keywords: 
  * Viewport Width: 1200
  * Block Types: 

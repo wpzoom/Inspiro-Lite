@@ -92,6 +92,10 @@ Included as part of the following classes and functions:
 - inspiro_get_theme_svg()
 - inspiro_dropdown_icon_to_menu_link()
 
+Bundled header image, Jeremy Bishop
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://stocksnap.io/photo/sea-ocean-ECZV5RZKSZ
+
 Bundled header image, Enrapture Media
 License: CC0 1.0 Universal (CC0 1.0)
 Source: https://stocksnap.io/photo/sea-ocean-M6D1GS9PSL

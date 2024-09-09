@@ -3,7 +3,7 @@
  * Title: About Us
  * Slug: wpzoom/about-us
  * Description: 
- * Categories: inspiro-pages
+ * Categories: pages, about
  * Keywords: 
  * Viewport Width: 1200
  * Block Types: 

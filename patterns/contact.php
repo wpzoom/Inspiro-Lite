@@ -1,17 +1,16 @@
 <?php
 /**
  * Title: Contact
- * Slug: wpzoom/contact
+ * Slug: inspiro/contact
  * Description: 
- * Categories: inspiro-pages
+ * Categories: contact, inspiro
  * Keywords: 
  * Viewport Width: 1280
  * Block Types: 
  * Post Types: 
  * Inserter: true
- * Custom Categories: Inspiro Pages
  */
-register_block_pattern_category( 'inspiro-pages', [ 'label' => __( 'Inspiro Pages', 'inspiro' ), 'pm_custom' => true ] );
+
 ?>
 <!-- wp:spacer {"height":"156px"} -->
 <div style="height:156px" aria-hidden="true" class="wp-block-spacer"></div>

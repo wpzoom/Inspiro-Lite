@@ -3,7 +3,7 @@
  * Title: Contact #2
  * Slug: inspiro/contact-2
  * Description: 
- * Categories: inspiro-pages, contact
+ * Categories: pages, contact
  * Keywords: 
  * Viewport Width: 1280
  * Block Types: 

@@ -3,7 +3,7 @@
  * Title: Portfolio
  * Slug: wpzoom/portfolio
  * Description: 
- * Categories: inspiro, portfolio
+ * Categories: inspiro, portfolio, pages
  * Keywords: 
  * Viewport Width: 1280
  * Block Types: 
