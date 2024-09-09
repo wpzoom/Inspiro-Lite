@@ -26,7 +26,8 @@ $customizer_copyright_text = get_theme_mod( 'footer_copyright_text_setting', 'Co
 			<?php endif; ?>
 		</span>
 		<span>
-			<?php esc_html_e( 'Inspiro WordPress Theme by', 'inspiro' ); ?>
+			<a href="<?php echo 'https://www.wpzoom.com/themes/inspiro/'; ?>" target="_blank" rel="nofollow">Inspiro Theme</a>
+            <?php esc_html_e( 'by', 'inspiro' ); ?>
 			<a href="<?php echo 'https://www.wpzoom.com/'; ?>" target="_blank" rel="nofollow">WPZOOM</a>
 		</span>
 	</span>
