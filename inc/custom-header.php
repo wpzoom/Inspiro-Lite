@@ -88,7 +88,6 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$color_general_link_content       = inspiro_get_theme_mod( 'color_general_link_content' );
 		$color_general_link_hover_content = inspiro_get_theme_mod( 'color_general_link_hover_content' );
 		$color_general_entry_excerpt_text = inspiro_get_theme_mod( 'color_general_entry_excerpt_text' );
-//		$color_general_entry_summary_text = inspiro_get_theme_mod( 'color_general_entry_summary_text' );
 		$color_general_entry_content_text = inspiro_get_theme_mod( 'color_general_entry_content_text' );
 
 		// header
