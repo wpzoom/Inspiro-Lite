@@ -329,6 +329,18 @@
     background: #f3f3f5;
     border-left-color: #0073aa;
 }
+.header-accordion-section-ui-wrapper.accordion .inspiro-accordion-header-ui.child-item-style {
+    background-color: #f6f7f7;
+    height: 37px;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+}
+.header-accordion-section-ui-wrapper.accordion .inspiro-accordion-header-ui.child-item-style:hover {
+    background-color: #f0f0f1;
+}
+.header-accordion-section-ui-wrapper.accordion .inspiro-accordion-header-ui.child-item-style .accordion-expand-button {
+    border-left: none;
+}
 .header-accordion-section-ui-wrapper.expanded .accordion-expand-button:after {
     transform: rotate(180deg);
 }

@@ -116,10 +116,13 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 					'post-options',
 				),
 				'colors'         => array(
-//					'header-textcolor',
+					'color-general',
 					'color-scheme',
-					'color-design',
+					'color-header',
 //					'header-button-color',
+					'color-hero',
+					'color-footer',
+					'color-sidebar-widgets'
 				),
                 'header'         => array(
                     'header-area',
