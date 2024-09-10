@@ -37,11 +37,11 @@ function inspiro_custom_header_setup() {
 		apply_filters(
 			'inspiro_custom_header_args',
 			array(
-				'default-image'    => get_parent_theme_file_uri( '/assets/images/StockSnap_M6D1GS9PSL.jpg' ),
-				'width'            => 2000,
-				'height'           => 1200,
-				'flex-height'      => true,
-				'video'            => true,
+				'default-image' => get_parent_theme_file_uri('/assets/images/StockSnap_ECZV5RZKSZ.jpg'),
+				'width' => 2000,
+				'height' => 1200,
+				'flex-height' => true,
+				'video' => true,
 				'wp-head-callback' => 'inspiro_header_style',
 			)
 		)
@@ -50,14 +50,14 @@ function inspiro_custom_header_setup() {
 	register_default_headers(
 		array(
 			'default-image' => array(
-				'url'           => '%s/assets/images/StockSnap_M6D1GS9PSL.jpg',
-				'thumbnail_url' => '%s/assets/images/StockSnap_M6D1GS9PSL.jpg',
-				'description'   => __( 'Default Header Image', 'inspiro' ),
+				'url' => '%s/assets/images/StockSnap_ECZV5RZKSZ.jpg',
+				'thumbnail_url' => '%s/assets/images/StockSnap_ECZV5RZKSZ.jpg',
+				'description' => __('Default Header Image', 'inspiro'),
 			),
-			'forest-image'  => array(
-				'url'           => '%s/assets/images/StockSnap_89BQZ89TLH.jpg',
-				'thumbnail_url' => '%s/assets/images/StockSnap_89BQZ89TLH.jpg',
-				'description'   => __( 'Forest', 'inspiro' ),
+			'old-image' => array(
+				'url' => '%s/assets/images/StockSnap_M6D1GS9PSL.jpg',
+				'thumbnail_url' => '%s/assets/images/StockSnap_M6D1GS9PSL.jpg',
+				'description' => __('Ocean Header Image', 'inspiro'),
 			),
 		)
 	);
