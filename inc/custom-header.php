@@ -87,7 +87,8 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$color_general_underline_text     = inspiro_get_theme_mod( 'color_general_underline_text' );
 		$color_general_link_content       = inspiro_get_theme_mod( 'color_general_link_content' );
 		$color_general_link_hover_content = inspiro_get_theme_mod( 'color_general_link_hover_content' );
-		$color_general_entry_summary_text = inspiro_get_theme_mod( 'color_general_entry_summary_text' );
+		$color_general_entry_excerpt_text = inspiro_get_theme_mod( 'color_general_entry_excerpt_text' );
+//		$color_general_entry_summary_text = inspiro_get_theme_mod( 'color_general_entry_summary_text' );
 		$color_general_entry_content_text = inspiro_get_theme_mod( 'color_general_entry_content_text' );
 
 		// header
@@ -392,15 +393,15 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 
 			<?php endif; ?>
 
-			<?php if ( '' !== $color_general_entry_summary_text  ) : ?>
+			<?php if ( '' !== $color_general_entry_excerpt_text  ) : ?>
 			.entry-summary > p {
-				color: <?php echo $color_general_entry_summary_text; ?>;
+				color: <?php echo $color_general_entry_excerpt_text; ?>;
 			}
 
 			<?php endif; ?>
 
 			<?php if ( '' !== $color_general_entry_content_text  ) : ?>
-			.entry-content > p {
+			.entry-content {
 				color: <?php echo $color_general_entry_content_text; ?>;
 			}
 

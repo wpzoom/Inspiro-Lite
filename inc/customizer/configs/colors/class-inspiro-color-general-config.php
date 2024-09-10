@@ -109,7 +109,7 @@ class Inspiro_Color_General_Config {
 					),
 				),
 				array(
-					'id'   => 'color_general_entry_summary_text',
+					'id'   => 'color_general_entry_excerpt_text',
 					'args' => array(
 						'default'              => '',
 						'transport'            => 'postMessage',
@@ -262,7 +262,7 @@ class Inspiro_Color_General_Config {
 					),
 				),
 				array(
-					'id'           => 'color_general_entry_summary_text',
+					'id'           => 'color_general_entry_excerpt_text',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
 						'label'    => esc_html__( 'Excerpt text', 'inspiro' ),

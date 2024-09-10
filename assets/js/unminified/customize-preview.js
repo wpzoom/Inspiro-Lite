@@ -92,7 +92,7 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 	// 	});
 	// });
 
-	wp.customize('color_general_entry_summary_text', function (value) {
+	wp.customize('color_general_entry_excerpt_text', function (value) {
 		value.bind(function (to) {
 			if (to !== '') {
 				// Apply the selected color to heading tags
