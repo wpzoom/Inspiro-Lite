@@ -274,7 +274,6 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 					color: to,
 					borderColor: to,
 				} );
-				});
 			}
 		});
 	});
