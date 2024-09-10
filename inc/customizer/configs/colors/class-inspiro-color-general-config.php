@@ -265,7 +265,8 @@ class Inspiro_Color_General_Config {
 					'id'           => 'color_general_entry_summary_text',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
-						'label'    => esc_html__( 'Summary text content', 'inspiro' ),
+						'label'    => esc_html__( 'Excerpt text', 'inspiro' ),
+						'description' => esc_html__( 'This text appears on the Latest Posts page.', 'inspiro' ),
 						'section'  => 'colors',
 						'priority' => 11,
 					),
