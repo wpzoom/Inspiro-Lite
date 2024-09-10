@@ -37,11 +37,11 @@ function inspiro_custom_header_setup() {
 		apply_filters(
 			'inspiro_custom_header_args',
 			array(
-				'default-image' => get_parent_theme_file_uri('/assets/images/StockSnap_ECZV5RZKSZ.jpg'),
-				'width' => 2000,
-				'height' => 1200,
-				'flex-height' => true,
-				'video' => true,
+				'default-image'    => get_parent_theme_file_uri( '/assets/images/StockSnap_ECZV5RZKSZ.jpg' ),
+				'width'            => 2000,
+				'height'           => 1200,
+				'flex-height'      => true,
+				'video'            => true,
 				'wp-head-callback' => 'inspiro_header_style',
 			)
 		)
@@ -50,14 +50,14 @@ function inspiro_custom_header_setup() {
 	register_default_headers(
 		array(
 			'default-image' => array(
-				'url' => '%s/assets/images/StockSnap_ECZV5RZKSZ.jpg',
+				'url'           => '%s/assets/images/StockSnap_ECZV5RZKSZ.jpg',
 				'thumbnail_url' => '%s/assets/images/StockSnap_ECZV5RZKSZ.jpg',
-				'description' => __('Default Header Image', 'inspiro'),
+				'description'   => __( 'Default Header Image', 'inspiro' ),
 			),
-			'old-image' => array(
-				'url' => '%s/assets/images/StockSnap_M6D1GS9PSL.jpg',
+			'old-image'     => array(
+				'url'           => '%s/assets/images/StockSnap_M6D1GS9PSL.jpg',
 				'thumbnail_url' => '%s/assets/images/StockSnap_M6D1GS9PSL.jpg',
-				'description' => __('Ocean Header Image', 'inspiro'),
+				'description'   => __( 'Ocean Header Image', 'inspiro' ),
 			),
 		)
 	);
@@ -73,15 +73,17 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 	 */
 	function inspiro_header_style() {
 		// general
-		$color_general_h_tags             = inspiro_get_theme_mod( 'color_general_h_tags' );
-		$color_general_h1_tag             = inspiro_get_theme_mod( 'color_general_h1_tag' );
-		$color_general_h2_tag             = inspiro_get_theme_mod( 'color_general_h2_tag' );
-		$color_general_h3_tag             = inspiro_get_theme_mod( 'color_general_h3_tag' );
-		$color_general_h4_tag             = inspiro_get_theme_mod( 'color_general_h4_tag' );
-		$color_general_h5_tag             = inspiro_get_theme_mod( 'color_general_h5_tag' );
-		$color_general_h6_tag             = inspiro_get_theme_mod( 'color_general_h6_tag' );
-		$color_general_page_title         = inspiro_get_theme_mod( 'color_general_page_title' );
-		$color_general_entry_title        = inspiro_get_theme_mod( 'color_general_entry_title' );
+		$color_general_h_tags     = inspiro_get_theme_mod( 'color_general_h_tags' );
+		$color_general_h1_tag     = inspiro_get_theme_mod( 'color_general_h1_tag' );
+		$color_general_h2_tag     = inspiro_get_theme_mod( 'color_general_h2_tag' );
+		$color_general_h3_tag     = inspiro_get_theme_mod( 'color_general_h3_tag' );
+		$color_general_h4_tag     = inspiro_get_theme_mod( 'color_general_h4_tag' );
+		$color_general_h5_tag     = inspiro_get_theme_mod( 'color_general_h5_tag' );
+		$color_general_h6_tag     = inspiro_get_theme_mod( 'color_general_h6_tag' );
+
+		$color_general_page_title = inspiro_get_theme_mod( 'color_general_page_title' );
+		$color_general_post_title = inspiro_get_theme_mod( 'color_general_post_title' );
+//		$color_general_entry_title        = inspiro_get_theme_mod( 'color_general_entry_title' ); // hidden for future ideea, create for all entry classes?
 		$color_general_underline_text     = inspiro_get_theme_mod( 'color_general_underline_text' );
 		$color_general_link_content       = inspiro_get_theme_mod( 'color_general_link_content' );
 		$color_general_link_hover_content = inspiro_get_theme_mod( 'color_general_link_hover_content' );
@@ -373,17 +375,19 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 			<?php endif; ?>
 
 			<?php if ( '' !== $color_general_page_title  ) : ?>
-			.page-title {
+			.page .entry-title,
+			.page.colors-dark .entry-title,
+			.page.colors-custom .entry-title {
 				color: <?php echo $color_general_page_title; ?>;
 			}
 
 			<?php endif; ?>
 
-			<?php if ( '' !== $color_general_entry_title  ) : ?>
-			.entry-title,
-			.page .entry-title,
-			body.colors-dark .entry-title {
-				color: <?php echo $color_general_entry_title; ?>;
+			<?php if ( '' !== $color_general_post_title  ) : ?>
+			.single-post .entry-title,
+			.single-post.colors-dark .entry-title,
+			.single-post.colors-custom .entry-title {
+				color: <?php echo $color_general_post_title; ?>;
 			}
 
 			<?php endif; ?>

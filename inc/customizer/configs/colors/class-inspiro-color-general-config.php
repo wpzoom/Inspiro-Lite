@@ -94,16 +94,16 @@ class Inspiro_Color_General_Config {
 					'id'   => 'color_general_page_title',
 					'args' => array(
 						'default'              => '',
-						'transport'            => 'postMessage',
+						'transport'            => 'refresh',
 						'sanitize_callback'    => 'sanitize_hex_color',
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
 				),
 				array(
-					'id'   => 'color_general_entry_title',
+					'id'   => 'color_general_post_title',
 					'args' => array(
 						'default'              => '',
-						'transport'            => 'postMessage',
+						'transport'            => 'refresh',
 						'sanitize_callback'    => 'sanitize_hex_color',
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
@@ -253,7 +253,7 @@ class Inspiro_Color_General_Config {
 					),
 				),
 				array(
-					'id'           => 'color_general_entry_title',
+					'id'           => 'color_general_post_title',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
 						'label'    => esc_html__( 'Post title', 'inspiro' ),

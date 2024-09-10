@@ -75,21 +75,23 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 			}
 		});
 	});
-	wp.customize('color_general_page_title', function (value) {
-		value.bind(function (to) {
-			if (to !== '') {
-				// Apply the selected color to heading tags
-				$('.page-title').css({
-					color: to,
-				});
-			} else {
-				// Clear the color to revert to the default
-				$('.page-title').css({
-					color: to,
-				});
-			}
-		});
-	});
+	// deactivated at the moment
+	// wp.customize('color_general_page_title', function (value) {
+	// 	value.bind(function (to) {
+	// 		if (to !== '') {
+	// 			// Apply the selected color to heading tags
+	// 			$('.page-title').css({
+	// 				color: to,
+	// 			});
+	// 		} else {
+	// 			// Clear the color to revert to the default
+	// 			$('.page-title').css({
+	// 				color: to,
+	// 			});
+	// 		}
+	// 	});
+	// });
+
 	wp.customize('color_general_entry_summary_text', function (value) {
 		value.bind(function (to) {
 			if (to !== '') {
@@ -136,6 +138,7 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 			}
 		});
 	});
+	//todo: why they are 2 custom_logo_text and color_header_custom_logo_text?
 	wp.customize('custom_logo_text', function (value) {
 		value.bind(function (to) {
 			$('.site-header .custom-logo-text').text(to);
@@ -147,7 +150,7 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 			$('a.custom-logo-text').css('color', to);
 		});
 	});
-	// wp.customize('color_header_custom_logo_text', function (value) {
+	// wp.customize('color_header_custom_logo_hover_text', function (value) {
 	// 	value.bind(function (tocolor_header_custom_logo_hover_text {
 	// 		$('a.custom-logo-text').css('color', to);
 	// 	});
