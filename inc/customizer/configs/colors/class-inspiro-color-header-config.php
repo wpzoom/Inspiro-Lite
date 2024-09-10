@@ -147,8 +147,7 @@ class Inspiro_Color_Header_Config {
 					'id'           => 'for_color_header_navbar_menu_options',
 					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
 					'args'         => array(
-						'label'            => esc_html__( 'Primary Navigation Menu', 'inspiro' ),
-//						'label'            => esc_html__( 'Top Navigation Menu', 'inspiro' ),
+						'label'            => esc_html__( 'Primary Navigation Menu', 'inspiro' ), // 'Top Navigation Menu'
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 12,
@@ -159,8 +158,7 @@ class Inspiro_Color_Header_Config {
 					'id'           => 'color_navbar_menu_background',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
-						'label'    => esc_html__( 'Navigation Background Color', 'inspiro' ),
-//						'label'    => esc_html__( 'Primary Navigation Background Color', 'inspiro' ),
+						'label'    => esc_html__( 'Navigation Background Color', 'inspiro' ), // 'Primary Navigation Background Color'
 						'section'  => 'colors',
 						'priority' => 12,
 					),
