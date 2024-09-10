@@ -138,7 +138,7 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 			}
 		});
 	});
-	//todo: why they are 2 custom_logo_text and color_header_custom_logo_text?
+	// custom logo text content
 	wp.customize('custom_logo_text', function (value) {
 		value.bind(function (to) {
 			$('.site-header .custom-logo-text').text(to);
