@@ -280,6 +280,21 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 			}
 		});
 	});
+	// hero arrow color
+	// improve in future
+	// wp.customize('color_scroll_to_content_arrow', function (value) {
+	// 	value.bind(function (to) {
+	// 		if (to === 'blank') {
+	// 			$('#scroll-to-content:before').css({
+	// 				borderColor: '#ffffff',
+	// 			});
+	// 		} else {
+	// 			$('#scroll-to-content:before').css({
+	// 				borderColor: to,
+	// 			} );
+	// 		}
+	// 	});
+	// });
 
 	// Sidebar widgets section
 	wp.customize('color_sidebar_widgets_background', function (value) {
