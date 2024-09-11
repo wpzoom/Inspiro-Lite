@@ -126,7 +126,7 @@ class Inspiro_Color_Header_Config {
 					'id'           => 'color_header_custom_logo_hover_text',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
-						'label'    => esc_html__( 'Custom Logo Hover Text', 'inspiro' ), //  'Site Title Color'
+						'label'    => esc_html__( 'Custom Logo Text on Hover', 'inspiro' ), //  'Site Title Color'
 						'section'  => 'colors',
 						'priority' => 11,
 					),
