@@ -117,8 +117,7 @@ class Inspiro_Color_Header_Config {
 					'id'           => 'color_header_custom_logo_text',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
-						'label'    => esc_html__( 'Custom Logo Text', 'inspiro' ),
-//						'label'    => esc_html__( 'Site Title Color', 'inspiro' ),
+						'label'    => esc_html__( 'Custom Logo Text', 'inspiro' ), // 'Site Title Color'
 						'section'  => 'colors',
 						'priority' => 11,
 					),
@@ -127,8 +126,7 @@ class Inspiro_Color_Header_Config {
 					'id'           => 'color_header_custom_logo_hover_text',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
-						'label'    => esc_html__( 'Custom Logo Hover Text', 'inspiro' ),
-//						'label'    => esc_html__( 'Site Title Color', 'inspiro' ),
+						'label'    => esc_html__( 'Custom Logo Hover Text', 'inspiro' ), //  'Site Title Color'
 						'section'  => 'colors',
 						'priority' => 11,
 					),

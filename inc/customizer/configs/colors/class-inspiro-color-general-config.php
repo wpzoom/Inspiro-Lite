@@ -164,19 +164,95 @@ class Inspiro_Color_General_Config {
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 11,
-						'controls_to_wrap' => 15,
+						'controls_to_wrap' => 6,
+					),
+				),
+//				array(
+//					'id'           => 'sub_menu_for_color_h_tags',
+//					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
+//					'args'         => array(
+//						'label'            => esc_html__( 'Headings ', 'inspiro' ),
+//						'section'          => 'colors',
+//						'settings'         => array(),
+//						'priority'         => 11,
+//						'controls_to_wrap' => 7,
+//						'apply_child_item_class' => true,
+//					),
+//				),
+				array(
+					'id'           => 'color_general_page_title',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Page title', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
 					),
 				),
 				array(
-					'id'           => 'sub_menu_for_color_h_tags',
+					'id'           => 'color_general_post_title',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Post title', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
+					),
+				),
+				array(
+					'id'           => 'color_general_entry_excerpt_text',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Excerpt text', 'inspiro' ),
+						'description' => esc_html__( 'This text appears on the Latest Posts page.', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
+					),
+				),
+				array(
+					'id'           => 'color_general_entry_content_text',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Post and Page text content', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
+					),
+				),
+//				array(
+//					'id'           => 'color_general_underline_text',
+//					'control_type' => 'WP_Customize_Color_Control',
+//					'args'         => array(
+//						'label'    => esc_html__( 'Underline color', 'inspiro' ),
+//						'section'  => 'colors',
+//						'priority' => 11,
+//					),
+//				),
+				array(
+					'id'           => 'color_general_link_content',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Content Link color', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
+					),
+				),
+				array(
+					'id'           => 'color_general_link_hover_content',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Link color on hover', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 11,
+					),
+				),
+				// Headers section
+				array(
+					'id'           => 'for_headers_section_color_options',
 					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
 					'args'         => array(
-						'label'            => esc_html__( 'Headings ', 'inspiro' ),
+						'label'            => esc_html__( 'Headings', 'inspiro' ),
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 11,
 						'controls_to_wrap' => 7,
-						'apply_child_item_class' => true,
 					),
 				),
 				array(
@@ -239,70 +315,6 @@ class Inspiro_Color_General_Config {
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
 						'label'    => esc_html__( 'Heading H6', 'inspiro' ),
-						'section'  => 'colors',
-						'priority' => 11,
-					),
-				),
-				array(
-					'id'           => 'color_general_page_title',
-					'control_type' => 'WP_Customize_Color_Control',
-					'args'         => array(
-						'label'    => esc_html__( 'Page title', 'inspiro' ),
-						'section'  => 'colors',
-						'priority' => 11,
-					),
-				),
-				array(
-					'id'           => 'color_general_post_title',
-					'control_type' => 'WP_Customize_Color_Control',
-					'args'         => array(
-						'label'    => esc_html__( 'Post title', 'inspiro' ),
-						'section'  => 'colors',
-						'priority' => 11,
-					),
-				),
-				array(
-					'id'           => 'color_general_entry_excerpt_text',
-					'control_type' => 'WP_Customize_Color_Control',
-					'args'         => array(
-						'label'    => esc_html__( 'Excerpt text', 'inspiro' ),
-						'description' => esc_html__( 'This text appears on the Latest Posts page.', 'inspiro' ),
-						'section'  => 'colors',
-						'priority' => 11,
-					),
-				),
-				array(
-					'id'           => 'color_general_entry_content_text',
-					'control_type' => 'WP_Customize_Color_Control',
-					'args'         => array(
-						'label'    => esc_html__( 'Post and Page text content', 'inspiro' ),
-						'section'  => 'colors',
-						'priority' => 11,
-					),
-				),
-//				array(
-//					'id'           => 'color_general_underline_text',
-//					'control_type' => 'WP_Customize_Color_Control',
-//					'args'         => array(
-//						'label'    => esc_html__( 'Underline color', 'inspiro' ),
-//						'section'  => 'colors',
-//						'priority' => 11,
-//					),
-//				),
-				array(
-					'id'           => 'color_general_link_content',
-					'control_type' => 'WP_Customize_Color_Control',
-					'args'         => array(
-						'label'    => esc_html__( 'Content Link color', 'inspiro' ),
-						'section'  => 'colors',
-						'priority' => 11,
-					),
-				),
-				array(
-					'id'           => 'color_general_link_hover_content',
-					'control_type' => 'WP_Customize_Color_Control',
-					'args'         => array(
-						'label'    => esc_html__( 'Link color on hover', 'inspiro' ),
 						'section'  => 'colors',
 						'priority' => 11,
 					),
