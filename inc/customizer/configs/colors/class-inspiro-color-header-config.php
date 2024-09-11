@@ -166,7 +166,7 @@ class Inspiro_Color_Header_Config {
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
 						'label'    => esc_html__( 'Menu Background', 'inspiro' ),
-						'description' => esc_html__( "Don't work if Hero Image Selected", 'inspiro' ),
+						'description' => esc_html__( "On Homepage work with disabled Hero Area", 'inspiro' ), // "Works only when the homepage is set to display the latest posts."
 						'section'  => 'colors',
 						'priority' => 12,
 					),
@@ -176,7 +176,7 @@ class Inspiro_Color_Header_Config {
 					'control_type' => 'Inspiro_Customize_Alpha_Color_Picker_Control',
 					'args'         => array(
 						'label'    => esc_html__( 'Menu Background on Scroll', 'inspiro' ),
-						'description' => esc_html__( "Work only with Hero Image Selected", 'inspiro' ),
+//						'description' => esc_html__( "Work only with Hero Image Selected", 'inspiro' ),
 						'section'  => 'colors',
 						'priority' => 12,
 					),
