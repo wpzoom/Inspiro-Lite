@@ -145,7 +145,7 @@ class Inspiro_Color_Header_Config {
 					'id'           => 'for_color_header_navbar_menu_options',
 					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
 					'args'         => array(
-						'label'            => esc_html__( 'Primary Navigation Menu', 'inspiro' ), // 'Top Navigation Menu'
+						'label'            => esc_html__( 'Header Menu', 'inspiro' ), // 'Top Navigation Menu'
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 12,
@@ -166,7 +166,7 @@ class Inspiro_Color_Header_Config {
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
 						'label'    => esc_html__( 'Menu Background', 'inspiro' ),
-						'description' => esc_html__( "On Homepage work with disabled Hero Area", 'inspiro' ), // "Works only when the homepage is set to display the latest posts."
+						'description' => esc_html__( "On Homepage works only when the Hero Area is disabled or not shown", 'inspiro' ), // "Works only when the homepage is set to display the latest posts."
 						'section'  => 'colors',
 						'priority' => 12,
 					),

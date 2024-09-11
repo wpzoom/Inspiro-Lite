@@ -202,7 +202,7 @@ class Inspiro_Color_General_Config {
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
 						'label'    => esc_html__( 'Excerpt text', 'inspiro' ),
-						'description' => esc_html__( 'This text appears on the Latest Posts page.', 'inspiro' ),
+						'description' => esc_html__( 'This text appears on the Blog page.', 'inspiro' ),
 						'section'  => 'colors',
 						'priority' => 11,
 					),
@@ -260,7 +260,7 @@ class Inspiro_Color_General_Config {
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
 						'label'       => esc_html__( 'All Headings (H1-H6)', 'inspiro' ),
-						'description' => esc_html__( 'For raw header tags only. To return to the default option, please publish the changes first.', 'inspiro' ),
+						'description' => esc_html__( 'For headings in the content only. To return to the default option, please publish the changes first.', 'inspiro' ),
 						'section'     => 'colors',
 						'priority'    => 11,
 					),

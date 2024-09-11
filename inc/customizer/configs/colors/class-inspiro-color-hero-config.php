@@ -114,8 +114,8 @@ class Inspiro_Color_Hero_Config {
 					'id'           => 'color_only_hero_title',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
-						'label'    => esc_html__( 'Only Hero Title Text Color', 'inspiro' ),
-						'description' => 'Will overwrite Hero Text Color.',
+						'label'    => esc_html__( 'Hero Title Text Color', 'inspiro' ),
+						'description' => 'Will overwrite Hero Text Color',
 						'section'  => 'colors',
 						'priority' => 13,
 					),
