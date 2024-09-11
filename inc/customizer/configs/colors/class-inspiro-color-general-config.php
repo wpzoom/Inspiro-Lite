@@ -126,15 +126,15 @@ class Inspiro_Color_General_Config {
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
 				),
-				array(
-					'id'   => 'color_general_underline_text',
-					'args' => array(
-						'default'              => '',
-						'transport'            => 'refresh',
-						'sanitize_callback'    => 'sanitize_hex_color',
-						'sanitize_js_callback' => 'maybe_hash_hex_color',
-					),
-				),
+//				array(
+//					'id'   => 'color_general_underline_text',
+//					'args' => array(
+//						'default'              => '',
+//						'transport'            => 'refresh',
+//						'sanitize_callback'    => 'sanitize_hex_color',
+//						'sanitize_js_callback' => 'maybe_hash_hex_color',
+//					),
+//				),
 				array(
 					'id'   => 'color_general_link_content',
 					'args' => array(
@@ -280,15 +280,15 @@ class Inspiro_Color_General_Config {
 						'priority' => 11,
 					),
 				),
-				array(
-					'id'           => 'color_general_underline_text',
-					'control_type' => 'WP_Customize_Color_Control',
-					'args'         => array(
-						'label'    => esc_html__( 'Underline color', 'inspiro' ),
-						'section'  => 'colors',
-						'priority' => 11,
-					),
-				),
+//				array(
+//					'id'           => 'color_general_underline_text',
+//					'control_type' => 'WP_Customize_Color_Control',
+//					'args'         => array(
+//						'label'    => esc_html__( 'Underline color', 'inspiro' ),
+//						'section'  => 'colors',
+//						'priority' => 11,
+//					),
+//				),
 				array(
 					'id'           => 'color_general_link_content',
 					'control_type' => 'WP_Customize_Color_Control',

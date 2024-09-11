@@ -84,7 +84,7 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$color_general_page_title = inspiro_get_theme_mod( 'color_general_page_title' );
 		$color_general_post_title = inspiro_get_theme_mod( 'color_general_post_title' );
 //		$color_general_entry_title        = inspiro_get_theme_mod( 'color_general_entry_title' ); // hidden for future ideea, create for all entry classes?
-		$color_general_underline_text     = inspiro_get_theme_mod( 'color_general_underline_text' );
+		$color_general_underline_text     = ''; //deactivated inspiro_get_theme_mod( 'color_general_underline_text' );
 		$color_general_link_content       = inspiro_get_theme_mod( 'color_general_link_content' );
 		$color_general_link_hover_content = inspiro_get_theme_mod( 'color_general_link_hover_content' );
 		$color_general_entry_excerpt_text = inspiro_get_theme_mod( 'color_general_entry_excerpt_text' );
