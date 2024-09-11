@@ -149,7 +149,7 @@ class Inspiro_Color_Header_Config {
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 12,
-						'controls_to_wrap' => 3,
+						'controls_to_wrap' => 2,
 					),
 				),
 //				array(

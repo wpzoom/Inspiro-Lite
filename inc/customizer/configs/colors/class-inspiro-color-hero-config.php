@@ -106,7 +106,7 @@ class Inspiro_Color_Hero_Config {
 						'label'            => esc_html__( 'Hero section', 'inspiro' ),
 						'section'          => 'colors',
 						'settings'         => array(),
-						'priority'         => 15,
+						'priority'         => 12,
 						'controls_to_wrap' => 7,
 					),
 				),
@@ -116,16 +116,17 @@ class Inspiro_Color_Hero_Config {
 					'args'         => array(
 						'label'    => esc_html__( 'Hero Title Text Color', 'inspiro' ),
 						'section'  => 'colors',
-						'priority' => 17,
+						'priority' => 13,
 					),
 				),
+				// Header Text Color is missing here it's customized in class-inspiro-customizer.php file
 				array(
 					'id'           => 'header_button_textcolor',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
 						'label'    => esc_html__( 'Hero Button Text Color', 'inspiro' ),
 						'section'  => 'colors',
-						'priority' => 17,
+						'priority' => 13,
 					),
 				),
 				array(
@@ -134,7 +135,7 @@ class Inspiro_Color_Hero_Config {
 					'args'         => array(
 						'label'    => esc_html__( 'Hero Button Text Color Hover', 'inspiro' ),
 						'section'  => 'colors',
-						'priority' => 17,
+						'priority' => 13,
 					),
 				),
 				array(
@@ -143,7 +144,7 @@ class Inspiro_Color_Hero_Config {
 					'args'         => array(
 						'label'    => esc_html__( 'Hero Button Background Color Hover', 'inspiro' ),
 						'section'  => 'colors',
-						'priority' => 17,
+						'priority' => 13,
 					),
 				),
 				array(
@@ -152,7 +153,7 @@ class Inspiro_Color_Hero_Config {
 					'args'         => array(
 						'label'    => esc_html__( 'Scroll to Content Arrow', 'inspiro' ),
 						'section'  => 'colors',
-						'priority' => 17,
+						'priority' => 13,
 					),
 				),
 				array(
@@ -167,7 +168,7 @@ class Inspiro_Color_Hero_Config {
 							'step' => 0.1,
 						),
 						'section'     => 'colors',
-						'priority'    => 17,
+						'priority'    => 14,
 					),
 				),
 			),
