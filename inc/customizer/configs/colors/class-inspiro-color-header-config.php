@@ -89,6 +89,16 @@ class Inspiro_Color_Header_Config {
 					),
 				),
 				array(
+					'id'   => 'color_menu_search_icon_btn',
+					'args' => array(
+						'theme_supports'       => array( 'custom-header' ),
+						'default'              => '#ffffff',
+						'transport'            => 'refresh',
+						'sanitize_callback'    => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
+				array(
 					'id'   => 'color_menu_hamburger_btn',
 					'args' => array(
 						'theme_supports'       => array( 'custom-header' ),
@@ -109,7 +119,7 @@ class Inspiro_Color_Header_Config {
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 11,
-						'controls_to_wrap' => 3,
+						'controls_to_wrap' => 4,
 					),
 				),
 				// 1. header settings
@@ -127,6 +137,15 @@ class Inspiro_Color_Header_Config {
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
 						'label'    => esc_html__( 'Custom Logo Text on Hover', 'inspiro' ), //  'Site Title Color'
+						'section'  => 'colors',
+						'priority' => 11,
+					),
+				),
+				array(
+					'id'           => 'color_menu_search_icon_btn',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Search Icon Color', 'inspiro' ),
 						'section'  => 'colors',
 						'priority' => 11,
 					),

@@ -93,6 +93,7 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		// header
 		$color_header_custom_logo_text       = inspiro_get_theme_mod( 'color_header_custom_logo_text' );
 		$color_header_custom_logo_hover_text = inspiro_get_theme_mod( 'color_header_custom_logo_hover_text' );
+		$color_menu_search_icon_btn          = inspiro_get_theme_mod( 'color_menu_search_icon_btn' );
 		$color_menu_hamburger_btn            = inspiro_get_theme_mod( 'color_menu_hamburger_btn' );
 		$color_menu_background               = inspiro_get_theme_mod( 'color_menu_background' );
 		$color_menu_background_scroll        = inspiro_get_theme_mod( 'color-menu-background-scroll' );
@@ -199,6 +200,14 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 			.has-header-video.home.blog .headroom--not-top .navbar,
 			.has-header-video.inspiro-front-page .headroom--not-top .navbar {
 				background-color: <?php echo maybe_hash_hex_color( $color_menu_background_scroll ); ?>;
+			}
+
+			<?php endif; ?>
+
+			<?php if ( '#ffffff' !== $color_menu_search_icon_btn ) : ?>
+			.sb-search .sb-search-button-open .sb-icon-search .svg-icon,
+			.sb-search .sb-search-button-close .sb-icon-search .svg-icon {
+				fill: <?php echo $color_menu_search_icon_btn; ?>;
 			}
 
 			<?php endif; ?>
