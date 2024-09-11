@@ -347,9 +347,10 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 			}
 		});
 	});
+	// copyright text
 	wp.customize('color_footer_copyright_text', function (value) {
 		value.bind(function (to) {
-			$('.site-footer .copyright').css('color', to);
+			$('.site-footer .copyright span:first-child').css('color', to);
 		});
 	});
 

@@ -335,7 +335,7 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 			<?php endif; ?>
 
 			<?php if ( '#ffffff' !== $color_footer_copyright_text  ) : ?>
-			.site-footer .copyright {
+			.site-footer .copyright span:first-child {
 				color: <?php echo $color_footer_copyright_text; ?>;
 			}
 
