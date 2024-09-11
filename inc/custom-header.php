@@ -118,7 +118,6 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$color_footer_text           = inspiro_get_theme_mod( 'color_footer_text' );
 		$color_footer_copyright_text = inspiro_get_theme_mod( 'color_footer_copyright_text' );
 
-		var_dump($hero_color_only_hero_title);
 		?>
 		<style id="inspiro-custom-header-styles" type="text/css">
 			<?php

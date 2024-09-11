@@ -134,7 +134,7 @@ class Inspiro_Color_Hero_Config {
 					'id'           => 'header_button_textcolor_hover',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
-						'label'    => esc_html__( 'Hero Button Text Color Hover', 'inspiro' ),
+						'label'    => esc_html__( 'Hero Button Text Color on Hover', 'inspiro' ),
 						'section'  => 'colors',
 						'priority' => 13,
 					),
@@ -143,7 +143,7 @@ class Inspiro_Color_Hero_Config {
 					'id'           => 'header_button_bgcolor_hover',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
-						'label'    => esc_html__( 'Hero Button Background Color Hover', 'inspiro' ),
+						'label'    => esc_html__( 'Hero Button Background Color on Hover', 'inspiro' ),
 						'section'  => 'colors',
 						'priority' => 13,
 					),
