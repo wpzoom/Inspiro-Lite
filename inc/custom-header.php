@@ -73,13 +73,13 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 	 */
 	function inspiro_header_style() {
 		// general
-		$color_general_h_tags     = inspiro_get_theme_mod( 'color_general_h_tags' );
-		$color_general_h1_tag     = inspiro_get_theme_mod( 'color_general_h1_tag' );
-		$color_general_h2_tag     = inspiro_get_theme_mod( 'color_general_h2_tag' );
-		$color_general_h3_tag     = inspiro_get_theme_mod( 'color_general_h3_tag' );
-		$color_general_h4_tag     = inspiro_get_theme_mod( 'color_general_h4_tag' );
-		$color_general_h5_tag     = inspiro_get_theme_mod( 'color_general_h5_tag' );
-		$color_general_h6_tag     = inspiro_get_theme_mod( 'color_general_h6_tag' );
+		$color_general_h_tags = inspiro_get_theme_mod( 'color_general_h_tags' );
+		$color_general_h1_tag = inspiro_get_theme_mod( 'color_general_h1_tag' );
+		$color_general_h2_tag = inspiro_get_theme_mod( 'color_general_h2_tag' );
+		$color_general_h3_tag = inspiro_get_theme_mod( 'color_general_h3_tag' );
+		$color_general_h4_tag = inspiro_get_theme_mod( 'color_general_h4_tag' );
+		$color_general_h5_tag = inspiro_get_theme_mod( 'color_general_h5_tag' );
+		$color_general_h6_tag = inspiro_get_theme_mod( 'color_general_h6_tag' );
 
 		$color_general_page_title = inspiro_get_theme_mod( 'color_general_page_title' );
 		$color_general_post_title = inspiro_get_theme_mod( 'color_general_post_title' );
@@ -99,7 +99,8 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$color_navbar_menu_background        = ''; // deactivated inspiro_get_theme_mod( 'color_navbar_menu_background' );
 
 		// hero section
-		$header_text_color              = get_header_textcolor(); //todo: ?
+		$header_text_color              = get_header_textcolor(); // from old code, all Hero presentation text color
+		$hero_color_only_hero_title     = inspiro_get_theme_mod( 'color_only_hero_title' );
 		$header_button_text_color       = inspiro_get_theme_mod( 'header_button_textcolor' );
 		$header_button_text_color_hover = inspiro_get_theme_mod( 'header_button_textcolor_hover' );
 		$header_button_bg_color_hover   = inspiro_get_theme_mod( 'header_button_bgcolor_hover' );
@@ -117,7 +118,7 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$color_footer_text           = inspiro_get_theme_mod( 'color_footer_text' );
 		$color_footer_copyright_text = inspiro_get_theme_mod( 'color_footer_copyright_text' );
 
-//		var_dump($hero_gradient_opacity_control);
+		var_dump($hero_color_only_hero_title);
 		?>
 		<style id="inspiro-custom-header-styles" type="text/css">
 			<?php
@@ -172,6 +173,15 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 			.custom-header-button:hover {
 				background-color: <?php echo maybe_hash_hex_color( $header_button_bg_color_hover ); ?> !important;
 				border-color: <?php echo maybe_hash_hex_color( $header_button_bg_color_hover ); ?> !important;
+			}
+
+			<?php endif; ?>
+
+			<?php if ( '' !== $hero_color_only_hero_title ) : ?>
+			.site-title a,
+			.site-branding-text .site-title a,
+			body.has-header-image .site-title a {
+				color: <?php echo maybe_hash_hex_color( $hero_color_only_hero_title ); ?>
 			}
 
 			<?php endif; ?>

@@ -39,11 +39,11 @@ class Inspiro_Color_Hero_Config {
 				// 2. top menu settings
 				// hero section
 				array(
-					'id'   => 'color_hero_site_title',
+					'id'   => 'color_only_hero_title', // was color_hero_site_title
 					'args' => array(
 						'theme_supports'       => array( 'custom-header', 'header-text' ),
-						'default'              => '#ffffff',
-						'transport'            => 'postMessage',
+						'default'              => '',
+						'transport'            => 'refresh',
 						'sanitize_callback'    => 'sanitize_hex_color',
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
@@ -111,10 +111,11 @@ class Inspiro_Color_Hero_Config {
 					),
 				),
 				array(
-					'id'           => 'color_hero_site_title',
+					'id'           => 'color_only_hero_title',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
-						'label'    => esc_html__( 'Hero Title Text Color', 'inspiro' ),
+						'label'    => esc_html__( 'Only Hero Title Text Color', 'inspiro' ),
+						'description' => 'Will overwrite Hero Text Color.',
 						'section'  => 'colors',
 						'priority' => 13,
 					),
