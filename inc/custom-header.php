@@ -96,7 +96,7 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$color_menu_hamburger_btn            = inspiro_get_theme_mod( 'color_menu_hamburger_btn' );
 		$color_menu_background               = inspiro_get_theme_mod( 'color_menu_background' );
 		$color_menu_background_scroll        = inspiro_get_theme_mod( 'color-menu-background-scroll' );
-		$color_navbar_menu_background        = inspiro_get_theme_mod( 'color_navbar_menu_background' );
+		$color_navbar_menu_background        = ''; // deactivated inspiro_get_theme_mod( 'color_navbar_menu_background' );
 
 		// hero section
 		$header_text_color              = get_header_textcolor(); //todo: ?

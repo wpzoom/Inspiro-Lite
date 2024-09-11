@@ -58,16 +58,16 @@ class Inspiro_Color_Header_Config {
 					),
 				),
 				// 2. top menu settings
-				array(
-					'id'   => 'color_navbar_menu_background',
-					'args' => array(
-						'theme_supports'       => array( 'custom-header', 'header-text' ),
-						'default'              => '',
-						'transport'            => 'refresh',
-						'sanitize_callback'    => 'sanitize_hex_color',
-						'sanitize_js_callback' => 'maybe_hash_hex_color',
-					),
-				),
+//				array(
+//					'id'   => 'color_navbar_menu_background',
+//					'args' => array(
+//						'theme_supports'       => array( 'custom-header', 'header-text' ),
+//						'default'              => '',
+//						'transport'            => 'refresh',
+//						'sanitize_callback'    => 'sanitize_hex_color',
+//						'sanitize_js_callback' => 'maybe_hash_hex_color',
+//					),
+//				),
 				array(
 					// all header navbar but not navigation properly
 					'id'   => 'color_menu_background',
@@ -152,15 +152,15 @@ class Inspiro_Color_Header_Config {
 						'controls_to_wrap' => 3,
 					),
 				),
-				array(
-					'id'           => 'color_navbar_menu_background',
-					'control_type' => 'WP_Customize_Color_Control',
-					'args'         => array(
-						'label'    => esc_html__( 'Navigation Background Color', 'inspiro' ), // 'Primary Navigation Background Color'
-						'section'  => 'colors',
-						'priority' => 12,
-					),
-				),
+//				array(
+//					'id'           => 'color_navbar_menu_background',
+//					'control_type' => 'WP_Customize_Color_Control',
+//					'args'         => array(
+//						'label'    => esc_html__( 'Navigation Background Color', 'inspiro' ), // 'Primary Navigation Background Color'
+//						'section'  => 'colors',
+//						'priority' => 12,
+//					),
+//				),
 				array(
 					'id'           => 'color_menu_background',
 					'control_type' => 'WP_Customize_Color_Control',
