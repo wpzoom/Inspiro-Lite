@@ -46,6 +46,11 @@ require INSPIRO_THEME_DIR . 'inc/theme-media.php';
 require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-enqueue-scripts.php';
 
 /**
+ * Setup custom wp-admin options pages
+ */
+require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-custom-wp-admin-menu.php';
+
+/**
  * Functions and definitions.
  */
 require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-after-setup-theme.php';
