@@ -328,10 +328,35 @@ class Inspiro_Theme_Upgrader {
 				set_theme_mod( $name, 'normal' );
 			}
 
-			// Site Identity
+			// --- Site Identity --- //
 			if ( 'custom_logo_text' === $name ) {
 				update_option( 'blogname', $theme_mod );
 			}
+
+			// --- Homepage Hero Area --- //
+			// todo: check if it's ok
+			// Hero Title
+			if ( 'header_site_title' === $name ) {
+				$this->slide_post_attr['post_title'] = $theme_mod;
+			}
+			// Hero Description
+			if ( 'header_site_description' === $name ) {
+				$this->slide_post_attr['post_content'] = $theme_mod;
+			}
+			// Hero Button Text
+			if ( 'header_button_title' === $name ) {
+				$this->slide_post_attr['wpzoom_slide_button_title'] = $theme_mod;
+			}
+			// Hero Button URL
+			if ( 'header_button_url' === $name ) {
+				$this->slide_post_attr['wpzoom_slide_url']        = $theme_mod;
+				$this->slide_post_attr['wpzoom_slide_button_url'] = $theme_mod;
+			}
+			// Open link on new tab
+			if ( 'header_button_link_open' === $name ) {
+				$this->slide_post_attr['wpzoom_slide_button_url_open'] = $theme_mod;
+			}
+
 
 			// --- Colors Panel --- //
 			// Colorscheme
@@ -401,6 +426,32 @@ class Inspiro_Theme_Upgrader {
 				set_theme_mod( 'menu-background-scroll', maybe_hash_hex_color( $theme_mod ) );
 			}
 
+			// - Hero section - //
+			// these values are transferred from hero to slider section
+			// set only Hero Title Text Color
+			if ( 'color_only_hero_title' === $name && 'color_only_hero_title' !== 'blank' ) {
+				set_theme_mod( 'color-slider-title', maybe_hash_hex_color( $theme_mod ) );
+			}
+			// Hero Button Text Color
+			if ( 'header_button_textcolor' === $name ) {
+				set_theme_mod( 'color-slider-button-text', maybe_hash_hex_color( $theme_mod ) );
+				set_theme_mod( 'color-slider-button-border', maybe_hash_hex_color( $theme_mod ) );
+			}
+			// Hero Button Text Color on Hover
+			if ( 'header_button_textcolor_hover' === $name ) {
+				set_theme_mod( 'color-slider-button-text-hover', maybe_hash_hex_color( $theme_mod ) );
+			}
+			// Hero Button Background Color on Hover
+			if ( 'header_button_bgcolor_hover' === $name ) {
+				set_theme_mod( 'color-slider-button-background-hover', maybe_hash_hex_color( $theme_mod ) );
+				set_theme_mod( 'color-slider-button-border-hover', maybe_hash_hex_color( $theme_mod ) );
+			}
+			// Scroll to Content Arrow
+			if ( 'color_scroll_to_content_arrow' === $name ) {
+				set_theme_mod( 'color-slider-arrows', maybe_hash_hex_color( $theme_mod ) );
+			}
+
+
 			// - Sidebar and Widgets - //
 			// Sidebar Background
 			if ( 'color_sidebar_widgets_background' === $name ) {
@@ -433,49 +484,6 @@ class Inspiro_Theme_Upgrader {
 //				set_theme_mod( '', $theme_mod );
 //			}
 
-			// these values are transferred from hero to slider section
-			// set only Hero Title Text Color
-			if ( 'color_only_hero_title' === $name && 'color_only_hero_title' !== 'blank' ) {
-				set_theme_mod( 'color-slider-title', maybe_hash_hex_color( $theme_mod ) );
-			}
-			// Hero Button Text Color
-			if ( 'header_button_textcolor' === $name ) {
-				set_theme_mod( 'color-slider-button-text', maybe_hash_hex_color( $theme_mod ) );
-				set_theme_mod( 'color-slider-button-border', maybe_hash_hex_color( $theme_mod ) );
-			}
-			// Hero Button Text Color on Hover
-			if ( 'header_button_textcolor_hover' === $name ) {
-				set_theme_mod( 'color-slider-button-text-hover', maybe_hash_hex_color( $theme_mod ) );
-			}
-			// Hero Button Background Color on Hover
-			if ( 'header_button_bgcolor_hover' === $name ) {
-				set_theme_mod( 'color-slider-button-background-hover', maybe_hash_hex_color( $theme_mod ) );
-				set_theme_mod( 'color-slider-button-border-hover', maybe_hash_hex_color( $theme_mod ) );
-			}
-
-			// --- Homepage Hero Area --- //
-			// todo: check if it's ok
-			// Hero Title
-			if ( 'header_site_title' === $name ) {
-				$this->slide_post_attr['post_title'] = $theme_mod;
-			}
-			// Hero Description
-			if ( 'header_site_description' === $name ) {
-				$this->slide_post_attr['post_content'] = $theme_mod;
-			}
-			// Hero Button Text
-			if ( 'header_button_title' === $name ) {
-				$this->slide_post_attr['wpzoom_slide_button_title'] = $theme_mod;
-			}
-			// Hero Button URL
-			if ( 'header_button_url' === $name ) {
-				$this->slide_post_attr['wpzoom_slide_url']        = $theme_mod;
-				$this->slide_post_attr['wpzoom_slide_button_url'] = $theme_mod;
-			}
-			// Open link on new tab
-			if ( 'header_button_link_open' === $name ) {
-				$this->slide_post_attr['wpzoom_slide_button_url_open'] = $theme_mod;
-			}
 		}
 
 		if ( is_array( $header_image_data ) ) {
