@@ -61,7 +61,7 @@ class Inspiro_Theme_Upgrader {
 		add_filter( 'install_theme_overwrite_actions', array( $this, 'theme_overwrite_actions' ), 10, 3 );
 
 		add_filter( 'install_theme_complete_actions', array( $this, 'set_inspiro_pro_theme' ), 10, 4 );
-	
+
 	}
 
 	/**
@@ -69,7 +69,7 @@ class Inspiro_Theme_Upgrader {
 	 *
 	 */
 	public function set_inspiro_pro_theme( $install_actions, $api, $stylesheet, $theme_info ) {
-		
+
 		if( 'wpzoom-inspiro-pro' === $theme_info->template ) {
 			$this->migrate_customizer_settings();
 			$this->setup_slider_item();
@@ -304,6 +304,7 @@ class Inspiro_Theme_Upgrader {
 			set_theme_mod( 'color-slider-description', maybe_hash_hex_color( $header_textcolor ) );
 		}
 
+		// migrate options values
 		foreach ( $customizer_data as $name => $args ) {
 			$default       = inspiro_get_prop( $args, 'default' );
 			$saved_setting = inspiro_get_prop( $theme_mods, $name );
@@ -320,9 +321,14 @@ class Inspiro_Theme_Upgrader {
 			if ( strpos( $name, 'font-weight' ) !== false && '400' === $theme_mod ) {
 				set_theme_mod( $name, 'normal' );
 			}
+
+			// Site Identity
 			if ( 'custom_logo_text' === $name ) {
 				update_option( 'blogname', $theme_mod );
 			}
+
+			// --- Colors Panel --- //
+			// Colorscheme
 			if ( 'colorscheme' === $name ) {
 				if ( 'light' === $theme_mod ) {
 					set_theme_mod( 'color-background', '#ffffff' );
@@ -338,6 +344,87 @@ class Inspiro_Theme_Upgrader {
 					set_theme_mod( 'color-accent', maybe_hash_hex_color( $custom_color_hex ) );
 				}
 			}
+
+			// - General section - //
+			// Post title
+			if ( 'color_general_post_title' === $name ) {
+				set_theme_mod( 'color-post-title', $theme_mod );
+			}
+			// Post and Page text content
+			if ( 'color_general_entry_content_text' === $name ) {
+				set_theme_mod( 'color-single-content', $theme_mod );
+			}
+			// Content Link color
+			if ( 'color_general_link_content' === $name ) {
+				set_theme_mod( 'control-color-link', $theme_mod );
+			}
+			// Link color on hover
+			if ( 'color_general_link_hover_content' === $name ) {
+				set_theme_mod( 'color-link-hover', $theme_mod );
+			}
+
+			// Custom Logo Text
+			if ( 'color_header_custom_logo_text' === $name ) {
+				set_theme_mod( 'color-logo', $theme_mod );
+			}
+			// Custom Logo Text on Hover
+			if ( 'color_header_custom_logo_hover_text' === $name ) {
+				set_theme_mod( 'color-logo-hover', $theme_mod );
+			}
+			// Search Icon Color
+//			if ( 'color_menu_search_icon_btn' === $name ) {
+//				set_theme_mod( 'color-menu-link', $theme_mod );
+//			}
+			// Hamburger Icon Color
+			if ( 'color_menu_hamburger_btn' === $name ) {
+				set_theme_mod( 'color-menu-hamburger', $theme_mod );
+			}
+
+			// - Header Menu section - //
+			// Menu Background
+			if ( 'color_menu_background' === $name ) {
+				set_theme_mod( 'color-menu-background', $theme_mod );
+			}
+			// Menu Background on Scroll
+			if ( 'menu-background-scroll' === $name ) {
+				set_theme_mod( 'menu-background-scroll', $theme_mod );
+			}
+
+			// - Sidebar and Widgets - //
+			// Sidebar Background
+			if ( 'color_sidebar_widgets_background' === $name ) {
+				set_theme_mod( 'color-sidebar-background', $theme_mod );
+			}
+			// Widget Title
+//			if ( '' === $name ) {
+//				set_theme_mod( '', $theme_mod );
+//			}
+			// Widget Text
+			if ( 'color_sidebar_widgets_text' === $name ) {
+				set_theme_mod( 'color-sidebar-text', $theme_mod );
+			}
+			// Widget Link
+			if ( 'color_sidebar_widgets_link' === $name ) {
+				set_theme_mod( 'color-sidebar-link', $theme_mod );
+			}
+
+			// - Footer - //
+			// Footer Background
+			if ( 'color_footer_background' === $name ) {
+				set_theme_mod( 'footer-background-color', $theme_mod );
+			}
+			// Footer Text Color
+			if ( 'color_footer_text' === $name ) {
+				set_theme_mod( 'footer-text-color', $theme_mod );
+			}
+			// Copyright Text Color
+//			if ( 'color_footer_copyright_text' === $name ) {
+//				set_theme_mod( '', $theme_mod );
+//			}
+
+
+
+			// these values are transferred to hero section
 			if ( 'header_button_textcolor' === $name ) {
 				set_theme_mod( 'color-slider-button-text', maybe_hash_hex_color( $theme_mod ) );
 				set_theme_mod( 'color-slider-button-border', maybe_hash_hex_color( $theme_mod ) );
@@ -372,6 +459,7 @@ class Inspiro_Theme_Upgrader {
 		} elseif ( is_object( $header_image_data ) ) {
 			$this->slide_post_attr['post_thumbnail_id'] = $header_image_data->attachment_id;
 		}
+
 
 		/**
 		 * Check for external header video.
