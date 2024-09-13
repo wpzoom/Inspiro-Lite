@@ -2,9 +2,9 @@
 /**
  * Theme Upgrader: Helps to set all settings needed to upgrade to premium version
  *
- * @package Inspiro
+ * @package    Inspiro
  * @subpackage Upgrader
- * @since Inspiro 1.4.0
+ * @since      Inspiro 1.4.0
  */
 
 /**
@@ -70,7 +70,7 @@ class Inspiro_Theme_Upgrader {
 	 */
 	public function set_inspiro_pro_theme( $install_actions, $api, $stylesheet, $theme_info ) {
 
-		if( 'wpzoom-inspiro-pro' === $theme_info->template ) {
+		if ( 'wpzoom-inspiro-pro' === $theme_info->template ) {
 			$this->migrate_customizer_settings();
 			$this->setup_slider_item();
 			$this->set_upgrader_option();
@@ -82,33 +82,37 @@ class Inspiro_Theme_Upgrader {
 	/**
 	 * Filters the source file location for the upgrade package.
 	 *
-	 * @param string      $source        File source location.
-	 * @param string      $remote_source Remote file source location.
-	 * @param WP_Upgrader $upgrader      WP_Upgrader instance.
-	 * @param array       $hook_extra    Extra arguments passed to hooked filters.
+	 * @param   string       $source         File source location.
+	 * @param   string       $remote_source  Remote file source location.
+	 * @param   WP_Upgrader  $upgrader       WP_Upgrader instance.
+	 * @param   array        $hook_extra     Extra arguments passed to hooked filters.
 	 */
 	public function set_upgrader_instance( $source, $remote_source, $upgrader, $hook_extra ) {
 		if ( isset( $hook_extra['type'] ) && 'theme' === $hook_extra['type'] ) {
 			$this->wp_upgrader = $upgrader;
 		}
+
 		return $source;
 	}
 
 	/**
 	 * Check new theme version to make sure we have premium version uploaded
 	 *
-	 * @param array $data New theme data.
+	 * @param   array  $data  New theme data.
+	 *
 	 * @return boolean
 	 */
 	public function check_new_theme_version( $data ) {
 		$whitelist_premium = array( 'Inspiro', 'Inspiro PRO' );
 		if ( ! in_array( $data['Name'], $whitelist_premium ) ) {
 			$this->uploaded_premium = false;
+
 			return $this->uploaded_premium;
 		}
 		if ( version_compare( $data['Version'], '1.4.4', '>=' ) ) {
 			$this->uploaded_premium = true;
 		}
+
 		return $this->uploaded_premium;
 	}
 
@@ -136,13 +140,13 @@ class Inspiro_Theme_Upgrader {
 	/**
 	 * The compare table output for overwriting a theme package on upload.
 	 *
-	 * @param string $table              The output table with Name, Version, Author, RequiresWP, and RequiresPHP info.
-	 * @param array  $current_theme_data Array with current theme data.
-	 * @param array  $new_theme_data     Array with uploaded theme data.
-	 *
-	 * @see WordPress Theme_Installer_Skin
+	 * @param   string  $table               The output table with Name, Version, Author, RequiresWP, and RequiresPHP info.
+	 * @param   array   $current_theme_data  Array with current theme data.
+	 * @param   array   $new_theme_data      Array with uploaded theme data.
 	 *
 	 * @return string The compare table output.
+	 * @see WordPress Theme_Installer_Skin
+	 *
 	 */
 	public function theme_overwrite_table( $table, $current_theme_data, $new_theme_data ) {
 		$this->old_theme_data = $current_theme_data;
@@ -151,9 +155,9 @@ class Inspiro_Theme_Upgrader {
 			return $table;
 		}
 
-		$table     .= '<h2 class="update-from-upload-heading">' . esc_html__( 'Click the "Replace active with uploaded" button below to complete the installation', 'inspiro' ) . '</h2>';
-			/* translators: %1$s: Documentation URL. %2$s: Link title. */
-			$table .= '<p class="update-from-upload-notice"><strong>' . esc_html__( 'Note:', 'inspiro' ) . '</strong> ' . sprintf( __( 'If you\'re having issues with your front page or the hero area after the upgrade, make sure to check the theme <a href="%1$s" target="_blank" title="%2$s">documentation</a> for setup instructions.', 'inspiro' ), 'https://www.wpzoom.com/documentation/inspiro/', esc_attr__( 'Open the Documentation', 'inspiro' ) ) . '</p>';
+		$table .= '<h2 class="update-from-upload-heading">' . esc_html__( 'Click the "Replace active with uploaded" button below to complete the installation', 'inspiro' ) . '</h2>';
+		/* translators: %1$s: Documentation URL. %2$s: Link title. */
+		$table .= '<p class="update-from-upload-notice"><strong>' . esc_html__( 'Note:', 'inspiro' ) . '</strong> ' . sprintf( __( 'If you\'re having issues with your front page or the hero area after the upgrade, make sure to check the theme <a href="%1$s" target="_blank" title="%2$s">documentation</a> for setup instructions.', 'inspiro' ), 'https://www.wpzoom.com/documentation/inspiro/', esc_attr__( 'Open the Documentation', 'inspiro' ) ) . '</p>';
 
 		return $table;
 	}
@@ -161,13 +165,13 @@ class Inspiro_Theme_Upgrader {
 	/**
 	 * The compare table output for overwriting a theme package on upload.
 	 *
-	 * @param string $table              The output table with Name, Version, Author, RequiresWP, and RequiresPHP info.
-	 * @param array  $current_theme_data Array with current theme data.
-	 * @param array  $new_theme_data     Array with uploaded theme data.
-	 *
-	 * @see WordPress Theme_Installer_Skin
+	 * @param   string  $table               The output table with Name, Version, Author, RequiresWP, and RequiresPHP info.
+	 * @param   array   $current_theme_data  Array with current theme data.
+	 * @param   array   $new_theme_data      Array with uploaded theme data.
 	 *
 	 * @return string The compare table output.
+	 * @see WordPress Theme_Installer_Skin
+	 *
 	 */
 	public function multisite_overwrite( $table, $current_theme_data, $new_theme_data ) {
 		// Check if user has uploaded .zip file from About Inspiro page.
@@ -202,9 +206,9 @@ class Inspiro_Theme_Upgrader {
 	 * Filters the list of action links available following a single theme installation failure
 	 * when overwriting is allowed.
 	 *
-	 * @param string[] $install_actions Array of theme action links.
-	 * @param object   $api             Object containing WordPress.org API theme data.
-	 * @param array    $new_theme_data  Array with uploaded theme data.
+	 * @param   string[]  $install_actions  Array of theme action links.
+	 * @param   object    $api              Object containing WordPress.org API theme data.
+	 * @param   array     $new_theme_data   Array with uploaded theme data.
 	 */
 	public function theme_overwrite_actions( $install_actions, $api, $new_theme_data ) {
 		// Check if user has uploaded .zip file from About Inspiro page.
@@ -225,10 +229,10 @@ class Inspiro_Theme_Upgrader {
 	/**
 	 * Filters the source file location for the upgrade package.
 	 *
-	 * @param string      $source        File source location.
-	 * @param string      $remote_source Remote file source location.
-	 * @param WP_Upgrader $upgrader      WP_Upgrader instance.
-	 * @param array       $hook_extra    Extra arguments passed to hooked filters.
+	 * @param   string       $source         File source location.
+	 * @param   string       $remote_source  Remote file source location.
+	 * @param   WP_Upgrader  $upgrader       WP_Upgrader instance.
+	 * @param   array        $hook_extra     Extra arguments passed to hooked filters.
 	 */
 	public function start_upgrader_process( $source, $remote_source, $upgrader, $hook_extra ) {
 		$overwrite = isset( $_GET['overwrite'] ) ? sanitize_text_field( wp_unslash( $_GET['overwrite'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
@@ -287,7 +291,7 @@ class Inspiro_Theme_Upgrader {
 				$url = inspiro_get_prop( $header_image_data, 'url' );
 
 				/**
-				 * Removes the http or https protocols and the template direcotry domain.
+				 * Removes the http or https protocols and the template directory domain.
 				 * Keeps only root theme path with '/' at the beginning.
 				 */
 				$clear_url = str_replace( INSPIRO_THEME_URI, '/', $url );
@@ -299,10 +303,12 @@ class Inspiro_Theme_Upgrader {
 			}
 		}
 
+		// Hero Text Color for two options in Premium
 		if ( 'blank' !== $header_textcolor ) {
 			set_theme_mod( 'color-slider-title', maybe_hash_hex_color( $header_textcolor ) );
 			set_theme_mod( 'color-slider-description', maybe_hash_hex_color( $header_textcolor ) );
 		}
+
 
 		// migrate options values
 		foreach ( $customizer_data as $name => $args ) {
@@ -346,30 +352,35 @@ class Inspiro_Theme_Upgrader {
 			}
 
 			// - General section - //
+			// Page title
+			if ( 'color_general_page_title' === $name ) {
+				set_theme_mod( 'color-single-title', maybe_hash_hex_color( $theme_mod ) );
+			}
 			// Post title
 			if ( 'color_general_post_title' === $name ) {
-				set_theme_mod( 'color-post-title', $theme_mod );
+				set_theme_mod( 'color-post-title', maybe_hash_hex_color( $theme_mod ) );
 			}
 			// Post and Page text content
 			if ( 'color_general_entry_content_text' === $name ) {
-				set_theme_mod( 'color-single-content', $theme_mod );
+				set_theme_mod( 'color-single-content', maybe_hash_hex_color( $theme_mod ) );
 			}
 			// Content Link color
 			if ( 'color_general_link_content' === $name ) {
-				set_theme_mod( 'control-color-link', $theme_mod );
+				set_theme_mod( 'control-color-link', maybe_hash_hex_color( $theme_mod ) );
 			}
 			// Link color on hover
 			if ( 'color_general_link_hover_content' === $name ) {
-				set_theme_mod( 'color-link-hover', $theme_mod );
+				set_theme_mod( 'color-link-hover', maybe_hash_hex_color( $theme_mod ) );
 			}
 
+			// - Header section - //
 			// Custom Logo Text
 			if ( 'color_header_custom_logo_text' === $name ) {
-				set_theme_mod( 'color-logo', $theme_mod );
+				set_theme_mod( 'color-logo', maybe_hash_hex_color( $theme_mod ) );
 			}
 			// Custom Logo Text on Hover
 			if ( 'color_header_custom_logo_hover_text' === $name ) {
-				set_theme_mod( 'color-logo-hover', $theme_mod );
+				set_theme_mod( 'color-logo-hover', maybe_hash_hex_color( $theme_mod ) );
 			}
 			// Search Icon Color
 //			if ( 'color_menu_search_icon_btn' === $name ) {
@@ -377,23 +388,23 @@ class Inspiro_Theme_Upgrader {
 //			}
 			// Hamburger Icon Color
 			if ( 'color_menu_hamburger_btn' === $name ) {
-				set_theme_mod( 'color-menu-hamburger', $theme_mod );
+				set_theme_mod( 'color-menu-hamburger', maybe_hash_hex_color( $theme_mod ) );
 			}
 
 			// - Header Menu section - //
 			// Menu Background
 			if ( 'color_menu_background' === $name ) {
-				set_theme_mod( 'color-menu-background', $theme_mod );
+				set_theme_mod( 'color-menu-background', maybe_hash_hex_color( $theme_mod ) );
 			}
 			// Menu Background on Scroll
 			if ( 'menu-background-scroll' === $name ) {
-				set_theme_mod( 'menu-background-scroll', $theme_mod );
+				set_theme_mod( 'menu-background-scroll', maybe_hash_hex_color( $theme_mod ) );
 			}
 
 			// - Sidebar and Widgets - //
 			// Sidebar Background
 			if ( 'color_sidebar_widgets_background' === $name ) {
-				set_theme_mod( 'color-sidebar-background', $theme_mod );
+				set_theme_mod( 'color-sidebar-background', maybe_hash_hex_color( $theme_mod ) );
 			}
 			// Widget Title
 //			if ( '' === $name ) {
@@ -401,54 +412,67 @@ class Inspiro_Theme_Upgrader {
 //			}
 			// Widget Text
 			if ( 'color_sidebar_widgets_text' === $name ) {
-				set_theme_mod( 'color-sidebar-text', $theme_mod );
+				set_theme_mod( 'color-sidebar-text', maybe_hash_hex_color( $theme_mod ) );
 			}
 			// Widget Link
 			if ( 'color_sidebar_widgets_link' === $name ) {
-				set_theme_mod( 'color-sidebar-link', $theme_mod );
+				set_theme_mod( 'color-sidebar-link', maybe_hash_hex_color( $theme_mod ) );
 			}
 
 			// - Footer - //
 			// Footer Background
 			if ( 'color_footer_background' === $name ) {
-				set_theme_mod( 'footer-background-color', $theme_mod );
+				set_theme_mod( 'footer-background-color', maybe_hash_hex_color( $theme_mod ) );
 			}
 			// Footer Text Color
 			if ( 'color_footer_text' === $name ) {
-				set_theme_mod( 'footer-text-color', $theme_mod );
+				set_theme_mod( 'footer-text-color', maybe_hash_hex_color( $theme_mod ) );
 			}
 			// Copyright Text Color
 //			if ( 'color_footer_copyright_text' === $name ) {
 //				set_theme_mod( '', $theme_mod );
 //			}
 
-
-
-			// these values are transferred to hero section
+			// these values are transferred from hero to slider section
+			// set only Hero Title Text Color
+			if ( 'color_only_hero_title' === $name && 'color_only_hero_title' !== 'blank' ) {
+				set_theme_mod( 'color-slider-title', maybe_hash_hex_color( $theme_mod ) );
+			}
+			// Hero Button Text Color
 			if ( 'header_button_textcolor' === $name ) {
 				set_theme_mod( 'color-slider-button-text', maybe_hash_hex_color( $theme_mod ) );
 				set_theme_mod( 'color-slider-button-border', maybe_hash_hex_color( $theme_mod ) );
 			}
+			// Hero Button Text Color on Hover
 			if ( 'header_button_textcolor_hover' === $name ) {
 				set_theme_mod( 'color-slider-button-text-hover', maybe_hash_hex_color( $theme_mod ) );
 			}
+			// Hero Button Background Color on Hover
 			if ( 'header_button_bgcolor_hover' === $name ) {
 				set_theme_mod( 'color-slider-button-background-hover', maybe_hash_hex_color( $theme_mod ) );
 				set_theme_mod( 'color-slider-button-border-hover', maybe_hash_hex_color( $theme_mod ) );
 			}
+
+			// --- Homepage Hero Area --- //
+			// todo: check if it's ok
+			// Hero Title
 			if ( 'header_site_title' === $name ) {
 				$this->slide_post_attr['post_title'] = $theme_mod;
 			}
+			// Hero Description
 			if ( 'header_site_description' === $name ) {
 				$this->slide_post_attr['post_content'] = $theme_mod;
 			}
+			// Hero Button Text
 			if ( 'header_button_title' === $name ) {
 				$this->slide_post_attr['wpzoom_slide_button_title'] = $theme_mod;
 			}
+			// Hero Button URL
 			if ( 'header_button_url' === $name ) {
 				$this->slide_post_attr['wpzoom_slide_url']        = $theme_mod;
 				$this->slide_post_attr['wpzoom_slide_button_url'] = $theme_mod;
 			}
+			// Open link on new tab
 			if ( 'header_button_link_open' === $name ) {
 				$this->slide_post_attr['wpzoom_slide_button_url_open'] = $theme_mod;
 			}
@@ -497,6 +521,7 @@ class Inspiro_Theme_Upgrader {
 
 		if ( is_wp_error( $slider_cpt ) ) {
 			show_message( $slider_cpt );
+
 			return;
 		}
 
@@ -523,6 +548,7 @@ class Inspiro_Theme_Upgrader {
 
 		if ( 0 === $slide_id ) {
 			show_message( $this->strings['setup_slider_item_error'] );
+
 			return;
 		}
 
@@ -546,8 +572,9 @@ class Inspiro_Theme_Upgrader {
 	/**
 	 * Set slide thumbnail
 	 *
-	 * @param string     $image_url The absolute path url to a default custom header image.
-	 * @param string|int $parent_post_id The ID of the post this attachment is for.
+	 * @param   string      $image_url       The absolute path url to a default custom header image.
+	 * @param   string|int  $parent_post_id  The ID of the post this attachment is for.
+	 *
 	 * @return void
 	 */
 	public function set_slide_thumbnail( $image_url, $parent_post_id ) {
@@ -630,14 +657,23 @@ class Inspiro_Theme_Upgrader {
 	/**
 	 * Sanitize customizer data option name
 	 *
-	 * @param string $option_name Theme mod option name.
+	 * @param   string  $option_name  Theme mod option name.
+	 *
 	 * @return string
 	 */
 	private function sanitize_option_name( $option_name ) {
-		$logo_whitelist = array( 'logo-font-family', 'logo-font-variant', 'logo-font-size', 'logo-font-weight', 'logo-text-transform', 'logo-line-height' );
+		$logo_whitelist = array(
+			'logo-font-family',
+			'logo-font-variant',
+			'logo-font-size',
+			'logo-font-weight',
+			'logo-text-transform',
+			'logo-line-height'
+		);
 		if ( in_array( $option_name, $logo_whitelist ) ) {
 			$option_name = str_replace( 'logo-', 'title-', $option_name );
 		}
+
 		return $option_name;
 	}
 }
