@@ -296,7 +296,7 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 
 			<?php endif; ?>
 
-			<?php if ( '#ffffff' !== $color_sidebar_widgets_text  ) : ?>
+			<?php if ( '#78787f' !== $color_sidebar_widgets_text  ) : ?>
 			.side-nav__scrollable-container {
 				color: <?php echo $color_sidebar_widgets_text; ?>;
 			}
