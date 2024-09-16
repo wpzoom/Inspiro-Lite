@@ -92,8 +92,9 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 				__( 'Upgrade', 'inspiro' ),         // page title
 				__( 'Upgrade', 'inspiro' ),         // menu title
 				'manage_options',          // capability
-				'inspiro_upgrade',        // menu slug
-				array( $this, 'upgrade' )           // callback function
+			'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium' // an option to include link a link without callback render func.
+//				'inspiro_upgrade',        // menu slug
+//				array( $this, 'upgrade' )           // callback function
 			);
 		}
 	}
