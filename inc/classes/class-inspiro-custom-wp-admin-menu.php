@@ -46,7 +46,7 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 		 */
 		public function register_admin_pages() {
 			// Add the main menu page
-			add_menu_page(
+			add_menu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_menu_page
 				__( 'Page Title', 'wpzoom' ),   // page title
 				__( 'Inspiro', 'inspiro' ),     // menu title
 				'manage_options',
@@ -57,7 +57,7 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 			);
 
 			// Add the first submenu page
-//			add_submenu_page(
+//			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
 //				'inspiro_admin',          // parent slug
 //				__( 'Inspiro Options', 'inspiro' ),  // page title
 //				__( 'Theme Options', 'wpzoom' ),     // menu title
@@ -67,7 +67,7 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 //			);
 
 			// Add the "About Inspiro" submenu page
-			add_submenu_page(
+			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
 				'inspiro_admin',         // parent slug
 				__( 'About Inspiro', 'inspiro' ),   // page title
 				__( 'About', 'inspiro' ),           // menu title
@@ -78,7 +78,7 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 			);
 
 			// Add the "Customizer" submenu page
-			add_submenu_page(
+			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
 				'inspiro_admin',         // parent slug
 				__( 'Customizer', 'inspiro' ),      // page title
 				__( 'Customizer', 'inspiro' ),      // menu title
@@ -87,7 +87,7 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 			);
 
 			// Add the "Upgrade" submenu page
-			add_submenu_page(
+			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
 				'inspiro_admin',         // parent slug
 				__( 'Upgrade', 'inspiro' ),         // page title
 				__( 'Upgrade', 'inspiro' ),         // menu title
