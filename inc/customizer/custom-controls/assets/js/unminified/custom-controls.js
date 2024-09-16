@@ -165,7 +165,7 @@
 		 * @return {string}  Font name where commas and inverted commas are removed if the font is a Google Font.
 		 */
 		_cleanGoogleFonts( fontValue ) {
-			// Bail if fontVAlue does not contain a comma.
+			// Bail if fontValue does not contain a comma.
 			if ( ! fontValue.includes( ',' ) ) return fontValue;
 
 			const splitFont = fontValue.split( ',' );
