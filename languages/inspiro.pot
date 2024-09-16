@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Inspiro 1.4.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/inspiro-lite\n"
-"POT-Creation-Date: 2024-09-09 12:20+0000\n"
+"POT-Creation-Date: 2024-09-16 10:04+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -100,7 +100,7 @@ msgstr ""
 msgid "[Edit]"
 msgstr ""
 
-#: inc/classes/class-inspiro-theme-upgrader.php:189
+#: inc/classes/class-inspiro-theme-upgrader.php:193
 msgid "Able to migrate"
 msgstr ""
 
@@ -118,6 +118,14 @@ msgid ""
 "Add widgets here to appear in your sidebar on blog posts and archive pages."
 msgstr ""
 
+#: inc/customizer/configs/colors/class-inspiro-color-hero-config.php:164
+msgid "Adjust gradient opacity"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:262
+msgid "All Headings (H1-H6)"
+msgstr ""
+
 #: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:59
 msgid "Blog Layout"
 msgstr ""
@@ -131,7 +139,7 @@ msgstr ""
 msgid "Blog Sidebar"
 msgstr ""
 
-#: inc/classes/class-inspiro-theme-upgrader.php:189
+#: inc/classes/class-inspiro-theme-upgrader.php:193
 msgid "Blogname"
 msgstr ""
 
@@ -184,7 +192,7 @@ msgstr ""
 msgid "Choosing a preset will override all the font settings."
 msgstr ""
 
-#: inc/classes/class-inspiro-theme-upgrader.php:154
+#: inc/classes/class-inspiro-theme-upgrader.php:158
 msgid ""
 "Click the \"Replace active with uploaded\" button below to complete the "
 "installation"
@@ -235,7 +243,7 @@ msgctxt "Color name"
 msgid "White"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:51
+#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:59
 msgid "Color Scheme"
 msgstr ""
 
@@ -251,6 +259,10 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
+#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:232
+msgid "Content Link color"
+msgstr ""
+
 #: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:66
 msgid "Content to Display in Archive Pages"
 msgstr ""
@@ -259,23 +271,32 @@ msgstr ""
 msgid "Copyright Text"
 msgstr ""
 
-#: inc/classes/class-inspiro-theme-upgrader.php:123
+#: inc/customizer/configs/colors/class-inspiro-color-footer-config.php:124
+msgid "Copyright Text Color"
+msgstr ""
+
+#: inc/classes/class-inspiro-theme-upgrader.php:127
 msgid "Create temporary custom post type Slider"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:55
+#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:63
 msgid "Custom"
 msgstr ""
 
 #: inc/customizer/configs/logo/class-inspiro-custom-logo-text-config.php:40
+#: inc/customizer/configs/colors/class-inspiro-color-header-config.php:130
 msgid "Custom Logo Text"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:54
+#: inc/customizer/configs/colors/class-inspiro-color-header-config.php:139
+msgid "Custom Logo Text on Hover"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:62
 msgid "Dark"
 msgstr ""
 
-#: inc/custom-header.php:56
+#: inc/custom-header.php:55
 msgid "Default Header Image"
 msgstr ""
 
@@ -283,7 +304,7 @@ msgstr ""
 msgid "Default Style"
 msgstr ""
 
-#: inc/customizer/class-inspiro-customizer.php:469
+#: inc/customizer/class-inspiro-customizer.php:472
 msgid "Default System Font"
 msgstr ""
 
@@ -331,6 +352,10 @@ msgstr ""
 
 #: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:70
 msgid "Excerpt"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:204
+msgid "Excerpt text"
 msgstr ""
 
 #: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-media-config.php:78
@@ -444,7 +469,7 @@ msgstr ""
 
 #: template-parts/footer/footer-widgets.php:26
 #: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:40
-#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:229
+#: inc/customizer/configs/colors/class-inspiro-color-footer-config.php:95
 msgid "Footer"
 msgstr ""
 
@@ -464,7 +489,7 @@ msgstr ""
 msgid "Footer 4"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:240
+#: inc/customizer/configs/colors/class-inspiro-color-footer-config.php:106
 msgid "Footer Background"
 msgstr ""
 
@@ -481,6 +506,16 @@ msgstr ""
 #: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:127
 #: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:131
 msgid "Footer Pro"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-footer-config.php:115
+msgid "Footer Text Color"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:263
+msgid ""
+"For headings in the content only. To return to the default option, please "
+"publish the changes first."
 msgstr ""
 
 #: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:94
@@ -514,6 +549,10 @@ msgstr ""
 msgid "Fullscreen"
 msgstr ""
 
+#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:163
+msgid "General"
+msgstr ""
+
 #: theme.json:1
 msgctxt "Gradient name"
 msgid "Black to Tertiary"
@@ -524,17 +563,21 @@ msgctxt "Gradient name"
 msgid "Secondary to Light"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:159
+#: inc/customizer/configs/colors/class-inspiro-color-header-config.php:157
 msgid "Hamburger Icon Color"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:130
+#: inc/customizer/configs/colors/class-inspiro-color-header-config.php:118
 #: inc/customizer/configs/header/class-inspiro-header-area-config.php:43
 msgid "Header"
 msgstr ""
 
 #: inc/customizer/configs/header/class-inspiro-header-area-config.php:138
 msgid "Header Layout"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-header-config.php:167
+msgid "Header Menu"
 msgstr ""
 
 #: inc/customizer/configs/header/class-inspiro-header-area-config.php:218
@@ -573,6 +616,31 @@ msgstr ""
 msgid "Heading 6"
 msgstr ""
 
+#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:272
+msgid "Heading H1"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:281
+msgid "Heading H2"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:290
+msgid "Heading H3"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:299
+msgid "Heading H4"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:308
+msgid "Heading H5"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:317
+msgid "Heading H6"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:251
 #: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:33
 msgid "Headings"
 msgstr ""
@@ -581,20 +649,20 @@ msgstr ""
 msgid "Hero Button"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:199
-msgid "Hero Button Background Color Hover"
+#: inc/customizer/configs/colors/class-inspiro-color-hero-config.php:146
+msgid "Hero Button Background Color on Hover"
 msgstr ""
 
 #: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:109
 msgid "Hero Button Text"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:180
+#: inc/customizer/configs/colors/class-inspiro-color-hero-config.php:128
 msgid "Hero Button Text Color"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:189
-msgid "Hero Button Text Color Hover"
+#: inc/customizer/configs/colors/class-inspiro-color-hero-config.php:137
+msgid "Hero Button Text Color on Hover"
 msgstr ""
 
 #: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:119
@@ -606,13 +674,17 @@ msgstr ""
 msgid "Hero Description"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:169
+#: inc/customizer/configs/colors/class-inspiro-color-hero-config.php:106
 msgid "Hero section"
 msgstr ""
 
 #: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:87
 #: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:102
 msgid "Hero Title"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-hero-config.php:117
+msgid "Hero Title Text Color"
 msgstr ""
 
 #: inc/customizer/configs/header/class-inspiro-header-area-config.php:170
@@ -671,7 +743,7 @@ msgid ""
 "some widgets to the %s"
 msgstr ""
 
-#: inc/classes/class-inspiro-theme-upgrader.php:156
+#: inc/classes/class-inspiro-theme-upgrader.php:160
 #, php-format
 msgid ""
 "If you're having issues with your front page or the hero area after the "
@@ -684,7 +756,7 @@ msgid "in"
 msgstr ""
 
 #: inc/classes/class-inspiro-font-family-manager.php:251
-#: inc/customizer/class-inspiro-customizer.php:450
+#: inc/customizer/class-inspiro-customizer.php:453
 #: inc/customizer/custom-controls/font-variant/class-inspiro-customize-font-variant-control.php:88
 #: inc/customizer/custom-controls/typography/class-inspiro-customize-typography-control.php:104
 msgid "Inherit"
@@ -757,7 +829,7 @@ msgstr ""
 msgid "Left menu with Logo Center"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:53
+#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:61
 msgid "Light"
 msgstr ""
 
@@ -780,6 +852,10 @@ msgstr ""
 #: inc/customizer/configs/typography/class-inspiro-typo-hero-header-button-config.php:166
 #: inc/customizer/configs/typography/class-inspiro-typo-h5-config.php:122
 msgid "Line Height"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:241
+msgid "Link color on hover"
 msgstr ""
 
 #. %1$s: admin url to profile %2$s: User identity %3$s: logout URL
@@ -852,11 +928,11 @@ msgctxt "menu"
 msgid "Top Horizontal Menu"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:141
+#: inc/customizer/configs/colors/class-inspiro-color-header-config.php:187
 msgid "Menu Background"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:150
+#: inc/customizer/configs/colors/class-inspiro-color-header-config.php:197
 msgid "Menu Background on Scroll"
 msgstr ""
 
@@ -872,11 +948,11 @@ msgstr ""
 msgid "Message:"
 msgstr ""
 
-#: inc/classes/class-inspiro-theme-upgrader.php:187
+#: inc/classes/class-inspiro-theme-upgrader.php:191
 msgid "Migrate settings for following blog site:"
 msgstr ""
 
-#: inc/classes/class-inspiro-theme-upgrader.php:119
+#: inc/classes/class-inspiro-theme-upgrader.php:123
 msgid "Migrate the Customizer settings to Inspiro Premium"
 msgstr ""
 
@@ -909,7 +985,7 @@ msgid "Normal 400"
 msgstr ""
 
 #. %1$s: Documentation URL. %2$s: Link title.
-#: inc/classes/class-inspiro-theme-upgrader.php:156
+#: inc/classes/class-inspiro-theme-upgrader.php:160
 msgid "Note:"
 msgstr ""
 
@@ -917,12 +993,16 @@ msgstr ""
 msgid "Nothing Found"
 msgstr ""
 
-#: inc/custom-header.php:61
+#: inc/custom-header.php:60
 msgid "Ocean Header Image"
 msgstr ""
 
 #: inc/template-tags.php:37
 msgid "on"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-header-config.php:188
+msgid "On Homepage works only when the Hero Area is disabled or not shown"
 msgstr ""
 
 #: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:82
@@ -952,7 +1032,7 @@ msgstr ""
 msgid "Open link on new tab"
 msgstr ""
 
-#: inc/classes/class-inspiro-theme-upgrader.php:156
+#: inc/classes/class-inspiro-theme-upgrader.php:160
 msgid "Open the Documentation"
 msgstr ""
 
@@ -964,6 +1044,10 @@ msgstr ""
 #. Name of the template
 #: page-templates/full-width-no-title.php:2
 msgid "Page Builder (Without Page Title)"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:186
+msgid "Page title"
 msgstr ""
 
 #. Name of the template
@@ -1153,7 +1237,7 @@ msgctxt "Pattern title"
 msgid "Testimonials"
 msgstr ""
 
-#: inc/custom-header.php:196
+#: inc/custom-header.php:440
 msgid "Pause background video"
 msgstr ""
 
@@ -1166,8 +1250,12 @@ msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr ""
 
-#: inc/custom-header.php:195
+#: inc/custom-header.php:439
 msgid "Play background video"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:214
+msgid "Post and Page text content"
 msgstr ""
 
 #: inc/template-tags.php:199
@@ -1180,6 +1268,10 @@ msgstr ""
 
 #: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:32
 msgid "Post Options"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:195
+msgid "Post title"
 msgstr ""
 
 #: inc/customizer/custom-controls/font-presets/class-inspiro-customize-font-presets-control.php:35
@@ -1224,8 +1316,16 @@ msgstr ""
 msgid "Scroll down to content"
 msgstr ""
 
+#: inc/customizer/configs/colors/class-inspiro-color-hero-config.php:155
+msgid "Scroll to Content Arrow"
+msgstr ""
+
 #: template-parts/header/search-form.php:15
 msgid "Search for:"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-header-config.php:148
+msgid "Search Icon Color"
 msgstr ""
 
 #. Search query.
@@ -1250,7 +1350,7 @@ msgid "Semi-Bold 600"
 msgstr ""
 
 #. %s: New slide title
-#: inc/classes/class-inspiro-theme-upgrader.php:121
+#: inc/classes/class-inspiro-theme-upgrader.php:125
 #, php-format
 msgid "Setup a new slider item with title: <strong>%s</strong>"
 msgstr ""
@@ -1271,6 +1371,14 @@ msgstr ""
 msgid "Sidebar"
 msgstr ""
 
+#: inc/customizer/configs/colors/class-inspiro-color-sidebar-widgets-config.php:84
+msgid "Sidebar and Widgets"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-sidebar-widgets-config.php:95
+msgid "Sidebar Background"
+msgstr ""
+
 #: inc/customizer-functions.php:17
 #: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:64
 #: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:77
@@ -1281,7 +1389,7 @@ msgstr ""
 msgid "Single Post Layout"
 msgstr ""
 
-#: inc/classes/class-inspiro-theme-upgrader.php:189
+#: inc/classes/class-inspiro-theme-upgrader.php:193
 msgid "Site URL"
 msgstr ""
 
@@ -1289,7 +1397,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/classes/class-inspiro-theme-upgrader.php:122
+#: inc/classes/class-inspiro-theme-upgrader.php:126
 msgid "Something went wrong to create a new slider item!"
 msgstr ""
 
@@ -1329,16 +1437,12 @@ msgctxt "submit button"
 msgid "Search"
 msgstr ""
 
-#: inc/customizer/class-inspiro-customizer.php:470
+#: inc/customizer/class-inspiro-customizer.php:473
 msgid "System Fonts"
 msgstr ""
 
 #: inc/template-tags.php:192
 msgid "Tags"
-msgstr ""
-
-#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:249
-msgid "Text Color"
 msgstr ""
 
 #: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:137
@@ -1410,6 +1514,10 @@ msgstr ""
 msgid "Thin 100"
 msgstr ""
 
+#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:205
+msgid "This text appears on the Blog page."
+msgstr ""
+
 #. %s: WordPress Version.
 #: inc/back-compat.php:42 inc/back-compat.php:61 inc/back-compat.php:86
 #, php-format
@@ -1453,19 +1561,19 @@ msgid ""
 "colors, fonts, header, footer & much more!"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:259
+#: inc/customizer/configs/colors/class-inspiro-color-footer-config.php:135
 msgid ""
 "Unlock all customization options by upgrading to the Premium version of the "
 "theme. Customize colors, fonts, header, footer & much more!"
 msgstr ""
 
-#: inc/customizer/class-inspiro-customizer.php:277
+#: inc/customizer/class-inspiro-customizer.php:280
 msgid ""
 "Unlock premium features: 7 Style Kits, Video Backgrounds, Portfolio "
 "Integration, Premium Support and much more..."
 msgstr ""
 
-#: inc/customizer/class-inspiro-customizer.php:276
+#: inc/customizer/class-inspiro-customizer.php:279
 msgid "Upgrade to Inspiro Premium"
 msgstr ""
 
@@ -1497,7 +1605,7 @@ msgstr ""
 msgid "Variants"
 msgstr ""
 
-#: inc/customizer/class-inspiro-customizer.php:278
+#: inc/customizer/class-inspiro-customizer.php:281
 msgid "View Inspiro Premium"
 msgstr ""
 
@@ -1529,6 +1637,18 @@ msgid ""
 "plugin and add the widget here."
 msgstr ""
 
+#: inc/customizer/configs/colors/class-inspiro-color-sidebar-widgets-config.php:122
+msgid "Widget Link"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-sidebar-widgets-config.php:113
+msgid "Widget Text"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-sidebar-widgets-config.php:104
+msgid "Widget Title"
+msgstr ""
+
 #. Author of the theme
 msgid "WPZOOM"
 msgstr ""
@@ -1558,11 +1678,11 @@ msgstr ""
 msgid "⚙️ You can control every detail in your theme with Inspiro Premium!"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:258
+#: inc/customizer/configs/colors/class-inspiro-color-footer-config.php:134
 msgid "🎨 There are 68 more color & font options in Inspiro Premium!"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:260
+#: inc/customizer/configs/colors/class-inspiro-color-footer-config.php:136
 msgid "👉 Unlock all customizations"
 msgstr ""
 

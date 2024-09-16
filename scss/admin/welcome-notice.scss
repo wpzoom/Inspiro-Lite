@@ -60,11 +60,11 @@ $light-color: #fff;
         align-items: center;
         font-weight: 600;
         color: $light-color;
-        background-color: var(--inspiro-primary-color);
+        background-color: var(--inspiro-primary-color) !important;
         padding: 3px 13px;
         transition: all 0.3s ease;
         margin-right: 5px;
-        border: 1px solid var(--inspiro-primary-color);
+        border: 1px solid var(--inspiro-primary-color) !important;
 
         &:hover,
         &:active {
@@ -74,7 +74,7 @@ $light-color: #fff;
 
         &.button-secondary {
             color: var(--inspiro-primary-color);
-            background-color: transparent;
+            background-color: transparent !important;
 
             &:hover,
             &:active {

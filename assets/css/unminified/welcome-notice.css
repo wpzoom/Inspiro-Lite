@@ -42,11 +42,11 @@
     align-items: center;
     font-weight: 600;
     color: #fff;
-    background-color: var(--inspiro-primary-color);
+    background-color: var(--inspiro-primary-color) !important;
     padding: 3px 13px;
     transition: all 0.3s ease;
     margin-right: 5px;
-    border: 1px solid var(--inspiro-primary-color);
+    border: 1px solid var(--inspiro-primary-color) !important;
 }
 .wpz-welcome-notice .button:hover, .wpz-welcome-notice .button:active {
     color: #fff;
@@ -54,7 +54,7 @@
 }
 .wpz-welcome-notice .button.button-secondary {
     color: var(--inspiro-primary-color);
-    background-color: transparent;
+    background-color: transparent !important;
 }
 .wpz-welcome-notice .button.button-secondary:hover, .wpz-welcome-notice .button.button-secondary:active {
     background-color: rgba(var(--inspiro-primary-color), 0.1);
