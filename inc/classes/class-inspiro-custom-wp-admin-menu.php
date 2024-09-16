@@ -31,7 +31,8 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 		}
 
 		public function about() {
-			echo '<h1>About Inspiro</h1>';
+		//	header( 'Location: http://localhost:8888/wp-admin/admin.php?page=inspiro_about' );
+		//	exit;
 		}
 
 		public function upgrade() {
@@ -71,8 +72,9 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 				__( 'About Inspiro', 'inspiro' ),   // page title
 				__( 'About', 'inspiro' ),           // menu title
 				'manage_options',          // capability
-				'inspiro_about',          // menu slug
-				array( $this, 'about' )             // callback function
+			'themes.php?page=inspiro',    // an option to include link a link without callback render func.
+//				'inspiro_about',          // menu slug
+//				array( $this,'about' )  // callback function
 			);
 
 			// Add the "Customizer" submenu page
