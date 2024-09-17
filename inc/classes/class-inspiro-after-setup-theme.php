@@ -45,8 +45,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 		public function __construct() {
 			add_action( 'after_setup_theme', array( $this, 'theme_setup' ) );
 			add_action( 'template_redirect', array( $this, 'theme_content_width' ), 0 );
-			add_action( 'tgmpa_register', array( $this, 'register_required_plugins' ) );
-            add_action( 'tgmpa_register', array( $this, 'register_required_plugins' ) );
+			add_action( 'tgmpa_register', array( $this, 'register_required_plugins' ) ); // this line was duplicated
             add_filter( 'ocdi/register_plugins', array( $this,'ocdi_register_plugins' ) );
             add_filter( 'ocdi/import_files', array( $this,'ocdi_import_files' ) );
             add_action( 'ocdi/after_import', array( $this,'ocdi_after_import_setup' ));
