@@ -52,7 +52,7 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
 				'inspiro',                       // parent slug
 				__( 'Inspiro Lite Theme Dashboard', 'inspiro' ),  // page title
-				__( 'Inspiro Theme', 'inspiro' ),                 // menu title
+				__( 'Theme Dashboard', 'inspiro' ),                 // menu title
 				'manage_options',                        // capability
 				'inspiro',                        // menu slug
 				array( $this, 'admin' )                           // callback function
