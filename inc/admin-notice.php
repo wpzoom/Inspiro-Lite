@@ -86,11 +86,11 @@ if ( ! function_exists( 'inspiro_welcome_notice' ) ) {
     			<p>
     			<?php
     			/* translators: %1$s: Inspiro theme %2$s: anchor tag open %3$s: anchor tag close */
-    			printf( esc_html__( 'Thank you for installing %1$s Lite theme! To get started please make sure you visit the new %2$swelcome page%3$s.', 'inspiro' ), 'Inspiro', '<a href="' . esc_url( admin_url( 'themes.php?page=inspiro' ) ) . '">', '</a>' );
+    			printf( esc_html__( 'Thank you for installing %1$s Lite theme! To get started please make sure you visit the new %2$swelcome page%3$s.', 'inspiro' ), 'Inspiro', '<a href="' . esc_url( admin_url( 'admin.php?page=inspiro' ) ) .  '">', '</a>' ); // was 'themes.php?page=inspiro'
     			?>
     			</p>
     			<div class="wpz-welcome-notice-button">
-    				<a class="button button-primary" href="<?php echo esc_url( admin_url( 'themes.php?page=inspiro' ) ); ?>">
+    				<a class="button button-primary" href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro' ) ); // was 'themes.php?page=inspiro' ?>">
     					<?php
     					/* translators: %s: Inspiro theme */
     					printf( esc_html__( '%s Lite Dashboard &rarr;', 'inspiro' ), 'Inspiro' );
