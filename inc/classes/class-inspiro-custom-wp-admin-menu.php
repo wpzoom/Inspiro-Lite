@@ -31,13 +31,9 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 		}
 
 		public function about() {
-		//	header( 'Location: http://localhost:8888/wp-admin/admin.php?page=inspiro_about' );
-		//	exit;
-		}
-
-		public function upgrade() {
 			echo '<h1>Upgrade Options</h1>';
 		}
+
 
 		/**
 		 * Register custom menu for wp-admin.
@@ -48,7 +44,7 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 			// Add the main menu page
 			add_menu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_menu_page
 				__( 'Inspiro Lite Theme Dashboard', 'inspiro' ),   // page title
-				__( 'Inspiro', 'inspiro' ),     // menu title
+				__( 'Inspiro Theme', 'inspiro' ),     // menu title
 				'manage_options',
 				'inspiro_admin',      // menu slug, todo:check here if ok
 				array( $this, 'admin' ),        // callback function
