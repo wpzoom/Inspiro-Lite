@@ -30,10 +30,6 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 			require_once INSPIRO_THEME_DIR . 'inc/admin/pages/admin.php';
 		}
 
-		public function about() {
-			echo '<h1>Upgrade Options</h1>';
-		}
-
 
 		/**
 		 * Register custom menu for wp-admin.
@@ -46,7 +42,7 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 				__( 'Inspiro Lite Theme Dashboard', 'inspiro' ),   // page title
 				__( 'Inspiro', 'inspiro' ),                         // menu title
 				'manage_options',
-				'inspiro_admin',      // menu slug, todo:check here if ok
+				'inspiro',      // menu slug, todo:check here if ok
 				array( $this, 'admin' ),        // callback function
 				'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTUwIiBoZWlnaHQ9IjU1MCIgdmlld0JveD0iMCAwIDU1MCA1NTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjc1IDU1MEM0MjYuODc4IDU1MCA1NTAgNDI2Ljg3OCA1NTAgMjc1QzU1MCAxMjMuMTIyIDQyNi44NzggMCAyNzUgMEMxMjMuMTIyIDAgMCAxMjMuMTIyIDAgMjc1QzAgNDI2Ljg3OCAxMjMuMTIyIDU1MCAyNzUgNTUwWk0yMzIgMTIzLjMzM0MyMzIgOTkuNDAwOSAyNTEuNDAxIDgwIDI3NS4zMzMgODBIMzE0LjMzM0MzMTYuNzI3IDgwIDMxOC42NjcgODEuOTM5OSAzMTguNjY3IDg0LjMzMzVWMTYxLjQ0M0MzMTguNjY3IDE2Mi44NzIgMzE3LjkwNCAxNjQuMTkyIDMxNi42NjcgMTY0LjkwN0wyMzggMjEwLjMyNUMyMzUuMzMzIDIxMS44NjUgMjMyIDIwOS45NCAyMzIgMjA2Ljg2MVYxMjMuMzMzWk0yMzQgMjg3LjY5TDMxMi42NjcgMjQyLjI3MkMzMTUuMzMzIDI0MC43MzIgMzE4LjY2NyAyNDIuNjU3IDMxOC42NjcgMjQ1LjczNlY0MjYuNjY3QzMxOC42NjcgNDUwLjU5OSAyOTkuMjY2IDQ3MCAyNzUuMzMzIDQ3MEgyMzYuMzMzQzIzMy45NCA0NzAgMjMyIDQ2OC4wNiAyMzIgNDY1LjY2N1YyOTEuMTU0QzIzMiAyODkuNzI1IDIzMi43NjIgMjg4LjQwNCAyMzQgMjg3LjY5WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+',                 // icon (default: none)
 				59                      // position
@@ -54,28 +50,28 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 
 			// Add Dashboard submenu. Same slug as parent to allow renaming the automatic submenu that is added.
 			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
-				'inspiro_admin',                       // parent slug
+				'inspiro',                       // parent slug
 				__( 'Inspiro Lite Theme Dashboard', 'inspiro' ),  // page title
 				__( 'Inspiro Theme', 'inspiro' ),                 // menu title
 				'manage_options',                        // capability
-				'inspiro_admin',                        // menu slug
+				'inspiro',                        // menu slug
 				array( $this, 'admin' )                           // callback function
 			);
 
 			// Add the "About Inspiro" submenu page
-			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
-				'inspiro_admin',         // parent slug
-				__( 'About Inspiro', 'inspiro' ),   // page title
-				__( 'About', 'inspiro' ),           // menu title
-				'manage_options',          // capability
-			'themes.php?page=inspiro',    // an option to include link a link without callback render func.
-//				'inspiro_about',                    // menu slug
-//				array( $this,'about' )              // callback function
-			);
+//			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
+//				'inspiro_admin',         // parent slug
+//				__( 'About Inspiro', 'inspiro' ),   // page title
+//				__( 'About', 'inspiro' ),           // menu title
+//				'manage_options',          // capability
+//			'themes.php?page=inspiro',    // an option to include link a link without callback render func.
+////				'inspiro_about',                    // menu slug
+////				array( $this,'about' )              // callback function
+//			);
 
 			// Add the "Customizer" submenu page
 			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
-				'inspiro_admin',         // parent slug
+				'inspiro',         // parent slug
 				__( 'Customizer', 'inspiro' ),      // page title
 				__( 'Customizer', 'inspiro' ),      // menu title
 				'manage_options',          // capability
@@ -84,7 +80,7 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 
 			// Add the "Upgrade" submenu page
 			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
-				'inspiro_admin',         // parent slug
+				'inspiro',         // parent slug
 				__( 'Upgrade', 'inspiro' ),         // page title
 				__( 'Upgrade', 'inspiro' ),         // menu title
 				'manage_options',          // capability
