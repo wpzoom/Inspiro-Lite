@@ -95,21 +95,12 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 				__( 'Upgrade to Premium', 'inspiro' ),         // page title
 				__( 'Upgrade to Premium', 'inspiro' ),         // menu title
 				'manage_options',          // capability
-			''
-//				'inspiro_upgrade',                  // menu slug
-//				array( $this, 'upgrade' )           // callback function
-			);
-
-			// Add the "Upgrade" submenu page
-			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
-				'inspiro',         // parent slug
-				__( 'Install Plugins', 'inspiro' ),         // page title
-				__( 'Install Plugins', 'inspiro' ),         // menu title
-				'manage_options',          // capability
 				''
 //				'inspiro_upgrade',                  // menu slug
 //				array( $this, 'upgrade' )           // callback function
 			);
+
+			// The "Install Plugins" submenu page was added true class-tgm-plugin-activation.php add_admin_menu( array $args )
 		}
 	}
 

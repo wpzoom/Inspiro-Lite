@@ -636,7 +636,18 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 * @param array $args Menu item configuration.
 		 */
 		protected function add_admin_menu( array $args ) {
-			$this->page_hook = add_theme_page( $args['page_title'], $args['menu_title'], $args['capability'], $args['menu_slug'], $args['function'] );
+			// deactivated because was necessary to create Theme submenu_page
+			//	$this->page_hook = add_theme_page( $args['page_title'], $args['menu_title'], $args['capability'], $args['menu_slug'], $args['function'] );
+
+			// include in Theme submenu_page
+			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
+				'inspiro',         // parent slug
+				$args['page_title'],         // page title
+				$args['menu_title'],         // menu title
+				'manage_options',   // capability
+				$args['menu_slug'],          // menu slug
+				$args['function'],           // callback function
+			);
 		}
 
 		/**
@@ -936,7 +947,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 							array(
 								'found'    => $subdir_name,
 								'expected' => $desired_slug,
-							) 
+							)
 						);
 					}
 				} elseif ( empty( $subdir_name ) ) {
@@ -946,7 +957,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 						array(
 							'found'    => $subdir_name,
 							'expected' => $desired_slug,
-						) 
+						)
 					);
 				}
 			}
@@ -1571,7 +1582,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 					array(
 						'slug'   => $slug,
 						'fields' => array( 'sections' => false ),
-					) 
+					)
 				);
 
 				$api[ $slug ] = false;
@@ -3333,7 +3344,7 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 								'type'    => 'plugin',
 								'bulk'    => true,
 								'plugins' => $plugins,
-							) 
+							)
 						);
 
 						$this->skin->bulk_footer();
