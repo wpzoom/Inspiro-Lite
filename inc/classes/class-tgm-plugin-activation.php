@@ -641,7 +641,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 			// include in Theme submenu_page
 			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
-				'inspiro',         // parent slug
+				'inspiro',        // parent slug
 				$args['page_title'],         // page title
 				$args['menu_title'],         // menu title
 				'manage_options',   // capability
