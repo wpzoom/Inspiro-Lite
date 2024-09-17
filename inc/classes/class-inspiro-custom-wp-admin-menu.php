@@ -64,7 +64,7 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 //				__( 'About Inspiro', 'inspiro' ),   // page title
 //				__( 'About', 'inspiro' ),           // menu title
 //				'manage_options',          // capability
-//			'admin.php?page=inspiro',    // an option to include link a link without callback render func.
+//			'admin.php?page=inspiro',    // link was included without a callback render func.
 ////				'inspiro_about',                    // menu slug
 ////				array( $this,'about' )              // callback function
 //			);
@@ -72,19 +72,41 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 			// Add the "Customizer" submenu page
 			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
 				'inspiro',         // parent slug
-				__( 'Customizer', 'inspiro' ),      // page title
-				__( 'Customizer', 'inspiro' ),      // menu title
+				__( 'Customize', 'inspiro' ),      // page title
+				__( 'Customize', 'inspiro' ),      // menu title
 				'manage_options',          // capability
-				'customize.php',          // menu slug
+				'customize.php',          // menu slug, link was included without a callback render func.
+			);
+
+			// Add the "Import Demo" submenu page
+			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
+				'inspiro',         // parent slug
+				__( 'Import Demo', 'inspiro' ),         // page title
+				__( 'Import Demo', 'inspiro' ),         // menu title
+				'manage_options',          // capability
+				''
+//				'inspiro_upgrade',                  // menu slug
+//				array( $this, 'upgrade' )           // callback function
 			);
 
 			// Add the "Upgrade" submenu page
 			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
 				'inspiro',         // parent slug
-				__( 'Upgrade', 'inspiro' ),         // page title
-				__( 'Upgrade', 'inspiro' ),         // menu title
+				__( 'Upgrade to Premium', 'inspiro' ),         // page title
+				__( 'Upgrade to Premium', 'inspiro' ),         // menu title
 				'manage_options',          // capability
-			'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium' // an option to include link a link without callback render func.
+			''
+//				'inspiro_upgrade',                  // menu slug
+//				array( $this, 'upgrade' )           // callback function
+			);
+
+			// Add the "Upgrade" submenu page
+			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
+				'inspiro',         // parent slug
+				__( 'Install Plugins', 'inspiro' ),         // page title
+				__( 'Install Plugins', 'inspiro' ),         // menu title
+				'manage_options',          // capability
+				''
 //				'inspiro_upgrade',                  // menu slug
 //				array( $this, 'upgrade' )           // callback function
 			);
