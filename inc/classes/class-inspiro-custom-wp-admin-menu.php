@@ -47,7 +47,7 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 		public function register_admin_pages() {
 			// Add the main menu page
 			add_menu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_menu_page
-				__( 'Page Title', 'wpzoom' ),   // page title
+				__( 'Inspiro Lite Theme Dashboard', 'inspiro' ),   // page title
 				__( 'Inspiro', 'inspiro' ),     // menu title
 				'manage_options',
 				'inspiro_admin',      // menu slug, todo:check here if ok
@@ -58,11 +58,11 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 
 			// Add the first submenu page
 //			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
-//				'inspiro_admin',          // parent slug
+//				'inspiro_admin',                    // parent slug
 //				__( 'Inspiro Options', 'inspiro' ),  // page title
 //				__( 'Theme Options', 'wpzoom' ),     // menu title
-//				'manage_options',           // capability
-//				'inspiro_options',         // menu slug
+//				'manage_options',                    // capability
+//				'inspiro_options',                   // menu slug
 //				array( $this, 'admin' )              // callback function
 //			);
 
@@ -73,8 +73,8 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 				__( 'About', 'inspiro' ),           // menu title
 				'manage_options',          // capability
 			'themes.php?page=inspiro',    // an option to include link a link without callback render func.
-//				'inspiro_about',          // menu slug
-//				array( $this,'about' )  // callback function
+//				'inspiro_about',                    // menu slug
+//				array( $this,'about' )              // callback function
 			);
 
 			// Add the "Customizer" submenu page
@@ -93,7 +93,7 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 				__( 'Upgrade', 'inspiro' ),         // menu title
 				'manage_options',          // capability
 			'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium' // an option to include link a link without callback render func.
-//				'inspiro_upgrade',        // menu slug
+//				'inspiro_upgrade',                  // menu slug
 //				array( $this, 'upgrade' )           // callback function
 			);
 		}
