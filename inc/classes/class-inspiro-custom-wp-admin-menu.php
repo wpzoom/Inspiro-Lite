@@ -44,7 +44,7 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 			// Add the main menu page
 			add_menu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_menu_page
 				__( 'Inspiro Lite Theme Dashboard', 'inspiro' ),   // page title
-				__( 'Inspiro Theme', 'inspiro' ),     // menu title
+				__( 'Inspiro', 'inspiro' ),                         // menu title
 				'manage_options',
 				'inspiro_admin',      // menu slug, todo:check here if ok
 				array( $this, 'admin' ),        // callback function
@@ -52,15 +52,15 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 				59                      // position
 			);
 
-			// Add the first submenu page
-//			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
-//				'inspiro_admin',                    // parent slug
-//				__( 'Inspiro Options', 'inspiro' ),  // page title
-//				__( 'Theme Options', 'wpzoom' ),     // menu title
-//				'manage_options',                    // capability
-//				'inspiro_options',                   // menu slug
-//				array( $this, 'admin' )              // callback function
-//			);
+			// Add Dashboard submenu. Same slug as parent to allow renaming the automatic submenu that is added.
+			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
+				'inspiro_admin',                       // parent slug
+				__( 'Inspiro Lite Theme Dashboard', 'inspiro' ),  // page title
+				__( 'Inspiro Theme', 'inspiro' ),                 // menu title
+				'manage_options',                        // capability
+				'inspiro_admin',                        // menu slug
+				array( $this, 'admin' )                           // callback function
+			);
 
 			// Add the "About Inspiro" submenu page
 			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
