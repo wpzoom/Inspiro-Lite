@@ -64,7 +64,7 @@ if ( ! class_exists( 'Inspiro_Custom_Wp_Admin_Menu' ) ) {
 //				__( 'About Inspiro', 'inspiro' ),   // page title
 //				__( 'About', 'inspiro' ),           // menu title
 //				'manage_options',          // capability
-//			'themes.php?page=inspiro',    // an option to include link a link without callback render func.
+//			'admin.php?page=inspiro',    // an option to include link a link without callback render func.
 ////				'inspiro_about',                    // menu slug
 ////				array( $this,'about' )              // callback function
 //			);
