@@ -271,7 +271,7 @@
 
 										<p class="section_footer">
 
-											<a href="<?php echo esc_url( admin_url( 'themes.php?page=one-click-demo-import' ) ); ?>"
+											<a href="<?php echo esc_url( admin_url( 'admin.php?page=one-click-demo-import' ) ); ?>"
 											   class="button button-primary">
 												<?php esc_html_e( 'Import the Demo Content &rarr;', 'inspiro' ); ?>
 											</a>
@@ -289,7 +289,7 @@
 											<em><?php esc_html_e( 'Please install the One Click Demo Import plugin to use this feature.', 'inspiro' ); ?></em>
 										</p>
 										<p class="section_footer">
-											<a href="<?php echo esc_url( admin_url( 'themes.php?page=tgmpa-install-plugins' ) ); ?>"
+											<a href="<?php echo esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) ); ?>"
 											   target="_blank" class="button button-primary">
 												<?php esc_html_e( 'Install One Click Demo Import &rarr;', 'inspiro' ); ?>
 											</a>
