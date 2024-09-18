@@ -23,14 +23,41 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! class_exists( 'Inspiro_WP_Admin_Menu' ) ) {
 	class Inspiro_WP_Admin_Menu {
 
-		public function __construct() {
+		// Hold the class instance.
+		private static $instance = null;
+
+		/**
+		 * Private constructor to prevent multiple instances.
+		 */
+		private function __construct() {
 			add_action( 'admin_menu', array( $this, 'register_menus' ) );
 		}
 
+		/**
+		 * Get the single instance of the class.
+		 */
+		public static function get_instance() {
+			if ( self::$instance == null ) {
+				self::$instance = new self();
+			}
+			return self::$instance;
+		}
+
+		/**
+		 * Prevent object cloning.
+		 */
+		private function __clone() {}
+
+		/**
+		 * Admin page callback.
+		 */
 		public function admin() {
 			require_once INSPIRO_THEME_DIR . 'inc/admin/pages/admin.php';
 		}
 
+		/**
+		 * Call demo import plugin page.
+		 */
 		public function call_demo_import_plugin_page() {
 			if ( class_exists( 'OCDI_Plugin' ) ) {
 				$one_click_demo_import = OCDI\OneClickDemoImport::get_instance();
@@ -63,7 +90,7 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu' ) ) {
 				'inspiro',                               // menu slug
 				array( $this, 'admin' ),                           // callback function
 				$icon,                                             // icon (default: none)
-				59                                         // position
+				59                                         // position, before Appearance section
 			);
 
 			// Add Dashboard submenu. Same slug as parent to allow renaming the automatic submenu that is added.
@@ -108,5 +135,6 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu' ) ) {
 		}
 	}
 
-	new Inspiro_WP_Admin_Menu();
+	// Instantiate the class as a Singleton.
+	Inspiro_WP_Admin_Menu::get_instance();
 }
