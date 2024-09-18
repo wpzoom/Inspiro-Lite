@@ -57,6 +57,7 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu' ) ) {
 
 		/**
 		 * Call demo import plugin page.
+		 * not used!
 		 */
 		public function call_demo_import_plugin_page() {
 			if ( class_exists( 'OCDI_Plugin' ) ) {
@@ -109,8 +110,8 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu' ) ) {
 				__( 'Import Demo', 'inspiro' ),  // page title
 				__( 'Import Demo', 'inspiro' ),  // menu title
 				'manage_options',       // capability
-				'demo-import-demo',    // menu slug,
-				array( $this, 'call_demo_import_plugin_page' )  // callback function
+				'themes.php?page=one-click-demo-import',    // menu slug,
+//				array( $this, 'call_demo_import_plugin_page' )  // callback function
 			);
 
 			// Add the "Upgrade" submenu page
