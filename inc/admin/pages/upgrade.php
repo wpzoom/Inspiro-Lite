@@ -9,9 +9,10 @@
 </script>
 
 <div class="wpz-onboard_wrapper">
-	<div id="tabs">
+	<div id="tabs"><!-- #tabs -->
 
 		<div class="wpz-onboard_header">
+			<!-- Onboard title -->
 			<div class="wpz-onboard_title-wrapper">
 				<h1 class="wpz-onboard_title">
 					<svg width="30" height="30" viewBox="0 0 46 46" fill="none" xmlns="https://www.w3.org/2000/svg">
@@ -26,18 +27,6 @@
 			</div>
 
 			<ul class="wpz-onboard_tabs">
-				<li class="wpz-onboard_tab wpz-onboard_tab-quick-start">
-					<a href="#quick-start" title="Quick Start">
-						<svg width="18" height="18" viewBox="0 0 13 15" fill="none" xmlns="https://www.w3.org/2000/svg">
-							<path
-								d="M0.166992 14.5V0.333332H7.66699L8.00033 2H12.667V10.3333H6.83366L6.50033 8.66667H1.83366V14.5H0.166992ZM8.20866 8.66667H11.0003V3.66667H6.62533L6.29199 2H1.83366V7H7.87533L8.20866 8.66667Z"
-								fill="#000">
-							</path>
-						</svg>
-						<?php esc_html_e( 'Quick Start', 'inspiro' ); ?>
-					</a>
-				</li>
-
 				<li class="wpz-onboard_tab wpz-onboard_tab-license">
 					<a href="#license" title="License">
 						<svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="https://www.w3.org/2000/svg">
@@ -62,32 +51,43 @@
 						</svg>
 						<?php esc_html_e( 'License', 'inspiro' ); ?>
 					</a>
-				</li>
-
-				<li class="wpz-onboard_tab wpz-onboard_tab-theme-child"><a href="#vs-pro" title="Free vs. PRO">
-					<svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="https://www.w3.org/2000/svg">
-						<path clip-rule="evenodd"
+				</li><!-- /.tab-license -->
+				<li class="wpz-onboard_tab wpz-onboard_tab-theme-child">
+					<a href="#vs-pro" title="Free vs. PRO">
+						<svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="https://www.w3.org/2000/svg">
+							<path clip-rule="evenodd"
 								  d="M15 5.75C11.5482 5.75 8.75 8.54822 8.75 12C8.75 15.4518 11.5482 18.25 15 18.25C15.9599 18.25 16.8674 18.0341 17.6782 17.6489C18.0523 17.4712 18.4997 17.6304 18.6774 18.0045C18.8552 18.3787 18.696 18.8261 18.3218 19.0038C17.3141 19.4825 16.1873 19.75 15 19.75C10.7198 19.75 7.25 16.2802 7.25 12C7.25 7.71979 10.7198 4.25 15 4.25C19.2802 4.25 22.75 7.71979 22.75 12C22.75 12.7682 22.638 13.5115 22.429 14.2139C22.3108 14.6109 21.8932 14.837 21.4962 14.7188C21.0992 14.6007 20.8731 14.1831 20.9913 13.7861C21.1594 13.221 21.25 12.6218 21.25 12C21.25 8.54822 18.4518 5.75 15 5.75Z"
 								  fill="black" fill-rule="evenodd"/>
-						<path clip-rule="evenodd"
+							<path clip-rule="evenodd"
 								  d="M5.25 5C5.25 4.58579 5.58579 4.25 6 4.25H15C15.4142 4.25 15.75 4.58579 15.75 5C15.75 5.41421 15.4142 5.75 15 5.75H6C5.58579 5.75 5.25 5.41421 5.25 5Z"
 								  fill="black" fill-rule="evenodd"/>
-						<path clip-rule="evenodd"
+							<path clip-rule="evenodd"
 								  d="M4.75 8.5C4.75 8.08579 5.08579 7.75 5.5 7.75H8.5C8.91421 7.75 9.25 8.08579 9.25 8.5C9.25 8.91421 8.91421 9.25 8.5 9.25H5.5C5.08579 9.25 4.75 8.91421 4.75 8.5Z"
 								  fill="black" fill-rule="evenodd"/>
-						<path clip-rule="evenodd"
+							<path clip-rule="evenodd"
 								  d="M1.25 8.5C1.25 8.08579 1.58579 7.75 2 7.75H3.5C3.91421 7.75 4.25 8.08579 4.25 8.5C4.25 8.91421 3.91421 9.25 3.5 9.25H2C1.58579 9.25 1.25 8.91421 1.25 8.5Z"
 								  fill="black" fill-rule="evenodd"/>
-						<path clip-rule="evenodd"
+							<path clip-rule="evenodd"
 								  d="M3.25 12.5C3.25 12.0858 3.58579 11.75 4 11.75H8C8.41421 11.75 8.75 12.0858 8.75 12.5C8.75 12.9142 8.41421 13.25 8 13.25H4C3.58579 13.25 3.25 12.9142 3.25 12.5Z"
 								  fill="black" fill-rule="evenodd"/>
-						<path clip-rule="evenodd"
+							<path clip-rule="evenodd"
 								  d="M12.376 8.58397C12.5151 8.37533 12.7492 8.25 13 8.25H17C17.2508 8.25 17.4849 8.37533 17.624 8.58397L19.624 11.584C19.792 11.8359 19.792 12.1641 19.624 12.416L17.624 15.416C17.4849 15.6247 17.2508 15.75 17 15.75H13C12.7492 15.75 12.5151 15.6247 12.376 15.416L10.376 12.416C10.208 12.1641 10.208 11.8359 10.376 11.584L12.376 8.58397ZM13.4014 9.75L11.9014 12L13.4014 14.25H16.5986L18.0986 12L16.5986 9.75H13.4014Z"
 								  fill="black" fill-rule="evenodd"/>
 						</svg>
 						<?php esc_html_e( 'Free vs. Premium', 'inspiro' ); ?>
 					</a>
-				</li>
+				</li><!-- /.tab-theme-child -->
+				<li class="wpz-onboard_tab wpz-onboard_tab-quick-start">
+					<a href="#quick-start" title="Quick Start">
+						<svg width="18" height="18" viewBox="0 0 13 15" fill="none" xmlns="https://www.w3.org/2000/svg">
+							<path
+								d="M0.166992 14.5V0.333332H7.66699L8.00033 2H12.667V10.3333H6.83366L6.50033 8.66667H1.83366V14.5H0.166992ZM8.20866 8.66667H11.0003V3.66667H6.62533L6.29199 2H1.83366V7H7.87533L8.20866 8.66667Z"
+								fill="#000">
+							</path>
+						</svg>
+						<?php esc_html_e( 'Quick Start', 'inspiro' ); ?>
+					</a>
+				</li><!-- /.tab-quick-start -->
 			</ul>
 		</div>
 
@@ -95,29 +95,6 @@
 			<div class="wpz-onboard_content">
 
 				<div class="wpz-onboard_content-main">
-
-					<div id="quick-start" class="wpz-onboard_content-main-tab">
-						<div class="theme-info-wrap welcome-section">
-							<h3 class="wpz-onboard_content-main-title">
-								<?php esc_html_e( 'Welcome to Inspiro!', 'inspiro' ); ?> 👋
-							</h3>
-							<p class="wpz-onboard_content-main-intro">
-								<?php esc_html_e( 'Thank you for installing the free version of our theme! Below you can find quick links to different sections in the Customizer where you can configure and customize the theme. The free version includes limited features and customization options, but if you need more flexibility and plan to take your website to the next level, make sure to check the Premium version.', 'inspiro' ); ?>
-							</p>
-
-							<p class="section_footer">
-								<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>" target="_blank"
-								   class="button button-primary">
-									<?php esc_html_e( 'Customize Inspiro &rarr;', 'inspiro' ); ?>
-								</a>
-								<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium', 'inspiro' ) ); ?>"
-								   target="_blank" class="button button-secondary">
-									<?php esc_html_e( 'Get Inspiro Premium &rarr;', 'inspiro' ); ?>
-								</a>
-							</p>
-						</div>
-					</div><!-- ./ #quick-start -->
-
 					<div id="license" class="wpz-onboard_content-main-tab">
 						<div class="theme-info-wrap welcome-section">
 							<h3 class="wpz-onboard_content-main-title">
@@ -138,8 +115,7 @@
 								</a>
 							</p>
 						</div>
-					</div><!-- ./ #license -->
-
+					</div><!-- /#license -->
 					<div id="vs-pro" class="wpz-onboard_content-main-tab">
 						<div class="theme-info-wrap">
 							<h3 class="wpz-onboard_content-main-title">
@@ -291,9 +267,31 @@
 								</table>
 							</div>
 						</div>
-					</div><!-- ./ #vs-pro -->
+					</div><!-- /#vs-pro -->
+					<div id="quick-start" class="wpz-onboard_content-main-tab">
+						<div class="theme-info-wrap welcome-section">
+							<h3 class="wpz-onboard_content-main-title">
+								<?php esc_html_e( 'Welcome to Inspiro!', 'inspiro' ); ?> 👋
+							</h3>
+							<p class="wpz-onboard_content-main-intro">
+								<?php esc_html_e( 'Thank you for installing the free version of our theme! Below you can find quick links to different sections in the Customizer where you can configure and customize the theme. The free version includes limited features and customization options, but if you need more flexibility and plan to take your website to the next level, make sure to check the Premium version.', 'inspiro' ); ?>
+							</p>
+
+							<p class="section_footer">
+								<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>" target="_blank"
+								   class="button button-primary">
+									<?php esc_html_e( 'Customize Inspiro &rarr;', 'inspiro' ); ?>
+								</a>
+								<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium', 'inspiro' ) ); ?>"
+								   target="_blank" class="button button-secondary">
+									<?php esc_html_e( 'Get Inspiro Premium &rarr;', 'inspiro' ); ?>
+								</a>
+							</p>
+						</div>
+					</div><!-- /#quick-start -->
 				</div>
 
+				<!-- Content side -->
 				<div class="wpz-onboard_content-side">
 
 					<div class="wpz-onboard_content-side-section discover-premium">
@@ -309,18 +307,24 @@
 										d="M19 9L17.75 6.25L15 5L17.75 3.75L19 1L20.25 3.75L23 5L20.25 6.25L19 9ZM19 23L17.75 20.25L15 19L17.75 17.75L19 15L20.25 17.75L23 19L20.25 20.25L19 23ZM9 20L6.5 14.5L1 12L6.5 9.5L9 4L11.5 9.5L17 12L11.5 14.5L9 20ZM9 15.15L10 13L12.15 12L10 11L9 8.85L8 11L5.85 12L8 13L9 15.15Z"
 										fill="white"/>
 								</g>
-							</svg> <?php esc_html_e( 'Inspiro Premium', 'inspiro' ); ?></h3>
-						<p class="wpz-onboard_content-side-section-content"><?php esc_html_e( 'Upgrade to the Premium version to get instant access to unique features and dozen of pre-built demos!', 'inspiro' ); ?></p>
+							</svg> <?php esc_html_e( 'Inspiro Premium', 'inspiro' ); ?>
+						</h3>
+						<p class="wpz-onboard_content-side-section-content">
+							<?php esc_html_e( 'Upgrade to the Premium version to get instant access to unique features and dozen of pre-built demos!', 'inspiro' ); ?>
+						</p>
 
 						<a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
-						   title="Inspiro Premium" target="_blank"><img
+						   title="Inspiro Premium" target="_blank">
+							<img
 								src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-premium.png' ); ?>"
-								width="300" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>"/></a>
+								width="300" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>"/>
+						</a>
 
 						<div class="wpz-onboard_content-side-section-button">
 							<a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
 							   title="Inspiro Premium" target="_blank"
-							   class="button"><?php esc_html_e( 'Discover the Premium Version &rarr;', 'inspiro' ); ?></a>
+							   class="button"><?php esc_html_e( 'Discover the Premium Version &rarr;', 'inspiro' ); ?>
+							</a>
 						</div>
 
 					</div>
@@ -429,9 +433,7 @@
 					<div class="wpz-onboard_content-side-section">
 						<div class="section">
 							<div class="inner-section">
-								<?php
-								$current_user = wp_get_current_user();
-								?>
+								<?php $current_user = wp_get_current_user(); ?>
 
 								<h3 class="wpz-onboard_content-side-section-title">
 									<svg viewBox="0 0 512 512" xmlns="https://www.w3.org/2000/svg" width="21">
@@ -527,7 +529,7 @@
 				</div>
 			</div>
 		</div>
-	</div> <!-- /#tabs -->
+	</div><!-- /#tabs -->
 
 	<div class="wpz-onboard_footer">
 		<h3 class="wpz-onboard_footer-logo">
