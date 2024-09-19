@@ -35,10 +35,22 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 			global $pagenow;
 
 			if ( 'customize.php' === $pagenow ) {
+				// include customize scripts
+				add_action( 'customize_controls_enqueue_scripts', array( $this, 'guider_scripts' ) );
 				// include underscore template
 				add_action( 'customize_controls_print_footer_scripts', array( $this, 'print_templates' ) );
 
 			}
+		}
+
+		/**
+		 * Guider enqueues scripts.
+		 *
+		 * @since 2.2.0
+		 */
+		public function guider_scripts() {
+
+			wp_enqueue_script( 'inspiro-guided-tour', get_template_directory_uri() . '/assets/js/unminified/customize-guided-tour.js', array( 'jquery', 'wp-backbone' ), INSPIRO_THEME_VERSION, true );
 		}
 
 		/**
