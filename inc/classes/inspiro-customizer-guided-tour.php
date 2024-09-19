@@ -49,8 +49,8 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 		 * @since 2.2.0
 		 */
 		public function guider_scripts() {
-
 			wp_enqueue_script( 'inspiro-guided-tour', get_template_directory_uri() . '/assets/js/unminified/customize-guided-tour.js', array( 'jquery', 'wp-backbone' ), INSPIRO_THEME_VERSION, true );
+			wp_localize_script( 'inspiro-guided-tour', '_wpCustomizeSFGuidedTourSteps', $this->guided_tour_steps() );
 		}
 
 		/**
@@ -85,6 +85,25 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 				</div>
 			</script>
 			<?php
+		}
+
+		/**
+		 * Guided tour steps.
+		 *
+		 * @since 2.2.0
+		 */
+		public function guided_tour_steps() {
+			$steps = array();
+
+			$steps[] = array(
+				'title'       => __( 'Welcome to the Customizer', 'storefront' ),
+				/* translators: %s: 'End Of Line' symbol */
+				'message'     => sprintf( __( 'Here you can control the overall look and feel of your store.%sTo get started, let\'s add your logo', 'storefront' ), PHP_EOL . PHP_EOL ),
+				'button_text' => __( 'Let\'s go!', 'storefront' ),
+				'section'     => '#customize-info',
+			);
+
+			return $steps;
 		}
 	}
 }

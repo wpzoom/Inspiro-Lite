@@ -11,5 +11,14 @@
 		return;
 	}
 
-	console.log('loaded');
+	// Set up our namespace.
+	const api = wp.customize;
+
+	api.SFGuidedTourSteps = [];
+
+	if ( typeof _wpCustomizeSFGuidedTourSteps !== 'undefined' ) {
+		$.extend( api.SFGuidedTourSteps, _wpCustomizeSFGuidedTourSteps );
+	}
+
+	console.log(api.SFGuidedTourSteps);
 })( window.wp, jQuery );
