@@ -80,6 +80,10 @@ require INSPIRO_THEME_DIR . 'inc/template-functions.php';
  */
 require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-font-family-manager.php';
 require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-fonts-manager.php';
+// Include Customizer Guided Tour
+if ( is_admin() && is_customize_preview() ) {
+	require INSPIRO_THEME_DIR . 'inc/classes/inspiro-customizer-guided-tour.php';
+}
 require INSPIRO_THEME_DIR . 'inc/customizer-functions.php';
 require INSPIRO_THEME_DIR . 'inc/customizer/class-inspiro-customizer-control-base.php';
 require INSPIRO_THEME_DIR . 'inc/customizer/class-inspiro-customizer.php';
