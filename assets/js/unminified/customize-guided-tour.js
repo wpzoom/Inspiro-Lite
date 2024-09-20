@@ -70,13 +70,44 @@
 			const self = this;
 
 			api.state('expandedSection').bind(function () {
-				// self._adjustPosition();
+				self._adjustPosition();
 			});
 
 			api.state('expandedPanel').bind(function () {
-				// self._adjustPosition();
+				self._adjustPosition();
 			});
-		}
+		},
+
+		_adjustPosition() {
+			const step = this._getCurrentStep();
+
+			if ( ! step ) {
+				return;
+			}
+
+			this.$container.removeClass( 'sf-inside-section' );
+
+			const expandedSection = api.state( 'expandedSection' ).get();
+			const expandedPanel = api.state( 'expandedPanel' ).get();
+
+			if ( expandedSection && step.section === expandedSection.id ) {
+				this._moveContainer(
+					$( expandedSection.container[ 1 ] ).find(
+						'.customize-section-title'
+					)
+				);
+				this.$container.addClass( 'sf-inside-section' );
+			} else if ( expandedSection === false && expandedPanel === false ) {
+				if ( this._isTourHidden() ) {
+					this._revealTour();
+				} else {
+					const selector = this._getSelector( step.section );
+					this._moveContainer( selector );
+				}
+			} else {
+				this._hideTour();
+			}
+		},
 	}
 
 	$(document).ready(function () {
