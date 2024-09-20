@@ -108,7 +108,7 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 			$steps[] = array(
 				'title'   => __( 'Customize your Site Identity', 'inspiro' ),
 				'message' => __( 'Organize.', 'inspiro' ),
-				'section' => 'nav_menus',
+				'section' => 'title_tagline',
 			);
 
 			return $steps;

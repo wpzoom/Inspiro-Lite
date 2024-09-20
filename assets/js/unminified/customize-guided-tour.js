@@ -51,7 +51,7 @@
 			// Adds event listeners for tour interaction (e.g., navigation between steps)
 			this._addListeners();
 
-			// Initial container position, wrapp in condition for safety
+			// Initial container position, wrapping in condition for safety
 			if (this.$container && this.$container.length > 0) {
 				this.$container
 					.css(
@@ -66,7 +66,28 @@
 			// Show first step
 			this._showNextStep();
 
+			$( document ).on(
+				'click',
+				'.sf-guided-tour-step .sf-nux-button',
+				function () {
+					self._showNextStep();
+					return false;
+				}
+			);
 
+			$( document ).on(
+				'click',
+				'.sf-guided-tour-step .sf-guided-tour-skip',
+				function () {
+					if ( self.currentStep === 0 ) {
+						self._hideTour( true );
+					} else {
+						self._showNextStep();
+					}
+
+					return false;
+				}
+			);
 		}, // End of _setupUI() method
 
 		// Adds event listeners (e.g., for navigation)
