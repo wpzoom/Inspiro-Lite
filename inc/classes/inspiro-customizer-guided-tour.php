@@ -111,6 +111,18 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 				'section' => 'title_tagline',
 			);
 
+			$steps[] = array(
+				'title'   => __( 'Customize Colors', 'inspiro' ),
+				'message' => __( 'Necessary Colors text.', 'inspiro' ),
+				'section' => 'colors',
+			);
+
+			$steps[] = array(
+				'title'   => __( 'Customize Footer', 'inspiro' ),
+				'message' => __( 'Necessary Footer text.', 'inspiro' ),
+				'section' => 'footer-area',
+			);
+
 			return $steps;
 		}
 	}
