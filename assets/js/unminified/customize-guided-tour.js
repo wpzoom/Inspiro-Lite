@@ -29,38 +29,33 @@
 	 *
 	 */
 	api.SFGuidedTour = {
-		// Store the container element for the guided tour
-		$container: null,
-		// Store the current step index of the guided tour
-		currentStep: -1,
+		$container: null,  // Stores the tour container element
+		currentStep: -1,   // Tracks the current step in the tour
 
-		// Initialize the guided tour, called to set up the user interface
+		// Initializes the guided tour UI
 		init() {
-			this._setupUI(); // call user interface configurator
+			this._setupUI();
 		},
 
-		// Set up the user interface for the guided tour
+		// Sets up the guided tour interface
 		_setupUI() {
-			// Save reference to the current object (used to maintain context inside callbacks)
-			const self = this,
+			const self = this, // used to maintain context inside callbacks
 
 			// Select the WordPress Customizer's main overlay container (the area where content is displayed)
 			$wpCustomizerContainer = $( 'body.wp-customizer .wp-full-overlay' );
 
-			// Create a new <div> element in memory, which will act as the container for the guided tour
+			// Creates a div with 'sf-guided-tour' class and adds it to the customizer container
 			this.$container = $( '<div/>' ).addClass( 'sf-guided-tour' );
+			$wpCustomizerContainer.prepend( this.$container ); // Insert container at the top of the Customizer overlay
 
-			// Insert the newly created container at the beginning (top) of the WordPress Customizer overlay
-			$wpCustomizerContainer.prepend( this.$container );
-
-			// Call the method to add event listeners for the guided tour (e.g., navigation between steps)
+			// Adds event listeners for tour interaction (e.g., navigation between steps)
 			this._addListeners();
 
 
 			// console.dir(self);
 		}, // End of _setupUI() method
 
-		// Method for adding event listeners (like button clicks) to control the guided tour
+		// Adds event listeners (e.g., for navigation)
 		_addListeners() {
 			// Logic for adding event listeners goes here
 		}
