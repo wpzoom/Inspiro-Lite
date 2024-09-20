@@ -98,11 +98,17 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 			$steps = array();
 
 			$steps[] = array(
-				'title'       => __( 'Welcome to the Customizer', 'storefront' ),
+				'title'       => __( 'Welcome to the Customizer', 'inspiro' ),
 				/* translators: %s: 'End Of Line' symbol */
-				'message'     => sprintf( __( 'Here you can control the overall look and feel of your store.%sTo get started, let\'s add your logo', 'storefront' ), PHP_EOL . PHP_EOL ),
+				'message'     => sprintf( __( 'Here you can control the overall look and feel of your store.%sTo get started, let\'s add your logo', 'inspiro' ), PHP_EOL . PHP_EOL ),
 				'button_text' => __( 'Let\'s go!', 'storefront' ),
 				'section'     => '#customize-info',
+			);
+
+			$steps[] = array(
+				'title'   => __( 'Customize your Site Identity', 'inspiro' ),
+				'message' => __( 'Organize.', 'inspiro' ),
+				'section' => 'nav_menus',
 			);
 
 			return $steps;
