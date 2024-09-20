@@ -55,13 +55,12 @@
 			if (this.$container && this.$container.length > 0) {
 				this.$container
 					.css(
-						// ! $( 'body' ).hasClass( 'rtl' ) ? 'left' : 'right',
+						! $( 'body' ).hasClass( 'rtl' ) ? 'left' : 'right',
 						$('#customize-controls').width() + 10 + 'px'
 					)
-				// .on('transitionend', function () {
-				// 	self.$container.addClass('sf-loaded');
-				// });
-					self.$container.addClass('sf-loaded');
+					.on('transitionend', function () {
+						self.$container.addClass('sf-loaded');
+					});
 			}
 
 			// Show first step
