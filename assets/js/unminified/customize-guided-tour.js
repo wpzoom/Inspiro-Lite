@@ -7,7 +7,7 @@
 (function (wp, $) {
 	'use strict';
 
-	if ( ! wp || ! wp.customize ) {
+	if (!wp || !wp.customize) {
 		return;
 	}
 
@@ -18,8 +18,8 @@
 	api.SFGuidedTourSteps = [];
 
 	// merging plugin options with default settings.
-	if ( typeof _wpCustomizeSFGuidedTourSteps !== 'undefined' ) {
-		$.extend( api.SFGuidedTourSteps, _wpCustomizeSFGuidedTourSteps );
+	if (typeof _wpCustomizeSFGuidedTourSteps !== 'undefined') {
+		$.extend(api.SFGuidedTourSteps, _wpCustomizeSFGuidedTourSteps);
 	}
 
 	/**
@@ -41,15 +41,25 @@
 		_setupUI() {
 			const self = this, // used to maintain context inside callbacks
 
-			// Select the WordPress Customizer's main overlay container (the area where content is displayed)
-			$wpCustomizerContainer = $( 'body.wp-customizer .wp-full-overlay' );
+				// Select the WordPress Customizer's main overlay container (the area where content is displayed)
+				$wpCustomizerContainer = $('body.wp-customizer .wp-full-overlay');
 
 			// Creates a div with 'sf-guided-tour' class and adds it to the customizer container
-			this.$container = $( '<div/>' ).addClass( 'sf-guided-tour' );
-			$wpCustomizerContainer.prepend( this.$container ); // Insert container at the top of the Customizer overlay
+			this.$container = $('<div/>').addClass('sf-guided-tour');
+			$wpCustomizerContainer.prepend(this.$container); // Insert container at the top of the Customizer overlay
 
 			// Adds event listeners for tour interaction (e.g., navigation between steps)
 			this._addListeners();
+
+			// Initial container position
+			this.$container
+				.css(
+					// ! $( 'body' ).hasClass( 'rtl' ) ? 'left' : 'right',
+					$('#customize-controls').width() + 10 + 'px'
+				)
+				.on('transitionend', function () {
+					self.$container.addClass('sf-loaded');
+				});
 
 
 			// console.dir(self);
@@ -57,9 +67,19 @@
 
 		// Adds event listeners (e.g., for navigation)
 		_addListeners() {
-			// Logic for adding event listeners goes here
+			const self = this;
+
+			api.state('expandedSection').bind(function () {
+				// self._adjustPosition();
+			});
+
+			api.state('expandedPanel').bind(function () {
+				// self._adjustPosition();
+			});
 		}
 	}
 
-	// api.SFGuidedTour.init();
-})( window.wp, jQuery );
+	$(document).ready(function () {
+		api.SFGuidedTour.init();
+	});
+})(window.wp, jQuery);
