@@ -51,15 +51,19 @@
 			// Adds event listeners for tour interaction (e.g., navigation between steps)
 			this._addListeners();
 
-			// Initial container position
-			this.$container
-				.css(
-					// ! $( 'body' ).hasClass( 'rtl' ) ? 'left' : 'right',
-					$('#customize-controls').width() + 10 + 'px'
-				)
-				.on('transitionend', function () {
+			// Initial container position, wrapp in condition for safety
+			if (this.$container && this.$container.length > 0) {
+				this.$container
+					.css(
+						// ! $( 'body' ).hasClass( 'rtl' ) ? 'left' : 'right',
+						$('#customize-controls').width() + 10 + 'px'
+					)
+				// .on('transitionend', function () {
+				// 	self.$container.addClass('sf-loaded');
+				// });
 					self.$container.addClass('sf-loaded');
-				});
+			}
+
 
 
 			// console.dir(self);
