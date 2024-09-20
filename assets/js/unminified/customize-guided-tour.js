@@ -108,6 +108,10 @@
 				this._hideTour();
 			}
 		},
+
+		_getCurrentStep() {
+			return api.SFGuidedTourSteps[ this.currentStep ];
+		},
 	}
 
 	$(document).ready(function () {
