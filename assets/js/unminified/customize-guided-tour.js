@@ -63,6 +63,11 @@
 				// });
 					self.$container.addClass('sf-loaded');
 			}
+
+			// Show first step
+			this._showNextStep();
+
+
 		}, // End of _setupUI() method
 
 		// Adds event listeners (e.g., for navigation)
@@ -109,8 +114,178 @@
 			}
 		},
 
+		_hideTour( remove ) {
+			const self = this;
+
+			// Already hidden?
+			if ( this._isTourHidden() ) {
+				return;
+			}
+
+			const containerOffset = this.$container.offset();
+
+			this.$container.css( {
+				transform: '',
+				top: containerOffset.top,
+			} );
+
+			$( 'body' )
+				.addClass( 'sf-exiting' )
+				.on(
+					'animationend.storefront webkitAnimationEnd.storefront',
+					function () {
+						$( this )
+							.removeClass( 'sf-exiting' )
+							.off(
+								'animationend.storefront webkitAnimationEnd.storefront'
+							)
+							.addClass( 'sf-hidden' );
+						self.$container.hide();
+
+						if (
+							typeof remove !== 'undefined' &&
+							remove === true
+						) {
+							self._removeTour();
+						}
+					}
+				);
+		},
+
+		_revealTour() {
+			const self = this;
+
+			$( 'body' ).removeClass( 'sf-hidden' );
+
+			self.$container.show();
+
+			const containerOffset = this.$container.offset();
+			const offsetTop = parseInt( containerOffset.top, 10 );
+
+			$( 'body' )
+				.addClass( 'sf-entering' )
+				.on(
+					'animationend.storefront webkitAnimationEnd.storefront',
+					function () {
+						$( this )
+							.removeClass( 'sf-entering' )
+							.off(
+								'animationend.storefront webkitAnimationEnd.storefront'
+							);
+
+						self.$container.css( {
+							top: 'auto',
+							transform: 'translateY(' + offsetTop + 'px)',
+						} );
+					}
+				);
+		},
+
+		_removeTour() {
+			this.$container.remove();
+		},
+
+		_closeAllSections() {
+			api.section.each( function ( section ) {
+				section.collapse( { duration: 0 } );
+			} );
+
+			api.panel.each( function ( panel ) {
+				panel.collapse( { duration: 0 } );
+			} );
+		},
+
+		_showNextStep() {
+			if ( this._isLastStep() ) {
+				this._hideTour( true );
+				return;
+			}
+
+			this._closeAllSections();
+
+			// Get next step
+			const step = this._getNextStep();
+
+			// Convert line breaks to paragraphs
+			step.message = this._lineBreaksToParagraphs( step.message );
+
+			// Load template
+			const template = wp.template( 'sf-guided-tour-step' );
+
+			this.$container.removeClass( 'sf-first-step' );
+
+			if ( this.currentStep === 0 ) {
+				step.first_step = true;
+				this.$container.addClass( 'sf-first-step' );
+			}
+
+			if ( this._isLastStep() ) {
+				step.last_step = true;
+				this.$container.addClass( 'sf-last-step' );
+			}
+
+			this._moveContainer( this._getSelector( step.section ) );
+
+			this.$container.html( template( step ) );
+		},
+
+		_moveContainer( $selector ) {
+			const self = this;
+
+			if ( ! $selector ) {
+				return;
+			}
+
+			const position =
+				parseInt( $selector.offset().top, 10 ) +
+				$selector.height() / 2 -
+				44;
+
+			this.$container
+				.addClass( 'sf-moving' )
+				.css( {
+					transform: 'translateY(' + position + 'px)',
+				} )
+				.on( 'transitionend.storefront', function () {
+					self.$container.removeClass( 'sf-moving' );
+					self.$container.off( 'transitionend.storefront' );
+				} );
+		},
+
+		_getSelector( pointTo ) {
+			const sectionOrPanel = api.section( pointTo )
+				? api.section( pointTo )
+				: api.panel( pointTo );
+
+			// Check whether this is a section, panel, or a regular selector
+			if ( typeof sectionOrPanel !== 'undefined' ) {
+				return $( sectionOrPanel.container[ 0 ] );
+			}
+
+			return $( pointTo );
+		},
+
 		_getCurrentStep() {
 			return api.SFGuidedTourSteps[ this.currentStep ];
+		},
+
+		_getNextStep() {
+			this.currentStep = this.currentStep + 1;
+			return api.SFGuidedTourSteps[ this.currentStep ];
+		},
+
+		_isTourHidden() {
+			return $( 'body' ).hasClass( 'sf-hidden' ) ? true : false;
+		},
+
+		_isLastStep() {
+			return this.currentStep + 1 < api.SFGuidedTourSteps.length
+				? false
+				: true;
+		},
+
+		_lineBreaksToParagraphs( message ) {
+			return '<p>' + message.replace( '\n\n', '</p><p>' ) + '</p>';
 		},
 	}
 
