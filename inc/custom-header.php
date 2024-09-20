@@ -253,3 +253,41 @@ function inspiro_filter_external_header_video_setting_validity($validity, $value
 
 add_filter('customize_validate_external_header_video', 'inspiro_filter_external_header_video_setting_validity', 11, 2);
 
+
+function inspiro_validate_header_video( $validity, $value ) {
+    $video = get_attached_file( absint( $value ) );
+    if ( $video ) {
+        $size = filesize( $video );
+        if ( $size > 8 * MB_IN_BYTES ) {
+            $validity->add(
+                'size_too_large',
+                sprintf(
+                    __( 'This video file is too large. The free version is limited to videos of 8MB or less, while the Premium and PRO versions do not have this limitation. Try a smaller video or consider upgrading to <a href="%1$s" target="_blank">Inspiro Premium</a>.' ),
+                    esc_url( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=customizer&utm_campaign=video8mb' )
+                )
+            );
+        }
+
+        if ( ! str_ends_with( $video, '.mp4' ) && ! str_ends_with( $video, '.mov' ) ) { // Check for .mp4 or .mov format, which (assuming h.264 encoding) are the only cross-browser-supported formats.
+            $validity->add(
+                'invalid_file_type',
+                sprintf(
+                    /* translators: 1: .mp4, 2: .mov */
+                    __( 'Only %1$s or %2$s files may be used for header video. Please convert your video file and try again, or, upload your video to YouTube and link it with the option below.' ),
+                    '<code>.mp4</code>',
+                    '<code>.mov</code>'
+                )
+            );
+        }
+    }
+    return $validity;
+}
+
+add_filter( 'customize_dynamic_setting_args', function ( $args, $id ) {
+
+    if ( 'header_video' === $id ) {
+        $args['validate_callback'] = 'inspiro_validate_header_video';
+    }
+
+    return $args;
+}, 10, 2 );
