@@ -39,7 +39,6 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 				add_action( 'customize_controls_enqueue_scripts', array( $this, 'guider_scripts' ) );
 				// include underscore template
 				add_action( 'customize_controls_print_footer_scripts', array( $this, 'print_templates' ) );
-
 			}
 		}
 
@@ -49,6 +48,9 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 		 * @since 2.2.0
 		 */
 		public function guider_scripts() {
+			// styles
+			wp_enqueue_style( 'inspiro-guided-tour-style', get_template_directory_uri() . '/assets/css/unminified/customize-guided-tour.css', array(), INSPIRO_THEME_VERSION, 'all' );
+			// scripts
 			wp_enqueue_script( 'inspiro-guided-tour', get_template_directory_uri() . '/assets/js/unminified/customize-guided-tour.js', array( 'jquery', 'wp-backbone' ), INSPIRO_THEME_VERSION, true );
 			wp_localize_script( 'inspiro-guided-tour', '_wpCustomizeSFGuidedTourSteps', $this->guided_tour_steps() );
 		}

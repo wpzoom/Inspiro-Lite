@@ -63,10 +63,6 @@
 				// });
 					self.$container.addClass('sf-loaded');
 			}
-
-
-
-			// console.dir(self);
 		}, // End of _setupUI() method
 
 		// Adds event listeners (e.g., for navigation)
