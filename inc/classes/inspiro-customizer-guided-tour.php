@@ -66,9 +66,11 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 
 			if ( 'customize.php' === $pagenow ) {
 				// include customize scripts
-				add_action( 'customize_controls_enqueue_scripts', array( $this, 'guider_scripts' ) );
+				add_action( 'customize_controls_enqueue_scripts', array( $this, 'include_guider_scripts' ) );
 				// include underscore template
-				add_action( 'customize_controls_print_footer_scripts', array( $this, 'print_templates' ) );
+				add_action( 'customize_controls_print_footer_scripts', array( $this, 'print_guider_templates' ) );
+
+				//todo: Need to Set Guided Tour flag
 			}
 		}
 
@@ -77,7 +79,7 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 		 *
 		 * @since 2.2.0
 		 */
-		public function guider_scripts() {
+		public function include_guider_scripts() {
 			// styles
 			wp_enqueue_style( 'inspiro-guided-tour-style', get_template_directory_uri() . '/assets/css/unminified/customize-guided-tour.css', array(), INSPIRO_THEME_VERSION, 'all' );
 			// scripts
@@ -90,7 +92,7 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 		 *
 		 * @since 2.2.0
 		 */
-		public function print_templates() {
+		public function print_guider_templates() {
 			?>
 			<script type="text/html" id="tmpl-ins-guided-tour-step">
 				<div class="ins-guided-tour-step">
@@ -99,7 +101,7 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 					<# } #>
 					{{{ data.message }}}
 					<div class="guided-tour-step-nav-elements">
-						<a class="button button-primary ins-nux-button" href="#">
+						<a class="button button-primary ins-go-button" href="#">
 							<# if ( data.button_text ) { #>
 							{{ data.button_text }}
 							<# } else { #>

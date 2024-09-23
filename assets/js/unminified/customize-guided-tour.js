@@ -65,7 +65,7 @@
 
 			$( document ).on(
 				'click',
-				'.ins-guided-tour-step .ins-nux-button',
+				'.ins-guided-tour-step .ins-go-button',
 				function () {
 					self._showNextStep();
 					return false;

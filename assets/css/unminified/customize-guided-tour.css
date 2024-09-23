@@ -1,26 +1,37 @@
-.ins-nux .ins-nux-button:hover, .ins-nux .ins-nux-button:focus, a.ins-nux-button:hover, a.ins-nux-button:focus {
+.ins-go-button:hover,
+.ins-go-button:focus,
+a.ins-go-button:hover,
+a.ins-go-button:focus {
 	border-color: #005082;
 	color: #fff
 }
 
-.ins-nux .ins-nux-button:focus, a.ins-nux-button:focus {
+.ins-go-button:focus,
+a.ins-go-button:focus {
 	box-shadow: 0 0 0 2px #78dcfa
 }
 
-.ins-nux .ins-nux-button:active, a.ins-nux-button:active {
+.ins-go-button:active,
+a.ins-go-button:active {
 	border-width: 2px 1px 1px;
 	box-shadow: none;
 	vertical-align: baseline
 }
 
-.ins-nux .ins-nux-button[disabled], .ins-nux .ins-nux-button:disabled, a.ins-nux-button[disabled], a.ins-nux-button:disabled {
+.ins-go-button[disabled],
+.ins-go-button:disabled,
+a.ins-go-button[disabled],
+a.ins-go-button:disabled {
 	color: #fff;
 	background: #bceefd;
 	border-color: #8cc9e2;
 	cursor: default
 }
 
-.ins-nux .ins-nux-button[disabled]:active, .ins-nux .ins-nux-button:disabled:active, a.ins-nux-button[disabled]:active, a.ins-nux-button:disabled:active {
+.ins-go-button[disabled]:active,
+.ins-go-button:disabled:active,
+a.ins-go-button[disabled]:active,
+a.ins-go-button:disabled:active {
 	border-width: 1px 1px 2px
 }
 
@@ -88,8 +99,12 @@
 	opacity: .75
 }
 
-.ins-guided-tour:not(.ins-first-step) .ins-guided-tour-step a.ins-nux-button {
+.ins-guided-tour:not(.ins-first-step) .ins-guided-tour-step a.ins-go-button {
 	display: none
+}
+
+.ins-guided-tour:not(.ins-first-step) .ins-guided-tour-step a.ins-guided-tour-skip{
+	margin-left: 0;
 }
 
 .ins-guided-tour:not(.ins-first-step) .ins-guided-tour-step .ins-guided-tour-skip {
@@ -97,7 +112,7 @@
 	float: right
 }
 
-.ins-guided-tour.ins-inside-section .ins-guided-tour-step a.ins-nux-button {
+.ins-guided-tour.ins-inside-section .ins-guided-tour-step a.ins-go-button {
 	display: inline-block
 }
 
@@ -105,15 +120,15 @@
 	display: none
 }
 
-.ins-guided-tour.ins-last-step .ins-guided-tour-step a.ins-nux-button {
+.ins-guided-tour.ins-last-step .ins-guided-tour-step a.ins-go-button {
 	display: inline-block
 }
 
-a.ins-nux-button {
+a.ins-go-button {
 	vertical-align: middle
 }
 
-a.ins-nux-button:active {
+a.ins-go-button:active {
 	vertical-align: middle
 }
 
