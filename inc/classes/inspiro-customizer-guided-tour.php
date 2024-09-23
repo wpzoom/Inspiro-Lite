@@ -64,13 +64,17 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 		public function guider() {
 			global $pagenow;
 
-			if ( 'customize.php' === $pagenow ) {
+			if ( 'customize.php' === $pagenow && true === (bool) get_theme_mod( 'inspiro_guided_tour_status', false )  ) {
 				// include customize scripts
 				add_action( 'customize_controls_enqueue_scripts', array( $this, 'include_guider_scripts' ) );
 				// include underscore template
 				add_action( 'customize_controls_print_footer_scripts', array( $this, 'print_guider_templates' ) );
 
-				//todo: Need to Set Guided Tour flag
+				if ( current_user_can( 'manage_options' ) ) {
+
+					// Set Guided Tour flag so it doesn't show up again.
+					set_theme_mod( 'inspiro_guided_tour_status', true );
+				}
 			}
 		}
 
