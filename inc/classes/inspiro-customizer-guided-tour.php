@@ -13,17 +13,47 @@ if (!defined('ABSPATH')) {
 if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 
 	/**
-	 * The Customizer Guided Tour Class
+	 * The Customizer Guided Tour Class (Singleton)
 	 */
 	class Inspiro_Customizer_Guided_Tour {
 
+		// Holds the single instance of the class
+		private static $instance = null;
+
 		/**
-		 * Class init.
+		 * Private constructor to prevent multiple instances.
 		 *
 		 * @since 1.9.0
 		 */
-		public function __construct() {
+		private function __construct() {
 			add_action('admin_init', array($this, 'guider'));
+		}
+
+		/**
+		 * Prevent cloning of the instance.
+		 */
+		private function __clone() {
+			// Prevent cloning
+		}
+
+		/**
+		 * Prevent unserializing of the instance.
+		 */
+		private function __wakeup() {
+			// Prevent unserialization
+		}
+
+		/**
+		 * Get the single instance of the class.
+		 *
+		 * @since 1.9.0
+		 * @return Inspiro_Customizer_Guided_Tour
+		 */
+		public static function get_instance() {
+			if (self::$instance === null) {
+				self::$instance = new self();
+			}
+			return self::$instance;
 		}
 
 		/**
@@ -130,4 +160,5 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 	}
 }
 
-new Inspiro_Customizer_Guided_Tour();
+// Get the singleton instance
+Inspiro_Customizer_Guided_Tour::get_instance();
