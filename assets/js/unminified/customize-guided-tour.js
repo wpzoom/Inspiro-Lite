@@ -13,11 +13,11 @@
 	const api = wp.customize;
 
 	// init steps object
-	api.SFGuidedTourSteps = [];
+	api.InspiroGuidedTourSteps = [];
 
 	// merging plugin options with default settings.
 	if (typeof _wpCustomizeInspiroGuidedTourSteps !== 'undefined') {
-		$.extend(api.SFGuidedTourSteps, _wpCustomizeInspiroGuidedTourSteps);
+		$.extend(api.InspiroGuidedTourSteps, _wpCustomizeInspiroGuidedTourSteps);
 	}
 
 	/**
@@ -283,12 +283,12 @@
 		},
 
 		_getCurrentStep() {
-			return api.SFGuidedTourSteps[ this.currentStep ];
+			return api.InspiroGuidedTourSteps[ this.currentStep ];
 		},
 
 		_getNextStep() {
 			this.currentStep = this.currentStep + 1;
-			return api.SFGuidedTourSteps[ this.currentStep ];
+			return api.InspiroGuidedTourSteps[ this.currentStep ];
 		},
 
 		_isTourHidden() {
@@ -296,7 +296,7 @@
 		},
 
 		_isLastStep() {
-			return this.currentStep + 1 < api.SFGuidedTourSteps.length
+			return this.currentStep + 1 < api.InspiroGuidedTourSteps.length
 				? false
 				: true;
 		},
