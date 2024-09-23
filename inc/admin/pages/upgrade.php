@@ -56,57 +56,20 @@
 			</ul>
 		</div>
 
-        <div class="theme-info-wrap welcome-section">
-
-                                    <h3 class="wpz-onboard_content-main-title">Welcome to Inspiro!                              👋</h3>
-                                    <p class="wpz-onboard_content-main-intro">Thank you for installing the free version of our theme! Below you can find quick links to different sections in the Customizer where you can configure and customize the theme. The free version includes limited features and customization options, but if you need more flexibility and plan to take your website to the next level, make sure to check the Premium version.</p>
-
-                                    <p class="section_footer">
-                                        <a href="http://localhost/inspiro/wp-admin/customize.php" target="_blank" class="button button-primary">
-                                            Customize Inspiro →                             </a>
-
-                                        <a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&amp;utm_medium=about-inspiro-page&amp;utm_campaign=upgrade-premium" target="_blank" class="button button-secondary">
-                                            Get Inspiro Premium →                               </a>
-
-                                    </p>
-
-                                </div>
-
 		<div class="wpz-onboard_content-wrapper">
 			<div class="wpz-onboard_content">
 
 				<div class="wpz-onboard_content-main">
 
-
 					<div id="license" class="wpz-onboard_content-main-tab">
 						<div class="theme-info-wrap welcome-section">
-
-
-                            <div class="wpz-grid-wrap">
-
-                                <div class="section premium-feature">
-                                    <h4>
-                                        <svg width="26" height="26" viewBox="0 0 30 30" fill="none" xmlns="https://www.w3.org/2000/svg">
-                                            <path d="M21 12.405L13.5 8.07C13.0442 7.80682 12.5271 7.66821 12.0008 7.66807C11.4744 7.66794 10.9573 7.80629 10.5013 8.06923C10.0454 8.33217 9.66661 8.71045 9.40308 9.16607C9.13956 9.6217 9.00054 10.1386 9 10.665V19.335C9.00054 19.8611 9.13942 20.3778 9.4027 20.8332C9.66597 21.2887 10.0444 21.667 10.5 21.93C10.9561 22.1933 11.4734 22.3319 12 22.3319C12.5266 22.3319 13.0439 22.1933 13.5 21.93L21 17.595C21.4546 17.3313 21.832 16.9528 22.0943 16.4973C22.3566 16.0419 22.4947 15.5256 22.4947 15C22.4947 14.4744 22.3566 13.9581 22.0943 13.5027C21.832 13.0472 21.4546 12.6687 21 12.405ZM19.5 15L12 19.335V10.665L19.5 15ZM15 0C12.0333 0 9.13319 0.879734 6.66645 2.52796C4.19971 4.17618 2.27713 6.51885 1.14181 9.25974C0.00649926 12.0006 -0.290551 15.0166 0.288227 17.9263C0.867006 20.8361 2.29562 23.5088 4.3934 25.6066C6.49119 27.7044 9.16394 29.133 12.0736 29.7118C14.9834 30.2905 17.9994 29.9935 20.7403 28.8582C23.4811 27.7229 25.8238 25.8003 27.472 23.3335C29.1203 20.8668 30 17.9667 30 15C30 13.0302 29.612 11.0796 28.8582 9.25974C28.1044 7.43986 26.9995 5.78628 25.6066 4.3934C24.2137 3.00052 22.5601 1.89563 20.7403 1.14181C18.9204 0.387986 16.9698 0 15 0ZM15 27C12.6266 27 10.3066 26.2962 8.33316 24.9776C6.35977 23.659 4.8217 21.7849 3.91345 19.5922C3.0052 17.3995 2.76756 14.9867 3.23058 12.6589C3.69361 10.3311 4.83649 8.19295 6.51472 6.51472C8.19295 4.83649 10.3311 3.6936 12.6589 3.23058C14.9867 2.76755 17.3995 3.00519 19.5922 3.91344C21.7849 4.8217 23.6591 6.35977 24.9776 8.33315C26.2962 10.3065 27 12.6266 27 15C27 18.1826 25.7357 21.2348 23.4853 23.4853C21.2348 25.7357 18.1826 27 15 27Z" fill="#242628"></path>
-                                        </svg> Advanced Portfolio with Video Integration                                    </h4>
-                                    <p class="about">
-                                        Inspiro Premium is perfect for showing off your portfolio, images and videos. The premium version includes multiple page templates to display your Portfolio posts and a custom Elementor Portfolio widget. You also get access to features such as Video Lightbox, Video Background on Hover, and more!                                    </p>
-                                    <p class="section_footer">
-                                        <a href="https://demo.wpzoom.com/inspiro/portfolio/" target="_blank" class="button button-primary">
-                                            Premium Portfolio Demo →                                        </a>
-                                    </p>
-                                </div>
-
-                            </div>
-
-
 
 							<h3 class="wpz-onboard_content-main-title"><?php esc_html_e( 'Install the Premium version', 'inspiro' ); ?></h3>
 
                             <p class="wpz-onboard_content-main-intro">
                                 <?php
                                 $download_link = esc_url( 'https://www.wpzoom.com/account/' ); // Replace with your actual download URL
-                                echo sprintf( __( 'If you have purchased the Premium or PRO version fo the theme, please download it as a ZIP file from the <a href="%s" target="_blank">Members Area</a> and upload it here.', 'inspiro' ), $download_link );
+                                echo sprintf( __( 'If you have purchased the Premium or PRO version of the theme, please download it as a ZIP file from the <a href="%s" target="_blank">Members Area</a> and upload it here.', 'inspiro' ), $download_link );
                                 ?>
                             </p>
                             <div class="wpz-upload">
@@ -120,24 +83,71 @@
                                     ?>
                                 </label>
                                 <input type="file" id="themezip" name="themezip" accept=".zip" />
-                                <?php submit_button( _x( 'Install Now', 'theme' ), '', 'install-theme-submit', false ); ?>
+                                <?php submit_button( _x( 'Install Now', 'inspiro' ), '', 'install-theme-submit', false ); ?>
                             </form>
 
                         </div>
-
 
                         <strong><?php esc_html_e( 'From the Documentation:', 'inspiro' ); ?></strong>
 
                         <ul>
                             <li><a href="<?php echo esc_url( __( 'https://www.wpzoom.com/docs/theme-installation/', 'inspiro' ) ); ?>" target="_blank"><?php esc_html_e( 'How to Install the Premium version', 'inspiro' ); ?></a></li>
                             <li><a href="<?php echo esc_url( __( 'https://www.wpzoom.com/docs/how-to-activate-the-license-key-of-your-wpzoom-theme/', 'inspiro' ) ); ?>" target="_blank"><?php esc_html_e( 'How to Activate your License Key', 'inspiro' ); ?></a></li>
-                            <li><a href="<?php echo esc_url( __( 'https://www.wpzoom.com/documentation/inspiro/inspiro-upgrade-from-inspiro-lite-free-to-inspiro-premium-pro/', 'inspiro' ) ); ?>" target="_blank"><?php esc_html_e( 'How to migrate from the free version to the premium version', 'inspiro' ); ?></a></li>
+                            <li><a href="<?php echo esc_url( __( 'https://www.wpzoom.com/documentation/inspiro/inspiro-upgrade-from-inspiro-lite-free-to-inspiro-premium-pro/', 'inspiro' ) ); ?>" target="_blank"><?php esc_html_e( 'How to Migrate from Inspiro Lite to Inspiro Premium', 'inspiro' ); ?></a></li>
 
                         </ul>
 						</div>
 					</div><!-- /#license -->
 
 				</div>
+
+                <div class="wpz-onboard_content-side">
+
+                    <div class="wpz-onboard_content-side-section discover-premium">
+                        <h3 class="wpz-onboard_content-side-section-title icon-docs">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="https://www.w3.org/2000/svg">
+                                <mask id="mask0_3409_3568" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
+                                      y="0" width="24" height="24">
+                                    <rect width="24" height="24" fill="#D9D9D9"/>
+                                </mask>
+                                <g mask="url(#mask0_3409_3568)">
+                                    <path
+                                        d="M19 9L17.75 6.25L15 5L17.75 3.75L19 1L20.25 3.75L23 5L20.25 6.25L19 9ZM19 23L17.75 20.25L15 19L17.75 17.75L19 15L20.25 17.75L23 19L20.25 20.25L19 23ZM9 20L6.5 14.5L1 12L6.5 9.5L9 4L11.5 9.5L17 12L11.5 14.5L9 20ZM9 15.15L10 13L12.15 12L10 11L9 8.85L8 11L5.85 12L8 13L9 15.15Z"
+                                        fill="white"/>
+                                </g>
+                            </svg> <?php esc_html_e( 'Discover Inspiro Premium!', 'inspiro' ); ?></h3>
+                        <p class="wpz-onboard_content-side-section-content"><?php esc_html_e( 'Unlock advanced customization options and unique demos with the Premium version!', 'inspiro' ); ?></p>
+
+                        <ul>
+                           <li><span class="dashicons dashicons-yes"></span> 15+ Starter Sites</li>
+                           <li><span class="dashicons dashicons-yes"></span> Video Slideshow</li>
+                           <li><span class="dashicons dashicons-yes"></span> Advanced WooCommerce Integration</li>
+                           <li><span class="dashicons dashicons-yes"></span> Custom Elementor Widgets</li>
+                           <li><span class="dashicons dashicons-yes"></span> Portfolio with Video Integration</li>
+                           <li><span class="dashicons dashicons-yes"></span> Video Backgrounds</li>
+                           <li><span class="dashicons dashicons-yes"></span> Video Background on Hover</li>
+                           <li><span class="dashicons dashicons-yes"></span> ...and much more</li>
+                       </ul>
+
+                        <a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
+                           title="Inspiro Premium" target="_blank"><img
+                                src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-premium.png' ); ?>"
+                                width="300" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>"/></a>
+
+                        <div class="wpz-onboard_content-side-section-button">
+                            <a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
+                               title="Inspiro Premium" target="_blank"
+                               class="button"><?php esc_html_e( 'Discover the Premium Version &rarr;', 'inspiro' ); ?></a>
+
+                               <a href="https://www.wpzoom.com/themes/inspiro/starter-sites/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
+                                  title="Inspiro Premium" target="_blank"
+                                  class="button"><?php esc_html_e( 'View Starter Sites &rarr;', 'inspiro' ); ?></a>
+                        </div>
+
+                    </div>
+
+                </div>
 
 			</div>
 		</div>

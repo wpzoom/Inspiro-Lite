@@ -4,7 +4,7 @@
 
 .wpz-welcome-notice {
     position: relative;
-    background-image: url("data:image/svg+xml,%3Csvg width='240' height='94' viewBox='0 0 56 164' fill='none' xmlns='https://www.w3.org/2000/svg'%3E%3Cpath opacity='0.1' d='M0 0H540V164H81.5C36.4888 164 0 127.511 0 82.5V0Z' fill='%233496FF'/%3E%3C/svg%3E%0A");
+    background-image: url("data:image/svg+xml,%3Csvg width='240' height='94' viewBox='0 0 56 164' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.1' d='M0 0H540V164H81.5C36.4888 164 0 127.511 0 82.5V0Z' fill='%233496FF'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     background-position: center right;
     background-size: contain;
