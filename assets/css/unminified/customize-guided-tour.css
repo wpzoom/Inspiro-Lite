@@ -1,39 +1,41 @@
-.ins-go-button:hover,
-.ins-go-button:focus,
-a.ins-go-button:hover,
-a.ins-go-button:focus {
-	border-color: #005082;
-	color: #fff
-}
 
-.ins-go-button:focus,
-a.ins-go-button:focus {
-	box-shadow: 0 0 0 2px #78dcfa
-}
+/* no necessary go button styles */
+/*.ins-go-button:hover,*/
+/*.ins-go-button:focus,*/
+/*a.ins-go-button:hover,*/
+/*a.ins-go-button:focus {*/
+/*	border-color: #005082;*/
+/*	color: #fff*/
+/*}*/
 
-.ins-go-button:active,
-a.ins-go-button:active {
-	border-width: 2px 1px 1px;
-	box-shadow: none;
-	vertical-align: baseline
-}
+/*.ins-go-button:focus,*/
+/*a.ins-go-button:focus {*/
+/*	box-shadow: 0 0 0 2px #78dcfa*/
+/*}*/
 
-.ins-go-button[disabled],
-.ins-go-button:disabled,
-a.ins-go-button[disabled],
-a.ins-go-button:disabled {
-	color: #fff;
-	background: #bceefd;
-	border-color: #8cc9e2;
-	cursor: default
-}
+/*.ins-go-button:active,*/
+/*a.ins-go-button:active {*/
+/*	border-width: 2px 1px 1px;*/
+/*	box-shadow: none;*/
+/*	vertical-align: baseline*/
+/*}*/
 
-.ins-go-button[disabled]:active,
-.ins-go-button:disabled:active,
-a.ins-go-button[disabled]:active,
-a.ins-go-button:disabled:active {
-	border-width: 1px 1px 2px
-}
+/*.ins-go-button[disabled],*/
+/*.ins-go-button:disabled,*/
+/*a.ins-go-button[disabled],*/
+/*a.ins-go-button:disabled {*/
+/*	color: #fff;*/
+/*	background: #bceefd;*/
+/*	border-color: #8cc9e2;*/
+/*	cursor: default*/
+/*}*/
+
+/*.ins-go-button[disabled]:active,*/
+/*.ins-go-button:disabled:active,*/
+/*a.ins-go-button[disabled]:active,*/
+/*a.ins-go-button:disabled:active {*/
+/*	border-width: 1px 1px 2px*/
+/*}*/
 
 /* main container */
 .ins-guided-tour {
