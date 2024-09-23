@@ -1,9 +1,7 @@
-/* global jQuery */
-
+/* global _wpCustomizeInspiroGuidedTourSteps */
 /**
- * Scripts for Guided Tour feature. guided tour feature
+ * Scripts for Guided Tour feature.
  */
-
 (function (wp, $) {
 	'use strict';
 
@@ -18,17 +16,16 @@
 	api.SFGuidedTourSteps = [];
 
 	// merging plugin options with default settings.
-	if (typeof _wpCustomizeSFGuidedTourSteps !== 'undefined') {
-		$.extend(api.SFGuidedTourSteps, _wpCustomizeSFGuidedTourSteps);
+	if (typeof _wpCustomizeInspiroGuidedTourSteps !== 'undefined') {
+		$.extend(api.SFGuidedTourSteps, _wpCustomizeInspiroGuidedTourSteps);
 	}
 
 	/**
 	 * Defines a guided tour feature
 	 * set up user interface within the WordPress Customizer environment
-	 * wp.customize.SFGuidedTour
-	 *
+	 * wp.customize.InspiroGuidedTour
 	 */
-	api.SFGuidedTour = {
+	api.InspiroGuidedTour = {
 		$container: null,  // Stores the tour container element
 		currentStep: -1,   // Tracks the current step in the tour
 
@@ -49,7 +46,7 @@
 			$wpCustomizerContainer.prepend(this.$container); // Insert container at the top of the Customizer overlay
 
 			// Adds event listeners for tour interaction (e.g., navigation between steps)
-			this._addListeners();
+			this._addEventListeners();
 
 			// Initial container position, wrapping in condition for safety
 			if (this.$container && this.$container.length > 0) {
@@ -91,7 +88,7 @@
 		}, // End of _setupUI() method
 
 		// Adds event listeners (e.g., for navigation)
-		_addListeners() {
+		_addEventListeners() {
 			const self = this;
 
 			api.state('expandedSection').bind(function () {
@@ -310,6 +307,6 @@
 	}
 
 	$(document).ready(function () {
-		api.SFGuidedTour.init();
+		api.InspiroGuidedTour.init();
 	});
 })(window.wp, jQuery);
