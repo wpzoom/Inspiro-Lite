@@ -68,22 +68,24 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 					<h2>{{ data.title }}</h2>
 					<# } #>
 					{{{ data.message }}}
-					<a class="sf-nux-button" href="#">
-						<# if ( data.button_text ) { #>
-						{{ data.button_text }}
-						<# } else { #>
-						<?php esc_attr_e( 'Next', 'storefront' ); ?>
+					<div class="guided-tour-step-nav-elements">
+						<a class="button button-primary sf-nux-button" href="#">
+							<# if ( data.button_text ) { #>
+							{{ data.button_text }}
+							<# } else { #>
+							<?php esc_attr_e( 'Next', 'storefront' ); ?>
+							<# } #>
+						</a>
+						<# if ( ! data.last_step ) { #>
+						<a class="sf-guided-tour-skip" href="#">
+							<# if ( data.first_step ) { #>
+							<?php esc_attr_e( 'No thanks, skip the tour', 'storefront' ); ?>
+							<# } else { #>
+							<?php esc_attr_e( 'Skip this step', 'storefront' ); ?>
+							<# } #>
+						</a>
 						<# } #>
-					</a>
-					<# if ( ! data.last_step ) { #>
-					<a class="sf-guided-tour-skip" href="#">
-						<# if ( data.first_step ) { #>
-						<?php esc_attr_e( 'No thanks, skip the tour', 'storefront' ); ?>
-						<# } else { #>
-						<?php esc_attr_e( 'Skip this step', 'storefront' ); ?>
-						<# } #>
-					</a>
-					<# } #>
+					</div>
 				</div>
 			</script>
 			<?php
