@@ -44,8 +44,8 @@
 				// Select the WordPress Customizer's main overlay container (the area where content is displayed)
 				$wpCustomizerContainer = $('body.wp-customizer .wp-full-overlay');
 
-			// Creates a div with 'sf-guided-tour' class and adds it to the customizer container
-			this.$container = $('<div/>').addClass('sf-guided-tour');
+			// Creates a div with 'ins-guided-tour' class and adds it to the customizer container
+			this.$container = $('<div/>').addClass('ins-guided-tour');
 			$wpCustomizerContainer.prepend(this.$container); // Insert container at the top of the Customizer overlay
 
 			// Adds event listeners for tour interaction (e.g., navigation between steps)
@@ -59,7 +59,7 @@
 						$('#customize-controls').width() + 10 + 'px'
 					)
 					.on('transitionend', function () {
-						self.$container.addClass('sf-loaded');
+						self.$container.addClass('ins-loaded');
 					});
 			}
 
@@ -68,7 +68,7 @@
 
 			$( document ).on(
 				'click',
-				'.sf-guided-tour-step .sf-nux-button',
+				'.ins-guided-tour-step .ins-nux-button',
 				function () {
 					self._showNextStep();
 					return false;
@@ -77,7 +77,7 @@
 
 			$( document ).on(
 				'click',
-				'.sf-guided-tour-step .sf-guided-tour-skip',
+				'.ins-guided-tour-step .ins-guided-tour-skip',
 				function () {
 					if ( self.currentStep === 0 ) {
 						self._hideTour( true );
@@ -110,7 +110,7 @@
 				return;
 			}
 
-			this.$container.removeClass( 'sf-inside-section' );
+			this.$container.removeClass( 'ins-inside-section' );
 
 			const expandedSection = api.state( 'expandedSection' ).get();
 			const expandedPanel = api.state( 'expandedPanel' ).get();
@@ -121,7 +121,7 @@
 						'.customize-section-title'
 					)
 				);
-				this.$container.addClass( 'sf-inside-section' );
+				this.$container.addClass( 'ins-inside-section' );
 			} else if ( expandedSection === false && expandedPanel === false ) {
 				if ( this._isTourHidden() ) {
 					this._revealTour();
@@ -150,16 +150,16 @@
 			} );
 
 			$( 'body' )
-				.addClass( 'sf-exiting' )
+				.addClass( 'ins-exiting' )
 				.on(
 					'animationend.storefront webkitAnimationEnd.storefront',
 					function () {
 						$( this )
-							.removeClass( 'sf-exiting' )
+							.removeClass( 'ins-exiting' )
 							.off(
 								'animationend.storefront webkitAnimationEnd.storefront'
 							)
-							.addClass( 'sf-hidden' );
+							.addClass( 'ins-hidden' );
 						self.$container.hide();
 
 						if (
@@ -175,7 +175,7 @@
 		_revealTour() {
 			const self = this;
 
-			$( 'body' ).removeClass( 'sf-hidden' );
+			$( 'body' ).removeClass( 'ins-hidden' );
 
 			self.$container.show();
 
@@ -183,12 +183,12 @@
 			const offsetTop = parseInt( containerOffset.top, 10 );
 
 			$( 'body' )
-				.addClass( 'sf-entering' )
+				.addClass( 'ins-entering' )
 				.on(
 					'animationend.storefront webkitAnimationEnd.storefront',
 					function () {
 						$( this )
-							.removeClass( 'sf-entering' )
+							.removeClass( 'ins-entering' )
 							.off(
 								'animationend.storefront webkitAnimationEnd.storefront'
 							);
@@ -230,18 +230,18 @@
 			step.message = this._lineBreaksToParagraphs( step.message );
 
 			// Load template
-			const template = wp.template( 'sf-guided-tour-step' );
+			const template = wp.template( 'ins-guided-tour-step' );
 
-			this.$container.removeClass( 'sf-first-step' );
+			this.$container.removeClass( 'ins-first-step' );
 
 			if ( this.currentStep === 0 ) {
 				step.first_step = true;
-				this.$container.addClass( 'sf-first-step' );
+				this.$container.addClass( 'ins-first-step' );
 			}
 
 			if ( this._isLastStep() ) {
 				step.last_step = true;
-				this.$container.addClass( 'sf-last-step' );
+				this.$container.addClass( 'ins-last-step' );
 			}
 
 			this._moveContainer( this._getSelector( step.section ) );
@@ -262,12 +262,12 @@
 				44;
 
 			this.$container
-				.addClass( 'sf-moving' )
+				.addClass( 'ins-moving' )
 				.css( {
 					transform: 'translateY(' + position + 'px)',
 				} )
 				.on( 'transitionend.storefront', function () {
-					self.$container.removeClass( 'sf-moving' );
+					self.$container.removeClass( 'ins-moving' );
 					self.$container.off( 'transitionend.storefront' );
 				} );
 		},
@@ -295,7 +295,7 @@
 		},
 
 		_isTourHidden() {
-			return $( 'body' ).hasClass( 'sf-hidden' ) ? true : false;
+			return $( 'body' ).hasClass( 'ins-hidden' ) ? true : false;
 		},
 
 		_isLastStep() {

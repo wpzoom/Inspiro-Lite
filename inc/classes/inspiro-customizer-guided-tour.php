@@ -62,26 +62,26 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 		 */
 		public function print_templates() {
 			?>
-			<script type="text/html" id="tmpl-sf-guided-tour-step">
-				<div class="sf-guided-tour-step">
+			<script type="text/html" id="tmpl-ins-guided-tour-step">
+				<div class="ins-guided-tour-step">
 					<# if ( data.title ) { #>
 					<h2>{{ data.title }}</h2>
 					<# } #>
 					{{{ data.message }}}
 					<div class="guided-tour-step-nav-elements">
-						<a class="button button-primary sf-nux-button" href="#">
+						<a class="button button-primary ins-nux-button" href="#">
 							<# if ( data.button_text ) { #>
 							{{ data.button_text }}
 							<# } else { #>
-							<?php esc_attr_e( 'Next', 'storefront' ); ?>
+							<?php esc_attr_e( 'Next', 'inspiro' ); ?>
 							<# } #>
 						</a>
 						<# if ( ! data.last_step ) { #>
-						<a class="sf-guided-tour-skip" href="#">
+						<a class="ins-guided-tour-skip" href="#">
 							<# if ( data.first_step ) { #>
-							<?php esc_attr_e( 'No thanks, skip the tour', 'storefront' ); ?>
+							<?php esc_attr_e( 'No thanks, skip the tour', 'inspiro' ); ?>
 							<# } else { #>
-							<?php esc_attr_e( 'Skip this step', 'storefront' ); ?>
+							<?php esc_attr_e( 'Skip this step', 'inspiro' ); ?>
 							<# } #>
 						</a>
 						<# } #>

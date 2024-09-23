@@ -1,42 +1,37 @@
-.sf-nux .sf-nux-button:hover, .sf-nux .sf-nux-button:focus, a.sf-nux-button:hover, a.sf-nux-button:focus {
+.ins-nux .ins-nux-button:hover, .ins-nux .ins-nux-button:focus, a.ins-nux-button:hover, a.ins-nux-button:focus {
 	border-color: #005082;
 	color: #fff
 }
 
-.sf-nux .sf-nux-button:focus, a.sf-nux-button:focus {
+.ins-nux .ins-nux-button:focus, a.ins-nux-button:focus {
 	box-shadow: 0 0 0 2px #78dcfa
 }
 
-.sf-nux .sf-nux-button:active, a.sf-nux-button:active {
+.ins-nux .ins-nux-button:active, a.ins-nux-button:active {
 	border-width: 2px 1px 1px;
 	box-shadow: none;
 	vertical-align: baseline
 }
 
-.sf-nux .sf-nux-button[disabled], .sf-nux .sf-nux-button:disabled, a.sf-nux-button[disabled], a.sf-nux-button:disabled {
+.ins-nux .ins-nux-button[disabled], .ins-nux .ins-nux-button:disabled, a.ins-nux-button[disabled], a.ins-nux-button:disabled {
 	color: #fff;
 	background: #bceefd;
 	border-color: #8cc9e2;
 	cursor: default
 }
 
-.sf-nux .sf-nux-button[disabled]:active, .sf-nux .sf-nux-button:disabled:active, a.sf-nux-button[disabled]:active, a.sf-nux-button:disabled:active {
+.ins-nux .ins-nux-button[disabled]:active, .ins-nux .ins-nux-button:disabled:active, a.ins-nux-button[disabled]:active, a.ins-nux-button:disabled:active {
 	border-width: 1px 1px 2px
 }
 
 /* main container */
-.sf-guided-tour {
+.ins-guided-tour {
 	color: #50575e;
 	background-color: rgba(239, 244, 247);
 	border: 1px solid rgb(220, 220, 222, .8);
-	/*border: 1px solid rgb(37, 151, 212, .5);*/
-
-
 	display: block;
-	/*background-color: rgba(35, 40, 45, .95);*/
 	border-radius: 5px;
 	box-shadow: 3px 1px 5px -2px rgba(0, 0, 0, .145);
-	/*color: #a4a4a4;*/
 	font-size: 1.1em;
 	z-index: 999999998;
 	text-align: left;
@@ -47,115 +42,104 @@
 	transition-duration: 250ms;
 	transition-property: opacity;
 	transition-timing-function: ease-in-out;
-	/*opacity: 0*/
 }
 
-.sf-guided-tour::before {
+.ins-guided-tour::before {
 	content: "";
 	width: 26px;
 	height: 26px;
-	/*background-color: rgb(239, 244, 247, .95);*/
-	background: linear-gradient(225deg, rgba(255, 255, 255, 0) 50%, rgba(239, 244, 247) 50%);
 	display: block;
 	position: absolute;
 	top: 30px;
 	left: -13px;
 	transform: rotate(45deg);
-	/*border: solid 1px #0A246A;*/
 	border-left: 1px solid rgb(220, 220, 222, .8);
 	border-bottom: 1px solid rgb(220, 220, 222, .8);
-
-	/*border-style: solid;*/
-	/*border-width: 14px 14px 14px 0;*/
-	/*border-color: rgba(0, 0, 0, 0) #23282d rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);*/
-	/*border-right-color: rgba(35, 40, 45, .95)*/
+	background: linear-gradient(225deg, rgba(255, 255, 255, 0) 50%, rgba(239, 244, 247) 50%);
 }
 
-.sf-guided-tour .sf-guided-tour-step {
+.ins-guided-tour .ins-guided-tour-step {
 	padding: 30px;
 	overflow: hidden
 }
 
-.sf-guided-tour .sf-guided-tour-step p {
+.ins-guided-tour .ins-guided-tour-step p {
 	font-size: 1em;
 	line-height: 1.7;
 	opacity: .8;
 }
 
-.sf-guided-tour .sf-guided-tour-step h2 {
+.ins-guided-tour .ins-guided-tour-step h2 {
 	margin-top: 0;
-	/*font-size: 1.1em;*/
-	/*font-weight: 500;*/
-	/*color: #fff*/
 	color: #50575e;
 }
 
-.sf-guided-tour .guided-tour-step-nav-elements {
+.ins-guided-tour .guided-tour-step-nav-elements {
 	display: flex;
 	align-items: center;
 }
 
-.sf-guided-tour .sf-guided-tour-step .sf-guided-tour-skip {
+.ins-guided-tour .ins-guided-tour-step .ins-guided-tour-skip {
 	margin-left: 10px;
 	/*color: #00aadc*/
 }
 
-.sf-guided-tour .sf-guided-tour-step .sf-guided-tour-skip:hover {
+.ins-guided-tour .ins-guided-tour-step .ins-guided-tour-skip:hover {
 	opacity: .75
 }
 
-.sf-guided-tour:not(.sf-first-step) .sf-guided-tour-step a.sf-nux-button {
+.ins-guided-tour:not(.ins-first-step) .ins-guided-tour-step a.ins-nux-button {
 	display: none
 }
 
-.sf-guided-tour:not(.sf-first-step) .sf-guided-tour-step .sf-guided-tour-skip {
+.ins-guided-tour:not(.ins-first-step) .ins-guided-tour-step .ins-guided-tour-skip {
 	display: block;
 	float: right
 }
 
-.sf-guided-tour.sf-inside-section .sf-guided-tour-step a.sf-nux-button {
+.ins-guided-tour.ins-inside-section .ins-guided-tour-step a.ins-nux-button {
 	display: inline-block
 }
 
-.sf-guided-tour.sf-inside-section .sf-guided-tour-step .sf-guided-tour-skip {
+.ins-guided-tour.ins-inside-section .ins-guided-tour-step .ins-guided-tour-skip {
 	display: none
 }
 
-.sf-guided-tour.sf-last-step .sf-guided-tour-step a.sf-nux-button {
+.ins-guided-tour.ins-last-step .ins-guided-tour-step a.ins-nux-button {
 	display: inline-block
 }
 
-a.sf-nux-button {
+a.ins-nux-button {
 	vertical-align: middle
 }
 
-a.sf-nux-button:active {
+a.ins-nux-button:active {
 	vertical-align: middle
 }
 
-.sf-loaded {
+.ins-loaded {
 	opacity: 1
 }
 
-.sf-moving {
+.ins-moving {
 	transition-duration: 250ms;
 	transition-property: transform;
 	transition-timing-function: cubic-bezier(0.84, 0.45, 0.68, 1.44)
 }
 
-.sf-entering .sf-guided-tour, .sf-exiting .sf-guided-tour {
+.ins-entering .ins-guided-tour, .ins-exiting .ins-guided-tour {
 	animation-duration: .3s;
 	animation-timing-function: ease-in-out;
 	-webkit-animation-duration: .3s;
 	-webkit-animation-timing-function: ease-in-out
 }
 
-.sf-entering .sf-guided-tour {
+.ins-entering .ins-guided-tour {
 	animation-name: bounceInLeft;
 	-webkit-animation-name: bounceInLeft
 }
 
-.sf-exiting .sf-guided-tour {
+.ins-exiting .ins-guided-tour {
 	animation-name: bounceOutRight;
 	-webkit-animation-name: bounceOutRight
 }
