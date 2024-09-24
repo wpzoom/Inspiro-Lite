@@ -271,7 +271,7 @@
 
 										<p class="section_footer">
 
-											<a href="<?php echo esc_url( admin_url( 'themes.php?page=one-click-demo-import' ) ); ?>"
+											<a href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro-demo' ) ); ?>"
 											   class="button button-primary">
 												<?php esc_html_e( 'Import the Demo Content &rarr;', 'inspiro' ); ?>
 											</a>

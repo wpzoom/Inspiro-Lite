@@ -84,11 +84,11 @@
                                                     <li class="design_default-elementor">
                                                         <figure title="Portfolio (Default)">
                                                             <div class="preview-thumbnail ocdi-import" style="background-image:url('https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-gutenberg-1.png')">
-                                                                <a href="https://demo.wpzoom.com/inspiro-lite-blocks/" target="_blank" class="button-select-template">View Demo</a></div>
+                                                                <a href="https://demo.wpzoom.com/inspiro-lite-blocks/" target="_blank" class="button-select-template"><?php esc_html_e( 'View Demo', 'inspiro' ); ?></a></div>
                                                             <figcaption>
-                                                                <h5>Block Editor (Gutenberg)</h5>
+                                                                <h5><?php esc_html_e( 'Block Editor Demo', 'inspiro' ); ?></h5>
 
-                                                                <a href="<?php echo esc_url( admin_url( 'themes.php?page=one-click-demo-import&step=import&import=0' ) ); ?>" class="button button-primary">Import</a>
+                                                                <a href="<?php echo esc_url( admin_url( 'themes.php?page=one-click-demo-import&step=import&import=0' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Import Demo', 'inspiro' ); ?></a>
 
                                                             </figcaption>
                                                         </figure>
@@ -97,11 +97,11 @@
                                                     <li class="design_video" data-design-id="inspiro-video">
                                                         <figure title="Video Production">
                                                             <div class="preview-thumbnail ocdi-import" style="background-image:url('https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-elementor-1.png')">
-                                                                <a href="https://demo.wpzoom.com/inspiro-lite/" target="_blank" class="button-select-template">View  Demo</a></div>
+                                                                <a href="https://demo.wpzoom.com/inspiro-lite/" target="_blank" class="button-select-template"><?php esc_html_e( 'View Demo', 'inspiro' ); ?></a></div>
                                                             <figcaption>
-                                                                <h5>Elementor</h5>
+                                                                <h5><?php esc_html_e( 'Elementor Demo', 'inspiro' ); ?></h5>
 
-                                                                <a href="<?php echo esc_url( admin_url( 'themes.php?page=one-click-demo-import&step=import&import=1' ) ); ?>" class="button button-primary">Import</a>
+                                                                <a href="<?php echo esc_url( admin_url( 'themes.php?page=one-click-demo-import&step=import&import=1' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Import Demo', 'inspiro' ); ?></a>
 
                                                             </figcaption>
                                                         </figure>
