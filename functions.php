@@ -46,6 +46,11 @@ require INSPIRO_THEME_DIR . 'inc/theme-media.php';
 require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-enqueue-scripts.php';
 
 /**
+ * Setup custom wp-admin options pages
+ */
+require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-custom-wp-admin-menu.php';
+
+/**
  * Functions and definitions.
  */
 require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-after-setup-theme.php';
@@ -94,7 +99,6 @@ require INSPIRO_THEME_DIR . 'inc/icon-functions.php';
  */
 if ( is_admin() ) {
 	require INSPIRO_THEME_DIR . 'inc/admin-notice.php';
-	require INSPIRO_THEME_DIR . 'inc/theme-info-page.php';
 
 	if ( current_user_can( 'manage_options' ) ) {
 		require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-notices.php';

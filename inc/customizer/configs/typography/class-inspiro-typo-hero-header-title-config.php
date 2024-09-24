@@ -30,7 +30,7 @@ class Inspiro_Typo_Hero_Header_Title_Config {
 			'section' => array(
 				'id'   => 'inspiro_typography_section_hero_header',
 				'args' => array(
-					'title' => __( 'Homepage Hero Header', 'inspiro' ),
+					'title' => __( 'Homepage Hero', 'inspiro' ),
 					'panel' => 'inspiro_typography_panel',
 				),
 			),

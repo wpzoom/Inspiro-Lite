@@ -45,8 +45,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 		public function __construct() {
 			add_action( 'after_setup_theme', array( $this, 'theme_setup' ) );
 			add_action( 'template_redirect', array( $this, 'theme_content_width' ), 0 );
-			add_action( 'tgmpa_register', array( $this, 'register_required_plugins' ) );
-            add_action( 'tgmpa_register', array( $this, 'register_required_plugins' ) );
+			add_action( 'tgmpa_register', array( $this, 'register_required_plugins' ) ); // this line was duplicated
             add_filter( 'ocdi/register_plugins', array( $this,'ocdi_register_plugins' ) );
             add_filter( 'ocdi/import_files', array( $this,'ocdi_import_files' ) );
             add_action( 'ocdi/after_import', array( $this,'ocdi_after_import_setup' ));
@@ -420,6 +419,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 				'id'           => 'inspiro_wporg',         // Unique ID for hashing notices for multiple instances of TGMPA.
 				'default_path' => '',                      // Default absolute path to bundled plugins.
 				'menu'         => 'tgmpa-install-plugins', // Menu slug.
+                'parent_slug'  => 'inspiro',
 				'has_notices'  => true,                    // Show admin notices or not.
 				'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
 				'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.

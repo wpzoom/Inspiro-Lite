@@ -360,7 +360,7 @@ function inspiro_get_starter_content() {
                     <!-- wp:columns -->
                     <div class="wp-block-columns"><!-- wp:column {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}},"border":{"width":"0px","style":"none"}},"className":"is-style-default"} -->
                     <div class="wp-block-column is-style-default" style="border-style:none;border-width:0px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:image {"id":7403,"sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
-                    <figure class="wp-block-image size-full is-style-default"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/team1.png" alt="" class="wp-image-7403"/></figure>
+                    <figure class="wp-block-image size-full is-style-default"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/team1.jpg" alt="" class="wp-image-7403"/></figure>
                     <!-- /wp:image -->
 
                     <!-- wp:heading {"level":3} -->
@@ -384,7 +384,7 @@ function inspiro_get_starter_content() {
 
                     <!-- wp:column {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}},"border":{"width":"0px","style":"none"}},"className":"is-style-default"} -->
                     <div class="wp-block-column is-style-default" style="border-style:none;border-width:0px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:image {"id":7404,"sizeSlug":"full","linkDestination":"none"} -->
-                    <figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/team2.png" alt="" class="wp-image-7404"/></figure>
+                    <figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/team2.jpg" alt="" class="wp-image-7404"/></figure>
                     <!-- /wp:image -->
 
                     <!-- wp:heading {"level":3} -->
@@ -408,7 +408,7 @@ function inspiro_get_starter_content() {
 
                     <!-- wp:column {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}},"border":{"width":"0px","style":"none"}},"className":"is-style-default"} -->
                     <div class="wp-block-column is-style-default" style="border-style:none;border-width:0px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:image {"id":7405,"sizeSlug":"full","linkDestination":"none"} -->
-                    <figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/team3.png" alt="" class="wp-image-7405"/></figure>
+                    <figure class="wp-block-image size-full"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/team3.jpg" alt="" class="wp-image-7405"/></figure>
                     <!-- /wp:image -->
 
                     <!-- wp:heading {"level":3} -->

@@ -2,12 +2,12 @@
 /**
  * Title: Contact Card with Social Links
  * Slug: inspiro/contact-card-with-social-links
- * Description: 
+ * Description:
  * Categories: contact, inspiro
- * Keywords: 
+ * Keywords:
  * Viewport Width: 1280
- * Block Types: 
- * Post Types: 
+ * Block Types:
+ * Post Types:
  * Inserter: true
  * Custom Categories: Inspiro
  */
@@ -16,7 +16,7 @@ register_block_pattern_category( 'inspiro', [ 'label' => __( 'Inspiro', 'inspiro
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"},"border":{"radius":"8px","width":"1px"}},"borderColor":"primary","layout":{"type":"default"}} -->
 <div class="wp-block-group has-border-color has-primary-border-color" style="border-width:1px;border-radius:8px"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|large"}},"border":{"radius":{"topLeft":"8px","topRight":"8px","bottomLeft":"0px","bottomRight":"0px"}}},"backgroundColor":"primary","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-primary-background-color has-background" style="border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:0px;border-bottom-right-radius:0px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--large)"><!-- wp:image {"align":"center","id":57,"width":"214px","height":"auto","aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","className":"is-resized is-style-rounded"} -->
-<figure class="wp-block-image aligncenter size-full is-resized is-style-rounded"><img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/team4.png" alt="" class="wp-image-57" style="aspect-ratio:1;object-fit:cover;width:214px;height:auto"/></figure>
+<figure class="wp-block-image aligncenter size-full is-resized is-style-rounded"><img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/team4.jpg" alt="" class="wp-image-57" style="aspect-ratio:1;object-fit:cover;width:214px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|xxx-small"}},"layout":{"type":"constrained"}} -->

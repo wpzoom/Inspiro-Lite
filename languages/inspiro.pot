@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Inspiro 1.4.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/inspiro-lite\n"
-"POT-Creation-Date: 2024-09-16 10:04+0000\n"
+"POT-Creation-Date: 2024-09-24 11:10+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -54,6 +54,10 @@ msgstr ""
 msgid "100 Italic"
 msgstr ""
 
+#: inc/admin/pages/admin.php:521
+msgid "15+ Starter Sites"
+msgstr ""
+
 #: inc/classes/class-inspiro-font-family-manager.php:221
 msgid "200 Italic"
 msgstr ""
@@ -100,12 +104,16 @@ msgstr ""
 msgid "[Edit]"
 msgstr ""
 
-#: inc/classes/class-inspiro-theme-upgrader.php:193
+#: inc/classes/class-inspiro-theme-upgrader.php:189
 msgid "Able to migrate"
 msgstr ""
 
 #: inc/admin-notice.php:50 inc/classes/class-inspiro-notices.php:126
 msgid "Action failed. Please refresh the page and retry."
+msgstr ""
+
+#: inc/admin/pages/admin.php:240
+msgid "Add a Portfolio Post &rarr;"
 msgstr ""
 
 #: inc/common-functions.php:96 inc/common-functions.php:108
@@ -118,12 +126,38 @@ msgid ""
 "Add widgets here to appear in your sidebar on blog posts and archive pages."
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-hero-config.php:164
-msgid "Adjust gradient opacity"
+#: inc/admin/pages/admin.php:450
+msgid "Advanced Portfolio with Video Integration"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:262
-msgid "All Headings (H1-H6)"
+#: inc/admin/pages/admin.php:684
+msgid "Advanced WooCommerce Integration"
+msgstr ""
+
+#: inc/admin/pages/admin.php:636
+msgid "And many other premium features..."
+msgstr ""
+
+#: inc/admin/pages/admin.php:651
+msgid "Below is a comparison chart of the free and the premium versions."
+msgstr ""
+
+#: inc/admin/pages/sidebar.php:71
+msgid ""
+"Below you can find a quick video tutorial that will guide you through "
+"configuring basic things in the theme after installing it. Please remember "
+"that this video was created in 2021, and since then, many things have "
+"improved in our theme."
+msgstr ""
+
+#: inc/admin/pages/demos.php:6
+msgid ""
+"Below you can view demos available in the Inspiro Premium theme. You can get "
+"access to all of them by purchasing the Premium version of the theme."
+msgstr ""
+
+#: inc/admin/pages/demo.php:89
+msgid "Block Editor Demo"
 msgstr ""
 
 #: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:59
@@ -139,7 +173,7 @@ msgstr ""
 msgid "Blog Sidebar"
 msgstr ""
 
-#: inc/classes/class-inspiro-theme-upgrader.php:193
+#: inc/classes/class-inspiro-theme-upgrader.php:189
 msgid "Blogname"
 msgstr ""
 
@@ -192,7 +226,7 @@ msgstr ""
 msgid "Choosing a preset will override all the font settings."
 msgstr ""
 
-#: inc/classes/class-inspiro-theme-upgrader.php:158
+#: inc/classes/class-inspiro-theme-upgrader.php:154
 msgid ""
 "Click the \"Replace active with uploaded\" button below to complete the "
 "installation"
@@ -243,8 +277,12 @@ msgctxt "Color name"
 msgid "White"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:59
+#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:51
 msgid "Color Scheme"
+msgstr ""
+
+#: inc/admin/pages/admin.php:356
+msgid "Colors & Fonts"
 msgstr ""
 
 #: comments.php:71
@@ -259,10 +297,6 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:232
-msgid "Content Link color"
-msgstr ""
-
 #: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:66
 msgid "Content to Display in Archive Pages"
 msgstr ""
@@ -271,32 +305,58 @@ msgstr ""
 msgid "Copyright Text"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-footer-config.php:124
-msgid "Copyright Text Color"
-msgstr ""
-
-#: inc/classes/class-inspiro-theme-upgrader.php:127
+#: inc/classes/class-inspiro-theme-upgrader.php:123
 msgid "Create temporary custom post type Slider"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:63
+#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:55
 msgid "Custom"
 msgstr ""
 
+#: inc/admin/pages/admin.php:504
+msgid "Custom Elementor Modules"
+msgstr ""
+
+#: inc/admin/pages/admin.php:696
+msgid "Custom Elementor Widgets"
+msgstr ""
+
 #: inc/customizer/configs/logo/class-inspiro-custom-logo-text-config.php:40
-#: inc/customizer/configs/colors/class-inspiro-color-header-config.php:130
 msgid "Custom Logo Text"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-header-config.php:139
-msgid "Custom Logo Text on Hover"
+#. parent slug
+#. page title
+#: inc/classes/class-inspiro-custom-wp-admin-menu.php:116
+#: inc/classes/class-inspiro-custom-wp-admin-menu.php:117
+msgid "Customize"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:62
+#: inc/admin/pages/admin.php:96
+msgid "Customize & Configure"
+msgstr ""
+
+#: inc/admin/pages/admin.php:197
+msgid "Customize &rarr;"
+msgstr ""
+
+#: inc/admin/pages/admin.php:366
+msgid "Customize Colors &rarr;"
+msgstr ""
+
+#: inc/admin/pages/admin.php:587
+msgid "Customize Every Detail"
+msgstr ""
+
+#: inc/admin/pages/admin.php:82
+msgid "Customize Inspiro &rarr;"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:54
 msgid "Dark"
 msgstr ""
 
-#: inc/custom-header.php:55
+#: inc/custom-header.php:56
 msgid "Default Header Image"
 msgstr ""
 
@@ -304,8 +364,20 @@ msgstr ""
 msgid "Default Style"
 msgstr ""
 
-#: inc/customizer/class-inspiro-customizer.php:472
+#: inc/customizer/class-inspiro-customizer.php:469
 msgid "Default System Font"
+msgstr ""
+
+#: inc/admin/pages/admin.php:264
+msgid "Demo Content"
+msgstr ""
+
+#: inc/admin/pages/admin.php:702
+msgid "Demo Content Importer"
+msgstr ""
+
+#: inc/admin/pages/demo.php:48 inc/admin/pages/demo.php:67
+msgid "Demo Importer"
 msgstr ""
 
 #: inc/admin-notice.php:85
@@ -316,12 +388,32 @@ msgstr ""
 msgid "Discover Inspiro Premium &rarr;"
 msgstr ""
 
+#: inc/admin/pages/upgrade.php:119 inc/admin/pages/sidebar.php:16
+msgid "Discover Inspiro Premium!"
+msgstr ""
+
+#: inc/admin/pages/upgrade.php:136 inc/admin/pages/sidebar.php:38
+msgid "Discover the Premium Version &rarr;"
+msgstr ""
+
 #: inc/admin-notice.php:75
 msgid "Dismiss this notice."
 msgstr ""
 
 #: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:79
 msgid "Display the Featured Image in the Header"
+msgstr ""
+
+#: inc/admin/pages/sidebar.php:57
+msgid "Documentation"
+msgstr ""
+
+#: inc/admin/pages/sidebar.php:54
+msgid ""
+"Documentation is the place where you’ll find the information needed to setup "
+"the theme quickly, and other details about theme-specific features. You can "
+"also get in touch with our team by contacting us through our website or "
+"using the Support Forum."
 msgstr ""
 
 #: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:78
@@ -336,6 +428,14 @@ msgstr ""
 #: inc/template-tags.php:226
 #, php-format
 msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: inc/admin/pages/demo.php:102
+msgid "Elementor Demo"
+msgstr ""
+
+#: inc/admin/pages/admin.php:690
+msgid "Elementor Integration"
 msgstr ""
 
 #: comments.php:94
@@ -354,10 +454,6 @@ msgstr ""
 msgid "Excerpt"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:204
-msgid "Excerpt text"
-msgstr ""
-
 #: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-media-config.php:78
 msgid "External Header Video"
 msgstr ""
@@ -368,6 +464,14 @@ msgstr ""
 
 #: inc/classes/class-inspiro-font-family-manager.php:220
 msgid "Extra-Light 200"
+msgstr ""
+
+#: inc/admin/pages/admin.php:779
+msgid "Fast Email Support"
+msgstr ""
+
+#: inc/admin/pages/admin.php:659
+msgid "Feature"
 msgstr ""
 
 #: inc/customizer/configs/header/class-inspiro-header-area-config.php:231
@@ -469,7 +573,7 @@ msgstr ""
 
 #: template-parts/footer/footer-widgets.php:26
 #: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:40
-#: inc/customizer/configs/colors/class-inspiro-color-footer-config.php:95
+#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:229
 msgid "Footer"
 msgstr ""
 
@@ -489,7 +593,7 @@ msgstr ""
 msgid "Footer 4"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-footer-config.php:106
+#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:240
 msgid "Footer Background"
 msgstr ""
 
@@ -501,6 +605,10 @@ msgstr ""
 msgid "Footer Layout"
 msgstr ""
 
+#: inc/admin/pages/admin.php:335
+msgid "Footer Options &rarr;"
+msgstr ""
+
 #: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:119
 #: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:123
 #: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:127
@@ -508,18 +616,16 @@ msgstr ""
 msgid "Footer Pro"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-footer-config.php:115
-msgid "Footer Text Color"
-msgstr ""
-
-#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:263
-msgid ""
-"For headings in the content only. To return to the default option, please "
-"publish the changes first."
-msgstr ""
-
 #: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:94
 msgid "Four Columns"
+msgstr ""
+
+#: inc/admin/pages/admin.php:56
+msgid "Free vs. Premium"
+msgstr ""
+
+#: inc/admin/pages/upgrade.php:91
+msgid "From the Documentation:"
 msgstr ""
 
 #: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:71
@@ -549,8 +655,28 @@ msgstr ""
 msgid "Fullscreen"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:163
-msgid "General"
+#: inc/admin/pages/admin.php:677
+msgid "Fullscreen Slideshow on Homepage"
+msgstr ""
+
+#: inc/admin/pages/admin.php:87 inc/admin/pages/admin.php:434
+msgid "Get Inspiro Premium &rarr;"
+msgstr ""
+
+#: inc/admin/pages/demos.php:323 inc/admin/pages/admin.php:640
+msgid "Get Inspiro Premium Today &rarr;"
+msgstr ""
+
+#: inc/admin/pages/admin.php:787
+msgid "Get Inspiro Premium Today!"
+msgstr ""
+
+#: inc/admin/pages/demos.php:559
+msgid "Get Inspiro PRO Today &rarr;"
+msgstr ""
+
+#: inc/admin/pages/admin.php:766
+msgid "Google Fonts (Hosted Locally)"
 msgstr ""
 
 #: theme.json:1
@@ -563,21 +689,21 @@ msgctxt "Gradient name"
 msgid "Secondary to Light"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-header-config.php:157
+#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:159
 msgid "Hamburger Icon Color"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-header-config.php:118
+#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:130
 #: inc/customizer/configs/header/class-inspiro-header-area-config.php:43
 msgid "Header"
 msgstr ""
 
-#: inc/customizer/configs/header/class-inspiro-header-area-config.php:138
-msgid "Header Layout"
+#: inc/admin/pages/admin.php:320
+msgid "Header & Footer"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-header-config.php:167
-msgid "Header Menu"
+#: inc/customizer/configs/header/class-inspiro-header-area-config.php:138
+msgid "Header Layout"
 msgstr ""
 
 #: inc/customizer/configs/header/class-inspiro-header-area-config.php:218
@@ -586,6 +712,10 @@ msgstr ""
 
 #: inc/customizer/configs/header/class-inspiro-header-area-config.php:206
 msgid "Header options"
+msgstr ""
+
+#: inc/admin/pages/admin.php:330
+msgid "Header Options &rarr;"
 msgstr ""
 
 #: inc/common-functions.php:142
@@ -616,31 +746,6 @@ msgstr ""
 msgid "Heading 6"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:272
-msgid "Heading H1"
-msgstr ""
-
-#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:281
-msgid "Heading H2"
-msgstr ""
-
-#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:290
-msgid "Heading H3"
-msgstr ""
-
-#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:299
-msgid "Heading H4"
-msgstr ""
-
-#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:308
-msgid "Heading H5"
-msgstr ""
-
-#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:317
-msgid "Heading H6"
-msgstr ""
-
-#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:251
 #: inc/customizer/configs/typography/class-inspiro-typo-headings-config.php:33
 msgid "Headings"
 msgstr ""
@@ -649,20 +754,20 @@ msgstr ""
 msgid "Hero Button"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-hero-config.php:146
-msgid "Hero Button Background Color on Hover"
+#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:199
+msgid "Hero Button Background Color Hover"
 msgstr ""
 
 #: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:109
 msgid "Hero Button Text"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-hero-config.php:128
+#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:180
 msgid "Hero Button Text Color"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-hero-config.php:137
-msgid "Hero Button Text Color on Hover"
+#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:189
+msgid "Hero Button Text Color Hover"
 msgstr ""
 
 #: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:119
@@ -674,17 +779,13 @@ msgstr ""
 msgid "Hero Description"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-hero-config.php:106
+#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:169
 msgid "Hero section"
 msgstr ""
 
 #: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-content-config.php:87
 #: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:102
 msgid "Hero Title"
-msgstr ""
-
-#: inc/customizer/configs/colors/class-inspiro-color-hero-config.php:117
-msgid "Hero Title Text Color"
 msgstr ""
 
 #: inc/customizer/configs/header/class-inspiro-header-area-config.php:170
@@ -714,26 +815,128 @@ msgstr ""
 msgid "Homepage (Without Hero Area)"
 msgstr ""
 
+#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:33
+msgid "Homepage Hero"
+msgstr ""
+
 #: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-panel-config.php:32
 msgid "Homepage Hero Area"
 msgstr ""
 
-#: inc/customizer/configs/typography/class-inspiro-typo-hero-header-title-config.php:33
-msgid "Homepage Hero Header"
+#: inc/admin/pages/admin.php:281
+msgid "How it works?"
+msgstr ""
+
+#: inc/admin/pages/demo.php:128 inc/admin/pages/admin.php:299
+msgid "How it works? &rarr;"
+msgstr ""
+
+#: inc/admin/pages/upgrade.php:95
+msgid "How to Activate your License Key"
+msgstr ""
+
+#: inc/admin/pages/admin.php:254
+msgid "How to Create a Portfolio?"
+msgstr ""
+
+#: inc/admin/pages/upgrade.php:94
+msgid "How to Install the Premium version"
+msgstr ""
+
+#: inc/admin/pages/upgrade.php:96
+msgid "How to Migrate from Inspiro Lite to Inspiro Premium"
+msgstr ""
+
+#: inc/admin/pages/admin.php:436
+msgid "https://demo.wpzoom.com/?theme=inspiro-demo"
+msgstr ""
+
+#: inc/admin/pages/admin.php:456
+msgid "https://demo.wpzoom.com/inspiro/portfolio/"
 msgstr ""
 
 #. Author URI of the theme
 msgid "https://www.wpzoom.com/"
 msgstr ""
 
+#: inc/admin/pages/upgrade.php:95
+msgid ""
+"https://www.wpzoom.com/docs/how-to-activate-the-license-key-of-your-wpzoom-"
+"theme/"
+msgstr ""
+
+#: inc/admin/pages/upgrade.php:94
+msgid "https://www.wpzoom.com/docs/theme-installation/"
+msgstr ""
+
+#: inc/admin/pages/admin.php:252
+msgid ""
+"https://www.wpzoom.com/documentation/inspiro-lite/inspiro-lite-how-to-create-"
+"a-portfolio-section/"
+msgstr ""
+
+#: inc/admin/pages/demo.php:127 inc/admin/pages/admin.php:279
+#: inc/admin/pages/admin.php:297
+msgid ""
+"https://www.wpzoom.com/documentation/inspiro-lite/inspiro-lite-importing-the-"
+"demo-content/"
+msgstr ""
+
+#: inc/admin/pages/upgrade.php:96
+msgid ""
+"https://www.wpzoom.com/documentation/inspiro/inspiro-upgrade-from-inspiro-"
+"lite-free-to-inspiro-premium-pro/"
+msgstr ""
+
 #. URI of the theme
 msgid "https://www.wpzoom.com/free-wordpress-themes/inspiro-lite/"
+msgstr ""
+
+#: inc/admin/pages/admin.php:531
+msgid "https://www.wpzoom.com/inspiro-pro/starter-sites/"
+msgstr ""
+
+#: inc/admin/pages/admin.php:526
+msgid "https://www.wpzoom.com/inspiro/starter-sites/"
+msgstr ""
+
+#: inc/admin/pages/demos.php:557
+msgid ""
+"https://www.wpzoom.com/themes/inspiro-pro/?"
+"utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-pro"
+msgstr ""
+
+#: inc/admin/pages/demos.php:321 inc/admin/pages/admin.php:85
+#: inc/admin/pages/admin.php:432
+msgid ""
+"https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-"
+"inspiro-page&utm_campaign=upgrade-premium"
+msgstr ""
+
+#: inc/admin/pages/admin.php:638
+msgid ""
+"https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-"
+"inspiro-page&utm_campaign=upgrade-table"
 msgstr ""
 
 #: inc/admin-notice.php:99
 msgid ""
 "https://www.wpzoom.com/themes/inspiro/?"
 "utm_source=wpadmin&utm_medium=adminnotice&utm_campaign=welcome-banner"
+msgstr ""
+
+#: inc/admin/pages/admin.php:192
+msgid ""
+"If you have a logo image, you can upload it in the Site Identity section in "
+"the Customizer, and it will appear in your website's header."
+msgstr ""
+
+#: inc/admin/pages/upgrade.php:72
+#, php-format
+msgid ""
+"If you have purchased the Premium or PRO version of the theme, please "
+"download it as a ZIP file from the <a href=\"%s\" target=\"_blank\">Members "
+"Area</a> and upload it here."
 msgstr ""
 
 #: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:32
@@ -743,7 +946,7 @@ msgid ""
 "some widgets to the %s"
 msgstr ""
 
-#: inc/classes/class-inspiro-theme-upgrader.php:160
+#: inc/classes/class-inspiro-theme-upgrader.php:156
 #, php-format
 msgid ""
 "If you're having issues with your front page or the hero area after the "
@@ -751,17 +954,60 @@ msgid ""
 "title=\"%2$s\">documentation</a> for setup instructions."
 msgstr ""
 
+#. parent slug
+#. page title
+#: inc/classes/class-inspiro-custom-wp-admin-menu.php:126
+#: inc/classes/class-inspiro-custom-wp-admin-menu.php:127
+#: inc/admin/pages/demo.php:91 inc/admin/pages/demo.php:104
+msgid "Import Demo"
+msgstr ""
+
+#: inc/admin/pages/admin.php:276
+msgid "Import the Demo Content &rarr;"
+msgstr ""
+
+#: inc/admin/pages/admin.php:267
+msgid ""
+"Importing demo data (post, pages, images, etc.) is the quickest and easiest "
+"way to set up your new theme, and it allows you to simply edit everything "
+"instead of creating content and layouts from scratch."
+msgstr ""
+
+#: inc/admin/pages/demo.php:73
+msgid ""
+"Importing demo data (post, pages, images, theme settings, etc.) is the "
+"quickest and easiest way to set up your new theme. It allows you to simply "
+"edit everything instead of creating content and layouts from scratch."
+msgstr ""
+
 #: inc/template-tags.php:28
 msgid "in"
 msgstr ""
 
+#: inc/admin/pages/admin.php:323
+msgid ""
+"In the Customizer, you will find separate sections to configure theme's "
+"Header and Footer. You can also add widgets in the Footer in the Widgets "
+"section in the Customizer."
+msgstr ""
+
+#: inc/admin/pages/admin.php:429
+msgid ""
+"In the free version, you can have just a static hero on the homepage, while "
+"in the Premium version, you can create a fully working slideshow with "
+"multiple videos and images. The Slideshow of the Premium version provides "
+"more options and features, such as displaying a different video on mobile "
+"devices, adding a video popup, and more."
+msgstr ""
+
 #: inc/classes/class-inspiro-font-family-manager.php:251
-#: inc/customizer/class-inspiro-customizer.php:453
+#: inc/customizer/class-inspiro-customizer.php:450
 #: inc/customizer/custom-controls/font-variant/class-inspiro-customize-font-variant-control.php:88
 #: inc/customizer/custom-controls/typography/class-inspiro-customize-typography-control.php:104
 msgid "Inherit"
 msgstr ""
 
+#. page title
 #. Name of the theme
 #: patterns/team.php:14 patterns/section-with-video-background.php:14
 #: patterns/section-with-text-and-numbers.php:14 patterns/awards.php:14
@@ -771,6 +1017,7 @@ msgstr ""
 #: patterns/hero-with-video-lightbox.php:14 patterns/testimonials.php:14
 #: patterns/fullscreen-hero.php:14 patterns/list-of-posts.php:14
 #: patterns/pricing-table.php:14 inc/classes/class-inspiro-notice-review.php:83
+#: inc/classes/class-inspiro-custom-wp-admin-menu.php:95
 msgid "Inspiro"
 msgstr ""
 
@@ -787,6 +1034,21 @@ msgid ""
 "version at https://www.wpzoom.com/themes/inspiro/"
 msgstr ""
 
+#: inc/admin/pages/admin.php:660
+msgid "Inspiro Lite"
+msgstr ""
+
+#. phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_menu_page
+#. parent slug
+#: inc/classes/class-inspiro-custom-wp-admin-menu.php:94
+#: inc/classes/class-inspiro-custom-wp-admin-menu.php:106
+msgid "Inspiro Lite Theme Dashboard"
+msgstr ""
+
+#: inc/admin/pages/admin.php:650
+msgid "Inspiro Lite vs. Inspiro Premium"
+msgstr ""
+
 #: patterns/contact-2.php:14 patterns/services-2.php:14
 #: patterns/homepage-with-hero-at-the-top.php:14 patterns/about-us.php:14
 #: patterns/homepage.php:14 patterns/about-us-dark.php:14
@@ -794,8 +1056,51 @@ msgstr ""
 msgid "Inspiro Pages"
 msgstr ""
 
-#: inc/admin-notice.php:80
+#: inc/admin-notice.php:80 inc/admin/pages/upgrade.php:133
+#: inc/admin/pages/admin.php:661 inc/admin/pages/sidebar.php:33
 msgid "Inspiro Premium"
+msgstr ""
+
+#: inc/admin/pages/admin.php:528
+msgid "Inspiro Premium Demos &rarr;"
+msgstr ""
+
+#: inc/admin/pages/demos.php:5
+msgid "Inspiro Premium Demos (16)"
+msgstr ""
+
+#: inc/admin/pages/admin.php:453
+msgid ""
+"Inspiro Premium is perfect for showing off your portfolio, images and videos."
+" The premium version includes multiple page templates to display your "
+"Portfolio posts and a custom Elementor Portfolio widget. You also get access "
+"to features such as Video Lightbox, Video Background on Hover, and more!"
+msgstr ""
+
+#: inc/admin/pages/admin.php:533
+msgid "Inspiro PRO Demos &rarr;"
+msgstr ""
+
+#: inc/admin/pages/demos.php:330
+msgid "Inspiro PRO Demos (11)"
+msgstr ""
+
+#: inc/admin/pages/demos.php:331
+msgid ""
+"Inspiro PRO is a newer version of the Inspiro theme, which can be purchased "
+"separately."
+msgstr ""
+
+#: inc/admin/pages/demo.php:124 inc/admin/pages/admin.php:294
+msgid "Install One Click Demo Import &rarr;"
+msgstr ""
+
+#: inc/admin/pages/upgrade.php:67
+msgid "Install the Premium version"
+msgstr ""
+
+#: inc/admin/pages/admin.php:247
+msgid "Install WPZOOM Portfolio &rarr;"
 msgstr ""
 
 #: 404.php:24
@@ -829,7 +1134,7 @@ msgstr ""
 msgid "Left menu with Logo Center"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:61
+#: inc/customizer/configs/colors/class-inspiro-color-scheme-config.php:53
 msgid "Light"
 msgstr ""
 
@@ -854,8 +1159,8 @@ msgstr ""
 msgid "Line Height"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:241
-msgid "Link color on hover"
+#: inc/admin/pages/admin.php:671
+msgid "Live Customizer"
 msgstr ""
 
 #. %1$s: admin url to profile %2$s: User identity %3$s: logout URL
@@ -889,7 +1194,7 @@ msgstr ""
 msgid "Lowercase"
 msgstr ""
 
-#: inc/classes/class-inspiro-after-setup-theme.php:113
+#: inc/classes/class-inspiro-after-setup-theme.php:112
 #: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:103
 msgid "Main Menu"
 msgstr ""
@@ -928,11 +1233,11 @@ msgctxt "menu"
 msgid "Top Horizontal Menu"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-header-config.php:187
+#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:141
 msgid "Menu Background"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-header-config.php:197
+#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:150
 msgid "Menu Background on Scroll"
 msgstr ""
 
@@ -948,16 +1253,24 @@ msgstr ""
 msgid "Message:"
 msgstr ""
 
-#: inc/classes/class-inspiro-theme-upgrader.php:191
+#: inc/classes/class-inspiro-theme-upgrader.php:187
 msgid "Migrate settings for following blog site:"
 msgstr ""
 
-#: inc/classes/class-inspiro-theme-upgrader.php:123
+#: inc/classes/class-inspiro-theme-upgrader.php:119
 msgid "Migrate the Customizer settings to Inspiro Premium"
 msgstr ""
 
 #: inc/customizer/configs/typography/class-inspiro-typo-mobile-menu-config.php:96
 msgid "Mobile Menu"
+msgstr ""
+
+#: inc/admin/pages/admin.php:755
+msgid "Multiple Blog & Posts Layouts"
+msgstr ""
+
+#: inc/admin/pages/admin.php:624
+msgid "Multiple Header & Footer Layouts"
 msgstr ""
 
 #: comments.php:88
@@ -968,12 +1281,23 @@ msgstr ""
 msgid "Narrow"
 msgstr ""
 
+#: inc/admin/pages/sidebar.php:53
+msgid "Need help?"
+msgstr ""
+
 #: comments.php:51
 msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: comments.php:30 inc/template-tags.php:134
 msgid "No Comments"
+msgstr ""
+
+#: inc/admin/pages/admin.php:589
+msgid ""
+"No more custom CSS! The Premium version gives you access to numerous "
+"customization options, and you can change the theme's color and font styles "
+"of each element."
 msgstr ""
 
 #: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:72
@@ -985,7 +1309,7 @@ msgid "Normal 400"
 msgstr ""
 
 #. %1$s: Documentation URL. %2$s: Link title.
-#: inc/classes/class-inspiro-theme-upgrader.php:160
+#: inc/classes/class-inspiro-theme-upgrader.php:156
 msgid "Note:"
 msgstr ""
 
@@ -993,16 +1317,12 @@ msgstr ""
 msgid "Nothing Found"
 msgstr ""
 
-#: inc/custom-header.php:60
+#: inc/custom-header.php:61
 msgid "Ocean Header Image"
 msgstr ""
 
 #: inc/template-tags.php:37
 msgid "on"
-msgstr ""
-
-#: inc/customizer/configs/colors/class-inspiro-color-header-config.php:188
-msgid "On Homepage works only when the Hero Area is disabled or not shown"
 msgstr ""
 
 #: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:82
@@ -1032,7 +1352,7 @@ msgstr ""
 msgid "Open link on new tab"
 msgstr ""
 
-#: inc/classes/class-inspiro-theme-upgrader.php:160
+#: inc/classes/class-inspiro-theme-upgrader.php:156
 msgid "Open the Documentation"
 msgstr ""
 
@@ -1044,10 +1364,6 @@ msgstr ""
 #. Name of the template
 #: page-templates/full-width-no-title.php:2
 msgid "Page Builder (Without Page Title)"
-msgstr ""
-
-#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:186
-msgid "Page title"
 msgstr ""
 
 #. Name of the template
@@ -1237,7 +1553,7 @@ msgctxt "Pattern title"
 msgid "Testimonials"
 msgstr ""
 
-#: inc/custom-header.php:440
+#: inc/custom-header.php:196
 msgid "Pause background video"
 msgstr ""
 
@@ -1250,12 +1566,26 @@ msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr ""
 
-#: inc/custom-header.php:439
+#: inc/custom-header.php:195
 msgid "Play background video"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:214
-msgid "Post and Page text content"
+#: inc/admin/pages/admin.php:289
+msgid "Please install the One Click Demo Import plugin to use this feature."
+msgstr ""
+
+#: inc/admin/pages/demo.php:120
+msgid ""
+"Please install the One Click Demo Import plugin to use this feature. You can "
+"do that from the Recommended Plugins page."
+msgstr ""
+
+#: inc/admin/pages/admin.php:228
+msgid "Portfolio"
+msgstr ""
+
+#: inc/admin/pages/admin.php:714
+msgid "Portfolio with Video Integration"
 msgstr ""
 
 #: inc/template-tags.php:199
@@ -1270,8 +1600,20 @@ msgstr ""
 msgid "Post Options"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:195
-msgid "Post title"
+#: inc/admin/pages/admin.php:725
+msgid "Predefined Style Kits"
+msgstr ""
+
+#: inc/admin/pages/demo.php:55 inc/admin/pages/admin.php:63
+msgid "Premium Demos"
+msgstr ""
+
+#: inc/admin/pages/admin.php:405
+msgid "Premium Features"
+msgstr ""
+
+#: inc/admin/pages/admin.php:458
+msgid "Premium Portfolio Demo &rarr;"
 msgstr ""
 
 #: inc/customizer/custom-controls/font-presets/class-inspiro-customize-font-presets-control.php:35
@@ -1285,6 +1627,10 @@ msgstr ""
 #: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:115
 #: inc/customizer/configs/header/class-inspiro-header-area-config.php:183
 msgid "PRO"
+msgstr ""
+
+#: inc/admin/pages/admin.php:34
+msgid "Quick Start"
 msgstr ""
 
 #. %s: Post title.
@@ -1306,6 +1652,10 @@ msgstr ""
 msgid "Reply"
 msgstr ""
 
+#: inc/admin/pages/admin.php:666
+msgid "Responsive Layout"
+msgstr ""
+
 #: comments.php:103
 msgid ""
 "Save my name, email, and website in this browser for the next time I comment."
@@ -1316,16 +1666,8 @@ msgstr ""
 msgid "Scroll down to content"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-hero-config.php:155
-msgid "Scroll to Content Arrow"
-msgstr ""
-
 #: template-parts/header/search-form.php:15
 msgid "Search for:"
-msgstr ""
-
-#: inc/customizer/configs/colors/class-inspiro-color-header-config.php:148
-msgid "Search Icon Color"
 msgstr ""
 
 #. Search query.
@@ -1349,8 +1691,12 @@ msgstr ""
 msgid "Semi-Bold 600"
 msgstr ""
 
+#: inc/admin/pages/admin.php:359
+msgid "Set up your global colors and fonts to match your site with your brand."
+msgstr ""
+
 #. %s: New slide title
-#: inc/classes/class-inspiro-theme-upgrader.php:125
+#: inc/classes/class-inspiro-theme-upgrader.php:121
 #, php-format
 msgid "Setup a new slider item with title: <strong>%s</strong>"
 msgstr ""
@@ -1371,14 +1717,6 @@ msgstr ""
 msgid "Sidebar"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-sidebar-widgets-config.php:84
-msgid "Sidebar and Widgets"
-msgstr ""
-
-#: inc/customizer/configs/colors/class-inspiro-color-sidebar-widgets-config.php:95
-msgid "Sidebar Background"
-msgstr ""
-
 #: inc/customizer-functions.php:17
 #: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:64
 #: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:77
@@ -1389,7 +1727,11 @@ msgstr ""
 msgid "Single Post Layout"
 msgstr ""
 
-#: inc/classes/class-inspiro-theme-upgrader.php:193
+#: inc/admin/pages/admin.php:189
+msgid "Site Logo"
+msgstr ""
+
+#: inc/classes/class-inspiro-theme-upgrader.php:189
 msgid "Site URL"
 msgstr ""
 
@@ -1397,7 +1739,11 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/classes/class-inspiro-theme-upgrader.php:126
+#: inc/admin/pages/admin.php:426
+msgid "Slideshow with YouTube & Vimeo Integration "
+msgstr ""
+
+#: inc/classes/class-inspiro-theme-upgrader.php:122
 msgid "Something went wrong to create a new slider item!"
 msgstr ""
 
@@ -1432,17 +1778,41 @@ msgctxt "Space size name"
 msgid "xSmall"
 msgstr ""
 
+#: inc/admin/pages/admin.php:708
+msgid "Starter Sites"
+msgstr ""
+
 #: searchform.php:20
 msgctxt "submit button"
 msgid "Search"
 msgstr ""
 
-#: inc/customizer/class-inspiro-customizer.php:473
+#: inc/admin/pages/sidebar.php:93
+msgid "Subscribe for Tips & Tricks"
+msgstr ""
+
+#: inc/admin/pages/admin.php:777
+msgid "Support"
+msgstr ""
+
+#: inc/admin/pages/admin.php:778
+msgid "Support Forum"
+msgstr ""
+
+#: inc/admin/pages/sidebar.php:59
+msgid "Support Forums"
+msgstr ""
+
+#: inc/customizer/class-inspiro-customizer.php:470
 msgid "System Fonts"
 msgstr ""
 
 #: inc/template-tags.php:192
 msgid "Tags"
+msgstr ""
+
+#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:249
+msgid "Text Color"
 msgstr ""
 
 #: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:137
@@ -1506,16 +1876,50 @@ msgid ""
 "you visit the new %2$swelcome page%3$s."
 msgstr ""
 
+#: inc/admin/pages/admin.php:77
+msgid ""
+"Thank you for installing the free version of our theme! Below you can find "
+"quick links to different sections in the Customizer where you can configure "
+"and customize the theme. The free version includes limited features and "
+"customization options, but if you need more flexibility and plan to take "
+"your website to the next level, make sure to check the Premium version."
+msgstr ""
+
+#: inc/admin/pages/admin.php:479
+msgid ""
+"The Premium version of the theme includes unique WooCommerce features and "
+"additional options to customize the shop pages as you want."
+msgstr ""
+
+#: inc/admin/pages/admin.php:507
+msgid ""
+"The Premium version will unlock Premium Elementor Modules such as Portfolio "
+"Showcase, Slideshow widget, and more!"
+msgstr ""
+
+#. page title
+#: inc/classes/class-inspiro-custom-wp-admin-menu.php:107
+msgid "Theme Dashboard"
+msgstr ""
+
 #: inc/customizer/configs/theme-layout/class-inspiro-theme-layout-config.php:31
 msgid "Theme Layout"
 msgstr ""
 
-#: inc/classes/class-inspiro-font-family-manager.php:218
-msgid "Thin 100"
+#: inc/admin/pages/admin.php:761
+msgid "Theme Options"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-general-config.php:205
-msgid "This text appears on the Blog page."
+#: inc/admin/pages/admin.php:556
+msgid "Theme Options Panel"
+msgstr ""
+
+#: inc/admin/pages/upgrade.php:52
+msgid "Theme Upgrade"
+msgstr ""
+
+#: inc/classes/class-inspiro-font-family-manager.php:218
+msgid "Thin 100"
 msgstr ""
 
 #. %s: WordPress Version.
@@ -1528,6 +1932,12 @@ msgstr ""
 
 #: inc/customizer/configs/footer/class-inspiro-footer-widget-areas-config.php:90
 msgid "Three Columns"
+msgstr ""
+
+#: inc/admin/pages/sidebar.php:96
+msgid ""
+"To ease up the journey you’re starting with Inspiro, we’re sending you some "
+"useful tips & tricks to have the best experience building your website."
 msgstr ""
 
 #: sidebar.php:20
@@ -1550,8 +1960,22 @@ msgstr ""
 msgid "Typography"
 msgstr ""
 
+#: inc/admin/pages/admin.php:772
+msgid "Typography Options"
+msgstr ""
+
+#: inc/admin/pages/admin.php:371
+msgid "Typography Options &rarr;"
+msgstr ""
+
 #: inc/classes/class-inspiro-font-family-manager.php:234
 msgid "Ultra-Bold 900"
+msgstr ""
+
+#: inc/admin/pages/upgrade.php:120 inc/admin/pages/sidebar.php:17
+msgid ""
+"Unlock advanced customization options and unique demos with the Premium "
+"version!"
 msgstr ""
 
 #: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:90
@@ -1561,20 +1985,33 @@ msgid ""
 "colors, fonts, header, footer & much more!"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-footer-config.php:135
+#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:259
 msgid ""
 "Unlock all customization options by upgrading to the Premium version of the "
 "theme. Customize colors, fonts, header, footer & much more!"
 msgstr ""
 
-#: inc/customizer/class-inspiro-customizer.php:280
+#: inc/customizer/class-inspiro-customizer.php:277
 msgid ""
 "Unlock premium features: 7 Style Kits, Video Backgrounds, Portfolio "
 "Integration, Premium Support and much more..."
 msgstr ""
 
-#: inc/customizer/class-inspiro-customizer.php:279
+#: inc/customizer/class-inspiro-customizer.php:276
 msgid "Upgrade to Inspiro Premium"
+msgstr ""
+
+#. parent slug
+#. page title
+#: inc/classes/class-inspiro-custom-wp-admin-menu.php:137
+#: inc/classes/class-inspiro-custom-wp-admin-menu.php:138
+msgid "Upgrade/Install"
+msgstr ""
+
+#: inc/admin/pages/admin.php:627
+msgid ""
+"Upgrading to the Premium version, you will get access to 6 Header Styles and "
+"9 Footer Layouts."
 msgstr ""
 
 #: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:144
@@ -1594,6 +2031,20 @@ msgstr ""
 msgid "Uppercase"
 msgstr ""
 
+#: inc/admin/pages/admin.php:231
+msgid ""
+"Using the free version of our WPZOOM Portfolio plugin you can quickly create "
+"a Portfolio section on your website."
+msgstr ""
+
+#: inc/admin/pages/admin.php:558
+msgid ""
+"Using the Theme Options panel, you can configure different features and "
+"functionalities in the theme as you want. Additional customization options "
+"are available in the Customizer, while different options for features like "
+"Portfolio can be found on the Theme Options page."
+msgstr ""
+
 #: inc/customizer/configs/typography/class-inspiro-typo-logo-config.php:102
 #: inc/customizer/configs/typography/class-inspiro-typo-main-menu-config.php:123
 #: inc/customizer/configs/typography/class-inspiro-typo-body-config.php:102
@@ -1605,12 +2056,48 @@ msgstr ""
 msgid "Variants"
 msgstr ""
 
-#: inc/customizer/class-inspiro-customizer.php:281
+#: inc/admin/pages/admin.php:749
+msgid "Video & Image Lightbox for Portfolio Posts"
+msgstr ""
+
+#: inc/admin/pages/admin.php:736
+msgid "Video Background on Hover"
+msgstr ""
+
+#: inc/admin/pages/admin.php:730
+msgid "Video Backgrounds"
+msgstr ""
+
+#: inc/admin/pages/admin.php:720
+msgid "Video Features"
+msgstr ""
+
+#: inc/admin/pages/admin.php:742
+msgid "Video Headers in Pages & Posts"
+msgstr ""
+
+#: inc/admin/pages/demo.php:87 inc/admin/pages/demo.php:100
+msgid "View Demo"
+msgstr ""
+
+#: inc/admin/pages/admin.php:438
+msgid "View Demo &rarr;"
+msgstr ""
+
+#: inc/customizer/class-inspiro-customizer.php:278
 msgid "View Inspiro Premium"
 msgstr ""
 
 #: inc/customizer/custom-controls/font-presets/class-inspiro-customize-font-presets-control.php:41
 msgid "View Presets"
+msgstr ""
+
+#: inc/admin/pages/upgrade.php:138 inc/admin/pages/sidebar.php:42
+msgid "View Starter Sites &rarr;"
+msgstr ""
+
+#: inc/admin/pages/sidebar.php:70
+msgid "Walkthrough Video"
 msgstr ""
 
 #. %1$s current user display name.
@@ -1627,6 +2114,10 @@ msgstr ""
 msgid "Website:"
 msgstr ""
 
+#: inc/admin/pages/admin.php:75
+msgid "Welcome to Inspiro!"
+msgstr ""
+
 #: inc/common-functions.php:157
 msgid "Widget area for \"Instagram widget by WPZOOM\"."
 msgstr ""
@@ -1637,16 +2128,15 @@ msgid ""
 "plugin and add the widget here."
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-sidebar-widgets-config.php:122
-msgid "Widget Link"
+#: inc/admin/pages/admin.php:523
+msgid ""
+"With the built-in demo importer, you can quickly import fully configured "
+"demos to help you get started. The theme includes beautiful demos to create "
+"a business or portfolio website."
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-sidebar-widgets-config.php:113
-msgid "Widget Text"
-msgstr ""
-
-#: inc/customizer/configs/colors/class-inspiro-color-sidebar-widgets-config.php:104
-msgid "Widget Title"
+#: inc/admin/pages/admin.php:476
+msgid "WooCommerce Features"
 msgstr ""
 
 #. Author of the theme
@@ -1678,11 +2168,11 @@ msgstr ""
 msgid "⚙️ You can control every detail in your theme with Inspiro Premium!"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-footer-config.php:134
+#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:258
 msgid "🎨 There are 68 more color & font options in Inspiro Premium!"
 msgstr ""
 
-#: inc/customizer/configs/colors/class-inspiro-color-footer-config.php:136
+#: inc/customizer/configs/colors/class-inspiro-color-design-config.php:260
 msgid "👉 Unlock all customizations"
 msgstr ""
 
