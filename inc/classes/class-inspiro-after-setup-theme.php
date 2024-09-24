@@ -252,11 +252,6 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
                 'slug'     => 'instagram-widget-by-wpzoom',
                 'required' => false,
             ],
-            [
-                'name'     => 'Social Icons Widget by WPZOOM',
-                'slug'     => 'social-icons-widget-by-wpzoom',
-                'required' => false,
-            ],
           ];
 
           // Check if user is on the theme recommeneded plugins step and a demo was selected.
@@ -395,12 +390,6 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 				array(
 					'name'     => 'Instagram Widget by WPZOOM',
 					'slug'     => 'instagram-widget-by-wpzoom',
-					'required' => false,
-				),
-
-				array(
-					'name'     => 'Social Icons Widget by WPZOOM',
-					'slug'     => 'social-icons-widget-by-wpzoom',
 					'required' => false,
 				),
 
