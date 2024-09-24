@@ -87,14 +87,14 @@
                                                     <li class="design_default-elementor">
                                                         <figure title="Portfolio (Default)">
                                                             <div class="preview-thumbnail"
-                                                                 style="background-image:url('https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/home-thumb.png')">
-                                                                <a href="https://demo.wpzoom.com/inspiro-video/"
+                                                                 style="background-image:url('https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-gutenberg-1.png')">
+                                                                <a href="https://demo.wpzoom.com/inspiro-lite-blocks/"
                                                                    target="_blank" class="button-select-template">View
                                                                     Demo</a></div>
                                                             <figcaption>
                                                                 <h5>Block Editor (Gutenberg)</h5>
 
-                                                                <a href="http://localhost/inspiro/wp-admin/customize.php?autofocus%5Bsection%5D=title_tagline" target="_blank" class="button button-primary">Import</a>
+                                                                <a href="<?php echo esc_url( admin_url( 'themes.php?page=one-click-demo-import&step=import&import=0' ) ); ?>" class="button button-primary">Import</a>
 
                                                             </figcaption>
                                                         </figure>
@@ -103,14 +103,14 @@
                                                     <li class="design_video" data-design-id="inspiro-video">
                                                         <figure title="Video Production">
                                                             <div class="preview-thumbnail"
-                                                                 style="background-image:url('https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/home-video-thumb.png')">
-                                                                <a href="https://demo.wpzoom.com/inspiro-video/"
+                                                                 style="background-image:url('https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-elementor-1.png')">
+                                                                <a href="https://demo.wpzoom.com/inspiro-lite/"
                                                                    target="_blank" class="button-select-template">View
                                                                     Demo</a></div>
                                                             <figcaption>
                                                                 <h5>Elementor</h5>
 
-                                                                <a href="http://localhost/inspiro/wp-admin/customize.php?autofocus%5Bsection%5D=title_tagline" target="_blank" class="button button-primary">Import</a>
+                                                                <a href="<?php echo esc_url( admin_url( 'themes.php?page=one-click-demo-import&step=import&import=1' ) ); ?>" class="button button-primary">Import</a>
 
                                                             </figcaption>
                                                         </figure>
