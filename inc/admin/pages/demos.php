@@ -7,8 +7,7 @@
 
         <ol class="wpz-onboard_content-main-steps">
 
-            <li id="step-choose-design"
-                class="wpz-onboard_content-main-step step-1 step-choose-design">
+            <li id="step-choose-design" class="wpz-onboard_content-main-step step-1 step-choose-design">
                 <div class="wpz-onboard_content-main-step-content">
 
                     <form method="post" action="#">

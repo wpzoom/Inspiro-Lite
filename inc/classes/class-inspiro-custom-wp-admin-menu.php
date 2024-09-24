@@ -119,31 +119,17 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu' ) ) {
 				'customize.php',     // menu slug, link was included without a callback render func.
 			);
 
-            if ( class_exists( 'OCDI_Plugin' ) ) {
 
-    			// Add the "Import Demo" submenu page
-    			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
-    				'inspiro',            // parent slug
-    				__( 'Import Demo', 'inspiro' ),  // page title
-    				__( 'Import Demo', 'inspiro' ),  // menu title
-    				'manage_options',       // capability
-    				'themes.php?page=one-click-demo-import',    // menu slug,
-    //				array( $this, 'call_demo_import_plugin_page' )        // callback function
-    			);
+            // Add the "Import Demo" submenu page
+            add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
+                'inspiro',                   // parent slug
+                __( 'Import Demo', 'inspiro' ),      // page title
+                __( 'Import Demo', 'inspiro' ),      // menu title
+                'manage_options',              // capability
+                'inspiro-demo',            // menu slug,
+                array( $this, 'demo' )               // callback function
+            );
 
-            } else {
-
-                // Add the "Import Demo" submenu page
-                add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
-                    'inspiro',                   // parent slug
-                    __( 'Import Demo', 'inspiro' ),      // page title
-                    __( 'Import Demo', 'inspiro' ),      // menu title
-                    'manage_options',              // capability
-                    'inspiro-demo',            // menu slug,
-                    array( $this, 'demo' )               // callback function
-                );
-
-            }
 
 			// Add the "Upgrade" submenu page
 			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page

@@ -72,17 +72,56 @@
 
                                 <?php if ( class_exists( 'OCDI_Plugin' ) ) { ?>
 
-                                    <p class="section_footer">
-
-                                        <a href="<?php echo esc_url( admin_url( 'themes.php?page=one-click-demo-import' ) ); ?>" class="button button-primary">
-                                            <?php esc_html_e( 'Import the Demo Content &rarr;', 'inspiro' ); ?>
-                                        </a>
-
-                                        <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/documentation/inspiro-lite/inspiro-lite-importing-the-demo-content/', 'inspiro' ) ); ?>" target="_blank" class="button button-secondary">
-                                            <?php esc_html_e( 'How it works?', 'inspiro' ); ?>
-                                        </a>
-
+                                    <p class="about">
+                                        <?php esc_html_e( 'Importing demo data (post, pages, images, theme settings, etc.) is the quickest and easiest way to set up your new theme. It allows you to simply edit everything instead of creating content and layouts from scratch.', 'inspiro' ); ?>
                                     </p>
+
+
+                                    <ol class="wpz-onboard_content-main-steps">
+
+                                        <li id="step-choose-design" class="wpz-onboard_content-main-step step-1 step-choose-design">
+
+                                            <form method="post" action="#">
+
+                                                <ul>
+                                                    <li class="design_default-elementor">
+                                                        <figure title="Portfolio (Default)">
+                                                            <div class="preview-thumbnail"
+                                                                 style="background-image:url('https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/home-thumb.png')">
+                                                                <a href="https://demo.wpzoom.com/inspiro-video/"
+                                                                   target="_blank" class="button-select-template">View
+                                                                    Demo</a></div>
+                                                            <figcaption>
+                                                                <h5>Block Editor (Gutenberg)</h5>
+
+                                                                <a href="http://localhost/inspiro/wp-admin/customize.php?autofocus%5Bsection%5D=title_tagline" target="_blank" class="button button-primary">Import</a>
+
+                                                            </figcaption>
+                                                        </figure>
+                                                    </li>
+
+                                                    <li class="design_video" data-design-id="inspiro-video">
+                                                        <figure title="Video Production">
+                                                            <div class="preview-thumbnail"
+                                                                 style="background-image:url('https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/home-video-thumb.png')">
+                                                                <a href="https://demo.wpzoom.com/inspiro-video/"
+                                                                   target="_blank" class="button-select-template">View
+                                                                    Demo</a></div>
+                                                            <figcaption>
+                                                                <h5>Elementor</h5>
+
+                                                                <a href="http://localhost/inspiro/wp-admin/customize.php?autofocus%5Bsection%5D=title_tagline" target="_blank" class="button button-primary">Import</a>
+
+                                                            </figcaption>
+                                                        </figure>
+                                                    </li>
+
+                                                </ul>
+
+                                            </form>
+                                        </li>
+
+                                    </ol>
 
                                 <?php } else { ?>
 
