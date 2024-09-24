@@ -67,7 +67,7 @@
 								<?php esc_html_e( 'Demo Importer', 'inspiro' ); ?>
 							</h3>
 
-                                <?php if ( class_exists( 'OCDI_Plugin' ) ) { ?>
+                                <?php if ( class_exists( 'OCDI_Plugin' ) ) : ?>
 
                                     <p class="about">
                                         <?php esc_html_e( 'Importing demo data (post, pages, images, theme settings, etc.) is the quickest and easiest way to set up your new theme. It allows you to simply edit everything instead of creating content and layouts from scratch.', 'inspiro' ); ?>
@@ -114,7 +114,7 @@
 
                                     </ol>
 
-                                <?php } else { ?>
+                                <?php else : ?>
 
                                     <p class="about">
                                         <?php esc_html_e( 'Please install the One Click Demo Import plugin to use this feature. You can do that from the Recommended Plugins page.', 'inspiro' ); ?>
@@ -129,7 +129,7 @@
                                         </a>
                                     </p>
 
-                                <?php } ?>
+                                <?php endif; ?>
 
 						</div>
 					</div><!-- /#license -->
