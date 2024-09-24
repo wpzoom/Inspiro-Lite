@@ -8,7 +8,7 @@
 **Contributors:** [wpzoom](https://profiles.wordpress.org/wpzoom/)
 **Requires at least:** 6.0
 **Tested up to:** 6.6
-**Version:** 1.9.3
+**Version:** 1.9.4
 **License:** GPLv2 or later
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
 **Tags:** one-column, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
@@ -116,8 +116,11 @@ Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 
 ## Changelog ##
 
+### 1.9.4 ###
+* Multiple bug fixes
+
 ### 1.9.3 ###
-* Multiple improvements and bug fixe
+* Multiple improvements and bug fixes
 
 ### 1.9.2 ###
 * Added new options to customize in the Customizer > Colors section
