@@ -79,11 +79,11 @@
                                 <label class="screen-reader-text" for="themezip">
                                     <?php
                                     /* translators: Hidden accessibility text. */
-                                    _e( 'Theme zip file' );
+                                    _e( 'Theme zip file', 'inspiro' );
                                     ?>
                                 </label>
                                 <input type="file" id="themezip" name="themezip" accept=".zip" />
-                                <?php submit_button( _x( 'Install Now', 'inspiro' ), '', 'install-theme-submit', false ); ?>
+                                <?php submit_button( _x( 'Install Now', 'theme', 'inspiro' ), '', 'install-theme-submit', false ); ?>
                             </form>
 
                         </div>

@@ -505,7 +505,7 @@ function inspiro_validate_header_video( $validity, $value ) {
             $validity->add(
                 'size_too_large',
                 sprintf(
-                    __( 'This video file is too large. The free version is limited to videos of 8MB or less, while the Premium and PRO versions do not have this limitation. Try a smaller video or consider upgrading to <a href="%1$s" target="_blank">Inspiro Premium</a>.' ),
+                    __( 'This video file is too large. The free version is limited to videos of 8MB or less, while the Premium and PRO versions do not have this limitation. Try a smaller video or consider upgrading to <a href="%1$s" target="_blank">Inspiro Premium</a>.', 'inspiro' ),
                     esc_url( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=customizer&utm_campaign=video8mb' )
                 )
             );
@@ -516,7 +516,7 @@ function inspiro_validate_header_video( $validity, $value ) {
                 'invalid_file_type',
                 sprintf(
                     /* translators: 1: .mp4, 2: .mov */
-                    __( 'Only %1$s or %2$s files may be used for header video. Please convert your video file and try again, or, upload your video to YouTube and link it with the option below.' ),
+                    __( 'Only %1$s or %2$s files may be used for header video. Please convert your video file and try again, or, upload your video to YouTube and link it with the option below.', 'inspiro' ),
                     '<code>.mp4</code>',
                     '<code>.mov</code>'
                 )
