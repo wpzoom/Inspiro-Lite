@@ -664,6 +664,10 @@ $green-color: #22bb66;
                                                 margin: 0 0 20px;
                                                 transition: all 0.2s ease;
 
+                                                &.ocdi-import {
+                                                    padding-top: 76.5%;
+                                                }
+
                                                 .button-select-template {
                                                     position: absolute;
                                                     text-decoration: none;

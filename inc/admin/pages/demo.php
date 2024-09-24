@@ -86,7 +86,7 @@
                                                 <ul>
                                                     <li class="design_default-elementor">
                                                         <figure title="Portfolio (Default)">
-                                                            <div class="preview-thumbnail"
+                                                            <div class="preview-thumbnail ocdi-import"
                                                                  style="background-image:url('https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-gutenberg-1.png')">
                                                                 <a href="https://demo.wpzoom.com/inspiro-lite-blocks/"
                                                                    target="_blank" class="button-select-template">View
@@ -102,7 +102,7 @@
 
                                                     <li class="design_video" data-design-id="inspiro-video">
                                                         <figure title="Video Production">
-                                                            <div class="preview-thumbnail"
+                                                            <div class="preview-thumbnail ocdi-import"
                                                                  style="background-image:url('https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-elementor-1.png')">
                                                                 <a href="https://demo.wpzoom.com/inspiro-lite/"
                                                                    target="_blank" class="button-select-template">View
