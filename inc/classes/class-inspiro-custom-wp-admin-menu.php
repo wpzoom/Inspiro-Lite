@@ -119,7 +119,6 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu' ) ) {
 				'customize.php',     // menu slug, link was included without a callback render func.
 			);
 
-
             // Add the "Import Demo" submenu page
             add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
                 'inspiro',                   // parent slug
@@ -129,7 +128,6 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu' ) ) {
                 'inspiro-demo',            // menu slug,
                 array( $this, 'demo' )               // callback function
             );
-
 
 			// Add the "Upgrade" submenu page
 			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
