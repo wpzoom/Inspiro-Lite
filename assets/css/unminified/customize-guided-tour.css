@@ -87,7 +87,7 @@
     margin-left: 10px;
     /*color: #00aadc*/
 }
-.ins-guided-tour .ins-guided-tour-step .ins-guided-tour-skip:hover {
+.ins-guided-tour .ins-guided-tour-step .ins-guided-tour-skip :hover {
     opacity: 0.75;
 }
 .ins-guided-tour:not(.ins-first-step) .ins-guided-tour-step a.ins-go-button {
@@ -106,24 +106,19 @@
 .ins-guided-tour.ins-inside-section .ins-guided-tour-step .ins-guided-tour-skip {
     display: none;
 }
-
 .ins-guided-tour.ins-last-step .ins-guided-tour-step a.ins-go-button {
     display: inline-block;
 }
-
-a.ins-go-button {
+.ins-guided-tour a.ins-go-button {
     vertical-align: middle;
 }
-
-a.ins-go-button:active {
+.ins-guided-tour a.ins-go-button:active {
     vertical-align: middle;
 }
-
-.ins-loaded {
+.ins-guided-tour.ins-loaded {
     opacity: 1;
 }
-
-.ins-moving {
+.ins-guided-tour.ins-moving {
     transition-duration: 250ms;
     transition-property: transform;
     transition-timing-function: cubic-bezier(0.84, 0.45, 0.68, 1.44);

@@ -98,13 +98,15 @@
 		}
 	}
 
-	.ins-guided-tour-step .ins-guided-tour-skip {
-		margin-left: 10px;
-		/*color: #00aadc*/
-	}
+	.ins-guided-tour-step {
+		.ins-guided-tour-skip {
+			margin-left: 10px;
+			/*color: #00aadc*/
 
-	.ins-guided-tour-step .ins-guided-tour-skip:hover {
-		opacity: .75
+			:hover {
+				opacity: .75
+			}
+		}
 	}
 
 	&:not(.ins-first-step) {
@@ -140,28 +142,30 @@
 			}
 		}
 	}
-}
 
-.ins-guided-tour.ins-last-step .ins-guided-tour-step a.ins-go-button {
-	display: inline-block
-}
+	&.ins-last-step .ins-guided-tour-step a.ins-go-button {
+		display: inline-block
+	}
 
-a.ins-go-button {
-	vertical-align: middle
-}
+	a {
+		&.ins-go-button {
+			vertical-align: middle;
 
-a.ins-go-button:active {
-	vertical-align: middle
-}
+			&:active {
+				vertical-align: middle
+			}
+		}
+	}
 
-.ins-loaded {
-	opacity: 1
-}
+	&.ins-loaded {
+		opacity: 1
+	}
 
-.ins-moving {
-	transition-duration: 250ms;
-	transition-property: transform;
-	transition-timing-function: cubic-bezier(0.84, 0.45, 0.68, 1.44)
+	&.ins-moving {
+		transition-duration: 250ms;
+		transition-property: transform;
+		transition-timing-function: cubic-bezier(0.84, 0.45, 0.68, 1.44)
+	}
 }
 
 .ins-entering,
