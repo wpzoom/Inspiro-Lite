@@ -55,6 +55,7 @@
 	transition-property: opacity;
 	transition-timing-function: ease-in-out;
 
+	// arrow design
 	&::before {
 		content: "";
 		width: 26px;
@@ -173,14 +174,18 @@ a.ins-go-button:active {
 	}
 }
 
-.ins-entering .ins-guided-tour {
-	animation-name: bounceInLeft;
-	-webkit-animation-name: bounceInLeft
+.ins-entering {
+	.ins-guided-tour {
+		animation-name: bounceInLeft;
+		-webkit-animation-name: bounceInLeft
+	}
 }
 
-.ins-exiting .ins-guided-tour {
-	animation-name: bounceOutRight;
-	-webkit-animation-name: bounceOutRight
+.ins-exiting {
+	.ins-guided-tour {
+		animation-name: bounceOutRight;
+		-webkit-animation-name: bounceOutRight
+	}
 }
 
 @keyframes bounceInLeft {

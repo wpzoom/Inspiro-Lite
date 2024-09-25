@@ -149,12 +149,12 @@
 			$( 'body' )
 				.addClass( 'ins-exiting' )
 				.on(
-					'animationend.storefront webkitAnimationEnd.storefront',
+					'animationend.inspiro webkitAnimationEnd.inspiro',
 					function () {
 						$( this )
 							.removeClass( 'ins-exiting' )
 							.off(
-								'animationend.storefront webkitAnimationEnd.storefront'
+								'animationend.inspiro webkitAnimationEnd.inspiro'
 							)
 							.addClass( 'ins-hidden' );
 						self.$container.hide();
@@ -182,12 +182,12 @@
 			$( 'body' )
 				.addClass( 'ins-entering' )
 				.on(
-					'animationend.storefront webkitAnimationEnd.storefront',
+					'animationend.inspiro webkitAnimationEnd.inspiro',
 					function () {
 						$( this )
 							.removeClass( 'ins-entering' )
 							.off(
-								'animationend.storefront webkitAnimationEnd.storefront'
+								'animationend.inspiro webkitAnimationEnd.inspiro'
 							);
 
 						self.$container.css( {
@@ -263,9 +263,9 @@
 				.css( {
 					transform: 'translateY(' + position + 'px)',
 				} )
-				.on( 'transitionend.storefront', function () {
+				.on( 'transitionend.inspiro', function () {
 					self.$container.removeClass( 'ins-moving' );
-					self.$container.off( 'transitionend.storefront' );
+					self.$container.off( 'transitionend.inspiro' );
 				} );
 		},
 
