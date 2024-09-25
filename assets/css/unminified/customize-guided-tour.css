@@ -92,6 +92,10 @@
 	align-items: center;
 }
 
+.ins-guided-tour:not(.ins-first-step) .guided-tour-step-nav-elements{
+	justify-content: end;
+}
+
 .ins-guided-tour .ins-guided-tour-step .ins-guided-tour-skip {
 	margin-left: 10px;
 	/*color: #00aadc*/
