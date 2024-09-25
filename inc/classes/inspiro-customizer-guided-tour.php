@@ -151,14 +151,21 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 			);
 
 			$steps[] = array(
-				'title'   => __( 'Customize Colors', 'inspiro' ),
-				'message' => __( 'Necessary Colors text.', 'inspiro' ),
+				'title'   => __( 'Second step to Colors', 'inspiro' ),
+				'message' => __( 'Necessary text.', 'inspiro' ),
 				'section' => 'colors',
 			);
 
 			$steps[] = array(
-				'title'   => __( 'Customize Footer', 'inspiro' ),
-				'message' => __( 'Necessary Footer text.', 'inspiro' ),
+				'title'   => __( 'Third step to Typography panel', 'inspiro' ),
+				'message' => __( 'Necessary text.', 'inspiro' ),
+				'section' => 'inspiro_typography_panel',
+			);
+
+
+			$steps[] = array(
+				'title'   => __( 'Last step after Customize Footer', 'inspiro' ),
+				'message' => __( 'Necessary text.', 'inspiro' ),
 				'section' => 'footer-area',
 			);
 
