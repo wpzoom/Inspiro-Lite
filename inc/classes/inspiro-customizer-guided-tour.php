@@ -70,11 +70,12 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 				// include underscore template
 				add_action( 'customize_controls_print_footer_scripts', array( $this, 'print_guider_templates' ) );
 
-				if ( current_user_can( 'manage_options' ) ) {
-
-					// Set Guided Tour flag so it doesn't show up again.
-					set_theme_mod( 'inspiro_guided_tour_checked_status', true );
-				}
+				// deactivate status save cause of tests
+//				if ( current_user_can( 'manage_options' ) ) {
+//
+//					// Set Guided Tour flag so it doesn't show up again.
+//					set_theme_mod( 'inspiro_guided_tour_checked_status', true );
+//				}
 			}
 		}
 
@@ -159,6 +160,14 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 				'title'   => __( 'Customize Footer', 'inspiro' ),
 				'message' => __( 'Necessary Footer text.', 'inspiro' ),
 				'section' => 'footer-area',
+			);
+
+			$steps[] = array(
+				'title'       => '',
+				/* translators: 1: open <strong> tag, 2: close <strong> tag, 3: 'End Of Line' symbol */
+				'message'     => sprintf( __( 'All set! Remember to %1$ssave & publish%2$s your changes when you\'re done.%3$sYou can return to your dashboard by clicking the X in the top left corner.', 'storefront' ), '<strong>', '</strong>', PHP_EOL . PHP_EOL ),
+				'section'     => '#customize-header-actions .save',
+				'button_text' => __( 'Done', 'storefront' ),
 			);
 
 			return $steps;
