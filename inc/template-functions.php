@@ -184,16 +184,26 @@ function inspiro_get_footer_class( $class = '' ) {
 }
 
 /**
+ * Custom function for remove first and last p tags.
+ * used for footer-copyright text
+ */
+function inspiro_custom_sanitize_callback( $content ) {
+
+	return inspiro_remove_first_and_last_p_tags( wp_kses_post( $content ) );
+}
+
+/**
  * Render Footer Copyright Markup!
  */
 function get_footer_copyright_text() {
 
 	$site_title = get_bloginfo( 'name' );
 	$current_year = date( 'Y' );
+	$default_value = 'Copyright {copyright} {current-year} {site-title}';
 
 	// It’s essential to include a default value here,
 	// which should match the one defined in class-inspiro-footer-copyright-config.php for consistency.
-	$raw_content = get_theme_mod( 'footer_copyright_text_setting', 'Copyright {copyright} {current-year} {site-title}' );
+	$raw_content = get_theme_mod( 'footer_copyright_text_setting', $default_value );
 
 	$raw_content = str_replace( '{copyright}', '&copy;', $raw_content );
 	$raw_content = str_replace( '{current-year}', $current_year, $raw_content );
@@ -201,6 +211,20 @@ function get_footer_copyright_text() {
 
 	return $prepared_content;
 }
+
+/**
+ * Custom function for remove first and last p tags.
+ */
+function inspiro_remove_first_and_last_p_tags( $content ) {
+	// Remove the first opening <p> tag.
+	$content = preg_replace( '/<p[^>]*>/', '', $content, 1 );
+
+	// Remove the last closing </p> tag.
+	$content = preg_replace( '/<\/p>\s*$/', '', $content, 1 );
+
+	return $content;
+}
+
 
 /**
  * Checks to see if we're on the front page or not.

@@ -41,7 +41,7 @@ class Inspiro_Footer_Copyright_Config {
 			'footer_copyright_text_setting',
 			array(
 				'default'           => 'Copyright {copyright} {current-year} {site-title}',
-				'sanitize_callback' => 'wp_kses_post', // Sanitize HTML content
+				'sanitize_callback' => 'inspiro_custom_sanitize_callback', // Sanitize HTML content
 				'transport'         => 'refresh', // Enable live preview
 			)
 		);
