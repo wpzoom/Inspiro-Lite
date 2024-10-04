@@ -22,7 +22,7 @@ $customizer_copyright_text = get_theme_mod( 'footer_copyright_text_setting', 'Co
 	<span class="copyright">
 		<span>
 			<?php if ( $customizer_copyright_text ) : ?>
-				<?php echo get_footer_copyright_text() ; ?>
+				<?php echo get_footer_copyright_text($customizer_copyright_text) ; ?>
 			<?php endif; ?>
 		</span>
 		<span>

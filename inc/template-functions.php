@@ -194,22 +194,27 @@ function inspiro_custom_sanitize_callback( $content ) {
 
 /**
  * Render Footer Copyright Markup!
+ * Replace placeholders in the copyright text with actual values.
+ * Placeholders:
+ * - {copyright} -> © (copyright symbol)
+ * - {current-year} -> current year (e.g., 2024)
+ * - {site-title} -> site name (e.g., My Blog)
+ *
+ * @param   string  $content  The raw content with placeholders.
+ *
+ * @return string The content with placeholders replaced by actual values.
  */
-function get_footer_copyright_text() {
+function get_footer_copyright_text( string $content ) {
 
-	$site_title = get_bloginfo( 'name' );
-	$current_year = date( 'Y' );
-	$default_value = 'Copyright {copyright} {current-year} {site-title}';
+	// Define replacements for placeholders.
+	$replacements = array(
+		'{copyright}'    => '&copy;',
+		'{current-year}' => date( 'Y' ),
+		'{site-title}'   => get_bloginfo( 'name' ),
+	);
 
-	// It’s essential to include a default value here,
-	// which should match the one defined in class-inspiro-footer-copyright-config.php for consistency.
-	$raw_content = get_theme_mod( 'footer_copyright_text_setting', $default_value );
-
-	$raw_content = str_replace( '{copyright}', '&copy;', $raw_content );
-	$raw_content = str_replace( '{current-year}', $current_year, $raw_content );
-	$prepared_content = str_replace( '{site-title}', $site_title, $raw_content );
-
-	return $prepared_content;
+	// Perform the replacements in the content.
+	return str_replace( array_keys( $replacements ), array_values( $replacements ), $content );
 }
 
 /**
