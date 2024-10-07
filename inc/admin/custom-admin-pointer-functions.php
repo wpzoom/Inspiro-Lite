@@ -21,7 +21,7 @@ const POINTER_CONTENT_TEXT = 'Create an onboarding experience to help users get 
  */
 function inspiro_show_custom_pointer() {
 	// Check if the current user has dismissed the pointer.
-	$dismissed = get_user_meta( get_current_user_id(), 'dismissed_mytheme_pointer', true );
+	$dismissed = get_user_meta( get_current_user_id(), 'inspiro_theme_admin_custom_pointer_show_status', true );
 
 	if ( !$dismissed ) {
 		add_action( 'admin_enqueue_scripts', 'enqueue_custom_pointer_scripts' );
@@ -69,16 +69,17 @@ function enqueue_custom_pointer_scripts() {
 	);
 }
 
+// Create pointer text and markup.
 function create_pointer_text( $header_text, $content_text ) {
 	return '<h3>' . __( POINTER_HEADER_TEXT, 'inspiro' ) . '</h3><p>' . __( POINTER_CONTENT_TEXT, 'inspiro' ) . '</p>';
 }
 
 
 // Mark the pointer as dismissed when closed.
-function mytheme_dismiss_pointer() {
-	if ( isset( $_POST['pointer'] ) && 'mytheme_pointer' === $_POST['pointer'] ) {
-		update_user_meta( get_current_user_id(), 'dismissed_mytheme_pointer', true );
+function inspiro_dismiss_pointer_status() {
+	if ( isset( $_POST['pointer'] ) && 'custom_admin_pointer' === $_POST['pointer'] ) {
+		update_user_meta( get_current_user_id(), 'inspiro_theme_admin_custom_pointer_show_status', true );
 	}
 }
-add_action( 'wp_ajax_dismiss-wp-pointer', 'mytheme_dismiss_pointer' );
+add_action( 'wp_ajax_dismiss-wp-pointer', 'inspiro_dismiss_pointer_status' );
 
