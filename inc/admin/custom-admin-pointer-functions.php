@@ -16,12 +16,24 @@
 const POINTER_HEADER_TEXT  = 'Theme Onboarding!';
 const POINTER_CONTENT_TEXT = 'Create an onboarding experience to help users get started with your theme.';
 
-add_action( 'admin_enqueue_scripts', 'enqueue_custom_wp_pointer_scripts' );
+/**
+ * Add Conditional Logic to Show the Pointer Once
+ */
+function inspiro_show_custom_pointer() {
+	// Check if the current user has dismissed the pointer.
+	$dismissed = get_user_meta( get_current_user_id(), 'dismissed_mytheme_pointer', true );
+
+	if ( !$dismissed ) {
+		add_action( 'admin_enqueue_scripts', 'enqueue_custom_pointer_scripts' );
+	}
+}
+add_action( 'admin_init', 'inspiro_show_custom_pointer' );
 
 /**
  * Enqueue scripts and styles pointer option
  */
-function enqueue_custom_wp_pointer_scripts( $hook ) {
+//add_action( 'admin_enqueue_scripts', 'enqueue_custom_wp_pointer_scripts' );
+function enqueue_custom_pointer_scripts() {
 	// Check if WP Pointer is supported in the current WordPress version.
 	if ( ! wp_script_is( 'wp-pointer', 'registered' ) ) {
 		return;
@@ -60,3 +72,13 @@ function enqueue_custom_wp_pointer_scripts( $hook ) {
 function create_pointer_text( $header_text, $content_text ) {
 	return '<h3>' . __( POINTER_HEADER_TEXT, 'inspiro' ) . '</h3><p>' . __( POINTER_CONTENT_TEXT, 'inspiro' ) . '</p>';
 }
+
+
+// Mark the pointer as dismissed when closed.
+function mytheme_dismiss_pointer() {
+	if ( isset( $_POST['pointer'] ) && 'mytheme_pointer' === $_POST['pointer'] ) {
+		update_user_meta( get_current_user_id(), 'dismissed_mytheme_pointer', true );
+	}
+}
+add_action( 'wp_ajax_dismiss-wp-pointer', 'mytheme_dismiss_pointer' );
+
