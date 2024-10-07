@@ -1,19 +1,27 @@
 <?php
 /**
- * Inspiro functions and definitions
+ * Load WP Pointer for creating custom messages
  *
- * @link    https://developer.wordpress.org/themes/basics/theme-functions/
+ * The constant POINTER_HEADER_TEXT defines the header text displayed during the theme onboarding process.
+ *
+ * This text will be used as the main heading in the pointer interface to greet users or provide initial
+ * guidance when they start using a new theme. It aims to enhance the first-time user experience by
+ * offering a clear and welcoming introduction.
  *
  * @package Inspiro
- * @since   Inspiro 1.0.0
+ * @since   Inspiro 1.9.x
+ * @var string $POINTER_HEADER_TEXT The onboarding header text.
  */
 
-add_action( 'admin_enqueue_scripts', 'enqueue_wp_pointer_scripts' );
+const POINTER_HEADER_TEXT  = 'Theme Onboarding!';
+const POINTER_CONTENT_TEXT = 'Create an onboarding experience to help users get started with your theme.';
+
+add_action( 'admin_enqueue_scripts', 'enqueue_custom_wp_pointer_scripts' );
 
 /**
  * Enqueue scripts and styles pointer option
  */
-function enqueue_wp_pointer_scripts( $hook ) {
+function enqueue_custom_wp_pointer_scripts( $hook ) {
 	// Check if WP Pointer is supported in the current WordPress version.
 	if ( ! wp_script_is( 'wp-pointer', 'registered' ) ) {
 		return;
@@ -23,14 +31,32 @@ function enqueue_wp_pointer_scripts( $hook ) {
 	wp_enqueue_style( 'wp-pointer' );
 	wp_enqueue_script( 'wp-pointer' );
 
-	$localized_data = [
-		'pointer_text'   => '<h3>Welcome!</h3><p>Check out this new feature!</p>',
-		'pointer_target' => '#menu-dashboard',
-	];
+	$pointer_text   = create_pointer_text( POINTER_HEADER_TEXT, POINTER_CONTENT_TEXT );
+	$pointer_target = '#toplevel_page_inspiro';
 
 	// Enqueue the custom script that triggers the WP Pointer.
-	wp_enqueue_script( 'custom-admin-pointer', inspiro_get_assets_uri('custom-admin-pointer', 'js'), array( 'jquery','wp-pointer' ), INSPIRO_THEME_VERSION, true );
+	wp_enqueue_script(
+		'inspiro-lite-custom-admin-pointer',
+		inspiro_get_assets_uri( 'custom-admin-pointer', 'js' ),
+		array( 'jquery', 'wp-pointer' ),
+		INSPIRO_THEME_VERSION,
+		true
+	);
+
+	$localized_data = [
+		'pointer_text'   => $pointer_text,
+		'pointer_target' => $pointer_target,
+	];
+
 
 	// Localize the script with necessary data.
-	wp_localize_script( 'custom-admin-pointer', 'customAdminPointer', $localized_data );
+	wp_localize_script(
+		'inspiro-lite-custom-admin-pointer',
+		'customAdminPointer',
+		$localized_data
+	);
+}
+
+function create_pointer_text( $header_text, $content_text ) {
+	return '<h3>' . __( POINTER_HEADER_TEXT, 'inspiro' ) . '</h3><p>' . __( POINTER_CONTENT_TEXT, 'inspiro' ) . '</p>';
 }
