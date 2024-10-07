@@ -167,7 +167,7 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu' ) ) {
 				__( 'Customize', 'inspiro' ),  // page title
 				__( 'Customize', 'inspiro' ),  // menu title
 				'manage_options',     // capability
-				'customize.php',     // menu slug, link was included without a callback render func.
+				'customize.php'     // menu slug, link was included without a callback render func.
 			);
 
             // Add the "Import Demo" submenu page
