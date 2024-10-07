@@ -77,9 +77,12 @@ function create_pointer_text( $header_text, $content_text ) {
 
 // Mark the pointer as dismissed when closed.
 function inspiro_dismiss_pointer_status() {
-	if ( isset( $_POST['pointer'] ) && 'custom_admin_pointer' === $_POST['pointer'] ) {
-		update_user_meta( get_current_user_id(), 'inspiro_theme_admin_custom_pointer_show_status', true );
-	}
+	echo 'get';
+//	if ( isset( $_POST['pointer'] ) && 'custom_admin_pointer' === $_POST['pointer'] ) {
+//		update_user_meta( get_current_user_id(), 'inspiro_theme_admin_custom_pointer_show_status', true );
+//		echo 'Updated';
+//	}
+	wp_die();
 }
-add_action( 'wp_ajax_dismiss-wp-pointer', 'inspiro_dismiss_pointer_status' );
+add_action( 'wp_ajax_dismiss_wp_pointer', 'inspiro_dismiss_pointer_status' );
 
