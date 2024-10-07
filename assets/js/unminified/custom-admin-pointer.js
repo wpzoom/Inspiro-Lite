@@ -12,7 +12,6 @@ jQuery(document).ready(function ($) {
 				align: 'center' // Align the pointer.
 			},
 			close: function () {
-				console.log('click close btn');
 				// Perform any action after the pointer is closed (like updating user meta to avoid showing it again).
 				$.post(ajaxurl, {
 					action: 'dismiss_wp_pointer',
