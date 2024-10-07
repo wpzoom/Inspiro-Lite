@@ -1,0 +1,96 @@
+<?php
+/**
+ * Load WP Pointer for creating custom messages
+ *
+ * The constant POINTER_HEADER_TEXT defines the header text displayed during the theme onboarding process.
+ *
+ * This text will be used as the main heading in the pointer interface to greet users or provide initial
+ * guidance when they start using a new theme. It aims to enhance the first-time user experience by
+ * offering a clear and welcoming introduction.
+ *
+ * @package Inspiro
+ * @since   Inspiro 1.9.x
+ * @var string $POINTER_HEADER_TEXT The onboarding header text.
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+if ( ! class_exists( 'Inspiro_WP_Admin_Menu_Pointer' ) ) {
+
+	class Inspiro_WP_Admin_Menu_Pointer {
+
+		const POINTER_HEADER_TEXT  = 'Inspiro Lite';
+		const POINTER_CONTENT_TEXT = 'Visit the <a href="admin.php?page=inspiro"><strong>Inspiro Dashboard</strong></a> to get your site set up with just a few clicks. Head over there to get started!';
+		const POINTER_TARGET = '#toplevel_page_inspiro';
+
+		public function __construct() {
+			add_action( 'admin_init', [ $this, 'show_custom_pointer' ] );
+			add_action( 'wp_ajax_dismiss_wp_pointer', [ $this, 'dismiss_pointer_status' ] );
+		}
+
+		/**
+		 * Add Conditional Logic to Show the Pointer Once
+		 */
+		public function show_custom_pointer() {
+			$current_user_id = get_current_user_id();
+			$dismissed       = get_user_meta( $current_user_id, 'inspiro_theme_admin_menu_pointer_show_status', true );
+
+			if ( ! $dismissed ) {
+				add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_custom_pointer_scripts' ] );
+			}
+		}
+
+		/**
+		 * Enqueue scripts and styles for the pointer option
+		 */
+		public function enqueue_custom_pointer_scripts() {
+			if ( ! wp_script_is( 'wp-pointer', 'registered' ) ) {
+				return;
+			}
+
+			wp_enqueue_style( 'wp-pointer' );
+			wp_enqueue_script( 'wp-pointer' );
+
+			$pointer_text   = $this->create_pointer_text( self::POINTER_HEADER_TEXT, self::POINTER_CONTENT_TEXT );
+			$pointer_target = self::POINTER_TARGET;
+
+			wp_enqueue_script(
+				'inspiro-custom-admin-pointer',
+				inspiro_get_assets_uri( 'custom-admin-pointer', 'js' ),
+				array( 'jquery', 'wp-pointer' ),
+				INSPIRO_THEME_VERSION,
+				true
+			);
+
+			$localized_data = [
+				'pointer_text'   => $pointer_text,
+				'pointer_target' => $pointer_target,
+			];
+			wp_localize_script( 'inspiro-custom-admin-pointer', 'customAdminPointer', $localized_data );
+		}
+
+		/**
+		 * Create pointer text and markup.
+		 */
+		public function create_pointer_text( $header_text, $content_text ) {
+			return '<h3>' . __( $header_text, 'inspiro' ) . '</h3><p>' . __( $content_text, 'inspiro' ) . '</p>';
+		}
+
+		/**
+		 * Mark the pointer as dismissed when closed.
+		 */
+		public function dismiss_pointer_status() {
+//			if ( isset( $_POST['pointer'] ) && 'custom_admin_pointer' === $_POST['pointer'] ) {
+//				update_user_meta( get_current_user_id(), 'inspiro_theme_admin_menu_pointer_show_status', true );
+//				echo 'Updated';
+//			}
+			wp_die();
+		}
+	}
+}
+
+// Instantiate the class
+new Inspiro_WP_Admin_Menu_Pointer();
+
