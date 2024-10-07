@@ -76,6 +76,11 @@ require INSPIRO_THEME_DIR . 'inc/template-tags.php';
 require INSPIRO_THEME_DIR . 'inc/template-functions.php';
 
 /**
+ * Additional features to include custom WP pointer function
+ */
+require INSPIRO_THEME_DIR . 'inc/admin/custom-admin-pointer-functions.php';
+
+/**
  * Custom template shortcode tags for this theme
  */
 // require INSPIRO_THEME_DIR . 'inc/shortcodes.php';
