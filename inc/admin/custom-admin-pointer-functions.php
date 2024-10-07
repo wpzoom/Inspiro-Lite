@@ -13,8 +13,8 @@
  * @var string $POINTER_HEADER_TEXT The onboarding header text.
  */
 
-const POINTER_HEADER_TEXT  = 'Theme Onboarding!';
-const POINTER_CONTENT_TEXT = 'Create an onboarding experience to help users get started with your theme.';
+const POINTER_HEADER_TEXT  = 'Inspiro Lite';
+const POINTER_CONTENT_TEXT = 'Visit the <a href="admin.php?page=inspiro"><strong>Inspiro Dashboard</strong></a> to get your site set up with just a few clicks. Head over there to get started!';
 
 /**
  * Add Conditional Logic to Show the Pointer Once
