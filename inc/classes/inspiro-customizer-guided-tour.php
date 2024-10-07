@@ -139,42 +139,42 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 			$steps[] = array(
 				'title'       => __( 'Welcome to the Customizer', 'inspiro' ),
 				/* translators: %s: 'End Of Line' symbol */
-				'message'     => sprintf( __( 'Here you can control the overall look and feel of your store.%sTo get started, let\'s add your logo', 'inspiro' ), PHP_EOL . PHP_EOL ),
-				'button_text' => __( 'Let\'s go!', 'storefront' ),
+				'message'     => sprintf( __( 'Here you can control the overall look and feel of your website.%sTo get started, let\'s add your logo', 'inspiro' ), PHP_EOL . PHP_EOL ),
+				'button_text' => __( 'Let\'s go!', 'inspiro' ),
 				'section'     => '#customize-info',
 			);
 
 			$steps[] = array(
 				'title'   => __( 'Customize your Site Identity', 'inspiro' ),
-				'message' => __( 'Organize.', 'inspiro' ),
+				'message' => __( 'Click on the Site Identity section to upload your custom logo image or change the Site Title.', 'inspiro' ),
 				'section' => 'title_tagline',
 			);
 
 			$steps[] = array(
-				'title'   => __( 'Second step to Colors', 'inspiro' ),
-				'message' => __( 'Necessary text.', 'inspiro' ),
+				'title'   => __( 'Customize Colors', 'inspiro' ),
+				'message' => __( 'Change the color scheme of theme, accent color or individual colors.', 'inspiro' ),
 				'section' => 'colors',
 			);
 
 			$steps[] = array(
-				'title'   => __( 'Third step to Typography panel', 'inspiro' ),
-				'message' => __( 'Necessary text.', 'inspiro' ),
+				'title'   => __( 'Customize Fonts', 'inspiro' ),
+				'message' => __( 'From this section you can easily change the global fonts in your theme or customize individual elements.', 'inspiro' ),
 				'section' => 'inspiro_typography_panel',
 			);
 
 
 			$steps[] = array(
-				'title'   => __( 'Last step after Customize Footer', 'inspiro' ),
-				'message' => __( 'Necessary text.', 'inspiro' ),
+				'title'   => __( 'Customize Footer', 'inspiro' ),
+				'message' => __( 'Need to change the default copyright text or add additional links? You can do it here!', 'inspiro' ),
 				'section' => 'footer-area',
 			);
 
 			$steps[] = array(
 				'title'       => '',
 				/* translators: 1: open <strong> tag, 2: close <strong> tag, 3: 'End Of Line' symbol */
-				'message'     => sprintf( __( 'All set! Remember to %1$ssave & publish%2$s your changes when you\'re done.%3$sYou can return to your dashboard by clicking the X in the top left corner.', 'storefront' ), '<strong>', '</strong>', PHP_EOL . PHP_EOL ),
+				'message'     => sprintf( __( 'All set! Remember to %1$ssave & publish%2$s your changes when you\'re done.%3$sYou can return to your dashboard by clicking the X in the top left corner.', 'inspiro' ), '<strong>', '</strong>', PHP_EOL . PHP_EOL ),
 				'section'     => '#customize-header-actions .save',
-				'button_text' => __( 'Done', 'storefront' ),
+				'button_text' => __( 'Done', 'inspiro' ),
 			);
 
 			return $steps;
