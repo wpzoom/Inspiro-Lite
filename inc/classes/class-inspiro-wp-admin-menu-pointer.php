@@ -20,12 +20,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! class_exists( 'Inspiro_WP_Admin_Menu_Pointer' ) ) {
 
 	class Inspiro_WP_Admin_Menu_Pointer {
+		private $link_url;
 
-		const POINTER_HEADER_TEXT  = 'Inspiro Lite';
-		const POINTER_CONTENT_TEXT = 'Visit the <a href="admin.php?page=inspiro"><strong>Inspiro Dashboard</strong></a> to get your site set up with just a few clicks. Head over there to get started!';
+		const POINTER_HEADER_TEXT = 'Inspiro Lite';
+		const POINTER_CONTENT_TEXT = 'Visit the <a href="%s"><strong>Inspiro Dashboard</strong></a> to get your site set up with just a few clicks. Head over there to get started!';
 		const POINTER_TARGET = '#toplevel_page_inspiro';
 
 		public function __construct() {
+			$this->link_url = admin_url( 'admin.php?page=inspiro' ); // add link here
 			add_action( 'admin_init', [ $this, 'show_custom_pointer' ] );
 			add_action( 'wp_ajax_dismiss_wp_pointer', [ $this, 'dismiss_pointer_status' ] );
 		}
@@ -53,13 +55,16 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu_Pointer' ) ) {
 			wp_enqueue_style( 'wp-pointer' );
 			wp_enqueue_script( 'wp-pointer' );
 
-			$pointer_text   = $this->create_pointer_text( self::POINTER_HEADER_TEXT, self::POINTER_CONTENT_TEXT );
+			$pointer_text   = $this->create_pointer_text(
+				self::POINTER_HEADER_TEXT,
+				sprintf( self::POINTER_CONTENT_TEXT, esc_url( $this->link_url ) )
+			);
 			$pointer_target = self::POINTER_TARGET;
 
 			wp_enqueue_script(
 				'inspiro-custom-admin-pointer',
 				inspiro_get_assets_uri( 'custom-admin-pointer', 'js' ),
-				array( 'jquery', 'wp-pointer' ),
+				[ 'jquery', 'wp-pointer' ],
 				INSPIRO_THEME_VERSION,
 				true
 			);
