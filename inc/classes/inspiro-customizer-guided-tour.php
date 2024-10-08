@@ -3,14 +3,14 @@
  * Inspiro Customizer Guided Tour Class
  *
  * @package Inspiro
- * @since Inspiro 1.9.0
+ * @since   Inspiro 1.9.4
  */
 
-if (!defined('ABSPATH')) {
+if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
+if ( ! class_exists( 'Inspiro_Customizer_Guided_Tour' ) ) {
 
 	/**
 	 * The Customizer Guided Tour Class (Singleton)
@@ -23,48 +23,43 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 		/**
 		 * Private constructor to prevent multiple instances.
 		 *
-		 * @since 1.9.0
+		 * @since 1.9.4
 		 */
 		private function __construct() {
-			add_action('admin_init', array($this, 'guider'));
+			add_action( 'admin_init', [ $this, 'init_guider' ] );
 		}
 
 		/**
 		 * Prevent cloning of the instance.
 		 */
-		private function __clone() {
-			// Prevent cloning
-		}
+		private function __clone() {}
 
 		/**
 		 * Prevent unserializing of the instance.
 		 */
-		private function __wakeup() {
-			// Prevent unserialization
-		}
+		private function __wakeup() {}
 
 		/**
 		 * Get the single instance of the class.
 		 *
-		 * @since 1.9.0
 		 * @return Inspiro_Customizer_Guided_Tour
+		 * @since 1.9.4
 		 */
 		public static function get_instance() {
-			if (self::$instance === null) {
+			if ( self::$instance === null ) {
 				self::$instance = new self();
 			}
 			return self::$instance;
 		}
 
 		/**
-		 * Guider method.
+		 * Initialize the guider.
 		 *
-		 * @since 2.2.0
+		 * @since 1.9.4
 		 */
-		public function guider() {
+		public function init_guider() {
 			global $pagenow;
-
-			if ( 'customize.php' === $pagenow && false === (bool) get_theme_mod( 'inspiro_guided_tour_checked_status', false )  ) {
+			if ( 'customize.php' === $pagenow && false === (bool) get_theme_mod( 'inspiro_guided_tour_checked_status', false ) ) {
 				// include customize scripts
 				add_action( 'customize_controls_enqueue_scripts', array( $this, 'include_guider_scripts' ) );
 				// include underscore template
@@ -80,22 +75,25 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 		}
 
 		/**
-		 * Guider enqueues scripts.
+		 * Enqueue guider scripts.
 		 *
-		 * @since 2.2.0
+		 * @since 1.9.4
 		 */
 		public function include_guider_scripts() {
 			// styles
-			wp_enqueue_style( 'inspiro-guided-tour-style', get_template_directory_uri() . '/assets/css/minified/customize-guided-tour.min.css', array(), INSPIRO_THEME_VERSION, 'all' );
+			wp_enqueue_style( 'inspiro-guided-tour-style', inspiro_get_assets_uri( 'customize-guided-tour', 'css' ), [], INSPIRO_THEME_VERSION, 'all' );
 			// scripts
-			wp_enqueue_script( 'inspiro-guided-tour', get_template_directory_uri() . '/assets/js/minified/customize-guided-tour.min.js', array( 'jquery', 'wp-backbone' ), INSPIRO_THEME_VERSION, true );
-			wp_localize_script( 'inspiro-guided-tour', '_wpCustomizeInspiroGuidedTourSteps', $this->guided_tour_steps() );
+			wp_enqueue_script( 'inspiro-guided-tour', inspiro_get_assets_uri( 'customize-guided-tour', 'js' ), [
+				'jquery',
+				'wp-backbone'
+			], INSPIRO_THEME_VERSION, true );
+			wp_localize_script( 'inspiro-guided-tour', '_wpCustomizeInspiroGuidedTourSteps', $this->get_guided_tour_steps() );
 		}
 
 		/**
 		 * Template for steps.
 		 *
-		 * @since 2.2.0
+		 * @since 1.9.4
 		 */
 		public function print_guider_templates() {
 			?>
@@ -129,55 +127,45 @@ if (!class_exists('Inspiro_Customizer_Guided_Tour')) {
 		}
 
 		/**
-		 * Guided tour steps.
+		 * Setup guided tour steps.
 		 *
-		 * @since 2.2.0
+		 * @since 1.9.4
 		 */
-		public function guided_tour_steps() {
-			$steps = array();
-
-			$steps[] = array(
-				'title'       => __( 'Customize Inspiro', 'inspiro' ),
-				/* translators: %s: 'End Of Line' symbol */
-				'message'     => sprintf( __( 'Here you can control the overall look and feel of your website.%sAre you ready? Let\'s start the tour!', 'inspiro' ), PHP_EOL . PHP_EOL ),
-				'button_text' => __( 'Take the tour', 'inspiro' ),
-				'section'     => '#customize-info',
-			);
-
-			$steps[] = array(
-				'title'   => __( '1. Customize your Site Identity', 'inspiro' ),
-				'message' => __( 'Click on the Site Identity section to upload your custom logo image or change the Site Title.', 'inspiro' ),
-				'section' => 'title_tagline',
-			);
-
-			$steps[] = array(
-				'title'   => __( '2. Customize Colors', 'inspiro' ),
-				'message' => __( 'Change the color scheme of theme, accent color or individual colors.', 'inspiro' ),
-				'section' => 'colors',
-			);
-
-			$steps[] = array(
-				'title'   => __( '3. Customize Fonts', 'inspiro' ),
-				'message' => __( 'From this section you can easily change the global fonts in your theme or customize individual elements.', 'inspiro' ),
-				'section' => 'inspiro_typography_panel',
-			);
-
-
-			$steps[] = array(
-				'title'   => __( '4. Customize Footer', 'inspiro' ),
-				'message' => __( 'Need to change the default copyright text or add additional links? You can do it here!', 'inspiro' ),
-				'section' => 'footer-area',
-			);
-
-			$steps[] = array(
-				'title'       => '',
-				/* translators: 1: open <strong> tag, 2: close <strong> tag, 3: 'End Of Line' symbol */
-				'message'     => sprintf( __( 'All set! Remember to %1$sSave & publish%2$s your changes when you\'re done.%3$sYou can return to your dashboard by clicking the X in the top left corner.', 'inspiro' ), '<strong>', '</strong>', PHP_EOL . PHP_EOL ),
-				'section'     => '#customize-header-actions .save',
-				'button_text' => __( 'Done', 'inspiro' ),
-			);
-
-			return $steps;
+		public function get_guided_tour_steps() {
+			return [
+				[
+					'title'       => __( 'Customize Inspiro', 'inspiro' ),
+					'message'     => sprintf( __( 'Here you can control the overall look and feel of your website.%sAre you ready? Let\'s start the tour!', 'inspiro' ), PHP_EOL . PHP_EOL ),
+					'button_text' => __( 'Take the tour', 'inspiro' ),
+					'section'     => '#customize-info',
+				],
+				[
+					'title'   => __( '1. Customize your Site Identity', 'inspiro' ),
+					'message' => __( 'Click on the Site Identity section to upload your custom logo image or change the Site Title.', 'inspiro' ),
+					'section' => 'title_tagline',
+				],
+				[
+					'title'   => __( '2. Customize Colors', 'inspiro' ),
+					'message' => __( 'Change the color scheme of theme, accent color or individual colors.', 'inspiro' ),
+					'section' => 'colors',
+				],
+				[
+					'title'   => __( '3. Customize Fonts', 'inspiro' ),
+					'message' => __( 'From this section you can easily change the global fonts in your theme or customize individual elements.', 'inspiro' ),
+					'section' => 'inspiro_typography_panel',
+				],
+				[
+					'title'   => __( '4. Customize Footer', 'inspiro' ),
+					'message' => __( 'Need to change the default copyright text or add additional links? You can do it here!', 'inspiro' ),
+					'section' => 'footer-area',
+				],
+				[
+					'title'       => '',
+					'message'     => sprintf( __( 'All set! Remember to %1$sSave & publish%2$s your changes when you\'re done.%3$sYou can return to your dashboard by clicking the X in the top left corner.', 'inspiro' ), '<strong>', '</strong>', PHP_EOL . PHP_EOL ),
+					'section'     => '#customize-header-actions .save',
+					'button_text' => __( 'Done', 'inspiro' ),
+				],
+			];
 		}
 	}
 }
