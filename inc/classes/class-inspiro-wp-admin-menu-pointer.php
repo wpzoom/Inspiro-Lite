@@ -22,9 +22,13 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu_Pointer' ) ) {
 	class Inspiro_WP_Admin_Menu_Pointer {
 		private $link_url;
 
+		/**
+		 * Pointer Settings
+		 */
 		const POINTER_HEADER_TEXT = 'Inspiro Lite';
 		const POINTER_CONTENT_TEXT = 'Visit the <a href="%s"><strong>Inspiro Dashboard</strong></a> to get your site set up with just a few clicks. Head over there to get started!';
 		const POINTER_TARGET = '#toplevel_page_inspiro';
+		const POINTER_USER_META_KEY_STATUS = 'inspiro_theme_admin_menu_pointer_show_status';
 
 		public function __construct() {
 			$this->link_url = admin_url( 'admin.php?page=inspiro' ); // add link here
@@ -37,7 +41,7 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu_Pointer' ) ) {
 		 */
 		public function show_custom_pointer() {
 			$current_user_id = get_current_user_id();
-			$dismissed       = get_user_meta( $current_user_id, 'inspiro_theme_admin_menu_pointer_show_status', true );
+			$dismissed       = get_user_meta( $current_user_id, self::POINTER_USER_META_KEY_STATUS, true );
 
 			if ( ! $dismissed ) {
 				add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_custom_pointer_scripts' ] );
@@ -88,7 +92,7 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu_Pointer' ) ) {
 		 */
 		public function dismiss_pointer_status() {
 			if ( isset( $_POST['pointer'] ) && 'custom_admin_pointer' === $_POST['pointer'] ) {
-				update_user_meta( get_current_user_id(), 'inspiro_theme_admin_menu_pointer_show_status', true );
+				update_user_meta( get_current_user_id(), self::POINTER_USER_META_KEY_STATUS, true );
 				echo 'Updated';
 			}
 			wp_die();
