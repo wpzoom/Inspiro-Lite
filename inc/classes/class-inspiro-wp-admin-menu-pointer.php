@@ -82,10 +82,10 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu_Pointer' ) ) {
 		 * Mark the pointer as dismissed when closed.
 		 */
 		public function dismiss_pointer_status() {
-//			if ( isset( $_POST['pointer'] ) && 'custom_admin_pointer' === $_POST['pointer'] ) {
-//				update_user_meta( get_current_user_id(), 'inspiro_theme_admin_menu_pointer_show_status', true );
-//				echo 'Updated';
-//			}
+			if ( isset( $_POST['pointer'] ) && 'custom_admin_pointer' === $_POST['pointer'] ) {
+				update_user_meta( get_current_user_id(), 'inspiro_theme_admin_menu_pointer_show_status', true );
+				echo 'Updated';
+			}
 			wp_die();
 		}
 	}
