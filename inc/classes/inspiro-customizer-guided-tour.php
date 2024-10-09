@@ -37,7 +37,7 @@ if ( ! class_exists( 'Inspiro_Customizer_Guided_Tour' ) ) {
 		/**
 		 * Prevent unserializing of the instance.
 		 */
-		private function __wakeup() {}
+		public function __wakeup() {}
 
 		/**
 		 * Get the single instance of the class.
