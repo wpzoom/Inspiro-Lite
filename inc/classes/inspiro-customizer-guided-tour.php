@@ -133,7 +133,7 @@ if ( ! class_exists( 'Inspiro_Customizer_Guided_Tour' ) ) {
 					<# } #>
 					{{{ data.message }}}
 					<div class="guided-tour-step-nav-elements">
-						<a class="button button-primary ins-go-button" href="#">
+						<a class="button button-primary ins-go-button <# if (data.last_step ) { #>ins-done-btn<# } #>" href="#">
 							<# if ( data.button_text ) { #>
 							{{ data.button_text }}
 							<# } else { #>
