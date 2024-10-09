@@ -38,8 +38,8 @@
 		_setupUI() {
 			const self = this, // used to maintain context inside callbacks
 
-				// Select the WordPress Customizer's main overlay container (the area where content is displayed)
-				$wpCustomizerContainer = $('body.wp-customizer .wp-full-overlay');
+			// Select the WordPress Customizer's main overlay container (the area where content is displayed)
+			$wpCustomizerContainer = $('body.wp-customizer .wp-full-overlay');
 
 			// Creates a div with 'ins-guided-tour' class and adds it to the customizer container
 			this.$container = $('<div/>').addClass('ins-guided-tour');
@@ -78,10 +78,19 @@
 				function () {
 					if ( self.currentStep === 0 ) {
 						self._hideTour( true );
-					} else {
-						self._showNextStep();
 					}
 
+					return false;
+				}
+			);
+
+			$( document ).on(
+				'click',
+				'.ins-guided-tour-step .ins-guided-tour-next-step',
+				function () {
+					if ( self.currentStep !== 0 ) {
+						self._showNextStep();
+					}
 					return false;
 				}
 			);

@@ -66,11 +66,11 @@ if ( ! class_exists( 'Inspiro_Customizer_Guided_Tour' ) ) {
 				add_action( 'customize_controls_print_footer_scripts', array( $this, 'print_guider_templates' ) );
 
 				// deactivate status save cause of tests
-				if ( current_user_can( 'manage_options' ) ) {
-
-					// Set Guided Tour flag so it doesn't show up again.
-					set_theme_mod( 'inspiro_guided_tour_checked_status', true );
-				}
+//				if ( current_user_can( 'manage_options' ) ) {
+//
+//					// Set Guided Tour flag so it doesn't show up again.
+//					set_theme_mod( 'inspiro_guided_tour_checked_status', true );
+//				}
 			}
 		}
 
@@ -112,13 +112,14 @@ if ( ! class_exists( 'Inspiro_Customizer_Guided_Tour' ) ) {
 							<# } #>
 						</a>
 						<# if ( ! data.last_step ) { #>
-						<a class="ins-guided-tour-skip" href="#">
 							<# if ( data.first_step ) { #>
-							<?php esc_attr_e( 'No thanks, skip the tour', 'inspiro' ); ?>
+								<a href="#" class="ins-guided-tour-skip">
+									<?php esc_attr_e( 'No thanks, skip the tour', 'inspiro' ); ?>
 							<# } else { #>
-							<?php esc_attr_e( 'Next step &rarr;', 'inspiro' ); ?>
+								<a href="#" class="ins-guided-tour-next-step">
+									<?php esc_attr_e( 'Next step &rarr;', 'inspiro' ); ?>
 							<# } #>
-						</a>
+								</a>
 						<# } #>
 					</div>
 				</div>
