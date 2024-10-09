@@ -27,17 +27,20 @@ if ( ! class_exists( 'Inspiro_Customizer_Guided_Tour' ) ) {
 		 */
 		private function __construct() {
 			add_action( 'admin_init', [ $this, 'init_guider' ] );
+			add_action( 'wp_ajax_customize_guided_tour_action', [ $this, 'ajax_handler' ] );
 		}
 
 		/**
 		 * Prevent cloning of the instance.
 		 */
-		private function __clone() {}
+		private function __clone() {
+		}
 
 		/**
 		 * Prevent unserializing of the instance.
 		 */
-		public function __wakeup() {}
+		public function __wakeup() {
+		}
 
 		/**
 		 * Get the single instance of the class.
@@ -49,7 +52,40 @@ if ( ! class_exists( 'Inspiro_Customizer_Guided_Tour' ) ) {
 			if ( self::$instance === null ) {
 				self::$instance = new self();
 			}
+
 			return self::$instance;
+		}
+
+		/**
+		 * Handle AJAX requests.
+		 *
+		 * @since 1.9.4
+		 */
+		public function ajax_handler() {
+
+			if ( isset( $_POST['checked_status_value'] ) ) {
+
+				if ( $_POST['checked_status_value'] ) {
+
+					if ( current_user_can( 'manage_options' ) ) {
+
+						// Set Guided Tour flag so it doesn't show up again.
+						set_theme_mod( 'inspiro_guided_tour_checked_status', true );
+						$additional_data = 'Status was changed to hide on next visit';
+					} else {
+						$additional_data = 'User do not have permission to change this setting';
+					}
+				}
+			} else {
+				$additional_data = 'No data received';
+			}
+
+			$response = [
+				'success' => true,
+				'data'    => $additional_data,
+			];
+
+			wp_send_json_success( $response );
 		}
 
 		/**
@@ -64,13 +100,6 @@ if ( ! class_exists( 'Inspiro_Customizer_Guided_Tour' ) ) {
 				add_action( 'customize_controls_enqueue_scripts', array( $this, 'include_guider_scripts' ) );
 				// include underscore template
 				add_action( 'customize_controls_print_footer_scripts', array( $this, 'print_guider_templates' ) );
-
-				// deactivate status save cause of tests
-//				if ( current_user_can( 'manage_options' ) ) {
-//
-//					// Set Guided Tour flag so it doesn't show up again.
-//					set_theme_mod( 'inspiro_guided_tour_checked_status', true );
-//				}
 			}
 		}
 
@@ -112,15 +141,15 @@ if ( ! class_exists( 'Inspiro_Customizer_Guided_Tour' ) ) {
 							<# } #>
 						</a>
 						<# if ( ! data.last_step ) { #>
-							<# if ( data.first_step ) { #>
-								<a href="#" class="ins-guided-tour-skip">
-									<?php esc_attr_e( 'No thanks, skip the tour', 'inspiro' ); ?>
+						<# if ( data.first_step ) { #>
+						<a href="#" class="ins-guided-tour-skip">
+							<?php esc_attr_e( 'No thanks, skip the tour', 'inspiro' ); ?>
 							<# } else { #>
-								<a href="#" class="ins-guided-tour-next-step">
-									<?php esc_attr_e( 'Next step &rarr;', 'inspiro' ); ?>
+							<a href="#" class="ins-guided-tour-next-step">
+								<?php esc_attr_e( 'Next step &rarr;', 'inspiro' ); ?>
+								<# } #>
+							</a>
 							<# } #>
-								</a>
-						<# } #>
 					</div>
 				</div>
 			</script>

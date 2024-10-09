@@ -77,6 +77,29 @@
 				'.ins-guided-tour-step .ins-guided-tour-skip',
 				function () {
 					if ( self.currentStep === 0 ) {
+						console.log(ajaxurl)
+						// save status in DB
+						$.ajax({
+							url: ajaxurl,
+							method: 'POST',
+							data: {
+								action: 'customize_guided_tour_action',
+								checked_status_value: true
+							},
+							success(response) {
+								if (response.success && response.data) {
+									console.log(response.data)
+									// self.currentStep = response.data.nextStep;
+									// self._showNextStep();
+								} else {
+									console.error('Error in response:', response);
+								}
+							},
+							error(xhr, status, error) {
+								console.error('AJAX error:', error);
+							}
+						});
+
 						self._hideTour( true );
 					}
 
