@@ -60,7 +60,7 @@
 					});
 			}
 
-			function saveShowStatusInDB() {
+			function saveStatusInDB() {
 				$.ajax({
 					url: ajaxurl,
 					method: 'POST',
@@ -98,7 +98,7 @@
 				'.ins-guided-tour-step .ins-go-button.ins-done-btn',
 				function () {
 					// Save status in DB
-					saveShowStatusInDB();
+					saveStatusInDB();
 					return false;
 				}
 			);
@@ -109,7 +109,7 @@
 				function () {
 					if (self.currentStep === 0) {
 						// Save status in DB
-						saveShowStatusInDB();
+						saveStatusInDB();
 						self._hideTour(true);
 					}
 					return false;
