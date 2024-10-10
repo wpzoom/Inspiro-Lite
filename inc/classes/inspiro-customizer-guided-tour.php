@@ -62,14 +62,11 @@ if ( ! class_exists( 'Inspiro_Customizer_Guided_Tour' ) ) {
 		 * @since 1.9.4
 		 */
 		public function ajax_handler() {
-
 			if ( isset( $_POST['checked_status_value'] ) ) {
-
 				if ( $_POST['checked_status_value'] ) {
 
 					if ( current_user_can( 'manage_options' ) ) {
-
-						// Set Guided Tour flag so it doesn't show up again.
+						// Set Guided Tour flag so it doesn't show up again
 						set_theme_mod( 'inspiro_guided_tour_checked_status', true );
 						$additional_data = 'Status was changed to hide on next visit';
 					} else {
@@ -85,7 +82,7 @@ if ( ! class_exists( 'Inspiro_Customizer_Guided_Tour' ) ) {
 				'data'    => $additional_data,
 			];
 
-			wp_send_json_success( $response );
+//			wp_send_json_success( $response );
 		}
 
 		/**
@@ -131,9 +128,12 @@ if ( ! class_exists( 'Inspiro_Customizer_Guided_Tour' ) ) {
 					<# if ( data.title ) { #>
 					<h2>{{ data.title }}</h2>
 					<# } #>
+
 					{{{ data.message }}}
+
 					<div class="guided-tour-step-nav-elements">
-						<a class="button button-primary ins-go-button <# if (data.last_step ) { #>ins-done-btn<# } #>" href="#">
+						<a class="button button-primary ins-go-button <# if (data.last_step ) { #>ins-done-btn<# } #>"
+						   href="#">
 							<# if ( data.button_text ) { #>
 							{{ data.button_text }}
 							<# } else { #>

@@ -60,6 +60,27 @@
 					});
 			}
 
+			function saveShowStatusInDB() {
+				$.ajax({
+					url: ajaxurl,
+					method: 'POST',
+					data: {
+						action: 'customize_guided_tour_action',
+						checked_status_value: true
+					},
+					// success(response) {
+					// 	if (response.success && response.data) {
+					// 		console.log(response.data);
+					// 	} else {
+					// 		console.error('Error in response:', response);
+					// 	}
+					// },
+					// error(xhr, status, error) {
+					// 	console.error('AJAX error:', error);
+					// }
+				});
+			}
+
 			// Show first step
 			this._showNextStep();
 
@@ -72,37 +93,25 @@
 				}
 			);
 
-			$( document ).on(
+			$(document).on(
+				'click',
+				'.ins-guided-tour-step .ins-go-button.ins-done-btn',
+				function () {
+					// Save status in DB
+					saveShowStatusInDB();
+					return false;
+				}
+			);
+
+			$(document).on(
 				'click',
 				'.ins-guided-tour-step .ins-guided-tour-skip',
 				function () {
-					if ( self.currentStep === 0 ) {
-						console.log(ajaxurl)
-						// save status in DB
-						$.ajax({
-							url: ajaxurl,
-							method: 'POST',
-							data: {
-								action: 'customize_guided_tour_action',
-								checked_status_value: true
-							},
-							success(response) {
-								if (response.success && response.data) {
-									console.log(response.data)
-									// self.currentStep = response.data.nextStep;
-									// self._showNextStep();
-								} else {
-									console.error('Error in response:', response);
-								}
-							},
-							error(xhr, status, error) {
-								console.error('AJAX error:', error);
-							}
-						});
-
-						self._hideTour( true );
+					if (self.currentStep === 0) {
+						// Save status in DB
+						saveShowStatusInDB();
+						self._hideTour(true);
 					}
-
 					return false;
 				}
 			);
