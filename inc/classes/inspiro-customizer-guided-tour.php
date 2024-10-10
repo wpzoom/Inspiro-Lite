@@ -62,27 +62,30 @@ if ( ! class_exists( 'Inspiro_Customizer_Guided_Tour' ) ) {
 		 * @since 1.9.4
 		 */
 		public function ajax_handler() {
-			if ( isset( $_POST['checked_status_value'] ) ) {
-				if ( $_POST['checked_status_value'] ) {
+			$response_message       = 'No data received';
+			$theme_mode_name        = 'inspiro_guided_tour_checked_status';
+			$is_checked_status_set  = isset( $_POST['checked_status_value'] );
+			$is_checked_status_true = $is_checked_status_set && $_POST['checked_status_value'];
+			$can_manage_options     = current_user_can( 'manage_options' );
 
-					if ( current_user_can( 'manage_options' ) ) {
-						// Set Guided Tour flag so it doesn't show up again
-						set_theme_mod( 'inspiro_guided_tour_checked_status', true );
-						$additional_data = 'Status was changed to hide on next visit';
+			if ( $is_checked_status_set ) {
+				if ( $is_checked_status_true ) {
+					if ( $can_manage_options ) {
+						set_theme_mod( $theme_mode_name, true );
+						$response_message = 'Status was changed to hide on next visit';
 					} else {
-						$additional_data = 'User do not have permission to change this setting';
+						$response_message = 'User does not have permission to change this setting';
 					}
 				}
-			} else {
-				$additional_data = 'No data received';
 			}
 
 			$response = [
 				'success' => true,
-				'data'    => $additional_data,
+				'data'    => $response_message,
 			];
 
-//			wp_send_json_success( $response );
+			// Uncomment the following line in actual use
+			// wp_send_json_success($response);
 		}
 
 		/**
