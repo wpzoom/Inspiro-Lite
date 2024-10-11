@@ -120,7 +120,7 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$color_footer_copyright_text = inspiro_get_theme_mod( 'color_footer_copyright_text' );
 
 		?>
-		<style id="inspiro-custom-header-styles" type="text/css">
+		<style id="inspiro-custom-header-styles">
 			<?php
 			// Has the text been hidden?
 			if ( 'blank' === $header_text_color ) : ?>
