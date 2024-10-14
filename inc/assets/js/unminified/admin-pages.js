@@ -12,7 +12,7 @@ jQuery(document).ready(function ($) {
 		$("#tabs").tabs();
 	});
 
-	// work with Install btn
+	// work with install btn
 	$('#install-one-click-demo-btn').on('click', function (e) {
 		e.preventDefault();
 
