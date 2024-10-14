@@ -120,7 +120,10 @@
                                         <?php esc_html_e( 'Please install the One Click Demo Import plugin to use this feature. You can do that from the Recommended Plugins page.', 'inspiro' ); ?>
                                     </p>
                                     <p class="section_footer">
-                                        <a href="<?php echo esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) ); ?>" class="button button-primary">
+                                        <a href="<?php echo esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) ); ?>"
+										   class="button button-primary"
+										   id="install-one-click-demo-admin-page-btn"
+										>
                                             <?php esc_html_e( 'Install One Click Demo Import &rarr;', 'inspiro' ); ?>
                                         </a>
 
