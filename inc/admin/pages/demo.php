@@ -1,13 +1,5 @@
 <?php $parent = wp_get_theme(); ?>
 
-<script>
-	jQuery(document).ready(function ($) {
-		$(function () {
-			$("#tabs").tabs();
-		});
-	});
-</script>
-
 <div class="wpz-onboard_wrapper">
 	<div id="tabs"><!-- #tabs -->
 
