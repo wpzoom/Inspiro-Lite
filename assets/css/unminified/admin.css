@@ -854,3 +854,23 @@
         flex-basis: 0;
     }
 }
+
+
+/* utility classes */
+.hidden-element { display: none !important; }
+
+/* Create a spinning animation */
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* Apply the spinning effect to the Dashicon */
+.spin-icon {
+	display: inline-block;
+	animation: spin 2s linear infinite;
+}

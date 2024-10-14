@@ -117,8 +117,8 @@
 										   id="install-one-click-demo-admin-page-btn"
 										>
                                             <?php esc_html_e( 'Install One Click Demo Import &rarr;', 'inspiro' ); ?>
+											<i class="dashicons dashicons-update spin-icon hidden-element"></i>
                                         </a>
-										<i class="dashicons dashicons-update spin-icon"></i>
 
                                         <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/documentation/inspiro-lite/inspiro-lite-importing-the-demo-content/', 'inspiro' ) ); ?>" target="_blank" class="button button-secondary">
                                             <?php esc_html_e( 'How it works? &rarr;', 'inspiro' ); ?>
