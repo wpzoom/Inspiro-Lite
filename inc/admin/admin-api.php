@@ -18,20 +18,10 @@ function install_activate_one_click_demo_plugin() {
 		$plugin_slug = isset( $_POST['plugin_slug'] ) ? sanitize_text_field( $_POST['plugin_slug'] ) : '';
 
 		if ( ! empty( $plugin_slug ) && 'one-click-demo-import' === $plugin_slug ) {
-			// Include necessary files for plugin installation
-			require_once ABSPATH . 'wp-admin/includes/plugin-install.php';
-			require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
-			require_once ABSPATH . 'wp-admin/includes/file.php';
-			require_once ABSPATH . 'wp-admin/includes/misc.php';
-
-			// Instantiate the Plugin_Upgrader class
-			$upgrader = new Plugin_Upgrader();
-
-			// Install the plugin
-			$install_result = $upgrader->install( 'https://downloads.wordpress.org/plugin/' . $plugin_slug . '.zip' );
-
-			if ( $install_result ) {
-				// Activate the plugin
+			// Check if plugin is already installed
+			$plugin_file = WP_PLUGIN_DIR . '/' . $plugin_slug . '/' . $plugin_slug . '.php';
+			if ( file_exists( $plugin_file ) ) {
+				// Plugin is installed, activate it
 				$result = activate_plugin( $plugin_slug . '/' . $plugin_slug . '.php' );
 
 				if ( is_wp_error( $result ) ) {
@@ -39,11 +29,36 @@ function install_activate_one_click_demo_plugin() {
 					wp_send_json_error( array( 'message' => $result->get_error_message() ) );
 				} else {
 					// Activation succeeded
-					wp_send_json_success( array( 'message' => __( 'Plugin installed and activated successfully.' ) ) );
+					wp_send_json_success( array( 'message' => __( 'Plugin activated successfully.' ) ) );
 				}
 			} else {
-				// Installation failed
-				wp_send_json_error( array( 'message' => __( 'Failed to install plugin.' ) ) );
+				// Include necessary files for plugin installation
+				require_once ABSPATH . 'wp-admin/includes/plugin-install.php';
+				require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
+				require_once ABSPATH . 'wp-admin/includes/file.php';
+				require_once ABSPATH . 'wp-admin/includes/misc.php';
+
+				// Instantiate the Plugin_Upgrader class
+				$upgrader = new Plugin_Upgrader();
+
+				// Install the plugin
+				$install_result = $upgrader->install( 'https://downloads.wordpress.org/plugin/' . $plugin_slug . '.zip' );
+
+				if ( $install_result ) {
+					// Activate the plugin
+					$result = activate_plugin( $plugin_slug . '/' . $plugin_slug . '.php' );
+
+					if ( is_wp_error( $result ) ) {
+						// Activation failed
+						wp_send_json_error( array( 'message' => $result->get_error_message() ) );
+					} else {
+						// Activation succeeded
+						wp_send_json_success( array( 'message' => __( 'Plugin installed and activated successfully.' ) ) );
+					}
+				} else {
+					// Installation failed
+					wp_send_json_error( array( 'message' => __( 'Failed to install plugin.' ) ) );
+				}
 			}
 		} else {
 			wp_send_json_error( array( 'message' => __( 'Invalid plugin slug.' ) ) );

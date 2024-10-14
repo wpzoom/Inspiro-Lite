@@ -120,7 +120,9 @@
 											<i class="dashicons dashicons-update spin-icon hidden-element"></i>
                                         </a>
 
-                                        <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/documentation/inspiro-lite/inspiro-lite-importing-the-demo-content/', 'inspiro' ) ); ?>" target="_blank" class="button button-secondary">
+                                        <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/documentation/inspiro-lite/inspiro-lite-importing-the-demo-content/', 'inspiro' ) ); ?>"
+										   target="_blank"
+										   class="button button-secondary" >
                                             <?php esc_html_e( 'How it works? &rarr;', 'inspiro' ); ?>
                                         </a>
                                     </p>
