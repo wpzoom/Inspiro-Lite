@@ -2,10 +2,10 @@
 /**
  * Load scripts & styles
  *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ * @link    https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package Inspiro
- * @since Inspiro 1.0.0
+ * @since   Inspiro 1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -38,16 +38,16 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 		/**
 		 * Enqueue scripts and styles for all admin pages.
 		 */
-		public function admin_scripts($hook) {
+		public function admin_scripts( $hook ) {
 			wp_enqueue_style( 'inspiro-admin', inspiro_get_assets_uri( 'admin', 'css' ), array(), INSPIRO_THEME_VERSION );
 
-            // if ( 'inspiro' === $hook ) {
-            if ( 'appearance_page_page-inspiro' != $hook ) {
+			// if ( 'inspiro' === $hook ) {
+			if ( 'appearance_page_page-inspiro' != $hook ) {
 
-               wp_enqueue_script("jquery-ui");
-               wp_enqueue_script("jquery-ui-tabs");
-
-            }
+				wp_enqueue_script( 'inspiro-admin-pages', inspiro_get_assets_uri( 'admin-pages', 'js', '/inc/assets/' ), array( 'jquery' ), INSPIRO_THEME_VERSION, true );
+				wp_enqueue_script( "jquery-ui" );
+				wp_enqueue_script( "jquery-ui-tabs" );
+			}
 		}
 
 
@@ -68,7 +68,10 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 
 			wp_enqueue_script( 'inspiro-lite-js-plugins', inspiro_get_assets_uri( 'plugins', 'js' ), array( 'jquery' ), INSPIRO_THEME_VERSION, true );
 
-			wp_enqueue_script( 'inspiro-lite-script', inspiro_get_assets_uri( 'scripts', 'js' ), array( 'inspiro-lite-js-plugins', 'jquery' ), INSPIRO_THEME_VERSION, true );
+			wp_enqueue_script( 'inspiro-lite-script', inspiro_get_assets_uri( 'scripts', 'js' ), array(
+				'inspiro-lite-js-plugins',
+				'jquery'
+			), INSPIRO_THEME_VERSION, true );
 
 			if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 				wp_enqueue_script( 'comment-reply' );
