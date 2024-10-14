@@ -17,7 +17,7 @@ function install_activate_one_click_demo_plugin() {
 		// Assuming the plugin slug is passed via POST
 		$plugin_slug = isset( $_POST['plugin_slug'] ) ? sanitize_text_field( $_POST['plugin_slug'] ) : '';
 
-		if ( ! empty( $plugin_slug ) ) {
+		if ( ! empty( $plugin_slug ) && 'one-click-demo-import' === $plugin_slug ) {
 			// Include necessary files for plugin installation
 			require_once ABSPATH . 'wp-admin/includes/plugin-install.php';
 			require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
