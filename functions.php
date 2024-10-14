@@ -99,6 +99,7 @@ require INSPIRO_THEME_DIR . 'inc/icon-functions.php';
  */
 if ( is_admin() ) {
 	require INSPIRO_THEME_DIR . 'inc/admin-notice.php';
+	require INSPIRO_THEME_DIR . 'inc/admin/admin-api.php';
 
 	if ( current_user_can( 'manage_options' ) ) {
 		require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-notices.php';

@@ -6,6 +6,7 @@ jQuery(document).ready(function ($) {
 		$("#tabs").tabs();
 	});
 
+	// work with Install btn
 	$('#install-one-click-demo-admin-page-btn').on('click', function (e) {
 		e.preventDefault();
 
@@ -14,7 +15,8 @@ jQuery(document).ready(function ($) {
 			url: ajaxurl,
 			type: 'POST',
 			data: {
-				action: 'install_activate_one_click_demo_plugin'
+				action: 'install_activate_one_click_demo_plugin',
+				plugin_slug: 'one-click-demo-import'
 			},
 			success: function (response) {
 				console.log('Success:', response);
