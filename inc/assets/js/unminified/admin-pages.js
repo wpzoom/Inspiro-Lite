@@ -7,7 +7,7 @@ jQuery(document).ready(function ($) {
 	});
 
 	// work with Install btn
-	$('#install-one-click-demo-admin-page-btn').on('click', function (e) {
+	$('#install-one-click-demo-btn').on('click', function (e) {
 		e.preventDefault();
 
 		// work with spinner
@@ -39,7 +39,7 @@ jQuery(document).ready(function ($) {
 			success: function (response) {
 				console.log('Success:', response);
 				iconTag.addClass('hidden-element');
-				// window.location.reload();
+				window.location.reload();
 				// Handle success response
 			},
 			error: function (error) {

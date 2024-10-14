@@ -114,7 +114,7 @@
                                     <p class="section_footer">
                                         <a href="<?php echo esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) ); ?>"
 										   class="button button-primary"
-										   id="install-one-click-demo-admin-page-btn"
+										   id="install-one-click-demo-btn"
 										>
                                             <?php esc_html_e( 'Install One Click Demo Import &rarr;', 'inspiro' ); ?>
 											<i class="dashicons dashicons-update spin-icon hidden-element"></i>
