@@ -8,8 +8,6 @@
  * On success, the page is reloaded, and on error, an error message is logged to the console.
  */
 jQuery(document).ready(function ($) {
-	console.log(ajaxurl);
-
 	$(function () {
 		$("#tabs").tabs();
 	});
@@ -18,11 +16,12 @@ jQuery(document).ready(function ($) {
 	$('#install-one-click-demo-btn').on('click', function (e) {
 		e.preventDefault();
 
-		// work with spinner
-		let updateIconSelector = '.dashicons-update.spin-icon';
-		let iconTag = $(this).find(updateIconSelector);
+		// btn changes
+		$(this).addClass('button-disabled');
 
-		iconTag.removeClass('hidden-element');
+		// work with spinner
+		let spinIcon = $(this).find('.dashicons-update.spin-icon');
+		spinIcon.removeClass('hidden-element');
 
 		$.ajax({
 			url: ajaxurl,
@@ -32,8 +31,8 @@ jQuery(document).ready(function ($) {
 				plugin_slug: 'one-click-demo-import'
 			},
 			success: function (response) {
-				console.log('Success:', response);
-				iconTag.addClass('hidden-element');
+				spinIcon.addClass('hidden-element');
+				$(this).removeClass('button-disabled');
 				window.location.reload();
 			},
 			error: function (error) {
