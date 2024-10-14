@@ -1,4 +1,12 @@
-// script specific to Inspiro custom and WP generate Admin pages
+/*
+ * This script is specific to Inspiro custom and WP generate Admin pages.
+ * It initializes jQuery UI tabs on an element with the ID 'tabs' and handles
+ * the click event on a button with the ID 'install-one-click-demo-btn'.
+ * When the button is clicked, an AJAX POST request is sent to the
+ * WordPress backend to invoke the 'install_activate_one_click_demo_plugin' action.
+ * A spinner icon is displayed while the request is processed.
+ * On success, the page is reloaded, and on error, an error message is logged to the console.
+ */
 jQuery(document).ready(function ($) {
 	console.log(ajaxurl);
 
@@ -16,19 +24,6 @@ jQuery(document).ready(function ($) {
 
 		iconTag.removeClass('hidden-element');
 
-		// function waitForMilliseconds(ms) {
-		// 	return new Promise(resolve => setTimeout(resolve, ms));
-		// }
-		//
-		// waitForMilliseconds(2000).then(() => {
-		// 	// Your code after 3 seconds wait
-		// 	console.log("Waited for 3 seconds");
-		// 	iconTag.addClass('hidden-element');
-		// 	// Refresh the page
-		// 	window.location.reload();
-		// 	// 	http://localhost:8888/wp-admin/admin.php?page=inspiro-demo
-		// });
-
 		$.ajax({
 			url: ajaxurl,
 			type: 'POST',
@@ -40,11 +35,9 @@ jQuery(document).ready(function ($) {
 				console.log('Success:', response);
 				iconTag.addClass('hidden-element');
 				window.location.reload();
-				// Handle success response
 			},
 			error: function (error) {
 				console.log('Error:', error);
-				// Handle error response
 			}
 		});
 	});
