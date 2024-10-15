@@ -26,7 +26,7 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu_Pointer' ) ) {
 		 * Pointer Settings
 		 */
 		const POINTER_HEADER_TEXT = 'Inspiro Lite';
-		const POINTER_CONTENT_TEXT = 'Visit the <a href="%s"><strong>Inspiro Dashboard</strong></a> to set up your website with just a few clicks and learn more about your theme! 🚀';
+		const POINTER_CONTENT_TEXT = 'Visit the <a href="%s"><strong>Inspiro Dashboard</strong></a> to set up your website with just a few clicks and learn more about your theme!';
 		const POINTER_TARGET = '#toplevel_page_inspiro';
 		const POINTER_USER_META_KEY_STATUS = 'inspiro_theme_admin_menu_pointer_show_status';
 
@@ -84,7 +84,7 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu_Pointer' ) ) {
 		 * Create pointer text and markup.
 		 */
 		public function create_pointer_text( $header_text, $content_text ) {
-			return '<h3>' . __( $header_text, 'inspiro' ) . '</h3><p>' . __( $content_text, 'inspiro' ) . '</p>';
+			return '<h3>' . __( 'Inspiro Lite', 'inspiro' ) . '</h3><p>' . __( 'Visit the <a href="%s"><strong>Inspiro Dashboard</strong></a> to set up your website with just a few clicks and learn more about your theme!', 'inspiro' ) . '</p>';
 		}
 
 		/**
