@@ -49,6 +49,26 @@
     --inspiro-primary-color: #3496ff;
 }
 
+/* utility classes */
+.hidden-element {
+    display: none !important;
+}
+
+/* Create a spinning icon animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* Create a global spinning class */
+.spin-icon {
+    display: inline-block;
+    animation: spin 2s linear infinite;
+}
+
 /* Theme Info Page */
 .theme-info-wrap {
     margin: 0 0 25px;
@@ -853,24 +873,4 @@
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side {
         flex-basis: 0;
     }
-}
-
-
-/* utility classes */
-.hidden-element { display: none !important; }
-
-/* Create a spinning animation */
-@keyframes spin {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
-
-/* Apply the spinning effect to the Dashicon */
-.spin-icon {
-	display: inline-block;
-	animation: spin 2s linear infinite;
 }
