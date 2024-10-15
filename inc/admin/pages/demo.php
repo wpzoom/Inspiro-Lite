@@ -116,7 +116,11 @@
 										   class="button button-primary"
 										   id="install-one-click-demo-btn"
 										>
-                                            <?php esc_html_e( 'Install One Click Demo Import &rarr;', 'inspiro' ); ?>
+                                            <span id="install-one-click-demo-btn-text"
+												  data-installing-text="<?php esc_html_e( 'Installing plugin', 'inspiro' ); ?>"
+											>
+												<?php esc_html_e( 'Install One Click Demo Import &rarr;', 'inspiro' ); ?>
+											</span>
 											<i class="dashicons dashicons-update spin-icon hidden-element"></i>
                                         </a>
 

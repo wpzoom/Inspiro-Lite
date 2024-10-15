@@ -19,6 +19,14 @@ jQuery(document).ready(function ($) {
 		// btn changes
 		$(this).addClass('button-disabled');
 
+		// get btn text properties
+		let btnTextContainer = $(this).find('#install-one-click-demo-btn-text');
+		let originalText = btnTextContainer.text();
+		let installingText = btnTextContainer.data('installing-text');
+
+		// Change button text
+		btnTextContainer.text(installingText);
+
 		// work with spinner
 		let spinIcon = $(this).find('.dashicons-update.spin-icon');
 		spinIcon.removeClass('hidden-element');
@@ -33,10 +41,13 @@ jQuery(document).ready(function ($) {
 			success: function (response) {
 				spinIcon.addClass('hidden-element');
 				$(this).removeClass('button-disabled');
+				btnTextContainer.text(originalText); // Restore original button text
+				// reload page
 				window.location.reload();
 			},
 			error: function (error) {
 				console.log('Error:', error);
+				$(this).text(originalText); // Restore original button text on error
 			}
 		});
 	});
