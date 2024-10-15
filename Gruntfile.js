@@ -76,6 +76,7 @@ module.exports = function (grunt) {
 							'!*-rtl.css',
 							'!colors-dark.css',
 							'!customize-controls.css',
+							'!customize-guided-tour.css',
 							'!welcome-notice.css',
 						],
 						dest: 'assets/css/unminified',
@@ -112,6 +113,8 @@ module.exports = function (grunt) {
 							'scss/colors-dark.scss',
 						'assets/css/unminified/customize-controls.css':
 							'scss/customize-controls.scss',
+						'assets/css/unminified/customize-guided-tour.css':
+							'scss/customize-guided-tour.scss',
 						'assets/css/unminified/welcome-notice.css':
 							'scss/admin/welcome-notice.scss',
 						'assets/css/unminified/admin.css':
@@ -575,7 +578,7 @@ module.exports = function (grunt) {
 	// SASS compile
 	grunt.registerTask('scss', ['sass']);
 
-	// Style
+	// All jobs with Styles
 	grunt.registerTask('style', ['scss', 'postcss:style', 'rtl']);
 
 	// Lint the "beforeminify" files first, then minify
@@ -590,7 +593,7 @@ module.exports = function (grunt) {
 		'cssmin:css',
 	]);
 
-	// min all
+	// min all, prepare scss files
 	grunt.registerTask('minify', [
 		'jshint-before-minify',
 		'style',
