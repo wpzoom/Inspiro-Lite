@@ -267,40 +267,20 @@
 										<?php esc_html_e( 'Importing demo data (post, pages, images, etc.) is the quickest and easiest way to set up your new theme, and it allows you to simply edit everything instead of creating content and layouts from scratch.', 'inspiro' ); ?>
 									</p>
 
-									<?php if ( class_exists( 'OCDI_Plugin' ) ) { ?>
 
-										<p class="section_footer">
+									<p class="section_footer">
 
-											<a href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro-demo' ) ); ?>"
-											   class="button button-primary">
-												<?php esc_html_e( 'Import the Demo Content &rarr;', 'inspiro' ); ?>
-											</a>
+										<a href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro-demo' ) ); ?>"
+										   class="button button-primary">
+											<?php esc_html_e( 'Import the Demo Content &rarr;', 'inspiro' ); ?>
+										</a>
 
-											<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/documentation/inspiro-lite/inspiro-lite-importing-the-demo-content/', 'inspiro' ) ); ?>"
-											   target="_blank" class="button button-secondary">
-												<?php esc_html_e( 'How it works?', 'inspiro' ); ?>
-											</a>
+										<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/documentation/inspiro-lite/inspiro-lite-importing-the-demo-content/', 'inspiro' ) ); ?>"
+										   target="_blank" class="button button-secondary">
+											<?php esc_html_e( 'How it works?', 'inspiro' ); ?>
+										</a>
 
-										</p>
-
-									<?php } else { ?>
-
-										<p class="about">
-											<em><?php esc_html_e( 'Please install the One Click Demo Import plugin to use this feature.', 'inspiro' ); ?></em>
-										</p>
-										<p class="section_footer">
-											<a href="<?php echo esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) ); ?>"
-											   target="_blank" class="button button-primary">
-												<?php esc_html_e( 'Install One Click Demo Import &rarr;', 'inspiro' ); ?>
-											</a>
-
-											<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/documentation/inspiro-lite/inspiro-lite-importing-the-demo-content/', 'inspiro' ) ); ?>"
-											   target="_blank" class="button button-secondary">
-												<?php esc_html_e( 'How it works? &rarr;', 'inspiro' ); ?>
-											</a>
-										</p>
-
-									<?php } ?>
+									</p>
 
 								</div>
 

@@ -1,12 +1,10 @@
-<?php $parent = wp_get_theme(); ?>
+<?php
+$parent = wp_get_theme();
 
-<script>
-	jQuery(document).ready(function ($) {
-		$(function () {
-			$("#tabs").tabs();
-		});
-	});
-</script>
+// install-one-click-demo-btn
+$btn_admin_link = esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) ); // was link attr value
+
+?>
 
 <div class="wpz-onboard_wrapper">
 	<div id="tabs"><!-- #tabs -->
@@ -117,14 +115,21 @@
                                 <?php else : ?>
 
                                     <p class="about">
-                                        <?php esc_html_e( 'Please install the One Click Demo Import plugin to use this feature. You can do that from the Recommended Plugins page.', 'inspiro' ); ?>
+                                        <?php esc_html_e( 'Click the button below to install the One Click Demo Import plugin to use this feature.', 'inspiro' ); ?>
                                     </p>
                                     <p class="section_footer">
-                                        <a href="<?php echo esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) ); ?>" class="button button-primary">
-                                            <?php esc_html_e( 'Install One Click Demo Import &rarr;', 'inspiro' ); ?>
-                                        </a>
+                                        <button class="button button-primary" id="install-one-click-demo-btn">
+                                            <span id="install-one-click-demo-btn-text"
+												  data-installing-text="<?php esc_html_e( 'Installing One Click Demo Import', 'inspiro' ); ?>"
+											>
+												<?php esc_html_e( 'Install One Click Demo Import', 'inspiro' ); ?>
+											</span>
+											<i class="dashicons dashicons-update spin-icon hidden-element"></i>
+                                        </button>
 
-                                        <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/documentation/inspiro-lite/inspiro-lite-importing-the-demo-content/', 'inspiro' ) ); ?>" target="_blank" class="button button-secondary">
+                                        <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/documentation/inspiro-lite/inspiro-lite-importing-the-demo-content/', 'inspiro' ) ); ?>"
+										   target="_blank"
+										   class="button button-secondary" >
                                             <?php esc_html_e( 'How it works? &rarr;', 'inspiro' ); ?>
                                         </a>
                                     </p>
