@@ -2,7 +2,7 @@
 $parent = wp_get_theme();
 
 // install-one-click-demo-btn
-$btn_admin_link = esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) );
+$btn_admin_link = esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) ); // was link attr value
 
 ?>
 
@@ -118,12 +118,9 @@ $btn_admin_link = esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) )
                                         <?php esc_html_e( 'Please install the One Click Demo Import plugin to use this feature. You can do that from the Recommended Plugins page.', 'inspiro' ); ?>
                                     </p>
                                     <p class="section_footer">
-                                        <button
-										   class="button button-primary"
-										   id="install-one-click-demo-btn"
-										>
+                                        <button class="button button-primary" id="install-one-click-demo-btn">
                                             <span id="install-one-click-demo-btn-text"
-												  data-installing-text="<?php esc_html_e( 'Installing plugin', 'inspiro' ); ?>"
+												  data-installing-text="<?php esc_html_e( 'Installing One Click Demo Import', 'inspiro' ); ?>"
 											>
 												<?php esc_html_e( 'Install One Click Demo Import &rarr;', 'inspiro' ); ?>
 											</span>

@@ -7,48 +7,46 @@
  * A spinner icon is displayed while the request is processed.
  * On success, the page is reloaded, and on error, an error message is logged to the console.
  */
-jQuery(document).ready(function ($) {
-	$(function () {
-		$("#tabs").tabs();
-	});
+jQuery(document).ready(($) => {
+	$("#tabs").tabs();
 
-	// work with install btn
-	$('#install-one-click-demo-btn').on('click', function (e) {
-		e.preventDefault();
+	const ACTION_NAME = 'install_activate_one_click_demo_plugin';
+	const PLUGIN_SLUG = 'one-click-demo-import';
 
-		// btn changes
-		$(this).addClass('button-disabled');
-
-		// get btn text properties
-		let btnTextContainer = $(this).find('#install-one-click-demo-btn-text');
-		let originalText = btnTextContainer.text();
-		let installingText = btnTextContainer.data('installing-text');
-
-		// Change button text
-		btnTextContainer.text(installingText);
-
-		// work with spinner
-		let spinIcon = $(this).find('.dashicons-update.spin-icon');
-		spinIcon.removeClass('hidden-element');
-
+	const handleAjaxRequest = (btn, btnTextContainer, originalText, spinIcon) => {
 		$.ajax({
 			url: ajaxurl,
 			type: 'POST',
 			data: {
-				action: 'install_activate_one_click_demo_plugin',
-				plugin_slug: 'one-click-demo-import'
+				action: ACTION_NAME,
+				plugin_slug: PLUGIN_SLUG,
 			},
-			success: function (response) {
+			success: () => {
 				spinIcon.addClass('hidden-element');
-				$(this).removeClass('button-disabled');
-				btnTextContainer.text(originalText); // Restore original button text
-				// reload page
-				window.location.reload();
+				btn.removeClass('button-disabled');
+				btnTextContainer.text(originalText);  // Restore original button text
+				window.location.reload();  // Reload page
 			},
-			error: function (error) {
+			error: (error) => {
 				console.log('Error:', error);
-				$(this).text(originalText); // Restore original button text on error
+				btnTextContainer.text(originalText);  // Restore original button text on error
 			}
 		});
+	};
+
+	$('#install-one-click-demo-btn').on('click', function() {
+		const btn = $(this);
+		btn.addClass('button-disabled');
+
+		const btnTextContainer = btn.find('#install-one-click-demo-btn-text');
+		const originalText = btnTextContainer.text();
+		const installingText = btnTextContainer.data('installing-text');
+
+		btnTextContainer.text(installingText);
+
+		const spinIcon = btn.find('.dashicons-update.spin-icon');
+		spinIcon.removeClass('hidden-element');
+
+		// handleAjaxRequest(btn, btnTextContainer, originalText, spinIcon);
 	});
 });
