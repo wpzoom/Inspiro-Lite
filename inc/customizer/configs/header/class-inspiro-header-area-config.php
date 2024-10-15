@@ -12,7 +12,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * PHP Class for Registering Customizer Confugration
+ * PHP Class for Registering Customizer Configuration
  *
  * @since 1.3.0
  */
