@@ -26,7 +26,7 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu_Pointer' ) ) {
 		 * Pointer Settings
 		 */
 		const POINTER_HEADER_TEXT = 'Inspiro Lite';
-		const POINTER_CONTENT_TEXT = 'Visit the <a href="%s"><strong>Inspiro Dashboard</strong></a> to get your site set up with just a few clicks. Head over there to get started!';
+		const POINTER_CONTENT_TEXT = 'Visit the <a href="%s"><strong>Inspiro Dashboard</strong></a> to set up your website with just a few clicks and learn more about your theme! 🚀';
 		const POINTER_TARGET = '#toplevel_page_inspiro';
 		const POINTER_USER_META_KEY_STATUS = 'inspiro_theme_admin_menu_pointer_show_status';
 
