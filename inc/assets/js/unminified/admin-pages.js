@@ -28,7 +28,7 @@ jQuery(document).ready(($) => {
 				window.location.reload();  // Reload page
 			},
 			error: (error) => {
-				console.log('Error:', error);
+				// console.log('Error:', error);
 				btnTextContainer.text(originalText);  // Restore original button text on error
 			}
 		});
@@ -47,6 +47,6 @@ jQuery(document).ready(($) => {
 		const spinIcon = btn.find('.dashicons-update.spin-icon');
 		spinIcon.removeClass('hidden-element');
 
-		// handleAjaxRequest(btn, btnTextContainer, originalText, spinIcon);
+		handleAjaxRequest(btn, btnTextContainer, originalText, spinIcon);
 	});
 });
