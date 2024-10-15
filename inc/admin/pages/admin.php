@@ -523,12 +523,12 @@
 										<?php esc_html_e( 'With the built-in demo importer, you can quickly import fully configured demos to help you get started. The theme includes beautiful demos to create a business or portfolio website.', 'inspiro' ); ?>
 									</p>
 									<p class="section_footer">
-										<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/inspiro/starter-sites/', 'inspiro' ) ); ?>"
+										<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/starter-sites/'. INSPIRO_MARKETING_UTM_CODE_STARTER_SITE, 'inspiro' ) ); ?>"
 										   target="_blank" class="button button-primary">
 											<?php esc_html_e( 'Inspiro Premium Demos &rarr;', 'inspiro' ); ?>
 										</a>
 
-										<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/inspiro-pro/starter-sites/', 'inspiro' ) ); ?>"
+										<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro-pro/starter-sites/'. INSPIRO_MARKETING_UTM_CODE_STARTER_SITE, 'inspiro' ) ); ?>"
 										   target="_blank" class="button button-primary">
 											<?php esc_html_e( 'Inspiro PRO Demos &rarr;', 'inspiro' ); ?>
 										</a>
