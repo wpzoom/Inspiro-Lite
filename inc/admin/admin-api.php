@@ -29,7 +29,7 @@ function install_activate_one_click_demo_plugin() {
 					wp_send_json_error( array( 'message' => $result->get_error_message() ) );
 				} else {
 					// Activation succeeded
-					wp_send_json_success( array( 'message' => __( 'Plugin activated successfully.' ) ) );
+					wp_send_json_success( array( 'message' => 'Plugin activated successfully.' ) );
 				}
 			} else {
 				// Include necessary files for plugin installation
@@ -53,18 +53,18 @@ function install_activate_one_click_demo_plugin() {
 						wp_send_json_error( array( 'message' => $result->get_error_message() ) );
 					} else {
 						// Activation succeeded
-						wp_send_json_success( array( 'message' => __( 'Plugin installed and activated successfully.' ) ) );
+						wp_send_json_success( array( 'message' => 'Plugin installed and activated successfully.' ) );
 					}
 				} else {
 					// Installation failed
-					wp_send_json_error( array( 'message' => __( 'Failed to install plugin.' ) ) );
+					wp_send_json_error( array( 'message' => 'Failed to install plugin.' ) );
 				}
 			}
 		} else {
-			wp_send_json_error( array( 'message' => __( 'Invalid plugin slug.' ) ) );
+			wp_send_json_error( array( 'message' =>  'Invalid plugin slug.' ) );
 		}
 	} else {
-		wp_send_json_error( array( 'message' => __( 'You do not have permission to install plugins.' ) ) );
+		wp_send_json_error( array( 'message' => 'You do not have permission to install plugins.' ) );
 	}
 
 	// End the AJAX request
