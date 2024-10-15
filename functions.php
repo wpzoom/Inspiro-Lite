@@ -51,6 +51,11 @@ require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-enqueue-scripts.php';
 require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-custom-wp-admin-menu.php';
 
 /**
+ * Additional features to include custom WP pointer function
+ */
+require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-wp-admin-menu-pointer.php';
+
+/**
  * Functions and definitions.
  */
 require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-after-setup-theme.php';
@@ -74,6 +79,7 @@ require INSPIRO_THEME_DIR . 'inc/template-tags.php';
  * Additional features to allow styling of the templates.
  */
 require INSPIRO_THEME_DIR . 'inc/template-functions.php';
+
 
 /**
  * Custom template shortcode tags for this theme
