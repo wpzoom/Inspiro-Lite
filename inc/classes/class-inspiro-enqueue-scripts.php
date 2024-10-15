@@ -44,7 +44,7 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 			// if ( 'inspiro' === $hook ) {
 			if ( 'appearance_page_page-inspiro' != $hook ) {
 
-				wp_enqueue_script( 'inspiro-admin-pages', inspiro_get_assets_uri( 'admin-pages', 'js', '/inc/assets/' ), array( 'jquery' ), INSPIRO_THEME_VERSION, true );
+				wp_enqueue_script( 'inspiro-admin-pages', inspiro_get_assets_uri( 'admin-pages', 'js', 'inc/assets/' ), array( 'jquery' ), INSPIRO_THEME_VERSION, true );
 				wp_enqueue_script( "jquery-ui" );
 				wp_enqueue_script( "jquery-ui-tabs" );
 			}
