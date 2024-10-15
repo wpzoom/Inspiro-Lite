@@ -134,7 +134,8 @@
 	&.ins-inside-section {
 		.ins-guided-tour-step {
 			a.ins-go-button {
-				display: inline-block
+				display: inline-block;
+                margin-right: auto;
 			}
 
 			.ins-guided-tour-skip {
@@ -144,7 +145,8 @@
 	}
 
 	&.ins-last-step .ins-guided-tour-step a.ins-go-button {
-		display: inline-block
+		display: inline-block;
+        margin-right: auto;
 	}
 
 	a {
