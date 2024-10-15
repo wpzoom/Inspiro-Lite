@@ -1,4 +1,10 @@
-<?php $parent = wp_get_theme(); ?>
+<?php
+$parent = wp_get_theme();
+
+// install-one-click-demo-btn
+$btn_admin_link = esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) );
+
+?>
 
 <div class="wpz-onboard_wrapper">
 	<div id="tabs"><!-- #tabs -->
@@ -112,7 +118,7 @@
                                         <?php esc_html_e( 'Please install the One Click Demo Import plugin to use this feature. You can do that from the Recommended Plugins page.', 'inspiro' ); ?>
                                     </p>
                                     <p class="section_footer">
-                                        <a href="<?php echo esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) ); ?>"
+                                        <button
 										   class="button button-primary"
 										   id="install-one-click-demo-btn"
 										>
@@ -122,7 +128,7 @@
 												<?php esc_html_e( 'Install One Click Demo Import &rarr;', 'inspiro' ); ?>
 											</span>
 											<i class="dashicons dashicons-update spin-icon hidden-element"></i>
-                                        </a>
+                                        </button>
 
                                         <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/documentation/inspiro-lite/inspiro-lite-importing-the-demo-content/', 'inspiro' ) ); ?>"
 										   target="_blank"
