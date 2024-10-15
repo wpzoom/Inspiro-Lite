@@ -1,6 +1,4 @@
 jQuery(document).ready(function ($) {
-	console.log(ajaxurl);
-	console.log('este');
 	// Check if the target element exists.
 	let pointerTarget = $(customAdminPointer.pointer_target);
 
