@@ -280,7 +280,7 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 						 'description' => esc_html__( 'Unlock premium features: 7 Style Kits, Video Backgrounds, Portfolio Integration, Premium Support and much more...', 'inspiro' ),
 						'pro_text'    => esc_html__( 'View Inspiro Premium', 'inspiro' ),
 //						'pro_text'    => esc_html__( 'Learn More', 'inspiro' ),
-						'pro_url'     => 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=customizer&utm_campaign=bluebutton',
+						'pro_url'     => esc_url( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=customizer&utm_campaign=bluebutton'),
 //						'demo_link_text'    => esc_html__( 'View Demos', 'inspiro' ),
 //						'demo_link_url'     => '/wp-admin/themes.php?page=inspiro#demos',
 						'priority'    => 10,

@@ -66,7 +66,7 @@ class Inspiro_Customize_Section_Pro extends WP_Customize_Section
 
 		$json['desription'] = $this->description;
 		$json['pro_text'] = $this->pro_text;
-		$json['pro_url'] = esc_url($this->pro_url);
+		$json['pro_url'] = html_entity_decode($this->pro_url);
 		$json['demo_link_text'] = $this->demo_link_text;
 		$json['demo_link_url'] = $this->demo_link_url;
 

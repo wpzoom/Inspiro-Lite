@@ -19,6 +19,9 @@ define( 'INSPIRO_THEME_VERSION', '1.9.4' );
 define( 'INSPIRO_THEME_DIR', trailingslashit( get_template_directory() ) );
 define( 'INSPIRO_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
 define( 'INSPIRO_THEME_ASSETS_URI', INSPIRO_THEME_URI . 'dist' );
+// Marketing
+define( 'INSPIRO_MARKETING_UTM_CODE_STARTER_SITE', '?utm_source=wpadmin&utm_medium=starter-sites&utm_campaign=upgrade-premium' );
+define( 'INSPIRO_MARKETING_UTM_CODE_FOOTER_MENU', '?utm_source=wpadmin&utm_medium=footer-menu&utm_campaign=upgrade-premium' );
 
 // This theme requires WordPress 5.3 or later.
 if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
