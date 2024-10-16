@@ -486,9 +486,9 @@ class Inspiro_Theme_Upgrader {
 
 		}
 
-		if ( is_array( $header_image_data ) ) {
+		if ( is_array( $header_image_data ) && empty( $header_video_url ) ) {
 			$this->slide_post_attr['post_thumbnail_path_url'] = $header_image_data['url'];
-		} elseif ( is_object( $header_image_data ) ) {
+		} elseif ( is_object( $header_image_data ) && empty( $header_video_url ) ) {
 			$this->slide_post_attr['post_thumbnail_id'] = $header_image_data->attachment_id;
 		}
 
