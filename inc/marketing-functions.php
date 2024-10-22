@@ -39,8 +39,34 @@ function inspiro_has_dismissed_banner() {
  * Output the Black Friday banner markup.
  */
 function inspiro_display_black_friday_banner() { ?>
-	<div class="notice notice-success is-dismissible wpzoom-black-friday-banner">
-		<p><strong>Black Friday Deal:</strong> Upgrade to the premium version of <strong>Your Theme</strong> at 50% off! <a href="https://your-site.com/upgrade" target="_blank">Get the offer now!</a></p>
+	<div class="is-dismissible inspiro-bf-banner-container">
+		<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/marketing/bf-inspiro-premium.png'); ?>"
+		     class="bf-inspiro-banner-image"
+		     alt="Black Friday Deal"
+		>
+
+		<div class="banner-text-container">
+			<h2>Upgrade to <span class="green-text">Inspiro Premium</span></h2>
+			<span>Take your website to the next level with Inspiro Premium and unlock powerful features like:</span>
+
+			<div class="banner-promo-btns">
+				<button class="btn">Advanced Video Integration</button>
+				<button class="btn">Slideshow with Video Background</button>
+				<button class="btn">15+ Premium Starter Sites</button>
+				<button class="btn">Exclusive Premium Support</button>
+			</div>
+		</div>
+
+		<div class="upgrade-banner-container">
+			<div class="banner-clock">
+				<span>Hurry Up!</span>
+				<span class="clock-digits">
+					10d 16h 55m 30s
+				</span>
+
+				<a href="#" class="upgrade-now-btn">Upgrade now</a>
+			</div>
+		</div>
 	</div>
 <?php }
 
@@ -56,8 +82,11 @@ add_action('wp_ajax_inspiro_dismiss_black_friday_banner', 'inspiro_dismiss_black
  * Enqueue the script to handle banner dismissal.
  */
 function inspiro_enqueue_bf_banner_script() { ?>
+	<style>
+
+	</style>
 	<script type="text/javascript">
-		jQuery(document).on('click', '.wpzoom-black-friday-banner .notice-dismiss', function () {
+		jQuery(document).on('click', '.inspiro-black-friday-banner .notice-dismiss', function () {
 			jQuery.post(ajaxurl, {
 				action: 'inspiro_dismiss_black_friday_banner'
 			});
