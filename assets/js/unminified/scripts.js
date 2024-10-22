@@ -597,7 +597,7 @@ function inspiroResponsiveEmbeds() {
 					'img'
 				)[ 0 ];
 
-				if ( poster.src === handler.settings.posterUrl ) {
+				if ( poster && poster.src === handler.settings.posterUrl ) {
 					// Remove poster
 					handler.container.removeChild( poster );
 				}

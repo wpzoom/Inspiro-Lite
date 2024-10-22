@@ -5196,6 +5196,9 @@ figure.aligncenter:not(.wp-block-gallery) {
     .clean_skin_wrap_post h3 {
         font-size: 16px;
     }
+    .wpz-hero-home {
+        flex-direction: column;
+    }
     .site-title {
         font-size: 24px;
         font-size: 1.5rem;

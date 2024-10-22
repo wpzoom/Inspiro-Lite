@@ -105,6 +105,19 @@ $btn_admin_link = esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) )
                                                         </figure>
                                                     </li>
 
+                                                    <li class="design_video" data-design-id="inspiro-woocommerce">
+                                                        <figure title="Video Production">
+                                                            <div class="preview-thumbnail ocdi-import" style="background-image:url('https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-elementor-1.png')">
+                                                                <a href="https://demo.wpzoom.com/inspiro-lite-woo/" target="_blank" class="button-select-template"><?php esc_html_e( 'View Demo', 'inspiro' ); ?></a></div>
+                                                            <figcaption>
+                                                                <h5><?php esc_html_e( 'WooCommerce Shop', 'inspiro' ); ?></h5>
+
+                                                                <a href="<?php echo esc_url( admin_url( 'themes.php?page=one-click-demo-import&step=import&import=2' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Import Demo', 'inspiro' ); ?></a>
+
+                                                            </figcaption>
+                                                        </figure>
+                                                    </li>
+
                                                 </ul>
 
                                             </form>

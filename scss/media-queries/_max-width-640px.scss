@@ -7,6 +7,10 @@
 
     .clean_skin_wrap_post h3 { font-size: 16px; }
 
+    .wpz-hero-home {
+        flex-direction: column;
+    }
+
     .site-title {
         @include font-size(24);
         padding-bottom: 0;

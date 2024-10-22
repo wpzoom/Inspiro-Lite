@@ -274,7 +274,14 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
                   'slug'     => 'wpzoom-elementor-addons',
                   'required' => true,
                 ];
-              }
+              } elseif ( $_GET['import'] === '2' ) {
+
+                $theme_plugins[] =  [
+                    'name'     => 'WooCommerce',
+                    'slug'     => 'woocommerce',
+                    'required' => true,
+                ];
+                }
             }
 
           return array_merge( $plugins, $theme_plugins );
@@ -298,6 +305,14 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
               'import_customizer_file_url' => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-customizer.dat',
               'import_preview_image_url'   => 'https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-elementor-1.png',
               'preview_url'                => 'https://demo.wpzoom.com/inspiro-lite/',
+            ],
+            [
+              'import_file_name'           => 'Inspiro Lite - WooCommerce Shop',
+              'import_file_url'            => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-blocks.xml',
+              'import_widget_file_url'     => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-widgets.wie',
+              'import_customizer_file_url' => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-customizer.dat',
+              'import_preview_image_url'   => 'https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-gutenberg-1.png',
+              'preview_url'                => 'https://demo.wpzoom.com/inspiro-lite-blocks/',
             ],
           ];
         }
