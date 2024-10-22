@@ -92,9 +92,15 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			color: #FFFFFF;
-			background: #242628;
+			color: #fff;
+			/* drow squares with CSS */
+			background-color: #242628; /* Base background color for the squares */
+			background-image:
+				linear-gradient(90deg, rgba(255, 255, 255, .1)  1px, transparent 1px),
+				linear-gradient(180deg, rgba(255, 255, 255, .1) 1px, transparent 1px);
+			background-size: 20px 20px; /* Size of the squares, including borders */
 		}
+
 		.inspiro-bf-banner-container .radial-gradient {
 			position: absolute;
 			width: 150px;
@@ -119,7 +125,7 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 			margin: 10px 0;
 		}
 		.banner-text-container h2{
-			color: #FFFFFF;
+			color: #fff;
 			font-size: 30px;
 			margin: 0 0 10px;
 		}
@@ -173,7 +179,7 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 			background: #22BB66;
 			padding: 15px 29px;
 			text-decoration: none;
-			color: #FFFFFF;
+			color: #fff;
 			text-transform: uppercase;
 			display: inline-block;
 			line-height: 30px;
