@@ -112,8 +112,20 @@ require INSPIRO_THEME_DIR . 'inc/icon-functions.php';
  * Theme admin notices and info page
  */
 if ( is_admin() ) {
+	global $pagenow;
+
 	require INSPIRO_THEME_DIR . 'inc/admin-notice.php';
 	require INSPIRO_THEME_DIR . 'inc/admin/admin-api.php';
+
+	/**
+	 * Theme Marketing stuff
+	 * showing only on main dashboard, themes and theme dashboard pages
+	 */
+	if ( $pagenow === 'index.php' || $pagenow === 'themes.php' ||
+	     ( $pagenow === 'admin.php' && $_SERVER['QUERY_STRING'] === 'page=inspiro' ) ) {
+		require INSPIRO_THEME_DIR . 'inc/marketing-functions.php';
+	}
+
 
 	if ( current_user_can( 'manage_options' ) ) {
 		require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-notices.php';
@@ -125,11 +137,6 @@ if ( is_admin() ) {
  * Theme Upgrader
  */
 require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-theme-upgrader.php';
-
-/**
- * Theme Marketing stuff
- */
-require INSPIRO_THEME_DIR . 'inc/marketing-functions.php';
 
 /**
  * Inline theme css generated dynamically
