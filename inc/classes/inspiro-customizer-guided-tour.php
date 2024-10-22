@@ -135,6 +135,7 @@ if ( ! class_exists( 'Inspiro_Customizer_Guided_Tour' ) ) {
 					{{{ data.message }}}
 
 					<div class="guided-tour-step-nav-elements">
+						<# if ( data.last_step || data.first_step ) { #>
 						<a class="button button-primary ins-go-button <# if (data.last_step ) { #>ins-done-btn<# } #>"
 						   href="#">
 							<# if ( data.button_text ) { #>
@@ -143,6 +144,8 @@ if ( ! class_exists( 'Inspiro_Customizer_Guided_Tour' ) ) {
 							<?php esc_attr_e( 'Next', 'inspiro' ); ?>
 							<# } #>
 						</a>
+						<# } #>
+
 						<# if ( ! data.last_step ) { #>
 						<# if ( data.first_step ) { #>
 						<a href="#" class="ins-guided-tour-skip">
@@ -150,9 +153,9 @@ if ( ! class_exists( 'Inspiro_Customizer_Guided_Tour' ) ) {
 							<# } else { #>
 							<a href="#" class="ins-guided-tour-next-step">
 								<?php esc_attr_e( 'Next step &rarr;', 'inspiro' ); ?>
-								<# } #>
-							</a>
 							<# } #>
+							</a>
+						<# } #>
 					</div>
 				</div>
 			</script>
