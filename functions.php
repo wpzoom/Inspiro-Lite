@@ -127,6 +127,11 @@ if ( is_admin() ) {
 require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-theme-upgrader.php';
 
 /**
+ * Theme Marketing stuff
+ */
+require INSPIRO_THEME_DIR . 'inc/marketing-functions.php';
+
+/**
  * Inline theme css generated dynamically
  */
 require INSPIRO_THEME_DIR . 'inc/dynamic-css/body.php';
@@ -137,3 +142,4 @@ require INSPIRO_THEME_DIR . 'inc/dynamic-css/hero-header-desc.php';
 require INSPIRO_THEME_DIR . 'inc/dynamic-css/hero-header-button.php';
 require INSPIRO_THEME_DIR . 'inc/dynamic-css/main-menu.php';
 require INSPIRO_THEME_DIR . 'inc/dynamic-css/mobile-menu.php';
+
