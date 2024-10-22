@@ -41,6 +41,7 @@ function inspiro_has_dismissed_banner() {
  */
 function inspiro_display_black_friday_banner() { ?>
 	<div class="is-dismissible inspiro-bf-banner-container notice">
+		<div class="radial-gradient left"></div>
 		<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/marketing/bf-inspiro-premium.png'); ?>"
 		     class="bf-inspiro-banner-image"
 		     alt="WPZOOM Black Friday Deal"
@@ -68,8 +69,9 @@ function inspiro_display_black_friday_banner() { ?>
 					<span><i>30</i>s</span>
 				</div>
 			</div>
-			<a href="<?php echo BTN_UPGRADE_NOW_LINK ?>" class="btn-upgrade-now">Upgrade now</a>
+			<a href="<?php echo BTN_UPGRADE_NOW_LINK ?>" class="btn-upgrade-now">Upgrade now &rarr;</a>
 		</div>
+		<div class="radial-gradient right"></div>
 	</div>
 <?php }
 
@@ -92,6 +94,22 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 			justify-content: space-between;
 			color: #FFFFFF;
 			background: #242628;
+		}
+		.inspiro-bf-banner-container .radial-gradient {
+			position: absolute;
+			width: 150px;
+			height: 150px;
+			/*border: 1px solid #FFFFFF;*/
+		}
+		.inspiro-bf-banner-container .radial-gradient.left{
+			bottom: 0;
+			left: 0;
+			background: radial-gradient(90% 70% at 0% 100%, #22BB66 -129%, rgba(34, 187, 102, 0) 120%);
+		}
+		.inspiro-bf-banner-container .radial-gradient.right{
+			right: 0;
+			top: 0;
+			background: radial-gradient(70% 90% at 100% 0%, #22BB66 -129%, rgba(34, 187, 102, 0) 120%);
 		}
 		.inspiro-bf-banner-container.notice {
 			border: unset;
@@ -158,6 +176,7 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 			color: #FFFFFF;
 			text-transform: uppercase;
 			display: inline-block;
+			line-height: 30px;
 		}
 	</style>
 	<script type="text/javascript">
