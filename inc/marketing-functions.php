@@ -8,9 +8,9 @@
  */
 
 // Define the Black Friday campaign dates as constants
-const BF_START_DATE = '2024-10-21'; // testing
+const BF_START_DATE = '2024-10-22'; // for testing
 //const BF_START_DATE = '2024-11-27';
-const BF_END_DATE = '2024-12-03';
+const BF_END_DATE = '2024-12-04';
 const BTN_UPGRADE_NOW_LINK = '#';
 
 /**
@@ -19,8 +19,6 @@ const BTN_UPGRADE_NOW_LINK = '#';
 function inspiro_show_black_friday_banner() {
 	// Get current date
 	$today = current_time('Y-m-d');
-
-	echo current_time('Y-m-d');
 
 	// Only show the banner between the updated Black Friday dates
 	if ($today >= BF_START_DATE && $today <= BF_END_DATE && !inspiro_has_dismissed_banner()) {
@@ -41,7 +39,15 @@ function inspiro_has_dismissed_banner() {
 /**
  * Output the Black Friday banner markup.
  */
-function inspiro_display_black_friday_banner() { ?>
+function inspiro_display_black_friday_banner() {
+
+	// - Functionality for render first date/time - //
+	$today = new DateTime();
+	$endDay = new DateTime( BF_END_DATE );
+
+	// Calculate the difference in days between today and the end date
+	$interval = $today->diff( $endDay );
+	?>
 	<div class="inspiro-banner-container-wrapper">
 		<div class="is-dismissible inspiro-bf-banner-container notice">
 			<div class="radial-gradient left"></div>
@@ -66,10 +72,10 @@ function inspiro_display_black_friday_banner() { ?>
 				<div class="banner-clock">
 					<span class="hurry-up">Hurry Up!</span>
 					<div class="clock-digits">
-						<span><i id="days"></i>d</span>
-						<span><i id="hours"></i>h</span>
-						<span><i id="minutes"></i>m</span>
-						<span><i id="seconds"></i>s</span>
+						<span><i id="days"><?php echo $interval->days ?></i>d</span>
+						<span><i id="hours"><?php echo $interval->h ?></i>h</span>
+						<span><i id="minutes"><?php echo $interval->i ?></i>m</span>
+						<span><i id="seconds"><?php echo $interval->s ?></i>s</span>
 					</div>
 				</div>
 				<a href="<?php echo BTN_UPGRADE_NOW_LINK ?>" class="btn-upgrade-now">Upgrade now &rarr;</a>
@@ -250,7 +256,12 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 			// Set the date we're counting down to
 			const countDownDate = new Date("<?php echo BF_END_DATE; ?>").getTime(); // example was this type: Dec 31, 2023 23:59:59
 
-			// Update the count down every 1 second
+			// Get the current minute, for testing purposes
+			//	<?php //$today = new DateTime(); ?>
+			//console.log('php: ' + <?php //echo $today->format('i') ?>//);
+			//console.log('js: ' + new Date().getMinutes());
+
+			// Update the countdown every 1 second
 			const x = setInterval(function() {
 
 				// Get today's date and time
