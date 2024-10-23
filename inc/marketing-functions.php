@@ -8,7 +8,7 @@
  */
 
 // Define the Black Friday campaign dates as constants
-const BF_START_DATE = '2024-10-22'; // for testing
+const BF_START_DATE = '2024-10-23'; // for testing
 //const BF_START_DATE = '2024-11-27';
 const BF_END_DATE = '2024-12-04';
 const BTN_UPGRADE_NOW_LINK = '#';
@@ -78,7 +78,7 @@ function inspiro_display_black_friday_banner() {
 						<span><i id="seconds"><?php echo $interval->s ?></i>s</span>
 					</div>
 				</div>
-				<a href="<?php echo BTN_UPGRADE_NOW_LINK ?>" class="btn-upgrade-now">Upgrade now &rarr;</a>
+				<a href="<?php echo BTN_UPGRADE_NOW_LINK ?>" target="_blank" class="btn-upgrade-now">Upgrade now &rarr;</a>
 			</div>
 			<div class="radial-gradient right"></div>
 		</div>
