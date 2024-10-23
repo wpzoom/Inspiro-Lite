@@ -2,7 +2,7 @@
 
     <div class="theme-info-wrap">
 
-        <h3 class="wpz-onboard_content-main-title"><?php esc_html_e( 'Inspiro Premium Demos (16)', 'inspiro' ); ?></h3>
+        <h3 class="wpz-onboard_content-main-title"><?php esc_html_e( 'Inspiro Premium Demos (17)', 'inspiro' ); ?></h3>
         <p class="wpz-onboard_content-main-intro"><?php esc_html_e( 'Below you can view demos available in the Inspiro Premium theme. You can get access to all of them by purchasing the Premium version of the theme.', 'inspiro' ); ?></p>
 
         <ol class="wpz-onboard_content-main-steps">
@@ -16,6 +16,23 @@
                             <li class="design_default-elementor">
                                 <figure title="Portfolio (Default)">
                                     <div class="preview-thumbnail"
+                                         style="background-image:url('https://demo.wpzoom.com/inspiro-pro-demo/wp-content/themes/inspiro-pro-select/images/site-layout_agency-dark.png')">
+                                        <a href="https://demo.wpzoom.com/inspiro-agency2/" target="_blank"
+                                           class="button-select-template">View Demo</a></div>
+                                    <figcaption>
+                                        <h5>Agency / Business (new)</h5>
+
+                                        <p>
+                                            <a href="https://demo.wpzoom.com/inspiro-agency2/" target="_blank" rel="noopener" title="Live preview">Live preview</a>
+
+                                        </p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+
+                            <li class="design_default-elementor">
+                                <figure title="Portfolio (Default)">
+                                    <div class="preview-thumbnail"
                                          style="background-image:url('https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/home-thumb.png')">
                                         <a href="https://demo.wpzoom.com/inspiro/" target="_blank"
                                            class="button-select-template">View Demo</a></div>
@@ -23,9 +40,7 @@
                                         <h5>Premium Demo</h5>
 
                                         <p>
-                                            <a href="https://demo.wpzoom.com/inspiro/"
-                                               target="_blank" rel="noopener" title="Live preview">Live
-                                                preview</a>
+                                            <a href="https://demo.wpzoom.com/inspiro/" target="_blank" rel="noopener" title="Live preview">Live preview</a>
 
                                         </p>
                                     </figcaption>

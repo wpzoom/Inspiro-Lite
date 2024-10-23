@@ -81,7 +81,7 @@ $btn_admin_link = esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) )
                                                 <ul>
                                                     <li class="design_default-elementor">
                                                         <figure title="Portfolio (Default)">
-                                                            <div class="preview-thumbnail ocdi-import" style="background-image:url('https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-gutenberg-1.png')">
+                                                            <div class="preview-thumbnail ocdi-import" style="background-image:url('https://www.wpzoom.com/wp-content/uploads/2024/10/inspiro-lite-block.png')">
                                                                 <a href="https://demo.wpzoom.com/inspiro-lite-blocks/" target="_blank" class="button-select-template"><?php esc_html_e( 'View Demo', 'inspiro' ); ?></a></div>
                                                             <figcaption>
                                                                 <h5><?php esc_html_e( 'Block Editor Demo', 'inspiro' ); ?></h5>
@@ -107,7 +107,7 @@ $btn_admin_link = esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) )
 
                                                     <li class="design_video" data-design-id="inspiro-woocommerce">
                                                         <figure title="Video Production">
-                                                            <div class="preview-thumbnail ocdi-import" style="background-image:url('https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-elementor-1.png')">
+                                                            <div class="preview-thumbnail ocdi-import" style="background-image:url('https://www.wpzoom.com/wp-content/uploads/2024/10/inspiro-lite-woo.png')">
                                                                 <a href="https://demo.wpzoom.com/inspiro-lite-woo/" target="_blank" class="button-select-template"><?php esc_html_e( 'View Demo', 'inspiro' ); ?></a></div>
                                                             <figcaption>
                                                                 <h5><?php esc_html_e( 'WooCommerce Shop', 'inspiro' ); ?></h5>

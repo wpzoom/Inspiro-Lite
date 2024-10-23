@@ -238,15 +238,8 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 			$GLOBALS['content_width'] = apply_filters( 'inspiro_content_width', $content_width );
 		}
 
-
-
         public function ocdi_register_plugins( $plugins ) {
           $theme_plugins = [
-            [
-                'name'     => 'WPZOOM Portfolio',
-                'slug'     => 'wpzoom-portfolio',
-                'required' => true,
-            ],
             [
                 'name'     => 'Instagram Widget by WPZOOM',
                 'slug'     => 'instagram-widget-by-wpzoom',
@@ -262,17 +255,30 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
             ) {
 
               // Adding one additional plugin for the first demo import ('import' number = 0).
-              if ( $_GET['import'] === '1' ) {
+              if ( $_GET['import'] === '0' ) {
+
+                $theme_plugins[] =  [
+                    'name'     => 'WPZOOM Portfolio',
+                    'slug'     => 'wpzoom-portfolio',
+                    'required' => true,
+                ];
+             } elseif ( $_GET['import'] === '1' ) {
+
+
                 $theme_plugins[] =  [
                     'name'     => 'Elementor',
                     'slug'     => 'elementor',
                     'required' => true,
                 ];
-
                 $theme_plugins[] = [
                   'name'     => 'Elementor Addons by WPZOOM',
                   'slug'     => 'wpzoom-elementor-addons',
                   'required' => true,
+                ];
+                $theme_plugins[] =  [
+                    'name'     => 'WPZOOM Portfolio',
+                    'slug'     => 'wpzoom-portfolio',
+                    'required' => true,
                 ];
               } elseif ( $_GET['import'] === '2' ) {
 
@@ -295,7 +301,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
               'import_file_url'            => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-blocks.xml',
               'import_widget_file_url'     => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-widgets.wie',
               'import_customizer_file_url' => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-customizer.dat',
-              'import_preview_image_url'   => 'https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-gutenberg-1.png',
+              'import_preview_image_url'   => 'https://www.wpzoom.com/wp-content/uploads/2024/10/inspiro-lite-block.png',
               'preview_url'                => 'https://demo.wpzoom.com/inspiro-lite-blocks/',
             ],
             [
@@ -308,11 +314,11 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
             ],
             [
               'import_file_name'           => 'Inspiro Lite - WooCommerce Shop',
-              'import_file_url'            => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-blocks.xml',
-              'import_widget_file_url'     => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-widgets.wie',
-              'import_customizer_file_url' => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-customizer.dat',
-              'import_preview_image_url'   => 'https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-gutenberg-1.png',
-              'preview_url'                => 'https://demo.wpzoom.com/inspiro-lite-blocks/',
+              'import_file_url'            => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-woo.xml',
+              'import_widget_file_url'     => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-woo-widgets.wie',
+              'import_customizer_file_url' => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-woo.dat',
+              'import_preview_image_url'   => 'https://www.wpzoom.com/wp-content/uploads/2024/10/inspiro-lite-woo.png',
+              'preview_url'                => 'https://demo.wpzoom.com/inspiro-lite-woo/',
             ],
           ];
         }
