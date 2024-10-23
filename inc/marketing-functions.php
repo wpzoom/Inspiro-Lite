@@ -20,6 +20,8 @@ function inspiro_show_black_friday_banner() {
 	// Get current date
 	$today = current_time('Y-m-d');
 
+	echo current_time('Y-m-d');
+
 	// Only show the banner between the updated Black Friday dates
 	if ($today >= BF_START_DATE && $today <= BF_END_DATE && !inspiro_has_dismissed_banner()) {
 		inspiro_display_black_friday_banner();
@@ -64,10 +66,10 @@ function inspiro_display_black_friday_banner() { ?>
 				<div class="banner-clock">
 					<span class="hurry-up">Hurry Up!</span>
 					<div class="clock-digits">
-						<span><i>10</i>d</span>
-						<span><i>16</i>h</span>
-						<span><i>55</i>m</span>
-						<span><i>30</i>s</span>
+						<span><i id="days"></i>d</span>
+						<span><i id="hours"></i>h</span>
+						<span><i id="minutes"></i>m</span>
+						<span><i id="seconds"></i>s</span>
 					</div>
 				</div>
 				<a href="<?php echo BTN_UPGRADE_NOW_LINK ?>" class="btn-upgrade-now">Upgrade now &rarr;</a>
@@ -237,11 +239,50 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 		}
 	</style>
 	<script type="text/javascript">
-		jQuery(document).on('click', '.inspiro-black-friday-banner .notice-dismiss', function () {
-			jQuery.post(ajaxurl, {
-				action: 'inspiro_dismiss_black_friday_banner'
+		document.addEventListener("DOMContentLoaded", function() {
+
+			jQuery(document).on('click', '.inspiro-black-friday-banner .notice-dismiss', function () {
+				jQuery.post(ajaxurl, {
+					action: 'inspiro_dismiss_black_friday_banner'
+				});
 			});
+
+			// Set the date we're counting down to
+			const countDownDate = new Date("<?php echo BF_END_DATE; ?>").getTime(); // example was this type: Dec 31, 2023 23:59:59
+
+			// Update the count down every 1 second
+			const x = setInterval(function() {
+
+				// Get today's date and time
+				const now = new Date().getTime();
+
+				// Find the distance between now and the countdown date
+				const distance = countDownDate - now;
+
+				// Time calculations for days, hours, minutes and seconds
+				let days, hours, minutes, seconds;
+				if (distance > 0) {
+					days = Math.floor(distance / (1000 * 60 * 60 * 24));
+					hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+					minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+					seconds = Math.floor((distance % (1000 * 60)) / 1000);
+				} else {
+					days = hours = minutes = seconds = 0;
+				}
+
+				// Display the result in the elements with respective ids
+				document.getElementById("days").innerText = days;
+				document.getElementById("hours").innerText = hours;
+				document.getElementById("minutes").innerText = minutes;
+				document.getElementById("seconds").innerText = seconds;
+
+				// If the count down is finished, clear the interval
+				if (distance < 0) {
+					clearInterval(x);
+				}
+			}, 1000);
 		});
+
 	</script>
 <?php }
 add_action('admin_footer', 'inspiro_enqueue_bf_banner_script_and_styles');
