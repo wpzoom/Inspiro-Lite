@@ -8,10 +8,13 @@
  */
 
 // Define the Black Friday campaign dates as constants
-const BF_START_DATE = '2024-10-23'; // for testing
-//const BF_START_DATE = '2024-11-27';
-const BF_END_DATE = '2024-12-04';
+//const BF_START_DATE = '2024-10-23'; // for testing
+//const BF_END_DATE = '2024-12-03'; // including and 3 day
 const BTN_UPGRADE_NOW_LINK = '#';
+
+// test purpose
+const BF_START_DATE = '2024-10-22';
+const BF_END_DATE = '2024-10-24';
 
 /**
  * Display the Black Friday banner if the conditions are met.
@@ -265,7 +268,7 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 			const x = setInterval(function() {
 
 				// Get today's date and time
-				const now = new Date().getTime();
+				let now = new Date().getTime();
 
 				// Find the distance between now and the countdown date
 				const distance = countDownDate - now;
