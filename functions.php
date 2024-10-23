@@ -121,8 +121,8 @@ if ( is_admin() ) {
 	 * Theme Marketing stuff
 	 * showing only on main dashboard, themes and theme dashboard pages
 	 */
-	if ( $pagenow === 'index.php' || $pagenow === 'themes.php' && $_SERVER['QUERY_STRING'] === ''  ||
-	     ( $pagenow === 'admin.php' && ( $_SERVER['QUERY_STRING'] === 'page=inspiro' || $_SERVER['QUERY_STRING'] === 'page=inspiro-demo' ))) {
+	if ( $pagenow === 'index.php' ||  $pagenow === 'themes.php' && $_SERVER['QUERY_STRING'] === '' ||
+	      $pagenow === 'admin.php' && ( $_SERVER['QUERY_STRING'] === 'page=inspiro' || $_SERVER['QUERY_STRING'] === 'page=inspiro-demo' )) {
 
 		require INSPIRO_THEME_DIR . 'inc/marketing-functions.php';
 	}

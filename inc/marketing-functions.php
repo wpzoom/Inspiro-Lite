@@ -40,38 +40,40 @@ function inspiro_has_dismissed_banner() {
  * Output the Black Friday banner markup.
  */
 function inspiro_display_black_friday_banner() { ?>
-	<div class="is-dismissible inspiro-bf-banner-container notice">
-		<div class="radial-gradient left"></div>
-		<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/marketing/bf-inspiro-premium.png'); ?>"
-		     class="bf-inspiro-banner-image"
-		     alt="WPZOOM Black Friday Deal"
-		>
+	<div class="inspiro-banner-container-wrapper">
+		<div class="is-dismissible inspiro-bf-banner-container notice">
+			<div class="radial-gradient left"></div>
+			<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/marketing/bf-inspiro-premium.png'); ?>"
+				 class="bf-inspiro-banner-image"
+				 alt="WPZOOM Black Friday Deal"
+			>
 
-		<div class="banner-text-container">
-			<h2>Upgrade to <span class="green-text">Inspiro Premium</span></h2>
-			<span class="banner-text">Take your website to the next level with Inspiro Premium and unlock powerful features like:</span>
+			<div class="banner-text-container">
+				<h2>Upgrade to <span class="green-text">Inspiro Premium</span></h2>
+				<span class="banner-text">Take your website to the next level with Inspiro Premium and unlock powerful features like:</span>
 
-			<div class="banner-promo-btns">
-				<div class="banner-btn">Advanced Video Integration</div>
-				<div class="banner-btn">Slideshow with Video Background</div>
-				<div class="banner-btn">15+ Premium Starter Sites</div>
-				<div class="banner-btn">Exclusive Premium Support</div>
-			</div>
-		</div>
-
-		<div class="upgrade-banner">
-			<div class="banner-clock">
-				<span class="hurry-up">Hurry Up!</span>
-				<div class="clock-digits">
-					<span><i>10</i>d</span>
-					<span><i>16</i>h</span>
-					<span><i>55</i>m</span>
-					<span><i>30</i>s</span>
+				<div class="banner-promo-btns">
+					<div class="banner-btn">Advanced Video Integration</div>
+					<div class="banner-btn">Slideshow with Video Background</div>
+					<div class="banner-btn">15+ Premium Starter Sites</div>
+					<div class="banner-btn">Exclusive Premium Support</div>
 				</div>
 			</div>
-			<a href="<?php echo BTN_UPGRADE_NOW_LINK ?>" class="btn-upgrade-now">Upgrade now &rarr;</a>
+
+			<div class="upgrade-banner">
+				<div class="banner-clock">
+					<span class="hurry-up">Hurry Up!</span>
+					<div class="clock-digits">
+						<span><i>10</i>d</span>
+						<span><i>16</i>h</span>
+						<span><i>55</i>m</span>
+						<span><i>30</i>s</span>
+					</div>
+				</div>
+				<a href="<?php echo BTN_UPGRADE_NOW_LINK ?>" class="btn-upgrade-now">Upgrade now &rarr;</a>
+			</div>
+			<div class="radial-gradient right"></div>
 		</div>
-		<div class="radial-gradient right"></div>
 	</div>
 <?php }
 
@@ -88,10 +90,16 @@ add_action('wp_ajax_inspiro_dismiss_black_friday_banner', 'inspiro_dismiss_black
  */
 function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 	<style>
+		.inspiro-banner-container-wrapper {
+			margin: 10px 20px 0 2px;
+		}
 		/*	rewrite WP core rule */
 		.inspiro-bf-banner-container.notice.is-dismissible {
 			padding-right: 14px;
+			margin: 0;
+			/*margin: 10px 20px 0 0;*/
 		}
+
 		.inspiro-bf-banner-container {
 			display: flex;
 			align-items: center;
@@ -147,7 +155,7 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 			display: inline-block;
 		}
 		.banner-promo-btns {
-			width: 500px;
+			max-width: 500px;
 		}
 		.banner-promo-btns .banner-btn {
 			padding: 4px 16px;
@@ -192,6 +200,15 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 			line-height: 20px;
 			z-index: 999;
 			position: relative;
+		}
+
+		@media screen and (max-width: 1023px) {
+			.inspiro-bf-banner-container {
+				flex-direction: column;
+			}
+			.banner-text-container .green-text {
+				line-height: 30px;
+			}
 		}
 	</style>
 	<script type="text/javascript">
