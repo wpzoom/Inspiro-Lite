@@ -175,6 +175,7 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 			margin-bottom: 5px;
 		}
 		.banner-clock .clock-digits {
+			display: flex;
 			font-size: 14px;
 			font-weight: 300;
 			margin-bottom: 10px;
@@ -203,11 +204,35 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 		}
 
 		@media screen and (max-width: 1023px) {
+			.inspiro-banner-container-wrapper {
+				margin-right: 10px;
+			}
 			.inspiro-bf-banner-container {
 				flex-direction: column;
 			}
+			.inspiro-bf-banner-container.notice.is-dismissible {
+				padding-right: 0;
+			}
+			.banner-text-container {
+				margin: 14px 0 14px 0;
+			}
 			.banner-text-container .green-text {
 				line-height: 30px;
+			}
+			.upgrade-banner {
+				margin-bottom: 10px;
+			}
+		}
+		@media screen and (min-width: 1024px) and (max-width: 1230px) {
+			.inspiro-bf-banner-container.notice.is-dismissible {
+				padding-right: 0px;
+			}
+			.bf-inspiro-banner-image {
+				margin-right: 10px;
+			}
+			.upgrade-banner a.btn-upgrade-now {
+				font-size: 14px;
+				padding: 10px 10px;
 			}
 		}
 	</style>
