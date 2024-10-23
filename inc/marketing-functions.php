@@ -88,6 +88,10 @@ add_action('wp_ajax_inspiro_dismiss_black_friday_banner', 'inspiro_dismiss_black
  */
 function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 	<style>
+		/*	rewrite WP core rule */
+		.inspiro-bf-banner-container.notice.is-dismissible {
+			padding-right: 14px;
+		}
 		.inspiro-bf-banner-container {
 			display: flex;
 			align-items: center;
@@ -121,13 +125,16 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 			border: unset;
 		}
 		.bf-inspiro-banner-image {
-			max-width: 200px;
+			max-width: 190px;
 			margin: 10px 0;
+		}
+		.banner-text-container {
+			margin: 14px 0 5px 0;
 		}
 		.banner-text-container h2{
 			color: #fff;
 			font-size: 30px;
-			margin: 0 0 10px;
+			margin: 0 0 15px;
 		}
 		.banner-text-container .green-text {
 			color: #22BB66;
@@ -182,7 +189,9 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 			color: #fff;
 			text-transform: uppercase;
 			display: inline-block;
-			line-height: 30px;
+			line-height: 20px;
+			z-index: 999;
+			position: relative;
 		}
 	</style>
 	<script type="text/javascript">
