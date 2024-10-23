@@ -57,7 +57,7 @@ function inspiro_display_black_friday_banner() {
 			>
 
 			<div class="banner-text-container">
-				<h2>Upgrade to <span class="green-text">Inspiro Premium</span></h2>
+				<h2>Upgrade to <span class="green-text">Inspiro Premium!</span></h2>
 				<span class="banner-text">Take your website to the next level with Inspiro Premium and unlock powerful features like:</span>
 
 				<div class="banner-promo-btns">
@@ -99,19 +99,17 @@ add_action('wp_ajax_inspiro_dismiss_black_friday_banner', 'inspiro_dismiss_black
 function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 	<style>
 		.inspiro-banner-container-wrapper {
-			margin: 10px 20px 0 2px;
+			margin: 10px 20px 20px 2px;
 		}
 		/*	rewrite WP core rule */
 		.inspiro-bf-banner-container.notice.is-dismissible {
-			padding-right: 14px;
-			margin: 0;
-			/*margin: 10px 20px 0 0;*/
+			margin: 10px 0 20px 0;
 		}
 
 		.inspiro-bf-banner-container {
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
+			justify-content: flex-start;
 			color: #fff;
 			/* drow squares with CSS */
 			background-color: #242628; /* Base background color for the squares */
@@ -119,6 +117,9 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 				linear-gradient(90deg, rgba(255, 255, 255, .1)  1px, transparent 1px),
 				linear-gradient(180deg, rgba(255, 255, 255, .1) 1px, transparent 1px);
 			background-size: 20px 20px; /* Size of the squares, including borders */
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px 30px 10px;
 		}
 
 		.inspiro-bf-banner-container .radial-gradient {
@@ -131,25 +132,28 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 			bottom: 0;
 			left: 0;
 			background: radial-gradient(90% 70% at 0% 100%, #22BB66 -129%, rgba(34, 187, 102, 0) 120%);
+            border-radius: 0 0 0 8px;
 		}
 		.inspiro-bf-banner-container .radial-gradient.right{
 			right: 0;
 			top: 0;
 			background: radial-gradient(70% 90% at 100% 0%, #22BB66 -129%, rgba(34, 187, 102, 0) 120%);
+            border-radius: 0 8px 0 0;
 		}
 		.inspiro-bf-banner-container.notice {
 			border: unset;
 		}
 		.bf-inspiro-banner-image {
-			max-width: 190px;
-			margin: 10px 0;
+			max-width: 160px;
+			margin: 0 0 10px;
 		}
 		.banner-text-container {
-			margin: 14px 0 5px 0;
+			margin-left: 40px;
 		}
 		.banner-text-container h2{
 			color: #fff;
-			font-size: 30px;
+			font-size: 26px;
+            line-height: 1.2;
 			margin: 0 0 15px;
 		}
 		.banner-text-container .green-text {
@@ -158,12 +162,8 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 		.banner-text-container .banner-text {
 			font-size: 14px;
 			font-weight: 300;
-			line-height: 26px;
-			margin-bottom: 5px;
+			margin-bottom: 15px;
 			display: inline-block;
-		}
-		.banner-promo-btns {
-			max-width: 500px;
 		}
 		.banner-promo-btns .banner-btn {
 			padding: 4px 16px;
@@ -172,8 +172,12 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 			border-radius: 30px;
 			display: inline-block;
 			margin: 0 5px 8px 0;
-			font-size: 11px;
+			font-size: 12px;
+            font-weight: 600;
 		}
+        .upgrade-banner {
+            margin-left: auto;
+        }
 		.upgrade-banner .banner-clock {
 			display: flex;
 			flex-direction: column;
@@ -198,39 +202,54 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 			font-size: 20px;
 		}
 		.upgrade-banner a.btn-upgrade-now {
-			font-size: 18px;
+			font-size: 16px;
 			font-weight: 600;
 			background: #22BB66;
-			padding: 15px 29px;
+			padding: 13px 25px;
 			text-decoration: none;
 			color: #fff;
 			text-transform: uppercase;
 			display: inline-block;
-			line-height: 20px;
 			z-index: 999;
 			position: relative;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, .1) 0 1px 3px 0, rgba(0, 0, 0, .06) 0 1px 2px 0;
+            white-space: nowrap;
 		}
+
+        .upgrade-banner a.btn-upgrade-now:hover {
+            background: #29cf73;
+            box-shadow: rgba(0, 0, 0, .1) 0 4px 6px -1px, rgba(0, 0, 0, .06) 0 2px 4px -1px;
+        }
 
 		@media screen and (max-width: 1023px) {
 			.inspiro-banner-container-wrapper {
 				margin-right: 10px;
 			}
-			.inspiro-bf-banner-container {
-				flex-direction: column;
-			}
-			.inspiro-bf-banner-container.notice.is-dismissible {
-				padding-right: 0;
-			}
-			.banner-text-container {
-				margin: 14px 0 14px 0;
-			}
-			.banner-text-container .green-text {
-				line-height: 30px;
-			}
+
 			.upgrade-banner {
 				margin-bottom: 10px;
+                margin-left: 10px;
 			}
+
+            .banner-promo-btns,
+            .upgrade-banner .banner-clock { display: none; }
 		}
+
+        @media screen and (max-width: 700px) {
+            .bf-inspiro-banner-image { display: none; }
+            .banner-text-container {
+                margin-left: 0;
+            }
+        }
+
+
+        @media screen and (max-width: 550px) {
+
+            .inspiro-bf-banner-container {
+                flex-direction: column;
+            }
+        }
 		@media screen and (min-width: 1024px) and (max-width: 1230px) {
 			.inspiro-bf-banner-container.notice.is-dismissible {
 				padding-right: 0px;
