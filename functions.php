@@ -2,10 +2,10 @@
 /**
  * Inspiro functions and definitions
  *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ * @link    https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package Inspiro
- * @since Inspiro 1.0.0
+ * @since   Inspiro 1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -121,8 +121,9 @@ if ( is_admin() ) {
 	 * Theme Marketing stuff
 	 * showing only on main dashboard, themes and theme dashboard pages
 	 */
-	if ( $pagenow === 'index.php' || $pagenow === 'themes.php' ||
-	     ( $pagenow === 'admin.php' && $_SERVER['QUERY_STRING'] === 'page=inspiro' ) ) {
+	if ( $pagenow === 'index.php' || $pagenow === 'themes.php' && $_SERVER['QUERY_STRING'] === ''  ||
+	     ( $pagenow === 'admin.php' && ( $_SERVER['QUERY_STRING'] === 'page=inspiro' || $_SERVER['QUERY_STRING'] === 'page=inspiro-demo' ))) {
+
 		require INSPIRO_THEME_DIR . 'inc/marketing-functions.php';
 	}
 
