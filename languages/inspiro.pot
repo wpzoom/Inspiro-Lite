@@ -1114,7 +1114,7 @@ msgid ""
 msgstr ""
 
 #. URI of the theme
-msgid "https://www.wpzoom.com/free-wordpress-themes/inspiro-lite/"
+msgid "https://www.wpzoom.com/themes/inspiro/"
 msgstr ""
 
 #: inc/admin/pages/demos.php:572
