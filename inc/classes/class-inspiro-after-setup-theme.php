@@ -245,6 +245,11 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
                 'slug'     => 'instagram-widget-by-wpzoom',
                 'required' => false,
             ],
+            [
+                'name'     => 'WPZOOM Forms',
+                'slug'     => 'wpzoom-forms',
+                'required' => true,
+            ],
           ];
 
           // Check if user is on the theme recommeneded plugins step and a demo was selected.
