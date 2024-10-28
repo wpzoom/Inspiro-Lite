@@ -9,17 +9,15 @@
 
 // Define the Black Friday campaign dates as constants
 const BTN_UPGRADE_NOW_LINK = '#';
-
-// test purpose
-const BF_START_DATE = '2024-10-22';
-const BF_END_DATE = '2024-10-30';
+const BF_START_DATE = '2024-10-24 00:00:00'; // this is the required date format
+const BF_END_DATE = '2024-10-30 23:59:59'; // this is the required date format
 
 /**
  * Display the Black Friday banner if the conditions are met.
  */
 function inspiro_show_black_friday_banner() {
 	// Get current date
-	$today = current_time('Y-m-d');
+	$today = current_time( 'Y-m-d H:i:s' );
 
 	// Only show the banner between the updated Black Friday dates
 	if ($today >= BF_START_DATE && $today <= BF_END_DATE && !inspiro_has_dismissed_banner()) {
