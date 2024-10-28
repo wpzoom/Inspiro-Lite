@@ -274,13 +274,13 @@ function inspiro_display_black_friday_banner() {
 						action: 'inspiro_dismiss_bf_banner',
 					},
 					// data: Your Data Here,
-					success: function(response) {
-						console.log('Success:', response);
-					},
-					error: function(jqXHR, textStatus, errorThrown) {
-						console.log('Error:', textStatus, errorThrown);
-						console.log('Response Text:', jqXHR.responseText);
-					}
+					// success: function(response) {
+					// 	console.log('Success:', response);
+					// },
+					// error: function(jqXHR, textStatus, errorThrown) {
+					// 	console.log('Error:', textStatus, errorThrown);
+					// 	console.log('Response Text:', jqXHR.responseText);
+					// }
 				});
 			});
 		});
