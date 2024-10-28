@@ -12,7 +12,7 @@ const BTN_UPGRADE_NOW_LINK = '#';
 
 // test purpose
 const BF_START_DATE = '2024-10-22';
-const BF_END_DATE = '2024-10-24';
+const BF_END_DATE = '2024-10-30';
 
 /**
  * Display the Black Friday banner if the conditions are met.
@@ -36,6 +36,14 @@ add_action('admin_notices', 'inspiro_show_black_friday_banner');
 function inspiro_has_dismissed_banner() {
 	return (bool) get_user_meta(get_current_user_id(), 'inspiro_dismiss_black_friday_banner', true);
 }
+
+/**
+ * Handle dismissing the Black Friday banner.
+ */
+function inspiro_dismiss_black_friday_banner() {
+	update_user_meta(get_current_user_id(), 'inspiro_dismiss_black_friday_banner', 1);
+}
+add_action('wp_ajax_inspiro_dismiss_black_friday_banner', 'inspiro_dismiss_black_friday_banner');
 
 /**
  * Output the Black Friday banner markup.
@@ -73,10 +81,10 @@ function inspiro_display_black_friday_banner() {
 				<div class="banner-clock">
 					<span class="hurry-up">Hurry Up!</span>
 					<div class="clock-digits">
-						<span><i id="days"><?php echo $interval->days ?></i>d</span>
-						<span><i id="hours"><?php echo $interval->h ?></i>h</span>
-						<span><i id="minutes"><?php echo $interval->i ?></i>m</span>
-						<span><i id="seconds"><?php echo $interval->s ?></i>s</span>
+						<span><i id="ins-bf-days"></i>d</span>
+						<span><i id="ins-bf-hours"></i>h</span>
+						<span><i id="ins-bf-minutes"></i>m</span>
+						<span><i id="ins-bf-seconds"></i>s</span>
 					</div>
 				</div>
 				<a href="<?php echo BTN_UPGRADE_NOW_LINK ?>" target="_blank" class="btn-upgrade-now">Upgrade now &rarr;</a>
@@ -246,62 +254,56 @@ function inspiro_display_black_friday_banner() {
 		}
 	</style>
 	<script type="text/javascript">
-		document.addEventListener("DOMContentLoaded", function() {
+		// Set the date we're counting down to
+		(function () {
+			// Constants
+			const COUNTDOWN_END_DATE = new Date("<?php echo BF_END_DATE; ?>").getTime();
 
-			jQuery(document).on('click', '.inspiro-black-friday-banner .notice-dismiss', function () {
-				jQuery.post(ajaxurl, {
-					action: 'inspiro_dismiss_black_friday_banner'
-				});
-			});
+			// Element references
+			const daysContainer = document.getElementById("ins-bf-days");
+			const hoursContainer = document.getElementById("ins-bf-hours");
+			const minutesContainer = document.getElementById("ins-bf-minutes");
+			const secondsContainer = document.getElementById("ins-bf-seconds");
 
-			// Set the date we're counting down to
-			const countDownDate = new Date("<?php echo BF_END_DATE; ?>").getTime(); // example was this type: Dec 31, 2023 23:59:59
+			// Function to calculate the time difference
+			function calculateTimeDifference(targetDate) {
+				const now = new Date().getTime();
+				const distance = targetDate - now;
 
-			// Get the current minute, for testing purposes
-			//	<?php //$today = new DateTime(); ?>
-			//console.log('php: ' + <?php //echo $today->format('i') ?>//);
-			//console.log('js: ' + new Date().getMinutes());
+				if (distance > 0) {
+					return {
+						days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+						hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+						minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+						seconds: Math.floor((distance % (1000 * 60)) / 1000)
+					};
+				} else {
+					return {days: 0, hours: 0, minutes: 0, seconds: 0};
+				}
+			}
+
+			// Function to update the HTML elements with the calculated time
+			function updateCountdownDisplay(time) {
+				daysContainer.innerText = time.days;
+				hoursContainer.innerText = time.hours;
+				minutesContainer.innerText = time.minutes;
+				secondsContainer.innerText = time.seconds;
+			}
+
+			// Render the countdown initially
+			updateCountdownDisplay(calculateTimeDifference(COUNTDOWN_END_DATE));
 
 			// Update the countdown every 1 second
-			const x = setInterval(function() {
+			const intervalId = setInterval(function () {
+				const timeDifference = calculateTimeDifference(COUNTDOWN_END_DATE);
+				updateCountdownDisplay(timeDifference);
 
-				// Get today's date and time
-				let now = new Date().getTime();
-
-				// Find the distance between now and the countdown date
-				const distance = countDownDate - now;
-
-				// Time calculations for days, hours, minutes and seconds
-				let days, hours, minutes, seconds;
-				if (distance > 0) {
-					days = Math.floor(distance / (1000 * 60 * 60 * 24));
-					hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-					minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-					seconds = Math.floor((distance % (1000 * 60)) / 1000);
-				} else {
-					days = hours = minutes = seconds = 0;
-				}
-
-				// Display the result in the elements with respective ids
-				document.getElementById("days").innerText = days;
-				document.getElementById("hours").innerText = hours;
-				document.getElementById("minutes").innerText = minutes;
-				document.getElementById("seconds").innerText = seconds;
-
-				// If the count down is finished, clear the interval
-				if (distance < 0) {
-					clearInterval(x);
+				// Clear interval if the countdown is over
+				if (timeDifference.days === 0 && timeDifference.hours === 0 &&
+					timeDifference.minutes === 0 && timeDifference.seconds === 0) {
+					clearInterval(intervalId);
 				}
 			}, 1000);
-		});
-
+		})();
 	</script>
 <?php }
-
-/**
- * Handle dismissing the Black Friday banner.
- */
-function inspiro_dismiss_black_friday_banner() {
-	update_user_meta(get_current_user_id(), 'inspiro_dismiss_black_friday_banner', 1);
-}
-add_action('wp_ajax_inspiro_dismiss_black_friday_banner', 'inspiro_dismiss_black_friday_banner');
