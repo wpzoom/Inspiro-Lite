@@ -8,8 +8,6 @@
  */
 
 // Define the Black Friday campaign dates as constants
-//const BF_START_DATE = '2024-10-23'; // for testing
-//const BF_END_DATE = '2024-12-03'; // including and 3 day
 const BTN_UPGRADE_NOW_LINK = '#';
 
 // test purpose
@@ -86,20 +84,6 @@ function inspiro_display_black_friday_banner() {
 			<div class="radial-gradient right"></div>
 		</div>
 	</div>
-<?php }
-
-/**
- * Handle dismissing the Black Friday banner.
- */
-function inspiro_dismiss_black_friday_banner() {
-	update_user_meta(get_current_user_id(), 'inspiro_dismiss_black_friday_banner', 1);
-}
-add_action('wp_ajax_inspiro_dismiss_black_friday_banner', 'inspiro_dismiss_black_friday_banner');
-
-/**
- * Enqueue the script and styles to handle banner dismissal.
- */
-function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 	<style>
 		.inspiro-banner-container-wrapper {
 			margin: 10px 20px 20px 2px;
@@ -120,9 +104,9 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 				linear-gradient(90deg, rgba(255, 255, 255, .1)  1px, transparent 1px),
 				linear-gradient(180deg, rgba(255, 255, 255, .1) 1px, transparent 1px);
 			background-size: 20px 20px; /* Size of the squares, including borders */
-            border-radius: 8px;
-            margin-bottom: 20px;
-            padding: 15px 30px 10px;
+			border-radius: 8px;
+			margin-bottom: 20px;
+			padding: 15px 30px 10px;
 		}
 
 		.inspiro-bf-banner-container .radial-gradient {
@@ -135,13 +119,13 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 			bottom: 0;
 			left: 0;
 			background: radial-gradient(90% 70% at 0% 100%, #22BB66 -129%, rgba(34, 187, 102, 0) 120%);
-            border-radius: 0 0 0 8px;
+			border-radius: 0 0 0 8px;
 		}
 		.inspiro-bf-banner-container .radial-gradient.right{
 			right: 0;
 			top: 0;
 			background: radial-gradient(70% 90% at 100% 0%, #22BB66 -129%, rgba(34, 187, 102, 0) 120%);
-            border-radius: 0 8px 0 0;
+			border-radius: 0 8px 0 0;
 		}
 		.inspiro-bf-banner-container.notice {
 			border: unset;
@@ -156,7 +140,7 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 		.banner-text-container h2{
 			color: #fff;
 			font-size: 26px;
-            line-height: 1.2;
+			line-height: 1.2;
 			margin: 0 0 15px;
 		}
 		.banner-text-container .green-text {
@@ -176,11 +160,11 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 			display: inline-block;
 			margin: 0 5px 8px 0;
 			font-size: 12px;
-            font-weight: 600;
+			font-weight: 600;
 		}
-        .upgrade-banner {
-            margin-left: auto;
-        }
+		.upgrade-banner {
+			margin-left: auto;
+		}
 		.upgrade-banner .banner-clock {
 			display: flex;
 			flex-direction: column;
@@ -215,16 +199,15 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 			display: inline-block;
 			z-index: 999;
 			position: relative;
-            border-radius: 5px;
-            box-shadow: rgba(0, 0, 0, .1) 0 1px 3px 0, rgba(0, 0, 0, .06) 0 1px 2px 0;
-            white-space: nowrap;
+			border-radius: 5px;
+			box-shadow: rgba(0, 0, 0, .1) 0 1px 3px 0, rgba(0, 0, 0, .06) 0 1px 2px 0;
+			white-space: nowrap;
 		}
 
-        .upgrade-banner a.btn-upgrade-now:hover {
-            background: #29cf73;
-            box-shadow: rgba(0, 0, 0, .1) 0 4px 6px -1px, rgba(0, 0, 0, .06) 0 2px 4px -1px;
-        }
-
+		.upgrade-banner a.btn-upgrade-now:hover {
+			background: #29cf73;
+			box-shadow: rgba(0, 0, 0, .1) 0 4px 6px -1px, rgba(0, 0, 0, .06) 0 2px 4px -1px;
+		}
 		@media screen and (max-width: 1023px) {
 			.inspiro-banner-container-wrapper {
 				margin-right: 10px;
@@ -232,27 +215,23 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 
 			.upgrade-banner {
 				margin-bottom: 10px;
-                margin-left: 10px;
+				margin-left: 10px;
 			}
 
-            .banner-promo-btns,
-            .upgrade-banner .banner-clock { display: none; }
+			.banner-promo-btns,
+			.upgrade-banner .banner-clock { display: none; }
 		}
-
-        @media screen and (max-width: 700px) {
-            .bf-inspiro-banner-image { display: none; }
-            .banner-text-container {
-                margin-left: 0;
-            }
-        }
-
-
-        @media screen and (max-width: 550px) {
-
-            .inspiro-bf-banner-container {
-                flex-direction: column;
-            }
-        }
+		@media screen and (max-width: 700px) {
+			.bf-inspiro-banner-image { display: none; }
+			.banner-text-container {
+				margin-left: 0;
+			}
+		}
+		@media screen and (max-width: 550px) {
+			.inspiro-bf-banner-container {
+				flex-direction: column;
+			}
+		}
 		@media screen and (min-width: 1024px) and (max-width: 1230px) {
 			.inspiro-bf-banner-container.notice.is-dismissible {
 				padding-right: 0px;
@@ -318,4 +297,11 @@ function inspiro_enqueue_bf_banner_script_and_styles() { ?>
 
 	</script>
 <?php }
-add_action('admin_footer', 'inspiro_enqueue_bf_banner_script_and_styles');
+
+/**
+ * Handle dismissing the Black Friday banner.
+ */
+function inspiro_dismiss_black_friday_banner() {
+	update_user_meta(get_current_user_id(), 'inspiro_dismiss_black_friday_banner', 1);
+}
+add_action('wp_ajax_inspiro_dismiss_black_friday_banner', 'inspiro_dismiss_black_friday_banner');
