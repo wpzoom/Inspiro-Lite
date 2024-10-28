@@ -112,21 +112,11 @@ require INSPIRO_THEME_DIR . 'inc/icon-functions.php';
  * Theme admin notices and info page
  */
 if ( is_admin() ) {
-	global $pagenow;
-
 	require INSPIRO_THEME_DIR . 'inc/admin-notice.php';
 	require INSPIRO_THEME_DIR . 'inc/admin/admin-api.php';
 
-	/**
-	 * Theme Marketing stuff
-	 * showing only on main dashboard, themes and theme dashboard pages
-	 */
-	if ( $pagenow === 'index.php' ||  $pagenow === 'themes.php' && $_SERVER['QUERY_STRING'] === '' ||
-	      $pagenow === 'admin.php' && ( $_SERVER['QUERY_STRING'] === 'page=inspiro' || $_SERVER['QUERY_STRING'] === 'page=inspiro-demo' )) {
-
-		require INSPIRO_THEME_DIR . 'inc/marketing-functions.php';
-	}
-
+	// temporary marketing black friday functionality
+	require INSPIRO_THEME_DIR . 'inc/marketing-functions.php';
 
 	if ( current_user_can( 'manage_options' ) ) {
 		require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-notices.php';

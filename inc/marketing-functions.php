@@ -11,6 +11,19 @@
 const BTN_UPGRADE_NOW_LINK = '#';
 const BF_START_DATE = '2024-10-24 00:00:00'; // this is the required date format
 const BF_END_DATE = '2024-10-30 23:59:59'; // this is the required date format
+const BF_DISMISS_BANNER_ACTION = 'inspiro_dismiss_bf_banner';
+global $pagenow;
+
+
+/**
+ * Theme Marketing stuff
+ * showing only on main dashboard, themes and theme dashboard pages
+ */
+if ( $pagenow === 'index.php' ||  $pagenow === 'themes.php' && $_SERVER['QUERY_STRING'] === '' ||
+	 $pagenow === 'admin.php' && ( $_SERVER['QUERY_STRING'] === 'page=inspiro' || $_SERVER['QUERY_STRING'] === 'page=inspiro-demo' )) {
+
+	add_action('admin_notices', 'inspiro_show_black_friday_banner');
+}
 
 /**
  * Display the Black Friday banner if the conditions are met.
@@ -24,7 +37,6 @@ function inspiro_show_black_friday_banner() {
 		inspiro_display_black_friday_banner();
 	}
 }
-add_action('admin_notices', 'inspiro_show_black_friday_banner');
 
 /**
  * Check if the user has dismissed the Black Friday banner.
@@ -32,31 +44,32 @@ add_action('admin_notices', 'inspiro_show_black_friday_banner');
  * @return bool
  */
 function inspiro_has_dismissed_banner() {
-	return (bool) get_user_meta(get_current_user_id(), 'inspiro_dismiss_black_friday_banner', true);
+	return (bool) get_user_meta(get_current_user_id(), BF_DISMISS_BANNER_ACTION, true);
 }
 
 /**
- * Handle dismissing the Black Friday banner.
+ * Handle the AJAX request to dismiss the Black Friday Banner.
  */
-function inspiro_dismiss_black_friday_banner() {
-	update_user_meta(get_current_user_id(), 'inspiro_dismiss_black_friday_banner', 1);
+function dismiss_inspiro_black_friday_banner() {
+	// Check the nonce
+//	if ( !isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'inspiro_bf_nonce') ) {
+//		wp_send_json_error('Invalid nonce');
+//		exit;
+//	}
+	update_user_meta(get_current_user_id(), BF_DISMISS_BANNER_ACTION, true);
+	wp_send_json_success();
 }
-add_action('wp_ajax_inspiro_dismiss_black_friday_banner', 'inspiro_dismiss_black_friday_banner');
+add_action('wp_ajax_inspiro_dismiss_bf_banner', 'dismiss_inspiro_black_friday_banner');
+
 
 /**
- * Output the Black Friday banner markup.
+ * Render the Black Friday banner markup.
  */
 function inspiro_display_black_friday_banner() {
-
-	// - Functionality for render first date/time - //
-	$today = new DateTime();
-	$endDay = new DateTime( BF_END_DATE );
-
-	// Calculate the difference in days between today and the end date
-	$interval = $today->diff( $endDay );
+	ob_start();
 	?>
 	<div class="inspiro-banner-container-wrapper">
-		<div class="is-dismissible inspiro-bf-banner-container notice">
+		<div id="inspiro-bf-banner-container" class="is-dismissible inspiro-bf-banner-container notice">
 			<div class="radial-gradient left"></div>
 			<img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/marketing/bf-inspiro-premium.png'); ?>"
 				 class="bf-inspiro-banner-image"
@@ -252,6 +265,26 @@ function inspiro_display_black_friday_banner() {
 		}
 	</style>
 	<script type="text/javascript">
+		jQuery(document).ready(function () {
+			jQuery(document).on('click', '#inspiro-bf-banner-container button.notice-dismiss', function (e) {
+				jQuery.ajax({
+					url: ajaxurl,
+					type: 'GET',
+					data: {
+						action: 'inspiro_dismiss_bf_banner',
+					},
+					// data: Your Data Here,
+					success: function(response) {
+						console.log('Success:', response);
+					},
+					error: function(jqXHR, textStatus, errorThrown) {
+						console.log('Error:', textStatus, errorThrown);
+						console.log('Response Text:', jqXHR.responseText);
+					}
+				});
+			});
+		});
+
 		// Set the date we're counting down to
 		(function () {
 			// Constants
@@ -304,4 +337,4 @@ function inspiro_display_black_friday_banner() {
 			}, 1000);
 		})();
 	</script>
-<?php }
+<?php echo ob_get_clean(); }
