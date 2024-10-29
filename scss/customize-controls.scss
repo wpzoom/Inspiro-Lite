@@ -333,6 +333,13 @@ $background-color_1: $icon_color_1;
 		}
 	}
 }
+#accordion-panel-blog_post_options_panel{
+	>.accordion-section-title {
+		&:before {
+			content: "\f108";
+		}
+	}
+}
 #accordion-section-header-area {
 	>.accordion-section-title {
 		&:before {
