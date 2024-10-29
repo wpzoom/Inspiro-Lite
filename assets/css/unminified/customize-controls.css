@@ -252,8 +252,13 @@
     content: "\f489";
 }
 
-#accordion-panel-blog_post_options_panel > .accordion-section-title:before {
+#accordion-panel-blog_post_options_panel > .accordion-section-title:before,
+#accordion-section-blog_post_options > .accordion-section-title:before {
     content: "\f108";
+}
+
+#accordion-section-blog_post_options > .accordion-section-title:before {
+    color: #00A0D2;
 }
 
 #accordion-section-header-area > .accordion-section-title:before {

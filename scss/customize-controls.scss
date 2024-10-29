@@ -333,10 +333,18 @@ $background-color_1: $icon_color_1;
 		}
 	}
 }
-#accordion-panel-blog_post_options_panel{
+#accordion-panel-blog_post_options_panel,
+#accordion-section-blog_post_options{
 	>.accordion-section-title {
 		&:before {
 			content: "\f108";
+		}
+	}
+}
+#accordion-section-blog_post_options{
+	>.accordion-section-title {
+		&:before {
+			color: $icon_color_1;
 		}
 	}
 }
