@@ -116,6 +116,7 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 
 		// footer
 		$color_footer_background     = inspiro_get_theme_mod( 'color_footer_background' );
+		$color_footer_widget_title   = inspiro_get_theme_mod( 'color_footer_widget_title' );
 		$color_footer_text           = inspiro_get_theme_mod( 'color_footer_text' );
 		$color_footer_copyright_text = inspiro_get_theme_mod( 'color_footer_copyright_text' );
 
@@ -323,6 +324,13 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 			<?php if ( '#101010' !== $color_footer_background ) : ?>
 			.site-footer {
 				background-color: <?php echo maybe_hash_hex_color( $color_footer_background ); ?>;
+			}
+
+			<?php endif; ?>
+
+			<?php if ( '#FFFFFF' !== $color_footer_widget_title ) : ?>
+			.site-footer .footer-widgets .title{
+				color: <?php echo maybe_hash_hex_color( $color_footer_widget_title ); ?>;
 			}
 
 			<?php endif; ?>

@@ -333,6 +333,20 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 			}
 		});
 	});
+	// footer widget title color
+	wp.customize('color_footer_widget_title', function (value) {
+		value.bind(function (to) {
+			if (to === 'blank') {
+				$('.site-footer .footer-widgets .title').css({
+					color: '#FFFFFF',
+				});
+			} else {
+				$('.site-footer .footer-widgets .title').css({
+					color: to,
+				});
+			}
+		});
+	});
 	// footer text color
 	wp.customize('color_footer_text', function (value) {
 		value.bind(function (to) {

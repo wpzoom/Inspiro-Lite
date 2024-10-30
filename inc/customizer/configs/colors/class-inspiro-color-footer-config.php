@@ -47,6 +47,16 @@ class Inspiro_Color_Footer_Config {
 					),
 				),
 				array(
+					'id'   => 'color_footer_widget_title',
+					'args' => array(
+						'theme_supports'       => array( 'custom-header', 'header-text' ),
+						'default'              => '#FFFFFF',
+						'transport'            => 'postMessage',
+						'sanitize_callback'    => 'sanitize_hex_color',
+						'sanitize_js_callback' => 'maybe_hash_hex_color',
+					),
+				),
+				array(
 					'id'   => 'color_footer_text',
 					'args' => array(
 						'theme_supports'       => array( 'custom-header', 'header-text' ),
@@ -109,10 +119,19 @@ class Inspiro_Color_Footer_Config {
 					),
 				),
 				array(
+					'id'           => 'color_footer_widget_title',
+					'control_type' => 'WP_Customize_Color_Control',
+					'args'         => array(
+						'label'    => esc_html__( 'Footer Widget Title', 'inspiro' ),
+						'section'  => 'colors',
+						'priority' => 22,
+					),
+				),
+				array(
 					'id'           => 'color_footer_text',
 					'control_type' => 'WP_Customize_Color_Control',
 					'args'         => array(
-						'label'    => esc_html__( 'Footer Text Color', 'inspiro' ),
+						'label'    => esc_html__( 'Footer Widget Text', 'inspiro' ),
 						'section'  => 'colors',
 						'priority' => 22,
 					),
