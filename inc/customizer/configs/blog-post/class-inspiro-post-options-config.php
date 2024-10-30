@@ -32,7 +32,7 @@ class Inspiro_Post_Options_Config {
 					'title'           => esc_html__( 'Blog Post Options', 'inspiro' ),
 					'capability' => 'edit_theme_options',
 					'priority'        => 51,
-					'active_callback' => 'inspiro_is_view_is_blog', // option from Inspiro_Blog_Post_Panel_Config class
+					// 'active_callback' => 'inspiro_is_view_is_blog', // option from Inspiro_Blog_Post_Panel_Config class
 //					'title'      => esc_html__( 'Post Options', 'inspiro' ),
 //					'panel'      => 'blog_post_options_panel', // deactivated from existing panel because was necessary dblclick action
 				),

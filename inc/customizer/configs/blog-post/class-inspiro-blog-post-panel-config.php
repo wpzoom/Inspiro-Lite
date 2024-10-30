@@ -31,7 +31,7 @@ class Inspiro_Blog_Post_Panel_Config {
 					'priority'        => 51,
 					'capability'      => 'edit_theme_options',
 					'title'           => esc_html__( 'Blog Post Options', 'inspiro' ),
-					'active_callback' => 'inspiro_is_view_is_blog',
+					// 'active_callback' => 'inspiro_is_view_is_blog',
 				),
 			),
 		);
