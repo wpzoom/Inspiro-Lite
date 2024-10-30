@@ -1,3 +1,16 @@
+/* Necessary for WP 6.7 icons issue fix */
+//#customize-theme-controls .customize-pane-parent .control-section .accordion-section-title {
+//	display: flex;
+//	align-items: center;
+//	padding-left: 0;
+//}
+//.accordion-section-title button.accordion-trigger {
+//	padding-left: 0;
+//}
+//#customize-controls .current-panel .control-section>h3.accordion-section-title {
+//	padding-left: 14px;
+//}
+
 /* Upgrade to Inspiro Premium */
 .customize-control-section-title,
 #customize-controls .control-section-upgrade-pro {
@@ -207,9 +220,11 @@ $icon_color_2: #A0A5AA;
 $font-family_icons: dashicons;
 $background-color_1: $icon_color_1;
 
-#accordion-section-inspiro_upgrade_pro {
-	>.accordion-section-title {
-		&:before {
+#accordion-section-inspiro_upgrade_pro,
+#accordion-section-colors_premium,
+#accordion-section-blog_options_upgrade{
+	.accordion-section-title {
+		&:after {
 			display: none;
 		}
 	}
@@ -263,10 +278,10 @@ $background-color_1: $icon_color_1;
 .control-section {
 	&:not(.control-subsection) {
 		>.accordion-section-title {
-			&:before {
+			button.accordion-trigger:before {
 				content: "\f107";
 				font-size: 20px;
-				color: $icon_color_2;
+				color: $icon_color_1;
 				vertical-align: middle;
 				font-family: $font-family_icons;
 				margin: 0 7px 0 0;
@@ -286,140 +301,140 @@ $background-color_1: $icon_color_1;
 /* icons setup */
 #accordion-panel-general {
 	>.accordion-section-title {
-		&:before {
+		button.accordion-trigger:before {
 			content: "\f319";
 		}
 	}
 }
 #accordion-section-title_tagline {
 	>.accordion-section-title {
-		&:before {
+		button.accordion-trigger:before {
 			content: "\f319";
 		}
 	}
 }
 #accordion-panel-homepage_media_panel {
 	>.accordion-section-title {
-		&:before {
+		button.accordion-trigger:before {
 			content: "\f180";
 		}
 	}
 }
 #accordion-panel-inspiro_typography_panel {
 	>.accordion-section-title {
-		&:before {
+		button.accordion-trigger:before {
 			content: "\f201";
 		}
 	}
 }
 #accordion-section-colors {
 	>.accordion-section-title {
-		&:before {
+		button.accordion-trigger:before {
 			content: "\f309";
 		}
 	}
 }
 #accordion-panel-layout {
 	>.accordion-section-title {
-		&:before {
+		button.accordion-trigger:before {
 			content: "\f175";
 		}
 	}
 }
 #accordion-section-theme_layout {
 	>.accordion-section-title {
-		&:before {
+		button.accordion-trigger:before {
 			content: "\f489";
 		}
 	}
 }
 #accordion-section-header-area {
 	>.accordion-section-title {
-		&:before {
+		button.accordion-trigger:before {
 			content: "\f538";
 		}
 	}
 }
 #accordion-section-footer-area {
 	>.accordion-section-title {
-		&:before {
+		button.accordion-trigger:before {
 			content: "\f538";
 		}
 	}
 }
 #accordion-section-background_image {
 	>.accordion-section-title {
-		&:before {
+		button.accordion-trigger:before {
 			content: "\f128";
 		}
 	}
 }
 #accordion-panel-nav_menus {
 	>.accordion-section-title {
-		&:before {
+		button.accordion-trigger:before {
 			content: "\f333";
 		}
 	}
 }
 #accordion-panel-widgets {
 	>.accordion-section-title {
-		&:before {
+		button.accordion-trigger:before {
 			content: "\f116";
 		}
 	}
 }
 #accordion-section-static_front_page {
 	>.accordion-section-title {
-		&:before {
+		button.accordion-trigger:before {
 			content: "\f102";
 		}
 	}
 }
 #accordion-section-custom_css {
 	>.accordion-section-title {
-		&:before {
+		button.accordion-trigger:before {
 			content: "\f475";
 		}
 	}
 }
 #accordion-section-woocommerce_layout {
 	>.accordion-section-title {
-		&:before {
+		button.accordion-trigger:before {
 			content: "\f174";
 		}
 	}
 }
 #accordion-section-color-palettes-container {
 	>.accordion-section-title {
-		&:before {
+		button.accordion-trigger:before {
 			content: "\f100";
 		}
 	}
 }
 #accordion-panel-slider-container {
 	>.accordion-section-title {
-		&:before {
+		button.accordion-trigger:before {
 			content: "\f181";
 		}
 	}
 }
 #accordion-section-slider-container {
 	>.accordion-section-title {
-		&:before {
+		button.accordion-trigger:before {
 			content: "\f181";
 		}
 	}
 }
 #accordion-panel-post-options {
 	>.accordion-section-title {
-		&:before {
+		button.accordion-trigger:before {
 			content: "\f109";
 		}
 	}
 }
 #accordion-section-style-kits {
 	>.accordion-section-title {
-		&:before {
+		button.accordion-trigger:before {
 			content: "\f180";
 		}
 	}
