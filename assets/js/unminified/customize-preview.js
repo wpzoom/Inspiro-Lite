@@ -150,11 +150,16 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 			$('a.custom-logo-text').css('color', to);
 		});
 	});
-	// wp.customize('color_header_custom_logo_hover_text', function (value) {
-	// 	value.bind(function (tocolor_header_custom_logo_hover_text {
-	// 		$('a.custom-logo-text').css('color', to);
-	// 	});
-	// });
+	wp.customize('color_header_custom_logo_hover_text', function (value) {
+		value.bind(function (to) {
+			$('a.custom-logo-text').hover(function () {
+				$(this).css('color', to);
+			}, function () {
+				$(this).css('color', '');
+			});
+		});
+	});
+
 	// header background
 	// wp.customize( 'color_menu_background', function ( value ) {
 	// 	// value.bind(function (to) {
@@ -174,6 +179,7 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 	// 		}
 	// 	} );
 	// } );
+
 	wp.customize('header_search_show', function (value) {
 		value.bind(function (to) {
 			if (to === true) {
