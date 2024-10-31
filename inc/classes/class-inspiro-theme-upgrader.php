@@ -409,6 +409,9 @@ class Inspiro_Theme_Upgrader {
 			}
 			// Search Icon Color
 //			if ( 'color_menu_search_icon_btn' === $name ) {
+//				set_theme_mod( 'color-menu-search-icon-btn', maybe_hash_hex_color( $theme_mod ) );
+//			}
+//			if ( 'color_menu_search_icon_btn' === $name ) {
 //				set_theme_mod( 'color-menu-link', $theme_mod );
 //			}
 			// Hamburger Icon Color

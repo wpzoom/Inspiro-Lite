@@ -183,6 +183,12 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 			}
 		});
 	});
+	wp.customize('color_menu_search_icon_btn', function (value) {
+		value.bind(function (to) {
+			$('.sb-search .sb-search-button-open .sb-icon-search .svg-icon,' +
+				'.sb-search .sb-search-button-close .sb-icon-search .svg-icon' ).css('fill', to);
+		});
+	});
 	wp.customize('color_menu_hamburger_btn', function (value) {
 		value.bind(function (to) {
 			$('.navbar-toggle .icon-bar').css('background', to);

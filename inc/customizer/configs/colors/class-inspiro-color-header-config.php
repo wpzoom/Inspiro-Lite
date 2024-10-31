@@ -93,7 +93,7 @@ class Inspiro_Color_Header_Config {
 					'args' => array(
 						'theme_supports'       => array( 'custom-header' ),
 						'default'              => '#ffffff',
-						'transport'            => 'refresh',
+						'transport'            => 'postMessage',
 						'sanitize_callback'    => 'sanitize_hex_color',
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
