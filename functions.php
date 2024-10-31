@@ -83,6 +83,12 @@ require INSPIRO_THEME_DIR . 'inc/template-tags.php';
  */
 require INSPIRO_THEME_DIR . 'inc/template-functions.php';
 
+/**
+ * Custom Template WC functions
+ */
+require INSPIRO_THEME_DIR . 'inc/wc-custom-functions.php';
+
+
 
 /**
  * Custom template shortcode tags for this theme

@@ -164,6 +164,9 @@ if ( ! class_exists( 'Inspiro_Customizer' ) ) {
 					'typo-hero-header-desc',
 					'typo-hero-header-button',
 				),
+				'wc-customs' => array(
+					'wc-customs',
+				)
 			);
 		}
 
