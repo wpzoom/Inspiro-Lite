@@ -224,6 +224,9 @@ $background-color_1: $icon_color_1;
 #accordion-section-colors_premium,
 #accordion-section-blog_options_upgrade{
 	.accordion-section-title {
+		padding: 10px 10px 11px 14px;
+
+		&:before,
 		&:after {
 			display: none;
 		}
@@ -278,13 +281,22 @@ $background-color_1: $icon_color_1;
 .control-section {
 	&:not(.control-subsection) {
 		>.accordion-section-title {
-			button.accordion-trigger:before {
+
+			&:not(:has(button.accordion-trigger)) {
+				padding-left: 30px;
+			}
+
+			&:before {
+				left: 5px;
+				position: absolute;
+				z-index: 999;
+				top: calc(50% - 10px);
 				content: "\f107";
 				font-size: 20px;
 				color: $icon_color_1;
 				vertical-align: middle;
 				font-family: $font-family_icons;
-				margin: 0 7px 0 0;
+				//margin: 0 7px 0 0;
 				speak: none;
 				font-style: normal;
 				font-weight: normal;
@@ -294,6 +306,10 @@ $background-color_1: $icon_color_1;
 				-webkit-font-smoothing: antialiased;
 				-moz-osx-font-smoothing: grayscale;
 			}
+
+			button.accordion-trigger {
+				padding: 10px 10px 11px 30px;
+			}
 		}
 	}
 }
@@ -301,140 +317,140 @@ $background-color_1: $icon_color_1;
 /* icons setup */
 #accordion-panel-general {
 	>.accordion-section-title {
-		button.accordion-trigger:before {
+		&:before {
 			content: "\f319";
 		}
 	}
 }
 #accordion-section-title_tagline {
 	>.accordion-section-title {
-		button.accordion-trigger:before {
+		&:before {
 			content: "\f319";
 		}
 	}
 }
 #accordion-panel-homepage_media_panel {
 	>.accordion-section-title {
-		button.accordion-trigger:before {
+		&:before {
 			content: "\f180";
 		}
 	}
 }
 #accordion-panel-inspiro_typography_panel {
 	>.accordion-section-title {
-		button.accordion-trigger:before {
+		&:before {
 			content: "\f201";
 		}
 	}
 }
 #accordion-section-colors {
 	>.accordion-section-title {
-		button.accordion-trigger:before {
+		&:before {
 			content: "\f309";
 		}
 	}
 }
 #accordion-panel-layout {
 	>.accordion-section-title {
-		button.accordion-trigger:before {
+		&:before {
 			content: "\f175";
 		}
 	}
 }
 #accordion-section-theme_layout {
 	>.accordion-section-title {
-		button.accordion-trigger:before {
+		&:before {
 			content: "\f489";
 		}
 	}
 }
 #accordion-section-header-area {
 	>.accordion-section-title {
-		button.accordion-trigger:before {
+		&:before {
 			content: "\f538";
 		}
 	}
 }
 #accordion-section-footer-area {
 	>.accordion-section-title {
-		button.accordion-trigger:before {
+		&:before {
 			content: "\f538";
 		}
 	}
 }
 #accordion-section-background_image {
 	>.accordion-section-title {
-		button.accordion-trigger:before {
+		&:before {
 			content: "\f128";
 		}
 	}
 }
 #accordion-panel-nav_menus {
 	>.accordion-section-title {
-		button.accordion-trigger:before {
+		&:before {
 			content: "\f333";
 		}
 	}
 }
 #accordion-panel-widgets {
 	>.accordion-section-title {
-		button.accordion-trigger:before {
+		&:before {
 			content: "\f116";
 		}
 	}
 }
 #accordion-section-static_front_page {
 	>.accordion-section-title {
-		button.accordion-trigger:before {
+		&:before {
 			content: "\f102";
 		}
 	}
 }
 #accordion-section-custom_css {
 	>.accordion-section-title {
-		button.accordion-trigger:before {
+		&:before {
 			content: "\f475";
 		}
 	}
 }
 #accordion-section-woocommerce_layout {
 	>.accordion-section-title {
-		button.accordion-trigger:before {
+		&:before {
 			content: "\f174";
 		}
 	}
 }
 #accordion-section-color-palettes-container {
 	>.accordion-section-title {
-		button.accordion-trigger:before {
+		&:before {
 			content: "\f100";
 		}
 	}
 }
 #accordion-panel-slider-container {
 	>.accordion-section-title {
-		button.accordion-trigger:before {
+		&:before {
 			content: "\f181";
 		}
 	}
 }
 #accordion-section-slider-container {
 	>.accordion-section-title {
-		button.accordion-trigger:before {
+		&:before {
 			content: "\f181";
 		}
 	}
 }
 #accordion-panel-post-options {
 	>.accordion-section-title {
-		button.accordion-trigger:before {
+		&:before {
 			content: "\f109";
 		}
 	}
 }
 #accordion-section-style-kits {
 	>.accordion-section-title {
-		button.accordion-trigger:before {
+		&:before {
 			content: "\f180";
 		}
 	}
