@@ -22,7 +22,7 @@ class Inspiro_WC_Customs_Config {
 			'section' => array(
 				'id'   => 'product_image_zoom_option',
 				'args' => array(
-					'title' => __( 'Inspiro Customs', 'inspiro' ),
+					'title' => __( 'Single Product Pages', 'inspiro' ),
 					'panel' => 'woocommerce',
 				),
 			),
