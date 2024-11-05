@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Inspiro 1.4.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/inspiro-lite\n"
-"POT-Creation-Date: 2024-10-15 12:41+0000\n"
+"POT-Creation-Date: 2024-10-23 08:19+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -52,6 +52,11 @@ msgstr ""
 #: inc/classes/class-tgm-plugin-activation.php:3542
 #, php-format
 msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/classes/class-inspiro-wp-admin-menu-pointer.php:87
+#, php-format
+msgid "%s"
 msgstr ""
 
 #. %s: Inspiro theme
@@ -354,7 +359,7 @@ msgid ""
 "installation"
 msgstr ""
 
-#: inc/admin/pages/demo.php:118
+#: inc/admin/pages/demo.php:131
 msgid ""
 "Click the button below to install the One Click Demo Import plugin to use "
 "this feature."
@@ -844,7 +849,7 @@ msgstr ""
 msgid "Get Inspiro Premium &rarr;"
 msgstr ""
 
-#: inc/admin/pages/demos.php:323 inc/admin/pages/admin.php:620
+#: inc/admin/pages/demos.php:338 inc/admin/pages/admin.php:620
 msgid "Get Inspiro Premium Today &rarr;"
 msgstr ""
 
@@ -852,7 +857,7 @@ msgstr ""
 msgid "Get Inspiro Premium Today!"
 msgstr ""
 
-#: inc/admin/pages/demos.php:559
+#: inc/admin/pages/demos.php:574
 msgid "Get Inspiro PRO Today &rarr;"
 msgstr ""
 
@@ -1048,7 +1053,7 @@ msgstr ""
 msgid "How it works?"
 msgstr ""
 
-#: inc/admin/pages/demo.php:133
+#: inc/admin/pages/demo.php:146
 msgid "How it works? &rarr;"
 msgstr ""
 
@@ -1096,7 +1101,7 @@ msgid ""
 "a-portfolio-section/"
 msgstr ""
 
-#: inc/admin/pages/demo.php:130 inc/admin/pages/admin.php:278
+#: inc/admin/pages/demo.php:143 inc/admin/pages/admin.php:278
 msgid ""
 "https://www.wpzoom.com/documentation/inspiro-lite/inspiro-lite-importing-the-"
 "demo-content/"
@@ -1109,16 +1114,16 @@ msgid ""
 msgstr ""
 
 #. URI of the theme
-msgid "https://www.wpzoom.com/free-wordpress-themes/inspiro-lite/"
+msgid "https://www.wpzoom.com/themes/inspiro/"
 msgstr ""
 
-#: inc/admin/pages/demos.php:557
+#: inc/admin/pages/demos.php:572
 msgid ""
 "https://www.wpzoom.com/themes/inspiro-pro/?"
 "utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-pro"
 msgstr ""
 
-#: inc/admin/pages/demos.php:321 inc/admin/pages/admin.php:85
+#: inc/admin/pages/demos.php:336 inc/admin/pages/admin.php:85
 #: inc/admin/pages/admin.php:412
 msgid ""
 "https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-"
@@ -1171,6 +1176,7 @@ msgstr ""
 #: inc/classes/class-inspiro-custom-wp-admin-menu.php:176
 #: inc/classes/class-inspiro-custom-wp-admin-menu.php:177
 #: inc/admin/pages/demo.php:89 inc/admin/pages/demo.php:102
+#: inc/admin/pages/demo.php:115
 msgid "Import Demo"
 msgstr ""
 
@@ -1278,7 +1284,7 @@ msgid "Inspiro Premium Demos &rarr;"
 msgstr ""
 
 #: inc/admin/pages/demos.php:5
-msgid "Inspiro Premium Demos (16)"
+msgid "Inspiro Premium Demos (17)"
 msgstr ""
 
 #: inc/admin/pages/admin.php:433
@@ -1293,11 +1299,11 @@ msgstr ""
 msgid "Inspiro PRO Demos &rarr;"
 msgstr ""
 
-#: inc/admin/pages/demos.php:330
+#: inc/admin/pages/demos.php:345
 msgid "Inspiro PRO Demos (11)"
 msgstr ""
 
-#: inc/admin/pages/demos.php:331
+#: inc/admin/pages/demos.php:346
 msgid ""
 "Inspiro PRO is a newer version of the Inspiro theme, which can be purchased "
 "separately."
@@ -1313,7 +1319,7 @@ msgstr ""
 msgid "Install %2$s"
 msgstr ""
 
-#: inc/admin/pages/demo.php:125
+#: inc/admin/pages/demo.php:138
 msgid "Install One Click Demo Import"
 msgstr ""
 
@@ -1354,7 +1360,7 @@ msgstr ""
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: inc/admin/pages/demo.php:123
+#: inc/admin/pages/demo.php:136
 msgid "Installing One Click Demo Import"
 msgstr ""
 
@@ -2736,6 +2742,7 @@ msgid "Video Headers in Pages & Posts"
 msgstr ""
 
 #: inc/admin/pages/demo.php:85 inc/admin/pages/demo.php:98
+#: inc/admin/pages/demo.php:111
 msgid "View Demo"
 msgstr ""
 
@@ -2813,6 +2820,10 @@ msgstr ""
 
 #: inc/admin/pages/admin.php:456
 msgid "WooCommerce Features"
+msgstr ""
+
+#: inc/admin/pages/demo.php:113
+msgid "WooCommerce Shop"
 msgstr ""
 
 #: inc/classes/class-tgm-plugin-activation.php:2320

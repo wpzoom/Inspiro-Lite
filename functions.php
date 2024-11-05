@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Define Constants
  */
-define( 'INSPIRO_THEME_VERSION', '1.9.5' );
+define( 'INSPIRO_THEME_VERSION', '1.9.6' );
 define( 'INSPIRO_THEME_DIR', trailingslashit( get_template_directory() ) );
 define( 'INSPIRO_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
 define( 'INSPIRO_THEME_ASSETS_URI', INSPIRO_THEME_URI . 'dist' );
@@ -82,6 +82,12 @@ require INSPIRO_THEME_DIR . 'inc/template-tags.php';
  * Additional features to allow styling of the templates.
  */
 require INSPIRO_THEME_DIR . 'inc/template-functions.php';
+
+/**
+ * Custom Template WC functions
+ */
+require INSPIRO_THEME_DIR . 'inc/wc-custom-functions.php';
+
 
 
 /**
