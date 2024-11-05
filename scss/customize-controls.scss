@@ -281,13 +281,14 @@ $background-color_1: $icon_color_1;
 .control-section {
 	&:not(.control-subsection) {
 		>.accordion-section-title {
+            overflow: hidden;
 
 			&:not(:has(button.accordion-trigger)) {
-				padding-left: 30px;
+				padding-left: 44px;
 			}
 
 			&:before {
-				left: 5px;
+				left: 13px;
 				position: absolute;
 				z-index: 999;
 				top: calc(50% - 10px);
@@ -308,7 +309,7 @@ $background-color_1: $icon_color_1;
 			}
 
 			button.accordion-trigger {
-				padding: 10px 10px 11px 30px;
+				padding: 10px 0 11px 44px;
 			}
 		}
 	}
