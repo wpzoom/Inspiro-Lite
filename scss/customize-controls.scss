@@ -1,3 +1,16 @@
+/* Necessary for WP 6.7 icons issue fix */
+//#customize-theme-controls .customize-pane-parent .control-section .accordion-section-title {
+//	display: flex;
+//	align-items: center;
+//	padding-left: 0;
+//}
+//.accordion-section-title button.accordion-trigger {
+//	padding-left: 0;
+//}
+//#customize-controls .current-panel .control-section>h3.accordion-section-title {
+//	padding-left: 14px;
+//}
+
 /* Upgrade to Inspiro Premium */
 .customize-control-section-title,
 #customize-controls .control-section-upgrade-pro {
@@ -207,9 +220,14 @@ $icon_color_2: #A0A5AA;
 $font-family_icons: dashicons;
 $background-color_1: $icon_color_1;
 
-#accordion-section-inspiro_upgrade_pro {
-	>.accordion-section-title {
-		&:before {
+#accordion-section-inspiro_upgrade_pro,
+#accordion-section-colors_premium,
+#accordion-section-blog_options_upgrade{
+	.accordion-section-title {
+		padding: 10px 10px 11px 14px;
+
+		&:before,
+		&:after {
 			display: none;
 		}
 	}
@@ -263,13 +281,22 @@ $background-color_1: $icon_color_1;
 .control-section {
 	&:not(.control-subsection) {
 		>.accordion-section-title {
+
+			&:not(:has(button.accordion-trigger)) {
+				padding-left: 30px;
+			}
+
 			&:before {
+				left: 5px;
+				position: absolute;
+				z-index: 999;
+				top: calc(50% - 10px);
 				content: "\f107";
 				font-size: 20px;
-				color: $icon_color_2;
+				color: $icon_color_1;
 				vertical-align: middle;
 				font-family: $font-family_icons;
-				margin: 0 7px 0 0;
+				//margin: 0 7px 0 0;
 				speak: none;
 				font-style: normal;
 				font-weight: normal;
@@ -278,6 +305,10 @@ $background-color_1: $icon_color_1;
 				line-height: 1;
 				-webkit-font-smoothing: antialiased;
 				-moz-osx-font-smoothing: grayscale;
+			}
+
+			button.accordion-trigger {
+				padding: 10px 10px 11px 30px;
 			}
 		}
 	}
