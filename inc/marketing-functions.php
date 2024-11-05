@@ -8,9 +8,9 @@
  */
 
 // Define the Black Friday campaign dates as constants
-const BTN_UPGRADE_NOW_LINK = '#';
-const BF_START_DATE = '2024-10-24 00:00:00'; // this is the required date format
-const BF_END_DATE = '2024-10-30 23:59:59'; // this is the required date format
+const BTN_UPGRADE_NOW_LINK = 'https://www.wpzoom.com/themes/inspiro/pricing/?utm_source=wpadmin&utm_medium=bf-inspirolite-banner-btn&utm_campaign=bf-inspirolite';
+const BF_START_DATE = '2024-11-27 00:00:00'; // this is the required date format
+const BF_END_DATE = '2024-12-03 23:59:59'; // this is the required date format
 const BF_DISMISS_BANNER_ACTION = 'inspiro_dismiss_bf_banner';
 global $pagenow;
 
@@ -81,10 +81,10 @@ function inspiro_display_black_friday_banner() {
 				<span class="banner-text">Take your website to the next level with Inspiro Premium and unlock powerful features like:</span>
 
 				<div class="banner-promo-btns">
-					<div class="banner-btn">Advanced Video Integration</div>
-					<div class="banner-btn">Slideshow with Video Background</div>
-					<div class="banner-btn">15+ Premium Starter Sites</div>
-					<div class="banner-btn">Exclusive Premium Support</div>
+                    <div class="banner-btn">20+ Premium Demos</div>
+ 					<div class="banner-btn">Slideshow with Video Background</div>
+                    <div class="banner-btn">Elementor Templates</div>
+                    <div class="banner-btn">Customize Every Detail</div>
 				</div>
 			</div>
 
