@@ -2,10 +2,10 @@
 /**
  * Inspiro functions and definitions
  *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ * @link    https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package Inspiro
- * @since Inspiro 1.0.0
+ * @since   Inspiro 1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -115,6 +115,9 @@ if ( is_admin() ) {
 	require INSPIRO_THEME_DIR . 'inc/admin-notice.php';
 	require INSPIRO_THEME_DIR . 'inc/admin/admin-api.php';
 
+	// temporary marketing black friday functionality
+	require INSPIRO_THEME_DIR . 'inc/marketing-functions.php';
+
 	if ( current_user_can( 'manage_options' ) ) {
 		require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-notices.php';
 		require INSPIRO_THEME_DIR . 'inc/classes/class-inspiro-notice-review.php';
@@ -137,3 +140,4 @@ require INSPIRO_THEME_DIR . 'inc/dynamic-css/hero-header-desc.php';
 require INSPIRO_THEME_DIR . 'inc/dynamic-css/hero-header-button.php';
 require INSPIRO_THEME_DIR . 'inc/dynamic-css/main-menu.php';
 require INSPIRO_THEME_DIR . 'inc/dynamic-css/mobile-menu.php';
+
