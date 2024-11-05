@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Inspiro 1.4.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/inspiro-lite\n"
-"POT-Creation-Date: 2024-10-23 08:19+0000\n"
+"POT-Creation-Date: 2024-11-05 12:38+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -281,6 +281,7 @@ msgstr ""
 msgid "Blog Layout"
 msgstr ""
 
+#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:32
 #: inc/customizer/configs/blog-post/class-inspiro-blog-post-panel-config.php:33
 msgid "Blog Post Options"
 msgstr ""
@@ -339,7 +340,7 @@ msgstr ""
 msgid "Cheatin&#8217; huh?"
 msgstr ""
 
-#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:82
+#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:85
 msgid "Choose if you want to show the Featured Image in the header"
 msgstr ""
 
@@ -434,7 +435,7 @@ msgstr ""
 msgid "Content Link color"
 msgstr ""
 
-#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:66
+#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:69
 msgid "Content to Display in Archive Pages"
 msgstr ""
 
@@ -514,7 +515,7 @@ msgstr ""
 msgid "Default Style"
 msgstr ""
 
-#: inc/customizer/class-inspiro-customizer.php:472
+#: inc/customizer/class-inspiro-customizer.php:475
 msgid "Default System Font"
 msgstr ""
 
@@ -554,7 +555,7 @@ msgstr ""
 msgid "Dismiss this notice."
 msgstr ""
 
-#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:79
+#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:82
 msgid "Display the Featured Image in the Header"
 msgstr ""
 
@@ -604,11 +605,15 @@ msgstr ""
 msgid "Enable Hero Area on the Homepage"
 msgstr ""
 
+#: inc/customizer/configs/wc-customs/class-inspiro-wc-customs-config.php:44
+msgid "Enable Product Image Zoom"
+msgstr ""
+
 #: inc/customizer/configs/homepage-media/class-inspiro-homepage-media-media-config.php:79
 msgid "Enter a YouTube or Vimeo URL:"
 msgstr ""
 
-#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:70
+#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:73
 msgid "Excerpt"
 msgstr ""
 
@@ -810,7 +815,7 @@ msgid ""
 "customize individual elements."
 msgstr ""
 
-#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:71
+#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:74
 msgid "Full Content"
 msgstr ""
 
@@ -1113,14 +1118,14 @@ msgid ""
 "lite-free-to-inspiro-premium-pro/"
 msgstr ""
 
-#. URI of the theme
-msgid "https://www.wpzoom.com/themes/inspiro/"
-msgstr ""
-
 #: inc/admin/pages/demos.php:572
 msgid ""
 "https://www.wpzoom.com/themes/inspiro-pro/?"
 "utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-pro"
+msgstr ""
+
+#. URI of the theme
+msgid "https://www.wpzoom.com/themes/inspiro/"
 msgstr ""
 
 #: inc/admin/pages/demos.php:336 inc/admin/pages/admin.php:85
@@ -1219,7 +1224,7 @@ msgid ""
 msgstr ""
 
 #: inc/classes/class-inspiro-font-family-manager.php:251
-#: inc/customizer/class-inspiro-customizer.php:453
+#: inc/customizer/class-inspiro-customizer.php:456
 #: inc/customizer/custom-controls/font-variant/class-inspiro-customize-font-variant-control.php:88
 #: inc/customizer/custom-controls/typography/class-inspiro-customize-typography-control.php:104
 msgid "Inherit"
@@ -1634,7 +1639,7 @@ msgstr ""
 msgid "No thanks, skip the tour"
 msgstr ""
 
-#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:72
+#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:75
 msgid "None"
 msgstr ""
 
@@ -1992,10 +1997,6 @@ msgstr ""
 msgid "Post Comment"
 msgstr ""
 
-#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:32
-msgid "Post Options"
-msgstr ""
-
 #: inc/customizer/configs/colors/class-inspiro-color-general-config.php:195
 msgid "Post title"
 msgstr ""
@@ -2174,6 +2175,10 @@ msgstr ""
 msgid "Single Post Layout"
 msgstr ""
 
+#: inc/customizer/configs/wc-customs/class-inspiro-wc-customs-config.php:25
+msgid "Single Product Pages"
+msgstr ""
+
 #: inc/admin/pages/admin.php:189
 msgid "Site Logo"
 msgstr ""
@@ -2262,7 +2267,7 @@ msgstr ""
 msgid "Support Forums"
 msgstr ""
 
-#: inc/customizer/class-inspiro-customizer.php:473
+#: inc/customizer/class-inspiro-customizer.php:476
 msgid "System Fonts"
 msgstr ""
 
@@ -2597,7 +2602,7 @@ msgid ""
 "version!"
 msgstr ""
 
-#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:90
+#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:93
 msgid ""
 "Unlock all customization and post options by upgrading to the Premium "
 "version of the theme. Disable specific elements and features, customize "
@@ -2610,7 +2615,7 @@ msgid ""
 "theme. Customize colors, fonts, header, footer & much more!"
 msgstr ""
 
-#: inc/customizer/class-inspiro-customizer.php:280
+#: inc/customizer/class-inspiro-customizer.php:283
 msgid ""
 "Unlock premium features: 7 Style Kits, Video Backgrounds, Portfolio "
 "Integration, Premium Support and much more..."
@@ -2658,7 +2663,7 @@ msgstr ""
 msgid "Upgrade message from the plugin author:"
 msgstr ""
 
-#: inc/customizer/class-inspiro-customizer.php:279
+#: inc/customizer/class-inspiro-customizer.php:282
 msgid "Upgrade to Inspiro Premium"
 msgstr ""
 
@@ -2750,7 +2755,7 @@ msgstr ""
 msgid "View Demo &rarr;"
 msgstr ""
 
-#: inc/customizer/class-inspiro-customizer.php:281
+#: inc/customizer/class-inspiro-customizer.php:284
 msgid "View Inspiro Premium"
 msgstr ""
 
@@ -2855,7 +2860,7 @@ msgstr ""
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:89
+#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:92
 msgid "⚙️ You can control every detail in your theme with Inspiro Premium!"
 msgstr ""
 
@@ -2867,6 +2872,6 @@ msgstr ""
 msgid "👉 Unlock all customizations"
 msgstr ""
 
-#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:91
+#: inc/customizer/configs/blog-post/class-inspiro-post-options-config.php:94
 msgid "👉 Unlock all options and features"
 msgstr ""
