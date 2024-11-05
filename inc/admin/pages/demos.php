@@ -2,7 +2,7 @@
 
     <div class="theme-info-wrap">
 
-        <h3 class="wpz-onboard_content-main-title"><?php esc_html_e( 'Inspiro Premium Demos (17)', 'inspiro' ); ?></h3>
+        <h3 class="wpz-onboard_content-main-title"><?php esc_html_e( 'Inspiro Premium Demos (19)', 'inspiro' ); ?></h3>
         <p class="wpz-onboard_content-main-intro"><?php esc_html_e( 'Below you can view demos available in the Inspiro Premium theme. You can get access to all of them by purchasing the Premium version of the theme.', 'inspiro' ); ?></p>
 
         <ol class="wpz-onboard_content-main-steps">
@@ -83,6 +83,48 @@
                                     </figcaption>
                                 </figure>
                             </li>
+
+                            <li class="design_kids"
+                                data-design-id="inspiro-kids">
+                                <figure title="camp">
+                                    <div class="preview-thumbnail"
+                                         style="background-image:url('https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/inspiro-scout/home-thumb.png')">
+                                        <a href="https://demo.wpzoom.com/inspiro-kids/"
+                                           target="_blank" class="button-select-template">View
+                                            Demo</a></div>
+                                    <figcaption>
+                                        <h5>Kids Summer Camp</h5>
+
+                                        <p>
+                                            <a href="https://demo.wpzoom.com/inspiro-kids/"
+                                               target="_blank" rel="noopener" title="Live preview">Live
+                                                preview</a>
+                                        </p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+
+                            <li class="design_architecture"
+                                data-design-id="inspiro-architecture">
+                                <figure title="Architecture">
+                                    <div class="preview-thumbnail"
+                                         style="background-image:url('https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/inspiro-architecture/home-thumb.png')">
+                                        <a href="https://demo.wpzoom.com/inspiro-architecture/"
+                                           target="_blank" class="button-select-template">View
+                                            Demo</a></div>
+                                    <figcaption>
+                                        <h5>Architecture</h5>
+
+                                        <p>
+                                            <a href="https://demo.wpzoom.com/inspiro-architecture/"
+                                               target="_blank" rel="noopener" title="Live preview">Live
+                                                preview</a>
+                                        </p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+
+
                             <li class="design_photography"
                                 data-design-id="inspiro-wedding-photography">
                                 <figure title="Photography">
