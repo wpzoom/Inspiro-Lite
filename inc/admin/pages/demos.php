@@ -354,7 +354,7 @@
                                            target="_blank" class="button-select-template">View
                                             Demo</a></div>
                                     <figcaption>
-                                        <h5>Author / Coach</h5>
+                                        <h5>Church</h5>
 
                                         <p>
                                             <a href="https://demo.wpzoom.com/inspiro-church/"
