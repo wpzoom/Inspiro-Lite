@@ -22,18 +22,20 @@ if ( ! function_exists( 'inspiro_admin_notice' ) ) {
 
 		$welcome_notice        = get_option( 'inspiro_notice_welcome' );
 		$current_user_can      = current_user_can( 'edit_theme_options' );
-		$should_display_notice = ( $current_user_can && 'index.php' === $pagenow && ! $welcome_notice ) || ( $current_user_can && 'themes.php' === $pagenow && isset( $_GET['activated'] ) && ! $welcome_notice ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-		
-		wp_enqueue_style(
-			'inspiro-admin-notice',
-			inspiro_get_assets_uri( 'welcome-notice', 'css' ),
-			array(),
-			INSPIRO_THEME_VERSION
-		);
+		//$should_display_notice = ( $current_user_can && 'index.php' === $pagenow && ! $welcome_notice ) || ( $current_user_can && 'themes.php' === $pagenow && isset( $_GET['activated'] ) && ! $welcome_notice ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$should_display_notice = ( $current_user_can && ! $welcome_notice );
 
-		inspiro_welcome_notice();
-		
-	}
+		if ( $should_display_notice ) {
+			wp_enqueue_style(
+				'inspiro-admin-notice',
+				inspiro_get_assets_uri( 'welcome-notice', 'css' ),
+				array(),
+				INSPIRO_THEME_VERSION
+			);
+
+			inspiro_welcome_notice();
+		}
+	}	
 }
 add_action( 'admin_notices', 'inspiro_admin_notice' );
 
@@ -67,6 +69,18 @@ if ( ! function_exists( 'inspiro_welcome_notice' ) ) {
 	 * @return void
 	 */
 	function inspiro_welcome_notice() {
+
+
+		$plugin_status = inspiro_check_plugin_status( 'inspiro-toolkit/inspiro-toolkit.php' );
+
+		$note_html = '';
+		
+		if ( 'not_installed' === $plugin_status ) {
+			$note_html = __( 'Clicking "Starter Sites" will install and activate Inspiro Toolkit plugin on your WordPress site.', 'inspiro' );
+		} elseif ( 'installed' === $plugin_status ) {
+			$note_html = __( 'Clicking "Starter Sites" will activate Inspiro Toolkit plugin on your WordPress site.', 'inspiro' );
+		}
+	
 		?>
 		<div class="notice wpz-welcome-notice">
 			<a class="notice-dismiss wpz-welcome-notice-hide" href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'activated' ), add_query_arg( 'inspiro-hide-notice', 'welcome' ) ), 'inspiro_hide_notices_nonce', '_inspiro_notice_nonce' ) ); ?>">
@@ -95,8 +109,14 @@ if ( ! function_exists( 'inspiro_welcome_notice' ) ) {
 							<?php esc_html_e( 'Theme Dashboard', 'inspiro' ); ?>
 						</a>
 					</div>
-					<note><?php esc_html_e( 'Clicking "Starter Sites" will install and activate Inspiro Toolkit plugin on your WordPress site.', 'inspiro' ); ?></note>
-					
+					<?php
+						if ( $note_html ) {
+							printf( 
+								'<note>%s</note>', 
+								wp_kses_post( $note_html )
+							);
+						}
+					?>
 				</div>
 			</div>
 

@@ -41,12 +41,25 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 		public function admin_scripts( $hook ) {
 			wp_enqueue_style( 'inspiro-admin', inspiro_get_assets_uri( 'admin', 'css' ), array(), INSPIRO_THEME_VERSION );
 
-			// if ( 'inspiro' === $hook ) {
 			if ( 'appearance_page_page-inspiro' != $hook ) {
 
-				wp_enqueue_script( 'inspiro-admin-pages', inspiro_get_assets_uri( 'admin-pages', 'js' ), array( 'jquery' ), INSPIRO_THEME_VERSION, true );
-				wp_enqueue_script( "jquery-ui" );
-				wp_enqueue_script( "jquery-ui-tabs" );
+				wp_enqueue_script( 
+					'inspiro-admin-pages', 
+					inspiro_get_assets_uri( 'admin-pages', 'js' ), 
+					array( 'jquery' ), 
+					INSPIRO_THEME_VERSION, 
+					true 
+				);
+				wp_localize_script( 'inspiro-admin-pages', 'inspiro_admin_pages_vars', array(
+					'ajax_url'        => admin_url( 'admin-ajax.php' ),
+					'nonce'           => wp_create_nonce( 'inspiro-admin-pages' ),
+					'installingText'  => esc_html__( 'Installing...', 'inspiro' ),
+					'redirectingText' => esc_html__( 'Redirecting...', 'inspiro' ),
+					'import_url'      => esc_url( admin_url( 'admin.php?page=inspiro-toolkit-demo-import' ) ),
+				) );
+				
+				wp_enqueue_script( 'jquery-ui' );
+				wp_enqueue_script( 'jquery-ui-tabs' );
 			}
 		}
 

@@ -17,7 +17,7 @@ function install_activate_one_click_demo_plugin() {
 		// Assuming the plugin slug is passed via POST
 		$plugin_slug = isset( $_POST['plugin_slug'] ) ? sanitize_text_field( $_POST['plugin_slug'] ) : '';
 
-		if ( ! empty( $plugin_slug ) && 'one-click-demo-import' === $plugin_slug ) {
+		if ( ! empty( $plugin_slug ) && ( 'one-click-demo-import' === $plugin_slug || 'inspiro-toolkit' === $plugin_slug ) ) {
 			// Check if plugin is already installed
 			$plugin_file = WP_PLUGIN_DIR . '/' . $plugin_slug . '/' . $plugin_slug . '.php';
 			if ( file_exists( $plugin_file ) ) {

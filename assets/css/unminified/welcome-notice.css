@@ -75,6 +75,7 @@
     transition: all 0.3s ease;
     margin-right: 5px;
     border: 1px solid var(--inspiro-primary-color) !important;
+    border-radius: 4px;
 }
 .wpz-welcome-notice .button:hover, .wpz-welcome-notice .button:active {
     color: #fff;
