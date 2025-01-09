@@ -104,7 +104,7 @@ if ( ! function_exists( 'inspiro_welcome_notice' ) ) {
 					<p><?php esc_html_e( 'Explore a vast library of pre-designed sites within Inspiro. Visit our constantly growing collection of demos to find the perfect starting point for your project.', 'inspiro' ); ?></p>
 
 					<div class="wpz-welcome-notice-button">
-						<a id="wpz-notice-inspiro-plugin-handle" class="button button-primary" href="<?php echo esc_url( admin_Url( 'admin.php?page=inspiro-toolkit-demo-import' ) ); ?>"><?php esc_html_e( 'Starter Sites', 'inspiro' ); ?></a>
+						<a id="wpz-notice-inspiro-plugin-handle" class="button button-primary" data-plugin-status="<?php echo esc_attr( $plugin_status ); ?>" href="<?php echo esc_url( admin_Url( 'admin.php?page=inspiro-toolkit-demo-import' ) ); ?>"><?php esc_html_e( 'Starter Sites', 'inspiro' ); ?></a>
 						<a class="button button-secondary" href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro' ) ); ?>" target="_blank">
 							<?php esc_html_e( 'Theme Dashboard', 'inspiro' ); ?>
 						</a>

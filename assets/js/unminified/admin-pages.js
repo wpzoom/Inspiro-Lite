@@ -52,14 +52,19 @@ jQuery(document).ready(($) => {
 	} );
 
 	$('#wpz-notice-inspiro-plugin-handle').on( 'click', function( e ) {
+		
+		const btn = $(this);
+		const dataPluginStatus = btn.data('plugin-status');
+		
+		if ( dataPluginStatus === 'active' ) {
+			return;
+		}
+
 		e.preventDefault();
 
-		const btn = $(this);
 		const originalText = btn.text();
 		const installingText = inspiro_admin_pages_vars.installingText;
 		const redirectingText = inspiro_admin_pages_vars.redirectingText;
-
-		console.log( redirectingText );
 
 		btn.text( installingText );
 
