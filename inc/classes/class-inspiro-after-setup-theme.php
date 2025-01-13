@@ -378,8 +378,8 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 			$plugins = array(
 
                 array(
-                    'name'     => 'One Click Demo Import',
-                    'slug'     => 'one-click-demo-import',
+                    'name'     => 'Inspiro Toolkit',
+                    'slug'     => 'inspiro-toolkit',
                     'required' => false,
                 ),
 

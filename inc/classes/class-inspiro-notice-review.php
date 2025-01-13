@@ -76,7 +76,7 @@ class Inspiro_Notice_Review extends Inspiro_Notices {
             return;
         }
         ?>
-        <div id="message" class="notice inspiro-notice inspiro-review-notice wpz-welcome-notice">
+        <div id="message" class="notice inspiro-notice inspiro-review-notice wpz-review-notice">
             <a class="inspiro-message-close notice-dismiss" href="<?php echo esc_url( $dismiss_url ); ?>"></a>
 
                 <div class="wpz-notice-image">

@@ -1,9 +1,9 @@
 /*
  * This script is specific to Inspiro custom and WP generate Admin pages.
  * It initializes jQuery UI tabs on an element with the ID 'tabs' and handles
- * the click event on a button with the ID 'install-one-click-demo-btn'.
+ * the click event on a button with the ID 'install-inspiro-toolkit-btn'.
  * When the button is clicked, an AJAX POST request is sent to the
- * WordPress backend to invoke the 'install_activate_one_click_demo_plugin' action.
+ * WordPress backend to invoke the 'install_activate_inspiro_toolkit_plugin' action.
  * A spinner icon is displayed while the request is processed.
  * On success, the page is reloaded, and on error, an error message is logged to the console.
  */
@@ -11,8 +11,8 @@ jQuery(document).ready(($) => {
 
 	$("#tabs").tabs();
 
-	const ACTION_NAME = 'install_activate_one_click_demo_plugin';
-	const PLUGIN_SLUG = 'one-click-demo-import';
+	const ACTION_NAME = 'install_activate_inspiro_toolkit_plugin';
+	const PLUGIN_SLUG = 'inspiro-toolkit';
 
 	const handleAjaxRequest = (btn, btnTextContainer, originalText, spinIcon) => {
 		$.ajax({
@@ -35,11 +35,11 @@ jQuery(document).ready(($) => {
 		});
 	};
 
-	$('#install-one-click-demo-btn').on('click', function() {
+	$('#install-inspiro-toolkit-btn').on('click', function() {
 		const btn = $(this);
 		btn.addClass('button-disabled');
 
-		const btnTextContainer = btn.find('#install-one-click-demo-btn-text');
+		const btnTextContainer = btn.find('#install-inspiro-toolkit-btn-text');
 		const originalText = btnTextContainer.text();
 		const installingText = btnTextContainer.data('installing-text');
 

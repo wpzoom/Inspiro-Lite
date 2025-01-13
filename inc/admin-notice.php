@@ -22,8 +22,7 @@ if ( ! function_exists( 'inspiro_admin_notice' ) ) {
 
 		$welcome_notice        = get_option( 'inspiro_notice_welcome' );
 		$current_user_can      = current_user_can( 'edit_theme_options' );
-		//$should_display_notice = ( $current_user_can && 'index.php' === $pagenow && ! $welcome_notice ) || ( $current_user_can && 'themes.php' === $pagenow && isset( $_GET['activated'] ) && ! $welcome_notice ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
-		$should_display_notice = ( $current_user_can && ! $welcome_notice );
+		$should_display_notice = ( $current_user_can && 'themes.php' === $pagenow && ! $welcome_notice ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
 		if ( $should_display_notice ) {
 			wp_enqueue_style(
@@ -97,7 +96,7 @@ if ( ! function_exists( 'inspiro_welcome_notice' ) ) {
 			<div class="wpz-notice-content">
 
 				<div class="wpz-notice-image">
-					<a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=adminnotice&utm_campaign=welcome-banner" title="Inspiro Premium" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-top.png' ); ?>" width="174" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>" /></a>
+					<a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=adminnotice&utm_campaign=welcome-banner" title="Inspiro Premium" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-top.png' ); ?>" width="233" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>" /></a>
 				</div>
 
 				<div class="wpz-notice-text">
