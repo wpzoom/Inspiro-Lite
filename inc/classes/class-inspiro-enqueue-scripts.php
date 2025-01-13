@@ -55,7 +55,7 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 					'nonce'           => wp_create_nonce( 'inspiro-admin-pages' ),
 					'installingText'  => esc_html__( 'Installing...', 'inspiro' ),
 					'redirectingText' => esc_html__( 'Redirecting...', 'inspiro' ),
-					'import_url'      => esc_url( admin_url( 'admin.php?page=inspiro-toolkit-demo-import' ) ),
+					'import_url'      => esc_url( admin_url( 'admin.php?page=inspiro-demo' ) ),
 				) );
 				
 				wp_enqueue_script( 'jquery-ui' );
