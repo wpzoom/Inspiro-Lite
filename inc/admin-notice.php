@@ -20,9 +20,11 @@ if ( ! function_exists( 'inspiro_admin_notice' ) ) {
 	function inspiro_admin_notice() {
 		global $pagenow, $inspiro_version;
 
-		$welcome_notice        = get_option( 'inspiro_notice_welcome' );
-		$current_user_can      = current_user_can( 'edit_theme_options' );
-		$should_display_notice = ( $current_user_can && 'themes.php' === $pagenow && ! $welcome_notice ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$welcome_notice   = get_option( 'inspiro_notice_welcome' );
+		$current_user_can = current_user_can( 'edit_theme_options' );
+		$plugin_status    = inspiro_check_plugin_status( 'inspiro-toolkit/inspiro-toolkit.php' );
+
+		$should_display_notice = ( 'active' !== $plugin_status &&  ! $welcome_notice ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
 		if ( $should_display_notice ) {
 			wp_enqueue_style(
