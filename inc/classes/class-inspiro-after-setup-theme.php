@@ -370,6 +370,11 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 		 * @return void
 		 */
 		public function register_required_plugins() {
+
+			if( class_exists( 'WPZI_Importer' ) ) {
+				return array();
+			}
+
 			/*
 			 * Array of plugin arrays. Required keys are name and slug.
 			 * If the source is NOT from the .org repo, then source is also required.
