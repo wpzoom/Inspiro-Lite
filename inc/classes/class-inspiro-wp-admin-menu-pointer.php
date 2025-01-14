@@ -32,7 +32,7 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu_Pointer' ) ) {
 
 		public function __construct() {
 			$this->link_url = admin_url( 'admin.php?page=inspiro' ); // add link here
-			add_action( 'admin_init', [ $this, 'show_custom_pointer' ] );
+			//add_action( 'admin_init', [ $this, 'show_custom_pointer' ] );
 			add_action( 'wp_ajax_dismiss_wp_pointer', [ $this, 'dismiss_pointer_status' ] );
 		}
 
