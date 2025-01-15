@@ -15,9 +15,9 @@
 
 ## Description ##
 
-A professional Photo and Video focused theme with a modern design. Packed with features including a fullscreen custom header that supports YouTube, Vimeo & self-hosted videos in background, Inspiro is perfect for showing off your portfolio, images and videos.
+A professional Photo and Video focused theme with a modern design. Packed with features including a fullscreen custom header that supports YouTube, Vimeo & self-hosted videos in the background, Inspiro is perfect for showing off your portfolio, images, and videos.
 
-For more information about Inspiro please go to https://wordpress.org/themes/inspiro/.
+For more information about Inspiro, please go to https://wordpress.org/themes/inspiro/.
 
 Please note:
 More customization options & features are available in the paid version.
@@ -57,32 +57,32 @@ Source: https://github.com/flesler/jquery.scrollTo
 
 uisearch.js, Copyright 2013 Codrops
 License: MIT
-Sourse: http://www.codrops.com
+Source: http://www.codrops.com
 
 jQuery Superfish Menu Plugin, 2013 Joel Birch
 Dual licensed under the MIT and GPL licenses: http://www.opensource.org/licenses/mit-license.php, http://www.gnu.org/licenses/gpl.html
-Sourse: https://superfish.joelbirch.design/
+Source: https://superfish.joelbirch.design/
 
 headroom.js, Copyright 2020 Nick Williams
 License: MIT
-Sourse: http://wicky.nillia.ms/headroom.js
+Source: http://wicky.nillia.ms/headroom.js
 
 jQuery FitVids, Copyright 2013 Chris Coyier
 Released under the WTFPL license - http://sam.zoy.org/wtfpl/
-Sourse: http://css-tricks.com + Dave Rupert - http://daverupert.com
+Source: http://css-tricks.com + Dave Rupert - http://daverupert.com
 Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
 
 classie.js, Copyright 2016 David DeSandro
 License: MIT
-Sourse: https://github.com/desandro/classie
+Source: https://github.com/desandro/classie
 
 typography.js, Copyright brainstormforce/astra
 License: MIT
-Sourse: https://github.com/brainstormforce/astra/blob/3282ea23bc1df3da42cad20091b7afd28d09a440/inc/customizer/custom-controls/typography/typography.js
+Source: https://github.com/brainstormforce/astra/blob/3282ea23bc1df3da42cad20091b7afd28d09a440/inc/customizer/custom-controls/typography/typography.js
 
 selectWoo.js, Copyright WooCommerce
 License: MIT
-Sourse: https://github.com/woocommerce/selectWoo
+Source: https://github.com/woocommerce/selectWoo
 
 normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
 License: MIT
