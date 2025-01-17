@@ -6,18 +6,18 @@
  * @since      Inspiro 1.9.5
  */
 
-// Handle AJAX request for activating Inspiro toolkit plugin
-add_action( 'wp_ajax_install_activate_inspiro_toolkit_plugin', 'install_activate_inspiro_toolkit_plugin' );
-function install_activate_inspiro_toolkit_plugin() {
+// Handle AJAX request for activating Inspiro Starter Sites plugin
+add_action( 'wp_ajax_install_activate_inspiro_starter_sites_plugin', 'install_activate_inspiro_starter_sites_plugin' );
+function install_activate_inspiro_starter_sites_plugin() {
 	// Check for nonce security
-	//	check_ajax_referer( 'install_activate_inspiro_toolkit_plugin_nonce', 'nonce' );
+	//	check_ajax_referer( 'install_activate_inspiro_starter-sites_plugin_nonce', 'nonce' );
 
 	// Ensure the user has the capability to install plugins
 	if ( current_user_can( 'install_plugins' ) ) {
 		// Assuming the plugin slug is passed via POST
 		$plugin_slug = isset( $_POST['plugin_slug'] ) ? sanitize_text_field( $_POST['plugin_slug'] ) : '';
 
-		if ( ! empty( $plugin_slug ) && 'inspiro-toolkit' === $plugin_slug ) {
+		if ( ! empty( $plugin_slug ) && 'inspiro-starter-sites' === $plugin_slug ) {
 			// Check if plugin is already installed
 			$plugin_file = WP_PLUGIN_DIR . '/' . $plugin_slug . '/' . $plugin_slug . '.php';
 			if ( file_exists( $plugin_file ) ) {

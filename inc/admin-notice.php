@@ -22,7 +22,7 @@ if ( ! function_exists( 'inspiro_admin_notice' ) ) {
 
 		$welcome_notice   = get_option( 'inspiro_notice_welcome' );
 		$current_user_can = current_user_can( 'edit_theme_options' );
-		$plugin_status    = inspiro_check_plugin_status( 'inspiro-toolkit/inspiro-toolkit.php' );
+		$plugin_status    = inspiro_check_plugin_status( 'inspiro-starter-sites/inspiro-starter-sites.php' );
 
 		$should_display_notice = ( 'active' !== $plugin_status &&  ! $welcome_notice ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
@@ -72,14 +72,14 @@ if ( ! function_exists( 'inspiro_welcome_notice' ) ) {
 	function inspiro_welcome_notice() {
 
 
-		$plugin_status = inspiro_check_plugin_status( 'inspiro-toolkit/inspiro-toolkit.php' );
+		$plugin_status = inspiro_check_plugin_status( 'inspiro-starter-sites/iinspiro-starter-sites.php' );
 
 		$note_html = '';
 		
 		if ( 'not_installed' === $plugin_status ) {
-			$note_html = __( 'Clicking "Starter Sites" will install and activate Inspiro Toolkit plugin on your WordPress site.', 'inspiro' );
+			$note_html = __( 'Clicking "Starter Sites" will install and activate Inspiro Starter Sites plugin on your WordPress site.', 'inspiro' );
 		} elseif ( 'installed' === $plugin_status ) {
-			$note_html = __( 'Clicking "Starter Sites" will activate Inspiro Toolkit plugin on your WordPress site.', 'inspiro' );
+			$note_html = __( 'Clicking "Starter Sites" will activate Inspiro Starter Sites plugin on your WordPress site.', 'inspiro' );
 		}
 	
 		?>

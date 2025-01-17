@@ -1,13 +1,13 @@
 <?php
 $parent = wp_get_theme();
 
-// install-inspiro-toolkit-btn
+// install-inspiro-starter-sites-btn
 $btn_admin_link = esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) ); // was link attr value
 
 ?>
 
 <?php if ( class_exists( 'WPZI_Importer' ) ) : ?>
-	<?php do_action( 'inspiro_toolkit_admin_page' ); ?>
+	<?php do_action( 'inspiro_starter_sites_admin_page' ); ?>
 <?php else : ?>
 
 <div class="wpz-onboard_wrapper">
@@ -70,14 +70,14 @@ $btn_admin_link = esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) )
 							</h3>
 
 							<p class="about">
-								<?php esc_html_e( 'Click the button below to install the Inspiro Toolkit plugin to use this feature.', 'inspiro' ); ?>
+								<?php esc_html_e( 'Click the button below to install the Inspiro Starter Sites plugin to use this feature.', 'inspiro' ); ?>
 							</p>
 							<p class="section_footer">
-								<button class="button button-primary" id="install-inspiro-toolkit-btn">
-									<span id="install-inspiro-toolkit-btn-text"
-											data-installing-text="<?php esc_attr_e( 'Installing Inspiro Toolkit', 'inspiro' ); ?>"
+								<button class="button button-primary" id="install-inspiro-starter-sites-btn">
+									<span id="install-inspiro-starter-sites-btn-text"
+											data-installing-text="<?php esc_attr_e( 'Installing Inspiro Starter Sites', 'inspiro' ); ?>"
 									>
-										<?php esc_html_e( 'Install Inspiro Toolkit', 'inspiro' ); ?>
+										<?php esc_html_e( 'Install Starter Sites', 'inspiro' ); ?>
 									</span>
 									<i class="dashicons dashicons-update spin-icon hidden-element"></i>
 								</button>
