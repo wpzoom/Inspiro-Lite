@@ -11,7 +11,7 @@
     border-left-width: 1px;
     border-radius: 7px;
     overflow: hidden;
-    padding: 36px 0 0 35px;
+    padding: 25px 25px 5px;
 }
 .wpz-welcome-notice a,
 .wpz-review-notice a {
@@ -20,43 +20,39 @@
 .wpz-welcome-notice .wpz-notice-heading,
 .wpz-review-notice .wpz-notice-heading {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .wpz-welcome-notice .wpz-notice-heading p,
 .wpz-review-notice .wpz-notice-heading p {
-    font-size: 16px;
-    font-weight: 400;
-    color: #242628;
+    font-size: 14px;
     opacity: 0.7;
 }
 .wpz-welcome-notice .wpz-notice-content,
 .wpz-review-notice .wpz-notice-content {
     display: flex;
-    width: 65%;
+    max-width: 1050px;
 }
 .wpz-welcome-notice .wpz-notice-content note,
 .wpz-review-notice .wpz-notice-content note {
     font-size: 14px;
-    color: #242628;
-    line-height: 24px;
     opacity: 0.5;
+    margin-bottom: 15px;
+    display: block;
 }
 .wpz-welcome-notice .wpz-notice-image,
 .wpz-review-notice .wpz-notice-image {
-    margin: 0 5px 0 0;
-    max-width: 250px;
+    margin: 0 5px 0 -15px;
+    max-width: 180px;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 .wpz-welcome-notice .wpz-notice-image img,
 .wpz-review-notice .wpz-notice-image img {
-    vertical-align: bottom;
+    vertical-align: top;
 }
 .wpz-welcome-notice .wpz-notice-text p,
 .wpz-review-notice .wpz-notice-text p {
-    font-size: 16px;
-    color: #242628;
-    line-height: 26px;
+    font-size: 14px;
 }
 .wpz-welcome-notice .wpz-notice-text p a,
 .wpz-review-notice .wpz-notice-text p a {
@@ -70,14 +66,14 @@
 .wpz-review-notice h3 {
     margin-top: 0px;
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 20px;
 }
 .wpz-welcome-notice .button,
 .wpz-review-notice .button {
     display: inline-flex;
     align-items: center;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     color: #fff;
     background-color: var(--inspiro-primary-color) !important;
     padding: 3px 13px;
@@ -90,7 +86,7 @@
 .wpz-review-notice .button:hover,
 .wpz-review-notice .button:active {
     color: #fff;
-    background-color: #67b0ff;
+    background-color: #67b0ff !important;
 }
 .wpz-welcome-notice .button.button-secondary,
 .wpz-review-notice .button.button-secondary {
@@ -100,7 +96,7 @@
 .wpz-welcome-notice .button.button-secondary:hover, .wpz-welcome-notice .button.button-secondary:active,
 .wpz-review-notice .button.button-secondary:hover,
 .wpz-review-notice .button.button-secondary:active {
-    background-color: rgba(var(--inspiro-primary-color), 0.1);
+    background-color: rgba(47, 141, 242, 0.1) !important;
 }
 .wpz-welcome-notice .wpz-welcome-notice-button,
 .wpz-review-notice .wpz-welcome-notice-button {
@@ -114,12 +110,12 @@
     background-repeat: no-repeat;
     background-position: center right;
     background-size: contain;
-    border-left-width: 1px;
+    border-left-width: 1px !important;
     overflow: hidden;
     border-radius: 10px;
     display: flex;
     justify-content: flex-start;
-    padding: 5px 25px 0 15px;
+    padding: 20px 25px 5px 25px !important;
 }
 .wpz-review-notice .wpz-notice-text p a {
     color: var(--inspiro-primary-color);
@@ -128,7 +124,7 @@
     text-decoration: none;
 }
 .wpz-review-notice h3 {
-    margin-top: 25px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 .wpz-review-notice .wpz-welcome-notice-button {
@@ -139,7 +135,7 @@
 .wpz-review-notice .wpz-welcome-notice-button .dashicons {
     margin-right: 3px;
     margin-top: 3px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .wpz-welcome-notice-hide {
@@ -151,5 +147,11 @@
     .wpz-review-notice {
         background: #fff;
         flex-direction: column;
+    }
+}
+@media screen and (max-width: 540px) {
+    .wpz-welcome-notice .wpz-notice-content,
+    .wpz-review-notice .wpz-notice-content {
+        display: block;
     }
 }
