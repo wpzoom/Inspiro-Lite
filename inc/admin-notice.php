@@ -23,8 +23,9 @@ if ( ! function_exists( 'inspiro_admin_notice' ) ) {
 		$welcome_notice   = get_option( 'inspiro_notice_welcome' );
 		$current_user_can = current_user_can( 'edit_theme_options' );
 		$plugin_status    = inspiro_check_plugin_status( 'inspiro-starter-sites/inspiro-starter-sites.php' );
+		$theme_dashboard  = ( 'admin.php' === $pagenow && isset( $_GET['page'] ) && 'inspiro' === $_GET['page'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
-		$should_display_notice = ( 'active' !== $plugin_status &&  ! $welcome_notice ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$should_display_notice = ( 'active' !== $plugin_status &&  ! $welcome_notice && ! $theme_dashboard ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
 		if ( $should_display_notice ) {
 			wp_enqueue_style(
