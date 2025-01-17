@@ -383,8 +383,8 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 			$plugins = array(
 
                 array(
-                    'name'     => 'Inspiro Toolkit',
-                    'slug'     => 'inspiro-toolkit',
+                    'name'     => 'Inspiro Starter Sites',
+                    'slug'     => 'inspiro-starter-sites',
                     'required' => false,
                 ),
 
