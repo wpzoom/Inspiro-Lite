@@ -352,7 +352,7 @@
 }
 .wp-core-ui .wpz-onboard_wrapper .button:hover, .wp-core-ui .wpz-onboard_wrapper .button:active {
     color: #fff;
-    background-color: rgb(102.75, 176.25, 255);
+    background-color: #67b0ff;
 }
 .wp-core-ui .wpz-onboard_wrapper .button.button-secondary {
     color: var(--inspiro-primary-color);
@@ -671,7 +671,7 @@
     color: var(--inspiro-primary-color);
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-steps .wpz-onboard_content-main-step.step-choose-design form ul li figure figcaption p a:hover, .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-steps .wpz-onboard_content-main-step.step-choose-design form ul li figure figcaption p a:active {
-    color: rgb(102.75, 176.25, 255);
+    color: #67b0ff;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-steps .wpz-onboard_content-main-step.step-choose-design form ul li figure figcaption input[type=radio] {
     display: none;
