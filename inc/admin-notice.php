@@ -98,7 +98,7 @@ if ( ! function_exists( 'inspiro_welcome_notice' ) ) {
 			<div class="wpz-notice-content">
 
 				<div class="wpz-notice-image">
-					<a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=adminnotice&utm_campaign=welcome-banner" title="Inspiro Premium" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-top.png' ); ?>" width="233" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>" /></a>
+					<a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=adminnotice&utm_campaign=welcome-banner" title="Inspiro Premium" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-top.png' ); ?>" width="180" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>" /></a>
 				</div>
 
 				<div class="wpz-notice-text">
@@ -106,7 +106,7 @@ if ( ! function_exists( 'inspiro_welcome_notice' ) ) {
 
 					<div class="wpz-welcome-notice-button">
 						<a id="wpz-notice-inspiro-plugin-handle" class="button button-primary" data-plugin-status="<?php echo esc_attr( $plugin_status ); ?>" href="<?php echo esc_url( admin_Url( 'admin.php?page=inspiro-demo' ) ); ?>"><?php esc_html_e( 'Starter Sites', 'inspiro' ); ?></a>
-						<a class="button button-secondary" href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro' ) ); ?>" target="_blank">
+						<a class="button button-secondary" href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro' ) ); ?>">
 							<?php esc_html_e( 'Theme Dashboard', 'inspiro' ); ?>
 						</a>
 					</div>
