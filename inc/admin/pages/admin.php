@@ -22,16 +22,13 @@
 					</svg>
 					Inspiro <span>Lite</span>
 				</h1>
-				<h2 class="wpz-onboard_framework-version">v <?php echo esc_html( $parent->get( 'Version' ) ); ?></h2>
 			</div>
 
 			<ul class="wpz-onboard_tabs">
-				<li class="wpz-onboard_tab wpz-onboard_tab-quick-start"><a href="#quick-start" title="Quick Start">
-						<svg width="18" height="18" viewBox="0 0 13 15" fill="none" xmlns="https://www.w3.org/2000/svg">
-							<path
-								d="M0.166992 14.5V0.333332H7.66699L8.00033 2H12.667V10.3333H6.83366L6.50033 8.66667H1.83366V14.5H0.166992ZM8.20866 8.66667H11.0003V3.66667H6.62533L6.29199 2H1.83366V7H7.87533L8.20866 8.66667Z"
-								fill="#000"></path>
-						</svg> <?php esc_html_e( 'Quick Start', 'inspiro' ); ?></a></li>
+				<li class="wpz-onboard_tab wpz-onboard_tab-quick-start"><a href="#quick-start" title="Home">
+					<svg width="18" height="18" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 18.5002V14.0002C6.5 12.6192 7.619 11.5002 9 11.5002V11.5002C10.381 11.5002 11.5 12.6192 11.5 14.0002V18.5002H17V9.91425C17 9.38425 16.789 8.87525 16.414 8.50025L9.707 1.79325C9.316 1.40225 8.683 1.40225 8.293 1.79325L1.586 8.50025C1.211 8.87525 1 9.38425 1 9.91425V18.5002H6.5Z" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg> <?php esc_html_e( 'Home', 'inspiro' ); ?></a></li>
 
 				<li class="wpz-onboard_tab wpz-onboard_tab-theme-child"><a href="#vs-pro" title="Free vs. PRO">
 						<svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="https://www.w3.org/2000/svg">
@@ -71,24 +68,33 @@
 					<div id="quick-start" class="wpz-onboard_content-main-tab">
 
 						<div class="theme-info-wrap welcome-section">
+							<div class="section-content">
+								<div class="header-row">
+									<h3 class="wpz-onboard_content-main-title welcome"><?php esc_html_e( 'Welcome to Inspiro Lite!', 'inspiro' ); ?>
+										👋</h3>
+									<h2 class="wpz-onboard_framework-version">v <?php echo esc_html( $parent->get( 'Version' ) ); ?></h2>
+								</div>
+								<p class="wpz-onboard_content-main-intro"><?php esc_html_e( 'Thank you for installing the free version of our theme! Below you can find quick links to different sections in the Customizer where you can configure and customize the theme. The free version includes limited features and customization options, but if you need more flexibility and plan to take your website to the next level, make sure to check the Premium version.', 'inspiro' ); ?></p>
 
-							<h3 class="wpz-onboard_content-main-title"><?php esc_html_e( 'Welcome to Inspiro!', 'inspiro' ); ?>
-								👋</h3>
-							<p class="wpz-onboard_content-main-intro"><?php esc_html_e( 'Thank you for installing the free version of our theme! Below you can find quick links to different sections in the Customizer where you can configure and customize the theme. The free version includes limited features and customization options, but if you need more flexibility and plan to take your website to the next level, make sure to check the Premium version.', 'inspiro' ); ?></p>
+								<p class="section_footer">
+									<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>" target="_blank"
+									class="button button-primary">
+										<?php esc_html_e( 'Customize', 'inspiro' ); ?>
+									</a>
 
-							<p class="section_footer">
-								<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>" target="_blank"
-								   class="button button-primary">
-									<?php esc_html_e( 'Customize Inspiro &rarr;', 'inspiro' ); ?>
+									<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium', 'inspiro' ) ); ?>"
+									target="_blank" class="button button-secondary">
+										<?php esc_html_e( 'Get Inspiro Premium &#8599;', 'inspiro' ); ?>
+									</a>
+								</p>
+							</div>
+							<div class="section-image">
+								<a href="https://demo.wpzoom.com/inspiro-premium-blocks"
+									title="Inspiro Premium" target="_blank"><img
+											src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-premium-blocks.png' ); ?>"
+											width="300" alt="<?php echo esc_attr__( 'Inspiro Premium Blocks', 'inspiro' ); ?>"/>
 								</a>
-
-								<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium', 'inspiro' ) ); ?>"
-								   target="_blank" class="button button-secondary">
-									<?php esc_html_e( 'Get Inspiro Premium &rarr;', 'inspiro' ); ?>
-								</a>
-
-							</p>
-
+							</div>
 						</div>
 
 						<div class="theme-info-wrap">
@@ -107,7 +113,7 @@
                                         </p>
                                         <p class="section_footer">
                                             <a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[panel]=homepage_media_panel' ) ); ?>" target="_blank" class="button button-primary">
-                                                <?php esc_html_e( 'Configure &rarr;', 'inspiro' ); ?>
+                                                <?php esc_html_e( 'Configure &#8599;', 'inspiro' ); ?>
                                             </a>
 
                                         </p>
@@ -194,7 +200,7 @@
 									<p class="section_footer">
 										<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=title_tagline' ) ); ?>"
 										   target="_blank" class="button button-primary">
-											<?php esc_html_e( 'Customize &rarr;', 'inspiro' ); ?>
+											<?php esc_html_e( 'Customize &#8599;', 'inspiro' ); ?>
 										</a>
 
 									</p>
@@ -237,14 +243,14 @@
 
 											<a href="<?php echo esc_url( admin_url( 'edit.php?post_type=portfolio_item' ) ); ?>"
 											   target="_blank" class="button button-primary">
-												<?php esc_html_e( 'Add a Portfolio Post &rarr;', 'inspiro' ); ?>
+												<?php esc_html_e( 'Add a Portfolio Post &#8599;', 'inspiro' ); ?>
 											</a>
 
 										<?php } else { ?>
 
 											<a href="<?php echo esc_url( admin_url( 'plugin-install.php?s=wpzoom%2520portfolio&tab=search&type=term' ) ); ?>"
 											   target="_blank" class="button button-primary">
-												<?php esc_html_e( 'Install WPZOOM Portfolio &rarr;', 'inspiro' ); ?>
+												<?php esc_html_e( 'Install WPZOOM Portfolio &#8599;', 'inspiro' ); ?>
 											</a>
 
 										<?php } ?>
@@ -272,7 +278,7 @@
 
 										<a href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro-demo' ) ); ?>"
 										   class="button button-primary">
-											<?php esc_html_e( 'Import the Demo Content &rarr;', 'inspiro' ); ?>
+											<?php esc_html_e( 'Import the Demo Content &#8599;', 'inspiro' ); ?>
 										</a>
 
 										<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/documentation/inspiro-lite/inspiro-lite-importing-the-demo-content/', 'inspiro' ) ); ?>"
@@ -307,12 +313,12 @@
 
 										<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=header-area' ) ); ?>"
 										   target="_blank" class="button button-primary">
-											<?php esc_html_e( 'Header Options &rarr;', 'inspiro' ); ?>
+											<?php esc_html_e( 'Header Options &#8599;', 'inspiro' ); ?>
 										</a>
 
 										<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=footer-area' ) ); ?>"
 										   target="_blank" class="button button-primary">
-											<?php esc_html_e( 'Footer Options &rarr;', 'inspiro' ); ?>
+											<?php esc_html_e( 'Footer Options &#8599;', 'inspiro' ); ?>
 										</a>
 
 									</p>
@@ -343,12 +349,12 @@
 
 										<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=colors' ) ); ?>"
 										   target="_blank" class="button button-primary">
-											<?php esc_html_e( 'Customize Colors &rarr;', 'inspiro' ); ?>
+											<?php esc_html_e( 'Customize Colors &#8599;', 'inspiro' ); ?>
 										</a>
 
 										<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[panel]=inspiro_typography_panel' ) ); ?>"
 										   target="_blank" class="button button-primary">
-											<?php esc_html_e( 'Typography Options &rarr;', 'inspiro' ); ?>
+											<?php esc_html_e( 'Typography Options &#8599;', 'inspiro' ); ?>
 										</a>
 
 									</p>
@@ -358,6 +364,104 @@
 
 						</div><!-- /.theme-info-wrap -->
 
+						<div class="wpz-onboard_content-side-section discover-premium">
+                        <div class="image-column">
+
+                            <a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
+                                title="Inspiro Premium" target="_blank"><img
+                                        src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-premium.png' ); ?>"
+                                        width="300" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>"/>
+                            </a>
+                        </div>
+
+                        <div class="text-column">
+
+                            <h3 class="wpz-onboard_content-side-section-title icon-docs">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="https://www.w3.org/2000/svg">
+                                    <mask id="mask0_3409_3568" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
+                                        y="0" width="24" height="24">
+                                        <rect width="24" height="24" fill="#D9D9D9"/>
+                                    </mask>
+                                    <g mask="url(#mask0_3409_3568)">
+                                        <path
+                                            d="M19 9L17.75 6.25L15 5L17.75 3.75L19 1L20.25 3.75L23 5L20.25 6.25L19 9ZM19 23L17.75 20.25L15 19L17.75 17.75L19 15L20.25 17.75L23 19L20.25 20.25L19 23ZM9 20L6.5 14.5L1 12L6.5 9.5L9 4L11.5 9.5L17 12L11.5 14.5L9 20ZM9 15.15L10 13L12.15 12L10 11L9 8.85L8 11L5.85 12L8 13L9 15.15Z"
+                                            fill="white"/>
+                                    </g>
+                                </svg> <?php esc_html_e( 'Discover Inspiro Premium!', 'inspiro' ); ?>
+							</h3>
+
+                            <ul>
+                                <li>
+									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									19+ Starter Sites
+								</li>
+                                <li>
+									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									Portfolio with Video Integration
+								</li>
+                                <li>
+									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									Video Slideshow
+								</li>
+                                <li>
+									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									Video Backgrounds
+								</li>
+                                <li>
+									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									Advanced WooCommerce Integration
+								</li>
+                                <li>
+									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									Video Background on Hover
+								</li>
+                                <li>
+									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									Custom Elementor Widgets
+								</li>
+                                <li>
+									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									...and much more
+								</li>
+                            </ul>
+                            
+                            <div class="wpz-onboard_content-side-section-button">
+                                <a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
+                                title="Inspiro Premium" target="_blank"
+                                class="button"><?php esc_html_e( 'Discover the Premium Version &#8599;', 'inspiro' ); ?></a>
+
+                                <a href="https://www.wpzoom.com/themes/inspiro/starter-sites/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
+                                    title="Inspiro Premium" target="_blank"
+                                    class="button button-starter"><?php esc_html_e( 'View Starter Sites &#8599;', 'inspiro' ); ?></a>
+                            </div>
+
+                        </div>
+                    </div>
 
 						<div class="theme-info-wrap">
 
@@ -411,11 +515,11 @@
 									<p class="section_footer">
 										<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium', 'inspiro' ) ); ?>"
 										   target="_blank" class="button button-primary">
-											<?php esc_html_e( 'Get Inspiro Premium &rarr;', 'inspiro' ); ?>
+											<?php esc_html_e( 'Get Inspiro Premium &#8599;', 'inspiro' ); ?>
 										</a>
 										<a href="<?php echo esc_url( __( 'https://demo.wpzoom.com/?theme=inspiro-demo', 'inspiro' ) ); ?>"
 										   target="_blank" class="button button-secondary">
-											<?php esc_html_e( 'View Demo &rarr;', 'inspiro' ); ?>
+											<?php esc_html_e( 'View Demo &#8599;', 'inspiro' ); ?>
 										</a>
 									</p>
 								</div>
@@ -435,7 +539,7 @@
 									<p class="section_footer">
 										<a href="<?php echo esc_url( __( 'https://demo.wpzoom.com/inspiro/portfolio/', 'inspiro' ) ); ?>"
 										   target="_blank" class="button button-primary">
-											<?php esc_html_e( 'Premium Portfolio Demo &rarr;', 'inspiro' ); ?>
+											<?php esc_html_e( 'Premium Portfolio Demo &#8599;', 'inspiro' ); ?>
 										</a>
 									</p>
 								</div>
@@ -505,12 +609,12 @@
 									<p class="section_footer">
 										<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/starter-sites/'. INSPIRO_MARKETING_UTM_CODE_STARTER_SITE, 'inspiro' ) ); ?>"
 										   target="_blank" class="button button-primary">
-											<?php esc_html_e( 'Inspiro Premium Demos &rarr;', 'inspiro' ); ?>
+											<?php esc_html_e( 'Inspiro Premium Demos &#8599;', 'inspiro' ); ?>
 										</a>
 
 										<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro-pro/starter-sites/'. INSPIRO_MARKETING_UTM_CODE_STARTER_SITE, 'inspiro' ) ); ?>"
 										   target="_blank" class="button button-primary">
-											<?php esc_html_e( 'Inspiro PRO Demos &rarr;', 'inspiro' ); ?>
+											<?php esc_html_e( 'Inspiro PRO Demos &#8599;', 'inspiro' ); ?>
 										</a>
 
 									</p>
@@ -617,7 +721,7 @@
 
 							<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-table', 'inspiro' ) ); ?>"
 							   target="_blank" class="button button-large button-primary">
-								<?php esc_html_e( 'Get Inspiro Premium Today &rarr;', 'inspiro' ); ?>
+								<?php esc_html_e( 'Get Inspiro Premium Today &#8599;', 'inspiro' ); ?>
 							</a>
 
 						</div>
