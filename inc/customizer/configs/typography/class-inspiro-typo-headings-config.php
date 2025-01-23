@@ -40,7 +40,7 @@ class Inspiro_Typo_Headings_Config {
 					'args' => array(
 						'transport'         => 'postMessage',
 						'sanitize_callback' => 'sanitize_text_field',
-						'default'           => 'inherit',
+						'default'           => "'Inter', sans-serif",
 					),
 				),
 				array(

@@ -120,7 +120,7 @@
                         <p class="wpz-onboard_content-side-section-content"><?php esc_html_e( 'Unlock advanced customization options and unique demos with the Premium version!', 'inspiro' ); ?></p>
 
                         <ul>
-                           <li><span class="dashicons dashicons-yes"></span> 19+ Starter Sites</li>
+                           <li><span class="dashicons dashicons-yes"></span> 25+ Starter Sites</li>
                            <li><span class="dashicons dashicons-yes"></span> Video Slideshow</li>
                            <li><span class="dashicons dashicons-yes"></span> Advanced WooCommerce Integration</li>
                            <li><span class="dashicons dashicons-yes"></span> Custom Elementor Widgets</li>
