@@ -2,7 +2,7 @@
 
     <div class="theme-info-wrap">
 
-        <h3 class="wpz-onboard_content-main-title"><?php esc_html_e( 'Inspiro Premium Demos (19)', 'inspiro' ); ?></h3>
+        <h3 class="wpz-onboard_content-main-title"><?php esc_html_e( 'Inspiro Premium Demos (25+)', 'inspiro' ); ?></h3>
         <p class="wpz-onboard_content-main-intro"><?php esc_html_e( 'Below you can view demos available in the Inspiro Premium theme. You can get access to all of them by purchasing the Premium version of the theme.', 'inspiro' ); ?></p>
 
         <ol class="wpz-onboard_content-main-steps">
@@ -13,22 +13,7 @@
                     <form method="post" action="#">
 
                         <ul>
-                            <li class="design_default-elementor">
-                                <figure title="Portfolio (Default)">
-                                    <div class="preview-thumbnail"
-                                         style="background-image:url('https://demo.wpzoom.com/inspiro-pro-demo/wp-content/themes/inspiro-pro-select/images/site-layout_agency-dark.png')">
-                                        <a href="https://demo.wpzoom.com/inspiro-agency2/" target="_blank"
-                                           class="button-select-template">View Demo</a></div>
-                                    <figcaption>
-                                        <h5>Agency / Business (new)</h5>
 
-                                        <p>
-                                            <a href="https://demo.wpzoom.com/inspiro-agency2/" target="_blank" rel="noopener" title="Live preview">Live preview</a>
-
-                                        </p>
-                                    </figcaption>
-                                </figure>
-                            </li>
 
                             <li class="design_default-elementor">
                                 <figure title="Portfolio (Default)">
@@ -41,6 +26,23 @@
 
                                         <p>
                                             <a href="https://demo.wpzoom.com/inspiro/" target="_blank" rel="noopener" title="Live preview">Live preview</a>
+
+                                        </p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+
+                            <li class="design_default-elementor">
+                                <figure title="Portfolio (Default)">
+                                    <div class="preview-thumbnail"
+                                         style="background-image:url('https://demo.wpzoom.com/inspiro-pro-demo/wp-content/themes/inspiro-pro-select/images/site-layout_agency-dark.png')">
+                                        <a href="https://demo.wpzoom.com/inspiro-agency2/" target="_blank"
+                                           class="button-select-template">View Demo</a></div>
+                                    <figcaption>
+                                        <h5>Agency / Business (new)</h5>
+
+                                        <p>
+                                            <a href="https://demo.wpzoom.com/inspiro-agency2/" target="_blank" rel="noopener" title="Live preview">Live preview</a>
 
                                         </p>
                                     </figcaption>
@@ -360,6 +362,122 @@
                                             <a href="https://demo.wpzoom.com/inspiro-church/"
                                                target="_blank" rel="noopener" title="Live preview">Live
                                                 Preview</a>
+                                        </p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+
+
+                            <li class="design_magazine" data-design-id="inspiro-medical">
+                                <figure title="medical">
+                                    <div class="preview-thumbnail"
+                                         style="background-image:url('https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/inspiro-medical/home-thumb.png')">
+                                        <a href="https://demo.wpzoom.com/inspiro-medical/"
+                                           target="_blank" class="button-select-template">View
+                                            Demo</a></div>
+                                    <figcaption>
+                                        <h5>Medical / Doctor</h5>
+
+                                        <p>
+                                            <a href="https://demo.wpzoom.com/inspiro-medical/"
+                                               target="_blank" rel="noopener" title="Live preview">Live
+                                                Preview</a>
+                                        </p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+
+
+                            <li class="design_magazine" data-design-id="inspiro-recipe">
+                                <figure title="recipe">
+                                    <div class="preview-thumbnail"
+                                         style="background-image:url('https://www.wpzoom.com/wp-content/uploads/2024/12/inspiro-recipe-1.png')">
+                                        <a href="https://demo.wpzoom.com/inspiro-recipe/"
+                                           target="_blank" class="button-select-template">View
+                                            Demo</a></div>
+                                    <figcaption>
+                                        <h5>Food Blog</h5>
+
+                                        <p>
+                                            <a href="https://demo.wpzoom.com/inspiro-recipe/"
+                                               target="_blank" rel="noopener" title="Live preview">Live
+                                                Preview</a>
+                                        </p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+
+                            <li class="design_magazine" data-design-id="inspiro-coffee-shop">
+                                <figure title="coffee-shop">
+                                    <div class="preview-thumbnail"
+                                         style="background-image:url('https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/inspiro-coffee/home-thumb.png')">
+                                        <a href="https://demo.wpzoom.com/inspiro-coffee-shop/"
+                                           target="_blank" class="button-select-template">View
+                                            Demo</a></div>
+                                    <figcaption>
+                                        <h5>Coffee Shop</h5>
+
+                                        <p>
+                                            <a href="https://demo.wpzoom.com/inspiro-coffee-shop/"
+                                               target="_blank" rel="noopener" title="Live preview">Live
+                                                Preview</a>
+                                        </p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+
+                            <li class="design_magazine" data-design-id="inspiro-finance">
+                                <figure title="finance">
+                                    <div class="preview-thumbnail"
+                                         style="background-image:url('https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/inspiro-finance/home-thumb.png')">
+                                        <a href="https://demo.wpzoom.com/inspiro-finance/"
+                                           target="_blank" class="button-select-template">View
+                                            Demo</a></div>
+                                    <figcaption>
+                                        <h5>Finance / Tech</h5>
+
+                                        <p>
+                                            <a href="https://demo.wpzoom.com/inspiro-finance/"
+                                               target="_blank" rel="noopener" title="Live preview">Live
+                                                Preview</a>
+                                        </p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+
+                            <li class="design_charity" data-design-id="inspiro-pro-charity">
+                                <figure title="Charity / NGO">
+                                    <div class="preview-thumbnail"
+                                         style="background-image:url('https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro-pro/charity/home-thumb.png')">
+                                        <a href="https://demo.wpzoom.com/inspiro-pro-charity/"
+                                           target="_blank" class="button-select-template">View
+                                            Demo</a></div>
+                                    <figcaption>
+                                        <h5>Charity / NGO</h5>
+
+                                        <p>
+                                            <a href="https://demo.wpzoom.com/inspiro-pro-charity/"
+                                               target="_blank" rel="noopener" title="Live preview">Live
+                                                preview</a>
+                                        </p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+
+                            <li class="design_winery" data-design-id="inspiro-pro-winery">
+                                <figure title="Winery">
+                                    <div class="preview-thumbnail"
+                                         style="background-image:url('https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro-pro/winery/home-thumb.png')">
+                                        <a href="https://demo.wpzoom.com/inspiro-pro-winery/"
+                                           target="_blank" class="button-select-template">View
+                                            Demo</a></div>
+                                    <figcaption>
+                                        <h5>Winery</h5>
+
+                                        <p>
+                                            <a href="https://demo.wpzoom.com/inspiro-pro-winery/"
+                                               target="_blank" rel="noopener" title="Live preview">Live
+                                                preview</a>
                                         </p>
                                     </figcaption>
                                 </figure>
