@@ -1002,7 +1002,33 @@ $green-color: #22bb66;
                     .section_footer {
                         margin: 0;
                     }
-                } 
+                }
+                
+                &.support {
+                    p.wpz-onboard_content-side-section-content {
+                        color: #5E6164;
+                    }
+                    .section.help {
+                        background-color: $dark-color;
+                        color: $light-color;
+
+                        .about {
+                            color: #F2F4F6;
+                        }
+                        
+                        .section_footer {
+                            .button.button-primary {
+                                background-color: $light-color;
+                                color: $dark-color;
+                            }
+
+                            .button.button-secondary {
+                                color: $light-color;
+                                border: 1px solid $light-color;
+                            }
+                        }
+                    }
+                }
             }
         }
 

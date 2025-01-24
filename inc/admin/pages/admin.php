@@ -86,7 +86,7 @@
 
 					<?php esc_html_e( 'Install Inspiro Premium', 'inspiro' ); ?></a>
 				</li>
-				<li class="wpz-onboard_tab wpz-onboard_tab-plugins"><a href="#sidebar" title="Support">
+				<li class="wpz-onboard_tab wpz-onboard_tab-plugins"><a href="#support" title="Support">
 				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M19.5601 7.1189C21.4801 10.0889 21.4791 13.9129 19.5611 16.8819" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 					<path d="M15.5476 8.45236C17.5068 10.4116 17.5068 13.5882 15.5476 15.5475C13.5883 17.5067 10.4117 17.5067 8.45248 15.5475C6.49322 13.5882 6.49322 10.4116 8.45248 8.45236C10.4117 6.4931 13.5883 6.4931 15.5476 8.45236" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

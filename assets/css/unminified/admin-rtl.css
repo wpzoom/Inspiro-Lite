@@ -842,6 +842,24 @@
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .section_footer {
     margin: 0;
 }
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.support p.wpz-onboard_content-side-section-content {
+    color: #5E6164;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.support .section.help {
+    background-color: #242628;
+    color: #fff;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.support .section.help .about {
+    color: #F2F4F6;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.support .section.help .section_footer .button.button-primary {
+    background-color: #fff;
+    color: #242628;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.support .section.help .section_footer .button.button-secondary {
+    color: #fff;
+    border: 1px solid #fff;
+}
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content-container {
     display: flex;
     gap: 30px;
