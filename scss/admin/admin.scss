@@ -210,6 +210,19 @@ $green-color: #22bb66;
             background-position: 98% 15px;
         }
 
+        &.section-quick-links {
+            background-color: #F2F4F6;
+
+            .about.about-quick-links {
+                display: inline-grid;
+    
+                .description-link {
+                    color: $primary-color;
+                    text-decoration: none;
+                    line-height: 2;
+                }
+            }
+        }
     }
 }
 
@@ -968,6 +981,28 @@ $green-color: #22bb66;
 
                     }
                 }
+
+                &.plugins {
+                    .wpz-onboard_content-side-section-content {
+                        color: #5E6164;
+                    }
+
+                    .wpz-onboard_content-side-section.install-plugins{
+                        display: flex;
+
+                        h3 {
+                            margin: 0 20px 0 0;
+                        }
+                    }
+
+                    .about {
+                        margin: 0 0 15px;
+                    }
+
+                    .section_footer {
+                        margin: 0;
+                    }
+                } 
             }
         }
 

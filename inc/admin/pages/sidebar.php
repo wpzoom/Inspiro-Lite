@@ -1,4 +1,4 @@
-                <div class="wpz-onboard_content-side">
+                <div id="sidebar" class="wpz-onboard_content-side">
                     <div class="wpz-onboard_content-side-section">
                         <h3 class="wpz-onboard_content-side-section-title icon-docs">
                             <svg width="24" height="24" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">

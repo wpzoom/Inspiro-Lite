@@ -211,6 +211,17 @@
     background-repeat: no-repeat;
     background-position: 2% 15px;
 }
+.wpz-grid-wrap > .section.section-quick-links {
+    background-color: #F2F4F6;
+}
+.wpz-grid-wrap > .section.section-quick-links .about.about-quick-links {
+    display: inline-grid;
+}
+.wpz-grid-wrap > .section.section-quick-links .about.about-quick-links .description-link {
+    color: #3496ff;
+    text-decoration: none;
+    line-height: 2;
+}
 
 .section .about {
     font-size: 15px;
@@ -815,6 +826,21 @@
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side .wpz-onboard_content-side-section .wpz-onboard_content-side-section-content {
     padding: 0;
     margin: 0 0 20px;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .wpz-onboard_content-side-section-content {
+    color: #5E6164;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .wpz-onboard_content-side-section.install-plugins {
+    display: flex;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .wpz-onboard_content-side-section.install-plugins h3 {
+    margin: 0 0 0 20px;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .about {
+    margin: 0 0 15px;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .section_footer {
+    margin: 0;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content-container {
     display: flex;
