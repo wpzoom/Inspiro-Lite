@@ -824,6 +824,23 @@
     border: 1px solid #e1e5e9;
     margin: 0;
 }
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.install-premium .wpz-onboard_hr {
+    width: 100%;
+    margin: 50px 0;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.install-premium .section-documentation .about {
+    display: grid;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.install-premium .section-documentation .about a {
+    color: #3496FF;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin: 0 0 5px;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.install-premium .section-documentation .about a svg {
+    margin-right: 5px;
+}
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side {
     flex-grow: 1;
     margin: 0 0 25px;
@@ -1162,6 +1179,67 @@
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side .wpz-onboard_content-side-section-title.icon-follow {
         font-size: 18px;
     }
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .wpz-onboard_content-side-section {
+        padding: 25px 20px;
+        margin: 0 0 20px;
+    }
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .wpz-onboard_content-side-section .wpz-onboard_content-side-section-title {
+        font-size: 18px;
+        margin: 0 0 10px;
+    }
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .theme-info-wrap {
+        padding: 25px 20px;
+    }
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .theme-info-wrap .wpz-onboard_content-side-section.install-plugin .wpz-onboard_content-side-section-title.icon-assist {
+        font-size: 16px;
+        margin: 0 10px 0 0;
+    }
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .theme-info-wrap .wpz-onboard_content-side-section.install-plugin .button {
+        padding: 9px 12px;
+        margin-right: 10px;
+        min-height: 35px;
+        height: 35px;
+        min-width: 85px;
+        font-size: 12px;
+    }
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.install-premium .wpz-onboard_content-main-title {
+        font-size: 18px;
+    }
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.install-premium .wpz-onboard_content-main-intro {
+        font-size: 14px;
+        margin: 0 0 15px;
+    }
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.install-premium .section-image {
+        text-align: center;
+    }
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.install-premium .section-image img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.install-premium .button {
+        padding: 9px 12px;
+        margin-right: 10px;
+        min-height: 35px;
+        height: 35px;
+        min-width: 85px;
+        font-size: 12px;
+    }
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.install-premium .wpz-grid-wrap {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.install-premium .wpz-grid-wrap .section input {
+        font-size: 13px;
+    }
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.install-premium .wpz-grid-wrap .section .section-content {
+        font-size: 13px;
+    }
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.install-premium .section-documentation h3 {
+        font-size: 18px;
+    }
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.install-premium .section-documentation .about a {
+        font-size: 13px;
+    }
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.support .wpz-onboard_content-side-section {
         padding: 25px 20px;
         margin: 0 0 20px;
@@ -1189,29 +1267,6 @@
     }
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.support .theme-info-wrap .wpz-grid-wrap .section .wpz-onboard_content-side-section-title {
         font-size: 18px;
-    }
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .wpz-onboard_content-side-section {
-        padding: 25px 20px;
-        margin: 0 0 20px;
-    }
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .wpz-onboard_content-side-section .wpz-onboard_content-side-section-title {
-        font-size: 18px;
-        margin: 0 0 10px;
-    }
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .theme-info-wrap {
-        padding: 25px 20px;
-    }
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .theme-info-wrap .wpz-onboard_content-side-section.install-plugin .wpz-onboard_content-side-section-title.icon-assist {
-        font-size: 16px;
-        margin: 0 10px 0 0;
-    }
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .theme-info-wrap .wpz-onboard_content-side-section.install-plugin .button {
-        padding: 9px 12px;
-        margin-right: 10px;
-        min-height: 35px;
-        height: 35px;
-        min-width: 85px;
-        font-size: 12px;
     }
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side-section .wpz-onboard_content-side-section-title.icon-assist {
         font-size: 18px;

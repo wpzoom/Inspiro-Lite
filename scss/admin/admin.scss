@@ -488,7 +488,7 @@ $green-color: #22bb66;
     .ui-tabs {
         display: grid;
         gap: 20px;
-        grid-template-columns: 248px auto;    
+        grid-template-columns: 248px auto;
     }
 
     .#{$prefix}header {
@@ -978,6 +978,29 @@ $green-color: #22bb66;
                             }
                         } 
                     }
+
+                    .#{$prefix}hr {
+                        width: 100%;
+                        margin: 50px 0;
+                    }
+
+                    .section-documentation {
+                        .about {
+                            display: grid;
+
+                            a {
+                                color: #3496FF;
+                                text-decoration: none;
+                                display: flex;
+                                align-items: center;
+                                margin: 0 0 5px;
+
+                                svg {
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
@@ -1447,6 +1470,93 @@ $green-color: #22bb66;
                         font-size: 18px;
                     }
 
+                    &.plugins {
+                        .#{$prefix}content-side-section {
+                            padding: 25px 20px;
+                            margin: 0 0 20px;
+                            
+                            .#{$prefix}content-side-section-title {
+                                font-size: 18px;
+                                margin: 0 0 10px;
+                            }
+                        }
+
+                        .theme-info-wrap {
+                            padding: 25px 20px;
+
+                            .wpz-onboard_content-side-section.install-plugin {
+                                .wpz-onboard_content-side-section-title.icon-assist {
+                                    font-size: 16px;
+                                    margin: 0 10px 0 0;
+                                }
+
+                                .button {
+                                    padding: 9px 12px;
+                                    margin-right: 10px;
+                                    min-height: 35px;
+                                    height: 35px;
+                                    min-width: 85px;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+
+                    &.install-premium {
+                        .wpz-onboard_content-main-title {
+                            font-size: 18px;
+                        }
+
+                        .wpz-onboard_content-main-intro {
+                            font-size: 14px;
+                            margin: 0 0 15px;
+                        }
+
+                        .section-image {
+                            text-align: center;
+
+                            img {
+                                width: 100%;
+                                max-width: 300px;
+                                height: auto;
+                            }
+                        }
+                        
+                        
+                        .button {
+                            padding: 9px 12px;
+                            margin-right: 10px;
+                            min-height: 35px;
+                            height: 35px;
+                            min-width: 85px;
+                            font-size: 12px;
+                        }
+                        
+                        .wpz-grid-wrap {
+                            grid-template-columns: repeat(1, 1fr);
+
+                            .section {
+                                input {
+                                    font-size: 13px;
+                                }
+
+                                .section-content {
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+
+                        .section-documentation {
+                            h3 {
+                                font-size: 18px;
+                            }
+
+                            .about a {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+
                     &.support {
                         .#{$prefix}content-side-section {
                             padding: 25px 20px;
@@ -1480,38 +1590,6 @@ $green-color: #22bb66;
 
                                 .#{$prefix}content-side-section-title {
                                     font-size: 18px;
-                                }
-                            }
-                        }
-                    }
-
-                    &.plugins {
-                        .#{$prefix}content-side-section {
-                            padding: 25px 20px;
-                            margin: 0 0 20px;
-                            
-                            .#{$prefix}content-side-section-title {
-                                font-size: 18px;
-                                margin: 0 0 10px;
-                            }
-                        }
-
-                        .theme-info-wrap {
-                            padding: 25px 20px;
-
-                            .wpz-onboard_content-side-section.install-plugin {
-                                .wpz-onboard_content-side-section-title.icon-assist {
-                                    font-size: 16px;
-                                    margin: 0 10px 0 0;
-                                }
-
-                                .button {
-                                    padding: 9px 12px;
-                                    margin-right: 10px;
-                                    min-height: 35px;
-                                    height: 35px;
-                                    min-width: 85px;
-                                    font-size: 12px;
                                 }
                             }
                         }
