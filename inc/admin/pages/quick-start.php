@@ -1,3 +1,6 @@
+<?php
+	$parent = wp_get_theme(); 
+?>
 <div id="quick-start" class="wpz-onboard_content-main-tab">
 
 	<div class="theme-info-wrap welcome-section">
