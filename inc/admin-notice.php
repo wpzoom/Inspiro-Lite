@@ -73,7 +73,7 @@ if ( ! function_exists( 'inspiro_welcome_notice' ) ) {
 	function inspiro_welcome_notice() {
 
 
-		$plugin_status = inspiro_check_plugin_status( 'inspiro-starter-sites/iinspiro-starter-sites.php' );
+		$plugin_status = inspiro_check_plugin_status( 'inspiro-starter-sites/inspiro-starter-sites.php' );
 
 		$note_html = '';
 		
