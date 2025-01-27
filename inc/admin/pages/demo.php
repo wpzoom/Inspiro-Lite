@@ -6,7 +6,7 @@ $btn_admin_link = esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) )
 
 ?>
 
-<?php if ( class_exists( 'Inspiro_Starter_Sites_Importer' ) ) : ?>
+<?php if ( class_exists( 'WPZI_Importer' ) ) : ?>
 	<?php do_action( 'inspiro_starter_sites_admin_page' ); ?>
 <?php else : ?>
 
