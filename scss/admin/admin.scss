@@ -56,9 +56,6 @@ $green-color: #22bb66;
     &.welcome-section {
         display: flex;
         background: radial-gradient(at 50% 50%, #d8dffa, transparent 0), linear-gradient(45deg, #c0cdf59e, #fff, #c0cdf59e);
-        background-size: cover; 
-        background-position: center;
-        background-repeat: no-repeat;
         gap: 40px;
 
         &::before {
@@ -937,6 +934,51 @@ $green-color: #22bb66;
                         }
                     }
                 }
+
+                .#{$prefix}content-side.install-premium {
+                    .theme-info-wrap.block-premium {
+                        padding: 35px 30px 0;
+                        display: flex;
+                        gap: 40px;
+            
+                        .section-image {
+                            align-self: flex-end;
+                
+                        }
+                
+                        .section_footer {
+                            display: block;
+                        }
+                    }
+
+                    .theme-info-wrap .wpz-grid-wrap .section {
+                        background-color: #F2F4F6;
+                        font-size: 14px;
+
+                        .section-content {
+                            display: flex;
+                            gap: 10px; 
+                        }
+
+
+                        form {
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            gap: 10px;
+
+                            input {
+                                flex: 1;
+                                min-width: 200px;
+                            }
+
+                            button {
+                                border: 1px solid #e1e5e9;
+                                margin: 0;
+                            }
+                        } 
+                    }
+                }
             }
 
             .#{$prefix}content-side {
@@ -987,8 +1029,9 @@ $green-color: #22bb66;
                         color: #5E6164;
                     }
 
-                    .wpz-onboard_content-side-section.install-plugins{
+                    .wpz-onboard_content-side-section.install-plugin{
                         display: flex;
+                        padding: 0;
 
                         h3 {
                             margin: 0 20px 0 0;
@@ -1283,7 +1326,8 @@ $green-color: #22bb66;
                         }
                     }
 
-                    .theme-info-wrap.welcome-section {
+                    .theme-info-wrap.welcome-section,
+                    .theme-info-wrap.block-premium  {
                         display: block;
 
                         .button {
@@ -1402,6 +1446,76 @@ $green-color: #22bb66;
                     .#{$prefix}content-side-section-title.icon-follow {
                         font-size: 18px;
                     }
+
+                    &.support {
+                        .#{$prefix}content-side-section {
+                            padding: 25px 20px;
+                            margin: 0 0 20px;
+                            
+                            .#{$prefix}content-side-section-title {
+                                font-size: 18px;
+                                margin: 0 0 10px;
+                            }
+                        }
+
+                        .theme-info-wrap {
+                            padding: 25px 20px;
+
+                            .wpz-grid-wrap 
+                            .section {
+                                padding: 14px 26px;
+
+                                .about,
+                                .section_footer .button {
+                                    font-size: 13px;
+                                }
+
+                                .section_footer .button {
+                                    padding: 9px 12px;
+                                    margin-right: 10px;
+                                    min-height: 35px;
+                                    height: 35px;
+                                    min-width: 85px;
+                                }
+
+                                .#{$prefix}content-side-section-title {
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+
+                    &.plugins {
+                        .#{$prefix}content-side-section {
+                            padding: 25px 20px;
+                            margin: 0 0 20px;
+                            
+                            .#{$prefix}content-side-section-title {
+                                font-size: 18px;
+                                margin: 0 0 10px;
+                            }
+                        }
+
+                        .theme-info-wrap {
+                            padding: 25px 20px;
+
+                            .wpz-onboard_content-side-section.install-plugin {
+                                .wpz-onboard_content-side-section-title.icon-assist {
+                                    font-size: 16px;
+                                    margin: 0 10px 0 0;
+                                }
+
+                                .button {
+                                    padding: 9px 12px;
+                                    margin-right: 10px;
+                                    min-height: 35px;
+                                    height: 35px;
+                                    min-width: 85px;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
                 }
 
                 .#{$prefix}content-side-section {
@@ -1433,6 +1547,23 @@ $green-color: #22bb66;
                             .#{$prefix}content-side-section-button {
                                 display: block;
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .#{$prefix}wrapper {
+        .#{$prefix}content-wrapper {
+            .#{$prefix}content {
+                .#{$prefix}content-side {
+                    &.plugins {
+                        .theme-info-wrap
+                        .wpz-onboard_content-side-section.install-plugin {
+                            display: block;
                         }
                     }
                 }
