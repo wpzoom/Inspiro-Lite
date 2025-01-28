@@ -24,9 +24,11 @@
 					<?php get_template_part( 'inc/admin/pages/support' ); ?>
 				</div>
 			</div>
+
+			<?php get_template_part( 'inc/admin/pages/footer' ); ?>
+			
 		</div>
 	</div>
 
-	<?php get_template_part( 'inc/admin/pages/footer' ); ?>
 
 </div>

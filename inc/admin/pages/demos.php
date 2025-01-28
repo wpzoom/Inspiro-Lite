@@ -1,5 +1,28 @@
-<div id="demos" class="wpz-onboard_content-main-tab wpz-onboard_content-main-theme-child">
-
+<div id="demos" class="wpz-onboard_content-main-tab wpz-onboard_content-main-theme-child demos wpz-onboard_content-side">
+    <div class="wpz-onboard_content-side-section block-premium">
+        <div class="section-content">
+            <div class="header-row">
+                <h3 class="wpz-onboard_content-main-title">
+                    <?php esc_html_e( 'Inspiro Premium Demos', 'inspiro' ); ?>
+                </h3>
+            </div>
+            <p class="wpz-onboard_content-main-intro">
+                <?php esc_html_e( 'Explore the available demos in the Inspiro Premium theme below. Unlock access to all by upgrading to the Premium version.', 'inspiro' ); ?>
+            </p>
+            <p class="section_footer">
+                <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium', 'inspiro' ) ); ?>"
+                    target="_blank" class="button button-primary">
+                        <?php esc_html_e( 'Get Inspiro Premium &#8599;', 'inspiro' ); ?>
+                </a>
+            </p>
+        </div>
+        <div class="section-image">
+            <a title="Inspiro Premium" target="_blank">
+                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-demos.png' ); ?>"
+                    width="400" alt="<?php echo esc_attr__( 'Inspiro Premium Blocks', 'inspiro' ); ?>" />
+            </a>
+        </div>
+    </div>
     <div class="theme-info-wrap">
 
         <h3 class="wpz-onboard_content-main-title"><?php esc_html_e( 'Inspiro Premium Demos (19)', 'inspiro' ); ?></h3>

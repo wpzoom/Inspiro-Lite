@@ -289,6 +289,7 @@
 .theme-comparison td {
     padding: 15px 20px;
     text-align: center;
+    width: 100%;
 }
 .theme-comparison td h3 {
     font-size: 16px;
@@ -615,8 +616,8 @@
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-intro {
     padding: 0;
-    margin: 0 0 35px;
     opacity: 70%;
+    color: #5e6164;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-steps {
     counter-reset: steps;
@@ -782,58 +783,20 @@
     opacity: 1;
     cursor: initial;
 }
-.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .theme-info-wrap.block-premium {
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side {
+    flex-grow: 1;
+    margin: 0 0 25px;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side .wpz-onboard_content-side-section.block-premium {
     padding: 35px 30px 0;
     display: flex;
     gap: 40px;
 }
-.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .theme-info-wrap.block-premium .section-image {
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side .wpz-onboard_content-side-section.block-premium .section-image {
     align-self: flex-end;
 }
-.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .theme-info-wrap.block-premium .section_footer {
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side .wpz-onboard_content-side-section.block-premium .section_footer {
     display: block;
-}
-.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap .section {
-    background-color: #f2f4f6;
-    font-size: 14px;
-}
-.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap .section .section-content {
-    display: flex;
-    gap: 10px;
-}
-.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap .section form {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap .section form input {
-    flex: 1;
-    min-width: 200px;
-}
-.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap .section form button {
-    border: 1px solid #e1e5e9;
-    margin: 0;
-}
-.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .wpz-onboard_hr {
-    margin: 50px 0;
-}
-.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .section-documentation .about {
-    display: grid;
-}
-.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .section-documentation .about a {
-    color: #3496ff;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    margin: 0 0 5px;
-}
-.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .section-documentation .about a svg {
-    margin-left: 5px;
-}
-.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side {
-    flex-grow: 1;
-    margin: 0 0 25px;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side .wpz-onboard_content-side-section {
     padding: 30px 25px;
@@ -860,18 +823,60 @@
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side .wpz-onboard_content-side-section .wpz-onboard_content-side-section-title svg {
     margin: 0 0 0 10px;
 }
-.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side .wpz-onboard_content-side-section .wpz-onboard_content-side-section-content {
-    padding: 0;
-    margin: 0 0 20px;
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .wpz-onboard_content-side-section.block-premium {
+    padding: 35px 30px 0;
+    display: flex;
+    gap: 40px;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .wpz-onboard_content-side-section.block-premium .section-image {
+    align-self: flex-end;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .wpz-onboard_content-side-section.block-premium .section_footer {
+    display: block;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap .section {
+    background-color: #f2f4f6;
+    font-size: 14px;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap .section .section-content {
+    display: flex;
+    gap: 10px;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap .section .section-content svg {
+    min-width: 40px;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap .section form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap .section form input {
+    flex: 1;
+    min-width: 200px;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap .section form button {
+    border: 1px solid #e1e5e9;
+    margin: 0;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .wpz-onboard_hr {
+    margin: 50px 0;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .section-documentation .about {
+    display: grid;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .section-documentation .about a {
+    color: #3496ff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin: 0 0 5px;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .section-documentation .about a svg {
+    margin-left: 5px;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.demo-importer .wpz-onboard_content-side-section-title.icon-docs {
     color: #242628;
-}
-.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.demo-importer .wpz-onboard_content-side-section-content {
-    color: #5e6164;
-}
-.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .wpz-onboard_content-side-section-content {
-    color: #5e6164;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .wpz-onboard_content-side-section.install-plugin {
     display: flex;
@@ -885,9 +890,6 @@
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .section_footer {
     margin: 0;
-}
-.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.support .wpz-onboard_content-side-section-content {
-    color: #5e6164;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.support .section.help {
     background-color: #242628;
@@ -1094,44 +1096,64 @@
         text-align: center;
     }
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap.welcome-section,
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap.block-premium {
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .wpz-onboard_content-side-section.block-premium,
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.demos .wpz-onboard_content-side-section.block-premium {
         display: block;
     }
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap.welcome-section .wpz-onboard_content-main-title,
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .wpz-onboard_content-side-section.block-premium .wpz-onboard_content-main-title,
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.demos .wpz-onboard_content-side-section.block-premium .wpz-onboard_content-main-title {
+        font-size: 18px;
+    }
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap.welcome-section .wpz-onboard_content-main-intro,
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .wpz-onboard_content-side-section.block-premium .wpz-onboard_content-main-intro,
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.demos .wpz-onboard_content-side-section.block-premium .wpz-onboard_content-main-intro {
+        font-size: 14px;
+        margin: 0 0 15px;
+    }
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap.welcome-section .button,
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap.block-premium .button {
-        font-size: 13px;
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .wpz-onboard_content-side-section.block-premium .button,
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.demos .wpz-onboard_content-side-section.block-premium .button {
         padding: 9px 12px;
         margin-left: 10px;
         min-height: 35px;
         height: 35px;
         min-width: 85px;
+        font-size: 12px;
     }
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap.welcome-section .section-image,
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap.block-premium .section-image {
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .wpz-onboard_content-side-section.block-premium .section-image,
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.demos .wpz-onboard_content-side-section.block-premium .section-image {
         text-align: center;
     }
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap.welcome-section .section-image img,
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap.block-premium .section-image img {
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .wpz-onboard_content-side-section.block-premium .section-image img,
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.demos .wpz-onboard_content-side-section.block-premium .section-image img {
         width: 100%;
         max-width: 300px;
         height: auto;
     }
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap.welcome-section .section-content .header-row .wpz-onboard_content-main-title.welcome,
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap.block-premium .section-content .header-row .wpz-onboard_content-main-title.welcome {
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .wpz-onboard_content-side-section.block-premium .section-content .header-row .wpz-onboard_content-main-title.welcome,
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.demos .wpz-onboard_content-side-section.block-premium .section-content .header-row .wpz-onboard_content-main-title.welcome {
         font-size: 18px;
     }
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap.welcome-section .section-content .header-row .wpz-onboard_framework-version,
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap.block-premium .section-content .header-row .wpz-onboard_framework-version {
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .wpz-onboard_content-side-section.block-premium .section-content .header-row .wpz-onboard_framework-version,
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.demos .wpz-onboard_content-side-section.block-premium .section-content .header-row .wpz-onboard_framework-version {
         font-size: 12px;
     }
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap.welcome-section .section-content .header-row .wpz-onboard_content-main-title.welcome,
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap.welcome-section .section-content .header-row .wpz-onboard_framework-version,
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap.block-premium .section-content .header-row .wpz-onboard_content-main-title.welcome,
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap.block-premium .section-content .header-row .wpz-onboard_framework-version {
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .wpz-onboard_content-side-section.block-premium .section-content .header-row .wpz-onboard_content-main-title.welcome,
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .wpz-onboard_content-side-section.block-premium .section-content .header-row .wpz-onboard_framework-version,
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.demos .wpz-onboard_content-side-section.block-premium .section-content .header-row .wpz-onboard_content-main-title.welcome,
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.demos .wpz-onboard_content-side-section.block-premium .section-content .header-row .wpz-onboard_framework-version {
         margin: 0 0 15px;
     }
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap.welcome-section .section-content .wpz-onboard_content-main-intro,
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap.block-premium .section-content .wpz-onboard_content-main-intro {
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.upgrade-install .wpz-onboard_content-side-section.block-premium .section-content .wpz-onboard_content-main-intro,
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side.demos .wpz-onboard_content-side-section.block-premium .section-content .wpz-onboard_content-main-intro {
         font-size: 14px;
     }
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap {
@@ -1151,8 +1173,7 @@
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap .wpz-grid-wrap .section {
         padding: 15px 26px;
     }
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap .wpz-grid-wrap .section .about,
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap .wpz-grid-wrap .section .section_footer .button {
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap .wpz-grid-wrap .section .about {
         font-size: 13px;
     }
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap .wpz-grid-wrap .section .section_footer .button {
@@ -1161,6 +1182,7 @@
         min-height: 35px;
         height: 35px;
         min-width: 85px;
+        font-size: 13px;
     }
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .theme-info-wrap .wpz-grid-wrap .section .wpz-onboard_content-side-section-title {
         font-size: 18px;
@@ -1177,15 +1199,7 @@
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side .section .inner-section .button.button-primary {
         font-size: 13px;
     }
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side .wpz-onboard_content-side-section-title {
-        font-size: 18px;
-    }
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side .wpz-onboard_content-side-section-content {
-        font-size: 14px;
-    }
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side .wpz-onboard_content-side-section-button .button {
-        font-size: 13px;
-    }
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side .wpz-onboard_content-side-section-title,
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side .wpz-onboard_content-side-section-title.icon-follow {
         font-size: 18px;
     }
@@ -1212,37 +1226,16 @@
         min-width: 85px;
         font-size: 12px;
     }
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .wpz-onboard_content-main-title {
-        font-size: 18px;
-    }
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .wpz-onboard_content-main-intro {
-        font-size: 14px;
-        margin: 0 0 15px;
-    }
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .section-image {
-        text-align: center;
-    }
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .section-image img {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-    }
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .button {
-        padding: 9px 12px;
-        margin-left: 10px;
-        min-height: 35px;
-        height: 35px;
-        min-width: 85px;
-        font-size: 12px;
-    }
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .wpz-grid-wrap {
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap {
         grid-template-columns: repeat(1, 1fr);
     }
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .wpz-grid-wrap .section input {
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap .section input,
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap .section .section-content {
         font-size: 13px;
     }
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .wpz-grid-wrap .section .section-content {
-        font-size: 13px;
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap .section input svg,
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap .section .section-content svg {
+        min-width: 30px;
     }
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .section-documentation h3 {
         font-size: 18px;
@@ -1264,8 +1257,7 @@
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.support .theme-info-wrap .wpz-grid-wrap .section {
         padding: 14px 26px;
     }
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.support .theme-info-wrap .wpz-grid-wrap .section .about,
-    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.support .theme-info-wrap .wpz-grid-wrap .section .section_footer .button {
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.support .theme-info-wrap .wpz-grid-wrap .section .about {
         font-size: 13px;
     }
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.support .theme-info-wrap .wpz-grid-wrap .section .section_footer .button {

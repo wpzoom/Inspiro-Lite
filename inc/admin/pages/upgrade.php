@@ -117,7 +117,7 @@
                                         fill="white"/>
                                 </g>
                             </svg> <?php esc_html_e( 'Discover Inspiro Premium!', 'inspiro' ); ?></h3>
-                        <p class="wpz-onboard_content-side-section-content"><?php esc_html_e( 'Unlock advanced customization options and unique demos with the Premium version!', 'inspiro' ); ?></p>
+                        <p class="wpz-onboard_content-main-intro"><?php esc_html_e( 'Unlock advanced customization options and unique demos with the Premium version!', 'inspiro' ); ?></p>
 
                         <ul>
                            <li><span class="dashicons dashicons-yes"></span> 19+ Starter Sites</li>

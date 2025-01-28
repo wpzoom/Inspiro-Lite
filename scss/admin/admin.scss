@@ -267,6 +267,7 @@
 	td {
 		padding: 15px 20px;
         text-align: center;
+        width: 100%;
 
 		h3 {
 			font-size: $font-size-16;
@@ -661,8 +662,8 @@
 
                 .#{$prefix}content-main-intro {
                     padding: 0;
-                    margin: 0 0 35px;
                     opacity: 70%;
+                    color: $neutral-dark-color;
                 }
 
                 .#{$prefix}content-main-steps {
@@ -767,7 +768,7 @@
                                                     top: 50%;
                                                     left: 50%;
                                                     z-index: 3;
-                                                    font-size: 13px;
+                                                   font-size: $font-size-13;
                                                     color: $light-color;
                                                     background-color: var(--inspiro-primary-color);
                                                     border: none;
@@ -840,7 +841,7 @@
                                                     }
 
                                                     a {
-                                                        font-size: 13px;
+                                                       font-size: $font-size-13;
                                                         font-weight: 600;
                                                         text-decoration: none;
                                                         color: var(--inspiro-primary-color);
@@ -886,9 +887,59 @@
                         }
                     }
                 }
+            }
 
-                .#{$prefix}content-side.upgrade-install {
-                    .theme-info-wrap.block-premium {
+            .#{$prefix}content-side {
+                flex-grow: 1;
+                margin: 0 0 25px;
+
+                .wpz-onboard_content-side-section.block-premium {
+                    padding: 35px 30px 0;
+                    display: flex;
+                    gap: 40px;
+        
+                    .section-image {
+                        align-self: flex-end;
+            
+                    }
+            
+                    .section_footer {
+                        display: block;
+                    }
+                }
+
+                .#{$prefix}content-side-section {
+                    padding: 30px 25px;
+                    margin: 0 0 30px;
+                    border: none;
+                    box-shadow: none;
+
+                    iframe {
+                        max-width: 100%;
+                        height: auto;
+                        min-height: 170px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    
+                    .#{$prefix}content-side-section-title {
+                        display: flex;
+                        align-items: center;
+                        font-size: $font-size-20;
+                        line-height: 1.3;
+                        padding: 0;
+                        margin: 0 0 17px;
+
+                        svg {
+                            margin: 0 10px 0 0;
+                        }
+                    }
+                }
+
+                &.upgrade-install {
+                    .wpz-onboard_content-side-section.block-premium {
                         padding: 35px 30px 0;
                         display: flex;
                         gap: 40px;
@@ -910,6 +961,10 @@
                         .section-content {
                             display: flex;
                             gap: 10px; 
+
+                            svg {
+                                min-width: 40px;
+                            }
                         }
 
 
@@ -953,63 +1008,14 @@
                         }
                     }
                 }
-            }
-
-            .#{$prefix}content-side {
-                flex-grow: 1;
-                margin: 0 0 25px;
-
-                .#{$prefix}content-side-section {
-                    padding: 30px 25px;
-                    margin: 0 0 30px;
-                    border: none;
-                    box-shadow: none;
-
-                    iframe {
-                        max-width: 100%;
-                        height: auto;
-                        min-height: 170px;
-                    }
-
-                    &:last-child {
-                        margin-bottom: 0;
-                    }
-                    
-                    .#{$prefix}content-side-section-title {
-                        display: flex;
-                        align-items: center;
-                        font-size: $font-size-20;
-                        line-height: 1.3;
-                        padding: 0;
-                        margin: 0 0 17px;
-
-                        svg {
-                            margin: 0 10px 0 0;
-                        }
-                    }
-
-                    .#{$prefix}content-side-section-content {
-                        padding: 0;
-                        margin: 0 0 20px;
-
-                    }
-                }
 
                 &.demo-importer {
                     .#{$prefix}content-side-section-title.icon-docs {
                         color: $dark-color;
                     }
-
-                    .#{$prefix}content-side-section-content {
-                        color: $neutral-dark-color;
-                    }
                 }
 
                 &.plugins {
-                    .#{$prefix}content-side-section-content {
-                        color: $neutral-dark-color;
-                    }
-
                     .#{$prefix}content-side-section.install-plugin{
                         display: flex;
                         padding: 0;
@@ -1029,10 +1035,6 @@
                 }
                 
                 &.support {
-                    .#{$prefix}content-side-section-content {
-                        color: $neutral-dark-color;
-                    }
-
                     .section.help {
                         background-color: $dark-color;
                         color: $light-color;
@@ -1245,7 +1247,7 @@
                                 }
 
                                 .#{$prefix}framework-version {
-                                    font-size: 13px;
+                                   font-size: $font-size-13;
                                 }
                             }
 
@@ -1304,11 +1306,11 @@
                             }
 
                             ul li {
-                                font-size: 13px;
+                               font-size: $font-size-13;
                             }
 
                             .#{$prefix}content-side-section-button .button {
-                                font-size: 13px;
+                               font-size: $font-size-13;
                                 padding: 9px 12px;
                                 margin-right: 10px;
                                 min-height: 35px;
@@ -1323,16 +1325,26 @@
                     }
 
                     .theme-info-wrap.welcome-section,
-                    .theme-info-wrap.block-premium  {
+                    .#{$prefix}content-side.upgrade-install .#{$prefix}content-side-section.block-premium,
+                    .#{$prefix}content-side.demos .#{$prefix}content-side-section.block-premium {
                         display: block;
 
+                        .#{$prefix}content-main-title {
+                            font-size: $font-size-18;
+                        }
+
+                        .#{$prefix}content-main-intro {
+                            font-size: $font-size-14;
+                            margin: 0 0 15px;
+                        }
+
                         .button {
-                            font-size: 13px;
                             padding: 9px 12px;
                             margin-right: 10px;
                             min-height: 35px;
                             height: 35px;
                             min-width: 85px;
+                            font-size: $font-size-12;
                         }
 
                         .section-image {
@@ -1387,9 +1399,8 @@
                             .section {
                                 padding: 15px 26px;
 
-                                .about,
-                                .section_footer .button {
-                                    font-size: 13px;
+                                .about {
+                                    font-size: $font-size-13;
                                 }
 
                                 .section_footer .button {
@@ -1398,6 +1409,7 @@
                                     min-height: 35px;
                                     height: 35px;
                                     min-width: 85px;
+                                    font-size: $font-size-13;
                                 }
 
                                 .#{$prefix}content-side-section-title {
@@ -1421,26 +1433,14 @@
                             font-size: $font-size-14;
                         }
                         .button.button-primary {
-                            font-size: 13px;
+                           font-size: $font-size-13;
                         }
                     }
                     
-                    .#{$prefix}content-side-section-title {
-                        font-size: $font-size-18;
-                    }
-
-                    .#{$prefix}content-side-section-content {
-                        font-size: $font-size-14;
-                    }
-
-                    .#{$prefix}content-side-section-button .button {
-                        font-size: 13px;
-                    }
-
+                    .#{$prefix}content-side-section-title,
                     .#{$prefix}content-side-section-title.icon-follow {
                         font-size: $font-size-18;
                     }
-
 
                     &.plugins {
                         .#{$prefix}content-side-section {
@@ -1475,45 +1475,17 @@
                     }
 
                     &.upgrade-install {
-                        .#{$prefix}content-main-title {
-                            font-size: $font-size-18;
-                        }
-
-                        .#{$prefix}content-main-intro {
-                            font-size: $font-size-14;
-                            margin: 0 0 15px;
-                        }
-
-                        .section-image {
-                            text-align: center;
-
-                            img {
-                                width: 100%;
-                                max-width: 300px;
-                                height: auto;
-                            }
-                        }
-                        
-                        
-                        .button {
-                            padding: 9px 12px;
-                            margin-right: 10px;
-                            min-height: 35px;
-                            height: 35px;
-                            min-width: 85px;
-                            font-size: $font-size-12;
-                        }
-                        
-                        .wpz-grid-wrap {
+                        .theme-info-wrap .wpz-grid-wrap {
                             grid-template-columns: repeat(1, 1fr);
 
                             .section {
-                                input {
-                                    font-size: 13px;
-                                }
-
+                                input,
                                 .section-content {
-                                    font-size: 13px;
+                                   font-size: $font-size-13;
+                                   
+                                    svg {
+                                        min-width: 30px;
+                                    }
                                 }
                             }
                         }
@@ -1524,7 +1496,7 @@
                             }
 
                             .about a {
-                                font-size: 13px;
+                               font-size: $font-size-13;
                             }
                         }
                     }
@@ -1547,9 +1519,8 @@
                             .section {
                                 padding: 14px 26px;
 
-                                .about,
-                                .section_footer .button {
-                                    font-size: 13px;
+                                .about {
+                                   font-size: $font-size-13;
                                 }
 
                                 .section_footer .button {

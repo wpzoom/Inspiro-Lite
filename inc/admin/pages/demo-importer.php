@@ -4,7 +4,7 @@
         <h3 class="wpz-onboard_content-side-section-title icon-docs">
             <?php esc_html_e( 'Demo Importer', 'inspiro' ); ?>
         </h3>
-        <p class="wpz-onboard_content-side-section-content">
+        <p class="wpz-onboard_content-main-intro">
             <?php esc_html_e( 'Importing demo data (posts, pages, images, settings, etc.) is the fastest way to set up your theme, letting you edit instead of starting from scratch.', 'inspiro' ); ?>
         </p>    
     </div>

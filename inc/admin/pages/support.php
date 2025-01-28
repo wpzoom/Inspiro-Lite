@@ -3,7 +3,7 @@
         <h3 class="wpz-onboard_content-side-section-title icon-docs">
             <?php esc_html_e( 'Support', 'inspiro' ); ?>
         </h3>
-        <p class="wpz-onboard_content-side-section-content"><?php esc_html_e( 'Get the help you need with our detailed guides.', 'inspiro' ); ?></p>
+        <p class="wpz-onboard_content-main-intro"><?php esc_html_e( 'Get the help you need with our detailed guides.', 'inspiro' ); ?></p>
     </div>
 
     <div class="theme-info-wrap">
