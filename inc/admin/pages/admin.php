@@ -17,18 +17,16 @@
 		            <?php get_template_part( 'inc/admin/pages/quick-start' ); ?>
 		            <?php get_template_part( 'inc/admin/pages/demo-importer' ); ?>
 		            <?php get_template_part( 'inc/admin/pages/customize' ); ?>
-		            <?php get_template_part( 'inc/admin/pages/vs-pro' ); ?>
-		            <?php get_template_part( 'inc/admin/pages/demos' ); ?>
 					<?php get_template_part( 'inc/admin/pages/plugins' ); ?>
+		            <?php get_template_part( 'inc/admin/pages/demos' ); ?>
 					<?php get_template_part( 'inc/admin/pages/upgrade-install' ); ?>
+		            <?php get_template_part( 'inc/admin/pages/vs-pro' ); ?>
 					<?php get_template_part( 'inc/admin/pages/support' ); ?>
 				</div>
 			</div>
 
 			<?php get_template_part( 'inc/admin/pages/footer' ); ?>
-			
+
 		</div>
 	</div>
-
-
 </div>

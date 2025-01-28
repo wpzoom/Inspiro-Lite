@@ -160,17 +160,6 @@
             margin-right: 5px;
         }
 
-        p.section_footer {
-            margin-top: auto;
-            margin-bottom: 0;
-
-            a {
-                height: 40px;
-                min-height: 40px;
-                padding: 9px 24px;
-            }
-        }
-
         &.premium-feature {
             background-color: $light-color;
             background-image: url("data:image/svg+xml,%3Csvg width='53' height='25' viewBox='0 0 53 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='53' height='25' rx='12.5' fill='%23242628'/%3E%3Cpath opacity='0.9' d='M13.0043 18V7.81818H16.8224C17.6046 7.81818 18.2609 7.96401 18.7912 8.25568C19.3248 8.54735 19.7275 8.94839 19.9993 9.45881C20.2744 9.96591 20.4119 10.5426 20.4119 11.1889C20.4119 11.8419 20.2744 12.4219 19.9993 12.929C19.7242 13.4361 19.3182 13.8355 18.7812 14.1271C18.2443 14.4155 17.5831 14.5597 16.7976 14.5597H14.267V13.0433H16.549C17.0064 13.0433 17.3809 12.9638 17.6726 12.8047C17.9643 12.6456 18.1797 12.4268 18.3189 12.1484C18.4614 11.87 18.5327 11.5502 18.5327 11.1889C18.5327 10.8277 18.4614 10.5095 18.3189 10.2344C18.1797 9.95928 17.9626 9.7455 17.6676 9.59304C17.3759 9.43726 16.9998 9.35938 16.5391 9.35938H14.8487V18H13.0043ZM22.014 18V7.81818H25.8322C26.6144 7.81818 27.2707 7.95407 27.801 8.22585C28.3346 8.49763 28.7373 8.87879 29.0091 9.36932C29.2842 9.85653 29.4217 10.425 29.4217 11.0746C29.4217 11.7275 29.2825 12.2943 29.0041 12.7749C28.729 13.2521 28.323 13.6217 27.786 13.8835C27.2491 14.142 26.5895 14.2713 25.8074 14.2713H23.0879V12.7401H25.5588C26.0162 12.7401 26.3907 12.6771 26.6824 12.5511C26.974 12.4219 27.1895 12.2346 27.3287 11.9893C27.4712 11.7408 27.5424 11.4358 27.5424 11.0746C27.5424 10.7133 27.4712 10.4051 27.3287 10.1499C27.1861 9.89134 26.969 9.69579 26.6774 9.56321C26.3857 9.42732 26.0095 9.35938 25.5488 9.35938H23.8585V18H22.014ZM27.274 13.3864L29.7946 18H27.7363L25.2605 13.3864H27.274ZM40.2175 12.9091C40.2175 14.0062 40.012 14.9458 39.601 15.728C39.1934 16.5069 38.6365 17.1035 37.9306 17.5178C37.2279 17.9321 36.4308 18.1392 35.5392 18.1392C34.6477 18.1392 33.8489 17.9321 33.1429 17.5178C32.4403 17.1001 31.8835 16.5019 31.4725 15.723C31.0648 14.9408 30.861 14.0028 30.861 12.9091C30.861 11.812 31.0648 10.8741 31.4725 10.0952C31.8835 9.31297 32.4403 8.71473 33.1429 8.30043C33.8489 7.88613 34.6477 7.67898 35.5392 7.67898C36.4308 7.67898 37.2279 7.88613 37.9306 8.30043C38.6365 8.71473 39.1934 9.31297 39.601 10.0952C40.012 10.8741 40.2175 11.812 40.2175 12.9091ZM38.3631 12.9091C38.3631 12.1368 38.2421 11.4856 38.0002 10.9553C37.7615 10.4216 37.4301 10.0189 37.0059 9.74716C36.5816 9.47206 36.0927 9.33452 35.5392 9.33452C34.9857 9.33452 34.4969 9.47206 34.0726 9.74716C33.6484 10.0189 33.3153 10.4216 33.0733 10.9553C32.8347 11.4856 32.7154 12.1368 32.7154 12.9091C32.7154 13.6813 32.8347 14.3343 33.0733 14.8679C33.3153 15.3982 33.6484 15.8009 34.0726 16.076C34.4969 16.3478 34.9857 16.4837 35.5392 16.4837C36.0927 16.4837 36.5816 16.3478 37.0059 16.076C37.4301 15.8009 37.7615 15.3982 38.0002 14.8679C38.2421 14.3343 38.3631 13.6813 38.3631 12.9091Z' fill='white'/%3E%3C/svg%3E%0A");
@@ -178,7 +167,7 @@
             background-position: 98% 15px;
         }
 
-        &.section-quick-links {
+        &.quick-action-section {
             background-color: $light-grey-color;
 
             .about.about-quick-links {
@@ -618,17 +607,9 @@
                         }
         
                         .button {
-                            min-width: 96px;
-                            min-height: 40px;
-                            padding: 9px 24px;
-                            border-radius: 4px;
                             background-color: $light-color;
                             color: $dark-color;
-                            font-weight: 600;
-                            text-align: center;
-                            justify-content: center;
-                            border: none;
-        
+                            
                             &-starter {
                                 background-color: transparent;
                                 color: $light-color;
@@ -768,7 +749,7 @@
                                                     top: 50%;
                                                     left: 50%;
                                                     z-index: 3;
-                                                   font-size: $font-size-13;
+                                                    font-size: $font-size-13;
                                                     color: $light-color;
                                                     background-color: var(--inspiro-primary-color);
                                                     border: none;
@@ -776,10 +757,7 @@
                                                     text-align: center;
                                                     width: 80%;
                                                     border-radius: 2px;
-                                                    transform: translate(
-                                                        -50%,
-                                                        -50%
-                                                    );
+                                                    transform: translate(-50%, -50%);
                                                     opacity: 0;
                                                     transition: all 0.2s ease;
                                                 }
@@ -948,14 +926,9 @@
                             align-self: flex-end;
                 
                         }
-                
-                        .section_footer {
-                            display: block;
-                        }
                     }
 
                     .theme-info-wrap .wpz-grid-wrap .section {
-                        background-color: $light-grey-color;
                         font-size: $font-size-14;
 
                         .section-content {
@@ -981,7 +954,6 @@
 
                             button {
                                 border: 1px solid $frosted-grey-color;
-                                margin: 0;
                             }
                         } 
                     }
@@ -1310,7 +1282,7 @@
                             }
 
                             .#{$prefix}content-side-section-button .button {
-                               font-size: $font-size-13;
+                                font-size: $font-size-13;
                                 padding: 9px 12px;
                                 margin-right: 10px;
                                 min-height: 35px;
@@ -1392,6 +1364,15 @@
                             margin: 0 0 20px;
                         }
 
+                        .button {
+                            padding: 9px 12px;
+                            margin-right: 10px;
+                            min-height: 35px;
+                            height: 35px;
+                            min-width: 85px;
+                            font-size: $font-size-13;
+                        }
+
                         .wpz-grid-wrap {
                             grid-column-gap: 15px;
                             grid-row-gap: 15px;
@@ -1400,15 +1381,6 @@
                                 padding: 15px 26px;
 
                                 .about {
-                                    font-size: $font-size-13;
-                                }
-
-                                .section_footer .button {
-                                    padding: 9px 12px;
-                                    margin-right: 10px;
-                                    min-height: 35px;
-                                    height: 35px;
-                                    min-width: 85px;
                                     font-size: $font-size-13;
                                 }
 
@@ -1431,9 +1403,6 @@
                         }
                         .about {
                             font-size: $font-size-14;
-                        }
-                        .button.button-primary {
-                           font-size: $font-size-13;
                         }
                     }
                     
@@ -1476,8 +1445,6 @@
 
                     &.upgrade-install {
                         .theme-info-wrap .wpz-grid-wrap {
-                            grid-template-columns: repeat(1, 1fr);
-
                             .section {
                                 input,
                                 .section-content {

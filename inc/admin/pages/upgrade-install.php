@@ -30,7 +30,7 @@
 
     <div class="theme-info-wrap">
         <div class="wpz-grid-wrap">
-            <div class="section">
+            <div class="section quick-action-section">
                 <form class="ml-block-form">
                     <input type="file" />
                     <button type="submit" class="button button-disabled" >
@@ -38,7 +38,7 @@
                     </button>
                 </form>
             </div>
-            <div class="section">
+            <div class="section quick-action-section">
                 <div class="section-content">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M26 27.5C26 26.6716 26.6716 26 27.5 26H29.5C30.3284 26 31 26.6716 31 27.5C31 28.3284 30.3284 29 29.5 29H27.5C26.6716 29 26 28.3284 26 27.5Z" fill="#242628"/>

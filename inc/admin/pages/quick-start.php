@@ -123,28 +123,29 @@
 				<div class="section">
 					<h4>
 						<svg with="26" height="26" id="Lager_1"
-											 style="enable-background:new -265 388.9 64 64;" version="1.1"
-											 viewBox="-265 388.9 64 64" xml:space="preserve"
-											 xmlns="https://www.w3.org/2000/svg"
-											 xmlns:xlink="https://www.w3.org/1999/xlink"><g>
-												<path d="M-244.5,411h-9.9c-0.9,0-1.6-0.7-1.6-1.6v-9.9c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-242.9,410.3-243.6,411-244.5,411z"/>
-												<path d="M-228.1,411h-9.9c-0.9,0-1.6-0.7-1.6-1.6v-9.9c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-226.4,410.3-227.2,411-228.1,411z"/>
-												<path d="M-211.6,411h-9.9c-0.9,0-1.6-0.7-1.6-1.6v-9.9c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-210,410.3-210.7,411-211.6,411z"/>
-												<path d="M-244.5,427.5h-9.9c-0.9,0-1.6-0.7-1.6-1.6V416c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-242.9,426.7-243.6,427.5-244.5,427.5z"/>
-												<path d="M-228.1,427.5h-9.9c-0.9,0-1.6-0.7-1.6-1.6V416c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-226.4,426.7-227.2,427.5-228.1,427.5z"/>
-												<path d="M-211.6,427.5h-9.9c-0.9,0-1.6-0.7-1.6-1.6V416c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-210,426.7-210.7,427.5-211.6,427.5z"/>
-												<path d="M-244.5,443.9h-9.9c-0.9,0-1.6-0.7-1.6-1.6v-9.9c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-242.9,443.2-243.6,443.9-244.5,443.9z"/>
-												<path d="M-228.1,443.9h-9.9c-0.9,0-1.6-0.7-1.6-1.6v-9.9c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-226.4,443.2-227.2,443.9-228.1,443.9z"/>
-												<path d="M-211.6,443.9h-9.9c-0.9,0-1.6-0.7-1.6-1.6v-9.9c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-210,443.2-210.7,443.9-211.6,443.9z"/>
-											</g></svg> <?php esc_html_e( 'Portfolio', 'inspiro' ); ?>
-									</h4>
-									<p class="about">
-										<?php esc_html_e( 'Using the free version of our WPZOOM Portfolio plugin you can quickly create a Portfolio section on your website.', 'inspiro' ); ?>
-									</p>
+							style="enable-background:new -265 388.9 64 64;" version="1.1"
+							viewBox="-265 388.9 64 64" xml:space="preserve"
+							xmlns="https://www.w3.org/2000/svg"
+							xmlns:xlink="https://www.w3.org/1999/xlink">
+							<g><path d="M-244.5,411h-9.9c-0.9,0-1.6-0.7-1.6-1.6v-9.9c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-242.9,410.3-243.6,411-244.5,411z"/>
+							<path d="M-228.1,411h-9.9c-0.9,0-1.6-0.7-1.6-1.6v-9.9c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-226.4,410.3-227.2,411-228.1,411z"/>
+							<path d="M-211.6,411h-9.9c-0.9,0-1.6-0.7-1.6-1.6v-9.9c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-210,410.3-210.7,411-211.6,411z"/>
+							<path d="M-244.5,427.5h-9.9c-0.9,0-1.6-0.7-1.6-1.6V416c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-242.9,426.7-243.6,427.5-244.5,427.5z"/>
+							<path d="M-228.1,427.5h-9.9c-0.9,0-1.6-0.7-1.6-1.6V416c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-226.4,426.7-227.2,427.5-228.1,427.5z"/>
+							<path d="M-211.6,427.5h-9.9c-0.9,0-1.6-0.7-1.6-1.6V416c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-210,426.7-210.7,427.5-211.6,427.5z"/>
+							<path d="M-244.5,443.9h-9.9c-0.9,0-1.6-0.7-1.6-1.6v-9.9c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-242.9,443.2-243.6,443.9-244.5,443.9z"/>
+							<path d="M-228.1,443.9h-9.9c-0.9,0-1.6-0.7-1.6-1.6v-9.9c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-226.4,443.2-227.2,443.9-228.1,443.9z"/>										<path d="M-211.6,443.9h-9.9c-0.9,0-1.6-0.7-1.6-1.6v-9.9c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-210,443.2-210.7,443.9-211.6,443.9z"/>
+							</g>
+						</svg> 
+						<?php esc_html_e( 'Portfolio', 'inspiro' ); ?>
+					</h4>
+					<p class="about">
+						<?php esc_html_e( 'Using the free version of our WPZOOM Portfolio plugin you can quickly create a Portfolio section on your website.', 'inspiro' ); ?>
+					</p>
 
-									<p class="section_footer">
+					<p class="section_footer">
 
-										<?php if ( class_exists( 'WPZOOM_Portfolio_Custom_Posts' ) ) { ?>
+						<?php if ( class_exists( 'WPZOOM_Portfolio_Custom_Posts' ) ) { ?>
 
 											<a href="<?php echo esc_url( admin_url( 'edit.php?post_type=portfolio_item' ) ); ?>"
 											   target="_blank" class="button button-primary">
@@ -167,7 +168,7 @@
 									</p>
 								</div>
 
-								<div class="section section-quick-links">
+								<div class="section quick-action-section">
 									<h4>
 									<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M8.7062 1.79315C10.7847 -0.234165 14.1069 -0.213458 16.16 1.83961C18.2131 3.89268 18.2338 7.21491 16.2065 9.29341L16.1999 9.3001L14.008 11.492C13.7151 11.7849 13.2402 11.7849 12.9473 11.492C12.6544 11.1991 12.6544 10.7242 12.9473 10.4313L15.1358 8.24287C16.5866 6.75198 16.5707 4.37166 15.0993 2.90027C13.628 1.42889 11.2476 1.413 9.75676 2.86383L7.56829 5.05229C7.2754 5.34519 6.80053 5.34519 6.50763 5.05229C6.21474 4.7594 6.21474 4.28453 6.50763 3.99163L8.7062 1.79315Z" fill="#242628"/>
@@ -316,9 +317,9 @@
 									</p>
 								</div>
 
-							</div><!-- /.wpz-grid-wrap -->
+							</div>
 
-						</div><!-- /.theme-info-wrap -->
+						</div>
 
 						<div class="wpz-onboard_content-side-section discover-premium">
                         <div class="image-column">
@@ -671,14 +672,17 @@
 
 
 							</div>
-
-							<span
-								class="many-more"><?php esc_html_e( 'And many other premium features...', 'inspiro' ); ?></span>
-
+							<br>
 							<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-table', 'inspiro' ) ); ?>"
 							   target="_blank" class="button button-large button-primary">
 								<?php esc_html_e( 'Get Inspiro Premium Today &#8599;', 'inspiro' ); ?>
 							</a>
+							<a href="https://www.wpzoom.com/themes/inspiro/starter-sites/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
+                                title="Inspiro Premium" target="_blank"
+                                class="button button-secondary">
+								<?php esc_html_e( 'View Starter Sites &#8599;', 'inspiro' ); ?>
+							</a>
+                          
 
 	</div>
 
