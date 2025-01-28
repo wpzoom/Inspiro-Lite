@@ -1,4 +1,4 @@
-<div id="install-premium" class="wpz-onboard_content-side install-premium">
+<div id="upgrade-install" class="wpz-onboard_content-side upgrade-install">
     <div class="wpz-onboard_content-side-section block-premium">
    
         <div class="section-content">

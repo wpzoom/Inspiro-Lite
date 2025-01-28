@@ -12,43 +12,50 @@
 			</div>
 
 			<ul class="wpz-onboard_tabs">
-				<li class="wpz-onboard_tab wpz-onboard_tab-quick-start"><a href="#quick-start" title="Home">
-					<svg width="18" height="18" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 18.5002V14.0002C6.5 12.6192 7.619 11.5002 9 11.5002V11.5002C10.381 11.5002 11.5 12.6192 11.5 14.0002V18.5002H17V9.91425C17 9.38425 16.789 8.87525 16.414 8.50025L9.707 1.79325C9.316 1.40225 8.683 1.40225 8.293 1.79325L1.586 8.50025C1.211 8.87525 1 9.38425 1 9.91425V18.5002H6.5Z" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-					</svg> 
-					<?php esc_html_e( 'Home', 'inspiro' ); ?></a></li>
-
-				<li class="wpz-onboard_tab wpz-onboard_tab-theme-child"><a href="#vs-pro" title="Free vs. PRO">
-						<svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="https://www.w3.org/2000/svg">
-							<path clip-rule="evenodd"
-								  d="M15 5.75C11.5482 5.75 8.75 8.54822 8.75 12C8.75 15.4518 11.5482 18.25 15 18.25C15.9599 18.25 16.8674 18.0341 17.6782 17.6489C18.0523 17.4712 18.4997 17.6304 18.6774 18.0045C18.8552 18.3787 18.696 18.8261 18.3218 19.0038C17.3141 19.4825 16.1873 19.75 15 19.75C10.7198 19.75 7.25 16.2802 7.25 12C7.25 7.71979 10.7198 4.25 15 4.25C19.2802 4.25 22.75 7.71979 22.75 12C22.75 12.7682 22.638 13.5115 22.429 14.2139C22.3108 14.6109 21.8932 14.837 21.4962 14.7188C21.0992 14.6007 20.8731 14.1831 20.9913 13.7861C21.1594 13.221 21.25 12.6218 21.25 12C21.25 8.54822 18.4518 5.75 15 5.75Z"
-								  fill="black" fill-rule="evenodd"/>
-							<path clip-rule="evenodd"
-								  d="M5.25 5C5.25 4.58579 5.58579 4.25 6 4.25H15C15.4142 4.25 15.75 4.58579 15.75 5C15.75 5.41421 15.4142 5.75 15 5.75H6C5.58579 5.75 5.25 5.41421 5.25 5Z"
-								  fill="black" fill-rule="evenodd"/>
-							<path clip-rule="evenodd"
-								  d="M4.75 8.5C4.75 8.08579 5.08579 7.75 5.5 7.75H8.5C8.91421 7.75 9.25 8.08579 9.25 8.5C9.25 8.91421 8.91421 9.25 8.5 9.25H5.5C5.08579 9.25 4.75 8.91421 4.75 8.5Z"
-								  fill="black" fill-rule="evenodd"/>
-							<path clip-rule="evenodd"
-								  d="M1.25 8.5C1.25 8.08579 1.58579 7.75 2 7.75H3.5C3.91421 7.75 4.25 8.08579 4.25 8.5C4.25 8.91421 3.91421 9.25 3.5 9.25H2C1.58579 9.25 1.25 8.91421 1.25 8.5Z"
-								  fill="black" fill-rule="evenodd"/>
-							<path clip-rule="evenodd"
-								  d="M3.25 12.5C3.25 12.0858 3.58579 11.75 4 11.75H8C8.41421 11.75 8.75 12.0858 8.75 12.5C8.75 12.9142 8.41421 13.25 8 13.25H4C3.58579 13.25 3.25 12.9142 3.25 12.5Z"
-								  fill="black" fill-rule="evenodd"/>
-							<path clip-rule="evenodd"
-								  d="M12.376 8.58397C12.5151 8.37533 12.7492 8.25 13 8.25H17C17.2508 8.25 17.4849 8.37533 17.624 8.58397L19.624 11.584C19.792 11.8359 19.792 12.1641 19.624 12.416L17.624 15.416C17.4849 15.6247 17.2508 15.75 17 15.75H13C12.7492 15.75 12.5151 15.6247 12.376 15.416L10.376 12.416C10.208 12.1641 10.208 11.8359 10.376 11.584L12.376 8.58397ZM13.4014 9.75L11.9014 12L13.4014 14.25H16.5986L18.0986 12L16.5986 9.75H13.4014Z"
-								  fill="black" fill-rule="evenodd"/>
+				<li class="wpz-onboard_tab wpz-onboard_tab-quick-start">
+					<a href="#quick-start" title="Home">
+						<svg width="18" height="18" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 18.5002V14.0002C6.5 12.6192 7.619 11.5002 9 11.5002V11.5002C10.381 11.5002 11.5 12.6192 11.5 14.0002V18.5002H17V9.91425C17 9.38425 16.789 8.87525 16.414 8.50025L9.707 1.79325C9.316 1.40225 8.683 1.40225 8.293 1.79325L1.586 8.50025C1.211 8.87525 1 9.38425 1 9.91425V18.5002H6.5Z" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 						</svg> 
-						<?php esc_html_e( 'Free vs. Premium', 'inspiro' ); ?></a></li>
-
-				<li class="wpz-onboard_tab wpz-onboard_tab-debug"><a href="#demos" title="Demos">
-					<svg width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="https://www.w3.org/2000/svg">
-						<path
-							d="M34 0H14C12.4087 0 10.8826 0.632141 9.75736 1.75736C8.63214 2.88258 8 4.4087 8 6V8H6C4.4087 8 2.88258 8.63214 1.75736 9.75736C0.632141 10.8826 0 12.4087 0 14V34C0 35.5913 0.632141 37.1174 1.75736 38.2426C2.88258 39.3679 4.4087 40 6 40H26C27.5913 40 29.1174 39.3679 30.2426 38.2426C31.3679 37.1174 32 35.5913 32 34V32H34C35.5913 32 37.1174 31.3679 38.2426 30.2426C39.3679 29.1174 40 27.5913 40 26V6C40 4.4087 39.3679 2.88258 38.2426 1.75736C37.1174 0.632141 35.5913 0 34 0ZM28 34C28 34.5304 27.7893 35.0391 27.4142 35.4142C27.0391 35.7893 26.5304 36 26 36H6C5.46957 36 4.96086 35.7893 4.58579 35.4142C4.21071 35.0391 4 34.5304 4 34V20H28V34ZM28 16H4V14C4 13.4696 4.21071 12.9609 4.58579 12.5858C4.96086 12.2107 5.46957 12 6 12H26C26.5304 12 27.0391 12.2107 27.4142 12.5858C27.7893 12.9609 28 13.4696 28 14V16ZM36 26C36 26.5304 35.7893 27.0391 35.4142 27.4142C35.0391 27.7893 34.5304 28 34 28H32V14C31.9946 13.3177 31.8728 12.6413 31.64 12H36V26ZM36 8H12V6C12 5.46957 12.2107 4.96086 12.5858 4.58579C12.9609 4.21071 13.4696 4 14 4H34C34.5304 4 35.0391 4.21071 35.4142 4.58579C35.7893 4.96086 36 5.46957 36 6V8Z"
-							fill="#242628"/>
-					</svg> 
-					<?php esc_html_e( 'Premium Demos', 'inspiro' ); ?></a></li>
-
+						<?php esc_html_e( 'Home', 'inspiro' ); ?>
+					</a>
+				</li>
+				<li class="wpz-onboard_tab wpz-onboard_tab-debug">
+					<a href="#demo-importer" title="Demo Importer">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M3 9H21" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M11 5.995L10.995 6L11 6.005L11.005 6L11 5.995" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M8.5 5.995L8.495 6L8.5 6.005L8.505 6L8.5 5.995" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M6 5.995L5.995 6L6 6.005L6.005 6L6 5.995" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M11 5.995L10.995 6L11 6.005L11.005 6L11 5.995" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M8.5 5.995L8.495 6L8.5 6.005L8.505 6L8.5 5.995" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M6 5.995L5.995 6L6 6.005L6.005 6L6 5.995" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M17.5 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H6.5" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M12 18L14 16" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M10 16L12 18" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M12 13.5V18" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M14 21H10" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						<?php esc_html_e( 'Demo Importer', 'inspiro' ); ?>
+					</a>
+				</li>
+				<li class="wpz-onboard_tab wpz-onboard_tab-debug">
+					<a href="#customize" title="Customize">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M3 5.5H6.07" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M10.3238 3.73223C11.3001 4.70854 11.3001 6.29145 10.3238 7.26776C9.34748 8.24407 7.76457 8.24407 6.78826 7.26776C5.81195 6.29145 5.81195 4.70854 6.78826 3.73223C7.76457 2.75592 9.34748 2.75592 10.3238 3.73223" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M11.0601 5.5H21.0001" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M10.3238 3.73223C11.3001 4.70854 11.3001 6.29145 10.3238 7.26776C9.34748 8.24407 7.76457 8.24407 6.78826 7.26776C5.81195 6.29145 5.81195 4.70854 6.78826 3.73223C7.76457 2.75592 9.34748 2.75592 10.3238 3.73223" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M20.9999 12H17.9399" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M12.94 12H3" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M17.2119 10.2322C18.1882 11.2085 18.1882 12.7915 17.2119 13.7678C16.2355 14.7441 14.6526 14.7441 13.6763 13.7678C12.7 12.7915 12.7 11.2085 13.6763 10.2322C14.6526 9.25592 16.2355 9.25592 17.2119 10.2322" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M11.0601 18.5H21.0001" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M3 18.5H6.06" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M10.3238 16.7322C11.3001 17.7085 11.3001 19.2915 10.3238 20.2678C9.34748 21.2441 7.76457 21.2441 6.78826 20.2678C5.81195 19.2915 5.81195 17.7085 6.78826 16.7322C7.76457 15.7559 9.34748 15.7559 10.3238 16.7322" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						<?php esc_html_e( 'Customize', 'inspiro' ); ?>
+					</a>
+				</li>
 				<li class="wpz-onboard_tab wpz-onboard_tab-plugins"><a href="#plugins" title="Plugins">
 					<svg width="20" height="20" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M4.16413 9.49747C3.72694 9.40843 3.25275 9.42544 2.76354 9.58851C1.9362 9.86462 1.28093 10.5759 1.07584 11.4243C0.653665 13.168 1.96321 14.7246 3.63591 14.7246C3.81698 14.7246 3.99306 14.7056 4.16413 14.6716V17.893C4.16413 19.0585 5.10952 20.0038 6.27601 20.0038H17.8918C19.0583 20.0038 20.0037 19.0585 20.0037 17.892V6.27613C20.0037 5.10964 19.0583 4.16425 17.8918 4.16425H14.6705C14.7595 3.72707 14.7425 3.25287 14.5795 2.76367C14.3023 1.93632 13.5911 1.28105 12.7437 1.07596C11 0.653787 9.44333 1.96333 9.44333 3.63603C9.44333 3.8171 9.46233 3.99318 9.49635 4.16425H6.27501C5.10852 4.16425 4.16313 5.10964 4.16313 6.27613V9.49747H4.16413Z" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -58,7 +65,22 @@
 					<?php esc_html_e( 'Plugins', 'inspiro' ); ?></a>
 				</li>
 
-				<li class="wpz-onboard_tab wpz-onboard_tab-plugins"><a href="#install-premium" title="Install Inspiro Premium">
+				<hr class="wpz-onboard_hr">
+
+				<li class="wpz-onboard_tab wpz-onboard_tab-debug">
+					<a href="#demos" title="Demos">
+						<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M4.64479 10.9348L6.77737 11.7451C8.38017 12.3542 9.64583 13.6198 10.2549 15.2226L11.0652 17.3552C11.2127 17.7434 11.5847 18 12 18C12.4152 18 12.7873 17.7434 12.9348 17.3552L13.7451 15.2226C14.3542 13.6198 15.6198 12.3542 17.2226 11.7451L19.3552 10.9348C19.7434 10.7873 20 10.4152 20 9.99999C20 9.58475 19.7434 9.21271 19.3552 9.06521L17.2226 8.25487C15.6198 7.64582 14.3542 6.38016 13.7451 4.77736L12.9348 2.64479C12.7873 2.25662 12.4152 2 12 2C11.5847 2 11.2127 2.25662 11.0652 2.64479L10.2549 4.77736C9.64583 6.38016 8.38017 7.64582 6.77737 8.25487L4.64479 9.06521C4.25662 9.21271 4 9.58475 4 9.99999C4 10.4152 4.25662 10.7873 4.64479 10.9348Z" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M4 19V15" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M2 17H6" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M3 5V1" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M1 3H5" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						<?php esc_html_e( 'Premium Demos', 'inspiro' ); ?>
+					</a>
+				</li>
+				<li class="wpz-onboard_tab wpz-onboard_tab-plugins">
+					<a href="#upgrade-install" title="Upgrade/Install">
 					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M3 0.25C1.48079 0.25 0.25 1.48079 0.25 3C0.25 3.41421 0.585786 3.75 1 3.75C1.41421 3.75 1.75 3.41421 1.75 3C1.75 2.30921 2.30921 1.75 3 1.75C3.41421 1.75 3.75 1.41421 3.75 1C3.75 0.585786 3.41421 0.25 3 0.25Z" fill="#242628"/>
 						<path d="M1.75 17C1.75 16.5858 1.41421 16.25 1 16.25C0.585786 16.25 0.25 16.5858 0.25 17C0.25 18.5192 1.48079 19.75 3 19.75C3.41421 19.75 3.75 19.4142 3.75 19C3.75 18.5858 3.41421 18.25 3 18.25C2.30921 18.25 1.75 17.6908 1.75 17Z" fill="#242628"/>
@@ -75,10 +97,22 @@
 						<path d="M11.67 18.25C11.2558 18.25 10.92 18.5858 10.92 19C10.92 19.4142 11.2558 19.75 11.67 19.75H13.67C14.0843 19.75 14.42 19.4142 14.42 19C14.42 18.5858 14.0843 18.25 13.67 18.25H11.67Z" fill="#242628"/>
 					</svg>
 
-					<?php esc_html_e( 'Install Inspiro Premium', 'inspiro' ); ?></a>
+					<?php esc_html_e( 'Upgrade/Install', 'inspiro' ); ?></a>
+				</li>
+				<li class="wpz-onboard_tab wpz-onboard_tab-theme-child">
+					<a href="#vs-pro" title="Free vs PRO">
+						<svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M5.13033 0.869084C5.42322 1.16198 5.42322 1.63685 5.13033 1.92974L2.06066 4.99941L5.13033 8.06908C5.42322 8.36198 5.42322 8.83685 5.13033 9.12974C4.83744 9.42264 4.36256 9.42264 4.06967 9.12974L0.46967 5.52974C0.176777 5.23685 0.176777 4.76198 0.46967 4.46908L4.06967 0.869084C4.36256 0.576191 4.83744 0.576191 5.13033 0.869084Z" fill="#242628"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.25 4.99941C0.25 4.5852 0.585786 4.24941 1 4.24941H15C15.4142 4.24941 15.75 4.5852 15.75 4.99941C15.75 5.41363 15.4142 5.74941 15 5.74941H1C0.585786 5.74941 0.25 5.41363 0.25 4.99941Z" fill="#242628"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M11.9304 10.8695C11.6375 10.5766 11.1626 10.5766 10.8697 10.8695C10.5768 11.1623 10.5768 11.6372 10.8697 11.9301L13.189 14.2494H1C0.585786 14.2494 0.25 14.5852 0.25 14.9994C0.25 15.4136 0.585786 15.7494 1 15.7494H13.1898L10.8697 18.0694C10.5768 18.3623 10.5768 18.8372 10.8697 19.1301C11.1626 19.423 11.6375 19.423 11.9304 19.1301L15.5304 15.5301C15.6852 15.3753 15.7581 15.1697 15.7493 14.9669C15.7407 14.7657 15.6529 14.585 15.5162 14.4553L11.9304 10.8695Z" fill="#242628"/>
+						</svg>
+						<?php esc_html_e( 'Free vs Premium', 'inspiro' ); ?>
+					</a>
 				</li>
 
-				<li class="wpz-onboard_tab wpz-onboard_tab-plugins"><a href="#support" title="Support">
+				<hr class="wpz-onboard_hr">
+
+				<li class="wpz-onboard_tab wpz-onboard_tab-plugins"><a href="#support" title="Support & Docs">
 					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M19.5601 7.1189C21.4801 10.0889 21.4791 13.9129 19.5611 16.8819" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 						<path d="M15.5476 8.45236C17.5068 10.4116 17.5068 13.5882 15.5476 15.5475C13.5883 17.5067 10.4117 17.5067 8.45248 15.5475C6.49322 13.5882 6.49322 10.4116 8.45248 8.45236C10.4117 6.4931 13.5883 6.4931 15.5476 8.45236" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -90,7 +124,7 @@
 						<path d="M4.43899 7.11792C2.52099 10.0869 2.51999 13.9109 4.43999 16.8809" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 						<path d="M16.881 4.43999C13.911 2.51999 10.087 2.52099 7.11804 4.43899" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 					</svg>
-					<?php esc_html_e( 'Support', 'inspiro' ); ?></a>
+					<?php esc_html_e( 'Support & Docs', 'inspiro' ); ?></a>
 				</li>
 			</ul>
 		</div>
