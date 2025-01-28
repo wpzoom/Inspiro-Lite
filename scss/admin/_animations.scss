@@ -1,0 +1,16 @@
+/* Create a spinning icon animation */
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+/* Create a global spinning class */
+.spin-icon {
+	display: inline-block;
+	animation: spin 2s linear infinite;
+}

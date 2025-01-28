@@ -1,43 +1,13 @@
 @import "../mixins/";
 @import "./review-notice";
 
-/* NEW */
-$prefix: wpz-onboard_;
-$primary-color: #3496ff;
-$secondary-color: scale-color($primary-color, $lightness: 25%);
-$light-color: #fff;
-$dark-color: #242628;
-$medium-color: #1d2327;
-$grey-color: #ddd;
-$dark-grey-color: #666;
-$bluish-grey-color: #81909c;
-$dark-blue-color: #2271b1;
-$green-color: #22bb66;
+@import 'variables';
+@import 'utilities';
+@import 'animations';
 
 :root {
     --inspiro-primary-color: #{$primary-color};
 }
-
-/* utility classes */
-.hidden-element { display: none !important; }
-
-/* Create a spinning icon animation */
-@keyframes spin {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
-
-
-/* Create a global spinning class */
-.spin-icon {
-	display: inline-block;
-	animation: spin 2s linear infinite;
-}
-
 
 /* Theme Info Page */
 .theme-info-wrap {
@@ -46,7 +16,7 @@ $green-color: #22bb66;
     padding: 35px 30px;
 
     .many-more {
-        font-size: 20px;
+        font-size: $font-size-20;
         color: $dark-color;
         font-weight: 600;
         margin: 30px 0;
@@ -55,7 +25,8 @@ $green-color: #22bb66;
 
     &.welcome-section {
         display: flex;
-        background: radial-gradient(at 50% 50%, #d8dffa, transparent 0), linear-gradient(45deg, #c0cdf59e, #fff, #c0cdf59e);
+        background: radial-gradient(at 50% 50%, $light-blueish-color, transparent 0), 
+                    linear-gradient(45deg, $light-neutral-green-color, $light-color, $light-neutral-green-color);
         gap: 40px;
 
         &::before {
@@ -80,7 +51,7 @@ $green-color: #22bb66;
                 justify-content: space-between;
     
                 .#{$prefix}framework-version {
-                    font-size: 14px;
+                    font-size: $font-size-14;
                     font-weight: 500;
                     color: $bluish-grey-color;
                     margin: 0 0 25px;
@@ -100,8 +71,8 @@ $green-color: #22bb66;
 
 	.theme-intro {
 		margin: 20px 0;
-		border: 1px solid #e2e9ec;
-		background: #f7fafa;
+		border: 1px solid $light-aqua-color;
+		background: $subtle-light-grey-color;
 		padding: 30px;
 		border-radius: 4px;
 		margin: 30px 0 30px 0 !important;
@@ -109,49 +80,49 @@ $green-color: #22bb66;
 	}
 
 	h1 {
-		font-size: 30px;
+		font-size: $font-size-30;
 		font-weight: 400;
 		line-height: 1.2;
 		margin-bottom: 15px;
 		margin-top: 0;
-		color: #333333;
+		color: $deep-black-color;
 	}
 
 	h3 {
-		font-size: 20px;
+		font-size: $font-size-20;
 		line-height: 1.2;
         color: $dark-color;
 	}
 
 	h4 {
-        font-size: 18px;
+        font-size: $font-size-18;
         font-weight: 500;
 		margin: 10px 0;
 		margin: 0.625rem 0;
 
         .dashicons {
-            font-size: 22px;
+            font-size: $font-size-22;
             margin-right: 4px;
         }
 	}
 
 	.theme-description {
-		font-size: 17px;
+		font-size: $font-size-17;
 		font-size: 1.0625rem;
 		font-weight: 400;
 		line-height: 1.5;
-		color: #777777;
+		color: $neutral-grey-color;
 	}
 
 	.theme-links p {
 		strong {
-			font-size: 14px;
+			font-size: $font-size-14;
 			font-size: 0.875rem;
 			margin-right: 16px;
 			margin-right: 1rem;
 		}
 		a {
-			font-size: 14px;
+			font-size: $font-size-14;
 			font-size: 0.875rem;
 			margin-right: 16px;
 			margin-right: 1rem;
@@ -169,7 +140,7 @@ $green-color: #22bb66;
     & > .section {
         position: relative;
         padding: 24px 36px;
-        border: 1px solid #e1e5e9;
+        border: 1px solid $frosted-grey-color;
         border-radius: 4px;
 
         display: flex;
@@ -208,7 +179,7 @@ $green-color: #22bb66;
         }
 
         &.section-quick-links {
-            background-color: #F2F4F6;
+            background-color: $light-grey-color;
 
             .about.about-quick-links {
                 display: inline-grid;
@@ -226,7 +197,7 @@ $green-color: #22bb66;
 
 .section {
     .about {
-        font-size: 15px;
+        font-size: $font-size-15;
         font-weight: 400;
         line-height: 1.5;
         color: $bluish-grey-color;
@@ -247,8 +218,8 @@ $green-color: #22bb66;
 
 
 .wpz-upload form {
-    background: #f6f7f7;
-    border: 1px solid #c3c4c7;
+    background: $very-light-grey-color;
+    border: 1px solid $soft-grey-color;
     padding: 30px;
     margin: 20px auto 50px;
     display: inline-flex;
@@ -263,7 +234,7 @@ $green-color: #22bb66;
 
 	table {
 		width: 100%;
-		font-size: 16px;
+		font-size: $font-size-16;
 		background: $light-color;
 		border-collapse: collapse;
 	}
@@ -272,7 +243,7 @@ $green-color: #22bb66;
         background: $primary-color;
         color: $light-color;
         font-style: normal;
-        font-size: 12px;
+        font-size: $font-size-12;
         font-weight: 600;
         letter-spacing: 0;
         padding: 3px 8px;
@@ -284,7 +255,7 @@ $green-color: #22bb66;
 
     tbody {
         tr {
-            background-color: #f2f4f6;
+            background-color: $light-grey-color;
         }
 
         tr:nth-child(2n) {
@@ -298,7 +269,7 @@ $green-color: #22bb66;
         text-align: center;
 
 		h3 {
-			font-size: 16px;
+			font-size: $font-size-16;
 			margin: 0;
             font-weight: normal;
             text-align: left;
@@ -306,10 +277,10 @@ $green-color: #22bb66;
 	}
 
 	.dashicons {
-		font-size: 25px;
+		font-size: $font-size-25;
 	}
 	.dashicons-no-alt {
-		color: #e64946;
+		color: $alert-red;
 	}
 	.dashicons-saved {
 		color: $green-color;
@@ -322,7 +293,7 @@ $green-color: #22bb66;
 	background: none;
 
 	h3 {
-		font-size: 16px;
+		font-size: $font-size-16;
 		margin: 10px 20px;
 		text-align: center;
  	}
@@ -346,23 +317,9 @@ $green-color: #22bb66;
 }
 
 #theme-author p {
-	font-size: 14px;
+	font-size: $font-size-14;
 	font-size: 0.875rem;
-	color: #777777;
-}
-
-@media screen and (max-width: 1000px) {
-	.theme-info-wrap .theme-links p strong {
-		display: block;
-	}
-	.theme-info-wrap [class*="wpz-col-"] {
-		float: none;
-		width: 100%;
-		margin: 0;
-	}
-	.theme-info-wrap .theme-screenshot {
-		margin-bottom: 20px;
-	}
+	color: $neutral-grey-color;
 }
 
 
@@ -370,17 +327,9 @@ $green-color: #22bb66;
     padding: 10px 15px 0 0;
 
     p {
-        font-size: 16px;
+        font-size: $font-size-16;
         font-weight: 400;
     }
-}
-
-// Hide unneeded notices.
-.appearance_page_inspiro div#setting-error-tgmpa,
-.appearance_page_inspiro .update-nag,
-.appearance_page_inspiro .notice,
-.appearance_page_inspiro div.error {
-    display: none;
 }
 
 .wp-core-ui .#{$prefix}wrapper {
@@ -464,10 +413,7 @@ $green-color: #22bb66;
 .#{$prefix}wrapper {
     color: $dark-color;
 
-    .ui-tabs{
-        color: $dark-color;
-    }
-
+    .ui-tabs,
     p {
         color: $dark-color;
     }
@@ -481,7 +427,7 @@ $green-color: #22bb66;
         background-color: $light-color;
         border: 1px solid $grey-color;
         border-radius: 4px;
-        box-shadow: 0 1px 2px 0 #0000001A;
+        box-shadow: 0 1px 2px 0 $black-transparent-10;
         
     }
 
@@ -515,7 +461,7 @@ $green-color: #22bb66;
                 gap: 10px;
                 padding: 0;
                 margin: 0;
-                font-size: 24px;
+                font-size: $font-size-24;
 
                 span {
                     color: $bluish-grey-color;
@@ -542,7 +488,7 @@ $green-color: #22bb66;
             flex-wrap: wrap;
 
             .ui-state-active {
-                background-color: #F2F4F6;
+                background-color: $light-grey-color;
                 border-radius: 4px;
             }
 
@@ -557,7 +503,7 @@ $green-color: #22bb66;
                 }
 
                 a {
-                    font-size: 16px;
+                    font-size: $font-size-16;
                     font-weight: 500;
                     text-decoration: none;
                     line-height: 1.8;
@@ -637,12 +583,8 @@ $green-color: #22bb66;
                             flex: 2;
                         }
         
-                        &.inspiro-block-version {
-                            background-color: #0B69B4;
-                        }
-        
                         h3 {
-                            font-size: 24px;
+                            font-size: $font-size-24;
                             color: $light-color;
                             margin: 0 0 25px;
                         }
@@ -655,7 +597,7 @@ $green-color: #22bb66;
                             gap: 10px 20px;
         
                             li {
-                                font-size: 14px;
+                                font-size: $font-size-14;
                                 font-weight: 500;
                                 color: $light-color;
                                 display: flex;
@@ -698,12 +640,12 @@ $green-color: #22bb66;
                 }
                 
                 .#{$prefix}content-main-title {
-                    font-size: 20px;
+                    font-size: $font-size-20;
                     padding: 0;
                     margin: 0 0 25px;
 
                     &.welcome {
-                        font-size: 24px;
+                        font-size: $font-size-24;
                     }
 
                     svg {
@@ -750,7 +692,7 @@ $green-color: #22bb66;
 
                                 h5 {
                                     position: relative;
-                                    font-size: 14px;
+                                    font-size: $font-size-14;
                                     font-weight: 600;
                                     padding: 0;
                                     margin: 0 0 5px;
@@ -872,7 +814,7 @@ $green-color: #22bb66;
                                             figcaption {
                                                 position: relative;
                                                 h5 {
-                                                    font-size: 18px;
+                                                    font-size: $font-size-18;
                                                     font-weight: 600;
                                                     white-space: nowrap;
                                                     margin: 0 0 10px;
@@ -952,8 +894,8 @@ $green-color: #22bb66;
                     }
 
                     .theme-info-wrap .wpz-grid-wrap .section {
-                        background-color: #F2F4F6;
-                        font-size: 14px;
+                        background-color: $light-grey-color;
+                        font-size: $font-size-14;
 
                         .section-content {
                             display: flex;
@@ -973,7 +915,7 @@ $green-color: #22bb66;
                             }
 
                             button {
-                                border: 1px solid #e1e5e9;
+                                border: 1px solid $frosted-grey-color;
                                 margin: 0;
                             }
                         } 
@@ -989,7 +931,7 @@ $green-color: #22bb66;
                             display: grid;
 
                             a {
-                                color: #3496FF;
+                                color: $primary-color;
                                 text-decoration: none;
                                 display: flex;
                                 align-items: center;
@@ -1030,7 +972,7 @@ $green-color: #22bb66;
                     .#{$prefix}content-side-section-title {
                         display: flex;
                         align-items: center;
-                        font-size: 20px;
+                        font-size: $font-size-20;
                         line-height: 1.3;
                         padding: 0;
                         margin: 0 0 17px;
@@ -1049,7 +991,7 @@ $green-color: #22bb66;
 
                 &.plugins {
                     .wpz-onboard_content-side-section-content {
-                        color: #5E6164;
+                        color: $neutral-dark-color;
                     }
 
                     .wpz-onboard_content-side-section.install-plugin{
@@ -1072,14 +1014,14 @@ $green-color: #22bb66;
                 
                 &.support {
                     p.wpz-onboard_content-side-section-content {
-                        color: #5E6164;
+                        color: $neutral-dark-color;
                     }
                     .section.help {
                         background-color: $dark-color;
                         color: $light-color;
 
                         .about {
-                            color: #F2F4F6;
+                            color: $light-grey-color;
                         }
                         
                         .section_footer {
@@ -1116,7 +1058,7 @@ $green-color: #22bb66;
             .go-back-link {
                 display: inline-flex;
                 align-items: center;
-                font-size: 18px;
+                font-size: $font-size-18;
                 font-weight: 600;
                 text-decoration: none;
                 line-height: 1;
@@ -1137,7 +1079,7 @@ $green-color: #22bb66;
             }
 
             .#{$prefix}content-overlay-design-pages-title {
-                font-size: 20px;
+                font-size: $font-size-20;
                 font-weight: 600;
                 padding: 0;
                 margin: 0 0 20px;
@@ -1204,7 +1146,6 @@ $green-color: #22bb66;
     }
 }
 
-
 @media screen and (max-width: 1140px) {
     .#{$prefix}wrapper {
         .ui-tabs {
@@ -1221,6 +1162,20 @@ $green-color: #22bb66;
     }
 }
 
+@media screen and (max-width: 1000px) {
+	.theme-info-wrap .theme-links p strong {
+		display: block;
+	}
+	.theme-info-wrap [class*="wpz-col-"] {
+		float: none;
+		width: 100%;
+		margin: 0;
+	}
+	.theme-info-wrap .theme-screenshot {
+		margin-bottom: 20px;
+	}
+}
+
 @media screen and (max-width: 980px) {
     .#{$prefix}wrapper {
         .ui-tabs {
@@ -1228,7 +1183,7 @@ $green-color: #22bb66;
                 gap: 40px;
 
                 .#{$prefix}title {
-                    font-size: 20px;
+                    font-size: $font-size-20;
 
                     svg {
                         width: 25px;
@@ -1242,7 +1197,7 @@ $green-color: #22bb66;
                         padding: 12px 16px;
 
                         a {
-                            font-size: 15px;
+                            font-size: $font-size-15;
                         }
                     }
                 }
@@ -1255,7 +1210,7 @@ $green-color: #22bb66;
                     .#{$prefix}content-side-section.discover-premium {
                         .text-column {
                             .#{$prefix}content-side-section-title {
-                                font-size: 20px;
+                                font-size: $font-size-20;
                             }
                         }
                     }
@@ -1265,7 +1220,7 @@ $green-color: #22bb66;
                             .header-row {
 
                                 .#{$prefix}content-main-title.welcome {
-                                    font-size: 20px;
+                                    font-size: $font-size-20;
                                 }
 
                                 .#{$prefix}framework-version {
@@ -1274,7 +1229,7 @@ $green-color: #22bb66;
                             }
 
                             .#{$prefix}content-main-intro {
-                                font-size: 14px;
+                                font-size: $font-size-14;
                             }
                         }
                     }
@@ -1284,20 +1239,17 @@ $green-color: #22bb66;
     }
 }
 
-
 @media screen and (max-width: 782px) {
     .#{$prefix}wrapper {
         padding-right: 10px;
 
         .ui-tabs {
-            grid-template-columns: auto;
-            
             .#{$prefix}header {
                 padding: 25px 20px;
                 gap: 25px;
 
                 .#{$prefix}title {
-                    font-size: 18px;
+                    font-size: $font-size-18;
 
                     svg {
                         width: 20px;
@@ -1311,7 +1263,7 @@ $green-color: #22bb66;
                         padding: 9px 12px;
 
                         a {
-                            font-size: 14px;
+                            font-size: $font-size-14;
                         }
                     }
                 }
@@ -1326,7 +1278,7 @@ $green-color: #22bb66;
                         
                         .text-column {
                             .#{$prefix}content-side-section-title {
-                                font-size: 18px;
+                                font-size: $font-size-18;
                                 margin: 0 0 15px;
                             }
 
@@ -1376,11 +1328,11 @@ $green-color: #22bb66;
                             .header-row {
 
                                 .#{$prefix}content-main-title.welcome {
-                                    font-size: 18px;
+                                    font-size: $font-size-18;
                                 }
 
                                 .#{$prefix}framework-version {
-                                    font-size: 12px;
+                                    font-size: $font-size-12;
                                 }
 
                                 .#{$prefix}content-main-title.welcome,
@@ -1390,7 +1342,7 @@ $green-color: #22bb66;
                             }
 
                             .#{$prefix}content-main-intro {
-                                font-size: 14px;
+                                font-size: $font-size-14;
                             }
                         }
                     }
@@ -1399,11 +1351,11 @@ $green-color: #22bb66;
                         padding: 25px 20px;
 
                         h4 {
-                            font-size: 16px;
+                            font-size: $font-size-16;
                         }
 
                         .#{$prefix}content-main-title {
-                            font-size: 18px;
+                            font-size: $font-size-18;
                             margin: 0 0 20px;
                         }
 
@@ -1428,13 +1380,13 @@ $green-color: #22bb66;
                                 }
 
                                 .#{$prefix}content-side-section-title {
-                                    font-size: 18px;
+                                    font-size: $font-size-18;
                                 }
                             }
                         }
 
                         .many-more {
-                            font-size: 16px;
+                            font-size: $font-size-16;
                         }
                     }
                     
@@ -1444,10 +1396,10 @@ $green-color: #22bb66;
                 .#{$prefix}content-side {
                     .section .inner-section {
                         .#{$prefix}content-side-section-title {
-                            font-size: 18px;
+                            font-size: $font-size-18;
                         }
                         .about {
-                            font-size: 14px;
+                            font-size: $font-size-14;
                         }
                         .button.button-primary {
                             font-size: 13px;
@@ -1455,11 +1407,11 @@ $green-color: #22bb66;
                     }
                     
                     .#{$prefix}content-side-section-title {
-                        font-size: 18px;
+                        font-size: $font-size-18;
                     }
 
                     .#{$prefix}content-side-section-content {
-                        font-size: 14px;
+                        font-size: $font-size-14;
                     }
 
                     .#{$prefix}content-side-section-button .button {
@@ -1467,7 +1419,7 @@ $green-color: #22bb66;
                     }
 
                     .#{$prefix}content-side-section-title.icon-follow {
-                        font-size: 18px;
+                        font-size: $font-size-18;
                     }
 
                     &.plugins {
@@ -1476,7 +1428,7 @@ $green-color: #22bb66;
                             margin: 0 0 20px;
                             
                             .#{$prefix}content-side-section-title {
-                                font-size: 18px;
+                                font-size: $font-size-18;
                                 margin: 0 0 10px;
                             }
                         }
@@ -1486,7 +1438,7 @@ $green-color: #22bb66;
 
                             .wpz-onboard_content-side-section.install-plugin {
                                 .wpz-onboard_content-side-section-title.icon-assist {
-                                    font-size: 16px;
+                                    font-size: $font-size-16;
                                     margin: 0 10px 0 0;
                                 }
 
@@ -1496,7 +1448,7 @@ $green-color: #22bb66;
                                     min-height: 35px;
                                     height: 35px;
                                     min-width: 85px;
-                                    font-size: 12px;
+                                    font-size: $font-size-12;
                                 }
                             }
                         }
@@ -1504,11 +1456,11 @@ $green-color: #22bb66;
 
                     &.install-premium {
                         .wpz-onboard_content-main-title {
-                            font-size: 18px;
+                            font-size: $font-size-18;
                         }
 
                         .wpz-onboard_content-main-intro {
-                            font-size: 14px;
+                            font-size: $font-size-14;
                             margin: 0 0 15px;
                         }
 
@@ -1529,7 +1481,7 @@ $green-color: #22bb66;
                             min-height: 35px;
                             height: 35px;
                             min-width: 85px;
-                            font-size: 12px;
+                            font-size: $font-size-12;
                         }
                         
                         .wpz-grid-wrap {
@@ -1548,7 +1500,7 @@ $green-color: #22bb66;
 
                         .section-documentation {
                             h3 {
-                                font-size: 18px;
+                                font-size: $font-size-18;
                             }
 
                             .about a {
@@ -1563,7 +1515,7 @@ $green-color: #22bb66;
                             margin: 0 0 20px;
                             
                             .#{$prefix}content-side-section-title {
-                                font-size: 18px;
+                                font-size: $font-size-18;
                                 margin: 0 0 10px;
                             }
                         }
@@ -1589,7 +1541,7 @@ $green-color: #22bb66;
                                 }
 
                                 .#{$prefix}content-side-section-title {
-                                    font-size: 18px;
+                                    font-size: $font-size-18;
                                 }
                             }
                         }
@@ -1598,14 +1550,13 @@ $green-color: #22bb66;
 
                 .#{$prefix}content-side-section {
                     .#{$prefix}content-side-section-title.icon-assist {
-                        font-size: 18px;
+                        font-size: $font-size-18;
                     }
                 }
             }
         }
     } 
 }
-
 
 @media screen and (max-width: 600px) {
     .wpz-grid-wrap {
