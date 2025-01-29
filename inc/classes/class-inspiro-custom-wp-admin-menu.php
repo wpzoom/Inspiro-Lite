@@ -98,6 +98,16 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu' ) ) {
 				array( $this, 'admin' )                            // callback function
 			);
 
+			 // Add the "Import Demo" submenu page
+			 add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
+                'inspiro',                   // parent slug
+                __( 'Import Demo', 'inspiro' ),      // page title
+                __( 'Import Demo', 'inspiro' ),      // menu title
+                'manage_options',              // capability
+                'inspiro-demo',            // menu slug,
+                array( $this, 'demo' )               // callback function
+            );
+
 			// Add the "Customize" submenu page
 			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
 				'inspiro',          // parent slug
@@ -107,21 +117,11 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu' ) ) {
 				'customize.php'     // menu slug, link was included without a callback render func.
 			);
 
-            // Add the "Import Demo" submenu page
-            add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
-                'inspiro',                   // parent slug
-                __( 'Import Demo', 'inspiro' ),      // page title
-                __( 'Import Demo', 'inspiro' ),      // menu title
-                'manage_options',              // capability
-                'inspiro-demo',            // menu slug,
-                array( $this, 'demo' )               // callback function
-            );
-
 			// Add the "Upgrade" submenu page
 			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
 				'inspiro',                   // parent slug
-				__( 'Upgrade/Install', 'inspiro' ),     // page title
-				__( 'Upgrade/Install', 'inspiro' ),     // menu title
+				__( 'Install Premium', 'inspiro' ),     // page title
+				__( 'Install Premium', 'inspiro' ),     // menu title
 				'manage_options',              // capability
 				'inspiro-upgrade',            // menu slug,
 				array( $this, 'upgrade' )               // callback function

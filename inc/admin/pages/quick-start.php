@@ -32,7 +32,7 @@
 
 	<div class="theme-info-wrap">
 		<h3 class="wpz-onboard_content-main-title"><?php esc_html_e( 'Customize & Configure', 'inspiro' ); ?></h3>
-			<div class="wpz-grid-wrap">
+			<div class="wpz-grid-wrap three">
 				<div class="section">
 					<h4>
 						<svg id="Icons" style="enable-background:new 0 0 32 32;" width="26" height="26"
@@ -162,7 +162,7 @@
 										<?php } ?>
 
 										<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/documentation/inspiro-lite/inspiro-lite-how-to-create-a-portfolio-section/', 'inspiro' ) ); ?>"
-										   target="_blank" class="button button-secondary">
+										   target="_blank" class="button button-secondary-gray">
 											<?php esc_html_e( 'How to Create a Portfolio?', 'inspiro' ); ?>
 										</a>
 									</p>
@@ -239,7 +239,7 @@
 										</a>
 
 										<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/documentation/inspiro-lite/inspiro-lite-importing-the-demo-content/', 'inspiro' ) ); ?>"
-										   target="_blank" class="button button-secondary">
+										   target="_blank" class="button button-secondary-gray">
 											<?php esc_html_e( 'How it works?', 'inspiro' ); ?>
 										</a>
 
@@ -445,7 +445,7 @@
 										  fill="black" fill-rule="evenodd"/>
 								</svg> <?php esc_html_e( 'Premium Features', 'inspiro' ); ?></h3>
 
-							<div class="wpz-grid-wrap">
+							<div class="wpz-grid-wrap three">
 
 								<div class="section premium-feature">
 									<h4>
@@ -475,7 +475,7 @@
 											<?php esc_html_e( 'Get Inspiro Premium &#8599;', 'inspiro' ); ?>
 										</a>
 										<a href="<?php echo esc_url( __( 'https://demo.wpzoom.com/?theme=inspiro-demo', 'inspiro' ) ); ?>"
-										   target="_blank" class="button button-secondary">
+										   target="_blank" class="button button-secondary-gray">
 											<?php esc_html_e( 'View Demo &#8599;', 'inspiro' ); ?>
 										</a>
 									</p>
@@ -679,7 +679,7 @@
 							</a>
 							<a href="https://www.wpzoom.com/themes/inspiro/starter-sites/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
                                 title="Inspiro Premium" target="_blank"
-                                class="button button-secondary">
+                                class="button button-secondary-gray">
 								<?php esc_html_e( 'View Starter Sites &#8599;', 'inspiro' ); ?>
 							</a>
                           
