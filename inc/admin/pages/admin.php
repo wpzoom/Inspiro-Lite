@@ -1,9 +1,20 @@
 <script>
 	jQuery(document).ready(function ($) {
-		$(function () {
-			$("#tabs").tabs();
-		});
-	});
+    $("#tabs").tabs();
+
+    $('a[href^="<?php echo esc_url( admin_url( 'admin.php?page=inspiro-demo' ) ); ?>"],  a[href^="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>"], a[href^="<?php echo esc_url( admin_url( 'admin.php?page=inspiro-plugins' ) ); ?>"]').on("click", function (e) {
+        e.preventDefault();
+        
+        var href = $(this).attr("href");
+
+        if (href.indexOf("customize.php") !== -1) {
+            window.open(href, "_blank");
+        } else {
+            window.location.href = href;
+        }
+    });
+});
+
 </script>
 
 <div class="wpz-onboard_wrapper">
@@ -18,8 +29,6 @@
 		            <?php get_template_part( 'inc/admin/pages/vs-pro' ); ?>
 		            <?php get_template_part( 'inc/admin/pages/demos' ); ?>
 					<?php get_template_part( 'inc/admin/pages/support' ); ?>
-					<?php get_template_part( 'inc/admin/pages/upgrade-install' ); ?>
-					<?php get_template_part( 'inc/admin/pages/plugins' ); ?>
 				</div>
 			</div>
 

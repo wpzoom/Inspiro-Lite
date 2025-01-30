@@ -1,15 +1,3 @@
-<?php
-$parent = wp_get_theme();
-
-// install-inspiro-starter-sites-btn
-$btn_admin_link = esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) ); // was link attr value
-
-?>
-
-<?php if ( class_exists( 'Inspiro_Starter_Sites_Importer' ) ) : ?>
-	<?php do_action( 'inspiro_starter_sites_admin_page' ); ?>
-<?php else : ?>
-
 <div class="wpz-onboard_header">
 	<div class="wpz-onboard_title-wrapper">
 		<h1 class="wpz-onboard_title">
@@ -70,7 +58,7 @@ $btn_admin_link = esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) )
 		<hr class="wpz-onboard_hr">
 
 		<li class="wpz-onboard_tab wpz-onboard_tab-license">
-			<a href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro-demo' ) ); ?>" title="License">
+			<a href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro-demo' ) ); ?>" title="License" >
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M3 9H21" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 					<path d="M11 5.995L10.995 6L11 6.005L11.005 6L11 5.995" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -89,9 +77,7 @@ $btn_admin_link = esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) )
 			</a>
 		</li>
 		<li class="wpz-onboard_tab wpz-onboard_tab-debug">
-			<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>" 
-				target="_blank"
-				title="Customize">
+			<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>" target="_blank" title="Customize">
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M3 5.5H6.07" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 					<path d="M10.3238 3.73223C11.3001 4.70854 11.3001 6.29145 10.3238 7.26776C9.34748 8.24407 7.76457 8.24407 6.78826 7.26776C5.81195 6.29145 5.81195 4.70854 6.78826 3.73223C7.76457 2.75592 9.34748 2.75592 10.3238 3.73223" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -108,7 +94,7 @@ $btn_admin_link = esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) )
 			</a>
 		</li>
 		<li class="wpz-onboard_tab wpz-onboard_tab-plugins">
-			<a href="#install-premium" title="Install Premium">
+			<a href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro-upgrade' ) ); ?>" title="Install Premium" >
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M3 0.25C1.48079 0.25 0.25 1.48079 0.25 3C0.25 3.41421 0.585786 3.75 1 3.75C1.41421 3.75 1.75 3.41421 1.75 3C1.75 2.30921 2.30921 1.75 3 1.75C3.41421 1.75 3.75 1.41421 3.75 1C3.75 0.585786 3.41421 0.25 3 0.25Z" fill="#242628"/>
 					<path d="M1.75 17C1.75 16.5858 1.41421 16.25 1 16.25C0.585786 16.25 0.25 16.5858 0.25 17C0.25 18.5192 1.48079 19.75 3 19.75C3.41421 19.75 3.75 19.4142 3.75 19C3.75 18.5858 3.41421 18.25 3 18.25C2.30921 18.25 1.75 17.6908 1.75 17Z" fill="#242628"/>
@@ -128,15 +114,16 @@ $btn_admin_link = esc_url( admin_url( 'admin.php?page=tgmpa-install-plugins' ) )
 			</a>
 		</li>
 		<li class="wpz-onboard_tab wpz-onboard_tab-plugins"><a href="#plugins" title="Plugins">
-			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path fill-rule="evenodd" clip-rule="evenodd" d="M4.16413 9.49747C3.72694 9.40843 3.25275 9.42544 2.76354 9.58851C1.9362 9.86462 1.28093 10.5759 1.07584 11.4243C0.653665 13.168 1.96321 14.7246 3.63591 14.7246C3.81698 14.7246 3.99306 14.7056 4.16413 14.6716V17.893C4.16413 19.0585 5.10952 20.0038 6.27601 20.0038H17.8918C19.0583 20.0038 20.0037 19.0585 20.0037 17.892V6.27613C20.0037 5.10964 19.0583 4.16425 17.8918 4.16425H14.6705C14.7595 3.72707 14.7425 3.25287 14.5795 2.76367C14.3023 1.93632 13.5911 1.28105 12.7437 1.07596C11 0.653787 9.44333 1.96333 9.44333 3.63603C9.44333 3.8171 9.46233 3.99318 9.49635 4.16425H6.27501C5.10852 4.16425 4.16313 5.10964 4.16313 6.27613V9.49747H4.16413Z" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-				<path d="M12.0005 9.49951V13.5012" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-				<path d="M14.0012 11.5002H9.99951" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-			</svg>
-			<?php esc_html_e( 'Install Plugins', 'inspiro' ); ?></a>
+			<a href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro-plugins' ) ); ?>" title="Install Premium" >
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M4.16413 9.49747C3.72694 9.40843 3.25275 9.42544 2.76354 9.58851C1.9362 9.86462 1.28093 10.5759 1.07584 11.4243C0.653665 13.168 1.96321 14.7246 3.63591 14.7246C3.81698 14.7246 3.99306 14.7056 4.16413 14.6716V17.893C4.16413 19.0585 5.10952 20.0038 6.27601 20.0038H17.8918C19.0583 20.0038 20.0037 19.0585 20.0037 17.892V6.27613C20.0037 5.10964 19.0583 4.16425 17.8918 4.16425H14.6705C14.7595 3.72707 14.7425 3.25287 14.5795 2.76367C14.3023 1.93632 13.5911 1.28105 12.7437 1.07596C11 0.653787 9.44333 1.96333 9.44333 3.63603C9.44333 3.8171 9.46233 3.99318 9.49635 4.16425H6.27501C5.10852 4.16425 4.16313 5.10964 4.16313 6.27613V9.49747H4.16413Z" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M12.0005 9.49951V13.5012" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M14.0012 11.5002H9.99951" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+				<?php esc_html_e( 'Install Plugins', 'inspiro' ); ?>
+			</a>
 		</li>
 
 		
 	</ul>
 </div>
-<?php endif; ?>

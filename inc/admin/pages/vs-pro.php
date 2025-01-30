@@ -145,92 +145,95 @@
             </a>
         </div>
 
-                        <div class="text-column">
+        <div class="text-column">
 
-                            <h3 class="wpz-onboard_content-side-section-title icon-docs">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="https://www.w3.org/2000/svg">
-                                    <mask id="mask0_3409_3568" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
-                                        y="0" width="24" height="24">
-                                        <rect width="24" height="24" fill="#D9D9D9"/>
-                                    </mask>
-                                    <g mask="url(#mask0_3409_3568)">
-                                        <path
-                                            d="M19 9L17.75 6.25L15 5L17.75 3.75L19 1L20.25 3.75L23 5L20.25 6.25L19 9ZM19 23L17.75 20.25L15 19L17.75 17.75L19 15L20.25 17.75L23 19L20.25 20.25L19 23ZM9 20L6.5 14.5L1 12L6.5 9.5L9 4L11.5 9.5L17 12L11.5 14.5L9 20ZM9 15.15L10 13L12.15 12L10 11L9 8.85L8 11L5.85 12L8 13L9 15.15Z"
-                                            fill="white"/>
-                                    </g>
-                                </svg> <?php esc_html_e( 'Discover Inspiro Premium!', 'inspiro' ); ?>
-							</h3>
+            <h3 class="wpz-onboard_content-side-section-title icon-docs">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+        			xmlns="https://www.w3.org/2000/svg">
+                    <mask id="mask0_3409_3568" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
+                    	y="0" width="24" height="24">
+                        <rect width="24" height="24" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_3409_3568)">
+                    <path
+                        d="M19 9L17.75 6.25L15 5L17.75 3.75L19 1L20.25 3.75L23 5L20.25 6.25L19 9ZM19 23L17.75 20.25L15 19L17.75 17.75L19 15L20.25 17.75L23 19L20.25 20.25L19 23ZM9 20L6.5 14.5L1 12L6.5 9.5L9 4L11.5 9.5L17 12L11.5 14.5L9 20ZM9 15.15L10 13L12.15 12L10 11L9 8.85L8 11L5.85 12L8 13L9 15.15Z"
+                        fill="white"/>
+                    </g>
+                </svg> 
+				<?php esc_html_e( 'Discover Inspiro Premium!', 'inspiro' ); ?>
+			</h3>
 
-                            <ul>
-                                <li>
-									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									19+ Starter Sites
-								</li>
-                                <li>
-									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									Portfolio with Video Integration
-								</li>
-                                <li>
-									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									Video Slideshow
-								</li>
-                                <li>
-									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									Video Backgrounds
-								</li>
-                                <li>
-									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									Advanced WooCommerce Integration
-								</li>
-                                <li>
-									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									Video Background on Hover
-								</li>
-                                <li>
-									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									Custom Elementor Widgets
-								</li>
-                                <li>
-									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									...and much more
-								</li>
-                            </ul>
+            <ul>
+                <li>
+					<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					19+ Starter Sites
+				</li>
+                <li>
+					<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					Portfolio with Video Integration
+				</li>
+                <li>
+					<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					Video Slideshow
+				</li>
+                <li>
+					<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					Video Backgrounds
+				</li>
+                <li>
+					<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					Advanced WooCommerce Integration
+				</li>
+                <li>
+					<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					Video Background on Hover
+				</li>
+                <li>
+					<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					Custom Elementor Widgets
+				</li>
+                <li>
+					<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					...and much more
+				</li>
+            </ul>
                             
-                            <div class="wpz-onboard_content-side-section-button">
-                                <a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
-                                title="Inspiro Premium" target="_blank"
-                                class="button"><?php esc_html_e( 'Discover the Premium Version &#8599;', 'inspiro' ); ?></a>
+            <div class="wpz-onboard_content-side-section-button">
+                <a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
+                    title="Inspiro Premium" target="_blank"
+                    class="button"><?php esc_html_e( 'Discover the Premium Version &#8599;', 'inspiro' ); ?>
+				</a>
 
-                                <a href="https://www.wpzoom.com/themes/inspiro/starter-sites/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
-                                    title="Inspiro Premium" target="_blank"
-                                    class="button button-starter"><?php esc_html_e( 'View Starter Sites &#8599;', 'inspiro' ); ?></a>
-                            </div>
+                <a href="https://www.wpzoom.com/themes/inspiro/starter-sites/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
+                    title="Inspiro Premium" target="_blank"
+                    class="button button-starter"><?php esc_html_e( 'View Starter Sites &#8599;', 'inspiro' ); ?>
+				</a>
+            </div>
 
-                        </div>
-                    </div>
+        </div>
+    </div>
 </div>

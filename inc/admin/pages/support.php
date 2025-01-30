@@ -28,9 +28,11 @@
                 </p>
                 <p class="section_footer">
                     <a href="https://www.wpzoom.com/documentation/inspiro-lite/" title="Read documentation"
-                        target="_blank" class="button button-primary"><?php esc_html_e( 'Documentation', 'inspiro' ); ?></a> <a
-                        href="https://wordpress.org/support/theme/inspiro/" title="Open Support Desk"
-                        target="_blank" class="button button-secondary"><?php esc_html_e( 'Forums', 'inspiro' ); ?></a>
+                        target="_blank" class="button button-primary"><?php esc_html_e( 'Documentation', 'inspiro' ); ?>
+                    </a> 
+                    <a href="https://wordpress.org/support/theme/inspiro/" title="Open Support Desk"
+                        target="_blank" class="button button-secondary"><?php esc_html_e( 'Forums', 'inspiro' ); ?>
+                    </a>
                 </p>
             </div>
             <div class="section">
@@ -109,7 +111,7 @@
                 </p>
                 <p class="section_footer">
                     <a href="https://wordpress.org/support/theme/inspiro/" title="Open Support Desk"
-                        target="_blank" class="button button-disabled"><?php esc_html_e( 'Open Support Desk', 'inspiro' ); ?>
+                        target="_blank" class="button button-primary"><?php esc_html_e( 'Open Support Desk', 'inspiro' ); ?>
                     </a>
                 </p>
             </div>

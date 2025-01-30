@@ -79,6 +79,35 @@
 		box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 	}
 
+    .theme-buttons {
+        margin-bottom: 25px;
+
+            .button.button-themes, 
+            .button.button-common {
+                border: 1px solid #DDDDDD;
+                border-radius: 100px;
+                margin-right: 10px;
+
+                &:hover {
+                    background-color: $hover-grey-color;
+                }
+            }
+            
+            .button.button-themes {
+                color: $light-color;
+                background-color: $dark-color;
+            }
+
+            .button.button-common {
+                color: $dark-color;
+                background-color: $light-color;
+            }
+
+            .button svg {
+                margin-right: 5px;
+            }
+    }
+
 	h1 {
 		font-size: $font-size-30;
 		font-weight: 400;
@@ -205,7 +234,7 @@
         font-size: $font-size-15;
         font-weight: 400;
         line-height: 1.5;
-        color: $bluish-grey-color;
+        color: $neutral-dark-color;
     }
     .button {
         max-width: 100%;
@@ -376,7 +405,7 @@
 
         &:hover,
         &:active {
-            background-color: #414446;
+            background-color: $hover-grey-color;
         }
 
         &.button-secondary {
@@ -386,7 +415,7 @@
 
             &:hover {
                 color: #ffffff;
-                background-color: #414446;
+                background-color: $hover-grey-color;
             }
             
             &:active {
@@ -402,7 +431,7 @@
 
             &:hover {
                 color: $light-color;
-                background-color: #414446;
+                background-color: $hover-grey-color;
             }
 
             &:active {
@@ -908,9 +937,12 @@
                 margin: 0 0 25px;
 
                 .wpz-onboard_content-side-section.block-premium {
-                    padding: 35px 30px 0;
+                    padding: 0;
                     display: flex;
-                    gap: 40px;
+
+                   .section-content {
+                        padding: 35px 30px 0;
+                    }
         
                     .section-image {
                         align-self: flex-end;
@@ -957,7 +989,11 @@
                         padding: 35px 30px 0;
                         display: flex;
                         gap: 40px;
-            
+                        
+                        .section-content {
+                            padding: 0;
+                        }
+                        
                         .section-image {
                             align-self: flex-end;
                 
@@ -1077,6 +1113,14 @@
                             }
                         }
                     }
+
+                    .theme-info-wrap .section.premium-feature .section_footer .button-primary {
+                        background-color: $border-grey-color;
+
+                        &:hover {
+                            background-color: $hover-grey-color;
+                        }
+                    }
                 }
             }
         }
@@ -1192,7 +1236,8 @@
 }
 
 @media screen and (max-width: 1400px) {
-    .wpz-grid-wrap {
+    .wpz-grid-wrap,
+    .wpz-grid-wrap.three {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -1573,7 +1618,8 @@
 }
 
 @media screen and (max-width: 600px) {
-    .wpz-grid-wrap {
+    .wpz-grid-wrap,
+    .wpz-grid-wrap.three {
         grid-template-columns: repeat(1, 1fr);
     }
 

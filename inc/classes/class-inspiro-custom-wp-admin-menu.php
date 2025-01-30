@@ -70,6 +70,13 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu' ) ) {
         }
 
 		/**
+		 * Plugins page callback.
+		 */
+		public function plugins() {
+			require_once INSPIRO_THEME_DIR . 'inc/admin/pages/plugins.php';
+		}
+
+		/**
 		 * Register custom menu for wp-admin.
 		 *
 		 * @return void
@@ -125,6 +132,15 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu' ) ) {
 				'manage_options',              // capability
 				'inspiro-upgrade',            // menu slug,
 				array( $this, 'upgrade' )               // callback function
+			);
+
+			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
+				'inspiro',                   // parent slug
+				__( 'Install Plugins', 'inspiro' ),     // page title
+				__( 'Install Plugins', 'inspiro' ),     // menu title
+				'manage_options',              // capability
+				'inspiro-plugins',            // menu slug,
+				array( $this, 'plugins' )               // callback function
 			);
 
 			// The "Install Plugins" submenu page was added true class-tgm-plugin-activation.php add_admin_menu( array $args )
