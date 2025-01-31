@@ -42,7 +42,7 @@
 					<path d="M3 5V1" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 					<path d="M1 3H5" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 				</svg>
-				<?php esc_html_e( 'Premium Demos', 'inspiro' ); ?>
+				<?php esc_html_e( 'Premium Starter Sites', 'inspiro' ); ?>
 			</a>
 		</li>
 
