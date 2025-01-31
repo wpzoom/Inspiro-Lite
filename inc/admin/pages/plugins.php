@@ -1,7 +1,7 @@
 <div class="wpz-onboard_wrapper">
 	<div id="tabs"><!-- #tabs -->
 
-		<?php get_template_part( 'inc/admin/pages/main-menu' ); ?>
+        <?php get_template_part( 'inc/admin/pages/main-menu' ); ?>
 
 		<div class="wpz-onboard_content-wrapper">
 			<div class="wpz-onboard_content">

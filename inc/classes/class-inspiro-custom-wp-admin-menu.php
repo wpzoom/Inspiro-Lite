@@ -76,6 +76,13 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu' ) ) {
 			require_once INSPIRO_THEME_DIR . 'inc/admin/pages/plugins.php';
 		}
 
+		 /**
+         * Demo Importer page callback.
+         */
+        public function importer() {
+            require_once INSPIRO_THEME_DIR . 'inc/admin/pages/importer.php';
+        }
+
 		/**
 		 * Register custom menu for wp-admin.
 		 *
@@ -105,14 +112,24 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu' ) ) {
 				array( $this, 'admin' )                            // callback function
 			);
 
-			 // Add the "Import Demo" submenu page
-			 add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
+			// Add the "Import Demo" submenu page
+			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
                 'inspiro',                   // parent slug
                 __( 'Import Demo', 'inspiro' ),      // page title
                 __( 'Import Demo', 'inspiro' ),      // menu title
                 'manage_options',              // capability
                 'inspiro-demo',            // menu slug,
                 array( $this, 'demo' )               // callback function
+            );
+
+			// Add the "Demo Importer" submenu page
+			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
+                'inspiro',                   // parent slug
+                __( 'Demo Importer', 'inspiro' ),      // page title
+                __( 'Demo Importer', 'inspiro' ),      // menu title
+                'manage_options',              // capability
+                'inspiro-importer',            // menu slug,
+                array( $this, 'importer' )               // callback function
             );
 
 			// Add the "Customize" submenu page

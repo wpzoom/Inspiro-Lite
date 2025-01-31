@@ -110,7 +110,7 @@
                     <?php esc_html_e( 'Have questions or need help setting up your theme? Contact our Support Team—we’re here to assist you!', 'inspiro' ); ?>
                 </p>
                 <p class="section_footer">
-                    <a href="https://wordpress.org/support/theme/inspiro/" title="Open Support Desk"
+                    <a href="https://www.wpzoom.com/contact/" title="Open Support Desk"
                         target="_blank" class="button button-primary"><?php esc_html_e( 'Open Support Desk', 'inspiro' ); ?>
                     </a>
                 </p>

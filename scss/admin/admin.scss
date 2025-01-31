@@ -1,6 +1,5 @@
 @import "../mixins/";
 @import "./review-notice";
-
 @import 'variables';
 @import 'utilities';
 @import 'animations';
@@ -584,6 +583,18 @@
                     color: $medium-color;
                 }
             }
+
+            .#{$prefix}tab-dashboard {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: 100%;
+                
+                p {
+                    font-size: $font-size-14;
+                    color: $neutral-dark-color;
+                }
+            }
         }
 
         .#{$prefix}hr {
@@ -682,7 +693,7 @@
                             }
         
                             &:hover {
-                                background-color: #E1E5E9;
+                                background-color: $border-grey-color;
                                 color: $dark-color;
                             }
                         }
@@ -1024,8 +1035,13 @@
                                 min-width: 200px;
                             }
 
-                            button {
-                                border: 1px solid $border-grey-color;
+                            .button.button-primary {
+                                background-color: $light-color;
+                                color: $dark-color;
+
+                                &:hover {
+                                    background-color: $border-grey-color;
+                                }
                             }
                         } 
                     }
@@ -1098,7 +1114,7 @@
                                 color: $dark-color;
 
                                 &:hover {
-                                    background-color: #E1E5E9;
+                                    background-color: $border-grey-color;
                                 }
                             }
 
@@ -1107,7 +1123,7 @@
                                 border: 1px solid $light-color;
 
                                 &:hover {
-                                    background-color: #E1E5E9;
+                                    background-color: $border-grey-color;
                                     color: $dark-color;
                                 }
                             }
