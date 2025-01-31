@@ -897,14 +897,5 @@
             </li>
 
         </ol>
-
-        <br/>
-        <br/>
-        <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro-pro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-pro', 'inspiro' ) ); ?>"
-           target="_blank" class="button button-large button-primary">
-            <?php esc_html_e( 'Get Inspiro PRO Today &rarr;', 'inspiro' ); ?>
-        </a>
-
     </div>
-
 </div>

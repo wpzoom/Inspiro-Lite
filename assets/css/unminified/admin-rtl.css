@@ -1053,6 +1053,13 @@
 .wpz-onboard_wrapper .wpz-onboard_footer .wpz-onboard_footer-links li a:hover {
     color: #2271b1;
 }
+.wpz-onboard_wrapper .wpz-onboard_footer .wpz-onboard_footer-social {
+    margin-right: auto;
+}
+.wpz-onboard_wrapper .wpz-onboard_footer .wpz-onboard_footer-social a {
+    text-decoration: none;
+    margin-left: 5px;
+}
 @keyframes rotation {
     from {
         transform: rotate(0deg);

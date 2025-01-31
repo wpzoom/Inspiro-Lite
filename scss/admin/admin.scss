@@ -1235,6 +1235,16 @@
                 }
             }
         }
+
+        .#{$prefix}footer-social {
+            margin-left: auto;
+
+            a {
+                text-decoration: none;
+                margin-right: 5px;
+            }
+
+        }
     }
 
     @keyframes rotation {
