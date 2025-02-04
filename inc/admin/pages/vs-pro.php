@@ -135,31 +135,23 @@
 		</div>
 	</div>
 
-
 	<div class="wpz-onboard_content-side-section discover-premium">
         <div class="image-column">
-        	<a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
-                title="Inspiro Premium" target="_blank"><img
-                src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-premium.png' ); ?>"
-                width="300" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>"/>
+            <a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
+                title="Inspiro Premium" target="_blank">
+				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-premium.png' ); ?>"
+                    width="300" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>"/>
             </a>
         </div>
-
         <div class="text-column">
-
             <h3 class="wpz-onboard_content-side-section-title icon-docs">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-        			xmlns="https://www.w3.org/2000/svg">
-                    <mask id="mask0_3409_3568" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
-                    	y="0" width="24" height="24">
-                        <rect width="24" height="24" fill="#D9D9D9"/>
-                    </mask>
-                    <g mask="url(#mask0_3409_3568)">
-                    <path
-                        d="M19 9L17.75 6.25L15 5L17.75 3.75L19 1L20.25 3.75L23 5L20.25 6.25L19 9ZM19 23L17.75 20.25L15 19L17.75 17.75L19 15L20.25 17.75L23 19L20.25 20.25L19 23ZM9 20L6.5 14.5L1 12L6.5 9.5L9 4L11.5 9.5L17 12L11.5 14.5L9 20ZM9 15.15L10 13L12.15 12L10 11L9 8.85L8 11L5.85 12L8 13L9 15.15Z"
-                        fill="white"/>
-                    </g>
-                </svg> 
+				<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M4.64479 10.9348L6.77737 11.7451C8.38017 12.3542 9.64583 13.6198 10.2549 15.2226L11.0652 17.3552C11.2127 17.7434 11.5847 18 12 18C12.4152 18 12.7873 17.7434 12.9348 17.3552L13.7451 15.2226C14.3542 13.6198 15.6198 12.3542 17.2226 11.7451L19.3552 10.9348C19.7434 10.7873 20 10.4152 20 9.99999C20 9.58475 19.7434 9.21271 19.3552 9.06521L17.2226 8.25487C15.6198 7.64582 14.3542 6.38016 13.7451 4.77736L12.9348 2.64479C12.7873 2.25662 12.4152 2 12 2C11.5847 2 11.2127 2.25662 11.0652 2.64479L10.2549 4.77736C9.64583 6.38016 8.38017 7.64582 6.77737 8.25487L4.64479 9.06521C4.25662 9.21271 4 9.58475 4 9.99999C4 10.4152 4.25662 10.7873 4.64479 10.9348Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M4 19V15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M2 17H6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M3 5V1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+					<path d="M1 3H5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
 				<?php esc_html_e( 'Discover Inspiro Premium!', 'inspiro' ); ?>
 			</h3>
 
@@ -224,16 +216,14 @@
                             
             <div class="wpz-onboard_content-side-section-button">
                 <a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
-                    title="Inspiro Premium" target="_blank"
-                    class="button"><?php esc_html_e( 'Discover the Premium Version &#8599;', 'inspiro' ); ?>
+                    title="Inspiro Premium" target="_blank" class="button">
+					<?php esc_html_e( 'Get Inspiro Premium &#8599;', 'inspiro' ); ?>
 				</a>
-
                 <a href="https://www.wpzoom.com/themes/inspiro/starter-sites/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
-                    title="Inspiro Premium" target="_blank"
-                    class="button button-starter"><?php esc_html_e( 'View Starter Sites &#8599;', 'inspiro' ); ?>
+                    title="Inspiro Premium" target="_blank" class="button button-starter">
+					<?php esc_html_e( 'View Starter Sites &#8599;', 'inspiro' ); ?>
 				</a>
             </div>
-
         </div>
     </div>
 </div>

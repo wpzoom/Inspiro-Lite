@@ -24,7 +24,7 @@
                     <?php esc_html_e( 'Need help?', 'inspiro' ); ?>
                 </h4>
                 <p class="about">
-                    <?php esc_html_e( 'Documentation is the place where you’ll find the information needed to setup the theme quickly, and other details about theme-specific features. You can also get in touch with our team by contacting us through our website or using the Support Forum.', 'inspiro' ); ?>
+                    <?php esc_html_e( 'Documentation is where you’ll find setup guides, details on theme features, and ways to contact us via our website or Support Forum.', 'inspiro' ); ?>
                 </p>
                 <p class="section_footer">
                     <a href="https://www.wpzoom.com/documentation/inspiro-lite/" title="Read documentation"
@@ -45,7 +45,7 @@
                     <?php esc_html_e( 'Subscribe for Tips & Tricks', 'inspiro' ); ?>
                 </h4>
                 <p class="about">
-                    <?php esc_html_e( 'To ease up the journey you’re starting with Inspiro, we’re sending you some useful tips & tricks to have the best experience building your website.', 'inspiro' ); ?>
+                    <?php esc_html_e( 'To help you get started with Inspiro, we’re sharing tips and tricks to ensure the best experience while building your website.', 'inspiro' ); ?>
                 </p>
                 <p>
                     <div id="mlb2-5543648" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-5543648">
@@ -110,7 +110,7 @@
                     <?php esc_html_e( 'Have questions or need help setting up your theme? Contact our Support Team—we’re here to assist you!', 'inspiro' ); ?>
                 </p>
                 <p class="section_footer">
-                    <a href="https://www.wpzoom.com/contact/" title="Open Support Desk"
+                    <a href="https://www.wpzoom.com/support/" title="Open Support Desk"
                         target="_blank" class="button button-primary"><?php esc_html_e( 'Open Support Desk', 'inspiro' ); ?>
                     </a>
                 </p>

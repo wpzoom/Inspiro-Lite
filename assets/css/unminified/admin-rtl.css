@@ -217,8 +217,7 @@
 .wpz-grid-wrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    gap: 30px;
 }
 .wpz-grid-wrap.three {
     grid-template-columns: repeat(3, 1fr);
@@ -479,7 +478,7 @@
 .wpz-onboard_wrapper .ui-tabs {
     display: grid;
     gap: 20px;
-    grid-template-columns: 248px auto;
+    grid-template-columns: 276px auto;
 }
 .wpz-onboard_wrapper .wpz-onboard_header {
     display: flex;
@@ -531,7 +530,7 @@
 .wpz-onboard_wrapper .wpz-onboard_header .wpz-onboard_tabs li {
     position: relative;
     padding: 12px;
-    width: 163px;
+    width: 190px;
 }
 .wpz-onboard_wrapper .wpz-onboard_header .wpz-onboard_tabs li:last-child {
     margin-left: 0;
@@ -545,6 +544,7 @@
     color: #1d2327;
     box-shadow: none;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 .wpz-onboard_wrapper .wpz-onboard_header .wpz-onboard_tabs li a:hover {
     color: #666666;
