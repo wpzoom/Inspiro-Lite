@@ -32,145 +32,58 @@
 
 	<div class="theme-info-wrap">
 		<h3 class="wpz-onboard_content-main-title"><?php esc_html_e( 'Customize & Configure', 'inspiro' ); ?></h3>
-			<div class="wpz-grid-wrap three">
-				<div class="section">
-					<h4>
-						<svg id="Icons" style="enable-background:new 0 0 32 32;" width="26" height="26"
-							version="1.1" viewBox="0 0 32 32" xml:space="preserve"
-							xmlns="https://www.w3.org/2000/svg"
-							xmlns:xlink="https://www.w3.org/1999/xlink">
-							<style type="text/css">
-								.st0 {
-									fill: none;
-									stroke: #000000;
-									stroke-width: 2;
-									stroke-linecap: round;
-									stroke-linejoin: round;
-									stroke-miterlimit: 10;
-								}
+		<div class="wpz-grid-wrap three">
+			<div class="section">
+				<h4>
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M0.550044 13.4C6.15004 9.2 13.85 9.2 19.45 13.4C19.7814 13.6485 19.8486 14.1186 19.6 14.45C19.3515 14.7814 18.8814 14.8485 18.55 14.6C13.4834 10.8 6.51671 10.8 1.45004 14.6C1.11867 14.8485 0.648572 14.7814 0.400044 14.45C0.151516 14.1186 0.218673 13.6485 0.550044 13.4Z" fill="#242628"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M6.00004 1.75C3.65283 1.75 1.75004 3.65279 1.75004 6V14C1.75004 16.3472 3.65283 18.25 6.00004 18.25H14C16.3473 18.25 18.25 16.3472 18.25 14V6C18.25 3.65279 16.3473 1.75 14 1.75H6.00004ZM0.250044 6C0.250044 2.82436 2.82441 0.25 6.00004 0.25H14C17.1757 0.25 19.75 2.82436 19.75 6V14C19.75 17.1756 17.1757 19.75 14 19.75H6.00004C2.82441 19.75 0.250044 17.1756 0.250044 14V6Z" fill="#242628"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M15 5.9988C14.9994 5.44675 14.5515 4.99967 13.9994 5C13.4474 5.00033 13 5.44795 13 6C13 6.55205 13.4474 6.99967 13.9994 7C14.5508 7.00033 14.9983 6.55432 15 6.00318" fill="#242628"/>
+					</svg>
+					<?php esc_html_e( 'Site Logo', 'inspiro' ); ?>
+				</h4>
+				<p class="about">
+					<?php esc_html_e( 'Add a logo image in the Site Identity section via Customizer, and it will appear neatly in your website’s header.', 'inspiro' ); ?>
+				</p>
+				<p class="section_footer">
+					<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=title_tagline' ) ); ?>"
+						target="_blank" class="button button-primary">
+						<?php esc_html_e( 'Customize', 'inspiro' ); ?>
+					</a>
+				</p>
+			</div>
 
-								.st1 {
-									fill: none;
-									stroke: #000000;
-									stroke-width: 2;
-									stroke-linecap: round;
-									stroke-linejoin: round;
-								}
-												
-								.st2 {
-									fill: none;
-									stroke: #000000;
-									stroke-width: 2;
-									stroke-linecap: round;
-									stroke-linejoin: round;
-									stroke-dasharray: 6, 6;
-								}
-
-								.st3 {
-									fill: none;
-									stroke: #000000;
-									stroke-width: 2;
-									stroke-linecap: round;
-									stroke-linejoin: round;
-									stroke-dasharray: 4, 4;
-								}
-
-								.st4 {
-									fill: none;
-									stroke: #000000;
-									stroke-width: 2;
-									stroke-linecap: round;
-								}
-
-								.st5 {
-									fill: none;
-									stroke: #000000;
-									stroke-width: 2;
-									stroke-linecap: round;
-									stroke-dasharray: 3.1081, 3.1081;
-								}
-
-								.st6 {
-									fill: none;
-									stroke: #000000;
-									stroke-width: 2;
-									stroke-linecap: round;
-									stroke-linejoin: round;
-									stroke-miterlimit: 10;
-									stroke-dasharray: 4, 3;
-								}
-							</style>
-							<circle class="st0" cx="13" cy="13" r="1"/>
-							<polyline class="st0" points="7,21 16,16 20,19 25,16 "/>
-							<polyline class="st0" points="30,25 7,25 7,2 "/>
-							<polyline class="st0" points="7,7 25,7 25,25 "/>
-							<line class="st0" x1="7" x2="2" y1="7" y2="7"/>
-							<line class="st0" x1="25" x2="25" y1="30" y2="25"/>
-						</svg>
-						<?php esc_html_e( 'Site Logo', 'inspiro' ); ?>
-					</h4>
-					<p class="about">
-						<?php esc_html_e( 'If you have a logo image, you can upload it in the Site Identity section in the Customizer, and it will appear in your website\'s header.', 'inspiro' ); ?>
-					</p>
-					<p class="section_footer">
-						<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=title_tagline' ) ); ?>"
-							target="_blank" class="button button-primary">
-							<?php esc_html_e( 'Customize &#8599;', 'inspiro' ); ?>
+			<div class="section">
+				<h4>
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M3 0.25C1.48054 0.25 0.25 1.48203 0.25 3V13C0.25 14.5192 1.48079 15.75 3 15.75H4.89845C5.12126 16.7058 5.84908 17.5108 6.86495 17.7829L13.8549 19.6559C15.3222 20.0492 16.8293 19.1784 17.2225 17.7116L19.6555 8.63157C20.0486 7.16565 19.1784 5.65629 17.7112 5.26302L12.987 3.99698V3C12.987 1.48079 11.7562 0.25 10.237 0.25H3ZM11.487 4.55707C11.4868 4.56766 11.4868 4.57823 11.487 4.58877V13C11.487 13.6908 10.9278 14.25 10.237 14.25H3C2.30921 14.25 1.75 13.6908 1.75 13V3C1.75 2.30997 2.30946 1.75 3 1.75H10.237C10.9278 1.75 11.487 2.30921 11.487 3V4.55707ZM12.987 5.54991L17.3229 6.71189C17.9896 6.89061 18.3853 7.57734 18.2066 8.24334L15.7736 17.3233C15.5947 17.9904 14.9098 18.3857 14.2431 18.207L7.25308 16.334C6.91913 16.2445 6.65304 16.0279 6.49328 15.75H10.237C11.7562 15.75 12.987 14.5192 12.987 13V5.54991Z" fill="#242628"/>
+					</svg>
+					<?php esc_html_e( 'Portfolio', 'inspiro' ); ?>
+				</h4>
+				<p class="about">
+					<?php esc_html_e( 'Quickly create a Portfolio section on your site using the free version of the WPZOOM Portfolio plugin available to everyone.', 'inspiro' ); ?>
+				</p>
+				<p class="section_footer">
+					<?php if ( class_exists( 'WPZOOM_Portfolio_Custom_Posts' ) ) { ?>
+						<a href="<?php echo esc_url( admin_url( 'edit.php?post_type=portfolio_item' ) ); ?>"
+						   target="_blank" class="button button-primary">
+							<?php esc_html_e( 'Add new post', 'inspiro' ); ?>
 						</a>
-					</p>
-				</div>
-
-				<div class="section">
-					<h4>
-						<svg with="26" height="26" id="Lager_1"
-							style="enable-background:new -265 388.9 64 64;" version="1.1"
-							viewBox="-265 388.9 64 64" xml:space="preserve"
-							xmlns="https://www.w3.org/2000/svg"
-							xmlns:xlink="https://www.w3.org/1999/xlink">
-							<g><path d="M-244.5,411h-9.9c-0.9,0-1.6-0.7-1.6-1.6v-9.9c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-242.9,410.3-243.6,411-244.5,411z"/>
-							<path d="M-228.1,411h-9.9c-0.9,0-1.6-0.7-1.6-1.6v-9.9c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-226.4,410.3-227.2,411-228.1,411z"/>
-							<path d="M-211.6,411h-9.9c-0.9,0-1.6-0.7-1.6-1.6v-9.9c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-210,410.3-210.7,411-211.6,411z"/>
-							<path d="M-244.5,427.5h-9.9c-0.9,0-1.6-0.7-1.6-1.6V416c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-242.9,426.7-243.6,427.5-244.5,427.5z"/>
-							<path d="M-228.1,427.5h-9.9c-0.9,0-1.6-0.7-1.6-1.6V416c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-226.4,426.7-227.2,427.5-228.1,427.5z"/>
-							<path d="M-211.6,427.5h-9.9c-0.9,0-1.6-0.7-1.6-1.6V416c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-210,426.7-210.7,427.5-211.6,427.5z"/>
-							<path d="M-244.5,443.9h-9.9c-0.9,0-1.6-0.7-1.6-1.6v-9.9c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-242.9,443.2-243.6,443.9-244.5,443.9z"/>
-							<path d="M-228.1,443.9h-9.9c-0.9,0-1.6-0.7-1.6-1.6v-9.9c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-226.4,443.2-227.2,443.9-228.1,443.9z"/>										<path d="M-211.6,443.9h-9.9c-0.9,0-1.6-0.7-1.6-1.6v-9.9c0-0.9,0.7-1.6,1.6-1.6h9.9c0.9,0,1.6,0.7,1.6,1.6v9.9   C-210,443.2-210.7,443.9-211.6,443.9z"/>
-							</g>
-						</svg> 
-						<?php esc_html_e( 'Portfolio', 'inspiro' ); ?>
-					</h4>
-					<p class="about">
-						<?php esc_html_e( 'Using the free version of our WPZOOM Portfolio plugin you can quickly create a Portfolio section on your website.', 'inspiro' ); ?>
-					</p>
-
-					<p class="section_footer">
-
-						<?php if ( class_exists( 'WPZOOM_Portfolio_Custom_Posts' ) ) { ?>
-
-											<a href="<?php echo esc_url( admin_url( 'edit.php?post_type=portfolio_item' ) ); ?>"
-											   target="_blank" class="button button-primary">
-												<?php esc_html_e( 'Add a Portfolio Post &#8599;', 'inspiro' ); ?>
-											</a>
-
-										<?php } else { ?>
-
-											<a href="<?php echo esc_url( admin_url( 'plugin-install.php?s=wpzoom%2520portfolio&tab=search&type=term' ) ); ?>"
-											   target="_blank" class="button button-primary">
-												<?php esc_html_e( 'Install WPZOOM Portfolio &#8599;', 'inspiro' ); ?>
-											</a>
-
-										<?php } ?>
-
-										<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/documentation/inspiro-lite/inspiro-lite-how-to-create-a-portfolio-section/', 'inspiro' ) ); ?>"
-										   target="_blank" class="button button-secondary-gray">
-											<?php esc_html_e( 'How to Create a Portfolio?', 'inspiro' ); ?>
-										</a>
-									</p>
-								</div>
-
-								<div class="section quick-action-section">
-									<h4>
-									<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<?php } else { ?>
+					<a href="<?php echo esc_url( admin_url( 'plugin-install.php?s=wpzoom%2520portfolio&tab=search&type=term' ) ); ?>"
+						   target="_blank" class="button button-primary">
+							<?php esc_html_e( 'Install Portfolio', 'inspiro' ); ?>
+					</a>
+					<?php } ?>
+					<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/documentation/inspiro-lite/inspiro-lite-how-to-create-a-portfolio-section/', 'inspiro' ) ); ?>"
+								target="_blank" class="button button-secondary-gray">
+									<?php esc_html_e( 'Documentation', 'inspiro' ); ?>
+								</a>
+							</p>
+						</div>
+						<div class="section quick-action-section">
+							<h4>
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M8.7062 1.79315C10.7847 -0.234165 14.1069 -0.213458 16.16 1.83961C18.2131 3.89268 18.2338 7.21491 16.2065 9.29341L16.1999 9.3001L14.008 11.492C13.7151 11.7849 13.2402 11.7849 12.9473 11.492C12.6544 11.1991 12.6544 10.7242 12.9473 10.4313L15.1358 8.24287C16.5866 6.75198 16.5707 4.37166 15.0993 2.90027C13.628 1.42889 11.2476 1.413 9.75676 2.86383L7.56829 5.05229C7.2754 5.34519 6.80053 5.34519 6.50763 5.05229C6.21474 4.7594 6.21474 4.28453 6.50763 3.99163L8.7062 1.79315Z" fill="#242628"/>
 										<path d="M12.1982 5.8017C12.4911 6.09459 12.4911 6.56947 12.1982 6.86236L6.862 12.1986C6.5691 12.4915 6.09423 12.4915 5.80133 12.1986C5.50844 11.9057 5.50844 11.4308 5.80133 11.1379L11.1376 5.8017C11.4305 5.50881 11.9053 5.50881 12.1982 5.8017Z" fill="#242628"/>
 										<path d="M5.05229 7.56842C5.34519 7.27552 5.34519 6.80065 5.05229 6.50776C4.7594 6.21486 4.28453 6.21486 3.99163 6.50776L1.79968 8.69963L1.79315 8.70632C-0.234165 10.7848 -0.213458 14.1071 1.83961 16.1601C3.89268 18.2132 7.21495 18.2339 9.29345 16.2066L11.492 14.0081C11.7849 13.7152 11.7849 13.2403 11.492 12.9474C11.1991 12.6545 10.7242 12.6545 10.4313 12.9474L8.24287 15.1359C6.75198 16.5867 4.37166 16.5709 2.90027 15.0995C1.42889 13.6281 1.413 11.2478 2.86383 9.75688L5.05229 7.56842Z" fill="#242628"/>
@@ -215,474 +128,365 @@
 											</svg>
 											<?php esc_html_e( 'Leave a review', 'inspiro' ); ?>
 										</a>
-									</p>
-
-								</div>
-
-
-								<div class="section">
-
-									<h4>
-										<span class="dashicons dashicons-cloud-upload"></span>
-										<?php esc_html_e( 'Demo Content', 'inspiro' ); ?>
-									</h4>
-									<p class="about">
-										<?php esc_html_e( 'Importing demo data (post, pages, images, etc.) is the quickest and easiest way to set up your new theme, and it allows you to simply edit everything instead of creating content and layouts from scratch.', 'inspiro' ); ?>
-									</p>
-
-
-									<p class="section_footer">
-
-										<a href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro-demo' ) ); ?>"
-										   class="button button-primary">
-											<?php esc_html_e( 'Import the Demo Content &#8599;', 'inspiro' ); ?>
-										</a>
-
-										<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/documentation/inspiro-lite/inspiro-lite-importing-the-demo-content/', 'inspiro' ) ); ?>"
-										   target="_blank" class="button button-secondary-gray">
-											<?php esc_html_e( 'How it works?', 'inspiro' ); ?>
-										</a>
-
-									</p>
-
-								</div>
-
-
-								<div class="section">
-									<h4>
-										<svg height="26" viewBox="0 0 21 21" width="26"
-											 xmlns="https://www.w3.org/2000/svg">
-											<g fill="none" fill-rule="evenodd" stroke="currentColor"
-											   stroke-linecap="round" stroke-linejoin="round"
-											   transform="translate(3 3)">
-												<path
-													d="m14.4978951 12.4978973-.0105089-9.99999996c-.0011648-1.10374784-.8962548-1.99789734-2-1.99789734h-9.99999995c-1.0543629 0-1.91816623.81587779-1.99451537 1.85073766l-.00548463.151365.0105133 10.00000004c.0011604 1.1037478.89625045 1.9978973 1.99999889 1.9978973h9.99999776c1.0543618 0 1.9181652-.8158778 1.9945143-1.8507377z"/>
-												<path d="m4.5 4.5v9.817"/>
-												<path d="m7-2v14" transform="matrix(0 1 -1 0 12.5 -2.5)"/>
-											</g>
-										</svg> <?php esc_html_e( 'Header & Footer', 'inspiro' ); ?>
-									</h4>
-									<p class="about">
-										<?php esc_html_e( 'In the Customizer, you will find separate sections to configure theme\'s Header and Footer. You can also add widgets in the Footer in the Widgets section in the Customizer.', 'inspiro' ); ?>
-									</p>
-
-									<p class="section_footer">
-
-										<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=header-area' ) ); ?>"
-										   target="_blank" class="button button-primary">
-											<?php esc_html_e( 'Header Options &#8599;', 'inspiro' ); ?>
-										</a>
-
-										<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=footer-area' ) ); ?>"
-										   target="_blank" class="button button-primary">
-											<?php esc_html_e( 'Footer Options &#8599;', 'inspiro' ); ?>
-										</a>
-
-									</p>
-								</div>
-
-								<div class="section">
-									<h4>
-										<svg style="enable-background:new 0 0 16 16;" version="1.1" width="26"
-											 viewBox="0 0 16 16" xml:space="preserve"
-											 xmlns="https://www.w3.org/2000/svg"
-											 xmlns:xlink="https://www.w3.org/1999/xlink"><g id="Guide"/>
-											<g id="Layer_2">
-												<g>
-													<path
-														d="M6,6c0-0.93-0.64-1.71-1.5-1.93V2.5C4.5,2.22,4.28,2,4,2S3.5,2.22,3.5,2.5v1.57C2.64,4.29,2,5.07,2,6s0.64,1.71,1.5,1.93    v5.57C3.5,13.78,3.72,14,4,14s0.5-0.22,0.5-0.5V7.93C5.36,7.71,6,6.93,6,6z M4,7C3.45,7,3,6.55,3,6s0.45-1,1-1s1,0.45,1,1    S4.55,7,4,7z"/>
-													<path
-														d="M8.5,9.07V2.5C8.5,2.22,8.28,2,8,2S7.5,2.22,7.5,2.5v6.57C6.64,9.29,6,10.07,6,11s0.64,1.71,1.5,1.93v0.57    C7.5,13.78,7.72,14,8,14s0.5-0.22,0.5-0.5v-0.57c0.86-0.22,1.5-1,1.5-1.93S9.36,9.29,8.5,9.07z M8,12c-0.55,0-1-0.45-1-1    s0.45-1,1-1s1,0.45,1,1S8.55,12,8,12z"/>
-													<path
-														d="M14,5c0-0.93-0.64-1.71-1.5-1.93V2.5C12.5,2.22,12.28,2,12,2s-0.5,0.22-0.5,0.5v0.57C10.64,3.29,10,4.07,10,5    s0.64,1.71,1.5,1.93v6.57c0,0.28,0.22,0.5,0.5,0.5s0.5-0.22,0.5-0.5V6.93C13.36,6.71,14,5.93,14,5z M12,6c-0.55,0-1-0.45-1-1    s0.45-1,1-1s1,0.45,1,1S12.55,6,12,6z"/>
-												</g>
-											</g></svg> <?php esc_html_e( 'Colors & Fonts', 'inspiro' ); ?>
-									</h4>
-									<p class="about">
-										<?php esc_html_e( 'Set up your global colors and fonts to match your site with your brand.', 'inspiro' ); ?>
-									</p>
-
-									<p class="section_footer">
-
-										<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=colors' ) ); ?>"
-										   target="_blank" class="button button-primary">
-											<?php esc_html_e( 'Customize Colors &#8599;', 'inspiro' ); ?>
-										</a>
-
-										<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[panel]=inspiro_typography_panel' ) ); ?>"
-										   target="_blank" class="button button-primary">
-											<?php esc_html_e( 'Typography Options &#8599;', 'inspiro' ); ?>
-										</a>
-
-									</p>
-								</div>
-
-							</div>
-
+							</p>
 						</div>
 
-						<div class="wpz-onboard_content-side-section discover-premium">
-                        <div class="image-column">
+						<div class="section">
+							<h4>
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M3 9H21" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M11 5.995L10.995 6L11 6.005L11.005 6L11 5.995" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M8.5 5.995L8.495 6L8.5 6.005L8.505 6L8.5 5.995" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M6 5.995L5.995 6L6 6.005L6.005 6L6 5.995" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M11 5.995L10.995 6L11 6.005L11.005 6L11 5.995" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M8.5 5.995L8.495 6L8.5 6.005L8.505 6L8.5 5.995" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M6 5.995L5.995 6L6 6.005L6.005 6L6 5.995" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M17.5 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H6.5" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M12 18L14 16" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M10 16L12 18" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M12 13.5V18" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M14 21H10" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								<?php esc_html_e( 'Demo Content', 'inspiro' ); ?>
+							</h4>
+							<p class="about">
+								<?php esc_html_e( 'Importing demo data is the easiest way to set up your theme, so you can edit everything quickly without building content manually.', 'inspiro' ); ?>
+							</p>
+							<p class="section_footer">
+								<a href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro-demo' ) ); ?>"
+								   class="button button-primary">
+										<?php esc_html_e( 'Import Demo', 'inspiro' ); ?>
+								</a>
+								<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/documentation/inspiro-lite/inspiro-lite-importing-the-demo-content/', 'inspiro' ) ); ?>"
+								   target="_blank" class="button button-secondary-gray">
+									<?php esc_html_e( 'Documentation', 'inspiro' ); ?>
+								</a>
+							</p>
+						</div>
 
-                            <a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
-                                title="Inspiro Premium" target="_blank"><img
-                                        src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-premium.png' ); ?>"
-                                        width="300" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>"/>
-                            </a>
-                        </div>
+						<div class="section">
+							<h4>
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.246582 9C0.246582 8.58579 0.582368 8.25 0.996582 8.25H13.0016C13.4158 8.25 13.7516 8.58579 13.7516 9C13.7516 9.41421 13.4158 9.75 13.0016 9.75H0.996582C0.582368 9.75 0.246582 9.41421 0.246582 9Z" fill="#242628"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.246582 13.002C0.246582 12.5877 0.582368 12.252 0.996582 12.252H16.0028C16.417 12.252 16.7528 12.5877 16.7528 13.002C16.7528 13.4162 16.417 13.752 16.0028 13.752H0.996582C0.582368 13.752 0.246582 13.4162 0.246582 13.002Z" fill="#242628"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.246582 17.0039C0.246582 16.5897 0.582368 16.2539 0.996582 16.2539H7.9995C8.41371 16.2539 8.7495 16.5897 8.7495 17.0039C8.7495 17.4181 8.41371 17.7539 7.9995 17.7539H0.996582C0.582368 17.7539 0.246582 17.4181 0.246582 17.0039Z" fill="#242628"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.246582 1.99707C0.246582 1.03057 1.03008 0.24707 1.99658 0.24707H16.0032C16.9697 0.24707 17.7532 1.03057 17.7532 1.99707V3.99874C17.7532 4.96523 16.9697 5.74874 16.0032 5.74874H1.99658C1.03008 5.74874 0.246582 4.96523 0.246582 3.99874V1.99707ZM1.99658 1.74707C1.85851 1.74707 1.74658 1.859 1.74658 1.99707V3.99874C1.74658 4.13681 1.85851 4.24874 1.99658 4.24874H16.0032C16.1413 4.24874 16.2532 4.13681 16.2532 3.99874V1.99707C16.2532 1.859 16.1413 1.74707 16.0032 1.74707H1.99658Z" fill="#242628"/>
+								</svg>
+								<?php esc_html_e( 'Header', 'inspiro' ); ?>
+							</h4>
+							<p class="about">
+								<?php esc_html_e( 'Configure your Header settings to suit your theme. Adjust menus, logos, and other elements for a polished, branded look.', 'inspiro' ); ?>
+							</p>
+							<p class="section_footer">
+								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=header-area' ) ); ?>"
+								   target="_blank" class="button button-primary">
+									<?php esc_html_e( 'Customize', 'inspiro' ); ?>
+								</a>
+							</p>
+						</div>
 
-                        <div class="text-column">
+						<div class="section">
+							<h4>
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.246582 1C0.246582 0.585786 0.582368 0.25 0.996582 0.25H13.0016C13.4158 0.25 13.7516 0.585786 13.7516 1C13.7516 1.41421 13.4158 1.75 13.0016 1.75H0.996582C0.582368 1.75 0.246582 1.41421 0.246582 1Z" fill="#242628"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.246582 5.00195C0.246582 4.58774 0.582368 4.25195 0.996582 4.25195H16.0028C16.417 4.25195 16.7528 4.58774 16.7528 5.00195C16.7528 5.41617 16.417 5.75195 16.0028 5.75195H0.996582C0.582368 5.75195 0.246582 5.41617 0.246582 5.00195Z" fill="#242628"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.246582 9.00391C0.246582 8.58969 0.582368 8.25391 0.996582 8.25391H7.9995C8.41371 8.25391 8.7495 8.58969 8.7495 9.00391C8.7495 9.41812 8.41371 9.75391 7.9995 9.75391H0.996582C0.582368 9.75391 0.246582 9.41812 0.246582 9.00391Z" fill="#242628"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.246582 13.9971C0.246582 13.0306 1.03008 12.2471 1.99658 12.2471H16.0032C16.9697 12.2471 17.7532 13.0306 17.7532 13.9971V15.9987C17.7532 16.9652 16.9697 17.7487 16.0032 17.7487H1.99658C1.03008 17.7487 0.246582 16.9652 0.246582 15.9987V13.9971ZM1.99658 13.7471C1.85851 13.7471 1.74658 13.859 1.74658 13.9971V15.9987C1.74658 16.1368 1.85851 16.2487 1.99658 16.2487H16.0032C16.1413 16.2487 16.2532 16.1368 16.2532 15.9987V13.9971C16.2532 13.859 16.1413 13.7471 16.0032 13.7471H1.99658Z" fill="#242628"/>
+								</svg>
+								<?php esc_html_e( 'Footer', 'inspiro' ); ?>
+							</h4>
+							<p class="about">
+								<?php esc_html_e( 'Use the Footer settings to personalize your theme’s layout. Add widgets in the Widgets section to enhance your site’s footer.', 'inspiro' ); ?>
+							</p>
+							<p class="section_footer">
+								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=footer-area' ) ); ?>"
+								   target="_blank" class="button button-primary">
+									<?php esc_html_e( 'Customize', 'inspiro' ); ?>
+								</a>
+							</p>
+						</div>
 
-                            <h3 class="wpz-onboard_content-side-section-title icon-docs">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="https://www.w3.org/2000/svg">
-                                    <mask id="mask0_3409_3568" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
-                                        y="0" width="24" height="24">
-                                        <rect width="24" height="24" fill="#D9D9D9"/>
-                                    </mask>
-                                    <g mask="url(#mask0_3409_3568)">
-                                        <path
-                                            d="M19 9L17.75 6.25L15 5L17.75 3.75L19 1L20.25 3.75L23 5L20.25 6.25L19 9ZM19 23L17.75 20.25L15 19L17.75 17.75L19 15L20.25 17.75L23 19L20.25 20.25L19 23ZM9 20L6.5 14.5L1 12L6.5 9.5L9 4L11.5 9.5L17 12L11.5 14.5L9 20ZM9 15.15L10 13L12.15 12L10 11L9 8.85L8 11L5.85 12L8 13L9 15.15Z"
-                                            fill="white"/>
-                                    </g>
-                                </svg> <?php esc_html_e( 'Discover Inspiro Premium!', 'inspiro' ); ?>
-							</h3>
+						<div class="section">
+							<h4>
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0 2.75083C0 1.23159 1.23159 0 2.75083 0H5.75208C7.27133 0 8.50292 1.23159 8.50292 2.75083V4.99292L10.9613 2.53581C12.0355 1.462 13.7768 1.46202 14.851 2.53588L16.9729 4.65784C18.0468 5.73204 18.0469 7.4734 16.973 8.5476L14.5157 11.0049H16.7567C18.2759 11.0049 19.5075 12.2365 19.5075 13.7557V16.757C19.5075 18.2762 18.2759 19.5078 16.7567 19.5078H4.25146C4.24358 19.5078 4.23572 19.5077 4.22789 19.5074C1.89072 19.4947 0 17.5962 0 15.256V2.75083ZM2.75083 1.5C2.06002 1.5 1.5 2.06002 1.5 2.75083V5.91602H7.00292V2.75083C7.00292 2.06002 6.4429 1.5 5.75208 1.5H2.75083ZM7.00292 7.41602H1.5V11.9619H7.00292V7.41602ZM7.00292 13.4619H1.5V15.256C1.5 16.7756 2.73187 18.0075 4.25146 18.0075C5.77105 18.0075 7.00292 16.7756 7.00292 15.256V13.4619ZM8.50292 14.8964V7.11367L12.0218 3.5967C12.5102 3.10842 13.302 3.10847 13.7905 3.5967L15.9122 5.71842C16.4005 6.20684 16.4004 6.99864 15.9122 7.4871L8.50292 14.8964ZM7.51279 18.0078H16.7567C17.4475 18.0078 18.0075 17.4478 18.0075 16.757V13.7557C18.0075 13.0649 17.4475 12.5049 16.7567 12.5049H13.0157L7.51279 18.0078Z" fill="#242628"/>
+								</svg>
+								<?php esc_html_e( 'Colors', 'inspiro' ); ?>
+							</h4>
+							<p class="about">
+								<?php esc_html_e( 'Align your site with your brand by setting up global colors. Customize the background, text, and link colors for consistency.', 'inspiro' ); ?>
+							</p>
+							<p class="section_footer">
+								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[section]=colors' ) ); ?>"
+								   target="_blank" class="button button-primary">
+									<?php esc_html_e( 'Customize', 'inspiro' ); ?>
+								</a>
+							</p>
+						</div>
 
-                            <ul>
-                                <li>
-									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									19+ Starter Sites
-								</li>
-                                <li>
-									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									Portfolio with Video Integration
-								</li>
-                                <li>
-									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									Video Slideshow
-								</li>
-                                <li>
-									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									Video Backgrounds
-								</li>
-                                <li>
-									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									Advanced WooCommerce Integration
-								</li>
-                                <li>
-									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									Video Background on Hover
-								</li>
-                                <li>
-									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									Custom Elementor Widgets
-								</li>
-                                <li>
-									<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-										<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
-									...and much more
-								</li>
-                            </ul>
-                            
-                            <div class="wpz-onboard_content-side-section-button">
-                                <a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
-                                title="Inspiro Premium" target="_blank"
-                                class="button"><?php esc_html_e( 'Discover the Premium Version &#8599;', 'inspiro' ); ?></a>
+						<div class="section">
+							<h4>
+								<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1 14H17" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M13 18H1" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M4.91445 0.25C4.81536 0.249894 4.71462 0.269541 4.61781 0.311162C4.4314 0.391295 4.2941 0.538016 4.22176 0.711589L1.06661 8.02655C1.03983 8.07365 1.018 8.12394 1.00184 8.17671L0.337401 9.71715C0.173349 10.0975 0.348686 10.5388 0.729027 10.7029C1.10937 10.8669 1.55069 10.6916 1.71474 10.3112L2.21705 9.14668H7.59971L8.09998 10.3104C8.26357 10.6909 8.70467 10.8668 9.08521 10.7032C9.46576 10.5396 9.64163 10.0985 9.47804 9.71799L8.80159 8.14442C8.791 8.11476 8.77859 8.08597 8.76451 8.05817L5.60668 0.712449C5.53455 0.53878 5.39743 0.391885 5.21111 0.311523C5.11432 0.269771 5.01357 0.250002 4.91445 0.25ZM4.91289 2.8966L2.86404 7.64668H6.95488L4.91289 2.8966Z" fill="#242628"/>
+								</svg>
+								<?php esc_html_e( 'Fonts', 'inspiro' ); ?>
+							</h4>
+							<p class="about">
+								<?php esc_html_e( 'Reflect your brand’s style by customizing global fonts. Select font families, sizes, and weights for a cohesive, professional look.', 'inspiro' ); ?>
+							</p>
+							<p class="section_footer">
+								<a href="<?php echo esc_url( admin_url( 'customize.php?autofocus[panel]=inspiro_typography_panel' ) ); ?>"
+								   target="_blank" class="button button-primary">
+									<?php esc_html_e( 'Customize', 'inspiro' ); ?>
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
 
-                                <a href="https://www.wpzoom.com/themes/inspiro/starter-sites/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
-                                    title="Inspiro Premium" target="_blank"
-                                    class="button button-starter"><?php esc_html_e( 'View Starter Sites &#8599;', 'inspiro' ); ?></a>
-                            </div>
-
-                        </div>
+				<div class="wpz-onboard_content-side-section discover-premium">
+        	        <div class="image-column">
+                        <a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
+                            title="Inspiro Premium" target="_blank">
+							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-premium.png' ); ?>"
+                            	width="300" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>"/>
+                        </a>
                     </div>
+                    <div class="text-column">
+                    	<h3 class="wpz-onboard_content-side-section-title icon-docs">
+							<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M4.64479 10.9348L6.77737 11.7451C8.38017 12.3542 9.64583 13.6198 10.2549 15.2226L11.0652 17.3552C11.2127 17.7434 11.5847 18 12 18C12.4152 18 12.7873 17.7434 12.9348 17.3552L13.7451 15.2226C14.3542 13.6198 15.6198 12.3542 17.2226 11.7451L19.3552 10.9348C19.7434 10.7873 20 10.4152 20 9.99999C20 9.58475 19.7434 9.21271 19.3552 9.06521L17.2226 8.25487C15.6198 7.64582 14.3542 6.38016 13.7451 4.77736L12.9348 2.64479C12.7873 2.25662 12.4152 2 12 2C11.5847 2 11.2127 2.25662 11.0652 2.64479L10.2549 4.77736C9.64583 6.38016 8.38017 7.64582 6.77737 8.25487L4.64479 9.06521C4.25662 9.21271 4 9.58475 4 9.99999C4 10.4152 4.25662 10.7873 4.64479 10.9348Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M4 19V15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M2 17H6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M3 5V1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M1 3H5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<?php esc_html_e( 'Discover Inspiro Premium!', 'inspiro' ); ?>
+						</h3>
 
-						<div class="theme-info-wrap">
-
-							<h3 class="wpz-onboard_content-main-title">
-								<svg fill="none" height="24" viewBox="0 0 24 24" width="24"
-									 xmlns="https://www.w3.org/2000/svg">
-									<path clip-rule="evenodd"
-										  d="M15 5.75C11.5482 5.75 8.75 8.54822 8.75 12C8.75 15.4518 11.5482 18.25 15 18.25C15.9599 18.25 16.8674 18.0341 17.6782 17.6489C18.0523 17.4712 18.4997 17.6304 18.6774 18.0045C18.8552 18.3787 18.696 18.8261 18.3218 19.0038C17.3141 19.4825 16.1873 19.75 15 19.75C10.7198 19.75 7.25 16.2802 7.25 12C7.25 7.71979 10.7198 4.25 15 4.25C19.2802 4.25 22.75 7.71979 22.75 12C22.75 12.7682 22.638 13.5115 22.429 14.2139C22.3108 14.6109 21.8932 14.837 21.4962 14.7188C21.0992 14.6007 20.8731 14.1831 20.9913 13.7861C21.1594 13.221 21.25 12.6218 21.25 12C21.25 8.54822 18.4518 5.75 15 5.75Z"
-										  fill="black" fill-rule="evenodd"/>
-									<path clip-rule="evenodd"
-										  d="M5.25 5C5.25 4.58579 5.58579 4.25 6 4.25H15C15.4142 4.25 15.75 4.58579 15.75 5C15.75 5.41421 15.4142 5.75 15 5.75H6C5.58579 5.75 5.25 5.41421 5.25 5Z"
-										  fill="black" fill-rule="evenodd"/>
-									<path clip-rule="evenodd"
-										  d="M4.75 8.5C4.75 8.08579 5.08579 7.75 5.5 7.75H8.5C8.91421 7.75 9.25 8.08579 9.25 8.5C9.25 8.91421 8.91421 9.25 8.5 9.25H5.5C5.08579 9.25 4.75 8.91421 4.75 8.5Z"
-										  fill="black" fill-rule="evenodd"/>
-									<path clip-rule="evenodd"
-										  d="M1.25 8.5C1.25 8.08579 1.58579 7.75 2 7.75H3.5C3.91421 7.75 4.25 8.08579 4.25 8.5C4.25 8.91421 3.91421 9.25 3.5 9.25H2C1.58579 9.25 1.25 8.91421 1.25 8.5Z"
-										  fill="black" fill-rule="evenodd"/>
-									<path clip-rule="evenodd"
-										  d="M3.25 12.5C3.25 12.0858 3.58579 11.75 4 11.75H8C8.41421 11.75 8.75 12.0858 8.75 12.5C8.75 12.9142 8.41421 13.25 8 13.25H4C3.58579 13.25 3.25 12.9142 3.25 12.5Z"
-										  fill="black" fill-rule="evenodd"/>
-									<path clip-rule="evenodd"
-										  d="M12.376 8.58397C12.5151 8.37533 12.7492 8.25 13 8.25H17C17.2508 8.25 17.4849 8.37533 17.624 8.58397L19.624 11.584C19.792 11.8359 19.792 12.1641 19.624 12.416L17.624 15.416C17.4849 15.6247 17.2508 15.75 17 15.75H13C12.7492 15.75 12.5151 15.6247 12.376 15.416L10.376 12.416C10.208 12.1641 10.208 11.8359 10.376 11.584L12.376 8.58397ZM13.4014 9.75L11.9014 12L13.4014 14.25H16.5986L18.0986 12L16.5986 9.75H13.4014Z"
-										  fill="black" fill-rule="evenodd"/>
-								</svg> <?php esc_html_e( 'Premium Features', 'inspiro' ); ?></h3>
-
-							<div class="wpz-grid-wrap three">
-
-								<div class="section premium-feature">
-									<h4>
-										<svg height="24"
-											 style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
-											 version="1.1" viewBox="0 0 1069 1069" width="24" xml:space="preserve"
-											 xmlns="https://www.w3.org/2000/svg" xmlns:serif="https://www.serif.com/"
-											 xmlns:xlink="https://www.w3.org/1999/xlink"><rect height="1066.67"
-																							   id="Video-player"
-																							   style="fill:none;"
-																							   width="1066.67" x="1.515"
-																							   y="0.143"/>
-											<g>
-												<path
-													d="M653.802,660.183c9.682,-5.579 15.648,-15.903 15.648,-27.077c0,-11.174 -5.966,-21.498 -15.648,-27.077c-0,0 -207.519,-119.571 -207.519,-119.571c-9.669,-5.571 -21.576,-5.563 -31.238,0.021c-9.662,5.584 -15.613,15.897 -15.613,27.056c-0,0 -0,239.142 -0,239.142c-0,11.159 5.951,21.472 15.613,27.056c9.662,5.584 21.569,5.592 31.238,0.021c0,-0 207.519,-119.571 207.519,-119.571Zm-78.196,-27.077l-113.674,65.498c-0,0.001 -0,-130.996 -0,-130.996l113.674,65.498Z"
-													style="fill-opacity:0.5;"/>
-												<path
-													d="M45.265,325.143l-0,458.333c-0,52.49 20.852,102.831 57.968,139.948c37.117,37.117 87.458,57.969 139.949,57.969c165.508,-0 417.825,-0 583.333,-0c52.491,-0 102.832,-20.852 139.948,-57.969c37.117,-37.117 57.969,-87.458 57.969,-139.948l-0,-458.333c-0,-52.49 -20.852,-102.831 -57.969,-139.948c-37.116,-37.117 -87.457,-57.969 -139.948,-57.969c-165.508,0 -417.825,0 -583.333,0c-52.491,0 -102.832,20.852 -139.949,57.969c-37.116,37.117 -57.968,87.458 -57.968,139.948Zm62.5,56.213l-0,402.12c-0,35.915 14.267,70.358 39.662,95.754c25.396,25.396 59.84,39.663 95.755,39.663c165.508,-0 417.825,-0 583.333,-0c35.915,-0 70.359,-14.267 95.754,-39.663c25.396,-25.396 39.663,-59.839 39.663,-95.754l-0,-458.333c-0,-35.915 -14.267,-70.358 -39.663,-95.754c-25.395,-25.396 -59.839,-39.663 -95.754,-39.663c-165.508,0 -417.825,0 -583.333,0c-35.915,0 -70.359,14.267 -95.755,39.663c-23.909,23.91 -37.955,55.84 -39.516,89.467l676.937,0c17.248,0 31.25,14.003 31.25,31.25c0,17.248 -14.002,31.25 -31.25,31.25l-677.083,0Zm123.177,-160.38c18.253,0 33.073,14.82 33.073,33.073c-0,18.254 -14.82,33.074 -33.073,33.074c-18.254,-0 -33.074,-14.82 -33.074,-33.074c0,-18.253 14.82,-33.073 33.074,-33.073Zm104.166,0c18.254,0 33.074,14.82 33.074,33.073c-0,18.254 -14.82,33.074 -33.074,33.074c-18.253,-0 -33.073,-14.82 -33.073,-33.074c0,-18.253 14.82,-33.073 33.073,-33.073Zm104.167,0c18.254,0 33.073,14.82 33.073,33.073c0,18.254 -14.819,33.074 -33.073,33.074c-18.254,-0 -33.073,-14.82 -33.073,-33.074c-0,-18.253 14.819,-33.073 33.073,-33.073Z"/>
-											</g></svg> <?php esc_html_e( 'Slideshow with YouTube & Vimeo Integration ', 'inspiro' ); ?>
-									</h4>
-									<p class="about">
-										<?php esc_html_e( 'In the free version, you can have just a static hero on the homepage, while in the Premium version, you can create a fully working slideshow with multiple videos and images. The Slideshow of the Premium version provides more options and features, such as displaying a different video on mobile devices, adding a video popup, and more.', 'inspiro' ); ?>
-									</p>
-									<p class="section_footer">
-										<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium', 'inspiro' ) ); ?>"
-										   target="_blank" class="button button-primary">
-											<?php esc_html_e( 'Get Inspiro Premium &#8599;', 'inspiro' ); ?>
-										</a>
-										<a href="<?php echo esc_url( __( 'https://demo.wpzoom.com/?theme=inspiro-demo', 'inspiro' ) ); ?>"
-										   target="_blank" class="button button-secondary-gray">
-											<?php esc_html_e( 'View Demo &#8599;', 'inspiro' ); ?>
-										</a>
-									</p>
-								</div>
-
-								<div class="section premium-feature">
-									<h4>
-										<svg width="26" height="26" viewBox="0 0 30 30" fill="none"
-											 xmlns="https://www.w3.org/2000/svg">
-											<path
-												d="M21 12.405L13.5 8.07C13.0442 7.80682 12.5271 7.66821 12.0008 7.66807C11.4744 7.66794 10.9573 7.80629 10.5013 8.06923C10.0454 8.33217 9.66661 8.71045 9.40308 9.16607C9.13956 9.6217 9.00054 10.1386 9 10.665V19.335C9.00054 19.8611 9.13942 20.3778 9.4027 20.8332C9.66597 21.2887 10.0444 21.667 10.5 21.93C10.9561 22.1933 11.4734 22.3319 12 22.3319C12.5266 22.3319 13.0439 22.1933 13.5 21.93L21 17.595C21.4546 17.3313 21.832 16.9528 22.0943 16.4973C22.3566 16.0419 22.4947 15.5256 22.4947 15C22.4947 14.4744 22.3566 13.9581 22.0943 13.5027C21.832 13.0472 21.4546 12.6687 21 12.405ZM19.5 15L12 19.335V10.665L19.5 15ZM15 0C12.0333 0 9.13319 0.879734 6.66645 2.52796C4.19971 4.17618 2.27713 6.51885 1.14181 9.25974C0.00649926 12.0006 -0.290551 15.0166 0.288227 17.9263C0.867006 20.8361 2.29562 23.5088 4.3934 25.6066C6.49119 27.7044 9.16394 29.133 12.0736 29.7118C14.9834 30.2905 17.9994 29.9935 20.7403 28.8582C23.4811 27.7229 25.8238 25.8003 27.472 23.3335C29.1203 20.8668 30 17.9667 30 15C30 13.0302 29.612 11.0796 28.8582 9.25974C28.1044 7.43986 26.9995 5.78628 25.6066 4.3934C24.2137 3.00052 22.5601 1.89563 20.7403 1.14181C18.9204 0.387986 16.9698 0 15 0ZM15 27C12.6266 27 10.3066 26.2962 8.33316 24.9776C6.35977 23.659 4.8217 21.7849 3.91345 19.5922C3.0052 17.3995 2.76756 14.9867 3.23058 12.6589C3.69361 10.3311 4.83649 8.19295 6.51472 6.51472C8.19295 4.83649 10.3311 3.6936 12.6589 3.23058C14.9867 2.76755 17.3995 3.00519 19.5922 3.91344C21.7849 4.8217 23.6591 6.35977 24.9776 8.33315C26.2962 10.3065 27 12.6266 27 15C27 18.1826 25.7357 21.2348 23.4853 23.4853C21.2348 25.7357 18.1826 27 15 27Z"
-												fill="#242628"></path>
-										</svg> <?php esc_html_e( 'Advanced Portfolio with Video Integration', 'inspiro' ); ?>
-									</h4>
-									<p class="about">
-										<?php esc_html_e( 'Inspiro Premium is perfect for showing off your portfolio, images and videos. The premium version includes multiple page templates to display your Portfolio posts and a custom Elementor Portfolio widget. You also get access to features such as Video Lightbox, Video Background on Hover, and more!', 'inspiro' ); ?>
-									</p>
-									<p class="section_footer">
-										<a href="<?php echo esc_url( __( 'https://demo.wpzoom.com/inspiro/portfolio/', 'inspiro' ) ); ?>"
-										   target="_blank" class="button button-primary">
-											<?php esc_html_e( 'Premium Portfolio Demo &#8599;', 'inspiro' ); ?>
-										</a>
-									</p>
-								</div>
-
-								<div class="section premium-feature">
-									<h4>
-										<svg height="26" preserveAspectRatio="xMidYMid" version="1.1"
-											 viewBox="0 0 256 153" width="26" xmlns="https://www.w3.org/2000/svg"
-											 xmlns:xlink="https://www.w3.org/1999/xlink">
-											<g>
-												<path
-													d="M23.7586644,0 L232.137438,0 C245.324643,0 256,10.6753566 256,23.8625617 L256,103.404434 C256,116.591639 245.324643,127.266996 232.137438,127.266996 L157.409942,127.266996 L167.666657,152.385482 L122.558043,127.266996 L23.8633248,127.266996 C10.6761196,127.266996 0.000763038458,116.591639 0.000763038458,103.404434 L0.000763038458,23.8625617 C-0.10389732,10.7800169 10.5714592,0 23.7586644,0 L23.7586644,0 Z"
-													fill="#9B5C8F"/>
-												<path
-													d="M14.5781994,21.7495935 C16.0351099,19.7723577 18.2204758,18.7317073 21.1342969,18.5235772 C26.441614,18.1073171 29.4595002,20.604878 30.1879555,26.0162602 C33.4139717,47.7658537 36.9521831,66.1853659 40.6985246,81.2747967 L63.4887685,37.8796748 C65.5700693,33.9252033 68.1716953,31.8439024 71.2936465,31.6357724 C75.8725083,31.3235772 78.6822644,34.2373984 79.8269798,40.3772358 C82.4286059,54.2178862 85.7586872,65.9772358 89.7131587,75.9674797 C92.4188498,49.5349593 96.9977116,30.4910569 103.449744,18.7317073 C105.01072,15.8178862 107.300151,14.3609756 110.318037,14.1528455 C112.711533,13.9447154 114.896899,14.6731707 116.874134,16.2341463 C118.85137,17.795122 119.89202,19.7723577 120.100151,22.1658537 C120.204216,24.0390244 119.89202,25.6 119.0595,27.1609756 C115.000964,34.6536585 111.670882,47.2455285 108.965191,64.7284553 C106.363565,81.6910569 105.42698,94.9073171 106.05137,104.377236 C106.2595,106.978862 105.84324,109.268293 104.80259,111.245528 C103.553809,113.534959 101.680638,114.78374 99.2871424,114.99187 C96.5814514,115.2 93.7716953,113.95122 91.0660042,111.141463 C81.3879555,101.255285 73.6871424,86.4780488 68.0676303,66.8097561 C61.3034026,80.1300813 56.3082807,90.1203252 53.0822644,96.7804878 C46.942427,108.539837 41.739175,114.57561 37.3684433,114.887805 C34.5586872,115.095935 32.1651912,112.702439 30.0838904,107.707317 C24.7765733,94.0747967 19.0529961,67.7463415 12.9131587,28.7219512 C12.4968985,26.0162602 13.1212888,23.6227642 14.5781994,21.7495935 Z M238.213972,38.0878049 C234.46763,31.5317073 228.952183,27.5772358 221.563565,26.0162602 C219.586329,25.6 217.713159,25.3918699 215.944053,25.3918699 C205.953809,25.3918699 197.836736,30.595122 191.488768,41.001626 C186.077386,49.8471545 183.371695,59.6292683 183.371695,70.3479675 C183.371695,78.3609756 185.036736,85.2292683 188.366817,90.9528455 C192.113159,97.5089431 197.628606,101.463415 205.017224,103.02439 C206.99446,103.44065 208.86763,103.64878 210.636736,103.64878 C220.731045,103.64878 228.848118,98.4455285 235.09202,88.0390244 C240.503403,79.0894309 243.209094,69.3073171 243.209094,58.5886179 C243.313159,50.4715447 241.544053,43.7073171 238.213972,38.0878049 Z M225.101777,66.9138211 C223.644866,73.7821138 221.04324,78.8813008 217.192834,82.3154472 C214.174947,85.0211382 211.365191,86.1658537 208.763565,85.6455285 C206.266004,85.1252033 204.184703,82.9398374 202.623728,78.8813008 C201.374947,75.6552846 200.750557,72.4292683 200.750557,69.4113821 C200.750557,66.8097561 200.958687,64.2081301 201.479012,61.8146341 C202.415598,57.5479675 204.184703,53.3853659 206.99446,49.4308943 C210.428606,44.3317073 214.070882,42.2504065 217.817224,42.9788618 C220.314785,43.499187 222.396086,45.6845528 223.957061,49.7430894 C225.205842,52.9691057 225.830232,56.195122 225.830232,59.2130081 C225.830232,61.9186992 225.622102,64.5203252 225.101777,66.9138211 Z M173.069256,38.0878049 C169.322915,31.5317073 163.703403,27.5772358 156.41885,26.0162602 C154.441614,25.6 152.568443,25.3918699 150.799338,25.3918699 C140.809094,25.3918699 132.69202,30.595122 126.344053,41.001626 C120.932671,49.8471545 118.22698,59.6292683 118.22698,70.3479675 C118.22698,78.3609756 119.89202,85.2292683 123.222102,90.9528455 C126.968443,97.5089431 132.48389,101.463415 139.872508,103.02439 C141.849744,103.44065 143.722915,103.64878 145.49202,103.64878 C155.586329,103.64878 163.703403,98.4455285 169.947305,88.0390244 C175.358687,79.0894309 178.064378,69.3073171 178.064378,58.5886179 C178.064378,50.4715447 176.399338,43.7073171 173.069256,38.0878049 Z M159.852996,66.9138211 C158.396086,73.7821138 155.79446,78.8813008 151.944053,82.3154472 C148.926167,85.0211382 146.116411,86.1658537 143.514785,85.6455285 C141.017224,85.1252033 138.935923,82.9398374 137.374947,78.8813008 C136.126167,75.6552846 135.501777,72.4292683 135.501777,69.4113821 C135.501777,66.8097561 135.709907,64.2081301 136.230232,61.8146341 C137.166817,57.5479675 138.935923,53.3853659 141.745679,49.4308943 C145.179825,44.3317073 148.822102,42.2504065 152.568443,42.9788618 C155.066004,43.499187 157.147305,45.6845528 158.708281,49.7430894 C159.957061,52.9691057 160.581451,56.195122 160.581451,59.2130081 C160.685516,61.9186992 160.373321,64.5203252 159.852996,66.9138211 L159.852996,66.9138211 L159.852996,66.9138211 Z"
-													fill="#FFFFFF"/>
-											</g>
-										</svg> <?php esc_html_e( 'WooCommerce Features', 'inspiro' ); ?>
-									</h4>
-									<p class="about">
-										<?php esc_html_e( 'The Premium version of the theme includes unique WooCommerce features and additional options to customize the shop pages as you want.', 'inspiro' ); ?>
-									</p>
-								</div>
-
-
-								<div class="section premium-feature">
-									<h4>
-										<svg height="26" style="enable-background:new 0 0 512 512;" version="1.1"
-											 viewBox="0 0 512 512" width="26" xml:space="preserve"
-											 xmlns="https://www.w3.org/2000/svg"
-											 xmlns:xlink="https://www.w3.org/1999/xlink"><g id="_x31_09-elementor">
-												<g>
-													<path
-														d="M462.999,26.001H49c-12.731,0-22.998,10.268-22.998,23v413.998c0,12.732,10.267,23,22.998,23    h413.999c12.732,0,22.999-10.268,22.999-23V49.001C485.998,36.269,475.731,26.001,462.999,26.001"
-														style="fill:#D63362;"/>
-													<rect height="204.329" style="fill:#FFFFFF;" width="40.865"
-														  x="153.836" y="153.836"/>
-													<rect height="40.866" style="fill:#FFFFFF;" width="122.7"
-														  x="235.566" y="317.299"/>
-													<rect height="40.865" style="fill:#FFFFFF;" width="122.7"
-														  x="235.566" y="235.566"/>
-													<rect height="40.865" style="fill:#FFFFFF;" width="122.7"
-														  x="235.566" y="153.733"/>
-												</g>
-											</g>
-											<g id="Layer_1"/></svg> <?php esc_html_e( 'Custom Elementor Modules', 'inspiro' ); ?>
-									</h4>
-									<p class="about">
-										<?php esc_html_e( 'The Premium version will unlock Premium Elementor Modules such as Portfolio Showcase, Slideshow widget, and more!', 'inspiro' ); ?>
-									</p>
-
-								</div>
-
-
-								<div class="section premium-feature">
-
-									<h4>
-										<svg width="20" height="20" viewBox="0 0 40 40" fill="none"
-											 xmlns="https://www.w3.org/2000/svg">
-											<path
-												d="M34 0H14C12.4087 0 10.8826 0.632141 9.75736 1.75736C8.63214 2.88258 8 4.4087 8 6V8H6C4.4087 8 2.88258 8.63214 1.75736 9.75736C0.632141 10.8826 0 12.4087 0 14V34C0 35.5913 0.632141 37.1174 1.75736 38.2426C2.88258 39.3679 4.4087 40 6 40H26C27.5913 40 29.1174 39.3679 30.2426 38.2426C31.3679 37.1174 32 35.5913 32 34V32H34C35.5913 32 37.1174 31.3679 38.2426 30.2426C39.3679 29.1174 40 27.5913 40 26V6C40 4.4087 39.3679 2.88258 38.2426 1.75736C37.1174 0.632141 35.5913 0 34 0ZM28 34C28 34.5304 27.7893 35.0391 27.4142 35.4142C27.0391 35.7893 26.5304 36 26 36H6C5.46957 36 4.96086 35.7893 4.58579 35.4142C4.21071 35.0391 4 34.5304 4 34V20H28V34ZM28 16H4V14C4 13.4696 4.21071 12.9609 4.58579 12.5858C4.96086 12.2107 5.46957 12 6 12H26C26.5304 12 27.0391 12.2107 27.4142 12.5858C27.7893 12.9609 28 13.4696 28 14V16ZM36 26C36 26.5304 35.7893 27.0391 35.4142 27.4142C35.0391 27.7893 34.5304 28 34 28H32V14C31.9946 13.3177 31.8728 12.6413 31.64 12H36V26ZM36 8H12V6C12 5.46957 12.2107 4.96086 12.5858 4.58579C12.9609 4.21071 13.4696 4 14 4H34C34.5304 4 35.0391 4.21071 35.4142 4.58579C35.7893 4.96086 36 5.46957 36 6V8Z"
-												fill="#242628"/>
-										</svg> <?php esc_html_e( '19+ Starter Sites', 'inspiro' ); ?> </h4>
-									<p class="about">
-										<?php esc_html_e( 'With the built-in demo importer, you can quickly import fully configured demos to help you get started. The theme includes beautiful demos to create a business or portfolio website.', 'inspiro' ); ?>
-									</p>
-									<p class="section_footer">
-										<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/starter-sites/'. INSPIRO_MARKETING_UTM_CODE_STARTER_SITE, 'inspiro' ) ); ?>"
-										   target="_blank" class="button button-primary">
-											<?php esc_html_e( 'Inspiro Premium Demos &#8599;', 'inspiro' ); ?>
-										</a>
-
-										<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro-pro/starter-sites/'. INSPIRO_MARKETING_UTM_CODE_STARTER_SITE, 'inspiro' ) ); ?>"
-										   target="_blank" class="button button-primary">
-											<?php esc_html_e( 'Inspiro PRO Demos &#8599;', 'inspiro' ); ?>
-										</a>
-
-									</p>
-								</div>
-
-								<div class="section premium-feature">
-
-									<h4>
-										<svg width="24" height="24" viewBox="0 0 40 40" fill="none"
-											 xmlns="https://www.w3.org/2000/svg">
-											<path
-												d="M32.8441 0H7.15594C3.21016 0 0 3.21016 0 7.15594V32.8441C0 36.7898 3.21016 40 7.15594 40H32.8441C36.7898 40 40 36.7898 40 32.8441V7.15594C40 3.21016 36.7898 0 32.8441 0ZM37.6562 32.8441C37.6562 35.4975 35.4975 37.6562 32.8441 37.6562H7.15594C4.5025 37.6562 2.34375 35.4975 2.34375 32.8441V7.15594C2.34375 4.5025 4.5025 2.34375 7.15594 2.34375H32.8441C35.4975 2.34375 37.6562 4.5025 37.6562 7.15594V32.8441Z"
-												fill="#000"/>
-											<path
-												d="M33.8079 8.78773H15.9594C15.4687 7.33031 14.0902 6.27734 12.4694 6.27734C10.8486 6.27734 9.47008 7.33031 8.97938 8.78773H6.19336C5.54617 8.78773 5.02148 9.31242 5.02148 9.95961C5.02148 10.6068 5.54617 11.1315 6.19336 11.1315H8.97945C9.47016 12.5889 10.8487 13.6419 12.4695 13.6419C14.0902 13.6419 15.4687 12.5889 15.9595 11.1315H33.808C34.4552 11.1315 34.9798 10.6068 34.9798 9.95961C34.9798 9.31242 34.4552 8.78773 33.8079 8.78773V8.78773ZM12.4694 11.2981C11.7313 11.2981 11.1309 10.6977 11.1309 9.95961C11.1309 9.22156 11.7313 8.62109 12.4694 8.62109C13.2074 8.62109 13.8079 9.22156 13.8079 9.95961C13.8079 10.6977 13.2074 11.2981 12.4694 11.2981Z"
-												fill="#000"/>
-											<path
-												d="M33.8079 18.8268H31.0218C30.5311 17.3694 29.1525 16.3164 27.5318 16.3164C25.9111 16.3164 24.5326 17.3694 24.0419 18.8268H6.19336C5.54617 18.8268 5.02148 19.3515 5.02148 19.9987C5.02148 20.6459 5.54617 21.1705 6.19336 21.1705H24.0419C24.5326 22.628 25.9112 23.6809 27.5319 23.6809C29.1526 23.6809 30.5312 22.628 31.0219 21.1705H33.808C34.4552 21.1705 34.9798 20.6459 34.9798 19.9987C34.9798 19.3515 34.4552 18.8268 33.8079 18.8268ZM27.5319 21.3372C26.7938 21.3372 26.1934 20.7367 26.1934 19.9987C26.1934 19.2606 26.7938 18.6602 27.5319 18.6602C28.2699 18.6602 28.8704 19.2606 28.8704 19.9987C28.8704 20.7367 28.2699 21.3372 27.5319 21.3372Z"
-												fill="#000"/>
-											<path
-												d="M33.8079 28.8698H20.9802C20.4895 27.4123 19.111 26.3594 17.4902 26.3594C15.8695 26.3594 14.4909 27.4123 14.0002 28.8698H6.19336C5.54617 28.8698 5.02148 29.3945 5.02148 30.0416C5.02148 30.6888 5.54617 31.2135 6.19336 31.2135H14.0002C14.4909 32.6709 15.8695 33.7239 17.4902 33.7239C19.111 33.7239 20.4895 32.6709 20.9802 31.2135H33.808C34.4552 31.2135 34.9798 30.6888 34.9798 30.0416C34.9798 29.3945 34.4552 28.8698 33.8079 28.8698ZM17.4902 31.3802C16.7522 31.3802 16.1517 30.7798 16.1517 30.0417C16.1517 29.3037 16.7522 28.7032 17.4902 28.7032C18.2283 28.7032 18.8288 29.3036 18.8288 30.0416C18.8288 30.7797 18.2283 31.3802 17.4902 31.3802V31.3802Z"
-												fill="#000"/>
-										</svg> <?php esc_html_e( 'Theme Options Panel', 'inspiro' ); ?> </h4>
-									<p class="about">
-										<?php esc_html_e( 'Using the Theme Options panel, you can configure different features and functionalities in the theme as you want. Additional customization options are available in the Customizer, while different options for features like Portfolio can be found on the Theme Options page.', 'inspiro' ); ?>
-									</p>
-
-								</div>
-
-								<div class="section premium-feature">
-
-									<h4>
-										<svg width="26" height="26" viewBox="0 0 40 58" fill="none"
-											 xmlns="https://www.w3.org/2000/svg" fill="none">
-											<rect x="9.23047" y="50.2578" width="7.69231" height="7.69231"
-												  transform="rotate(90 9.23047 50.2578)" fill="#3496FF"></rect>
-											<rect x="16.9219" y="50.2578" width="7.69231" height="7.69231"
-												  transform="rotate(90 16.9219 50.2578)" fill="#22BB66"></rect>
-											<rect x="24.6172" y="50.2578" width="7.69231" height="7.69231"
-												  transform="rotate(90 24.6172 50.2578)" fill="#F2DD19"></rect>
-											<rect x="32.3086" y="50.2578" width="7.69231" height="7.69231"
-												  transform="rotate(90 32.3086 50.2578)" fill="#F29B19"></rect>
-											<rect x="40" y="50.2578" width="7.69231" height="7.69231"
-												  transform="rotate(90 40 50.2578)" fill="#FF4141"></rect>
-											<path
-												d="M8.23122 39.4166L5.81078 35.6272C5.51551 35.1649 5.01186 34.8887 4.46335 34.8887C3.91484 34.8887 3.41118 35.1649 3.11591 35.6268L0.695824 39.4166C-0.424861 41.1709 -0.169855 43.5126 1.30226 44.9844C2.14675 45.8289 3.2692 46.294 4.46335 46.294C5.65785 46.294 6.7803 45.8289 7.62479 44.9847C9.0969 43.5126 9.35191 41.1713 8.23122 39.4166ZM6.34623 43.7058C5.84328 44.2088 5.17468 44.4857 4.46335 44.4857C3.75237 44.4857 3.08377 44.2088 2.58082 43.7058C1.70419 42.8292 1.55232 41.4348 2.2195 40.39L4.46335 36.8768L6.70719 40.39C7.37437 41.4348 7.2225 42.8292 6.34623 43.7058Z"
-												fill="#000"></path>
-											<path
-												d="M37.9323 5.94885C37.9323 4.35983 37.3135 2.86582 36.1897 1.74231C35.0661 0.618796 33.5721 0 31.9831 0C30.3941 0 28.9004 0.618796 27.7766 1.74231L26.3525 3.16674C25.3042 2.29682 23.7417 2.35298 22.7598 3.33486C22.2551 3.83957 21.9775 4.51029 21.9775 5.22374C21.9775 5.85349 22.194 6.44968 22.5913 6.9279L7.83769 21.6812L6.1964 23.3225C5.62493 23.8939 5.39323 24.7356 5.59208 25.5193L6.01132 27.173C6.15931 27.7565 5.98695 28.3834 5.56135 28.809L4.58513 29.7852C4.10937 30.261 3.84766 30.8932 3.84766 31.566C3.84766 32.2389 4.10937 32.8714 4.58513 33.3468C5.06088 33.8226 5.69345 34.0847 6.36628 34.0847C7.03877 34.0847 7.67134 33.8226 8.14709 33.3468L9.12297 32.371C9.54856 31.9454 10.1755 31.773 10.759 31.9206L12.413 32.3402C13.1967 32.5384 14.0384 32.307 14.6095 31.7356L16.2494 30.096C16.2497 30.0953 16.2504 30.095 16.2511 30.0943L31.0044 15.341C31.4826 15.7383 32.0788 15.9548 32.7086 15.9548C33.422 15.9548 34.0927 15.6769 34.5975 15.1725C35.1018 14.6678 35.3798 13.9971 35.3798 13.2836C35.3798 12.6539 35.1633 12.0577 34.7659 11.5795L36.19 10.1554C37.3135 9.03188 37.9323 7.53787 37.9323 5.94885ZM19.4843 24.3036L13.6287 18.448L16.1695 15.9068L22.0252 21.7628L19.4843 24.3036ZM12.3497 19.7266L18.2054 25.5822L15.6115 28.1761L9.75589 22.3205L12.3497 19.7266ZM12.8573 30.5873L11.2033 30.1677C10.0052 29.864 8.7182 30.2182 7.8444 31.092L6.86817 32.0683C6.59127 32.3452 6.14059 32.3452 5.86404 32.0683C5.72983 31.9341 5.65601 31.7557 5.65601 31.566C5.65601 31.3764 5.72983 31.198 5.86404 31.0638L6.83992 30.0879C7.71407 29.2138 8.06797 27.9267 7.76423 26.7287L7.34499 25.0747C7.30225 24.9058 7.35205 24.7247 7.47531 24.6014L8.47733 23.5994L14.3329 29.455L13.3309 30.457C13.2077 30.5803 13.0261 30.6301 12.8573 30.5873ZM33.3185 13.8936C32.9819 14.2302 32.4348 14.2302 32.0982 13.8936L30.0547 11.85C29.7015 11.4972 29.1293 11.4972 28.7761 11.85C28.4229 12.2032 28.4229 12.7757 28.7761 13.1289L29.7174 14.0702L23.3037 20.4839L17.4481 14.6282L23.8618 8.21459L23.9727 8.32549C24.3255 8.67834 24.898 8.67834 25.2512 8.32549C25.6044 7.9723 25.6044 7.39977 25.2512 7.04658L24.0384 5.83371C23.7018 5.49747 23.7018 4.95002 24.0384 4.61342C24.3746 4.27718 24.922 4.27718 25.2586 4.61342L25.7181 5.07328C25.7192 5.07434 25.7203 5.0754 25.7213 5.07646L32.8555 12.211H32.8559L33.3185 12.6737C33.6551 13.0103 33.6551 13.5574 33.3185 13.8936ZM34.9111 8.87683L33.4951 10.2928L27.6395 4.43718L29.0555 3.02122C29.8375 2.23925 30.8773 1.80835 31.9831 1.80835C33.0893 1.80835 34.1291 2.23925 34.9111 3.02122C35.6931 3.8032 36.124 4.843 36.124 5.94885C36.124 7.05505 35.6931 8.09451 34.9111 8.87683Z"
-												fill="#000"></path>
-											<path
-												d="M27.1073 9.27539C26.6079 9.27539 26.2031 9.68015 26.2031 10.1796C26.2031 10.6786 26.6079 11.0837 27.1073 11.0837H27.1094C27.6088 11.0837 28.0125 10.6786 28.0125 10.1796C28.0125 9.68015 27.6067 9.27539 27.1073 9.27539Z"
-												fill="#000"></path>
-										</svg> <?php esc_html_e( 'Customize Every Detail', 'inspiro' ); ?> </h4>
-									<p class="about">
-										<?php esc_html_e( 'No more custom CSS! The Premium version gives you access to numerous customization options, and you can change the theme\'s color and font styles of each element.', 'inspiro' ); ?>
-									</p>
-
-								</div>
-
-								<div class="section premium-feature">
-									<h4>
-										<svg id="Icons" width="26" style="enable-background:new 0 0 32 32;"
-											 version="1.1" viewBox="0 0 32 32" xml:space="preserve"
-											 xmlns="https://www.w3.org/2000/svg"
-											 xmlns:xlink="https://www.w3.org/1999/xlink"><style type="text/css">.st0 {
-													fill: none;
-													stroke: #000000;
-													stroke-width: 2;
-													stroke-linecap: round;
-													stroke-linejoin: round;
-													stroke-miterlimit: 10;
-												}</style>
-											<line class="st0" x1="3" x2="29" y1="11" y2="11"/>
-											<g>
-												<path
-													d="M7,9C6.7,9,6.5,8.9,6.3,8.7C6.1,8.5,6,8.3,6,8c0-0.3,0.1-0.5,0.3-0.7c0,0,0.1-0.1,0.1-0.1c0.1,0,0.1-0.1,0.2-0.1   C6.7,7,6.7,7,6.8,7c0.1,0,0.3,0,0.4,0c0.1,0,0.1,0,0.2,0.1c0.1,0,0.1,0.1,0.2,0.1c0,0,0.1,0.1,0.1,0.1c0.1,0.1,0.2,0.2,0.2,0.3   C8,7.7,8,7.9,8,8c0,0.1,0,0.3-0.1,0.4C7.9,8.5,7.8,8.6,7.7,8.7C7.5,8.9,7.3,9,7,9z"/>
-											</g>
-											<g>
-												<path
-													d="M10,9C9.7,9,9.5,8.9,9.3,8.7C9.1,8.5,9,8.3,9,8c0-0.1,0-0.3,0.1-0.4c0.1-0.1,0.1-0.2,0.2-0.3c0.1-0.1,0.2-0.2,0.3-0.2   C10,6.9,10.4,7,10.7,7.3c0.1,0.1,0.2,0.2,0.2,0.3C11,7.7,11,7.9,11,8c0,0.3-0.1,0.5-0.3,0.7C10.5,8.9,10.3,9,10,9z"/>
-											</g>
-											<g>
-												<path
-													d="M13,9c-0.1,0-0.3,0-0.4-0.1c-0.1-0.1-0.2-0.1-0.3-0.2c-0.1-0.1-0.2-0.2-0.2-0.3C12,8.3,12,8.1,12,8c0-0.1,0-0.3,0.1-0.4   c0.1-0.1,0.1-0.2,0.2-0.3c0.4-0.4,1-0.4,1.4,0c0.1,0.1,0.2,0.2,0.2,0.3C14,7.7,14,7.9,14,8c0,0.1,0,0.3-0.1,0.4   c-0.1,0.1-0.1,0.2-0.2,0.3C13.5,8.9,13.3,9,13,9z"/>
-											</g>
-											<path class="st0"
-												  d="M27,5H5C3.9,5,3,5.9,3,7v18c0,1.1,0.9,2,2,2h22c1.1,0,2-0.9,2-2V7C29,5.9,28.1,5,27,5z"/>
-											<line class="st0" x1="3" x2="19" y1="19" y2="19"/>
-											<line class="st0" x1="19" x2="19" y1="11"
-												  y2="27"/></svg> <?php esc_html_e( 'Multiple Header & Footer Layouts', 'inspiro' ); ?>
-									</h4>
-									<p class="about">
-										<?php esc_html_e( 'Upgrading to the Premium version, you will get access to 6 Header Styles and 9 Footer Layouts.', 'inspiro' ); ?>
-									</p>
-
-								</div>
-
-
-							</div>
-							<br>
-							<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-table', 'inspiro' ) ); ?>"
-							   target="_blank" class="button button-large button-primary">
-								<?php esc_html_e( 'Get Inspiro Premium Today &#8599;', 'inspiro' ); ?>
-							</a>
-							<a href="https://www.wpzoom.com/themes/inspiro/starter-sites/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
+                         <ul>
+                            <li>
+								<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								19+ Starter Sites
+							</li>
+                            <li>
+								<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								Portfolio with Video Integration
+							</li>
+                            <li>
+								<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								Video Slideshow
+							</li>
+                            <li>
+								<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								Video Backgrounds
+							</li>
+                            <li>
+								<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								Advanced WooCommerce Integration
+							</li>
+                            <li>
+								<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								Video Background on Hover
+							</li>
+                            <li>
+								<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								Custom Elementor Widgets
+							</li>
+                            <li>
+								<svg width="18" height="18" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14.6706 6.08301L9.00365 11.75L6.1709 8.91651" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M15.75 9.5C15.75 13.2283 12.7283 16.25 9 16.25C5.27175 16.25 2.25 13.2283 2.25 9.5C2.25 5.77175 5.27175 2.75 9 2.75C10.0897 2.75 11.1158 3.01475 12.027 3.473" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								...and much more
+							</li>
+                        </ul>
+                            
+                        <div class="wpz-onboard_content-side-section-button">
+                            <a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
                                 title="Inspiro Premium" target="_blank"
-                                class="button button-secondary-gray">
+                                class="button">
+								<?php esc_html_e( 'Get Inspiro Premium &#8599;', 'inspiro' ); ?>
+							</a>
+                            <a href="https://www.wpzoom.com/themes/inspiro/starter-sites/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
+                                title="Inspiro Premium" target="_blank"
+                                class="button button-starter">
 								<?php esc_html_e( 'View Starter Sites &#8599;', 'inspiro' ); ?>
 							</a>
-                          
+                        </div>
+                    </div>
+                </div>
 
+				<div class="theme-info-wrap">
+					<h3 class="wpz-onboard_content-main-title">
+						<?php esc_html_e( 'Premium Features', 'inspiro' ); ?>
+					</h3>
+					<div class="wpz-grid-wrap three">
+						<div class="section premium-feature">
+							<h4>
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M6.55 18.65C6.55 19.1471 6.14706 19.55 5.65 19.55C5.15294 19.55 4.75 19.1471 4.75 18.65C4.75 18.1529 5.15294 17.75 5.65 17.75C6.14706 17.75 6.55 18.1529 6.55 18.65Z" fill="#242628"/>
+									<path d="M10.55 18.65C10.55 19.1471 10.1471 19.55 9.65 19.55C9.15294 19.55 8.75 19.1471 8.75 18.65C8.75 18.1529 9.15294 17.75 9.65 17.75C10.1471 17.75 10.55 18.1529 10.55 18.65Z" fill="#242628"/>
+									<path d="M14.55 18.65C14.55 19.1471 14.1471 19.55 13.65 19.55C13.1529 19.55 12.75 19.1471 12.75 18.65C12.75 18.1529 13.1529 17.75 13.65 17.75C14.1471 17.75 14.55 18.1529 14.55 18.65Z" fill="#242628"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0 4.75C0 2.12665 2.12665 0 4.75 0H14.75C17.3734 0 19.5 2.12665 19.5 4.75V10.75C19.5 13.3734 17.3734 15.5 14.75 15.5H4.75C2.12665 15.5 0 13.3734 0 10.75V4.75ZM4.75 1.5C2.95507 1.5 1.5 2.95507 1.5 4.75V10.75C1.5 12.5449 2.95507 14 4.75 14H14.75C16.5449 14 18 12.5449 18 10.75V4.75C18 2.95507 16.5449 1.5 14.75 1.5H4.75Z" fill="#242628"/>
+								</svg>
+								<?php esc_html_e( 'Advanced Slideshow', 'inspiro' ); ?>
+							</h4>
+							<p class="about">
+								<?php esc_html_e( 'Create a fully working slideshow with videos from YouTube or Vimeo, plus mobile video options, popups, and more.', 'inspiro' ); ?>
+							</p>
+						</div>
+						
+						<div class="section premium-feature">
+							<h4>
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M3 0.25C1.48054 0.25 0.25 1.48203 0.25 3V13C0.25 14.5192 1.48079 15.75 3 15.75H4.89845C5.12126 16.7058 5.84908 17.5108 6.86495 17.7829L13.8549 19.6559C15.3222 20.0492 16.8293 19.1784 17.2225 17.7116L19.6555 8.63157C20.0486 7.16565 19.1784 5.65629 17.7112 5.26302L12.987 3.99698V3C12.987 1.48079 11.7562 0.25 10.237 0.25H3ZM11.487 4.55707C11.4868 4.56766 11.4868 4.57823 11.487 4.58877V13C11.487 13.6908 10.9278 14.25 10.237 14.25H3C2.30921 14.25 1.75 13.6908 1.75 13V3C1.75 2.30997 2.30946 1.75 3 1.75H10.237C10.9278 1.75 11.487 2.30921 11.487 3V4.55707ZM12.987 5.54991L17.3229 6.71189C17.9896 6.89061 18.3853 7.57734 18.2066 8.24334L15.7736 17.3233C15.5947 17.9904 14.9098 18.3857 14.2431 18.207L7.25308 16.334C6.91913 16.2445 6.65304 16.0279 6.49328 15.75H10.237C11.7562 15.75 12.987 14.5192 12.987 13V5.54991Z" fill="#242628"/>
+								</svg>
+								<?php esc_html_e( 'Advanced Portfolio', 'inspiro' ); ?>
+							</h4>
+							<p class="about">
+								<?php esc_html_e( 'Showcase your portfolio with multiple templates, a custom Elementor widget, and advanced video features for a polished presentation.', 'inspiro' ); ?>
+							</p>
+						</div>
+
+						<div class="section premium-feature">
+							<h4>
+								<svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M16.5438 6.24756C16.837 5.98685 17.0352 5.59987 17.1462 5.07858C17.1858 4.89692 17.2017 4.69948 17.2017 4.49413C17.2017 4.26507 17.1541 4.02023 17.059 3.77538C16.9401 3.46735 16.7816 3.30149 16.5913 3.262C16.3059 3.20671 16.0285 3.36467 15.7669 3.75169C15.5529 4.05184 15.4181 4.36777 15.3468 4.6916C15.3072 4.87326 15.2913 5.07072 15.2913 5.26817C15.2913 5.49723 15.3389 5.74207 15.434 5.98692C15.5529 6.29495 15.7114 6.46081 15.9017 6.5003C16.0999 6.53979 16.3139 6.45291 16.5438 6.24756Z" fill="#242628"/>
+									<path d="M11.5736 6.24756C11.8669 5.98685 12.0651 5.59987 12.1761 5.07858C12.2157 4.89692 12.2395 4.69948 12.2316 4.49413C12.2316 4.26507 12.184 4.02023 12.0889 3.77538C11.97 3.46735 11.8114 3.30149 11.6212 3.262C11.3358 3.20671 11.0584 3.36467 10.7968 3.75169C10.5828 4.05184 10.448 4.36777 10.3767 4.6916C10.337 4.87326 10.3212 5.07072 10.3212 5.26817C10.3212 5.49723 10.3688 5.74207 10.4639 5.98692C10.5828 6.29495 10.7413 6.46081 10.9316 6.5003C11.1297 6.53979 11.3438 6.45291 11.5736 6.24756Z" fill="#242628"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M17.6823 0H1.80974C0.805269 0 -0.007914 0.818176 5.81199e-05 1.81114V7.84819C5.81199e-05 8.84912 0.813267 9.65933 1.81774 9.65933H9.3355L12.7715 11.5657L11.9902 9.65933H17.6823C18.6869 9.65933 19.5 8.84905 19.5 7.84819V1.81114C19.5 0.810206 18.6868 0 17.6823 0ZM1.60931 1.4059C1.38736 1.42169 1.22089 1.50068 1.10992 1.65075C0.998947 1.79292 0.951478 1.97456 0.983185 2.17992C1.45088 5.14174 1.88686 7.13997 2.29113 8.17469C2.44966 8.5538 2.63198 8.73547 2.84601 8.71967C3.17896 8.69599 3.57529 8.23787 4.04297 7.34539C4.2887 6.83991 4.66916 6.08162 5.1844 5.07067C5.61241 6.56349 6.19901 7.68502 6.9362 8.43536C7.1423 8.64861 7.35632 8.74339 7.56241 8.72759C7.74472 8.7118 7.88741 8.61702 7.98253 8.44326C8.0618 8.29319 8.09351 8.11942 8.07765 7.92197C8.03009 7.20322 8.10143 6.20016 8.2996 4.91271C8.50568 3.58587 8.75934 2.63014 9.06848 2.06146C9.1319 1.94299 9.15568 1.82452 9.14775 1.68235C9.1319 1.50069 9.05263 1.35062 8.90202 1.23215C8.75141 1.11367 8.58495 1.05839 8.40263 1.07418C8.17275 1.08998 7.99837 1.20056 7.87946 1.42171C7.38797 2.31426 7.03919 3.75958 6.83309 5.76578C6.53187 5.00756 6.27821 4.11509 6.08004 3.06459C5.99285 2.59858 5.77883 2.37743 5.43005 2.40113C5.19224 2.41692 4.99407 2.57489 4.83554 2.87503L3.09958 6.1686C2.81418 5.02331 2.54467 3.62535 2.29894 1.97458C2.24345 1.56387 2.01357 1.37431 1.60931 1.4059ZM16.8767 1.97452C17.4395 2.093 17.8596 2.39317 18.145 2.89076C18.3986 3.3173 18.5334 3.83067 18.5254 4.44673C18.5254 5.2602 18.3193 6.00267 17.9071 6.68192C17.4315 7.47176 16.8132 7.86668 16.0444 7.86668C15.9096 7.86668 15.7669 7.85088 15.6163 7.81929C15.0535 7.70081 14.6334 7.40065 14.3481 6.90305C14.0944 6.46862 13.9676 5.94735 13.9676 5.33918C13.9676 4.52571 14.1737 3.78325 14.5859 3.1119C15.0694 2.32205 15.6877 1.92713 16.4486 1.92713C16.5834 1.92713 16.7261 1.94293 16.8767 1.97452ZM11.9145 1.97452C12.4693 2.093 12.8974 2.39317 13.1827 2.89076C13.4364 3.3173 13.5632 3.83067 13.5632 4.44673C13.5632 5.2602 13.3571 6.00267 12.9449 6.68192C12.4693 7.47176 11.851 7.86668 11.0822 7.86668C10.9474 7.86668 10.8047 7.85088 10.6541 7.81929C10.0913 7.70081 9.67122 7.40065 9.38586 6.90305C9.1322 6.46862 9.00537 5.94735 9.00537 5.33918C9.00537 4.52571 9.21147 3.78325 9.62366 3.1119C10.1072 2.32205 10.7255 1.92713 11.4864 1.92713C11.6212 1.92713 11.7639 1.94293 11.9145 1.97452Z" fill="#242628"/>
+								</svg>
+								<?php esc_html_e( 'WooCommerce Features', 'inspiro' ); ?>
+							</h4>
+							<p class="about">
+								<?php esc_html_e( 'WooCommerce integration offers extensive customization options for shop pages and product displays, tailored to your needs.', 'inspiro' ); ?>
+							</p>
+						</div>
+
+						<div class="section premium-feature">
+							<h4>
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M9.75003 0C4.3647 0 0 4.36468 0 9.74996C0 15.1335 4.3647 19.5 9.75003 19.5C15.1353 19.5 19.5 15.1352 19.5 9.74996C19.4983 4.36468 15.1336 0 9.75003 0ZM7.31297 13.811H5.68884V5.68703H7.31297V13.811ZM13.8112 13.811H8.93709V12.187H13.8112V13.811ZM13.8112 10.5611H8.93709V8.93703H13.8112V10.5611ZM13.8112 7.31115H8.93709V5.68703H13.8112V7.31115Z" fill="#242628"/>
+								</svg>
+								<?php esc_html_e( 'Custom Elementor Modules', 'inspiro' ); ?>
+							</h4>
+							<p class="about">
+								<?php esc_html_e( 'Enhance your site with exclusive Elementor modules like Portfolio Showcase and Slideshow widgets for a dynamic experience.', 'inspiro' ); ?>
+							</p>
+						</div>
+
+						<div class="section premium-feature">
+							<h4>
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M8.22467 8.71967C8.51756 8.42678 8.99244 8.42678 9.28533 8.71967L9.29033 8.72467C9.58322 9.01756 9.58322 9.49244 9.29033 9.78533L9.28533 9.79033C8.99244 10.0832 8.51756 10.0832 8.22467 9.79033L8.21967 9.78533C7.92678 9.49244 7.92678 9.01756 8.21967 8.72467L8.22467 8.71967Z" fill="#242628"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M3.22467 8.71967C3.51756 8.42678 3.99244 8.42678 4.28533 8.71967L4.29033 8.72467C4.58322 9.01756 4.58322 9.49244 4.29033 9.78533L4.28533 9.79033C3.99244 10.0832 3.51756 10.0832 3.22467 9.79033L3.21967 9.78533C2.92678 9.49244 2.92678 9.01756 3.21967 8.72467L3.22467 8.71967Z" fill="#242628"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M5.72467 8.71967C6.01756 8.42678 6.49244 8.42678 6.78533 8.71967L6.79033 8.72467C7.08322 9.01756 7.08322 9.49244 6.79033 9.78533L6.78533 9.79033C6.49244 10.0832 6.01756 10.0832 5.72467 9.79033L5.71967 9.78533C5.42678 9.49244 5.42678 9.01756 5.71967 8.72467L5.72467 8.71967Z" fill="#242628"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M16.73 3.10293V2.53846C16.73 1.13651 15.846 0 14.7556 0H4.70434C3.61393 0 2.72998 1.13651 2.72998 2.53846V3.11543C1.72746 3.43813 1 4.40092 1 5.53846V6.62858C0.389248 7.13298 0 7.89603 0 8.75V16.75C0 18.2688 1.23122 19.5 2.75 19.5H16.75C18.2688 19.5 19.5 18.2688 19.5 16.75V8.75C19.5 7.89603 19.1108 7.13298 18.5 6.62858V5.53846C18.5 4.38583 17.7531 3.41262 16.73 3.10293ZM14.7556 1.38462H4.70434C4.67125 1.38462 4.55307 1.39831 4.40121 1.59357C4.24789 1.79069 4.1146 2.12014 4.1146 2.53846V3H15.3454V2.53846C15.3454 2.12014 15.2121 1.79069 15.0588 1.59357C14.9069 1.39831 14.7887 1.38462 14.7556 1.38462ZM3.46795 4.38462H16.0321C16.5938 4.38462 17.1154 4.86418 17.1154 5.53846V6.02406C16.9958 6.00819 16.8739 6 16.75 6H2.75C2.62612 6 2.50416 6.00819 2.38462 6.02406V5.53846C2.38462 4.86418 2.90615 4.38462 3.46795 4.38462ZM1.5 8.75C1.5 8.05964 2.05964 7.5 2.75 7.5H16.75C17.4404 7.5 18 8.05964 18 8.75V11H1.5V8.75ZM18 12.5V16.75C18 17.4404 17.4404 18 16.75 18H2.75C2.05964 18 1.5 17.4404 1.5 16.75V12.5H18Z" fill="#242628"/>
+								</svg>
+								<?php esc_html_e( '19+ Starter Sites', 'inspiro' ); ?> 
+							</h4>
+							<p class="about">
+								<?php esc_html_e( 'Import demos quickly with the built-in demo importer, featuring beautiful templates for business or portfolio websites.', 'inspiro' ); ?>
+							</p>
+						</div>
+
+						<div class="section premium-feature">
+							<h4>
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M7.38123 7.38076C8.07576 6.68623 9.01776 6.29604 9.99999 6.29604C10.9822 6.29604 11.9242 6.68623 12.6187 7.38076C13.3133 8.0753 13.7035 9.0173 13.7035 9.99953C13.7035 10.9818 13.3133 11.9237 12.6187 12.6183C11.9242 13.3128 10.9822 13.703 9.99999 13.703C9.01776 13.703 8.07576 13.3128 7.38123 12.6183C6.68669 11.9237 6.2965 10.9818 6.2965 9.99953C6.2965 9.0173 6.68669 8.0753 7.38123 7.38076ZM9.99999 7.6565C9.37858 7.6565 8.78262 7.90336 8.34322 8.34276C7.90382 8.78216 7.65696 9.37812 7.65696 9.99953C7.65696 10.6209 7.90382 11.2169 8.34322 11.6563C8.78262 12.0957 9.37858 12.3425 9.99999 12.3425C10.6214 12.3425 11.2174 12.0957 11.6568 11.6563C12.0962 11.2169 12.343 10.6209 12.343 9.99953C12.343 9.37812 12.0962 8.78216 11.6568 8.34276C11.2174 7.90336 10.6214 7.6565 9.99999 7.6565Z" fill="#242628"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M8.99241 0.25C8.7708 0.249937 8.55135 0.293514 8.34659 0.378245L8.99241 0.25ZM8.99208 1.61046C8.94908 1.61044 8.9065 1.6189 8.86676 1.63534C8.82703 1.65178 8.79092 1.67589 8.7605 1.70629C8.73009 1.73669 8.70596 1.77279 8.6895 1.81251C8.67304 1.85224 8.66457 1.89482 8.66457 1.93782V2.5328L8.66456 2.53475C8.66356 2.88388 8.55422 3.22409 8.35164 3.50844C8.15623 3.78271 7.88335 3.99196 7.56841 4.10963C7.26066 4.24799 6.91818 4.29097 6.58528 4.23252C6.24111 4.17209 5.92424 4.00624 5.67844 3.75794L5.26343 3.34342C5.23312 3.31277 5.19704 3.28843 5.15726 3.27182C5.11749 3.25521 5.07481 3.24666 5.0317 3.24666C4.9886 3.24666 4.94592 3.25521 4.90614 3.27182C4.86636 3.28843 4.83027 3.31276 4.79996 3.34341L4.79551 3.34791L3.354 4.77874C3.32328 4.80921 3.29875 4.84562 3.28211 4.88556C3.26547 4.92551 3.2569 4.96836 3.2569 5.01163C3.2569 5.0549 3.26547 5.09775 3.28211 5.13769C3.29875 5.17764 3.32313 5.2139 3.35386 5.24437L3.35551 5.24601L3.7678 5.65782C4.01627 5.90367 4.18222 6.22066 4.24267 6.56496C4.30111 6.8978 4.25816 7.24023 4.11985 7.54794C4.00226 7.86309 3.79296 8.13617 3.51856 8.33171C3.23404 8.53446 2.89358 8.64384 2.54421 8.64473L1.93782 8.64473C1.851 8.64473 1.76774 8.67922 1.70635 8.74062C1.64495 8.80201 1.61046 8.88527 1.61046 8.97209V10.9878C1.61046 11.0746 1.64495 11.1578 1.70635 11.2192C1.76774 11.2806 1.851 11.3151 1.93782 11.3151H2.53487C2.88409 11.3162 3.22438 11.4256 3.50873 11.6284C3.78297 11.8239 3.99215 12.0969 4.1097 12.4119C4.248 12.7196 4.29096 13.062 4.23252 13.3949C4.17207 13.7391 4.00617 14.0561 3.75778 14.3019L3.34611 14.7136L3.34411 14.7155C3.31343 14.746 3.28907 14.7822 3.27245 14.8221C3.25583 14.862 3.24727 14.9048 3.24727 14.948C3.24727 14.9912 3.25583 15.034 3.27245 15.0739C3.28907 15.1138 3.31343 15.15 3.34411 15.1804L3.34612 15.1824L4.76905 16.6053C4.79952 16.636 4.83577 16.6604 4.8757 16.677C4.91563 16.6937 4.95846 16.7022 5.00171 16.7022C5.04497 16.7022 5.08779 16.6937 5.12773 16.677C5.16766 16.6604 5.2039 16.636 5.23438 16.6053L5.23614 16.6036L5.64602 16.1937L5.64796 16.1918C5.89376 15.9435 6.21063 15.7776 6.5548 15.7172C6.88764 15.6587 7.23007 15.7017 7.53777 15.84C7.8528 15.9575 8.12579 16.1667 8.32132 16.441C8.52406 16.7253 8.63351 17.0656 8.63457 17.4148L8.63458 17.4169L8.63458 18.0622C8.63458 18.149 8.66906 18.2323 8.73046 18.2937C8.79185 18.355 8.87511 18.3895 8.96193 18.3895H10.9776C11.0644 18.3895 11.1477 18.355 11.2091 18.2937C11.2705 18.2323 11.305 18.149 11.305 18.0622V17.4672L11.305 17.4651C11.306 17.1159 11.4155 16.7756 11.6182 16.4913C11.8137 16.217 12.0867 16.0079 12.4017 15.8903C12.7095 15.752 13.0519 15.709 13.3847 15.7675C13.729 15.8279 14.046 15.9939 14.2918 16.2423L14.2935 16.244L14.7063 16.6567C14.7366 16.6874 14.7727 16.7118 14.8125 16.7284C14.8522 16.745 14.8949 16.7536 14.9381 16.7536C14.9812 16.7536 15.0239 16.745 15.0637 16.7284C15.1035 16.7118 15.1396 16.6874 15.1699 16.6568L15.1727 16.6539L16.5934 15.2332L16.5963 15.2303C16.627 15.2 16.6513 15.1639 16.6679 15.1241C16.6846 15.0843 16.6931 15.0417 16.6931 14.9985C16.6931 14.9554 16.6846 14.9127 16.6679 14.8729C16.6513 14.8331 16.627 14.797 16.5963 14.7667L16.5931 14.7636L16.1836 14.3535L16.1816 14.3515C15.9333 14.1057 15.7674 13.7889 15.707 13.4447C15.6486 13.1119 15.6915 12.7695 15.8298 12.4617C15.9474 12.1466 16.1567 11.8735 16.4311 11.678C16.7156 11.4752 17.0561 11.3658 17.4055 11.3649L17.4072 11.3649L18.0622 11.3649C18.149 11.3649 18.2323 11.3305 18.2937 11.2691C18.355 11.2077 18.3895 11.1244 18.3895 11.0376V8.99144C18.3895 8.90462 18.355 8.82136 18.2937 8.75996C18.2323 8.69857 18.149 8.66408 18.0622 8.66408H17.4672L17.4652 8.66408C17.1161 8.66308 16.7759 8.55374 16.4916 8.35116C16.2173 8.15575 16.008 7.88288 15.8904 7.56795C15.752 7.26019 15.709 6.9177 15.7675 6.58479C15.8279 6.24065 15.9937 5.92379 16.242 5.67799L16.244 5.67601L16.6536 5.26593L16.6566 5.26296C16.6872 5.23265 16.7116 5.19656 16.7282 5.15678C16.7448 5.117 16.7533 5.07432 16.7533 5.03122C16.7533 4.98811 16.7448 4.94544 16.7282 4.90566C16.7116 4.86588 16.6872 4.82979 16.6566 4.79948L16.6521 4.79503L15.2213 3.35352C15.1908 3.3228 15.1544 3.29827 15.1144 3.28163C15.0745 3.26499 15.0316 3.25642 14.9884 3.25642C14.9451 3.25642 14.9023 3.26499 14.8623 3.28163C14.8224 3.29827 14.7861 3.32265 14.7556 3.35337L14.754 3.35502L14.3438 3.76565L14.3421 3.76738C14.0963 4.01581 13.7793 4.18174 13.435 4.24219C13.1045 4.30022 12.7646 4.25828 12.4585 4.12226C12.1372 4.00841 11.8576 3.7997 11.657 3.52327C11.4477 3.23486 11.3351 2.88757 11.3354 2.53122V1.93782C11.3354 1.89482 11.327 1.85224 11.3105 1.81251C11.294 1.77279 11.2699 1.73669 11.2395 1.70629C11.2091 1.67589 11.173 1.65178 11.1332 1.63534C11.0935 1.6189 11.0509 1.61044 11.0079 1.61046H8.99208ZM11.0076 0.25C11.2292 0.249937 11.4486 0.293514 11.6534 0.378245C11.8583 0.463019 12.0444 0.587327 12.2013 0.744066C12.3581 0.900805 12.4825 1.0869 12.5673 1.29173C12.6522 1.49656 12.6959 1.71611 12.6959 1.93782V2.53183C12.6958 2.6007 12.7176 2.66843 12.758 2.72417C12.7985 2.77991 12.8556 2.8214 12.9211 2.84269C12.9491 2.85182 12.9766 2.86277 13.0033 2.87546C13.0644 2.90458 13.1331 2.91393 13.1998 2.90222C13.2665 2.89051 13.3278 2.85832 13.3754 2.81013L13.3783 2.80716L13.7898 2.39524L13.7908 2.39424C13.9475 2.2365 14.1339 2.11128 14.3392 2.02577C14.5449 1.94008 14.7655 1.89596 14.9884 1.89596C15.2112 1.89596 15.4319 1.94008 15.6376 2.02577C15.8433 2.11146 16.03 2.23703 16.187 2.39524L17.6157 3.83456C17.7731 3.99089 17.8981 4.17675 17.9836 4.38151C18.0696 4.58734 18.1138 4.80817 18.1138 5.03122C18.1138 5.25427 18.0696 5.4751 17.9836 5.68093C17.898 5.886 17.7727 6.07211 17.6149 6.22859L17.6132 6.23033L17.2031 6.64094L17.1995 6.64443C17.1514 6.69199 17.1192 6.75338 17.1075 6.82007C17.0957 6.88675 17.1051 6.95543 17.1342 7.01656C17.1448 7.03886 17.1542 7.06172 17.1624 7.08504C17.1846 7.14875 17.226 7.204 17.281 7.24315C17.3357 7.28217 17.4012 7.30329 17.4685 7.30362H18.0622C18.5098 7.30362 18.9391 7.48144 19.2556 7.79797C19.5722 8.1145 19.75 8.5438 19.75 8.99144V11.0376C19.75 11.4852 19.5722 11.9145 19.2556 12.2311C18.9391 12.5476 18.5098 12.7254 18.0622 12.7254H17.4082C17.341 12.7257 17.2754 12.7469 17.2207 12.7859C17.1657 12.8251 17.1242 12.8804 17.102 12.9441C17.0939 12.9676 17.0844 12.9905 17.0737 13.0129C17.0446 13.0741 17.0353 13.1428 17.047 13.2094C17.0587 13.2761 17.0909 13.3375 17.1391 13.3851L17.1426 13.3886L17.5525 13.799L17.5543 13.8007C17.7122 13.9572 17.8376 14.1434 17.9233 14.3486C18.0093 14.5545 18.0536 14.7754 18.0536 14.9985C18.0536 15.2217 18.0093 15.4426 17.9233 15.6485C17.8376 15.8537 17.7121 16.0399 17.5542 16.1964L17.5525 16.198L16.1376 17.613L16.1359 17.6147C15.9794 17.7726 15.7932 17.8981 15.588 17.9838C15.3821 18.0698 15.1612 18.114 14.9381 18.114C14.7149 18.114 14.494 18.0698 14.2881 17.9838C14.0829 17.8981 13.8967 17.7726 13.7402 17.6147L13.7386 17.613L13.3283 17.2028L13.3251 17.1995C13.2775 17.1514 13.2162 17.1192 13.1495 17.1075C13.0828 17.0957 13.0141 17.1051 12.953 17.1342C12.9306 17.1449 12.9076 17.1543 12.8842 17.1625C12.8204 17.1847 12.7651 17.2261 12.726 17.2811C12.6869 17.3358 12.6658 17.4013 12.6654 17.4685V18.0622C12.6654 18.5098 12.4876 18.9391 12.1711 19.2556C11.8545 19.5722 11.4252 19.75 10.9776 19.75H8.96193C8.5143 19.75 8.08499 19.5722 7.76846 19.2556C7.45193 18.9391 7.27411 18.5098 7.27411 18.0622V17.4182C7.27374 17.3509 7.2526 17.2855 7.21357 17.2308C7.17439 17.1758 7.11912 17.1344 7.05538 17.1122C7.03195 17.104 7.00898 17.0946 6.98657 17.0839C6.92544 17.0548 6.85676 17.0454 6.79007 17.0571C6.72338 17.0689 6.662 17.101 6.61444 17.1492L6.61124 17.1525L6.19989 17.5638L6.19882 17.5649C6.04211 17.7225 5.85583 17.8476 5.65065 17.933C5.44501 18.0186 5.22446 18.0627 5.00171 18.0627C4.77896 18.0627 4.55841 18.0186 4.35277 17.933C4.14761 17.8476 3.96135 17.7225 3.80464 17.5649L3.80353 17.5638L2.38612 16.1464L2.38503 16.1453C2.22733 15.9886 2.10213 15.8023 2.01663 15.5971C1.93093 15.3914 1.88681 15.1708 1.88681 14.948C1.88681 14.7252 1.93093 14.5045 2.01663 14.2988C2.10213 14.0936 2.22733 13.9073 2.38503 13.7506L2.38612 13.7496L2.80044 13.3352C2.84864 13.2877 2.88084 13.2263 2.89255 13.1596C2.90426 13.0929 2.89491 13.0243 2.86579 12.9631C2.85512 12.9407 2.84568 12.9177 2.83752 12.8943C2.81533 12.8306 2.7739 12.7753 2.71894 12.7361C2.66421 12.6971 2.59875 12.676 2.53154 12.6756H1.93782C1.49019 12.6756 1.06088 12.4978 0.744352 12.1812C0.427823 11.8647 0.25 11.4354 0.25 10.9878V8.97209C0.25 8.52445 0.427824 8.09515 0.744352 7.77862C1.06088 7.46209 1.49018 7.28427 1.93782 7.28427H2.54135C2.60865 7.28397 2.67422 7.26284 2.72904 7.22378C2.78402 7.1846 2.82548 7.1293 2.84768 7.06554C2.85584 7.0421 2.86528 7.01913 2.87595 6.99673C2.90506 6.9356 2.91442 6.86692 2.90271 6.80023C2.891 6.73354 2.85881 6.67216 2.81061 6.6246L2.80765 6.62168L2.39572 6.21021L2.39481 6.2093C2.23703 6.05255 2.11178 5.86616 2.02625 5.66084C1.94056 5.45512 1.89644 5.23448 1.89644 5.01163C1.89644 4.78878 1.94056 4.56813 2.02625 4.36242C2.11192 4.15677 2.23744 3.9701 2.39558 3.81319L3.83511 2.38428C3.99142 2.22688 4.17726 2.10185 4.38199 2.01638C4.58782 1.93044 4.80865 1.88619 5.0317 1.88619C5.25475 1.88619 5.47558 1.93044 5.68141 2.01638C5.8865 2.102 6.07264 2.22732 6.22912 2.38511L6.64493 2.80044C6.69249 2.84864 6.75386 2.88084 6.82055 2.89255C6.88724 2.90426 6.95592 2.89491 7.01705 2.86579C7.03935 2.85517 7.06221 2.84577 7.08553 2.83764C7.14924 2.81542 7.20448 2.77397 7.24363 2.71902C7.28264 2.66427 7.30375 2.59881 7.3041 2.5316V1.93782C7.3041 1.71611 7.34779 1.49656 7.43266 1.29173C7.51753 1.0869 7.64193 0.900805 7.79874 0.744066C7.95555 0.587327 8.14172 0.463019 8.34659 0.378245M11.0076 0.25H8.99241H11.0076Z" fill="#242628"/>
+								</svg>
+								<?php esc_html_e( 'Theme Options Panel', 'inspiro' ); ?>
+							</h4>
+							<p class="about">
+								<?php esc_html_e( 'Configure various features and functionalities of the theme through the Theme Options panel to suit your needs.', 'inspiro' ); ?>
+							</p>
+						</div>
+
+						<div class="section premium-feature">
+							<h4>
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M3 5.5H6.07" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M10.3238 3.73223C11.3001 4.70854 11.3001 6.29145 10.3238 7.26776C9.34748 8.24407 7.76457 8.24407 6.78826 7.26776C5.81195 6.29145 5.81195 4.70854 6.78826 3.73223C7.76457 2.75592 9.34748 2.75592 10.3238 3.73223" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M11.0601 5.5H21.0001" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M10.3238 3.73223C11.3001 4.70854 11.3001 6.29145 10.3238 7.26776C9.34748 8.24407 7.76457 8.24407 6.78826 7.26776C5.81195 6.29145 5.81195 4.70854 6.78826 3.73223C7.76457 2.75592 9.34748 2.75592 10.3238 3.73223" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M20.9999 12H17.9399" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M12.94 12H3" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M17.2119 10.2322C18.1882 11.2085 18.1882 12.7915 17.2119 13.7678C16.2355 14.7441 14.6526 14.7441 13.6763 13.7678C12.7 12.7915 12.7 11.2085 13.6763 10.2322C14.6526 9.25592 16.2355 9.25592 17.2119 10.2322" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M11.0601 18.5H21.0001" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M3 18.5H6.06" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M10.3238 16.7322C11.3001 17.7085 11.3001 19.2915 10.3238 20.2678C9.34748 21.2441 7.76457 21.2441 6.78826 20.2678C5.81195 19.2915 5.81195 17.7085 6.78826 16.7322C7.76457 15.7559 9.34748 15.7559 10.3238 16.7322" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								<?php esc_html_e( 'Advanced Customization', 'inspiro' ); ?>
+							</h4>
+							<p class="about">
+								<?php esc_html_e( 'Easily change the theme’s colors and fonts for each element without custom CSS, ensuring a seamless design process.', 'inspiro' ); ?>
+							</p>
+						</div>
+
+						<div class="section premium-feature">
+							<h4>
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.246582 9C0.246582 8.58579 0.582368 8.25 0.996582 8.25H13.0016C13.4158 8.25 13.7516 8.58579 13.7516 9C13.7516 9.41421 13.4158 9.75 13.0016 9.75H0.996582C0.582368 9.75 0.246582 9.41421 0.246582 9Z" fill="#242628"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.246582 13.002C0.246582 12.5877 0.582368 12.252 0.996582 12.252H16.0028C16.417 12.252 16.7528 12.5877 16.7528 13.002C16.7528 13.4162 16.417 13.752 16.0028 13.752H0.996582C0.582368 13.752 0.246582 13.4162 0.246582 13.002Z" fill="#242628"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.246582 17.0039C0.246582 16.5897 0.582368 16.2539 0.996582 16.2539H7.9995C8.41371 16.2539 8.7495 16.5897 8.7495 17.0039C8.7495 17.4181 8.41371 17.7539 7.9995 17.7539H0.996582C0.582368 17.7539 0.246582 17.4181 0.246582 17.0039Z" fill="#242628"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.246582 1.99707C0.246582 1.03057 1.03008 0.24707 1.99658 0.24707H16.0032C16.9697 0.24707 17.7532 1.03057 17.7532 1.99707V3.99874C17.7532 4.96523 16.9697 5.74874 16.0032 5.74874H1.99658C1.03008 5.74874 0.246582 4.96523 0.246582 3.99874V1.99707ZM1.99658 1.74707C1.85851 1.74707 1.74658 1.859 1.74658 1.99707V3.99874C1.74658 4.13681 1.85851 4.24874 1.99658 4.24874H16.0032C16.1413 4.24874 16.2532 4.13681 16.2532 3.99874V1.99707C16.2532 1.859 16.1413 1.74707 16.0032 1.74707H1.99658Z" fill="#242628"/>
+								</svg>
+								<?php esc_html_e( 'Multiple Header Layouts', 'inspiro' ); ?>
+							</h4>
+							<p class="about">
+								<?php esc_html_e( 'Select from 6 unique Header Styles to customize your website’s top section for a personalized design.', 'inspiro' ); ?>
+							</p>
+						</div>
+
+						<div class="section premium-feature">
+							<h4>
+								<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.246582 1C0.246582 0.585786 0.582368 0.25 0.996582 0.25H13.0016C13.4158 0.25 13.7516 0.585786 13.7516 1C13.7516 1.41421 13.4158 1.75 13.0016 1.75H0.996582C0.582368 1.75 0.246582 1.41421 0.246582 1Z" fill="#242628"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.246582 5.00195C0.246582 4.58774 0.582368 4.25195 0.996582 4.25195H16.0028C16.417 4.25195 16.7528 4.58774 16.7528 5.00195C16.7528 5.41617 16.417 5.75195 16.0028 5.75195H0.996582C0.582368 5.75195 0.246582 5.41617 0.246582 5.00195Z" fill="#242628"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.246582 9.00391C0.246582 8.58969 0.582368 8.25391 0.996582 8.25391H7.9995C8.41371 8.25391 8.7495 8.58969 8.7495 9.00391C8.7495 9.41812 8.41371 9.75391 7.9995 9.75391H0.996582C0.582368 9.75391 0.246582 9.41812 0.246582 9.00391Z" fill="#242628"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0.246582 13.9971C0.246582 13.0306 1.03008 12.2471 1.99658 12.2471H16.0032C16.9697 12.2471 17.7532 13.0306 17.7532 13.9971V15.9987C17.7532 16.9652 16.9697 17.7487 16.0032 17.7487H1.99658C1.03008 17.7487 0.246582 16.9652 0.246582 15.9987V13.9971ZM1.99658 13.7471C1.85851 13.7471 1.74658 13.859 1.74658 13.9971V15.9987C1.74658 16.1368 1.85851 16.2487 1.99658 16.2487H16.0032C16.1413 16.2487 16.2532 16.1368 16.2532 15.9987V13.9971C16.2532 13.859 16.1413 13.7471 16.0032 13.7471H1.99658Z" fill="#242628"/>
+								</svg>
+								<?php esc_html_e( 'Multiple Footer Layouts', 'inspiro' ); ?>
+							</h4>
+							<p class="about">
+								<?php esc_html_e( 'Pick from 9 Footer Layouts to create a flexible and tailored footer that matches your site’s overall style.', 'inspiro' ); ?>
+							</p>
+						</div>
+					</div>
+
+				<br>
+				<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-table', 'inspiro' ) ); ?>"
+					target="_blank" class="button button-large button-primary">
+					<?php esc_html_e( 'Get Inspiro Premium &#8599;', 'inspiro' ); ?>
+				</a>
+				<a href="https://www.wpzoom.com/themes/inspiro/starter-sites/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
+                    title="Inspiro Premium" target="_blank"
+                    class="button button-secondary-gray">
+					<?php esc_html_e( 'View Starter Sites &#8599;', 'inspiro' ); ?>
+				</a>
 	</div>
 </div>
