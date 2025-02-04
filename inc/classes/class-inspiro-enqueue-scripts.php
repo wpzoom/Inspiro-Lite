@@ -43,7 +43,6 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 			if ( 'appearance_page_page-inspiro' != $hook ) {
 				wp_enqueue_script('jquery');
 				
-				// Încarcă Isotope din CDN
 				wp_enqueue_script(
 					'isotope',
 					'https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js',
@@ -52,7 +51,6 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 					true
 				);
 		
-				// Încarcă scriptul custom
 				wp_enqueue_script(
 					'inspiro-admin-pages',
 					inspiro_get_assets_uri( 'admin-pages', 'js' ),
