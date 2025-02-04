@@ -2388,7 +2388,7 @@ body:not(.has-header-image):not(.has-header-video) #scroll-to-content {
 .sticky {
     position: relative;
     padding: 2em 1.25em;
-    border: 2px #e6e6e6 dashed;
+    border: 2px rgba(68, 68, 68, 0.19) dashed;
     margin-bottom: 3.75em;
 }
 
@@ -2414,7 +2414,7 @@ body:not(.has-header-image):not(.has-header-video) #scroll-to-content {
     display: block;
     width: 130px;
     height: 1px;
-    background: #e6e6e6;
+    background: rgba(68, 68, 68, 0.19);
     margin: 40px auto 48px;
 }
 .home.blog .entry-title {
@@ -2606,7 +2606,7 @@ body:not(.has-archive-description):not(.has-header-image) .page-title:after, bod
     display: block;
     width: 130px;
     height: 1px;
-    background: #e6e6e6;
+    background: rgba(68, 68, 68, 0.19);
     margin: 40px auto 48px;
 }
 
@@ -2633,7 +2633,7 @@ body:not(.has-archive-description):not(.has-header-image) .page-title:after, bod
     display: block;
     width: 130px;
     height: 1px;
-    background: #e6e6e6;
+    background: rgba(68, 68, 68, 0.19);
     margin: 50px auto 0;
 }
 
@@ -2696,7 +2696,7 @@ body.has-archive-description:not(.has-header-image) .taxonomy-description:after 
     display: block;
     width: 130px;
     height: 1px;
-    background: #e6e6e6;
+    background: rgba(68, 68, 68, 0.19);
     margin: 40px auto 48px;
 }
 
@@ -3058,7 +3058,7 @@ body > .is-root-container,
     display: block;
     width: 200px;
     height: 1px;
-    background: #e6e6e6;
+    background: rgba(68, 68, 68, 0.19);
     margin: 0 auto 3em;
 }
 .entry-footer > *:first-child .section-title {
@@ -3388,7 +3388,7 @@ h4.jp-relatedposts-post-title {
 #respond > h3:after {
     width: 130px;
     content: " ";
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid rgba(68, 68, 68, 0.19);
     bottom: -40px;
     right: 0;
     position: absolute;
@@ -3443,7 +3443,7 @@ h4.jp-relatedposts-post-title {
 .commentlist .comment:after {
     width: 130px;
     content: " ";
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid rgba(68, 68, 68, 0.19);
     bottom: -40px;
     right: 0;
     position: absolute;
@@ -4864,7 +4864,7 @@ figure.aligncenter:not(.wp-block-gallery) {
         padding: 0 4% 1.25em 0;
         width: 25%;
         margin-bottom: 2em;
-        border-right: 1px solid #e6e6e6;
+        border-right: 1px solid rgba(68, 68, 68, 0.19);
     }
     .page-layout-sidebar-right.has-sidebar.page .entry-wrapper .entry-content, .page-layout-sidebar-right.has-sidebar.single .entry-wrapper .entry-content {
         float: right;
