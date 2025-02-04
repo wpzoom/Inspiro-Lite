@@ -313,7 +313,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
               'import_file_name'           => 'Inspiro Lite - Elementor',
               'import_file_url'            => 'https://www.wpzoom.com/downloads/xml/inspiro-lite.xml',
               'import_widget_file_url'     => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-widgets.wie',
-              'import_customizer_file_url' => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-customizer.dat',
+              'import_customizer_file_url' => 'https://www.wpzoom.com/downloads/xml/inspiro-lite-elementor.dat',
               'import_preview_image_url'   => 'https://www.wpzoom.com/wp-content/uploads/2021/10/inspiro-lite-elementor-1.png',
               'preview_url'                => 'https://demo.wpzoom.com/inspiro-lite/',
             ],
