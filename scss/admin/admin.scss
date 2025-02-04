@@ -167,7 +167,7 @@
         line-height: 2;
 
         &:hover {
-            color: #2A79CE;
+            color: $hover-primary-color;
         }
     }
 }
@@ -175,7 +175,7 @@
 .wpz-grid-wrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 20px;
 
     &.three {
         grid-template-columns: repeat(3, 1fr);
@@ -388,7 +388,7 @@
         display: inline-flex;
         align-items: center;
         font-weight: 600;
-        padding: 9px 24px;
+        padding: 9px 22px;
         transition: all 0.3s ease;
         margin-right: 20px;
         margin-bottom: 8px;
@@ -398,43 +398,44 @@
         min-width: 96px;
 
         color: $light-color;
-        background-color: $dark-color;
+        background: $dark-color;
         border: 1px solid $border-grey-color;
+        box-shadow: none;
 
         &:hover,
         &:active {
-            background-color: $hover-grey-color;
+            background: $hover-grey-color;
         }
 
         &.button-secondary {
             color: $dark-color;
-            background-color: transparent;
+            background: transparent;
             border: 1px solid $dark-color;
 
             &:hover {
                 color: #ffffff;
-                background-color: $hover-grey-color;
+                background: $hover-grey-color;
             }
             
             &:active {
                 color: $light-color;
-                background-color: $dark-color;
+                background: $dark-color;
             }
         }
 
         &.button-secondary-gray {
             color: $bluish-grey-color;
-            background-color: transparent;
+            background: transparent;
             border: 1px solid $bluish-grey-color;
 
             &:hover {
                 color: $light-color;
-                background-color: $hover-grey-color;
+                background: $hover-grey-color;
             }
 
             &:active {
                 color: $light-color;
-                background-color: $dark-color;
+                background: $dark-color;
             }
         }
 
@@ -576,11 +577,6 @@
                         margin-right: 5px;
                     }
 
-                }
-
-                &.active a {
-                    cursor: default;
-                    color: $medium-color;
                 }
             }
 
@@ -1036,11 +1032,11 @@
                             }
 
                             .button.button-primary {
-                                background-color: $light-color;
+                                background: $light-color;
                                 color: $dark-color;
 
                                 &:hover {
-                                    background-color: $border-grey-color;
+                                    background: $border-grey-color;
                                 }
                             }
                         } 
@@ -1063,7 +1059,7 @@
                                 align-items: center;
 
                                 &:hover {
-                                    color: #2A79CE;
+                                    color: $hover-primary-color;
                                 }
 
                                 svg {
@@ -1230,7 +1226,7 @@
                     color: $medium-color;
 
                     &:hover {
-                        color: $dark-blue-color;
+                        color: $primary-color;
                     }
                 }
             }
