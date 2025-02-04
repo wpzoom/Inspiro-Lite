@@ -103,7 +103,7 @@ class Inspiro_Theme_Upgrader {
 	 * @return boolean
 	 */
 	public function check_new_theme_version( $data ) {
-		$whitelist_premium = array( 'Inspiro', 'Inspiro PRO' );
+		$whitelist_premium = array( 'Inspiro', 'Inspiro PRO', 'Inspiro Premium' );
 		if ( ! in_array( $data['Name'], $whitelist_premium ) ) {
 			$this->uploaded_premium = false;
 
