@@ -39,6 +39,15 @@ body.colors-dark .entry-footer {
 body.colors-dark .entry-content a:hover {
     color: #fff;
 }
+body.colors-dark .has-light-background-background-color {
+    background-color: var(--wp--preset--color--primary) !important;
+}
+body.colors-dark .has-black-color {
+    color: var(--wp--preset--color--white) !important;
+}
+body.colors-dark .has-background-background-color {
+    background-color: var(--wp--preset--color--foreground) !important;
+}
 body.colors-dark .entry-meta a,
 body.colors-dark .entry-title a,
 body.colors-dark .entry-footer .post-author a,
@@ -87,6 +96,10 @@ body.colors-dark .form-submit #submit {
     color: #eee;
     border-color: #555;
 }
+body.colors-dark .more-link,
+body.colors-dark .more_link {
+    color: #eee !important;
+}
 body.colors-dark .search-form button, body.colors-dark .search-form input {
     color: #fff;
 }
@@ -117,6 +130,17 @@ body.colors-dark select,
 body.colors-dark fieldset {
     color: #ccc;
     background: #333;
+    border-color: #444;
+}
+body.colors-dark div.wpforms-container-full .wpforms-form input[type=submit],
+body.colors-dark div.wpforms-container-full .wpforms-form button[type=submit],
+body.colors-dark div.wpforms-container-full .wpforms-form .wpforms-page-button,
+body.colors-dark button,
+body.colors-dark input[type=button],
+body.colors-dark input[type=reset],
+body.colors-dark input[type=submit] {
+    color: #fff;
+    border-color: #555;
 }
 body.colors-dark .sticky {
     border-color: #555;

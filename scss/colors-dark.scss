@@ -43,6 +43,18 @@ body.colors-dark {
         }
     }
 
+    .has-light-background-background-color {
+        background-color: var(--wp--preset--color--primary) !important;
+    }
+
+    .has-black-color {
+        color: var(--wp--preset--color--white) !important;
+    }
+
+    .has-background-background-color {
+        background-color: var(--wp--preset--color--foreground) !important;
+    }
+
     .entry-meta a,
     .entry-title a,
     .entry-footer .post-author a,
@@ -101,6 +113,11 @@ body.colors-dark {
         border-color: #555;
     }
 
+    .more-link,
+    .more_link {
+        color: #eee !important;
+    }
+
     .search-form button, .search-form input {
         color: #fff;
     }
@@ -133,7 +150,21 @@ body.colors-dark {
     fieldset {
         color: #ccc;
         background: #333;
+        border-color: #444;
     }
+
+
+    div.wpforms-container-full .wpforms-form input[type=submit],
+    div.wpforms-container-full .wpforms-form button[type=submit],
+    div.wpforms-container-full .wpforms-form .wpforms-page-button,
+    button,
+    input[type=button],
+    input[type=reset],
+    input[type=submit] {
+        color: #fff;
+        border-color: #555;
+    }
+
 
     .sticky {
         border-color: #555;
