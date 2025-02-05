@@ -407,7 +407,7 @@
                                             'demo_url' => 'https://demo.wpzoom.com/inspiro-pro/',
                                             'name' => 'Eccentric',
                                             'available_for' => 'Elementor',
-                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
+                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro-pro/',
                                             'preview_url' => 'https://demo.wpzoom.com/inspiro-pro/',
                                         ],
                                         [
@@ -418,7 +418,7 @@
                                             'demo_url' => 'https://demo.wpzoom.com/inspiro-pro-2/',
                                             'name' => 'Offbeat',
                                             'available_for' => 'Elementor',
-                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
+                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro-pro/',
                                             'preview_url' => 'https://demo.wpzoom.com/inspiro-pro-2/',
                                         ],
                                         [
@@ -429,7 +429,7 @@
                                             'demo_url' => 'https://demo.wpzoom.com/inspiro-pro-business/',
                                             'name' => 'Business',
                                             'available_for' => 'Elementor',
-                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
+                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro-pro/',
                                             'preview_url' => 'https://demo.wpzoom.com/inspiro-pro-business/',
                                         ],
                                         [
@@ -440,7 +440,7 @@
                                             'demo_url' => 'https://demo.wpzoom.com/inspiro-pro-shop/',
                                             'name' => 'Shop',
                                             'available_for' => 'Elementor',
-                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
+                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro-pro/',
                                             'preview_url' => 'https://demo.wpzoom.com/inspiro-pro-shop/',
                                         ],
                                         [
@@ -451,7 +451,7 @@
                                             'demo_url' => 'https://demo.wpzoom.com/inspiro-pro-agency/',
                                             'name' => 'Agency',
                                             'available_for' => 'Elementor',
-                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
+                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro-pro/',
                                             'preview_url' => 'https://demo.wpzoom.com/inspiro-pro-agency/',
                                         ],
                                         [
@@ -462,7 +462,7 @@
                                             'demo_url' => 'https://demo.wpzoom.com/inspiro-pro-agency-dark/',
                                             'name' => 'Agency (Dark)',
                                             'available_for' => 'Elementor',
-                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
+                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro-pro/',
                                             'preview_url' => 'https://demo.wpzoom.com/inspiro-pro-agency-dark/',
                                         ],
                                         [
@@ -473,7 +473,7 @@
                                             'demo_url' => 'https://demo.wpzoom.com/inspiro-pro-real-estate/',
                                             'name' => 'Real Estate / Business',
                                             'available_for' => 'Elementor',
-                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
+                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro-pro/',
                                             'preview_url' => 'https://demo.wpzoom.com/inspiro-pro-real-estate/',
                                         ],
                                         [
@@ -484,7 +484,7 @@
                                             'demo_url' => 'https://demo.wpzoom.com/inspiro-pro-charity/',
                                             'name' => 'Charity / NGO',
                                             'available_for' => 'Elementor',
-                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
+                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro-pro/',
                                             'preview_url' => 'https://demo.wpzoom.com/inspiro-pro-charity/',
                                         ],
                                         [
@@ -495,7 +495,7 @@
                                             'demo_url' => 'https://demo.wpzoom.com/inspiro-tech/',
                                             'name' => 'Tech / Finance',
                                             'available_for' => 'Elementor',
-                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
+                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro-pro/',
                                             'preview_url' => 'https://demo.wpzoom.com/inspiro-tech/',
                                         ],
                                         [
@@ -506,7 +506,7 @@
                                             'demo_url' => 'https://demo.wpzoom.com/inspiro-pro-winery/',
                                             'name' => 'Winery',
                                             'available_for' => 'Elementor',
-                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
+                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro-pro/',
                                             'preview_url' => 'https://demo.wpzoom.com/inspiro-pro-winery/',
                                         ],
                                         [
@@ -517,7 +517,7 @@
                                             'demo_url' => 'https://demo.wpzoom.com/inspiro-pro-fitness/',
                                             'name' => 'Fitness / Gym',
                                             'available_for' => 'Elementor',
-                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
+                                            'premium_url' => 'https://www.wpzoom.com/themes/inspiro-pro/',
                                             'preview_url' => 'https://demo.wpzoom.com/inspiro-pro-fitness/',
                                         ]
                                     ];
