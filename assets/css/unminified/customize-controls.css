@@ -415,6 +415,7 @@
     top: 1px;
     left: 1px;
     content: "\f347";
+    -webkit-transition: 0.1s ease-in-out;
     transition: 0.1s ease-in-out;
     font-size: 16px;
     speak: none;
