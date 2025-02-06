@@ -486,10 +486,10 @@ class Inspiro_Theme_Upgrader {
 
 		}
 
-		if ( is_array( $header_image_data ) && empty( $header_video_url ) ) {
-			$this->slide_post_attr['post_thumbnail_path_url'] = $header_image_data['url'];
-		} elseif ( is_object( $header_image_data ) && empty( $header_video_url ) ) {
+		if( is_object( $header_image_data ) && isset( $header_image_data->attachment_id ) ) {
 			$this->slide_post_attr['post_thumbnail_id'] = $header_image_data->attachment_id;
+		} elseif ( is_array( $header_image_data ) && isset( $header_image_data['url'] ) ) {
+			$this->slide_post_attr['post_thumbnail_path_url'] = $header_image_data['url'];
 		}
 
 
@@ -511,6 +511,13 @@ class Inspiro_Theme_Upgrader {
 			} elseif ( 'video/x-vimeo' === $mime_type ) {
 				$this->slide_post_attr['wpzoom_home_slider_video_type']      = 'vimeo_pro';
 				$this->slide_post_attr['wpzoom_home_slider_video_vimeo_pro'] = $header_video_url;
+
+				// Get Vimeo video ID.
+				$oembed   = _wp_oembed_get_object();
+				$data     = $oembed->get_data( $header_video_url );
+				$video_id = ! empty( $data->video_id ) ? $data->video_id : false;
+				
+				$this->slide_post_attr['wpzoom_home_slider_video_vimeo_pro_video_id'] = $video_id;
 			} elseif ( 'video/mp4' === $mime_type ) {
 				$this->slide_post_attr['wpzoom_home_slider_video_type']       = 'self_hosted';
 				$this->slide_post_attr['wpzoom_home_slider_video_bg_url_mp4'] = $header_video_url;
