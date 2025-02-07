@@ -1,15 +1,12 @@
-/*
- * This script is specific to Inspiro custom and WP generate Admin pages.
- * It initializes jQuery UI tabs on an element with the ID 'tabs' and handles
- * the click event on a button with the ID 'install-inspiro-starter-sties-btn'.
- * When the button is clicked, an AJAX POST request is sent to the
- * WordPress backend to invoke the 'install_activate_inspiro_starter_sites_plugin' action.
- * A spinner icon is displayed while the request is processed.
- * On success, the page is reloaded, and on error, an error message is logged to the console.
- */
+//Init tabs
 jQuery(document).ready(($) => {	
 
-	$("#tabs").tabs();
+	var $tabs = $("#tabs").tabs({
+		activate: function (event, ui) {
+			var newHash = ui.newTab.find("a").attr("href");
+			history.replaceState(null, null, newHash); // Update the URL with the new hash
+		}
+	});
 
 	const ACTION_NAME = 'install_activate_inspiro_starter_sites_plugin';
 	const PLUGIN_SLUG = 'inspiro-starter-sites';
@@ -88,3 +85,43 @@ jQuery(document).ready(($) => {
 	} );
 
 });
+
+
+( function( $ ) {
+	const $wrapper = $('.wpz-onboard_wrapper');
+	const activePlugins = [];
+	const requiredPlugins = [];
+	const recommendedPlugins = [];
+
+	/**
+	 * Hook up functionality when the document loads.
+	 */
+	$( function( $ ) {
+		if ( window.location.hash ) {
+			setDashboardTab( window.location.hash );
+		}
+
+	} );
+
+	/**
+		 * Sets the selected tab to the tab with the given ID.
+		 *
+		 * @param {string} id The ID of the tab to set as selected.
+		 */
+	function setDashboardTab( id, updateHash = false ) {
+		if ( id ) {
+			const $target = $wrapper.find( '.wpz-onboard_tabs .wpz-onboard_tab a[href="' + id + '"]' ),
+				$tabs   = $target.closest( '.wpz-onboard_wrapper' ).find( '.wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-tab' );
+
+			$target.closest( '.wpz-onboard_tabs' ).find( '.wpz-onboard_tab' ).removeClass( 'active' );
+			$target.closest( '.wpz-onboard_tab' ).addClass( 'active' );
+
+			$tabs.removeClass( 'active' );
+			$tabs.filter( '[data-id="' + id + '"]' ).addClass( 'active' );
+
+		}
+	}
+
+
+} )( jQuery );
+
