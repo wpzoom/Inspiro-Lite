@@ -266,6 +266,9 @@ class Inspiro_Theme_Upgrader {
 		$header_video_url     = get_header_video_url();
 		$header_textcolor     = get_header_textcolor();
 
+		// Check if header_textcolor is empty.
+		$header_textcolor = empty( $header_textcolor ) ? 'ffffff' : $header_textcolor;
+
 		if ( ! $header_image_data && $default_header_image ) {
 			$url           = inspiro_get_prop( $default_header_image, 'url' );
 			$thumbnail_url = inspiro_get_prop( $default_header_image, 'thumbnail_url' );
@@ -326,6 +329,11 @@ class Inspiro_Theme_Upgrader {
 			}
 			if ( strpos( $name, 'font-weight' ) !== false && '400' === $theme_mod ) {
 				set_theme_mod( $name, 'normal' );
+			}
+
+			// Slider Title Text Transform
+			if ( 'slider-title-text-transform' === $name && empty( $theme_mod ) ) {
+				set_theme_mod( $name, 'inherit' );
 			}
 
 			// --- Site Identity --- //
@@ -429,7 +437,9 @@ class Inspiro_Theme_Upgrader {
 			// - Hero section - //
 			// these values are transferred from hero to slider section
 			// set only Hero Title Text Color
-			if ( 'color_only_hero_title' === $name && 'color_only_hero_title' !== 'blank' ) {
+			if ( 'color_only_hero_title' === $name && $theme_mod !== 'blank' ) {
+				// Hero Title Text Color
+				$theme_mod = empty( $theme_mod ) ? 'ffffff' : $theme_mod;
 				set_theme_mod( 'color-slider-title', maybe_hash_hex_color( $theme_mod ) );
 			}
 			// Hero Button Text Color
