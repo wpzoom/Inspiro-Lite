@@ -32,7 +32,7 @@
 
 	<div class="theme-info-wrap">
 		<h3 class="wpz-onboard_content-main-title"><?php esc_html_e( 'Customize & Configure', 'inspiro' ); ?></h3>
-		<div class="wpz-grid-wrap three">
+		<div class="wpz-grid-wrap">
 			<div class="section">
 				<h4>
 					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

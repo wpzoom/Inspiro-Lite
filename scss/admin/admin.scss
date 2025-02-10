@@ -531,7 +531,7 @@
         overflow: hidden;
         box-sizing: border-box;
         padding: 35px 30px;
-        gap: 70px;
+        gap: 20px;
         border-radius: 0;
 
         > * {
@@ -542,6 +542,7 @@
         .#{$prefix}title-wrapper {
             display: flex;
             align-items: baseline;
+            margin-bottom: 50px;
 
             .#{$prefix}title {
                 display: flex;
@@ -628,7 +629,7 @@
         }
 
         .#{$prefix}hr {
-            margin: 5px 0;
+            margin: 20px 0 0;
         }
     }
 

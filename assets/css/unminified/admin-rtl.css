@@ -515,7 +515,7 @@
     overflow: hidden;
     box-sizing: border-box;
     padding: 35px 30px;
-    gap: 70px;
+    gap: 20px;
     border-radius: 0;
 }
 .wpz-onboard_wrapper .wpz-onboard_header > * {
@@ -525,6 +525,7 @@
 .wpz-onboard_wrapper .wpz-onboard_header .wpz-onboard_title-wrapper {
     display: flex;
     align-items: baseline;
+    margin-bottom: 50px;
 }
 .wpz-onboard_wrapper .wpz-onboard_header .wpz-onboard_title-wrapper .wpz-onboard_title {
     display: flex;
@@ -594,7 +595,7 @@
     color: #5e6164;
 }
 .wpz-onboard_wrapper .wpz-onboard_header .wpz-onboard_hr {
-    margin: 5px 0;
+    margin: 20px 0 0;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper {
     overflow: hidden;
@@ -839,7 +840,7 @@
     color: var(--inspiro-primary-color);
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-steps .wpz-onboard_content-main-step.step-choose-design form ul li figure figcaption p a:hover, .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-steps .wpz-onboard_content-main-step.step-choose-design form ul li figure figcaption p a:active {
-    color: rgb(102.75, 176.25, 255);
+    color: #67b0ff;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-steps .wpz-onboard_content-main-step.step-choose-design form ul li figure figcaption input[type=radio] {
     display: none;

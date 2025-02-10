@@ -110,10 +110,10 @@ jQuery(document).ready(($) => {
 		 */
 	function setDashboardTab( id, updateHash = false ) {
 		if ( id ) {
-			const $target = $wrapper.find( '.wpz-onboard_tabs .wpz-onboard_tab a[href="' + id + '"]' ),
+			const $target = $wrapper.find( '#wpz-onboard_tabs .wpz-onboard_tab a[href="' + id + '"]' ),
 				$tabs   = $target.closest( '.wpz-onboard_wrapper' ).find( '.wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-tab' );
 
-			$target.closest( '.wpz-onboard_tabs' ).find( '.wpz-onboard_tab' ).removeClass( 'active' );
+			$target.closest( '#wpz-onboard_tabs' ).find( '.wpz-onboard_tab' ).removeClass( 'active' );
 			$target.closest( '.wpz-onboard_tab' ).addClass( 'active' );
 
 			$tabs.removeClass( 'active' );

@@ -7,7 +7,7 @@
     </div>
 
     <div class="theme-info-wrap">
-        <div class="wpz-grid-wrap three">
+        <div class="wpz-grid-wrap">
             <div class="section help">
                 <h4>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
