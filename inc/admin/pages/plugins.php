@@ -1,5 +1,5 @@
 <div class="wpz-onboard_wrapper">
-	<div id="tabs"><!-- #tabs -->
+    <div class="wpz_tabs_pages"><!-- #tabs -->
 
         <?php get_template_part( 'inc/admin/pages/main-menu' ); ?>
 

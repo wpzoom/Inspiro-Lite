@@ -1,5 +1,5 @@
 <div class="wpz-onboard_wrapper">
-	<div id="tabs"><!-- #tabs -->
+	<div class="wpz_tabs_pages"><!-- #tabs -->
 
 		<?php get_template_part( 'inc/admin/pages/main-menu' ); ?>
 
@@ -39,12 +39,19 @@
                         <div class="theme-info-wrap">
                             <div class="wpz-grid-wrap">
                                 <div class="section quick-action-section">
-                                    <form class="ml-block-form">
-                                        <input type="file" />
-                                        <button type="submit" class="button button-primary" >
-                                            Install Now
-                                        </button>
+
+                                    <form method="post" enctype="multipart/form-data" class="wp-upload-form ml-block-form" action="<?php echo esc_url( self_admin_url( 'update.php?action=upload-theme' ) ); ?>">
+                                        <?php wp_nonce_field( 'theme-upload' ); ?>
+                                        <label class="screen-reader-text" for="themezip">
+                                            <?php
+                                            /* translators: Hidden accessibility text. */
+                                            _e( 'Theme zip file', 'inspiro' );
+                                            ?>
+                                        </label>
+                                        <input type="file" id="themezip" name="themezip" accept=".zip"/>
+                                        <?php submit_button( _x( 'Install Now', 'theme', 'inspiro' ), '', 'install-theme-submit', false ); ?>
                                     </form>
+
                                 </div>
                                 <div class="section quick-action-section">
                                     <div class="section-content">
@@ -54,7 +61,7 @@
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M6 3.5C4.61929 3.5 3.5 4.61929 3.5 6V30C3.5 31.3807 4.61929 32.5 6 32.5H34C35.3807 32.5 36.5 31.3807 36.5 30V12C36.5 10.6193 35.3807 9.5 34 9.5H21.0704C19.9001 9.5 18.8073 8.91514 18.1582 7.94145L15.3457 3.72265C15.253 3.58355 15.0968 3.5 14.9297 3.5H6ZM0.5 6C0.5 2.96243 2.96243 0.5 6 0.5H14.9297C16.0999 0.5 17.1927 1.08485 17.8418 2.05855L20.6544 6.27735C20.7471 6.41645 20.9032 6.5 21.0704 6.5H34C37.0376 6.5 39.5 8.96243 39.5 12V30C39.5 33.0376 37.0376 35.5 34 35.5H6C2.96243 35.5 0.5 33.0376 0.5 30V6Z" fill="#242628"/>
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M26 21.5C26 20.6716 26.6716 20 27.5 20H29.5C30.3284 20 31 20.6716 31 21.5C31 22.3284 30.3284 23 29.5 23H27.5C26.6716 23 26 22.3284 26 21.5Z" fill="#242628"/>
                                         </svg>
-                                        <?php esc_html_e( 'If you have purchased the Premium or PRO version of the theme, please download it as a ZIP file from the Members Area and upload it here.', 'inspiro' ); ?>
+                                        <?php esc_html_e( 'If you have purchased the Premium or PRO version of the theme, please download it as a ZIP file from the Members Area and upload it in the form on the left.', 'inspiro' ); ?>
                                     </div>
                                 </div>
                             </div>

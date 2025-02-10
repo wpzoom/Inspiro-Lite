@@ -283,18 +283,6 @@
     }
 }
 
-
-.wpz-upload form {
-    background: $very-light-grey-color;
-    border: 1px solid $soft-grey-color;
-    padding: 30px;
-    margin: 20px auto 50px;
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
 .theme-comparison {
 	margin-bottom: 25px;
 	overflow: hidden;
@@ -519,7 +507,8 @@
         box-shadow: 0 1px 2px 0 $black-transparent-10;
     }
 
-    .ui-tabs {
+    .wpz_tabs_pages,
+    #tabs {
         display: grid;
         gap: 20px;
         grid-template-columns: 276px auto;

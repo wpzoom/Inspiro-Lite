@@ -305,16 +305,6 @@
     margin: 0.625rem 0;
 }
 
-.wpz-upload form {
-    background: #f6f7f7;
-    border: 1px solid #c3c4c7;
-    padding: 30px;
-    margin: 20px auto 50px;
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .theme-comparison {
     margin-bottom: 25px;
     overflow: hidden;
@@ -504,7 +494,8 @@
     border-radius: 4px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1019607843);
 }
-.wpz-onboard_wrapper .ui-tabs {
+.wpz-onboard_wrapper .wpz_tabs_pages,
+.wpz-onboard_wrapper #tabs {
     display: grid;
     gap: 20px;
     grid-template-columns: 276px auto;

@@ -20,12 +20,12 @@
 	<ul class="wpz-onboard_tabs" id="wpz-onboard_tabs">
 
 		<div class="wpz-onboard_tab-dashboard">
-			<p>DASHBOARD</p>
+			<p><?php esc_html_e( 'DASHBOARD', 'inspiro' ); ?></p>
 			<hr class="wpz-onboard_hr">
 		</div>
 
 		<li class="wpz-onboard_tab wpz-onboard_tab-quick-start">
-			<a href="#quick-start" title="Home">
+			<a href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro' ) ); ?>#quick-start" title="Home">
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 18.5002V14.0002C6.5 12.6192 7.619 11.5002 9 11.5002V11.5002C10.381 11.5002 11.5 12.6192 11.5 14.0002V18.5002H17V9.91425C17 9.38425 16.789 8.87525 16.414 8.50025L9.707 1.79325C9.316 1.40225 8.683 1.40225 8.293 1.79325L1.586 8.50025C1.211 8.87525 1 9.38425 1 9.91425V18.5002H6.5Z" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 				</svg> 
@@ -33,7 +33,7 @@
 			</a>
 		</li>
 		<li class="wpz-onboard_tab wpz-onboard_tab-theme-child">
-			<a href="#vs-pro" title="Free vs PRO">
+			<a href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro' ) ); ?>#vs-pro" title="Free vs PRO">
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M5.13033 0.869084C5.42322 1.16198 5.42322 1.63685 5.13033 1.92974L2.06066 4.99941L5.13033 8.06908C5.42322 8.36198 5.42322 8.83685 5.13033 9.12974C4.83744 9.42264 4.36256 9.42264 4.06967 9.12974L0.46967 5.52974C0.176777 5.23685 0.176777 4.76198 0.46967 4.46908L4.06967 0.869084C4.36256 0.576191 4.83744 0.576191 5.13033 0.869084Z" fill="#242628"/>
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M0.25 4.99941C0.25 4.5852 0.585786 4.24941 1 4.24941H15C15.4142 4.24941 15.75 4.5852 15.75 4.99941C15.75 5.41363 15.4142 5.74941 15 5.74941H1C0.585786 5.74941 0.25 5.41363 0.25 4.99941Z" fill="#242628"/>
@@ -43,7 +43,7 @@
 			</a>
 		</li>
 		<li class="wpz-onboard_tab wpz-onboard_tab-debug">
-			<a href="#demos" title="Premium Starter Sites">
+			<a href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro' ) ); ?>#demos" title="Premium Starter Sites">
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M4.64479 10.9348L6.77737 11.7451C8.38017 12.3542 9.64583 13.6198 10.2549 15.2226L11.0652 17.3552C11.2127 17.7434 11.5847 18 12 18C12.4152 18 12.7873 17.7434 12.9348 17.3552L13.7451 15.2226C14.3542 13.6198 15.6198 12.3542 17.2226 11.7451L19.3552 10.9348C19.7434 10.7873 20 10.4152 20 9.99999C20 9.58475 19.7434 9.21271 19.3552 9.06521L17.2226 8.25487C15.6198 7.64582 14.3542 6.38016 13.7451 4.77736L12.9348 2.64479C12.7873 2.25662 12.4152 2 12 2C11.5847 2 11.2127 2.25662 11.0652 2.64479L10.2549 4.77736C9.64583 6.38016 8.38017 7.64582 6.77737 8.25487L4.64479 9.06521C4.25662 9.21271 4 9.58475 4 9.99999C4 10.4152 4.25662 10.7873 4.64479 10.9348Z" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 					<path d="M4 19V15" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -55,7 +55,7 @@
 			</a>
 		</li>
 
-		<li class="wpz-onboard_tab wpz-onboard_tab-plugins"><a href="#support" title="Support & Docs">
+		<li class="wpz-onboard_tab wpz-onboard_tab-plugins"><a href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro' ) ); ?>#support" title="Support & Docs">
 			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path d="M19.5601 7.1189C21.4801 10.0889 21.4791 13.9129 19.5611 16.8819" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 				<path d="M15.5476 8.45236C17.5068 10.4116 17.5068 13.5882 15.5476 15.5475C13.5883 17.5067 10.4117 17.5067 8.45248 15.5475C6.49322 13.5882 6.49322 10.4116 8.45248 8.45236C10.4117 6.4931 13.5883 6.4931 15.5476 8.45236" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -107,7 +107,7 @@
 					<path d="M11.0601 18.5H21.0001" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 					<path d="M3 18.5H6.06" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 					<path d="M10.3238 16.7322C11.3001 17.7085 11.3001 19.2915 10.3238 20.2678C9.34748 21.2441 7.76457 21.2441 6.78826 20.2678C5.81195 19.2915 5.81195 17.7085 6.78826 16.7322C7.76457 15.7559 9.34748 15.7559 10.3238 16.7322" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-				</svg> <?php esc_html_e( 'Customize', 'inspiro' ); ?></a>
+				</svg> <?php esc_html_e( 'Customize', 'inspiro' ); ?> <span class="dashicons dashicons-external"></span></a>
 		</li>
 		<li class="wpz-onboard_tab wpz-onboard_tab-plugins <?php echo ($wpz_current_page === 'inspiro-upgrade') ? 'ui-tabs-active ui-state-active' : ''; ?>">
 			<a href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro-upgrade' ) ); ?>" title="Install Premium" >
