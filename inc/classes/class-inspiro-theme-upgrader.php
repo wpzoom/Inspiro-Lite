@@ -312,6 +312,43 @@ class Inspiro_Theme_Upgrader {
 			set_theme_mod( 'color-slider-description', maybe_hash_hex_color( $header_textcolor ) );
 		}
 
+		// Options to migrate
+		$options_transform = array(
+			'body-text-transform',
+			'heading1-text-transform',
+			'heading2-text-transform',
+			'heading3-text-transform',
+			'heading4-text-transform',
+			'heading5-text-transform',
+			'heading6-text-transform',
+			'slider-button-text-transform',
+			'slider-text-text-transform',
+			'mainmenu-text-transform',
+		);
+
+		// Options to migrate
+		$options_font_variant = array(
+			'slider-button-font-variant',
+			'slider-text-font-variant',
+		);
+
+		// Options to migrate
+		$options_color = array(
+			'color_scroll_to_content_arrow',
+			'color_general_h_tags',
+			'color_general_h1_tag',
+			'color_general_h2_tag',
+			'color_general_h3_tag',
+			'color_general_h4_tag',
+			'color_general_h5_tag',
+			'color_general_h6_tag',
+			'color_general_page_title',
+			'color_general_post_title',
+			'color_general_entry_excerpt_text',
+			'color_general_entry_content_text',
+			'color_general_link_content',
+			'color_general_link_hover_content',
+		);
 
 		// migrate options values
 		foreach ( $customizer_data as $name => $args ) {
@@ -329,6 +366,18 @@ class Inspiro_Theme_Upgrader {
 			}
 			if ( strpos( $name, 'font-weight' ) !== false && '400' === $theme_mod ) {
 				set_theme_mod( $name, 'normal' );
+			}
+
+			if ( in_array( $name, $options_transform ) && empty( $theme_mod ) ) {
+				set_theme_mod( $name, 'inherit' );
+			}
+
+			if ( in_array( $name, $options_font_variant ) && empty( $theme_mod ) ) {
+				set_theme_mod( $name, 'inherit' );
+			}
+
+			if ( in_array( $name, $options_color ) && $theme_mod !== 'blank' && empty( $theme_mod ) ) {
+				set_theme_mod( $name, 'inherit' );
 			}
 
 			// Slider Title Text Transform
