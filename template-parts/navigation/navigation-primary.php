@@ -54,9 +54,7 @@ $header_hide_menu_option  = inspiro_get_theme_mod( 'header_hide_main_menu' );
 
 			<?php if ( has_nav_menu( 'primary' ) || is_active_sidebar( 'sidebar' ) ) : ?>
 				<button type="button" class="navbar-toggle">
-					<span class="screen-reader-text">
-						<?php esc_html_e( 'Toggle sidebar &amp; navigation', 'inspiro' ); ?>
-					</span>
+					<span class="screen-reader-text"><?php esc_html_e( 'Toggle sidebar &amp; navigation', 'inspiro' ); ?></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
