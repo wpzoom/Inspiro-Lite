@@ -76,8 +76,8 @@
 
     <ul class="wpz-onboard_tabs">
 
-		<li class="wpz-onboard_tab wpz-onboard_tab-license">
-			<a title="Starter Site Importer" >
+		<li class="wpz-onboard_tab wpz-onboard_tab-demos <?php echo ($wpz_current_page === 'inspiro-demo') ? 'ui-tabs-active ui-state-active' : ''; ?>">
+			<a href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro-demo' ) ); ?>" title="Starter Site Importer" >
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M3 9H21" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 					<path d="M11 5.995L10.995 6L11 6.005L11.005 6L11 5.995" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
