@@ -70,3 +70,5 @@ function install_activate_inspiro_starter_sites_plugin() {
 	// End the AJAX request
 	wp_die();
 }
+
+include_once get_template_directory() . '/inc/admin/pluginInstaller/class-inspiro-plugin-installer.php';

@@ -371,45 +371,47 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 		 */
 		public function register_required_plugins() {
 
-			if( class_exists( 'WPZI_Importer' ) ) {
-				return array();
-			}
 
 			/*
 			 * Array of plugin arrays. Required keys are name and slug.
 			 * If the source is NOT from the .org repo, then source is also required.
 			 */
 
-			$plugins = array(
+			 $plugins = array(
 
                 array(
-                    'name'     => 'Inspiro Starter Sites',
-                    'slug'     => 'inspiro-starter-sites',
-                    'required' => false,
+                    'name'        => 'Inspiro Starter Sites',
+                    'slug'        => 'inspiro-starter-sites',
+					'description' => 'Import demo content, widgets and customizer settings with one click.',
+                    'required'    => false,
                 ),
 
                 array(
-                    'name'     => 'WPZOOM Portfolio',
-                    'slug'     => 'wpzoom-portfolio',
-                    'required' => false,
+                    'name'        => 'WPZOOM Portfolio',
+                    'slug'        => 'wpzoom-portfolio',
+					'description' => 'The ultimate solution for creatives, designers, photographers, and businesses looking to showcase their work in an elegant, professional, and fully customizable way.',
+                    'required'    => false,
                 ),
 
                 array(
-                    'name'     => 'WPZOOM Forms',
-                    'slug'     => 'wpzoom-forms',
-                    'required' => false,
+                    'name'        => 'WPZOOM Forms',
+                    'slug'        => 'wpzoom-forms',
+					'description' => 'Simple, user-friendly contact form plugin for WordPress that utilizes Gutenberg blocks for easy form building and customization.',
+                    'required'    => false,
                 ),
 
                 array(
-                    'name'     => 'Video Popup Block by WPZOOM',
-                    'slug'     => 'wpzoom-video-popup-block',
-                    'required' => false,
+                    'name'        => 'Video Popup Block by WPZOOM',
+                    'slug'        => 'wpzoom-video-popup-block',
+					'description' => 'Quickly add a button displaying a YouTube, Vimeo or Self-Hosted (MP4) video in a popup when clicked.',
+                    'required'    => false,
                 ),
 
 				array(
-					'name'     => 'Instagram Widget by WPZOOM',
-					'slug'     => 'instagram-widget-by-wpzoom',
-					'required' => false,
+					'name'        => 'Instagram Widget by WPZOOM',
+					'slug'        => 'instagram-widget-by-wpzoom',
+					'description' => 'Instagram Widget is a customizable and responsive plugin, made to help you gain even more followers by showcasing your Instagram feed on your WordPress website.',
+					'required'    => false,
 				),
 
 			);

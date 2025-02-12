@@ -186,6 +186,12 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .inspiro-plugin-item {
+        .hidden {
+            display: none;
+        }
+    }
+
     .quick-action-section {
         background-color: $light-grey-color;
 

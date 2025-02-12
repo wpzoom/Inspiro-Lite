@@ -225,6 +225,9 @@
 .wpz-grid-wrap.three {
     grid-template-columns: repeat(3, 1fr);
 }
+.wpz-grid-wrap .inspiro-plugin-item .hidden {
+    display: none;
+}
 .wpz-grid-wrap .quick-action-section {
     background-color: #F2F4F5;
 }
@@ -831,7 +834,7 @@
     color: var(--inspiro-primary-color);
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-steps .wpz-onboard_content-main-step.step-choose-design form ul li figure figcaption p a:hover, .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-steps .wpz-onboard_content-main-step.step-choose-design form ul li figure figcaption p a:active {
-    color: #67b0ff;
+    color: rgb(102.75, 176.25, 255);
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-steps .wpz-onboard_content-main-step.step-choose-design form ul li figure figcaption input[type=radio] {
     display: none;
