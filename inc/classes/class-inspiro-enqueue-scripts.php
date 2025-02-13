@@ -44,25 +44,9 @@ if ( ! class_exists( 'Inspiro_Enqueue_Scripts' ) ) {
 				wp_enqueue_script('jquery');
 		
 				wp_enqueue_script(
-					'imagesloaded',
-					'https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js',
-					array('jquery'),
-					null,
-					true
-				);
-		
-				wp_enqueue_script(
-					'isotope',
-					'https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js',
-					array('jquery'),
-					null,
-					true
-				);
-		
-				wp_enqueue_script(
 					'inspiro-admin-pages',
 					inspiro_get_assets_uri( 'admin-pages', 'js' ),
-					array('jquery', 'isotope', 'imagesloaded'),
+					array( 'jquery' ),
 					INSPIRO_THEME_VERSION,
 					true
 				);

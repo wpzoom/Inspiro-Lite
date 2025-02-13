@@ -708,6 +708,12 @@
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-steps .wpz-onboard_content-main-step .wpz-onboard_content-main-step-content.premium ul li {
     padding: 0 2rem 0 0;
 }
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-steps .wpz-onboard_content-main-step .wpz-onboard_content-main-step-content.premium ul li.fade-in {
+    animation: _fadeIn 1 0.5s ease-in-out forwards;
+}
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-steps .wpz-onboard_content-main-step .wpz-onboard_content-main-step-content.premium ul li.fade-out {
+    animation: _fadeOut 1 0.5s ease-in-out forwards;
+}
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-steps .wpz-onboard_content-main-step .wpz-onboard_content-main-step-content ul {
     padding: 0;
     margin: 0;
@@ -1381,5 +1387,33 @@
 @media screen and (max-width: 500px) {
     .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .theme-info-wrap .wpz-onboard_content-side-section.install-plugin {
         display: block;
+    }
+}
+@keyframes _fadeIn {
+    0% {
+        position: fixed;
+        z-index: -10;
+        opacity: 0;
+        transform: scale(0%);
+    }
+    100% {
+        position: static;
+        z-index: 1;
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
+@keyframes _fadeOut {
+    0% {
+        position: static;
+        z-index: 1;
+        opacity: 1;
+        transform: scale(100%);
+    }
+    100% {
+        position: fixed;
+        z-index: -10;
+        opacity: 0;
+        transform: scale(0%);
     }
 }

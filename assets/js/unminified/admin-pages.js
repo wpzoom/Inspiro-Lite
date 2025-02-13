@@ -189,6 +189,34 @@ jQuery(document).ready(($) => {
 
 	}
 
+	$( '.theme-buttons.filters a' ).on( 'click', function( event ) {
+		event.preventDefault();
+
+		const $this = $( this );
+
+		//Active class
+		$('.theme-buttons.filters a').removeClass('active');
+		$this.addClass('active');
+
+		var filter = $(this).data('filter'); // Get the filter value
+
+		var $allDemos = $(".wpz-onboard_content-main-step-content.premium ul li[data-design-id]");
+		var $blockDemos = $(".wpz-onboard_content-main-step-content.premium ul li[data-design-id].gutenberg");
+		var $elementorDemos = $(".wpz-onboard_content-main-step-content.premium ul li[data-design-id].elementor");
+
+		if( '*' === filter  ) {
+			$allDemos.removeClass('fade-out').addClass('fade-in');
+		} else if( 'gutenberg' === filter ) {
+			$elementorDemos.removeClass('fade-in').addClass('fade-out');
+			$blockDemos.removeClass('fade-out').addClass('fade-in');
+		} else if( 'elementor' === filter ) {
+			$blockDemos.removeClass('fade-in').addClass('fade-out');
+			$elementorDemos.removeClass('fade-out').addClass('fade-in');
+		}
+		
+
+	} );
+
 });
 
 
