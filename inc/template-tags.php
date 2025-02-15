@@ -203,8 +203,6 @@ if ( ! function_exists( 'inspiro_entry_footer' ) ) :
 			);
 		}
 
-		inspiro_edit_link();
-
 		echo '</footer> <!-- .entry-footer -->';
 	}
 endif;

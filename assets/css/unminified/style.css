@@ -2371,7 +2371,6 @@ body:not(.has-header-image):not(.has-header-video) #scroll-to-content {
 13.3 Regular Content
 --------------------------------------------------------------*/
 .site-content-contain {
-    background-color: #fff;
     position: relative;
 }
 
@@ -2434,7 +2433,7 @@ body:not(.has-header-image):not(.has-header-video) #scroll-to-content {
     padding: 0;
 }
 .home.blog .entry-meta a {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgba(68, 68, 68, 0.19);
     padding-bottom: 2px;
 }
 
@@ -2672,7 +2671,7 @@ body:not(.page-layout-sidebar-right).blog .site-main article .entry-title, body:
 .blog .entry-meta a,
 .archive .entry-meta a,
 .search .entry-meta a {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgba(68, 68, 68, 0.19);
     padding-bottom: 2px;
 }
 .blog .entry-meta a:hover,

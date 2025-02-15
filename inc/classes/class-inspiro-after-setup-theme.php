@@ -88,6 +88,9 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 			 */
 			add_theme_support( 'post-thumbnails' );
 
+            /* Background image support */
+            add_theme_support( 'custom-background');
+
             // Remove core block patterns.
             remove_theme_support( 'core-block-patterns' );
 

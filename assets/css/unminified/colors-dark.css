@@ -19,7 +19,6 @@ body.colors-dark {
     --inspiro-color-link-hover: #fff;
 }
 body.colors-dark .site-content-contain {
-    background: #222;
     color: #eee;
 }
 body.colors-dark h1,
@@ -71,15 +70,6 @@ body.colors-dark .pagination .page-numbers.current,
 body.colors-dark .comments-pagination .page-numbers:not(.dots):hover,
 body.colors-dark .comments-pagination .page-numbers.current {
     color: var(--inspiro-primary-color);
-}
-body.colors-dark.blog .entry-meta a, body.colors-dark.archive .entry-meta a, body.colors-dark.search .entry-meta a {
-    border-color: #333;
-}
-body.colors-dark.blog .site-main > article:not(.sticky):after, body.colors-dark.archive .site-main > article:not(.sticky):after, body.colors-dark.search .site-main > article:not(.sticky):after, body.colors-dark:not(.has-archive-description):not(.has-header-image) .page-title:after, body.colors-dark:not(.has-archive-description):not(.has-header-image).page .entry-title:after,
-body.colors-dark .entry-footer .section-title:before,
-body.colors-dark #comments > h3:after,
-body.colors-dark #respond > h3:after {
-    background-color: #333;
 }
 body.colors-dark.page-layout-sidebar-right.has-sidebar #secondary {
     border-color: #555;

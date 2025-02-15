@@ -1,31 +1,13 @@
 /* Necessary for WP 6.7 icons issue fix */
-//#customize-theme-controls .customize-pane-parent .control-section .accordion-section-title {
-//	display: flex;
-//	align-items: center;
-//	padding-left: 0;
-//}
-//.accordion-section-title button.accordion-trigger {
-//	padding-left: 0;
-//}
-//#customize-controls .current-panel .control-section>h3.accordion-section-title {
-//	padding-left: 14px;
-//}
 
 /* Upgrade to Inspiro Premium */
 .customize-control-section-title,
 #customize-controls .control-section-upgrade-pro {
 	.accordion-section-title {
-		//display: flex;
-		//justify-content: space-between;
-		//align-items: center;
 		background-color: #eff4f7;
 		font-size: 16px;
 		border-left-color: #2497d4;
-
-		//h3 {
-		//	display: inline-block;
-		//	margin: .5em;
-		//}
+        margin-top: 15px;
 
 		&:hover,
 		&:focus {
@@ -80,12 +62,8 @@
 }
 
 .customize-control-section-title {
-	// margin: 20px 0;
-	// margin-left: -12px;
-	// padding: 10px 12px;
-	// background-color: #fff;
     font-size: 16px;
-    background-color: #eff4f7;
+    // background-color: #eff4f7;
     border-left-color: #2497d4;
     color: #50575e;
 
@@ -104,7 +82,27 @@
 	display: inline-block;
 	margin-bottom: 10px;
 	line-height: 1;
-	font-size: 13px;
+}
+
+.customize-control.customize-control-image-select,
+.customize-control-inspiro-font-family .customize-control-title,
+.customize-control-color .customize-control-title {
+    margin-top: 10px;
+}
+
+.customize-control-inspiro-alpha-color-picker.customize-control,
+.customize-control-range.customize-control,
+.customize-control-color.customize-control {
+    background: rgba(255,255,255,.6);
+    margin-left: -12px;
+    margin-right: -12px;
+    margin-top: 1px;
+    margin-bottom: 0;
+    padding: 5px 12px 15px 17px;
+    display: block;
+    overflow: visible;
+    position: relative;
+    z-index: 100;
 }
 
 .inspiro-customize-section-title + .customize-control-description,
@@ -497,8 +495,7 @@ $background-color_1: $icon_color_1;
 	&.accordion {
 		.inspiro-accordion-header-ui {
 			cursor: pointer;
-			text-transform: uppercase;
-			font-size: 13px;
+			font-size: 14px;
 
 			&:hover {
 				color: #0073aa;
@@ -545,9 +542,8 @@ $background-color_1: $icon_color_1;
 	position: relative;
 	display: flex;
 	align-items: center;
-	margin: 0 -12px;
+	margin: 0 -12px -13px;
 	font-weight: 600;
-	letter-spacing: .5px;
 }
 /* expand btn */
 .accordion-expand-button {
@@ -561,7 +557,6 @@ $background-color_1: $icon_color_1;
 	justify-content: center;
 	height: 100%;
 	font-family: Dashicons, serif;
-	border-left: 1px solid #ddd;
 
 	&:after {
 		display: block;

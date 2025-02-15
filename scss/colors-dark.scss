@@ -14,7 +14,6 @@ body.colors-dark {
     --inspiro-color-link-hover: #fff;
 
     .site-content-contain {
-        background: #222;
         color: #eee;
     }
 
@@ -79,22 +78,7 @@ body.colors-dark {
         color: var(--inspiro-primary-color);
     }
 
-    &.blog .entry-meta a,
-    &.archive .entry-meta a,
-    &.search .entry-meta a {
-        border-color: #333;
-    }
 
-    &.blog .site-main > article:not(.sticky):after,
-    &.archive .site-main > article:not(.sticky):after,
-    &.search .site-main > article:not(.sticky):after,
-    &:not(.has-archive-description):not(.has-header-image) .page-title:after,
-    &:not(.has-archive-description):not(.has-header-image).page .entry-title:after,
-    .entry-footer .section-title:before,
-    #comments > h3:after,
-    #respond > h3:after {
-        background-color: #333;
-    }
 
     &.page-layout-sidebar-right.has-sidebar #secondary {
         border-color: #555;

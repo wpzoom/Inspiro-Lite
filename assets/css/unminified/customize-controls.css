@@ -5,6 +5,7 @@
     background-color: #eff4f7;
     font-size: 16px;
     border-left-color: #2497d4;
+    margin-top: 15px;
 }
 .customize-control-section-title .accordion-section-title:hover, .customize-control-section-title .accordion-section-title:focus,
 #customize-controls .control-section-upgrade-pro .accordion-section-title:hover,
@@ -54,7 +55,6 @@
 
 .customize-control-section-title {
     font-size: 16px;
-    background-color: #eff4f7;
     border-left-color: #2497d4;
     color: #50575e;
 }
@@ -72,7 +72,27 @@
     display: inline-block;
     margin-bottom: 10px;
     line-height: 1;
-    font-size: 13px;
+}
+
+.customize-control.customize-control-image-select,
+.customize-control-inspiro-font-family .customize-control-title,
+.customize-control-color .customize-control-title {
+    margin-top: 10px;
+}
+
+.customize-control-inspiro-alpha-color-picker.customize-control,
+.customize-control-range.customize-control,
+.customize-control-color.customize-control {
+    background: rgba(255, 255, 255, 0.6);
+    margin-left: -12px;
+    margin-right: -12px;
+    margin-top: 1px;
+    margin-bottom: 0;
+    padding: 5px 12px 15px 17px;
+    display: block;
+    overflow: visible;
+    position: relative;
+    z-index: 100;
 }
 
 .inspiro-customize-section-title + .customize-control-description,
@@ -352,8 +372,7 @@
 /* Customize Accordion UI Control class */
 .header-accordion-section-ui-wrapper.accordion .inspiro-accordion-header-ui {
     cursor: pointer;
-    text-transform: uppercase;
-    font-size: 13px;
+    font-size: 14px;
 }
 .header-accordion-section-ui-wrapper.accordion .inspiro-accordion-header-ui:hover {
     color: #0073aa;
@@ -390,9 +409,8 @@
     position: relative;
     display: flex;
     align-items: center;
-    margin: 0 -12px;
+    margin: 0 -12px -13px;
     font-weight: 600;
-    letter-spacing: 0.5px;
 }
 
 /* expand btn */
@@ -407,7 +425,6 @@
     justify-content: center;
     height: 100%;
     font-family: Dashicons, serif;
-    border-left: 1px solid #ddd;
 }
 .accordion-expand-button:after {
     display: block;
