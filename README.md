@@ -30,94 +30,10 @@ More customization options & features are available in the paid version.
 4. Go to https://www.wpzoom.com/documentation/inspiro-lite for a guide on how to customize this theme.
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
-## Copyright ##
-
-Inspiro WordPress Theme, Copyright 2016-2021 WordPress.org
-Inspiro is distributed under the terms of the GNU GPL
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
-Inspiro bundles the following third-party resources:
-
-WPTT Webfont Loader - https://github.com/WPTT/webfont-loader
-License: Distributed under the terms of the MIT License (https://github.com/WPTT/webfont-loader/blob/master/LICENSE)
-Copyright: 2020 Ari Stathopoulos, WordPress Themes Team
-
-jQuery scrollTo, Copyright 2007-2015 Ariel Flesler
-License: MIT
-Source: https://github.com/flesler/jquery.scrollTo
-
-uisearch.js, Copyright 2013 Codrops
-License: MIT
-Source: http://www.codrops.com
-
-jQuery Superfish Menu Plugin, 2013 Joel Birch
-Dual licensed under the MIT and GPL licenses: http://www.opensource.org/licenses/mit-license.php, http://www.gnu.org/licenses/gpl.html
-Source: https://superfish.joelbirch.design/
-
-headroom.js, Copyright 2020 Nick Williams
-License: MIT
-Source: http://wicky.nillia.ms/headroom.js
-
-jQuery FitVids, Copyright 2013 Chris Coyier
-Released under the WTFPL license - http://sam.zoy.org/wtfpl/
-Source: http://css-tricks.com + Dave Rupert - http://daverupert.com
-Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
-
-classie.js, Copyright 2016 David DeSandro
-License: MIT
-Source: https://github.com/desandro/classie
-
-typography.js, Copyright brainstormforce/astra
-License: MIT
-Source: https://github.com/brainstormforce/astra/blob/3282ea23bc1df3da42cad20091b7afd28d09a440/inc/customizer/custom-controls/typography/typography.js
-
-selectWoo.js, Copyright WooCommerce
-License: MIT
-Source: https://github.com/woocommerce/selectWoo
-
-normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
-License: MIT
-Source: https://necolas.github.io/normalize.css/
-
-Code from Twenty Seventeen
-Copyright (c) 2016-2021 WordPress.org
-License: GPLv2
-Source: https://wordpress.org/themes/twentyseventeen/
-Included as part of the following classes and functions:
-- Inspiro_SVG_Icons
-- inspiro_the_theme_svg()
-- inspiro_get_theme_svg()
-- inspiro_dropdown_icon_to_menu_link()
-
-Bundled header image, Jeremy Bishop
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://stocksnap.io/photo/sea-ocean-ECZV5RZKSZ
-
-Bundled header image, Enrapture Media
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://stocksnap.io/photo/sea-ocean-M6D1GS9PSL
-
-Starter content image, Copyright Ishan @seefromthesky
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://stocksnap.io/photo/aerial-land-PU4RMD67KZ
-
-Starter content image, Copyright Bonnie Moreland
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
-
 ## Changelog ##
 
 ### 1.9.10 ###
-* Custom background support
+* Added custom background support
 * Multiple improvements
 
 ### 1.9.9 ###
@@ -326,3 +242,89 @@ Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
 
 ### 1.2.2 ###
 * Initial release
+
+
+## Copyright ##
+
+Inspiro WordPress Theme, Copyright 2016-2021 WordPress.org
+Inspiro is distributed under the terms of the GNU GPL
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+Inspiro bundles the following third-party resources:
+
+WPTT Webfont Loader - https://github.com/WPTT/webfont-loader
+License: Distributed under the terms of the MIT License (https://github.com/WPTT/webfont-loader/blob/master/LICENSE)
+Copyright: 2020 Ari Stathopoulos, WordPress Themes Team
+
+jQuery scrollTo, Copyright 2007-2015 Ariel Flesler
+License: MIT
+Source: https://github.com/flesler/jquery.scrollTo
+
+uisearch.js, Copyright 2013 Codrops
+License: MIT
+Source: http://www.codrops.com
+
+jQuery Superfish Menu Plugin, 2013 Joel Birch
+Dual licensed under the MIT and GPL licenses: http://www.opensource.org/licenses/mit-license.php, http://www.gnu.org/licenses/gpl.html
+Source: https://superfish.joelbirch.design/
+
+headroom.js, Copyright 2020 Nick Williams
+License: MIT
+Source: http://wicky.nillia.ms/headroom.js
+
+jQuery FitVids, Copyright 2013 Chris Coyier
+Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+Source: http://css-tricks.com + Dave Rupert - http://daverupert.com
+Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+
+classie.js, Copyright 2016 David DeSandro
+License: MIT
+Source: https://github.com/desandro/classie
+
+typography.js, Copyright brainstormforce/astra
+License: MIT
+Source: https://github.com/brainstormforce/astra/blob/3282ea23bc1df3da42cad20091b7afd28d09a440/inc/customizer/custom-controls/typography/typography.js
+
+selectWoo.js, Copyright WooCommerce
+License: MIT
+Source: https://github.com/woocommerce/selectWoo
+
+normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
+License: MIT
+Source: https://necolas.github.io/normalize.css/
+
+Code from Twenty Seventeen
+Copyright (c) 2016-2021 WordPress.org
+License: GPLv2
+Source: https://wordpress.org/themes/twentyseventeen/
+Included as part of the following classes and functions:
+- Inspiro_SVG_Icons
+- inspiro_the_theme_svg()
+- inspiro_get_theme_svg()
+- inspiro_dropdown_icon_to_menu_link()
+
+Bundled header image, Jeremy Bishop
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://stocksnap.io/photo/sea-ocean-ECZV5RZKSZ
+
+Bundled header image, Enrapture Media
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://stocksnap.io/photo/sea-ocean-M6D1GS9PSL
+
+Starter content image, Copyright Ishan @seefromthesky
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://stocksnap.io/photo/aerial-land-PU4RMD67KZ
+
+Starter content image, Copyright Bonnie Moreland
+License: CC0 1.0 Universal (CC0 1.0)
+Source: https://stocksnap.io/photo/autumn-trees-WV0YTVMU7P
+
