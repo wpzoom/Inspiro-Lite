@@ -1,6 +1,30 @@
 <script>
 	jQuery(document).ready(function ($) {
-    	$("#tabs").tabs();
+    	// Initialize tabs with proper configuration
+    	$("#tabs").tabs({
+    		beforeLoad: function(event, ui) {
+    			// Prevent AJAX loading of tab content
+    			return false;
+    		},
+    		create: function(event, ui) {
+    			// Handle notice dismissal links
+    			$('.notice-dismiss, .tgmpa-dismiss').on('click', function(e) {
+    				e.preventDefault();
+    				var $link = $(this);
+    				var href = $link.attr('href');
+    				
+    				// Make AJAX request instead of page reload
+    				$.get(href, function(response) {
+    					$link.closest('.notice').fadeOut();
+    				});
+    			});
+    		}
+    	});
+
+    	// Prevent default action for external links in tabs
+    	$('.wpz-onboard_tab a[href^="http"], .wpz-onboard_tab a[href*="admin.php"]').on('click', function(e) {
+    		e.stopPropagation();
+    	});
 	});
 </script>
 
