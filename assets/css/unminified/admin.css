@@ -424,7 +424,6 @@
     border-radius: 4px;
     min-height: 40px;
     height: 40px;
-    min-width: 96px;
     color: #ffffff;
     background: #242628;
     border: none;
@@ -547,6 +546,7 @@
     overflow: hidden;
     flex-wrap: wrap;
 }
+.wpz-onboard_wrapper .wpz-onboard_header .wpz-onboard_tabs li:hover,
 .wpz-onboard_wrapper .wpz-onboard_header .wpz-onboard_tabs .ui-state-active {
     background-color: #F2F4F5;
     border-radius: 4px;
@@ -620,6 +620,7 @@
     display: flex;
     align-items: center;
     gap: 40px;
+    border: none;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side-section.discover-premium .image-column {
     position: relative;
@@ -997,6 +998,7 @@
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.support .section.help {
     background-color: #242628;
     color: #ffffff;
+    border: none;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.support .section.help .about {
     color: #F2F4F5;

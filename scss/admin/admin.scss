@@ -425,7 +425,6 @@
         border-radius: 4px;
         min-height: 40px;
         height: 40px;
-        min-width: 96px;
 
         color: $light-color;
         background: $dark-color;
@@ -571,6 +570,7 @@
             overflow: hidden;
             flex-wrap: wrap;
 
+            li:hover,
             .ui-state-active {
                 background-color: $light-grey-color;
                 border-radius: 4px;
@@ -663,6 +663,7 @@
                         display: flex;
                         align-items: center;
                         gap: 40px;
+                        border: none;
         
                         .image-column {
                             position: relative;
@@ -1175,6 +1176,7 @@
                     .section.help {
                         background-color: $dark-color;
                         color: $light-color;
+                        border: none;
 
                         .about {
                             color: $light-grey-color;
