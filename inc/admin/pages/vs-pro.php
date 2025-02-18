@@ -54,14 +54,14 @@
 					</tr>
 					<tr>
 						<td><h3><?php esc_html_e( 'Demo Content Importer', 'inspiro' ); ?></h3></td>
-						<td><span class="dashicons dashicons-no-alt"></span></td>
-						<td><span class="dashicons dashicons-saved"></span></td>
+						<td>Limited</td>
+						<td>Complete Sites<br/>Individual Pages</td>
 					</tr>
 
 					<tr>
 						<td><h3><?php esc_html_e( 'Starter Sites', 'inspiro' ); ?></h3></td>
-						<td>2</td>
-						<td>19+</td>
+						<td>5</td>
+						<td>25+</td>
 					</tr>
 					<tr>
 						<td><h3>
@@ -124,6 +124,11 @@
 						<td>Limited</td>
 						<td><span class="dashicons dashicons-saved"></span></td>
 					</tr>
+                    <tr>
+                        <td><h3><?php esc_html_e( 'Customization Options', 'inspiro' ); ?></h3></td>
+                        <td>Limited</td>
+                        <td>Full</td>
+                    </tr>
 					<tr>
 						<td><h3><?php esc_html_e( 'Support', 'inspiro' ); ?></h3></td>
 						<td><?php esc_html_e( 'Support Forum', 'inspiro' ); ?></td>

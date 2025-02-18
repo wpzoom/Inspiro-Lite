@@ -25,7 +25,7 @@
 
     <div class="theme-info-wrap">
         <h3 class="wpz-onboard_content-main-title">
-            <?php esc_html_e( 'Inspiro Premium • 19', 'inspiro' ); ?>
+            <?php esc_html_e( 'Inspiro Premium • 25+', 'inspiro' ); ?>
         </h3>
         <div class="theme-buttons filters">
             <a class="button button-common active" data-filter="*">

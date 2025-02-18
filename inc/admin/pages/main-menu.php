@@ -33,13 +33,13 @@
 			</a>
 		</li>
 		<li class="wpz-onboard_tab wpz-onboard_tab-theme-child">
-			<a href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro' ) ); ?>#vs-pro" title="Free vs PRO">
+			<a href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro' ) ); ?>#vs-pro" title="Free vs. PRO">
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M5.13033 0.869084C5.42322 1.16198 5.42322 1.63685 5.13033 1.92974L2.06066 4.99941L5.13033 8.06908C5.42322 8.36198 5.42322 8.83685 5.13033 9.12974C4.83744 9.42264 4.36256 9.42264 4.06967 9.12974L0.46967 5.52974C0.176777 5.23685 0.176777 4.76198 0.46967 4.46908L4.06967 0.869084C4.36256 0.576191 4.83744 0.576191 5.13033 0.869084Z" fill="#242628"/>
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M0.25 4.99941C0.25 4.5852 0.585786 4.24941 1 4.24941H15C15.4142 4.24941 15.75 4.5852 15.75 4.99941C15.75 5.41363 15.4142 5.74941 15 5.74941H1C0.585786 5.74941 0.25 5.41363 0.25 4.99941Z" fill="#242628"/>
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M11.9304 10.8695C11.6375 10.5766 11.1626 10.5766 10.8697 10.8695C10.5768 11.1623 10.5768 11.6372 10.8697 11.9301L13.189 14.2494H1C0.585786 14.2494 0.25 14.5852 0.25 14.9994C0.25 15.4136 0.585786 15.7494 1 15.7494H13.1898L10.8697 18.0694C10.5768 18.3623 10.5768 18.8372 10.8697 19.1301C11.1626 19.423 11.6375 19.423 11.9304 19.1301L15.5304 15.5301C15.6852 15.3753 15.7581 15.1697 15.7493 14.9669C15.7407 14.7657 15.6529 14.585 15.5162 14.4553L11.9304 10.8695Z" fill="#242628"/>
 				</svg>
-				<?php esc_html_e( 'Free vs Premium', 'inspiro' ); ?>
+				<?php esc_html_e( 'Free vs. Premium', 'inspiro' ); ?>
 			</a>
 		</li>
 		<li class="wpz-onboard_tab wpz-onboard_tab-debug">
@@ -136,7 +136,7 @@
 					<path d="M12.0005 9.49951V13.5012" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 					<path d="M14.0012 11.5002H9.99951" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 				</svg>
-				<?php esc_html_e( 'Install Plugins', 'inspiro' ); ?>
+				<?php esc_html_e( 'Recommended Plugins', 'inspiro' ); ?>
 			</a>
 		</li>
 
