@@ -1,5 +1,5 @@
 :root {
-    --inspiro-primary-color: #3496ff;
+    --inspiro-primary-color: #242628;
 }
 
 .wpz-welcome-notice,
@@ -86,7 +86,7 @@
 .wpz-review-notice .button:hover,
 .wpz-review-notice .button:active {
     color: #fff;
-    background-color: #67b0ff !important;
+    background-color: #575c61 !important;
 }
 .wpz-welcome-notice .button.button-secondary,
 .wpz-review-notice .button.button-secondary {

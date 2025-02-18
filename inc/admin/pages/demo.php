@@ -21,7 +21,7 @@
                         </div>
                         
                         <div class="theme-info-wrap">
-                            <div class="wpz-onboard_content-side-section install-inspiro-starter-sites">
+                            <div class="install-inspiro-starter-sites">
 								<?php if ( class_exists( 'Inspiro_Starter_Sites_Importer' ) ) : ?>	
 									<?php do_action( 'inspiro_starter_sites_admin_page' ); ?>
 								<?php else : ?>

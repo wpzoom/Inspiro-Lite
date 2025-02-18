@@ -318,8 +318,8 @@
                             ?>
                             <li class="<?php echo esc_attr($design['class']); ?>" data-design-id="<?php echo esc_attr($design['id']); ?>">
                                 <figure title="<?php echo esc_attr($design['title']); ?>">
-                                    <div class="preview-thumbnail" style="background-image:url('<?php echo esc_url($design['thumbnail_url']); ?>')">
-                                        <a href="<?php echo esc_url($design['demo_url']); ?>" target="_blank" class="button-select-template">View Demo</a>
+                                    <div class="preview-thumbnail-demo">
+                                        <a href="<?php echo esc_url($design['demo_url']); ?>" target="_blank"><img src="<?php echo esc_url($design['thumbnail_url']); ?>" alt="<?php echo esc_attr($design['title']); ?>" /></a>
                                     </div>
                                     <figcaption>
                                         <h5><?php echo esc_html($design['name']); ?></h5>
@@ -495,8 +495,8 @@
                                 ?>
                                 <li class="<?php echo esc_attr($design['class']); ?>" data-design-id="<?php echo esc_attr($design['id']); ?>">
                                     <figure title="<?php echo esc_attr($design['title']); ?>">
-                                        <div class="preview-thumbnail" style="background-image:url('<?php echo esc_url($design['thumbnail_url']); ?>')">
-                                            <a href="<?php echo esc_url($design['demo_url']); ?>" target="_blank" class="button-select-template">View Demo</a>
+                                        <div class="preview-thumbnail-demo">
+                                            <a href="<?php echo esc_url($design['demo_url']); ?>" target="_blank"><img src="<?php echo esc_url($design['thumbnail_url']); ?>" alt="<?php echo esc_attr($design['title']); ?>" /></a>
                                         </div>
                                         <figcaption>
                                             <h5><?php echo esc_html($design['name']); ?></h5>

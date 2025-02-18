@@ -416,6 +416,7 @@
     .button {
         display: inline-flex;
         align-items: center;
+        justify-content: center;
         font-weight: 600;
         padding: 9px 22px;
         transition: all 0.3s ease;
@@ -517,7 +518,7 @@
     #tabs {
         display: grid;
         gap: 20px;
-        grid-template-columns: 276px auto;
+        grid-template-columns: 290px auto;
     }
 
     .#{$prefix}header {
@@ -527,7 +528,6 @@
         box-sizing: border-box;
         padding: 35px 30px;
         gap: 20px;
-        border-radius: 0;
 
         > * {
             max-width: 100%;
@@ -579,7 +579,7 @@
             li {
                 position: relative;
                 padding: 12px;
-                width: 190px;
+                width: 100%;
 
 
                 &:last-child {
@@ -769,7 +769,7 @@
 
                         .#{$prefix}content-main-step-content {
                             &.premium ul li {
-                                padding: 0 2rem 0 0;
+                                padding: 0;
 
                                 &.fade-in {
                                     animation: _fadeIn 1 0.5s ease-in-out forwards;
@@ -822,8 +822,8 @@
                             form {
                                 ul {
                                     display: grid;
-                                    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-                                    gap: 60px;
+                                    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                                    gap: 35px;
                                     padding: 0;
                                     margin: 0;
 
@@ -831,6 +831,40 @@
                                         figure {
                                             margin: 0;
                                             padding: 0;
+
+
+                                            .preview-thumbnail-demo {
+                                                position: relative;
+                                                background-color: #000;
+                                                min-width: 200px;
+                                                width: 100%;
+                                                border-radius: 5px;
+                                                box-shadow: inset 0 0 0 1px
+                                                        rgba($dark-color, 0.05),
+                                                    0 10px 10px
+                                                        rgba($dark-color, 0.1);
+                                                overflow: hidden;
+                                                margin: 0 0 20px;
+                                                transition: all 0.2s ease;
+
+                                                border: 1px solid $border-grey-color;
+
+                                                img {
+                                                    max-width: 100%;
+                                                    height: auto;
+                                                    vertical-align: top;
+                                                    transition: all 0.2s ease;
+
+                                                }
+
+                                                &:hover {
+                                                    img {
+                                                        opacity: .8;
+                                                    }
+                                                }
+
+                                            }
+
 
                                             .preview-thumbnail {
                                                 position: relative;
@@ -842,8 +876,8 @@
                                                 background-position: top center;
                                                 min-width: 200px;
                                                 width: 100%;
-                                                padding-top: 97.5%;
-                                                border-radius: 10px;
+                                                padding-top: 74.5%;
+                                                border-radius: 5px;
                                                 box-shadow: inset 0 0 0 1px
                                                         rgba($dark-color, 0.05),
                                                     0 10px 10px
@@ -852,7 +886,7 @@
                                                 margin: 0 0 20px;
                                                 transition: all 0.2s ease;
 
-                                                border: 2px solid $border-grey-color;
+                                                border: 1px solid $border-grey-color;
 
                                                 &.ocdi-import {
                                                     padding-top: 76.5%;
@@ -864,17 +898,18 @@
                                                     top: 50%;
                                                     left: 50%;
                                                     z-index: 3;
-                                                    font-size: $font-size-13;
-                                                    color: $light-color;
-                                                    background-color: var(--inspiro-primary-color);
+                                                    font-size: 13px;
+                                                    color: #000;
+                                                    background-color: #fff;
                                                     border: none;
                                                     padding: 9px;
                                                     text-align: center;
                                                     width: 80%;
-                                                    border-radius: 2px;
+                                                    border-radius: 4px;
                                                     transform: translate(-50%, -50%);
                                                     opacity: 0;
                                                     transition: all 0.2s ease;
+                                                    font-weight: 600;
                                                 }
 
                                                 &::before {
@@ -934,7 +969,7 @@
                                                     }
 
                                                     a {
-                                                       font-size: $font-size-13;
+                                                       font-size: 13px;
                                                         font-weight: 600;
                                                         text-decoration: none;
                                                         color: var(--inspiro-primary-color);
@@ -1006,9 +1041,7 @@
 
                 .#{$prefix}content-side-section {
                     padding: 30px 25px;
-                    margin: 0 0 30px;
-                    border: none;
-                    box-shadow: none;
+                    margin: 0 0 20px;
 
                     iframe {
                         max-width: 100%;
@@ -1385,7 +1418,7 @@
                                 }
 
                                 .#{$prefix}framework-version {
-                                   font-size: $font-size-13;
+                                   font-size: 13px;
                                 }
                             }
 
@@ -1444,11 +1477,11 @@
                             }
 
                             ul li {
-                               font-size: $font-size-13;
+                               font-size: 13px;
                             }
 
                             .#{$prefix}content-side-section-button .button {
-                                font-size: $font-size-13;
+                                font-size: 13px;
                                 padding: 9px 12px;
                                 min-height: 35px;
                                 height: 35px;
@@ -1533,7 +1566,7 @@
                             min-height: 35px;
                             height: 35px;
                             min-width: 85px;
-                            font-size: $font-size-13;
+                            font-size: 13px;
                         }
 
                         .wpz-grid-wrap {
@@ -1544,7 +1577,7 @@
                                 padding: 15px 26px;
 
                                 .about {
-                                    font-size: $font-size-13;
+                                    font-size: 13px;
                                 }
 
                                 .#{$prefix}content-side-section-title {
@@ -1610,7 +1643,7 @@
                             .section {
                                 input,
                                 .section-content {
-                                   font-size: $font-size-13;
+                                   font-size: 13px;
                                    
                                     svg {
                                         min-width: 30px;
@@ -1625,7 +1658,7 @@
                             }
 
                             .about a {
-                               font-size: $font-size-13;
+                               font-size: 13px;
                             }
                         }
                     }
@@ -1649,7 +1682,7 @@
                                 padding: 14px 26px;
 
                                 .about {
-                                   font-size: $font-size-13;
+                                   font-size: 13px;
                                 }
 
                                 .section_footer .button {
