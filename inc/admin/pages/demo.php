@@ -30,9 +30,7 @@
 									</p>
 									<p class="section_footer">
 										<button class="button button-primary" id="install-inspiro-starter-sites-btn">
-											<span id="install-inspiro-starter-sites-btn-text"
-													data-installing-text="<?php esc_attr_e( 'Installing Inspiro Starter Sites', 'inspiro' ); ?>"
-											>
+											<span id="install-inspiro-starter-sites-btn-text" data-installing-text="<?php esc_attr_e( 'Installing Inspiro Starter Sites', 'inspiro' ); ?>">
 												<?php esc_html_e( 'Install Inspiro Starter Sites', 'inspiro' ); ?>
 											</span>
 											<i class="dashicons dashicons-update spin-icon hidden-element"></i>

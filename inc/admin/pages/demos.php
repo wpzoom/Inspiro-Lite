@@ -21,12 +21,6 @@
                 </a>
             </p>
         </div>
-        <div class="section-image">
-            <a title="Inspiro Premium" target="_blank">
-                <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-demos.png' ); ?>"
-                    width="400" alt="<?php echo esc_attr__( 'Inspiro Premium Blocks', 'inspiro' ); ?>" />
-            </a>
-        </div>
     </div>
 
     <div class="theme-info-wrap">

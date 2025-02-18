@@ -124,7 +124,6 @@
 	h4 {
         font-size: $font-size-18;
         font-weight: 500;
-		margin: 10px 0;
 		margin: 0.625rem 0;
 
         .dashicons {
@@ -163,7 +162,7 @@
     .description-link {
         color: $primary-color;
         text-decoration: none;
-        line-height: 2;
+        margin-bottom: 10px;
         display: flex;
         align-items: center;
 
@@ -172,7 +171,7 @@
         }
 
         svg {
-            margin-right: 5px;
+            margin-right: 8px !important;
         }
     }
 }
@@ -541,7 +540,7 @@
             .#{$prefix}title {
                 display: flex;
                 align-items: center;
-                gap: 10px;
+                gap: 7px;
                 padding: 0;
                 margin: 0;
                 font-size: $font-size-24;
@@ -879,8 +878,7 @@
                                                 width: 100%;
                                                 padding-top: 74.5%;
                                                 border-radius: 5px;
-                                                box-shadow: inset 0 0 0 1px
-                                                        rgba($dark-color, 0.05),
+                                                box-shadow:
                                                     0 10px 10px
                                                         rgba($dark-color, 0.1);
                                                 overflow: hidden;
@@ -1026,13 +1024,20 @@
                     padding: 0;
                     display: flex;
 
+                    background-image: url('../../../assets/images/admin/inspiro-demos.png');
+                    background-color: #fff;
+                    background-position: right bottom;
+                    background-size: 59%;
+                    background-repeat: no-repeat;
+
                    .section-content {
                         padding: 35px 30px 0;
+                        max-width: 44%;
                     }
         
                     .section-image {
                         align-self: flex-end;
-            
+                        min-width: 40%;
                     }
             
                     .section_footer {
@@ -1157,9 +1162,11 @@
                     .#{$prefix}content-side-section.install-plugin{
                         display: flex;
                         padding: 0;
+                        border: none;
+                        box-shadow: none;
 
                         h3 {
-                            margin: 0 20px 0 0;
+                            margin: 0 20px 10px 0;
                         }
                     }
 

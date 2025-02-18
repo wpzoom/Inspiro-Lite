@@ -173,7 +173,6 @@
 .theme-info-wrap h4 {
     font-size: 18px;
     font-weight: 500;
-    margin: 10px 0;
     margin: 0.625rem 0;
 }
 .theme-info-wrap h4 .dashicons {
@@ -206,7 +205,7 @@
 .about-quick-links .description-link {
     color: #242628;
     text-decoration: none;
-    line-height: 2;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
 }
@@ -214,7 +213,7 @@
     color: #2A79CE;
 }
 .about-quick-links .description-link svg {
-    margin-left: 5px;
+    margin-left: 8px !important;
 }
 
 .wpz-grid-wrap {
@@ -523,7 +522,7 @@
 .wpz-onboard_wrapper .wpz-onboard_header .wpz-onboard_title-wrapper .wpz-onboard_title {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 7px;
     padding: 0;
     margin: 0;
     font-size: 24px;
@@ -786,7 +785,7 @@
     width: 100%;
     padding-top: 74.5%;
     border-radius: 5px;
-    box-shadow: inset 0 0 0 1px rgba(36, 38, 40, 0.05), 0 10px 10px rgba(36, 38, 40, 0.1);
+    box-shadow: 0 10px 10px rgba(36, 38, 40, 0.1);
     overflow: hidden;
     margin: 0 0 20px;
     transition: all 0.2s ease;
@@ -889,12 +888,19 @@
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side .wpz-onboard_content-side-section.block-premium {
     padding: 0;
     display: flex;
+    background-image: url("../../../assets/images/admin/inspiro-demos.png");
+    background-color: #fff;
+    background-position: left bottom;
+    background-size: 59%;
+    background-repeat: no-repeat;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side .wpz-onboard_content-side-section.block-premium .section-content {
     padding: 35px 30px 0;
+    max-width: 44%;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side .wpz-onboard_content-side-section.block-premium .section-image {
     align-self: flex-end;
+    min-width: 40%;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side .wpz-onboard_content-side-section.block-premium .section_footer {
     display: block;
@@ -985,9 +991,11 @@
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .wpz-onboard_content-side-section.install-plugin {
     display: flex;
     padding: 0;
+    border: none;
+    box-shadow: none;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .wpz-onboard_content-side-section.install-plugin h3 {
-    margin: 0 0 0 20px;
+    margin: 0 0 10px 20px;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.plugins .about {
     margin: 0 0 15px;

@@ -32,10 +32,10 @@ $number_of_plugins = count( $plugins );
                         <div class="theme-info-wrap">
                             <div class="wpz-onboard_content-side-section install-plugin">
                                 <h3 class="wpz-onboard_content-side-section-title icon-assist">
-                                    <?php echo esc_html( $number_of_plugins . ' ' ); esc_html_e( 'plugins recommended/required', 'inspiro' ); ?>    
+                                    <?php echo esc_html( $number_of_plugins . ' ' ); esc_html_e( 'recommended plugins', 'inspiro' ); ?>
                                 </h3>
 
-                                <a href="#" title="Install & Activate all plugins" target="_blank" class="button js-inspiro-install-all-plugins"><?php esc_html_e( 'Install & Activate all plugins', 'inspiro' ); ?></a>
+                                <a href="#" title="Install & Activate all plugins" target="_blank" class="button js-inspiro-install-all-plugins"><?php esc_html_e( 'Install & Activate All Plugins', 'inspiro' ); ?></a>
                             </div>
 
                             <div class="wpz-grid-wrap three">
