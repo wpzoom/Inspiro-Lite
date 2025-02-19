@@ -515,7 +515,7 @@
     }
 
     .wpz_tabs_pages,
-    #tabs {
+    .ui-tabs {
         display: grid;
         gap: 20px;
         grid-template-columns: 290px auto;
@@ -1481,7 +1481,7 @@
 
 @media screen and (max-width: 1140px) {
     .#{$prefix}wrapper {
-        .ui-tabs {
+        .ui-tabs, .wpz_tabs_pages {
             grid-template-columns: auto;
 
             .#{$prefix}header {
@@ -1511,7 +1511,7 @@
 
 @media screen and (max-width: 980px) {
     .#{$prefix}wrapper {
-        .ui-tabs {
+        .ui-tabs, .wpz_tabs_pages {
             .#{$prefix}header {
                 gap: 40px;
 
@@ -1576,7 +1576,7 @@
     .#{$prefix}wrapper {
         padding-right: 10px;
 
-        .ui-tabs {
+        .ui-tabs, .wpz_tabs_pages {
             .#{$prefix}header {
                 padding: 25px 20px;
                 gap: 25px;
