@@ -691,6 +691,7 @@
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-intro {
     padding: 0;
+    margin-left: 0;
     opacity: 70%;
     color: #5e6164;
 }
