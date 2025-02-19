@@ -65,26 +65,34 @@
 
                                 $designs = [
                                     [
-                                        'class' => 'design_video elementor',
-                                        'id' => '',
-                                        'title' => 'Portfolio (Default)',
-                                        'thumbnail_url' => 'https://demo.wpzoom.com/inspiro-pro-demo/wp-content/themes/inspiro-pro-select/images/site-layout_agency-dark.png',
-                                        'demo_url' => 'https://demo.wpzoom.com/inspiro-agency2/',
-                                        'name' => 'Agency / Business (new)',
-                                        'available_for' => 'Elementor',
-                                        'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-agency2/',
-                                    ],
-                                    [
                                         'class' => 'design_default-elementor elementor',
                                         'id' => '',
                                         'title' => 'Portfolio (Default)',
                                         'thumbnail_url' => 'https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/home-thumb.png',
                                         'demo_url' => 'https://demo.wpzoom.com/inspiro/',
-                                        'name' => 'Premium Demo',
+                                        'name' => 'Business / Portfolio',
                                         'available_for' => 'Elementor',
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro/',
+                                    ],
+                                    [
+                                        'class' => 'design_default-elementor elementor',
+                                        'id' => '',
+                                        'title' => 'Portfolio (Default)',
+                                        'thumbnail_url' => 'https://www.wpzoom.com/wp-content/uploads/2024/12/inspiro-pp-blocks-1.png',
+                                        'demo_url' => 'https://demo.wpzoom.com/inspiro-premium-blocks/',
+                                        'name' => 'Business / Portfolio (Blocks)',
+                                        'available_for' => 'Gutenberg',
+                                        'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
+                                    ],
+                                    [
+                                        'class' => 'design_default-elementor elementor',
+                                        'id' => '',
+                                        'title' => 'Portfolio (Default)',
+                                        'thumbnail_url' => 'https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/inspiro-persona/home-thumb.png',
+                                        'demo_url' => 'https://demo.wpzoom.com/inspiro-persona/',
+                                        'name' => 'Persona (Blocks)',
+                                        'available_for' => 'Gutenberg',
+                                        'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
                                     ],
                                     [
                                         'class' => 'design_video elementor',
@@ -95,7 +103,6 @@
                                         'name' => 'Video Production',
                                         'available_for' => 'Elementor',
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-video/',
                                     ],
                                     [
                                         'class' => 'design_video2 elementor',
@@ -106,7 +113,26 @@
                                         'name' => 'Video Production #2',
                                         'available_for' => 'Elementor',
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-video2/',
+                                    ],
+                                    [
+                                        'class' => 'design_agency-elementor elementor',
+                                        'id' => 'inspiro-agency',
+                                        'title' => 'Agency / Business',
+                                        'thumbnail_url' => 'https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/home-agency-thumb.png',
+                                        'demo_url' => 'https://demo.wpzoom.com/inspiro-agency/',
+                                        'name' => 'Agency / Business #2',
+                                        'available_for' => 'Elementor',
+                                        'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
+                                    ],
+                                    [
+                                        'class' => 'design_video elementor',
+                                        'id' => '',
+                                        'title' => 'Portfolio (Default)',
+                                        'thumbnail_url' => 'https://demo.wpzoom.com/inspiro-pro-demo/wp-content/themes/inspiro-pro-select/images/site-layout_agency-dark.png',
+                                        'demo_url' => 'https://demo.wpzoom.com/inspiro-agency2/',
+                                        'name' => 'Agency / Business',
+                                        'available_for' => 'Elementor',
+                                        'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
                                     ],
                                     [
                                         'class' => 'design_kids elementor',
@@ -117,7 +143,6 @@
                                         'name' => 'Kids Summer Camp',
                                         'available_for' => 'Elementor',
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-kids/',
                                     ],
                                     [
                                         'class' => 'design_architecture elementor',
@@ -128,7 +153,6 @@
                                         'name' => 'Architecture',
                                         'available_for' => 'Elementor',
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-architecture/',
                                     ],
                                     [
                                         'class' => 'design_photography elementor',
@@ -139,7 +163,6 @@
                                         'name' => 'Wedding Photography',
                                         'available_for' => 'Elementor',
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-wedding-photography/',
                                     ],
                                     [
                                         'class' => 'design_photography elementor',
@@ -150,18 +173,6 @@
                                         'name' => 'Photography',
                                         'available_for' => 'Elementor',
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-photography/',
-                                    ],
-                                    [
-                                        'class' => 'design_agency-elementor elementor',
-                                        'id' => 'inspiro-agency',
-                                        'title' => 'Agency / Business',
-                                        'thumbnail_url' => 'https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/home-agency-thumb.png',
-                                        'demo_url' => 'https://demo.wpzoom.com/inspiro-agency/',
-                                        'name' => 'Agency / Business',
-                                        'available_for' => 'Elementor',
-                                        'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-agency/',
                                     ],
                                     [
                                         'class' => 'design_hotel elementor',
@@ -172,7 +183,6 @@
                                         'name' => 'Hotel / Real Estate',
                                         'available_for' => 'Elementor',
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-hotel/',
                                     ],
                                     [
                                         'class' => 'design_events elementor gutenberg',
@@ -183,7 +193,6 @@
                                         'name' => 'Shop / WooCommerce',
                                         'available_for' => ['Elementor', 'Gutenberg'],
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-shop/',
                                     ],
                                     [
                                         'class' => 'design_restaurant elementor',
@@ -194,7 +203,6 @@
                                         'name' => 'Restaurant',
                                         'available_for' => 'Elementor',
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-restaurant/',
                                     ],
                                     [
                                         'class' => 'design_events elementor',
@@ -205,7 +213,6 @@
                                         'name' => 'Events / Conference',
                                         'available_for' => 'Elementor',
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-event/',
                                     ],
                                     [
                                         'class' => 'design_wellness elementor',
@@ -216,7 +223,6 @@
                                         'name' => 'Wellness / Spa',
                                         'available_for' => 'Elementor',
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-wellness/',
                                     ],
                                     [
                                         'class' => 'design_magazine elementor',
@@ -227,7 +233,6 @@
                                         'name' => 'Magazine',
                                         'available_for' => 'Elementor',
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-magazine/',
                                     ],
                                     [
                                         'class' => 'design_magazine elementor',
@@ -238,7 +243,6 @@
                                         'name' => 'Car Rental / Dealer',
                                         'available_for' => 'Elementor',
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-auto/',
                                     ],
                                     [
                                         'class' => 'design_magazine elementor gutenberg',
@@ -249,7 +253,6 @@
                                         'name' => 'Author / Coach',
                                         'available_for' => ['Elementor', 'Gutenberg'],
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-author/',
                                     ],
                                     [
                                         'class' => 'design_magazine elementor',
@@ -260,7 +263,6 @@
                                         'name' => 'Church',
                                         'available_for' => 'Elementor',
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-church/',
                                     ],
                                     [
                                         'class' => 'design_medical elementor gutenberg',
@@ -271,7 +273,6 @@
                                         'name' => 'Doctor / Medical',
                                         'available_for' => ['Elementor', 'Gutenberg'],
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-medical/',
                                     ],
                                     [
                                         'class' => 'design_winery elementor gutenberg',
@@ -280,9 +281,8 @@
                                         'thumbnail_url' => 'https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro-pro/winery/home-thumb.png',
                                         'demo_url' => 'https://demo.wpzoom.com/inspiro-pro-winery/',
                                         'name' => 'Winery',
-                                        'available_for' => ['Elementor', 'Gutenberg'],
+                                        'available_for' => ['Gutenberg'],
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-pro-winery/',
                                     ],
                                     [
                                         'class' => 'design_charity elementor gutenberg',
@@ -291,20 +291,18 @@
                                         'thumbnail_url' => 'https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro-pro/charity/home-thumb.png',
                                         'demo_url' => 'https://demo.wpzoom.com/inspiro-pro-charity/',
                                         'name' => 'Charity / NGO',
-                                        'available_for' => ['Elementor', 'Gutenberg'],
+                                        'available_for' => ['Gutenberg'],
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-pro-charity/',
                                     ],
                                     [
                                         'class' => 'design_tech elementor gutenberg',
                                         'id' => 'inspiro-tech',
                                         'title' => 'Tech',
-                                        'thumbnail_url' => 'https://demo.wpzoom.com/inspiro-pro-demo/wp-content/themes/inspiro-pro-select/images/site-layout_tech.png',
-                                        'demo_url' => 'https://demo.wpzoom.com/inspiro-tech/',
+                                        'thumbnail_url' => 'https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/inspiro-finance/home-thumb.png',
+                                        'demo_url' => 'https://demo.wpzoom.com/inspiro-finance/',
                                         'name' => 'Tech / Finance',
-                                        'available_for' => ['Elementor', 'Gutenberg'],
+                                        'available_for' => ['Gutenberg'],
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
-                                        'preview_url' => 'https://demo.wpzoom.com/inspiro-tech/',
                                     ],
                                 ];
 
@@ -318,7 +316,7 @@
                                     <figcaption>
                                         <h5><?php echo esc_html($design['name']); ?></h5>
                                         <p>
-                                            Available for
+                                            <?php esc_html_e('Available for ', 'inspiro'); ?>
                                             <?php 
                                                 if (!empty($design['available_for'])) {
                                                     $builders = is_array($design['available_for']) ? $design['available_for'] : [$design['available_for']];
@@ -335,7 +333,7 @@
                                         <a href="<?php echo esc_url($design['premium_url']); ?>" target="_blank" class="button button-large button-primary">
                                             <?php esc_html_e('Get Inspiro Premium', 'inspiro'); ?>
                                         </a>
-                                        <a href="<?php echo esc_url($design['preview_url']); ?>" target="_blank" class="button button-large button-secondary-gray">
+                                        <a href="<?php echo esc_url($design['demo_url']); ?>" target="_blank" class="button button-large button-secondary-gray">
                                             <?php esc_html_e('Preview', 'inspiro'); ?>
                                         </a>
                                     </figcaption>
