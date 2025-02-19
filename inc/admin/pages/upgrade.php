@@ -31,7 +31,12 @@
                         </div>
 
                         <div class="theme-info-wrap">
+
+                            <h3>
+                                <?php esc_html_e( 'Upload theme', 'inspiro' ); ?>
+                            </h3>
                             <div class="wpz-grid-wrap">
+
                                 <div class="section quick-action-section">
 
                                     <form method="post" enctype="multipart/form-data" class="wp-upload-form ml-block-form" action="<?php echo esc_url( self_admin_url( 'update.php?action=upload-theme' ) ); ?>">

@@ -93,6 +93,7 @@
 }
 .theme-info-wrap.welcome-section {
     display: flex;
+    align-items: center;
     background: radial-gradient(at 50% 50%, #d8dffa, transparent 0), linear-gradient(-45deg, rgba(192, 205, 245, 0.6196078431), #ffffff, rgba(192, 205, 245, 0.6196078431));
     gap: 40px;
 }
@@ -117,12 +118,13 @@
 .theme-info-wrap.welcome-section .section-content .header-row .wpz-onboard_framework-version {
     font-size: 14px;
     font-weight: 500;
-    color: #81909c;
-    margin: 0 0 25px;
+    color: #878787;
+    margin: 0 0 15px;
 }
 .theme-info-wrap.welcome-section .section_footer {
     display: block;
     margin-bottom: 0;
+    margin-top: 30px;
 }
 .theme-info-wrap * {
     box-sizing: border-box;
@@ -418,16 +420,14 @@
     align-items: center;
     justify-content: center;
     font-weight: 600;
-    padding: 9px 22px;
+    padding: 6px 22px;
     transition: all 0.3s ease;
     margin-left: 10px;
     margin-bottom: 15px;
     border-radius: 4px;
-    min-height: 40px;
-    height: 40px;
     color: #ffffff;
     background: #242628;
-    border: none;
+    border: 1px solid #242628;
     box-shadow: none;
 }
 .wp-core-ui .wpz-onboard_wrapper .button:hover, .wp-core-ui .wpz-onboard_wrapper .button:active {
@@ -447,13 +447,14 @@
     background: #242628;
 }
 .wp-core-ui .wpz-onboard_wrapper .button.button-secondary-gray {
-    color: #81909c;
+    color: #444;
     background: transparent;
-    border: 1px solid #81909c;
+    border: 1px solid #878787;
 }
 .wp-core-ui .wpz-onboard_wrapper .button.button-secondary-gray:hover {
     color: #ffffff;
-    background: #414446;
+    background: #242628;
+    border-color: #242628;
 }
 .wp-core-ui .wpz-onboard_wrapper .button.button-secondary-gray:active {
     color: #ffffff;
@@ -530,7 +531,7 @@
     font-size: 24px;
 }
 .wpz-onboard_wrapper .wpz-onboard_header .wpz-onboard_title-wrapper .wpz-onboard_title span {
-    color: #81909c;
+    color: #878787;
 }
 .wpz-onboard_wrapper .wpz-onboard_header .wpz-onboard_title-wrapper .wpz-onboard_title small {
     margin: 0 0.5em 0 0;
@@ -845,7 +846,7 @@
     font-size: 18px;
     font-weight: 600;
     white-space: nowrap;
-    margin: 0 0 10px;
+    margin: 0 0 20px;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-steps .wpz-onboard_content-main-step.step-choose-design form ul li figure figcaption p {
     display: flex;
@@ -866,7 +867,7 @@
     color: var(--inspiro-primary-color);
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-steps .wpz-onboard_content-main-step.step-choose-design form ul li figure figcaption p a:hover, .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-steps .wpz-onboard_content-main-step.step-choose-design form ul li figure figcaption p a:active {
-    color: rgb(87.3947368421, 92.25, 97.1052631579);
+    color: #575c61;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-steps .wpz-onboard_content-main-step.step-choose-design form ul li figure figcaption input[type=radio] {
     display: none;
@@ -958,10 +959,10 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: space-between;
 }
-.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap .section form input {
-    flex: 1;
-    min-width: 200px;
+.wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap .section form input[disabled] {
+    background-color: #000 !important;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap .section form .button.button-primary {
     background: #ffffff;
@@ -1178,7 +1179,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    border-right: 1px solid #81909c;
+    border-right: 1px solid #878787;
     padding: 20px 0;
     font-weight: 500;
     text-align: center;

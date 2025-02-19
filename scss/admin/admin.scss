@@ -24,6 +24,7 @@
 
     &.welcome-section {
         display: flex;
+        align-items: center;
         background: radial-gradient(at 50% 50%, $light-blueish-color, transparent 0), 
                     linear-gradient(45deg, $light-neutral-green-color, $light-color, $light-neutral-green-color);
         gap: 40px;
@@ -53,7 +54,7 @@
                     font-size: $font-size-14;
                     font-weight: 500;
                     color: $bluish-grey-color;
-                    margin: 0 0 25px;
+                    margin: 0 0 15px;
                 }
             }
         }
@@ -61,6 +62,7 @@
         .section_footer {
             display: block;
             margin-bottom: 0;
+            margin-top: 30px;
         }
     }
 
@@ -419,17 +421,15 @@
         align-items: center;
         justify-content: center;
         font-weight: 600;
-        padding: 9px 22px;
+        padding: 6px 22px;
         transition: all 0.3s ease;
         margin-right: 10px;
         margin-bottom: 15px;
         border-radius: 4px;
-        min-height: 40px;
-        height: 40px;
 
         color: $light-color;
         background: $dark-color;
-        border: none;
+        border: 1px solid $dark-color;
         box-shadow: none;
 
         &:hover,
@@ -454,13 +454,14 @@
         }
 
         &.button-secondary-gray {
-            color: $bluish-grey-color;
+            color: #444;
             background: transparent;
             border: 1px solid $bluish-grey-color;
 
             &:hover {
                 color: $light-color;
-                background: $hover-grey-color;
+                background: $dark-color;
+                border-color: $dark-color;
             }
 
             &:active {
@@ -955,7 +956,7 @@
                                                     font-size: $font-size-18;
                                                     font-weight: 600;
                                                     white-space: nowrap;
-                                                    margin: 0 0 10px;
+                                                    margin: 0 0 20px;
                                                 }
 
                                                 p {
@@ -1111,10 +1112,10 @@
                             align-items: center;
                             flex-wrap: wrap;
                             gap: 10px;
+                            justify-content: space-between;
 
-                            input {
-                                flex: 1;
-                                min-width: 200px;
+                            input[disabled] {
+                                background-color: #000 !important;
                             }
 
                             .button.button-primary {
@@ -1124,6 +1125,8 @@
                                 &:hover {
                                     background: $border-grey-color;
                                 }
+
+
                             }
                         } 
                     }
@@ -1393,7 +1396,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    border-left: 1px solid #81909c;
+    border-left: 1px solid #878787;
     padding: 20px 0;
     font-weight: 500;
     text-align: center;

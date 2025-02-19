@@ -25,8 +25,8 @@ $number_of_plugins = count( $plugins );
                     <div id="license" class="wpz-onboard_content-side plugins">
                         <div class="wpz-onboard_content-side-section">
                             <h3 class="wpz-onboard_content-side-section-title icon-docs">
-                            <?php esc_html_e( 'Plugins', 'inspiro' ); ?></h3>
-                            <p class="wpz-onboard_content-main-intro"><?php esc_html_e( 'Install and activate the required plugins to ensure full functionality of your theme.', 'inspiro' ); ?></p>    
+                            <?php esc_html_e( 'Recommended Plugins', 'inspiro' ); ?></h3>
+                            <p class="wpz-onboard_content-main-intro"><?php esc_html_e( 'Install and activate required plugins to ensure full functionality of your theme.', 'inspiro' ); ?></p>
                         </div>
                         
                         <div class="theme-info-wrap">

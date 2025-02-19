@@ -5,9 +5,8 @@
 	<div class="theme-info-wrap welcome-section">
 		<div class="section-content">
 			<div class="header-row">
-				<h3 class="wpz-onboard_content-main-title welcome"><?php esc_html_e( 'Welcome to Inspiro Lite!', 'inspiro' ); ?>
-					👋</h3>
-				<h2 class="wpz-onboard_framework-version">v <?php echo esc_html( $parent->get( 'Version' ) ); ?></h2>
+				<h3 class="wpz-onboard_content-main-title welcome"><?php esc_html_e( 'Welcome to Inspiro Lite!', 'inspiro' ); ?>👋</h3>
+				<span class="wpz-onboard_framework-version">v <?php echo esc_html( $parent->get( 'Version' ) ); ?></span>
 			</div>
 			<p class="wpz-onboard_content-main-intro"><?php esc_html_e( 'Thank you for installing the free version of our theme! Below you can find quick links to different sections in the Customizer where you can configure and customize the theme. The free version includes limited features and customization options, but if you need more flexibility and plan to take your website to the next level, make sure to check the Premium version.', 'inspiro' ); ?></p>
 			<p class="section_footer">
@@ -22,10 +21,10 @@
 			</p>
 		</div>
 		<div class="section-image">
-			<a href="https://demo.wpzoom.com/inspiro-premium-blocks"
+			<a href="https://www.wpzoom.com/themes/inspiro/"
 				title="Inspiro Premium" target="_blank"><img
 				src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-premium-blocks.png' ); ?>"
-				width="300" alt="<?php echo esc_attr__( 'Inspiro Premium Blocks', 'inspiro' ); ?>"/>
+				width="300" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>"/>
 			</a>
 		</div>
 	</div>
@@ -506,7 +505,7 @@
 
 		<br>
 		<a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-table', 'inspiro' ) ); ?>"
-			target="_blank" class="button button-large button-primary">
+			target="_blank" class="button button-primary">
 			<?php esc_html_e( 'Get Inspiro Premium &#8599;', 'inspiro' ); ?>
 		</a>
 		<a href="https://www.wpzoom.com/themes/inspiro/starter-sites/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"

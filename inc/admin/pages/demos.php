@@ -75,23 +75,23 @@
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
                                     ],
                                     [
-                                        'class' => 'design_default-elementor elementor',
+                                        'class' => 'design_default-elementor gutenberg',
                                         'id' => '',
                                         'title' => 'Portfolio (Default)',
                                         'thumbnail_url' => 'https://www.wpzoom.com/wp-content/uploads/2024/12/inspiro-pp-blocks-1.png',
                                         'demo_url' => 'https://demo.wpzoom.com/inspiro-premium-blocks/',
                                         'name' => 'Business / Portfolio (Blocks)',
-                                        'available_for' => 'Gutenberg',
+                                        'available_for' => ['Gutenberg'],
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
                                     ],
                                     [
-                                        'class' => 'design_default-elementor elementor',
+                                        'class' => 'design_default-elementor gutenberg',
                                         'id' => '',
                                         'title' => 'Portfolio (Default)',
                                         'thumbnail_url' => 'https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/inspiro-persona/home-thumb.png',
                                         'demo_url' => 'https://demo.wpzoom.com/inspiro-persona/',
                                         'name' => 'Persona (Blocks)',
-                                        'available_for' => 'Gutenberg',
+                                        'available_for' => ['Gutenberg'],
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
                                     ],
                                     [
@@ -102,6 +102,16 @@
                                         'demo_url' => 'https://demo.wpzoom.com/inspiro-video/',
                                         'name' => 'Video Production',
                                         'available_for' => 'Elementor',
+                                        'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
+                                    ],
+                                    [
+                                        'class' => 'design_video gutenberg',
+                                        'id' => 'inspiro-video-blocks',
+                                        'title' => 'Video Production (Blocks)',
+                                        'thumbnail_url' => 'https://www.wpzoom.com/wp-content/uploads/2025/02/inspiro-video-blocks.png',
+                                        'demo_url' => 'https://demo.wpzoom.com/inspiro-video-blocks/',
+                                        'name' => 'Video Production',
+                                        'available_for' => 'Gutenberg',
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
                                     ],
                                     [
@@ -171,6 +181,26 @@
                                         'thumbnail_url' => 'https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/home-photography-thumb.png',
                                         'demo_url' => 'https://demo.wpzoom.com/inspiro-photography/',
                                         'name' => 'Photography',
+                                        'available_for' => 'Elementor',
+                                        'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
+                                    ],
+                                    [
+                                        'class' => 'design_food elementor',
+                                        'id' => 'inspiro-food',
+                                        'title' => 'Food Blog',
+                                        'thumbnail_url' => 'https://www.wpzoom.com/wp-content/uploads/2024/12/inspiro-recipe-1.png',
+                                        'demo_url' => 'https://demo.wpzoom.com/inspiro-recipe/',
+                                        'name' => 'Food Blog',
+                                        'available_for' => 'Elementor',
+                                        'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
+                                    ],
+                                    [
+                                        'class' => 'design_coffee elementor',
+                                        'id' => 'inspiro-coffee',
+                                        'title' => 'Coffee Shop',
+                                        'thumbnail_url' => 'https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/inspiro-coffee/home-thumb.png',
+                                        'demo_url' => 'https://demo.wpzoom.com/inspiro-coffee-shop/',
+                                        'name' => 'Coffee Shop',
                                         'available_for' => 'Elementor',
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
                                     ],
@@ -275,7 +305,7 @@
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
                                     ],
                                     [
-                                        'class' => 'design_winery elementor gutenberg',
+                                        'class' => 'design_winery gutenberg',
                                         'id' => 'inspiro-pro-winery',
                                         'title' => 'Winery',
                                         'thumbnail_url' => 'https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro-pro/winery/home-thumb.png',
@@ -285,7 +315,7 @@
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
                                     ],
                                     [
-                                        'class' => 'design_charity elementor gutenberg',
+                                        'class' => 'design_charity gutenberg',
                                         'id' => 'inspiro-pro-charity',
                                         'title' => 'Charity / NGO',
                                         'thumbnail_url' => 'https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro-pro/charity/home-thumb.png',
@@ -295,7 +325,7 @@
                                         'premium_url' => 'https://www.wpzoom.com/themes/inspiro/',
                                     ],
                                     [
-                                        'class' => 'design_tech elementor gutenberg',
+                                        'class' => 'design_tech gutenberg',
                                         'id' => 'inspiro-tech',
                                         'title' => 'Tech',
                                         'thumbnail_url' => 'https://wpzoom.s3.us-east-1.amazonaws.com/elementor/templates/assets/thumbs/inspiro/inspiro-finance/home-thumb.png',
@@ -330,10 +360,10 @@
                                                 }
                                             ?>
                                         </p>
-                                        <a href="<?php echo esc_url($design['premium_url']); ?>" target="_blank" class="button button-large button-primary">
+                                        <a href="<?php echo esc_url($design['premium_url']); ?>" target="_blank" class="button button-primary">
                                             <?php esc_html_e('Get Inspiro Premium', 'inspiro'); ?>
                                         </a>
-                                        <a href="<?php echo esc_url($design['demo_url']); ?>" target="_blank" class="button button-large button-secondary-gray">
+                                        <a href="<?php echo esc_url($design['demo_url']); ?>" target="_blank" class="button button-secondary-gray">
                                             <?php esc_html_e('Preview', 'inspiro'); ?>
                                         </a>
                                     </figcaption>
@@ -498,10 +528,10 @@
                                                     <path d="M14 0C6.26727 0 0 6.26723 0 13.9999C0 21.7302 6.26727 28 14 28C21.7327 28 28 21.7326 28 13.9999C27.9976 6.26723 21.7303 0 14 0ZM10.5007 19.8312H8.16859V8.16599H10.5007V19.8312ZM19.8315 19.8312H12.8327V17.4993H19.8315V19.8312ZM19.8315 15.1647H12.8327V12.8327H19.8315V15.1647ZM19.8315 10.4981H12.8327V8.16599H19.8315V10.4981Z" fill="#92123A"/>
                                                 </svg>
                                             </p>
-                                            <a href="<?php echo esc_url($design['premium_url']); ?>" target="_blank" class="button button-large button-primary">
+                                            <a href="<?php echo esc_url($design['premium_url']); ?>" target="_blank" class="button button-primary">
                                                 <?php esc_html_e('Get Inspiro PRO', 'inspiro'); ?>
                                             </a>
-                                            <a href="<?php echo esc_url($design['preview_url']); ?>" target="_blank" class="button button-large button-secondary-gray">
+                                            <a href="<?php echo esc_url($design['preview_url']); ?>" target="_blank" class="button button-secondary-gray">
                                                 <?php esc_html_e('Preview', 'inspiro'); ?>
                                             </a>
                                         </figcaption>
