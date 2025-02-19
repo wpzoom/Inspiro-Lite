@@ -92,7 +92,7 @@
 					<path d="M12 13.5V18" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 					<path d="M14 21H10" stroke="#242628" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 				</svg>
-				<?php esc_html_e( 'Starter Sites Importer', 'inspiro' ); ?>
+				<?php esc_html_e( 'Demo Importer', 'inspiro' ); ?>
 			</a>
 		</li>
 		<li class="wpz-onboard_tab wpz-onboard_tab-debug">
