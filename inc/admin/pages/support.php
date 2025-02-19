@@ -111,10 +111,8 @@
 				<p class="about">
                     <?php esc_html_e( 'Have questions or need help setting up your theme? Contact our Support Team—we’re here to assist you!', 'inspiro' ); ?>
                 </p>
-                <p class="section_footer">
-                    <a href="https://www.wpzoom.com/support/" title="Open Support Desk"
-                        target="_blank" class="button button-primary"><?php esc_html_e( 'Open Support Desk', 'inspiro' ); ?>
-                    </a>
+                <p class="section_footer" style="cursor: not-allowed;">
+                    <button type="button" style="cursor: not-allowed;" disabled class="button button-primary"><span class="dashicons dashicons-lock"></span> <?php esc_html_e( 'Open Support Desk', 'inspiro' ); ?></button>
                 </p>
             </div>
         </div>
