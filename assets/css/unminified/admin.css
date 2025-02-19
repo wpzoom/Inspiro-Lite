@@ -122,6 +122,7 @@
 }
 .theme-info-wrap.welcome-section .section_footer {
     display: block;
+    margin-bottom: 0;
 }
 .theme-info-wrap * {
     box-sizing: border-box;
@@ -362,8 +363,8 @@
     background: none;
 }
 .theme-comparison-header th h3 {
-    font-size: 16px;
-    margin: 10px 20px;
+    font-size: 18px;
+    margin: 10px 5px;
     text-align: center;
 }
 .theme-comparison-header th:first-child {
@@ -1133,6 +1134,110 @@
     width: 100%;
 }
 
+.theme-table {
+    padding: 0;
+    margin: 30px 0 0;
+}
+
+.theme-table .t-head {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.theme-table .content {
+    padding: 25px 40px;
+}
+
+.theme-table li {
+    margin: 0 !important;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+}
+
+.theme-table li:nth-child(2n) {
+    background: #f2f4f6;
+}
+
+.theme-table li:nth-child(odd) {
+    background: #fff;
+}
+
+.theme-table h4 {
+    margin: 0;
+    font-weight: 500;
+}
+
+.theme-table .h-wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.theme-table .c {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 1px solid #81909c;
+    padding: 20px 0;
+    font-weight: 500;
+    text-align: center;
+}
+
+.theme-table p {
+    margin: 0;
+    color: #585858;
+}
+
+.theme-table .plan {
+    padding: 5px 10px;
+    color: #fff;
+    background: #3496ff;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 8px;
+    margin-left: 10px;
+    line-height: 1;
+}
+
+.theme-table .c span {
+    display: block;
+}
+
+@media (max-width: 782px) {
+    .theme-table .t-head,
+    .theme-table h4 {
+        font-size: 20px;
+    }
+    .theme-table .content {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+    .theme-table .h-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .theme-table .plan {
+        margin: 10px 0 0;
+    }
+}
+@media (max-width: 700px) {
+    .theme-table .t-head,
+    .theme-table h4 {
+        font-size: 16px;
+    }
+}
+@media (max-width: 600px) {
+    .theme-table .c span {
+        display: none;
+    }
+}
+@media (min-width: 1441px) {
+    .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-main-steps .wpz-onboard_content-main-step.step-choose-design form ul {
+        grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
+    }
+}
 @media screen and (max-width: 1400px) {
     .wpz-grid-wrap,
     .wpz-grid-wrap.three {

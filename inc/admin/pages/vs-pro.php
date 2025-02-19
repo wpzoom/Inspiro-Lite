@@ -10,133 +10,300 @@
 
 	<div class="theme-info-wrap">
 		<div class="theme-comparison">
-			<table>
-				<thead class="theme-comparison-header">
-					<tr>
-						<th class="table-feature-title"><h3><?php esc_html_e( 'Feature', 'inspiro' ); ?></h3></th>
-						<th><h3><?php esc_html_e( 'Inspiro Lite', 'inspiro' ); ?></h3></th>
-						<th><h3><?php esc_html_e( 'Inspiro Premium', 'inspiro' ); ?></h3></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td><h3><?php esc_html_e( 'Responsive Layout', 'inspiro' ); ?></h3></td>
-						<td><span class="dashicons dashicons-saved"></span></td>
-						<td><span class="dashicons dashicons-saved"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e( 'Live Customizer', 'inspiro' ); ?></h3></td>
-						<td><span class="dashicons dashicons-saved"></span></td>
-						<td><span class="dashicons dashicons-saved"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e( 'Fullscreen Slideshow on Homepage', 'inspiro' ); ?></h3></td>
-						<td><span class="dashicons dashicons-no-alt"></span></td>
-						<td><span class="dashicons dashicons-saved"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e( 'Advanced WooCommerce Integration', 'inspiro' ); ?></h3></td>
-						<td><span class="dashicons dashicons-no-alt"></span></td>
-						<td><span class="dashicons dashicons-saved"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e( 'Elementor Integration', 'inspiro' ); ?></h3></td>
-						<td>Partial</td>
-						<td>Full</td>
-					</tr>
-					<tr>
-						<td><h3>
-							<strong><?php esc_html_e( 'Custom Elementor Widgets', 'inspiro' ); ?></strong>
-							<span class="table-new-promo">POPULAR FEATURE</span></h3>
-						</td>
-						<td><span class="dashicons dashicons-no-alt"></span></td>
-						<td><span class="dashicons dashicons-saved"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e( 'Demo Content Importer', 'inspiro' ); ?></h3></td>
-						<td>Limited</td>
-						<td>Complete Sites<br/>Individual Pages</td>
-					</tr>
 
-					<tr>
-						<td><h3><?php esc_html_e( 'Starter Sites', 'inspiro' ); ?></h3></td>
-						<td>5</td>
-						<td>25+</td>
-					</tr>
-					<tr>
-						<td><h3>
-							<strong><?php esc_html_e( 'Portfolio with Video Integration', 'inspiro' ); ?></strong>
-							<span class="table-new-promo">POPULAR FEATURE</span></h3>
-						</td>
-						<td><span class="dashicons dashicons-no-alt"></span></td>
-						<td><span class="dashicons dashicons-saved"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e( 'Video Features', 'inspiro' ); ?></h3></td>
-						<td><span class="dashicons dashicons-no-alt"></span></td>
-						<td><span class="dashicons dashicons-saved"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e( 'Predefined Style Kits', 'inspiro' ); ?></h3></td>
-						<td><span class="dashicons dashicons-no-alt"></span></td>
-						<td><span class="dashicons dashicons-saved"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e( 'Video Backgrounds', 'inspiro' ); ?></h3></td>
-						<td><span class="dashicons dashicons-no-alt"></span></td>
-						<td><span class="dashicons dashicons-saved"></span></td>
-					</tr>
-					<tr>
-						<td><h3>
-							<strong><?php esc_html_e( 'Video Background on Hover', 'inspiro' ); ?></strong>
-							<span class="table-new-promo">POPULAR FEATURE</span></h3>
-						</td>
-						<td><span class="dashicons dashicons-no-alt"></span></td>
-						<td><span class="dashicons dashicons-saved"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e( 'Video Headers in Pages & Posts', 'inspiro' ); ?></h3></td>
-						<td><span class="dashicons dashicons-no-alt"></span></td>
-						<td><span class="dashicons dashicons-saved"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e( 'Video & Image Lightbox for Portfolio Posts', 'inspiro' ); ?></h3></td>
-						<td><span class="dashicons dashicons-no-alt"></span></td>
-						<td><span class="dashicons dashicons-saved"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e( 'Multiple Blog & Posts Layouts', 'inspiro' ); ?></h3></td>
-						<td><span class="dashicons dashicons-no-alt"></span></td>
-						<td><span class="dashicons dashicons-saved"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e( 'Theme Options', 'inspiro' ); ?></h3></td>
-						<td><span class="dashicons dashicons-no-alt"></span></td>
-						<td><span class="dashicons dashicons-saved"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e( 'Google Fonts (Hosted Locally)', 'inspiro' ); ?></h3></td>
-						<td><span class="dashicons dashicons-saved"></span></td>
-						<td><span class="dashicons dashicons-saved"></span></td>
-					</tr>
-					<tr>
-						<td><h3><?php esc_html_e( 'Typography Options', 'inspiro' ); ?></h3></td>
-						<td>Limited</td>
-						<td><span class="dashicons dashicons-saved"></span></td>
-					</tr>
-                    <tr>
-                        <td><h3><?php esc_html_e( 'Customization Options', 'inspiro' ); ?></h3></td>
-                        <td>Limited</td>
-                        <td>Full</td>
-                    </tr>
-					<tr>
-						<td><h3><?php esc_html_e( 'Support', 'inspiro' ); ?></h3></td>
-						<td><?php esc_html_e( 'Support Forum', 'inspiro' ); ?></td>
-						<td><?php esc_html_e( 'Fast Email Support', 'inspiro' ); ?></td>
-					</tr>
-					
-				</tbody>
-			</table>
+            <ul class="theme-table">
+                   <li class="t-head">
+                      <div></div>
+                      <div class="c">Lite</div>
+                      <div class="c"><span>Premium</span></div>
+                   </li>
+                      <li class="t-row">
+                         <div class="content">
+                            <div class="h-wrap">
+                               <h4>25+ Premium Starter Sites</h4>
+                               <span class="plan">NEW DEMOS</span>
+                            </div>
+                            <p>Don’t start from scratch. Our ready-to-import starter sites provide a comprehensive foundation for any website. They are easy to deploy and give you a massive head start on your project, no matter what industry you’re in.</p>
+                         </div>
+                         <div class="c">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <path d="M20.4853 3.51471C18.2188 1.24823 15.2053 0 12 0C8.79474 0 5.78119 1.24823 3.51471 3.51471C1.24823 5.78119 0 8.79474 0 12C0 15.2054 1.24823 18.2188 3.51471 20.4853C5.78119 22.7518 8.79474 24 12 24C15.2053 24 18.2188 22.7518 20.4853 20.4853C22.7518 18.2188 24 15.2054 24 12C24 8.79474 22.7518 5.78119 20.4853 3.51471ZM17.1903 15.5328C17.6479 15.9906 17.6479 16.7325 17.1903 17.1901C16.9614 17.419 16.6615 17.5334 16.3616 17.5334C16.0616 17.5334 15.7617 17.419 15.5328 17.1901L12 13.6573L8.46716 17.1903C8.23828 17.419 7.93835 17.5334 7.63843 17.5334C7.3385 17.5334 7.03857 17.419 6.80969 17.1903C6.35211 16.7325 6.35211 15.9906 6.80969 15.533L10.3427 12L6.80969 8.46716C6.35211 8.0094 6.35211 7.26746 6.80969 6.80988C7.26746 6.35211 8.0094 6.35211 8.46698 6.80988L12 10.3427L15.5328 6.80988C15.9906 6.35229 16.7325 6.35211 17.1901 6.80988C17.6479 7.26746 17.6479 8.0094 17.1901 8.46716L13.6573 12L17.1903 15.5328Z" fill="#81909C"></path>
+                   </svg>
+                         </div>
+                         <div class="c">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <path d="M12 0C5.38346 0 0 5.38346 0 12C0 18.6165 5.38346 24 12 24C18.6165 24 24 18.6165 24 12C24 5.38346 18.6165 0 12 0ZM18.7068 8.84211L11.0376 16.4511C10.5865 16.9023 9.86466 16.9323 9.38346 16.4812L5.32331 12.782C4.84211 12.3308 4.81203 11.5789 5.23308 11.0977C5.68421 10.6165 6.43609 10.5865 6.91729 11.0376L10.1353 13.985L16.9925 7.12782C17.4737 6.64662 18.2256 6.64662 18.7068 7.12782C19.188 7.60902 19.188 8.3609 18.7068 8.84211Z" fill="#22BB66"></path>
+                   </svg>
+                         </div>
+                      </li>
+                         <li class="t-row">
+                            <div class="content">
+                               <div class="h-wrap">
+                                  <h4>Portfolio With Video Integration</h4>
+                                  <span class="plan">POPULAR FEATURE</span>
+                               </div>
+                               <p>Using the Portfolio feature, you can create separate posts with photos and galleries in different layouts, and have them displayed in a grid layout. Seamlessly embed videos anywhere on your site. Our theme includes unique video integrations, such as Video Background on Hover, Video Lightbox, and more.</p>
+                            </div>
+                            <div class="c">
+                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.4853 3.51471C18.2188 1.24823 15.2053 0 12 0C8.79474 0 5.78119 1.24823 3.51471 3.51471C1.24823 5.78119 0 8.79474 0 12C0 15.2054 1.24823 18.2188 3.51471 20.4853C5.78119 22.7518 8.79474 24 12 24C15.2053 24 18.2188 22.7518 20.4853 20.4853C22.7518 18.2188 24 15.2054 24 12C24 8.79474 22.7518 5.78119 20.4853 3.51471ZM17.1903 15.5328C17.6479 15.9906 17.6479 16.7325 17.1903 17.1901C16.9614 17.419 16.6615 17.5334 16.3616 17.5334C16.0616 17.5334 15.7617 17.419 15.5328 17.1901L12 13.6573L8.46716 17.1903C8.23828 17.419 7.93835 17.5334 7.63843 17.5334C7.3385 17.5334 7.03857 17.419 6.80969 17.1903C6.35211 16.7325 6.35211 15.9906 6.80969 15.533L10.3427 12L6.80969 8.46716C6.35211 8.0094 6.35211 7.26746 6.80969 6.80988C7.26746 6.35211 8.0094 6.35211 8.46698 6.80988L12 10.3427L15.5328 6.80988C15.9906 6.35229 16.7325 6.35211 17.1901 6.80988C17.6479 7.26746 17.6479 8.0094 17.1901 8.46716L13.6573 12L17.1903 15.5328Z" fill="#81909C"></path>
+                      </svg>
+                            </div>
+                            <div class="c">
+                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0C5.38346 0 0 5.38346 0 12C0 18.6165 5.38346 24 12 24C18.6165 24 24 18.6165 24 12C24 5.38346 18.6165 0 12 0ZM18.7068 8.84211L11.0376 16.4511C10.5865 16.9023 9.86466 16.9323 9.38346 16.4812L5.32331 12.782C4.84211 12.3308 4.81203 11.5789 5.23308 11.0977C5.68421 10.6165 6.43609 10.5865 6.91729 11.0376L10.1353 13.985L16.9925 7.12782C17.4737 6.64662 18.2256 6.64662 18.7068 7.12782C19.188 7.60902 19.188 8.3609 18.7068 8.84211Z" fill="#22BB66"></path>
+                      </svg>
+                            </div>
+                         </li>
+                         <li class="t-row">
+                            <div class="content">
+                               <div class="h-wrap">
+                                  <h4>Video Background on Hover</h4>
+                                  <span class="plan">POPULAR FEATURE</span>
+                               </div>
+                               <p>In Inspiro Premium, we’ve integrated a unique feature for video professionals. You can assign a short video to each of your portfolio posts to play when hovering over that specific post in the Portfolio gallery.</p>
+                            </div>
+                            <div class="c">
+                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.4853 3.51471C18.2188 1.24823 15.2053 0 12 0C8.79474 0 5.78119 1.24823 3.51471 3.51471C1.24823 5.78119 0 8.79474 0 12C0 15.2054 1.24823 18.2188 3.51471 20.4853C5.78119 22.7518 8.79474 24 12 24C15.2053 24 18.2188 22.7518 20.4853 20.4853C22.7518 18.2188 24 15.2054 24 12C24 8.79474 22.7518 5.78119 20.4853 3.51471ZM17.1903 15.5328C17.6479 15.9906 17.6479 16.7325 17.1903 17.1901C16.9614 17.419 16.6615 17.5334 16.3616 17.5334C16.0616 17.5334 15.7617 17.419 15.5328 17.1901L12 13.6573L8.46716 17.1903C8.23828 17.419 7.93835 17.5334 7.63843 17.5334C7.3385 17.5334 7.03857 17.419 6.80969 17.1903C6.35211 16.7325 6.35211 15.9906 6.80969 15.533L10.3427 12L6.80969 8.46716C6.35211 8.0094 6.35211 7.26746 6.80969 6.80988C7.26746 6.35211 8.0094 6.35211 8.46698 6.80988L12 10.3427L15.5328 6.80988C15.9906 6.35229 16.7325 6.35211 17.1901 6.80988C17.6479 7.26746 17.6479 8.0094 17.1901 8.46716L13.6573 12L17.1903 15.5328Z" fill="#81909C"></path>
+                      </svg>
+                            </div>
+                            <div class="c">
+                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0C5.38346 0 0 5.38346 0 12C0 18.6165 5.38346 24 12 24C18.6165 24 24 18.6165 24 12C24 5.38346 18.6165 0 12 0ZM18.7068 8.84211L11.0376 16.4511C10.5865 16.9023 9.86466 16.9323 9.38346 16.4812L5.32331 12.782C4.84211 12.3308 4.81203 11.5789 5.23308 11.0977C5.68421 10.6165 6.43609 10.5865 6.91729 11.0376L10.1353 13.985L16.9925 7.12782C17.4737 6.64662 18.2256 6.64662 18.7068 7.12782C19.188 7.60902 19.188 8.3609 18.7068 8.84211Z" fill="#22BB66"></path>
+                      </svg>
+                            </div>
+                         </li>
+                         <li class="t-row">
+                            <div class="content">
+                               <div class="h-wrap">
+                                  <h4>Slideshow With Video Background</h4>
+                                  <span class="plan">POPULAR FEATURE</span>
+                               </div>
+                               <p>Elevate the visual experience of your website with Inspiro’s Fullscreen Slideshow. This allows you to engage visitors right from the start with an immersive slideshow, all set against a stunning video background. It fully supports video sources from YouTube, Vimeo, as well as self-hosted videos, offering endless opportunities for dynamic, engaging content.</p>
+                            </div>
+                            <div class="c">
+                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.4853 3.51471C18.2188 1.24823 15.2053 0 12 0C8.79474 0 5.78119 1.24823 3.51471 3.51471C1.24823 5.78119 0 8.79474 0 12C0 15.2054 1.24823 18.2188 3.51471 20.4853C5.78119 22.7518 8.79474 24 12 24C15.2053 24 18.2188 22.7518 20.4853 20.4853C22.7518 18.2188 24 15.2054 24 12C24 8.79474 22.7518 5.78119 20.4853 3.51471ZM17.1903 15.5328C17.6479 15.9906 17.6479 16.7325 17.1903 17.1901C16.9614 17.419 16.6615 17.5334 16.3616 17.5334C16.0616 17.5334 15.7617 17.419 15.5328 17.1901L12 13.6573L8.46716 17.1903C8.23828 17.419 7.93835 17.5334 7.63843 17.5334C7.3385 17.5334 7.03857 17.419 6.80969 17.1903C6.35211 16.7325 6.35211 15.9906 6.80969 15.533L10.3427 12L6.80969 8.46716C6.35211 8.0094 6.35211 7.26746 6.80969 6.80988C7.26746 6.35211 8.0094 6.35211 8.46698 6.80988L12 10.3427L15.5328 6.80988C15.9906 6.35229 16.7325 6.35211 17.1901 6.80988C17.6479 7.26746 17.6479 8.0094 17.1901 8.46716L13.6573 12L17.1903 15.5328Z" fill="#81909C"></path>
+                      </svg>
+                            </div>
+                            <div class="c">
+                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 0C5.38346 0 0 5.38346 0 12C0 18.6165 5.38346 24 12 24C18.6165 24 24 18.6165 24 12C24 5.38346 18.6165 0 12 0ZM18.7068 8.84211L11.0376 16.4511C10.5865 16.9023 9.86466 16.9323 9.38346 16.4812L5.32331 12.782C4.84211 12.3308 4.81203 11.5789 5.23308 11.0977C5.68421 10.6165 6.43609 10.5865 6.91729 11.0376L10.1353 13.985L16.9925 7.12782C17.4737 6.64662 18.2256 6.64662 18.7068 7.12782C19.188 7.60902 19.188 8.3609 18.7068 8.84211Z" fill="#22BB66"></path>
+                      </svg>
+                            </div>
+                         </li>
+                   <li class="t-row">
+                      <div class="content">
+                         <div class="h-wrap">
+                            <h4>Footer &amp; Header Layouts</h4>
+                         </div>
+                         <p>From the Customizer, you can quickly change the layout of the header and footer. Pick a layout that matches your website or customize it using available tools.</p>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.4853 3.51471C18.2188 1.24823 15.2053 0 12 0C8.79474 0 5.78119 1.24823 3.51471 3.51471C1.24823 5.78119 0 8.79474 0 12C0 15.2054 1.24823 18.2188 3.51471 20.4853C5.78119 22.7518 8.79474 24 12 24C15.2053 24 18.2188 22.7518 20.4853 20.4853C22.7518 18.2188 24 15.2054 24 12C24 8.79474 22.7518 5.78119 20.4853 3.51471ZM17.1903 15.5328C17.6479 15.9906 17.6479 16.7325 17.1903 17.1901C16.9614 17.419 16.6615 17.5334 16.3616 17.5334C16.0616 17.5334 15.7617 17.419 15.5328 17.1901L12 13.6573L8.46716 17.1903C8.23828 17.419 7.93835 17.5334 7.63843 17.5334C7.3385 17.5334 7.03857 17.419 6.80969 17.1903C6.35211 16.7325 6.35211 15.9906 6.80969 15.533L10.3427 12L6.80969 8.46716C6.35211 8.0094 6.35211 7.26746 6.80969 6.80988C7.26746 6.35211 8.0094 6.35211 8.46698 6.80988L12 10.3427L15.5328 6.80988C15.9906 6.35229 16.7325 6.35211 17.1901 6.80988C17.6479 7.26746 17.6479 8.0094 17.1901 8.46716L13.6573 12L17.1903 15.5328Z" fill="#81909C"></path>
+                </svg>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0C5.38346 0 0 5.38346 0 12C0 18.6165 5.38346 24 12 24C18.6165 24 24 18.6165 24 12C24 5.38346 18.6165 0 12 0ZM18.7068 8.84211L11.0376 16.4511C10.5865 16.9023 9.86466 16.9323 9.38346 16.4812L5.32331 12.782C4.84211 12.3308 4.81203 11.5789 5.23308 11.0977C5.68421 10.6165 6.43609 10.5865 6.91729 11.0376L10.1353 13.985L16.9925 7.12782C17.4737 6.64662 18.2256 6.64662 18.7068 7.12782C19.188 7.60902 19.188 8.3609 18.7068 8.84211Z" fill="#22BB66"></path>
+                </svg>
+                      </div>
+                   </li>
+                   <li class="t-row">
+                      <div class="content">
+                         <div class="h-wrap">
+                            <h4>Multiple Blog Layouts</h4>
+                         </div>
+                         <p>Multiple layout options for single and archive pages. Inspiro Premium includes 2 beautiful Blog Layouts: Traditional and a 3-Column Layout. You can easily switch between them from the Theme Options.</p>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.4853 3.51471C18.2188 1.24823 15.2053 0 12 0C8.79474 0 5.78119 1.24823 3.51471 3.51471C1.24823 5.78119 0 8.79474 0 12C0 15.2054 1.24823 18.2188 3.51471 20.4853C5.78119 22.7518 8.79474 24 12 24C15.2053 24 18.2188 22.7518 20.4853 20.4853C22.7518 18.2188 24 15.2054 24 12C24 8.79474 22.7518 5.78119 20.4853 3.51471ZM17.1903 15.5328C17.6479 15.9906 17.6479 16.7325 17.1903 17.1901C16.9614 17.419 16.6615 17.5334 16.3616 17.5334C16.0616 17.5334 15.7617 17.419 15.5328 17.1901L12 13.6573L8.46716 17.1903C8.23828 17.419 7.93835 17.5334 7.63843 17.5334C7.3385 17.5334 7.03857 17.419 6.80969 17.1903C6.35211 16.7325 6.35211 15.9906 6.80969 15.533L10.3427 12L6.80969 8.46716C6.35211 8.0094 6.35211 7.26746 6.80969 6.80988C7.26746 6.35211 8.0094 6.35211 8.46698 6.80988L12 10.3427L15.5328 6.80988C15.9906 6.35229 16.7325 6.35211 17.1901 6.80988C17.6479 7.26746 17.6479 8.0094 17.1901 8.46716L13.6573 12L17.1903 15.5328Z" fill="#81909C"></path>
+                </svg>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0C5.38346 0 0 5.38346 0 12C0 18.6165 5.38346 24 12 24C18.6165 24 24 18.6165 24 12C24 5.38346 18.6165 0 12 0ZM18.7068 8.84211L11.0376 16.4511C10.5865 16.9023 9.86466 16.9323 9.38346 16.4812L5.32331 12.782C4.84211 12.3308 4.81203 11.5789 5.23308 11.0977C5.68421 10.6165 6.43609 10.5865 6.91729 11.0376L10.1353 13.985L16.9925 7.12782C17.4737 6.64662 18.2256 6.64662 18.7068 7.12782C19.188 7.60902 19.188 8.3609 18.7068 8.84211Z" fill="#22BB66"></path>
+                </svg>
+                      </div>
+                   </li>
+
+                   <li class="t-row">
+                      <div class="content">
+                         <div class="h-wrap">
+                            <h4>Custom Elementor Widgets &amp; Templates</h4>
+                         </div>
+                         <p>Leverage the power of the most popular page builder, Elementor. With our custom Elementor templates and widgets, you can easily drag, drop, and design your dream pages.</p>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.4853 3.51471C18.2188 1.24823 15.2053 0 12 0C8.79474 0 5.78119 1.24823 3.51471 3.51471C1.24823 5.78119 0 8.79474 0 12C0 15.2054 1.24823 18.2188 3.51471 20.4853C5.78119 22.7518 8.79474 24 12 24C15.2053 24 18.2188 22.7518 20.4853 20.4853C22.7518 18.2188 24 15.2054 24 12C24 8.79474 22.7518 5.78119 20.4853 3.51471ZM17.1903 15.5328C17.6479 15.9906 17.6479 16.7325 17.1903 17.1901C16.9614 17.419 16.6615 17.5334 16.3616 17.5334C16.0616 17.5334 15.7617 17.419 15.5328 17.1901L12 13.6573L8.46716 17.1903C8.23828 17.419 7.93835 17.5334 7.63843 17.5334C7.3385 17.5334 7.03857 17.419 6.80969 17.1903C6.35211 16.7325 6.35211 15.9906 6.80969 15.533L10.3427 12L6.80969 8.46716C6.35211 8.0094 6.35211 7.26746 6.80969 6.80988C7.26746 6.35211 8.0094 6.35211 8.46698 6.80988L12 10.3427L15.5328 6.80988C15.9906 6.35229 16.7325 6.35211 17.1901 6.80988C17.6479 7.26746 17.6479 8.0094 17.1901 8.46716L13.6573 12L17.1903 15.5328Z" fill="#81909C"></path>
+                </svg>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0C5.38346 0 0 5.38346 0 12C0 18.6165 5.38346 24 12 24C18.6165 24 24 18.6165 24 12C24 5.38346 18.6165 0 12 0ZM18.7068 8.84211L11.0376 16.4511C10.5865 16.9023 9.86466 16.9323 9.38346 16.4812L5.32331 12.782C4.84211 12.3308 4.81203 11.5789 5.23308 11.0977C5.68421 10.6165 6.43609 10.5865 6.91729 11.0376L10.1353 13.985L16.9925 7.12782C17.4737 6.64662 18.2256 6.64662 18.7068 7.12782C19.188 7.60902 19.188 8.3609 18.7068 8.84211Z" fill="#22BB66"></path>
+                </svg>
+                      </div>
+                   </li>
+                   <li class="t-row">
+                      <div class="content">
+                         <div class="h-wrap">
+                            <h4>Improved Performance</h4>
+                         </div>
+                         <p>Don’t let a bulky website slow you down. Our theme is designed to be lightweight, ensuring that your website runs at lightning-fast speed without sacrificing functionality or aesthetics.</p>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.4853 3.51471C18.2188 1.24823 15.2053 0 12 0C8.79474 0 5.78119 1.24823 3.51471 3.51471C1.24823 5.78119 0 8.79474 0 12C0 15.2054 1.24823 18.2188 3.51471 20.4853C5.78119 22.7518 8.79474 24 12 24C15.2053 24 18.2188 22.7518 20.4853 20.4853C22.7518 18.2188 24 15.2054 24 12C24 8.79474 22.7518 5.78119 20.4853 3.51471ZM17.1903 15.5328C17.6479 15.9906 17.6479 16.7325 17.1903 17.1901C16.9614 17.419 16.6615 17.5334 16.3616 17.5334C16.0616 17.5334 15.7617 17.419 15.5328 17.1901L12 13.6573L8.46716 17.1903C8.23828 17.419 7.93835 17.5334 7.63843 17.5334C7.3385 17.5334 7.03857 17.419 6.80969 17.1903C6.35211 16.7325 6.35211 15.9906 6.80969 15.533L10.3427 12L6.80969 8.46716C6.35211 8.0094 6.35211 7.26746 6.80969 6.80988C7.26746 6.35211 8.0094 6.35211 8.46698 6.80988L12 10.3427L15.5328 6.80988C15.9906 6.35229 16.7325 6.35211 17.1901 6.80988C17.6479 7.26746 17.6479 8.0094 17.1901 8.46716L13.6573 12L17.1903 15.5328Z" fill="#81909C"></path>
+                </svg>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0C5.38346 0 0 5.38346 0 12C0 18.6165 5.38346 24 12 24C18.6165 24 24 18.6165 24 12C24 5.38346 18.6165 0 12 0ZM18.7068 8.84211L11.0376 16.4511C10.5865 16.9023 9.86466 16.9323 9.38346 16.4812L5.32331 12.782C4.84211 12.3308 4.81203 11.5789 5.23308 11.0977C5.68421 10.6165 6.43609 10.5865 6.91729 11.0376L10.1353 13.985L16.9925 7.12782C17.4737 6.64662 18.2256 6.64662 18.7068 7.12782C19.188 7.60902 19.188 8.3609 18.7068 8.84211Z" fill="#22BB66"></path>
+                </svg>
+                      </div>
+                   </li>
+                   <li class="t-row">
+                      <div class="content">
+                         <div class="h-wrap">
+                            <h4>WooCommerce Integration</h4>
+                         </div>
+                         <p>Need to sell something? With Inspiro, you can build your shop and start selling anything easily! The theme is fully compatible with the WooCommerce plugin. </p>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.4853 3.51471C18.2188 1.24823 15.2053 0 12 0C8.79474 0 5.78119 1.24823 3.51471 3.51471C1.24823 5.78119 0 8.79474 0 12C0 15.2054 1.24823 18.2188 3.51471 20.4853C5.78119 22.7518 8.79474 24 12 24C15.2053 24 18.2188 22.7518 20.4853 20.4853C22.7518 18.2188 24 15.2054 24 12C24 8.79474 22.7518 5.78119 20.4853 3.51471ZM17.1903 15.5328C17.6479 15.9906 17.6479 16.7325 17.1903 17.1901C16.9614 17.419 16.6615 17.5334 16.3616 17.5334C16.0616 17.5334 15.7617 17.419 15.5328 17.1901L12 13.6573L8.46716 17.1903C8.23828 17.419 7.93835 17.5334 7.63843 17.5334C7.3385 17.5334 7.03857 17.419 6.80969 17.1903C6.35211 16.7325 6.35211 15.9906 6.80969 15.533L10.3427 12L6.80969 8.46716C6.35211 8.0094 6.35211 7.26746 6.80969 6.80988C7.26746 6.35211 8.0094 6.35211 8.46698 6.80988L12 10.3427L15.5328 6.80988C15.9906 6.35229 16.7325 6.35211 17.1901 6.80988C17.6479 7.26746 17.6479 8.0094 17.1901 8.46716L13.6573 12L17.1903 15.5328Z" fill="#81909C"></path>
+                </svg>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0C5.38346 0 0 5.38346 0 12C0 18.6165 5.38346 24 12 24C18.6165 24 24 18.6165 24 12C24 5.38346 18.6165 0 12 0ZM18.7068 8.84211L11.0376 16.4511C10.5865 16.9023 9.86466 16.9323 9.38346 16.4812L5.32331 12.782C4.84211 12.3308 4.81203 11.5789 5.23308 11.0977C5.68421 10.6165 6.43609 10.5865 6.91729 11.0376L10.1353 13.985L16.9925 7.12782C17.4737 6.64662 18.2256 6.64662 18.7068 7.12782C19.188 7.60902 19.188 8.3609 18.7068 8.84211Z" fill="#22BB66"></path>
+                </svg>
+                      </div>
+                   </li>
+
+                   <li class="t-row">
+                      <div class="content">
+                         <div class="h-wrap">
+                            <h4>Video Headers in Posts, Pages &amp; Portfolio</h4>
+                            <span class="plan">POPULAR FEATURE</span>
+                         </div>
+                         <p>Easily replace the featured image in the header of individual posts or pages with a video from popular sources like YouTube, Vimeo or self-hosted. This feature is available for individual portfolio items too.</p>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.4853 3.51471C18.2188 1.24823 15.2053 0 12 0C8.79474 0 5.78119 1.24823 3.51471 3.51471C1.24823 5.78119 0 8.79474 0 12C0 15.2054 1.24823 18.2188 3.51471 20.4853C5.78119 22.7518 8.79474 24 12 24C15.2053 24 18.2188 22.7518 20.4853 20.4853C22.7518 18.2188 24 15.2054 24 12C24 8.79474 22.7518 5.78119 20.4853 3.51471ZM17.1903 15.5328C17.6479 15.9906 17.6479 16.7325 17.1903 17.1901C16.9614 17.419 16.6615 17.5334 16.3616 17.5334C16.0616 17.5334 15.7617 17.419 15.5328 17.1901L12 13.6573L8.46716 17.1903C8.23828 17.419 7.93835 17.5334 7.63843 17.5334C7.3385 17.5334 7.03857 17.419 6.80969 17.1903C6.35211 16.7325 6.35211 15.9906 6.80969 15.533L10.3427 12L6.80969 8.46716C6.35211 8.0094 6.35211 7.26746 6.80969 6.80988C7.26746 6.35211 8.0094 6.35211 8.46698 6.80988L12 10.3427L15.5328 6.80988C15.9906 6.35229 16.7325 6.35211 17.1901 6.80988C17.6479 7.26746 17.6479 8.0094 17.1901 8.46716L13.6573 12L17.1903 15.5328Z" fill="#81909C"></path>
+                </svg>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0C5.38346 0 0 5.38346 0 12C0 18.6165 5.38346 24 12 24C18.6165 24 24 18.6165 24 12C24 5.38346 18.6165 0 12 0ZM18.7068 8.84211L11.0376 16.4511C10.5865 16.9023 9.86466 16.9323 9.38346 16.4812L5.32331 12.782C4.84211 12.3308 4.81203 11.5789 5.23308 11.0977C5.68421 10.6165 6.43609 10.5865 6.91729 11.0376L10.1353 13.985L16.9925 7.12782C17.4737 6.64662 18.2256 6.64662 18.7068 7.12782C19.188 7.60902 19.188 8.3609 18.7068 8.84211Z" fill="#22BB66"></path>
+                </svg>
+                      </div>
+                   </li>
+                   <li class="t-row">
+                      <div class="content">
+                         <div class="h-wrap">
+                            <h4>GIPHY API Integration</h4>
+                            <span class="plan">POPULAR FEATURE</span>
+                         </div>
+                         <p>Thanks to the <strong>GIPHY</strong> integration that we’ve added to our theme, it’s possible to quickly generate a short video shown when hovering a portfolio item from YouTube or Vimeo links—no more manual creation of short videos from self-hosted files.</p>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.4853 3.51471C18.2188 1.24823 15.2053 0 12 0C8.79474 0 5.78119 1.24823 3.51471 3.51471C1.24823 5.78119 0 8.79474 0 12C0 15.2054 1.24823 18.2188 3.51471 20.4853C5.78119 22.7518 8.79474 24 12 24C15.2053 24 18.2188 22.7518 20.4853 20.4853C22.7518 18.2188 24 15.2054 24 12C24 8.79474 22.7518 5.78119 20.4853 3.51471ZM17.1903 15.5328C17.6479 15.9906 17.6479 16.7325 17.1903 17.1901C16.9614 17.419 16.6615 17.5334 16.3616 17.5334C16.0616 17.5334 15.7617 17.419 15.5328 17.1901L12 13.6573L8.46716 17.1903C8.23828 17.419 7.93835 17.5334 7.63843 17.5334C7.3385 17.5334 7.03857 17.419 6.80969 17.1903C6.35211 16.7325 6.35211 15.9906 6.80969 15.533L10.3427 12L6.80969 8.46716C6.35211 8.0094 6.35211 7.26746 6.80969 6.80988C7.26746 6.35211 8.0094 6.35211 8.46698 6.80988L12 10.3427L15.5328 6.80988C15.9906 6.35229 16.7325 6.35211 17.1901 6.80988C17.6479 7.26746 17.6479 8.0094 17.1901 8.46716L13.6573 12L17.1903 15.5328Z" fill="#81909C"></path>
+                </svg>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0C5.38346 0 0 5.38346 0 12C0 18.6165 5.38346 24 12 24C18.6165 24 24 18.6165 24 12C24 5.38346 18.6165 0 12 0ZM18.7068 8.84211L11.0376 16.4511C10.5865 16.9023 9.86466 16.9323 9.38346 16.4812L5.32331 12.782C4.84211 12.3308 4.81203 11.5789 5.23308 11.0977C5.68421 10.6165 6.43609 10.5865 6.91729 11.0376L10.1353 13.985L16.9925 7.12782C17.4737 6.64662 18.2256 6.64662 18.7068 7.12782C19.188 7.60902 19.188 8.3609 18.7068 8.84211Z" fill="#22BB66"></path>
+                </svg>
+                      </div>
+                   </li>
+                   <li class="t-row">
+                      <div class="content">
+                         <div class="h-wrap">
+                            <h4>Style Kits</h4>
+                         </div>
+                         <p>Instantly change the aesthetic of your site with our color schemes and style kits. Each kit is a professionally curated palette of colors, fonts, and styles that can be applied to your website with a single click.</p>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.4853 3.51471C18.2188 1.24823 15.2053 0 12 0C8.79474 0 5.78119 1.24823 3.51471 3.51471C1.24823 5.78119 0 8.79474 0 12C0 15.2054 1.24823 18.2188 3.51471 20.4853C5.78119 22.7518 8.79474 24 12 24C15.2053 24 18.2188 22.7518 20.4853 20.4853C22.7518 18.2188 24 15.2054 24 12C24 8.79474 22.7518 5.78119 20.4853 3.51471ZM17.1903 15.5328C17.6479 15.9906 17.6479 16.7325 17.1903 17.1901C16.9614 17.419 16.6615 17.5334 16.3616 17.5334C16.0616 17.5334 15.7617 17.419 15.5328 17.1901L12 13.6573L8.46716 17.1903C8.23828 17.419 7.93835 17.5334 7.63843 17.5334C7.3385 17.5334 7.03857 17.419 6.80969 17.1903C6.35211 16.7325 6.35211 15.9906 6.80969 15.533L10.3427 12L6.80969 8.46716C6.35211 8.0094 6.35211 7.26746 6.80969 6.80988C7.26746 6.35211 8.0094 6.35211 8.46698 6.80988L12 10.3427L15.5328 6.80988C15.9906 6.35229 16.7325 6.35211 17.1901 6.80988C17.6479 7.26746 17.6479 8.0094 17.1901 8.46716L13.6573 12L17.1903 15.5328Z" fill="#81909C"></path>
+                </svg>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0C5.38346 0 0 5.38346 0 12C0 18.6165 5.38346 24 12 24C18.6165 24 24 18.6165 24 12C24 5.38346 18.6165 0 12 0ZM18.7068 8.84211L11.0376 16.4511C10.5865 16.9023 9.86466 16.9323 9.38346 16.4812L5.32331 12.782C4.84211 12.3308 4.81203 11.5789 5.23308 11.0977C5.68421 10.6165 6.43609 10.5865 6.91729 11.0376L10.1353 13.985L16.9925 7.12782C17.4737 6.64662 18.2256 6.64662 18.7068 7.12782C19.188 7.60902 19.188 8.3609 18.7068 8.84211Z" fill="#22BB66"></path>
+                </svg>
+                      </div>
+                   </li>
+                   <li class="t-row">
+                      <div class="content">
+                         <div class="h-wrap">
+                            <h4>Customize All Colors &amp; Fonts</h4>
+                         </div>
+                         <p>Our theme lets you customize every single element, ensuring your site is a perfect reflection of your brand. Typography, colors – you name it, you can adjust it to fit your vision. The power to create is in your hands.</p>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.4853 3.51471C18.2188 1.24823 15.2053 0 12 0C8.79474 0 5.78119 1.24823 3.51471 3.51471C1.24823 5.78119 0 8.79474 0 12C0 15.2054 1.24823 18.2188 3.51471 20.4853C5.78119 22.7518 8.79474 24 12 24C15.2053 24 18.2188 22.7518 20.4853 20.4853C22.7518 18.2188 24 15.2054 24 12C24 8.79474 22.7518 5.78119 20.4853 3.51471ZM17.1903 15.5328C17.6479 15.9906 17.6479 16.7325 17.1903 17.1901C16.9614 17.419 16.6615 17.5334 16.3616 17.5334C16.0616 17.5334 15.7617 17.419 15.5328 17.1901L12 13.6573L8.46716 17.1903C8.23828 17.419 7.93835 17.5334 7.63843 17.5334C7.3385 17.5334 7.03857 17.419 6.80969 17.1903C6.35211 16.7325 6.35211 15.9906 6.80969 15.533L10.3427 12L6.80969 8.46716C6.35211 8.0094 6.35211 7.26746 6.80969 6.80988C7.26746 6.35211 8.0094 6.35211 8.46698 6.80988L12 10.3427L15.5328 6.80988C15.9906 6.35229 16.7325 6.35211 17.1901 6.80988C17.6479 7.26746 17.6479 8.0094 17.1901 8.46716L13.6573 12L17.1903 15.5328Z" fill="#81909C"></path>
+                </svg>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0C5.38346 0 0 5.38346 0 12C0 18.6165 5.38346 24 12 24C18.6165 24 24 18.6165 24 12C24 5.38346 18.6165 0 12 0ZM18.7068 8.84211L11.0376 16.4511C10.5865 16.9023 9.86466 16.9323 9.38346 16.4812L5.32331 12.782C4.84211 12.3308 4.81203 11.5789 5.23308 11.0977C5.68421 10.6165 6.43609 10.5865 6.91729 11.0376L10.1353 13.985L16.9925 7.12782C17.4737 6.64662 18.2256 6.64662 18.7068 7.12782C19.188 7.60902 19.188 8.3609 18.7068 8.84211Z" fill="#22BB66"></path>
+                </svg>
+                      </div>
+                   </li>
+                   <li class="t-row">
+                      <div class="content">
+                         <div class="h-wrap">
+                            <h4>600+ Google Fonts</h4>
+                         </div>
+                         <p>Use Google Fonts on your site freely through the Typography options available in the Customizer.</p>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.4853 3.51471C18.2188 1.24823 15.2053 0 12 0C8.79474 0 5.78119 1.24823 3.51471 3.51471C1.24823 5.78119 0 8.79474 0 12C0 15.2054 1.24823 18.2188 3.51471 20.4853C5.78119 22.7518 8.79474 24 12 24C15.2053 24 18.2188 22.7518 20.4853 20.4853C22.7518 18.2188 24 15.2054 24 12C24 8.79474 22.7518 5.78119 20.4853 3.51471ZM17.1903 15.5328C17.6479 15.9906 17.6479 16.7325 17.1903 17.1901C16.9614 17.419 16.6615 17.5334 16.3616 17.5334C16.0616 17.5334 15.7617 17.419 15.5328 17.1901L12 13.6573L8.46716 17.1903C8.23828 17.419 7.93835 17.5334 7.63843 17.5334C7.3385 17.5334 7.03857 17.419 6.80969 17.1903C6.35211 16.7325 6.35211 15.9906 6.80969 15.533L10.3427 12L6.80969 8.46716C6.35211 8.0094 6.35211 7.26746 6.80969 6.80988C7.26746 6.35211 8.0094 6.35211 8.46698 6.80988L12 10.3427L15.5328 6.80988C15.9906 6.35229 16.7325 6.35211 17.1901 6.80988C17.6479 7.26746 17.6479 8.0094 17.1901 8.46716L13.6573 12L17.1903 15.5328Z" fill="#81909C"></path>
+                </svg>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0C5.38346 0 0 5.38346 0 12C0 18.6165 5.38346 24 12 24C18.6165 24 24 18.6165 24 12C24 5.38346 18.6165 0 12 0ZM18.7068 8.84211L11.0376 16.4511C10.5865 16.9023 9.86466 16.9323 9.38346 16.4812L5.32331 12.782C4.84211 12.3308 4.81203 11.5789 5.23308 11.0977C5.68421 10.6165 6.43609 10.5865 6.91729 11.0376L10.1353 13.985L16.9925 7.12782C17.4737 6.64662 18.2256 6.64662 18.7068 7.12782C19.188 7.60902 19.188 8.3609 18.7068 8.84211Z" fill="#22BB66"></path>
+                </svg>
+                      </div>
+                   </li>
+                   <li class="t-row">
+                      <div class="content">
+                         <div class="h-wrap">
+                            <h4>Fast &amp; Friendly Support</h4>
+                         </div>
+                         <p>By getting the Premium version of the Inspiro theme, you also receive regular theme updates and benefit from our excellent support!</p>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.4853 3.51471C18.2188 1.24823 15.2053 0 12 0C8.79474 0 5.78119 1.24823 3.51471 3.51471C1.24823 5.78119 0 8.79474 0 12C0 15.2054 1.24823 18.2188 3.51471 20.4853C5.78119 22.7518 8.79474 24 12 24C15.2053 24 18.2188 22.7518 20.4853 20.4853C22.7518 18.2188 24 15.2054 24 12C24 8.79474 22.7518 5.78119 20.4853 3.51471ZM17.1903 15.5328C17.6479 15.9906 17.6479 16.7325 17.1903 17.1901C16.9614 17.419 16.6615 17.5334 16.3616 17.5334C16.0616 17.5334 15.7617 17.419 15.5328 17.1901L12 13.6573L8.46716 17.1903C8.23828 17.419 7.93835 17.5334 7.63843 17.5334C7.3385 17.5334 7.03857 17.419 6.80969 17.1903C6.35211 16.7325 6.35211 15.9906 6.80969 15.533L10.3427 12L6.80969 8.46716C6.35211 8.0094 6.35211 7.26746 6.80969 6.80988C7.26746 6.35211 8.0094 6.35211 8.46698 6.80988L12 10.3427L15.5328 6.80988C15.9906 6.35229 16.7325 6.35211 17.1901 6.80988C17.6479 7.26746 17.6479 8.0094 17.1901 8.46716L13.6573 12L17.1903 15.5328Z" fill="#81909C"></path>
+                </svg>
+                      </div>
+                      <div class="c">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0C5.38346 0 0 5.38346 0 12C0 18.6165 5.38346 24 12 24C18.6165 24 24 18.6165 24 12C24 5.38346 18.6165 0 12 0ZM18.7068 8.84211L11.0376 16.4511C10.5865 16.9023 9.86466 16.9323 9.38346 16.4812L5.32331 12.782C4.84211 12.3308 4.81203 11.5789 5.23308 11.0977C5.68421 10.6165 6.43609 10.5865 6.91729 11.0376L10.1353 13.985L16.9925 7.12782C17.4737 6.64662 18.2256 6.64662 18.7068 7.12782C19.188 7.60902 19.188 8.3609 18.7068 8.84211Z" fill="#22BB66"></path>
+                </svg>
+                      </div>
+                   </li>
+                   <li class="t-head">
+                      <div></div>
+                      <div class="c">&nbsp;</div>
+                      <div class="c"><a class="button button-primary" href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpzoom&amp;utm_medium=inspiro-lite&amp;utm_campaign=comparison-table"><strong>Learn More</strong></a></div>
+                   </li>
+                </ul>
+
+
+
 		</div>
 	</div>
 
