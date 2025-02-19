@@ -116,9 +116,9 @@
                     </div>
 				</div>
 			</div>
+            <?php get_template_part( 'inc/admin/pages/footer' ); ?>
+
 		</div>
 	</div><!-- /#tabs -->
-
-	<?php get_template_part( 'inc/admin/pages/footer' ); ?>
 
 </div>
