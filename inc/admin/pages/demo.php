@@ -16,7 +16,7 @@
                         <div class="wpz-onboard_content-side-section">
                             <h3 class="wpz-onboard_content-side-section-title icon-docs"><?php esc_html_e( 'Inspiro Starter Sites', 'inspiro' ); ?></h3> 
 							<p class="wpz-onboard_content-main-intro">
-								<?php esc_html_e( 'Importing demo data is the fastest and easiest way to set up your new theme. Choose your desired template, click on \'Import Demo\' and start editing pre-designed content and layouts instead of building everything from scratch.', 'inspiro-starter-sites' ); ?>
+								<?php esc_html_e( 'Importing demo data is the fastest and easiest way to set up your new theme. Choose your desired template, click on \'Import Demo\' and start editing pre-designed content and layouts instead of building everything from scratch.', 'inspiro' ); ?>
 							</p>
                         </div>
                         
