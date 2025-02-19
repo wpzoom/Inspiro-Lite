@@ -622,7 +622,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				)
 			);
 
-			$this->add_admin_menu( $args );
+			//$this->add_admin_menu( $args );
 		}
 
 		/**

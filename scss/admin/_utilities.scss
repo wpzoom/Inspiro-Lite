@@ -1,0 +1,10 @@
+/* utility classes */
+.hidden-element { display: none !important; }
+
+// Hide unneeded notices.
+.appearance_page_inspiro div#setting-error-tgmpa,
+.appearance_page_inspiro .update-nag,
+.appearance_page_inspiro .notice,
+.appearance_page_inspiro div.error {
+    display: none;
+}

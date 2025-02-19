@@ -69,68 +69,13 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu' ) ) {
             require_once INSPIRO_THEME_DIR . 'inc/admin/pages/demo.php';
         }
 
-
 		/**
-		 * Method for testing purposes.
-		 * testing tgm plugin activation
-		 * not used!
+		 * Plugins page callback.
 		 */
-		public function testing_tgm_plugin_activation() {
-			// var_dump(class_exists( 'OCDI_Plugin' ));
-			// $tgmp = new TGM_Plugin_Activation;
-			// global $wp_list_table;
-			// var_dump($wp_list_table);
-
-			var_dump($GLOBALS['tgmpa']->is_plugin_active('one-click-demo-import'));
-			var_dump(is_plugin_active('one-click-demo-import/one-click-demo-import.php'));
-
-			function check_plugin_activation() {
-			wp_redirect( self_admin_url( "admin.php?page=themes.php%3Fpage%3Done-click-demo-import" ) );
-
-				// suppose need to clean DB options cache
-				$cacheClearResult = wp_cache_delete( 'alloptions', 'options' );
-				var_dump($cacheClearResult);
-
-				$active_plugins = apply_filters( 'active_plugins', get_option( 'active_plugins' ) );
-
-				if ( in_array( 'one-click-demo-import/one-click-demo-import.php', $active_plugins ) ) {
-					var_dump($cacheClearResult);
-					echo 'active';
-				} else {
-					wp_cache_delete( 'alloptions', 'options' );
-					echo 'inactive';
-				}
-			}
+		public function plugins() {
+			require_once INSPIRO_THEME_DIR . 'inc/admin/pages/plugins.php';
 		}
 
-
-		/**
-		 * Detect necessary link.
-		 * not used!
-		 */
-		public function detect_demo_import_slug() {
-
-			$defaultMenuSlug = 'inspiro-demo';
-
-			if ( class_exists( 'OCDI_Plugin' ) ) {
-				$menuSlug = 'themes.php?page=one-click-demo-import';
-			} else {
-				$menuSlug = $defaultMenuSlug;
-			}
-
-			return $menuSlug;
-		}
-
-		/**
-		 * Call demo import plugin page.
-		 * not used!
-		 */
-		public function call_demo_import_plugin_page() {
-			if ( class_exists( 'OCDI_Plugin' ) ) {
-				$one_click_demo_import = OCDI\OneClickDemoImport::get_instance();
-				$one_click_demo_import->display_plugin_page();
-			}
-		}
 
 		/**
 		 * Register custom menu for wp-admin.
@@ -161,6 +106,16 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu' ) ) {
 				array( $this, 'admin' )                            // callback function
 			);
 
+			// Add the "Import Demo" submenu page
+			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
+                'inspiro',                   // parent slug
+                __( 'Import Demo', 'inspiro' ),      // page title
+                __( 'Import Demo', 'inspiro' ),      // menu title
+                'manage_options',              // capability
+                'inspiro-demo',            // menu slug,
+                array( $this, 'demo' )               // callback function
+            );
+
 			// Add the "Customize" submenu page
 			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
 				'inspiro',          // parent slug
@@ -170,25 +125,23 @@ if ( ! class_exists( 'Inspiro_WP_Admin_Menu' ) ) {
 				'customize.php'     // menu slug, link was included without a callback render func.
 			);
 
-            // Add the "Import Demo" submenu page
-            add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
-                'inspiro',                   // parent slug
-                __( 'Import Demo', 'inspiro' ),      // page title
-                __( 'Import Demo', 'inspiro' ),      // menu title
-                'manage_options',              // capability
-                'inspiro-demo',            // menu slug,
-                array( $this, 'demo' )               // callback function
-            //	array( $this, 'call_demo_import_plugin_page' ) // callback In case a custom page is needed.
-            );
-
 			// Add the "Upgrade" submenu page
 			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
 				'inspiro',                   // parent slug
-				__( 'Upgrade/Install', 'inspiro' ),     // page title
-				__( 'Upgrade/Install', 'inspiro' ),     // menu title
+				__( 'Install Premium', 'inspiro' ),     // page title
+				__( 'Install Premium', 'inspiro' ),     // menu title
 				'manage_options',              // capability
 				'inspiro-upgrade',            // menu slug,
 				array( $this, 'upgrade' )               // callback function
+			);
+
+			add_submenu_page( // phpcs:ignore WPThemeReview.PluginTerritory.NoAddAdminPages.add_menu_pages_add_submenu_page
+				'inspiro',                   // parent slug
+				__( 'Install Plugins', 'inspiro' ),     // page title
+				__( 'Install Plugins', 'inspiro' ),     // menu title
+				'manage_options',              // capability
+				'inspiro-plugins',            // menu slug,
+				array( $this, 'plugins' )               // callback function
 			);
 
 			// The "Install Plugins" submenu page was added true class-tgm-plugin-activation.php add_admin_menu( array $args )

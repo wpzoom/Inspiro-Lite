@@ -76,11 +76,11 @@ class Inspiro_Notice_Review extends Inspiro_Notices {
             return;
         }
         ?>
-        <div id="message" class="notice inspiro-notice inspiro-review-notice wpz-welcome-notice">
+        <div id="message" class="notice inspiro-notice inspiro-review-notice wpz-review-notice">
             <a class="inspiro-message-close notice-dismiss" href="<?php echo esc_url( $dismiss_url ); ?>"></a>
 
                 <div class="wpz-notice-image">
-                    <img class="inspiro-screenshot" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/admin/inspiro-top.png" width="233" alt="<?php esc_attr_e( 'Inspiro', 'inspiro' ); ?>" />
+                    <img class="inspiro-screenshot" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/admin/inspiro-top.png" width="180" alt="<?php esc_attr_e( 'Inspiro', 'inspiro' ); ?>" />
                 </div>
                 <div class="wpz-notice-text">
 

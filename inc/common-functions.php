@@ -429,3 +429,28 @@ if( ! function_exists( 'inspiro_get_page_by_title' ) ) {
 	}
 
 }
+
+// Check the status of a plugin
+function inspiro_check_plugin_status( $plugin_slug ) {
+	
+	// Include necessary files for plugin activation
+    if ( ! function_exists( 'is_plugin_active' ) ) {
+        include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+    }
+
+    // Check if the plugin is active.
+    if ( is_plugin_active( $plugin_slug ) ) {
+        return 'active';
+    }
+
+    // Get all installed plugins.
+    $all_plugins = get_plugins();
+
+    // Check if the plugin is installed.
+    if ( array_key_exists( $plugin_slug, $all_plugins ) ) {
+        return 'installed';
+    }
+
+    // If not active or installed, it's not installed.
+    return 'not_installed';
+}

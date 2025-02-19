@@ -20,9 +20,12 @@ if ( ! function_exists( 'inspiro_admin_notice' ) ) {
 	function inspiro_admin_notice() {
 		global $pagenow, $inspiro_version;
 
-		$welcome_notice        = get_option( 'inspiro_notice_welcome' );
-		$current_user_can      = current_user_can( 'edit_theme_options' );
-		$should_display_notice = ( $current_user_can && 'index.php' === $pagenow && ! $welcome_notice ) || ( $current_user_can && 'themes.php' === $pagenow && isset( $_GET['activated'] ) && ! $welcome_notice ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$welcome_notice   = get_option( 'inspiro_notice_welcome' );
+		$current_user_can = current_user_can( 'edit_theme_options' );
+		$plugin_status    = inspiro_check_plugin_status( 'inspiro-starter-sites/inspiro-starter-sites.php' );
+		$theme_dashboard  = ( 'admin.php' === $pagenow && isset( $_GET['page'] ) && 'inspiro' === $_GET['page'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+
+		$should_display_notice = ( 'active' !== $plugin_status &&  ! $welcome_notice && ! $theme_dashboard ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 
 		if ( $should_display_notice ) {
 			wp_enqueue_style(
@@ -34,7 +37,7 @@ if ( ! function_exists( 'inspiro_admin_notice' ) ) {
 
 			inspiro_welcome_notice();
 		}
-	}
+	}	
 }
 add_action( 'admin_notices', 'inspiro_admin_notice' );
 
@@ -68,6 +71,18 @@ if ( ! function_exists( 'inspiro_welcome_notice' ) ) {
 	 * @return void
 	 */
 	function inspiro_welcome_notice() {
+
+
+		$plugin_status = inspiro_check_plugin_status( 'inspiro-starter-sites/inspiro-starter-sites.php' );
+
+		$note_html = '';
+		
+		if ( 'not_installed' === $plugin_status ) {
+			$note_html = __( 'Clicking "Starter Sites" will install and activate Inspiro Starter Sites plugin on your WordPress site.', 'inspiro' );
+		} elseif ( 'installed' === $plugin_status ) {
+			$note_html = __( 'Clicking "Starter Sites" will activate Inspiro Starter Sites plugin on your WordPress site.', 'inspiro' );
+		}
+	
 		?>
 		<div class="notice wpz-welcome-notice">
 			<a class="notice-dismiss wpz-welcome-notice-hide" href="<?php echo esc_url( wp_nonce_url( remove_query_arg( array( 'activated' ), add_query_arg( 'inspiro-hide-notice', 'welcome' ) ), 'inspiro_hide_notices_nonce', '_inspiro_notice_nonce' ) ); ?>">
@@ -76,31 +91,37 @@ if ( ! function_exists( 'inspiro_welcome_notice' ) ) {
 				</span>
 			</a>
 
-            <div class="wpz-notice-image">
-                <a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=adminnotice&utm_campaign=welcome-banner" title="Inspiro Premium" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-top.png' ); ?>" width="233" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>" /></a>
-            </div>
+			<div class="wpz-notice-heading">
+				<h3><?php echo esc_html__( 'Welcome to Inspiro! &#128075;', 'inspiro' ); ?></h3>
+				<p><?php esc_html_e( 'Your Inspiro theme is now ready for use. To guide you through the next steps, we\'ve compiled a collection of helpful resources on this page.', 'inspiro' ); ?></p>
+			</div>
 
-            <div class="wpz-notice-text">
+			<div class="wpz-notice-content">
 
-                <h3><?php echo esc_html__( 'Discover Inspiro Lite!', 'inspiro' ); ?></h3>
-    			<p>
-    			<?php
-    			/* translators: %1$s: Inspiro theme %2$s: anchor tag open %3$s: anchor tag close */
-    			printf( esc_html__( 'Thank you for installing %1$s Lite theme! To get started please make sure you visit the new %2$swelcome page%3$s.', 'inspiro' ), 'Inspiro', '<a href="' . esc_url( admin_url( 'admin.php?page=inspiro' ) ) .  '">', '</a>' ); // was 'themes.php?page=inspiro'
-    			?>
-    			</p>
-    			<div class="wpz-welcome-notice-button">
-    				<a class="button button-primary" href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro' ) ); // was 'themes.php?page=inspiro' ?>">
-    					<?php
-    					/* translators: %s: Inspiro theme */
-    					printf( esc_html__( '%s Lite Dashboard &rarr;', 'inspiro' ), 'Inspiro' );
-    					?>
-    				</a>
-    				<a class="button button-secondary" href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=adminnotice&utm_campaign=welcome-banner', 'inspiro' ) ); ?>" target="_blank">
-    					<?php esc_html_e( 'Discover Inspiro Premium &rarr;', 'inspiro' ); ?>
-    				</a>
-    			</div>
-            </div>
+				<div class="wpz-notice-image">
+					<a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=adminnotice&utm_campaign=welcome-banner" title="Inspiro Premium" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-top.png' ); ?>" width="180" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>" /></a>
+				</div>
+
+				<div class="wpz-notice-text">
+					<p><?php esc_html_e( 'Explore a vast library of pre-designed sites within Inspiro. Visit our constantly growing collection of demos to find the perfect starting point for your project.', 'inspiro' ); ?></p>
+
+					<div class="wpz-welcome-notice-button">
+						<a id="wpz-notice-inspiro-plugin-handle" class="button button-primary" data-plugin-status="<?php echo esc_attr( $plugin_status ); ?>" href="<?php echo esc_url( admin_Url( 'admin.php?page=inspiro-demo' ) ); ?>"><?php esc_html_e( 'Starter Sites', 'inspiro' ); ?></a>
+						<a class="button button-secondary" href="<?php echo esc_url( admin_url( 'admin.php?page=inspiro' ) ); ?>">
+							<?php esc_html_e( 'Theme Dashboard', 'inspiro' ); ?>
+						</a>
+					</div>
+					<?php
+						if ( $note_html ) {
+							printf( 
+								'<note>%s</note>', 
+								wp_kses_post( $note_html )
+							);
+						}
+					?>
+				</div>
+			</div>
+
 		</div>
 		<?php
 	}

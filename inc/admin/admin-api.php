@@ -6,18 +6,18 @@
  * @since      Inspiro 1.9.5
  */
 
-// Handle AJAX request for activating one-click demo plugin
-add_action( 'wp_ajax_install_activate_one_click_demo_plugin', 'install_activate_one_click_demo_plugin' );
-function install_activate_one_click_demo_plugin() {
+// Handle AJAX request for activating Inspiro Starter Sites plugin
+add_action( 'wp_ajax_install_activate_inspiro_starter_sites_plugin', 'install_activate_inspiro_starter_sites_plugin' );
+function install_activate_inspiro_starter_sites_plugin() {
 	// Check for nonce security
-	//	check_ajax_referer( 'install_activate_one_click_demo_plugin_nonce', 'nonce' );
+	//	check_ajax_referer( 'install_activate_inspiro_starter-sites_plugin_nonce', 'nonce' );
 
 	// Ensure the user has the capability to install plugins
 	if ( current_user_can( 'install_plugins' ) ) {
 		// Assuming the plugin slug is passed via POST
 		$plugin_slug = isset( $_POST['plugin_slug'] ) ? sanitize_text_field( $_POST['plugin_slug'] ) : '';
 
-		if ( ! empty( $plugin_slug ) && 'one-click-demo-import' === $plugin_slug ) {
+		if ( ! empty( $plugin_slug ) && 'inspiro-starter-sites' === $plugin_slug ) {
 			// Check if plugin is already installed
 			$plugin_file = WP_PLUGIN_DIR . '/' . $plugin_slug . '/' . $plugin_slug . '.php';
 			if ( file_exists( $plugin_file ) ) {
@@ -70,3 +70,5 @@ function install_activate_one_click_demo_plugin() {
 	// End the AJAX request
 	wp_die();
 }
+
+include_once get_template_directory() . '/inc/admin/pluginInstaller/class-inspiro-plugin-installer.php';
