@@ -391,7 +391,7 @@
 }
 
 .wpz-onboard_wrapper {
-    padding: 10px 15px 0 0;
+    padding: 20px 15px 0 0;
 }
 .wpz-onboard_wrapper p {
     font-size: 16px;
@@ -1558,4 +1558,15 @@
         opacity: 0;
         transform: scale(0%);
     }
+}
+.notice {
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-left: 0;
+    padding: 15px;
+}
+
+#setting-error-tgmpa.notice-warning {
+    border-left-color: #7e8c93;
 }

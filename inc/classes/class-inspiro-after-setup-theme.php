@@ -431,7 +431,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 			$config = array(
 				'id'           => 'inspiro_wporg',         // Unique ID for hashing notices for multiple instances of TGMPA.
 				'default_path' => '',                      // Default absolute path to bundled plugins.
-				'menu'         => 'tgmpa-install-plugins', // Menu slug.
+				'menu'         => 'inspiro-plugins', // Menu slug.
                 'parent_slug'  => 'inspiro',
 				'has_notices'  => true,                    // Show admin notices or not.
 				'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
