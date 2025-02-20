@@ -464,6 +464,15 @@ class Inspiro_Theme_Upgrader {
 			if ( 'color_header_custom_logo_hover_text' === $name ) {
 				set_theme_mod( 'color-logo-hover', maybe_hash_hex_color( $theme_mod ) );
 			}
+
+            // Menu Items
+            if ( 'color_header_menu_color' === $name ) {
+                set_theme_mod( 'color-menu-link', maybe_hash_hex_color( $theme_mod ) );
+            }
+            // Custom Logo Text on Hover
+            if ( 'color_header_menu_color_hover' === $name ) {
+                set_theme_mod( 'color-menu-link-hover', maybe_hash_hex_color( $theme_mod ) );
+            }
 			// Search Icon Color
 //			if ( 'color_menu_search_icon_btn' === $name ) {
 //				set_theme_mod( 'color-menu-link', $theme_mod );

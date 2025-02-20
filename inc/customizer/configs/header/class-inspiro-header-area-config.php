@@ -203,7 +203,7 @@ class Inspiro_Header_Area_Config
 				'for-design-options',
 				array(
 					'type' => 'accordion-section-ui-wrapper',
-					'label' => esc_html__('Header options', 'inspiro'),
+					'label' => esc_html__('Header Options', 'inspiro'),
 					'settings' => array(),
 					'section' => 'header-area',
 					'accordion' => true,

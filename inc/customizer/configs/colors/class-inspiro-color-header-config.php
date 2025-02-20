@@ -88,8 +88,18 @@ class Inspiro_Color_Header_Config {
 						'sanitize_callback' => 'maybe_hash_hex_color',
 					),
 				),
+                array(
+                    'id'   => 'color_menu_search_icon_btn',
+                    'args' => array(
+                        'theme_supports'       => array( 'custom-header' ),
+                        'default'              => '#ffffff',
+                        'transport'            => 'refresh',
+                        'sanitize_callback'    => 'sanitize_hex_color',
+                        'sanitize_js_callback' => 'maybe_hash_hex_color',
+                    ),
+                ),
 				array(
-					'id'   => 'color_menu_search_icon_btn',
+					'id'   => 'color_header_menu_color',
 					'args' => array(
 						'theme_supports'       => array( 'custom-header' ),
 						'default'              => '#ffffff',
@@ -98,6 +108,16 @@ class Inspiro_Color_Header_Config {
 						'sanitize_js_callback' => 'maybe_hash_hex_color',
 					),
 				),
+                array(
+                    'id'   => 'color_header_menu_color_hover',
+                    'args' => array(
+                        'theme_supports'       => array( 'custom-header' ),
+                        'default'              => '#ffffff',
+                        'transport'            => 'refresh',
+                        'sanitize_callback'    => 'sanitize_hex_color',
+                        'sanitize_js_callback' => 'maybe_hash_hex_color',
+                    ),
+                ),
 				array(
 					'id'   => 'color_menu_hamburger_btn',
 					'args' => array(
@@ -168,18 +188,10 @@ class Inspiro_Color_Header_Config {
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 12,
-						'controls_to_wrap' => 2,
+						'controls_to_wrap' => 4,
 					),
 				),
-//				array(
-//					'id'           => 'color_navbar_menu_background',
-//					'control_type' => 'WP_Customize_Color_Control',
-//					'args'         => array(
-//						'label'    => esc_html__( 'Navigation Background Color', 'inspiro' ), // 'Primary Navigation Background Color'
-//						'section'  => 'colors',
-//						'priority' => 12,
-//					),
-//				),
+
 				array(
 					'id'           => 'color_menu_background',
 					'control_type' => 'WP_Customize_Color_Control',
@@ -195,11 +207,28 @@ class Inspiro_Color_Header_Config {
 					'control_type' => 'Inspiro_Customize_Alpha_Color_Picker_Control',
 					'args'         => array(
 						'label'    => esc_html__( 'Menu Background on Scroll', 'inspiro' ),
-//						'description' => esc_html__( "Work only with Hero Image Selected", 'inspiro' ),
 						'section'  => 'colors',
 						'priority' => 12,
 					),
 				),
+                array(
+                    'id'           => 'color_header_menu_color',
+                    'control_type' => 'WP_Customize_Color_Control',
+                    'args'         => array(
+                        'label'    => esc_html__( 'Menu Links', 'inspiro' ),
+                        'section'  => 'colors',
+                        'priority' => 12,
+                    ),
+                ),
+                array(
+                    'id'           => 'color_header_menu_color_hover',
+                    'control_type' => 'WP_Customize_Color_Control',
+                    'args'         => array(
+                        'label'    => esc_html__( 'Menu Links on Hover', 'inspiro' ),
+                        'section'  => 'colors',
+                        'priority' => 12,
+                    ),
+                ),
 			),
 		);
 	}

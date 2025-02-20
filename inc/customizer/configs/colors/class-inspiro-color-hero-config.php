@@ -103,7 +103,7 @@ class Inspiro_Color_Hero_Config {
 					'id'           => 'for_hero_section_color_options',
 					'control_type' => 'Inspiro_Customize_Accordion_UI_Control',
 					'args'         => array(
-						'label'            => esc_html__( 'Hero section', 'inspiro' ),
+						'label'            => esc_html__( 'Hero Section', 'inspiro' ),
 						'section'          => 'colors',
 						'settings'         => array(),
 						'priority'         => 12,

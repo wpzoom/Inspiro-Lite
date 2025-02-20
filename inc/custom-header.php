@@ -95,6 +95,8 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 		$color_header_custom_logo_hover_text = inspiro_get_theme_mod( 'color_header_custom_logo_hover_text' );
 		$color_menu_search_icon_btn          = inspiro_get_theme_mod( 'color_menu_search_icon_btn' );
 		$color_menu_hamburger_btn            = inspiro_get_theme_mod( 'color_menu_hamburger_btn' );
+        $color_menu_item                     = inspiro_get_theme_mod( 'color_header_menu_color' );
+        $color_menu_item_hover               = inspiro_get_theme_mod( 'color_header_menu_color_hover' );
 		$color_menu_background               = inspiro_get_theme_mod( 'color_menu_background' );
 		$color_menu_background_scroll        = inspiro_get_theme_mod( 'color-menu-background-scroll' );
 		$color_navbar_menu_background        = ''; // deactivated inspiro_get_theme_mod( 'color_navbar_menu_background' );
@@ -213,6 +215,26 @@ if ( ! function_exists( 'inspiro_header_style' ) ) :
 			}
 
 			<?php endif; ?>
+
+            <?php if ( '#ffffff' !== $color_menu_item ) : ?>
+            .navbar a {
+                color: <?php echo $color_menu_item; ?>;
+            }
+            .navbar-nav .menu-item-has-children .svg-icon {
+                fill: <?php echo $color_menu_item; ?>;
+            }
+
+            <?php endif; ?>
+
+            <?php if ( '#ffffff' !== $color_menu_item_hover ) : ?>
+            .navbar-nav > li.current-menu-item > a, .navbar-nav > li.current_page_item > a, .navbar-nav > li.current-menu-parent > a {
+                border-bottom-color: <?php echo $color_menu_item_hover; ?>;
+            }
+            .navbar-nav > li > a:hover {
+                color: <?php echo $color_menu_item_hover; ?>;
+            }
+
+            <?php endif; ?>
 
 			<?php if ( '#ffffff' !== $color_menu_hamburger_btn ) : ?>
 			.navbar-toggle .icon-bar {

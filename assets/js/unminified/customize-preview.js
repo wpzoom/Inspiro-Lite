@@ -150,6 +150,17 @@ function inspiroBuildStyleTag(control, value, cssProperty) {
 			$('a.custom-logo-text').css('color', to);
 		});
 	});
+    // menu items
+    wp.customize('color_header_menu_color', function (value) {
+        value.bind(function (to) {
+            $('.navbar a').css('color', to);
+        });
+    });
+    wp.customize('color_header_menu_color_hover', function (value) {
+        value.bind(function (to) {
+            $('.navbar-nav > li > a:hover').css('color', to);
+        });
+    });
 	// wp.customize('color_header_custom_logo_hover_text', function (value) {
 	// 	value.bind(function (tocolor_header_custom_logo_hover_text {
 	// 		$('a.custom-logo-text').css('color', to);
