@@ -630,7 +630,6 @@
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side-section.discover-premium .image-column {
     position: relative;
-    flex: 1;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side-section.discover-premium .image-column img {
     width: 100%;
@@ -649,8 +648,8 @@
     font-weight: 600;
     margin-bottom: 35px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 10px 20px;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-main .wpz-onboard_content-side-section.discover-premium ul li {
     font-size: 14px;
@@ -966,6 +965,7 @@
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap .section form input[disabled] {
     background-color: #000 !important;
+    border: none;
 }
 .wpz-onboard_wrapper .wpz-onboard_content-wrapper .wpz-onboard_content .wpz-onboard_content-side.upgrade-install .theme-info-wrap .wpz-grid-wrap .section form .button.button-primary {
     background: #ffffff;
@@ -1242,7 +1242,7 @@
         grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
     }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
     .wpz-grid-wrap,
     .wpz-grid-wrap.three {
         grid-template-columns: repeat(2, 1fr);

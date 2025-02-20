@@ -673,7 +673,6 @@
         
                         .image-column {
                             position: relative;
-                            flex: 1;
 
                             img {
                                 width: 100%;
@@ -696,8 +695,9 @@
                             font-weight: 600;
                             margin-bottom: 35px;
                             display: grid;
-                            grid-template-columns: repeat(2, 1fr);
                             gap: 10px 20px;
+                            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+
         
                             li {
                                 font-size: $font-size-14;
@@ -1119,6 +1119,7 @@
 
                             input[disabled] {
                                 background-color: #000 !important;
+                                border: none;
                             }
 
                             .button.button-primary {
@@ -1478,7 +1479,7 @@
 }
 
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1500px) {
     .wpz-grid-wrap,
     .wpz-grid-wrap.three {
         grid-template-columns: repeat(2, 1fr);
