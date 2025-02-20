@@ -385,7 +385,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
                 array(
                     'name'        => 'Inspiro Starter Sites',
                     'slug'        => 'inspiro-starter-sites',
-					'description' => 'Import demo content, widgets and customizer settings with one click.',
+					'description' => 'Import starter templates with Gutenberg Blocks, Elementor, and WooCommerce to create a new website in just a few clicks.',
                     'required'    => false,
                 ),
 
@@ -399,21 +399,21 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
                 array(
                     'name'        => 'WPZOOM Forms',
                     'slug'        => 'wpzoom-forms',
-					'description' => 'Simple, user-friendly contact form plugin for WordPress that utilizes Gutenberg blocks for easy form building and customization.',
+					'description' => 'WPZOOM Forms is a simple, user-friendly contact form plugin for WordPress that utilizes Gutenberg blocks for easy form building and customization.',
                     'required'    => false,
                 ),
 
                 array(
                     'name'        => 'Video Popup Block by WPZOOM',
                     'slug'        => 'wpzoom-video-popup-block',
-					'description' => 'Quickly add a button displaying a YouTube, Vimeo or Self-Hosted (MP4) video in a popup when clicked.',
+					'description' => 'Easily add a Gutenberg block to create customizable Play icon that open popups with YouTube, Vimeo, or MP4 videos.',
                     'required'    => false,
                 ),
 
 				array(
 					'name'        => 'Instagram Widget by WPZOOM',
 					'slug'        => 'instagram-widget-by-wpzoom',
-					'description' => 'Instagram Widget is a customizable and responsive plugin, made to help you gain even more followers by showcasing your Instagram feed on your WordPress website.',
+					'description' => 'Formerly known as "Instagram Widget by WPZOOM". Simple and lightweight widget for WordPress to display your Instagram feed.',
 					'required'    => false,
 				),
 

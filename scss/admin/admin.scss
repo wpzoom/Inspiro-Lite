@@ -282,13 +282,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $dark-color;
+        background-color: #18b4aa;
         color: $light-color;
         width: 57px;
         height: 28px;
         padding: 4px 12px;
         border-radius: 25px;
         margin: 0.625rem 0;
+        font-size: 14px;
+        font-weight: 600;
     }
 }
 

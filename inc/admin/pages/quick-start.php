@@ -8,7 +8,7 @@
 				<h3 class="wpz-onboard_content-main-title welcome"><?php esc_html_e( 'Welcome to Inspiro Lite!', 'inspiro' ); ?>👋</h3>
 				<span class="wpz-onboard_framework-version">v <?php echo esc_html( $parent->get( 'Version' ) ); ?></span>
 			</div>
-			<p class="wpz-onboard_content-main-intro"><?php esc_html_e( 'Thank you for installing the free version of our theme! Below you can find quick links to different sections in the Customizer where you can configure and customize the theme. The free version includes limited features and customization options, but if you need more flexibility and plan to take your website to the next level, make sure to check the Premium version.', 'inspiro' ); ?></p>
+			<p class="wpz-onboard_content-main-intro"><?php esc_html_e( 'Thank you for the Inspiro Lite theme! Below you can find quick links to different sections in the Customizer where you can configure and customize the theme. The free version includes limited features and customization options, but if you need more flexibility and plan to take your website to the next level, make sure to check out the Premium version.', 'inspiro' ); ?></p>
 			<p class="section_footer">
 				<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>" target="_blank"
 					class="button button-primary">
@@ -102,7 +102,7 @@
 							<path d="M6.68215 4.22861C6.90188 4.44822 6.90197 4.80438 6.68236 5.02411L5.27627 6.43094C5.05669 6.65064 4.70059 6.65077 4.48085 6.43122L3.636 5.58712C3.41623 5.36755 3.41607 5.0114 3.63564 4.79163C3.85522 4.57186 4.21137 4.5717 4.43114 4.79128L4.87814 5.23788L5.88665 4.22882C6.10626 4.00909 6.46242 4.009 6.68215 4.22861Z" fill="#3496FF"/>
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M5.75266 8.56606C5.75266 7.42662 6.67635 6.50293 7.81578 6.50293H13.068C14.2074 6.50293 15.1311 7.42662 15.1311 8.56606V11.5673C15.1311 12.7067 14.2074 13.6304 13.068 13.6304H11.4918L9.90848 14.9197C9.62785 15.1482 9.24076 15.1949 8.9139 15.0395C8.58705 14.8842 8.37875 14.5546 8.37875 14.1926V13.6304H7.81578C6.67635 13.6304 5.75266 12.7067 5.75266 11.5673V8.56606ZM7.81578 7.62793C7.29767 7.62793 6.87766 8.04794 6.87766 8.56606V10.3176V11.5673C6.87766 12.0854 7.29767 12.5054 7.81578 12.5054H8.28281H8.94125C9.25191 12.5054 9.50375 12.7573 9.50375 13.0679V13.7985L10.9365 12.6318C11.0369 12.55 11.1623 12.5054 11.2917 12.5054H13.068C13.5861 12.5054 14.0061 12.0854 14.0061 11.5673V8.56606C14.0061 8.04794 13.5861 7.62793 13.068 7.62793H7.81578Z" fill="#3496FF"/>
 						</svg>
-						<?php esc_html_e( 'Support Forums', 'inspiro' ); ?>
+						<?php esc_html_e( 'Support Forum', 'inspiro' ); ?>
 					</a>
 					<a href="https://www.facebook.com/groups/inspirowp" target="_blank" class="description-link">
 						<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">

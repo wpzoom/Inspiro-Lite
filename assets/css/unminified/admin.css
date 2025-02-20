@@ -302,13 +302,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #242628;
+    background-color: #18b4aa;
     color: #ffffff;
     width: 57px;
     height: 28px;
     padding: 4px 12px;
     border-radius: 25px;
     margin: 0.625rem 0;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .theme-comparison {

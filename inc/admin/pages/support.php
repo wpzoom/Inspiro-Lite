@@ -31,7 +31,7 @@
                         target="_blank" class="button button-primary"><?php esc_html_e( 'Documentation', 'inspiro' ); ?>
                     </a> 
                     <a href="https://wordpress.org/support/theme/inspiro/" title="Open Support Desk"
-                        target="_blank" class="button button-secondary"><?php esc_html_e( 'Forums', 'inspiro' ); ?>
+                        target="_blank" class="button button-secondary"><?php esc_html_e( 'Support Forum', 'inspiro' ); ?>
                     </a>
                 </p>
             </div>
