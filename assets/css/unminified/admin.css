@@ -1562,11 +1562,10 @@
     }
 }
 .notice {
-    border-radius: 5px;
+    border-radius: 3px;
     margin-top: 20px;
     margin-bottom: 5px;
     margin-left: 0;
-    padding: 15px;
 }
 
 #setting-error-tgmpa.notice-warning {
