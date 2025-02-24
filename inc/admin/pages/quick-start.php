@@ -8,7 +8,7 @@
 				<h3 class="wpz-onboard_content-main-title welcome"><?php esc_html_e( 'Welcome to Inspiro Lite!', 'inspiro' ); ?>👋</h3>
 				<span class="wpz-onboard_framework-version">v <?php echo esc_html( $parent->get( 'Version' ) ); ?></span>
 			</div>
-			<p class="wpz-onboard_content-main-intro"><?php esc_html_e( 'Thank you for the Inspiro Lite theme! Below you can find quick links to different sections in the Customizer where you can configure and customize the theme. The free version includes limited features and customization options, but if you need more flexibility and plan to take your website to the next level, make sure to check out the Premium version.', 'inspiro' ); ?></p>
+			<p class="wpz-onboard_content-main-intro"><?php esc_html_e( 'Thank you for installing the Inspiro Lite theme! Below you can find quick links to different sections in the Customizer where you can configure and customize the theme. The free version includes limited features and customization options, but if you need more flexibility and plan to take your website to the next level, make sure to check out the Premium version.', 'inspiro' ); ?></p>
 			<p class="section_footer">
 				<a href="<?php echo esc_url( admin_url( 'customize.php' ) ); ?>" target="_blank"
 					class="button button-primary">
@@ -21,7 +21,7 @@
 			</p>
 		</div>
 		<div class="section-image">
-			<a href="https://www.wpzoom.com/themes/inspiro/"
+			<a href="https://www.wpzoom.com/themes/inspiro/?utm_source=wpadmin&utm_medium=about-inspiro-page&utm_campaign=upgrade-premium"
 				title="Inspiro Premium" target="_blank"><img
 				src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/admin/inspiro-premium-blocks.png' ); ?>"
 				width="300" alt="<?php echo esc_attr__( 'Inspiro Premium', 'inspiro' ); ?>"/>

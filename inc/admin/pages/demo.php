@@ -17,7 +17,13 @@
                             <h3 class="wpz-onboard_content-side-section-title icon-docs"><?php esc_html_e( 'Inspiro Starter Sites', 'inspiro' ); ?></h3> 
 							<p class="wpz-onboard_content-main-intro">
 								<?php esc_html_e( 'Importing demo data is the fastest and easiest way to set up your new theme. Choose your desired template, click on \'Import Demo\' and start editing pre-designed content and layouts instead of building everything from scratch.', 'inspiro' ); ?>
-							</p>
+							</p><br/>
+                            <p class="section_footer">
+                                <a href="<?php echo esc_url( __( 'https://www.wpzoom.com/themes/inspiro/starter-sites/?utm_source=wpadmin&utm_medium=demos-starter-sites&utm_campaign=starter-sites-inspiro', 'inspiro' ) ); ?>"
+                                    target="_blank" class="button button-primary">
+                                        <?php esc_html_e( 'View Premium Starter Sites &#8599;', 'inspiro' ); ?>
+                                </a>
+                            </p>
                         </div>
                         
                         <div class="theme-info-wrap">
@@ -25,6 +31,9 @@
 								<?php if ( class_exists( 'Inspiro_Starter_Sites_Importer' ) ) : ?>	
 									<?php do_action( 'inspiro_starter_sites_admin_page' ); ?>
 								<?php else : ?>
+                                    <h3>
+                                        <?php esc_html_e( 'Install Inspiro Starter Sites Plugin', 'inspiro' ); ?>
+                                    </h3>
 									<p class="about">
 										<?php esc_html_e( 'Click the button below to install the Inspiro Starter Sites plugin to use this feature.', 'inspiro' ); ?>
 									</p>
@@ -40,7 +49,7 @@
 											target="_blank"
 											class="button button-secondary" >
 											<?php esc_html_e( 'How it works? &rarr;', 'inspiro' ); ?>
-										</a>
+			 							</a>
 									</p>
 								<?php endif; ?>	
                             </div>
