@@ -66,7 +66,7 @@ if ( ! class_exists( 'Inspiro_After_Setup_Theme' ) ) {
 
 			/*
 			 * Make theme available for translation.
-			 * Translations can be filed at WordPress.org. See: https://translate.wordpress.org/projects/wp-themes/inspiro-lite
+			 * Translations can be filed at WordPress.org. See: https://translate.wordpress.org/projects/wp-themes/inspiro
 			 */
 			load_theme_textdomain( 'inspiro', INSPIRO_THEME_DIR . '/languages' );
 
