@@ -423,7 +423,7 @@
         align-items: center;
         justify-content: center;
         font-weight: 600;
-        padding: 6px 22px;
+        padding: 6px 21px;
         transition: all 0.3s ease;
         margin-right: 10px;
         margin-bottom: 15px;
@@ -1481,7 +1481,7 @@
 }
 
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1512px) {
     .wpz-grid-wrap,
     .wpz-grid-wrap.three {
         grid-template-columns: repeat(2, 1fr);
